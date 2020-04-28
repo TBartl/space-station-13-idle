@@ -10,6 +10,6 @@ export default {
 
 <style scoped>
 .content {
-	flex:1;
+  flex: 1;
 }
 </style>	
