@@ -1,15 +1,48 @@
 <template>
   <div class="sidebar">
-    <div class="sidebar-title">
-			<img src="@/assets/art/misc/logo.png" alt="">
+    <div class="sidebar-title p-3 mb-2">
+      <img src="@/assets/art/misc/logo.png" alt />
       <span>SS13 Idle</span>
     </div>
+    <p class="items-header">{{version}}</p>
+
+    <sidebar-item
+      id="cargo-terminal"
+      text="Cargo Terminal"
+      :icon="require('@/assets/art/sidebar/money.svg')"
+    />
+    <sidebar-item
+      id="inventory"
+      text="Inventory"
+      :icon="require('@/assets/art/sidebar/money.svg')"
+    />
+		
+    <p class="items-header">Jobs</p>
+    <sidebar-item
+      v-for="job in allJobs"
+      :key="job.id"
+      :id="job.id"
+      :text="job.name"
+      :icon="job.icon"
+    />
   </div>
 </template>
 
 <script>
+import { ALL_JOBS } from "@/constants/jobs";
+import SidebarItem from "@/components/SidebarItem";
+
 export default {
-  name: "Sidebar"
+  name: "Sidebar",
+  components: { SidebarItem },
+  computed: {
+    version() {
+      return `Alpha v${process.env.PACKAGE_VERSION}`;
+    },
+    allJobs() {
+      return ALL_JOBS;
+    }
+  }
 };
 </script>
 
@@ -18,20 +51,26 @@ export default {
   width: 230px;
   height: 100%;
   color: #ebebeb;
-	background-color: #424d5d;
-	font-size: 18px;
+  background-color: #2c343f;
 }
 .sidebar-title {
   color: whitesmoke;
-  padding: 20px;
-	font-weight: bold;
-	background-color: #2c343f;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+  font-weight: bold;
+  background-color: #424d5d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .sidebar-title img {
-	width: 50px;
-	margin-right: 10px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.items-header {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  padding: 1rem 1rem 0.25rem 1rem;
+  font-weight: bold;
 }
 </style>
