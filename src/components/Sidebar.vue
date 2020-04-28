@@ -9,12 +9,12 @@
     <sidebar-item
       id="cargo-terminal"
       text="Cargo Terminal"
-      :icon="require('@/assets/art/sidebar/money.svg')"
+      :icon="require('@/assets/art/sidebar/cargo-terminal.svg')"
     />
     <sidebar-item
       id="inventory"
       text="Inventory"
-      :icon="require('@/assets/art/sidebar/money.svg')"
+      :icon="require('@/assets/art/sidebar/inventory.svg')"
     />
 		
     <p class="items-header">Jobs</p>

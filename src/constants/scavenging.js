@@ -1,5 +1,5 @@
 export default {
-	id: "cargo",
-	name: "Cargo",
+	id: "scavenging",
+	name: "Scavenging",
 	icon: require("@/assets/art/mining/logo.svg")
 }
