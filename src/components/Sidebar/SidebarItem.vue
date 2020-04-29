@@ -4,7 +4,7 @@
     :class="{'visible-item': id == visibleSidebarItem}"
     @click="setVisibleSidebarItem(id)"
   >
-    <img :src="icon" alt class="pixelated"/>
+    <img :src="icon" alt class="pixelated" />
     <span>{{text}}</span>
   </div>
 </template>
@@ -36,8 +36,12 @@ export default {
   background-color: rgba(0, 0, 0, 0.2);
 }
 img {
-  max-width: 28px;
+  max-width: 40px;
   margin-right: 8px;
+  padding: 2px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 .visible-item {
   color: rgba(255, 255, 255, 0.931);

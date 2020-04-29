@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <div class="mega-container">
-      <Sidebar />
-      <Content />
+      <sidebar />
+      <content-container />
     </div>
   </div>
 </template>
 
 <script>
-import Sidebar from "@/components/Sidebar.vue";
-import Content from "@/components/Content.vue";
+import Sidebar from "@/components/Sidebar/Sidebar.vue";
+import ContentContainer from "@/components/Content/ContentContainer.vue";
 export default {
   name: "App",
   components: {
 		Sidebar,
-		Content
+		ContentContainer
   }
 };
 </script>

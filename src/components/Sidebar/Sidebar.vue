@@ -7,7 +7,7 @@
     <p class="items-header">{{version}}</p>
 
     <sidebar-item
-      id="cargo-terminal"
+      id="shop"
       text="Cargo Terminal"
       :icon="require('@/assets/art/sidebar/cargo.png')"
     />
@@ -24,13 +24,14 @@
       :id="job.id"
       :text="job.name"
       :icon="job.icon"
+			:color="job.color"
     />
   </div>
 </template>
 
 <script>
 import { ALL_JOBS } from "@/constants/jobs";
-import SidebarItem from "@/components/SidebarItem";
+import SidebarItem from "./SidebarItem";
 
 export default {
   name: "Sidebar",
