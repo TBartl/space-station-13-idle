@@ -10,3 +10,7 @@ p {
 * {
 	background-color: unset;
 }
+
+img.pixelated {
+  image-rendering: pixelated;
+}
