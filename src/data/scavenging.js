@@ -1,4 +1,4 @@
-export const ITEMS = {}
+export const ITEMS = new Map();
 
 export const JOB = {
 	id: "scavenging",

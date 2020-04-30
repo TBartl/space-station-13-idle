@@ -4,7 +4,7 @@
     <p class="text-uppercase">{{item.name}}</p>
     <p class="action-time mt-1">{{action.time}} SECONDS</p>
     <img :src="action.icon" alt class="pixelated mt-2" />
-    <progress-bar class="mt-3"/>
+    <progress-bar class="mt-3" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   props: ["action", "actionId"],
   computed: {
     item() {
-      return ITEMS[this.action.item];
+      return ITEMS.get(this.action.item);
     }
   }
 };

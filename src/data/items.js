@@ -1,7 +1,9 @@
 import { ALL_JOBS } from "./jobs";
 
-const jobItems = ALL_JOBS.map(job => job.items);
+const jobItems = new Map();
+ALL_JOBS.forEach(job => jobItems.merge(job.items));
 
-const ITEMS = Object.assign({}, jobItems);
+const ITEMS = new Map();
+ITEMS.merge(jobItems);
 
 export default ITEMS;

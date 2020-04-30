@@ -1,20 +1,20 @@
-export const ITEMS = {
-	iron: {
+export const ITEMS = new Map([
+	["iron", {
 		name: "Iron",
 		sellPrice: 1,
 		icon: require("@/assets/art/mining/Ironore.png")
-	},
-	glass: {
+	}],
+	["glass", {
 		name: "Glass",
 		sellPrice: 2,
 		icon: require("@/assets/art/mining/Sandore.png")
-	},
-	silver: {
+	}],
+	["silver", {
 		name: "Silver",
 		sellPrice: 5,
 		icon: require("@/assets/art/mining/Silverore.png")
-	}
-}
+	}]
+]);
 
 export const ACTIONS = {
 	mineIron: {

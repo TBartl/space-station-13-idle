@@ -1,15 +1,30 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import mining from "./mining";
 
 Vue.use(Vuex)
 
+
+const state = {
+	visibleSidebarItem: "mining",
+	inventory: {
+		"iron": 10,
+		"glass": 3,
+		"silver": 1
+	}
+}
+
 const store = new Vuex.Store({
-	state: {
-		visibleSidebarItem: "mining",
+	modules: {
+		mining
 	},
+	state,
 	getters: {
 		visibleSidebarItem(state) {
 			return state.visibleSidebarItem;
+		},
+		inventory(state) {
+			return state.inventory;
 		}
 	},
 	mutations: {
@@ -18,5 +33,13 @@ const store = new Vuex.Store({
 		}
 	}
 });
+
+
+// TODO: figure out state saving at some point
+// store.subscribe((mutation, state) => {
+// 	// Store the state object as a JSON string
+// 	localStorage.setItem('store', JSON.stringify(state));
+// });
+
 
 export default store;
