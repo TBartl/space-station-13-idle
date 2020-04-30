@@ -28,7 +28,6 @@ export default {
   color: rgb(255, 255, 255, 0.5);
   padding: 0.3rem 1rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 .item:hover {

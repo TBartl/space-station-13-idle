@@ -1,5 +1,5 @@
 <template>
-  <div class="content-container">
+  <div class="content-wrapper">
     <component :is="'content-' + visibleSidebarItem" class="w-100" />
   </div>
 </template>
@@ -12,7 +12,7 @@ import ContentMining from "./ContentMining";
 import ContentScavenging from "./ContentScavenging";
 
 export default {
-  name: "ContentContainer",
+  name: "ContentWrapper",
   components: {
     ContentShop,
     ContentInventory,
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.content-container {
+.content-wrapper {
   flex: 1;
 }
 </style>	

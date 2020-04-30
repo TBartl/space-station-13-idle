@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import SCAVENGING from "@/constants/scavenging";
+import { JOB } from "@/data/scavenging";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 export default {
   extends: ContentAbstract,
   computed: {
     job() {
-      return SCAVENGING;
+      return JOB;
     }
   }
 };

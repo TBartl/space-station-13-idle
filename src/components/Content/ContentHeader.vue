@@ -15,7 +15,6 @@ export default {
 <style scoped>
 .content-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding: 11.5px 16px;
 }

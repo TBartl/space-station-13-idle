@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { ALL_JOBS } from "@/constants/jobs";
+import { ALL_JOBS } from "@/data/jobs";
 import SidebarItem from "./SidebarItem";
 
 export default {
@@ -59,7 +59,6 @@ export default {
   font-weight: bold;
   background-color: #424d5d;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 .sidebar-title img {

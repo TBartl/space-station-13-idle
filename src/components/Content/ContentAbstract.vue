@@ -4,3 +4,9 @@ export default {
   components: { ContentHeader }
 };
 </script>
+
+<style scoped>
+.content {
+	margin: 28px;
+}
+</style>

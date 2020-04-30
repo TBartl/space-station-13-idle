@@ -2,19 +2,19 @@
   <div id="app">
     <div class="mega-container">
       <sidebar />
-      <content-container />
+      <content-wrapper />
     </div>
   </div>
 </template>
 
 <script>
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
-import ContentContainer from "@/components/Content/ContentContainer.vue";
+import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 export default {
   name: "App",
   components: {
 		Sidebar,
-		ContentContainer
+		ContentWrapper
   }
 };
 </script>
@@ -35,7 +35,6 @@ body {
 .mega-container {
 	height: 100%;
 	display: flex;
-	flex-direction: row;
 	align-items: stretch;
 }
 </style>

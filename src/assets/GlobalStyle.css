@@ -18,3 +18,11 @@ p {
 img.pixelated {
   image-rendering: pixelated;
 }
+
+.content-container {
+	margin: 35px 20px 20px 20px;
+
+	/* container-fluid */
+	padding-right: 15px;
+	padding-left: 15px;
+}
