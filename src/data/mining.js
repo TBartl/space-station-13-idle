@@ -1,22 +1,36 @@
 export const ITEMS = {
-	copperOre: {
-		name: "Copper Ore",
-		sellPrice: 1
+	iron: {
+		name: "Iron",
+		sellPrice: 1,
+		icon: require("@/assets/art/mining/Ironore.png")
+	},
+	glass: {
+		name: "Glass",
+		sellPrice: 2,
+		icon: require("@/assets/art/mining/Sandore.png")
+	},
+	silver: {
+		name: "Silver",
+		sellPrice: 5,
+		icon: require("@/assets/art/mining/Silverore.png")
 	}
 }
 
 export const ACTIONS = {
-	mineCopper: {
+	mineIron: {
 		time: 1.5,
-		item: "copperOre"
+		item: "iron",
+		icon: require("@/assets/art/mining/Ironwall.png")
 	},
-	mineCopper1: {
-		time: 1.5,
-		item: "copperOre"
+	mineSand: {
+		time: 2.0,
+		item: "glass",
+		icon: require("@/assets/art/mining/Sandore.png")
 	},
-	mineCopper2: {
-		time: 1.5,
-		item: "copperOre"
+	mineSilver: {
+		time: 2.5,
+		item: "silver",
+		icon: require("@/assets/art/mining/Silverwall.png")
 	}
 }
 
