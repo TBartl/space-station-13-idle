@@ -10,6 +10,10 @@ Vue.component('b-popover', BPopover)
 
 Vue.config.productionTip = false
 
+Vue.filter('cleanNum', function(value) {
+	
+})
+
 new Vue({
 	store,
 	render: h => h(App),

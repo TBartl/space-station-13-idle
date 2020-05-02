@@ -2,6 +2,7 @@
   <button
     v-if="count <= totalCount"
     class="sell d-flex align-items-center justify-content-between w-100"
+    @click="sellItem({'itemId': itemId, 'count': count})"
   >
     <span>Sell x{{count}}</span>
     <div class="mr-3"></div>
@@ -12,6 +13,7 @@
 <script>
 import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
+import { mapMutations } from "vuex";
 export default {
   components: { InventoryPriceDisplay },
   props: ["itemId", "count", "totalCount"],
@@ -22,6 +24,9 @@ export default {
     totalSellPrice() {
       return this.item.sellPrice * this.count;
     }
+  },
+  methods: {
+    ...mapMutations(["sellItem"])
   }
 };
 </script>

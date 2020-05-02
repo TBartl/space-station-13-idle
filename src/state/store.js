@@ -8,7 +8,9 @@ Vue.use(Vuex)
 const state = {
 	visibleSidebarItem: "mining",
 	inventory: {
-		"glass": 10
+		"iron": 150,
+		"glass": 10,
+		"silver": 1
 	}
 }
 
@@ -34,6 +36,9 @@ const store = new Vuex.Store({
 				Vue.set(state.inventory, itemId, 0)
 			}
 			state.inventory[itemId] += 1;
+		},
+		sellItem(state, { itemId, count }) {
+			state.inventory[itemId] -= count;
 		}
 	}
 });
