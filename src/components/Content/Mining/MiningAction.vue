@@ -1,23 +1,32 @@
 <template>
-  <div class="action text-muted">
+  <div class="action text-muted" @click="tryStartAction(actionId)">
     <p class="action-title">MINE</p>
     <p class="text-uppercase">{{item.name}}</p>
     <p class="action-time mt-1">{{action.time}} SECONDS</p>
     <img :src="action.icon" alt class="pixelated mt-2" />
-    <progress-bar class="mt-3" />
+    <progress-bar class="mt-3" :progress="progress" />
   </div>
 </template>
 
 <script>
 import { ITEMS } from "@/data/mining";
 import ProgressBar from "@/components/ProgressBar";
+import { mapMutations, mapGetters } from "vuex";
 export default {
   components: { ProgressBar },
   props: ["action", "actionId"],
   computed: {
+    ...mapGetters("mining", ["currentActionId", "currentProgress"]),
     item() {
       return ITEMS.get(this.action.item);
+    },
+    progress() {
+      if (this.currentActionId != this.actionId) return 0;
+      return this.currentProgress / this.action.time;
     }
+  },
+  methods: {
+    ...mapMutations("mining", ["tryStartAction"])
   }
 };
 </script>

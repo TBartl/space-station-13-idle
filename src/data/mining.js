@@ -41,3 +41,7 @@ export const JOB = {
 	color: "#95857a",
 	items: ITEMS
 }
+
+export function finishAction() {
+
+}
