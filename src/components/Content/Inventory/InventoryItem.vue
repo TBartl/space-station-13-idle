@@ -1,16 +1,28 @@
 <template>
   <div>
-    <div class="item" :id="`item-${id}`">
+    <button class="item" :id="`item-${id}`">
       <img class="pixelated" :src="item.icon" />
       <span>{{count}}</span>
-    </div>
+    </button>
     <b-popover :target="`item-${id}`" triggers="hover" placement="top" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
-        <div class="d-flex align-items-center">
-          <img class="pixelated" :src="require('@/assets/art/misc/coin.png')" />
-          <span>{{item.sellPrice}}</span>
-        </div>
+        <inventory-price-display :price="item.sellPrice" />
+      </div>
+    </b-popover>
+    <b-popover :target="`item-${id}`" triggers="click blur" placement="bottom" delay="0">
+      <div class="popup d-flex flex-column align-items-center">
+        <h6 class="title">{{item.name}}</h6>
+        <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
+        <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />
+        <inventory-sell :itemId="itemId" :count="100" :totalCount="count" />
+        <inventory-sell :itemId="itemId" :count="1000" :totalCount="count" />
+        <inventory-sell
+          :itemId="itemId"
+          :count="count"
+          :totalCount="count"
+          v-if="count != 1 && count != 10 && count != 100 && count != 1000"
+        />
       </div>
     </b-popover>
   </div>
@@ -19,8 +31,11 @@
 <script>
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
+import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
+import InventorySell from "@/components/Content/Inventory/InventorySell";
 export default {
   props: ["itemId"],
+  components: { InventoryPriceDisplay, InventorySell },
   data() {
     return {
       hover: false
@@ -43,6 +58,7 @@ export default {
 
 <style scoped>
 .item {
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,10 +74,5 @@ export default {
 }
 .item img {
   width: 64px;
-}
-.popup img {
-	width: 20px;
-	margin-right: .1rem;
-
 }
 </style>
