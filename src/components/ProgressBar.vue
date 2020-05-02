@@ -1,7 +1,7 @@
 <template>
   <div class="progress w-100">
     <div
-      class="progress-bar progress-bar-striped progress-bar-animated"
+      class="progress-bar progress-bar-striped"
       :style="`width: ${progress*100}%`"
     ></div>
   </div>

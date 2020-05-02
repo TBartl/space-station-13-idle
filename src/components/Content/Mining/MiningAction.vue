@@ -11,7 +11,7 @@
 <script>
 import { ITEMS } from "@/data/mining";
 import ProgressBar from "@/components/ProgressBar";
-import { mapMutations, mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   components: { ProgressBar },
   props: ["action", "actionId"],
@@ -26,7 +26,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations("mining", ["tryStartAction"])
+    ...mapActions("mining", ["tryStartAction"])
   }
 };
 </script>

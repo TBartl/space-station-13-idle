@@ -6,7 +6,6 @@ export function progressAction(duration, updateProgress, onFinish, progress = 0)
 		// progress += PROGRESS_INTERVAL;
 		var to = new Date().getTime();
 		progress += (to - from) / 1000;
-		updateProgress(progress);
 
 		if (progress >= duration) {
 			onFinish();

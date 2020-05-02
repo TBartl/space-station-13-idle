@@ -42,6 +42,7 @@ export const JOB = {
 	items: ITEMS
 }
 
-export function finishAction() {
-
+export function finishAction(commit, actionId) {
+	var action = ACTIONS[actionId];
+	commit("obtainItem", { itemId: action.item }, { root: true });
 }

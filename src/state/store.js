@@ -8,9 +8,6 @@ Vue.use(Vuex)
 const state = {
 	visibleSidebarItem: "mining",
 	inventory: {
-		"iron": 10,
-		"glass": 3,
-		"silver": 1
 	}
 }
 
@@ -30,6 +27,12 @@ const store = new Vuex.Store({
 	mutations: {
 		setVisibleSidebarItem(state, id) {
 			state.visibleSidebarItem = id;
+		},
+		obtainItem(state, { itemId }) {
+			if (!state.inventory[itemId]) {
+				Vue.set(state.inventory, itemId, 0)
+			}
+			state.inventory[itemId] += 1;
 		}
 	}
 });

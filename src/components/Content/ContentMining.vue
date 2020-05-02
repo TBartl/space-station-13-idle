@@ -3,7 +3,7 @@
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
       <div class="row">
-        <div class="col-3" v-for="[actionId, action] in Object.entries(actions)" :key="actionId">
+        <div class="col-2" v-for="[actionId, action] in Object.entries(actions)" :key="actionId">
           <mining-action :action="action" :actionId="actionId" />
         </div>
       </div>
