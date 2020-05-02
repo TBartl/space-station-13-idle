@@ -4,6 +4,7 @@ import mining from "./mining";
 
 Vue.use(Vuex)
 
+import ITEMS from "@/data/items";
 
 const state = {
 	visibleSidebarItem: "mining",
@@ -43,6 +44,8 @@ const store = new Vuex.Store({
 		},
 		sellItem(state, { itemId, count }) {
 			state.inventory[itemId] -= count;
+			var item = ITEMS.get(itemId);
+			state.money += item.sellPrice * count;
 		}
 	}
 });
