@@ -5,6 +5,9 @@ import '@/assets/GlobalStyle.css';
 
 import store from "@/state/store.js";
 
+import { BPopover } from 'bootstrap-vue'
+Vue.component('b-popover', BPopover)
+
 Vue.config.productionTip = false
 
 new Vue({

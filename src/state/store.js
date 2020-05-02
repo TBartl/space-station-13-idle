@@ -8,6 +8,7 @@ Vue.use(Vuex)
 const state = {
 	visibleSidebarItem: "mining",
 	inventory: {
+		"glass": 10
 	}
 }
 
