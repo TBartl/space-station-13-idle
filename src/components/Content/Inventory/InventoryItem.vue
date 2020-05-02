@@ -2,7 +2,7 @@
   <div>
     <button class="item" :id="`item-${id}`">
       <img class="pixelated" :src="item.icon" />
-      <span>{{count}}</span>
+      <span>{{count | cleanNum}}</span>
     </button>
     <b-popover :target="`item-${id}`" triggers="hover" placement="top" delay="0">
       <div class="popup d-flex flex-column align-items-center">

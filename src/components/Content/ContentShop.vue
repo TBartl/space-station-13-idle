@@ -1,7 +1,7 @@
 <template>
   <div class="content-shop">
     <content-header
-      text="Cargo Terminal"
+      text="Cargo"
       :icon="require('@/assets/art/sidebar/cargo.png')"
       color="#febb33"
     />

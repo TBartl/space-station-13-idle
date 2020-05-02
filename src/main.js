@@ -10,8 +10,16 @@ Vue.component('b-popover', BPopover)
 
 Vue.config.productionTip = false
 
-Vue.filter('cleanNum', function(value) {
-	
+Vue.filter('cleanNum', function (value) {
+	var suffix = "";
+	if (value.length >= 10000000) {
+		value = Math.round(value / 1000000);
+		suffix = "M";
+	} else if (value.length >= 100000) {
+		value = Math.round(value / 1000);
+		suffix = "K";
+	}
+	return value.toLocaleString();
 })
 
 new Vue({

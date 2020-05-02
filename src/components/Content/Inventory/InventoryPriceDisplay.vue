@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex align-items-center">
     <img class="pixelated" :src="require('@/assets/art/misc/coin.png')" />
-    <span>{{price}}</span>
+    <span>{{price | cleanNum}}</span>
   </div>
 </template>
 

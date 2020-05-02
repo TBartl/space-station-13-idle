@@ -7,6 +7,7 @@ Vue.use(Vuex)
 
 const state = {
 	visibleSidebarItem: "mining",
+	money: 50000,
 	inventory: {
 		"iron": 150,
 		"glass": 10,
@@ -25,6 +26,9 @@ const store = new Vuex.Store({
 		},
 		inventory(state) {
 			return state.inventory;
+		},
+		money(state) {
+			return state.money
 		}
 	},
 	mutations: {

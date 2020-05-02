@@ -6,17 +6,15 @@
     </div>
     <p class="items-header">{{version}}</p>
 
-    <sidebar-item
-      id="shop"
-      text="Cargo Terminal"
-      :icon="require('@/assets/art/sidebar/cargo.png')"
-    />
+    <sidebar-item id="shop" text="Cargo" :icon="require('@/assets/art/sidebar/cargo.png')">
+      <inventory-price-display :price="money" />
+    </sidebar-item>
     <sidebar-item
       id="inventory"
       text="Inventory"
       :icon="require('@/assets/art/sidebar/backpack.png')"
     />
-		
+
     <p class="items-header">Jobs</p>
     <sidebar-item
       v-for="job in allJobs"
@@ -24,7 +22,7 @@
       :id="job.id"
       :text="job.name"
       :icon="job.icon"
-			:color="job.color"
+      :color="job.color"
     />
   </div>
 </template>
@@ -32,11 +30,14 @@
 <script>
 import { ALL_JOBS } from "@/data/jobs";
 import SidebarItem from "./SidebarItem";
+import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Sidebar",
-  components: { SidebarItem },
+  components: { SidebarItem, InventoryPriceDisplay },
   computed: {
+		...mapGetters(["money"]),
     version() {
       return `Alpha v${process.env.PACKAGE_VERSION}`;
     },
