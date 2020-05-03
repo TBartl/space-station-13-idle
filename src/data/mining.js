@@ -21,19 +21,22 @@ export const ACTIONS = {
 		time: 1.5,
 		item: "iron",
 		icon: require("@/assets/art/mining/Ironwall.png"),
-		xp: 5
+		xp: 5,
+		requiredLevel: 1
 	},
 	mineSand: {
 		time: 2.0,
 		item: "glass",
 		icon: require("@/assets/art/mining/Sandore.png"),
-		xp: 10
+		xp: 10,
+		requiredLevel: 2
 	},
 	mineSilver: {
 		time: 2.5,
 		item: "silver",
 		icon: require("@/assets/art/mining/Silverwall.png"),
-		xp: 15
+		xp: 15,
+		requiredLevel: 3
 	}
 }
 

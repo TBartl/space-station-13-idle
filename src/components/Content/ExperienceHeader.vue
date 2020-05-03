@@ -13,7 +13,7 @@
         <span class="p-1 xp rounded">{{xp}}/{{nextLevelXP}}</span>
       </div>
     </div>
-    <progress-bar style="border-radius: 0 !important" />
+    <progress-bar style="border-radius: 0 !important" :progress="progress" />
   </div>
 </template>
 
@@ -40,6 +40,9 @@ export default {
       },
       nextLevelXP() {
         return xpFromLevel(this.level + 1);
+      },
+      progress() {
+        return (this.xp - this.thisLevelXP) / this.nextLevelXP;
       }
     })
   }

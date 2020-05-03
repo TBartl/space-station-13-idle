@@ -31,14 +31,15 @@ const mining = merge(cloneDeep(jobBase), {
 		}
 	},
 	actions: {
-		tryStartAction({ commit, state }, actionId) {
+		tryStartAction({ commit, state, getters }, actionId) {
+			var action = ACTIONS[actionId];
+			if (getters["level"] < action.requiredLevel) return;
+
 			var previousActionId = state.currentActionId;
 			commit("_cancelAction");
 			if (previousActionId == actionId) return;
 
 			commit("_setAction", actionId);
-
-			var action = ACTIONS[actionId];
 
 			progressAction(
 				action.time,
