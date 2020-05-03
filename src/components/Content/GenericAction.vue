@@ -1,7 +1,11 @@
 <template>
-  <div class="action text-muted" :class="{'locked': locked}" @click="tryStartAction(actionId)">
+  <div
+    class="action content-block text-muted"
+    :class="{'locked': locked}"
+    @click="tryStartAction(actionId)"
+  >
     <div v-if="!locked" class="d-flex flex-column align-items-center">
-      <p class="action-title">MINE</p>
+      <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase">{{item.name}}</p>
       <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
       <img :src="action.icon" alt class="pixelated mt-2" />
@@ -16,38 +20,46 @@
 </template>
 
 <script>
-import { ITEMS } from "@/data/mining";
+import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions, mapState } from "vuex";
 export default {
   components: { ProgressBar },
-  props: ["action", "actionId"],
+  props: ["jobId", "actionName", "action", "actionId"],
   computed: {
-		...mapGetters(["chronoSpeed"]),
-    ...mapGetters("mining", ["currentActionId", "currentProgress", "level"]),
+    ...mapGetters(["chronoSpeed"]),
+    ...mapState({
+      currentActionId(state, getters) {
+        return getters[this.jobId + "/currentActionId"];
+      },
+      currentProgress(state, getters) {
+        return getters[this.jobId + "/currentProgress"];
+      },
+      level(state, getters) {
+        return getters[this.jobId + "/level"];
+      }
+    }),
     item() {
       return ITEMS.get(this.action.item);
     },
     progress() {
       if (this.currentActionId != this.actionId) return 0;
-      return this.currentProgress / this.action.time * this.chronoSpeed;
+      return (this.currentProgress / this.action.time) * this.chronoSpeed;
     },
     locked() {
       return this.level < this.action.requiredLevel;
     }
   },
   methods: {
-    ...mapActions("mining", ["tryStartAction"])
+    tryStartAction(actionId) {
+      this.$store.dispatch(`${this.jobId}/tryStartAction`, actionId);
+    }
   }
 };
 </script>
 
 <style scoped>
 .action {
-  padding: 10px;
-  background-color: rgb(251, 251, 251);
-  border-top: 4px solid #c78329 !important;
-  border-radius: 0.25rem;
   transition: transform 0.15s ease-out, opacity 0.15s ease-out,
     box-shadow 0.15s ease-out, -webkit-transform 0.15s ease-out;
 }
@@ -74,10 +86,10 @@ export default {
 }
 
 .danger {
-	font-size: 14px;
-	margin-top: .5rem;
-	padding: .15rem .25rem;
-	background-color: rgb(179, 43, 43);
-	border-radius: 8px;
+  font-size: 14px;
+  margin-top: 0.5rem;
+  padding: 0.15rem 0.25rem;
+  background-color: rgb(179, 43, 43);
+  border-radius: 8px;
 }
 </style>

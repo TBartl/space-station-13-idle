@@ -1,5 +1,5 @@
 <template>
-  <div class="content-mining">
+  <div>
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
       <div class="row">
@@ -7,7 +7,12 @@
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
         <div class="col-2" v-for="[actionId, action] in viewableActions" :key="actionId">
-          <mining-action :action="action" :actionId="actionId" />
+          <generic-action
+            :jobId="jobId"
+            :actionName="'MINE'"
+            :action="action"
+            :actionId="actionId"
+          />
         </div>
       </div>
     </div>
@@ -19,12 +24,15 @@ import { findLastIndex } from "lodash";
 import { JOB, ACTIONS } from "@/data/mining";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
-import MiningAction from "@/components/Content/Mining/MiningAction";
+import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { MiningAction, ExperienceHeader },
+  components: { GenericAction, ExperienceHeader },
   computed: {
+    jobId() {
+      return "mining";
+    },
     ...mapState({
       level(state, getters) {
         return getters[this.jobId + "/level"];
@@ -33,9 +41,6 @@ export default {
     job() {
       return JOB;
     },
-    jobId() {
-      return "mining";
-		},
     viewableActions() {
       let entries = Object.entries(ACTIONS);
       let lastActionable = findLastIndex(entries, entry => {
