@@ -23,14 +23,20 @@
       :text="job.name"
       :icon="job.icon"
       :color="job.color"
-    />
-		
+    >
+		<span>{{$store.getters[job.id + '/level']}}/50</span>
+    </sidebar-item>
+
     <p class="items-header">Other</p>
+    <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
     <sidebar-item
-      id="settings"
-      text="Settings"
-      :icon="require('@/assets/art/sidebar/gear.png')"
-    />
+      id="chronosphere"
+      text="Chronosphere"
+      :icon="require('@/assets/art/sidebar/chronohelmet.png')"
+      :textColor="chronoSpeed != 1 ? '#3ac5ff' : ''"
+    >
+		<span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
+    </sidebar-item>
   </div>
 </template>
 
@@ -38,13 +44,13 @@
 import { ALL_JOBS } from "@/data/jobs";
 import SidebarItem from "./SidebarItem";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
   name: "Sidebar",
   components: { SidebarItem, InventoryPriceDisplay },
   computed: {
-		...mapGetters(["money"]),
+    ...mapGetters(["money", "chronoSpeed"]),
     version() {
       return `Alpha v${process.env.PACKAGE_VERSION}`;
     },

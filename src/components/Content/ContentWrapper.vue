@@ -11,6 +11,7 @@ import ContentInventory from "./ContentInventory";
 import ContentMining from "./ContentMining";
 import ContentScavenging from "./ContentScavenging";
 import ContentSettings from "./ContentSettings";
+import ContentChronosphere from "./ContentChronosphere";
 
 export default {
   name: "ContentWrapper",
@@ -19,7 +20,8 @@ export default {
     ContentInventory,
     ContentMining,
     ContentScavenging,
-    ContentSettings
+		ContentSettings,
+		ContentChronosphere
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"])

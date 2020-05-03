@@ -31,7 +31,7 @@ const mining = merge(cloneDeep(jobBase), {
 		}
 	},
 	actions: {
-		tryStartAction({ commit, state, getters, dispatch }, actionId) {
+		tryStartAction({ commit, state, getters, rootGetters, dispatch }, actionId) {
 			let action = ACTIONS[actionId];
 			if (getters["level"] < action.requiredLevel) return;
 
@@ -42,7 +42,7 @@ const mining = merge(cloneDeep(jobBase), {
 			commit("_setAction", actionId);
 
 			progressAction(
-				action.time,
+				action.time / rootGetters.chronoSpeed,
 				(progress, progressTimeout) => {
 					commit("_updateProgress", { progress, progressTimeout })
 				},
