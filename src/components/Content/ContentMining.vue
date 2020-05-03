@@ -1,7 +1,7 @@
 <template>
   <div class="content-mining">
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
-    <div class="content-container visible">
+    <div class="content-container">
       <div class="row">
         <div class="col-12 mb-4">
           <experience-header :color="job.color" :jobId="jobId" />

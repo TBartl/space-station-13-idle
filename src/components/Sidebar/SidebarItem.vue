@@ -37,7 +37,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.2);
 }
 img {
-  max-width: 32px;
+  width: 32px;
   margin-right: 8px;
   padding: 2px;
   border-radius: 14px;

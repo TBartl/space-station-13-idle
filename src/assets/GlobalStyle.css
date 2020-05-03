@@ -8,6 +8,10 @@ body {
 	font-weight: 600;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: #646a6e
+}
+
 p {
 	margin: 0;
 }
@@ -26,4 +30,12 @@ img.pixelated {
 	/* container-fluid */
 	padding-right: 15px;
 	padding-left: 15px;
+}
+
+.content-block {
+	border-radius: .25rem;
+	background-color: white;
+	min-height: 3rem;
+	border-top: 1px solid #dddddd;
+	padding: 1rem;
 }

@@ -10,7 +10,7 @@
       </div>
       <div class="d-flex align-items-center">
         <span class="mr-1">XP</span>
-        <span class="p-1 xp rounded">{{xp}}/{{nextLevelXP}}</span>
+        <span class="p-1 xp rounded">{{xp.toLocaleString()}}/{{nextLevelXP.toLocaleString()}}</span>
       </div>
     </div>
     <progress-bar style="border-radius: 0 !important" :progress="progress" />

@@ -24,6 +24,13 @@
       :icon="job.icon"
       :color="job.color"
     />
+		
+    <p class="items-header">Other</p>
+    <sidebar-item
+      id="settings"
+      text="Settings"
+      :icon="require('@/assets/art/sidebar/gear.png')"
+    />
   </div>
 </template>
 
