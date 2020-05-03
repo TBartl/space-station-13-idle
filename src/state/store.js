@@ -31,8 +31,6 @@ const vuexLocal = new VuexPersistence({
 	}
 })
 
-
-
 const initialState = {
 	visibleSidebarItem: "mining",
 	money: 50000,
@@ -41,6 +39,7 @@ const initialState = {
 		"glass": 10,
 		"silver": 1
 	},
+	chronoSpeed: 1,
 	mining: mining.state
 }
 
@@ -56,6 +55,9 @@ const store = new Vuex.Store({
 		},
 		money(state) {
 			return state.money
+		},
+		chronoSpeed(state) {
+			return state.chronoSpeed;
 		}
 	},
 	mutations: {
@@ -76,6 +78,9 @@ const store = new Vuex.Store({
 		_resetState(state) {
 			merge(state, cloneDeep(initialState));
 		},
+		setChronoSpeed(state, speed) {
+			state.chronoSpeed = speed;
+		}
 	},
 	actions: {
 		cancelAllActions({ commit }) {

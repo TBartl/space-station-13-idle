@@ -31,6 +31,11 @@
       text="Settings"
       :icon="require('@/assets/art/sidebar/gear.png')"
     />
+    <sidebar-item
+      id="chronosphere"
+      text="Chronosphere"
+      :icon="require('@/assets/art/sidebar/chronohelmet.png')"
+    />
   </div>
 </template>
 
