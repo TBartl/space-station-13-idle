@@ -32,10 +32,10 @@ const mining = merge(cloneDeep(jobBase), {
 	},
 	actions: {
 		tryStartAction({ commit, state, getters, dispatch }, actionId) {
-			var action = ACTIONS[actionId];
+			let action = ACTIONS[actionId];
 			if (getters["level"] < action.requiredLevel) return;
 
-			var previousActionId = state.currentActionId;
+			let previousActionId = state.currentActionId;
 			dispatch("cancelAllActions", {}, { root: true });
 			if (previousActionId == actionId) return;
 
@@ -48,8 +48,14 @@ const mining = merge(cloneDeep(jobBase), {
 				},
 				() => { finishAction(commit, actionId) }
 			);
-
-
+		},
+		_resume({ state, commit, dispatch }) {
+			if (state.currentActionId && !state.currentProgressTimeout) {
+				let lastActionId = state.currentActionId
+				if (!lastActionId) return;
+				commit("cancelActions");
+				dispatch("tryStartAction", lastActionId)
+			}
 		}
 	}
 });

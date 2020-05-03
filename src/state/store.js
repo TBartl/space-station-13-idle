@@ -4,17 +4,6 @@ import { cloneDeep, merge } from 'lodash';
 
 Vue.use(Vuex)
 
-import VuexPersistence from 'vuex-persist'
-const vuexLocal = new VuexPersistence({
-	storage: window.localStorage,
-	filter: (mutation) => {
-		let upperType = mutation.type.toUpperCase();
-		if (upperType.includes("PROGRESS")) return false;
-		if (upperType.includes("TIMEOUT")) return false;
-		return true;
-	}
-})
-
 
 import ITEMS from "@/data/items";
 import mining from "./mining";
@@ -22,6 +11,27 @@ import mining from "./mining";
 const modules = {
 	mining
 }
+
+
+import VuexPersistence from 'vuex-persist'
+const vuexLocal = new VuexPersistence({
+	storage: window.localStorage,
+	filter: (mutation) => {
+		let upperType = mutation.type.toUpperCase();
+		if (upperType.includes("UPDATEPROGRESS")) return false;
+		return true;
+	},
+	reducer: (state) => {
+		let reduced = cloneDeep(state);
+		Object.keys(modules).forEach(moduleName => {
+			delete reduced[moduleName].currentProgress;
+			delete reduced[moduleName].currentProgressTimeout;
+		});
+		return reduced;
+	}
+})
+
+
 
 const initialState = {
 	visibleSidebarItem: "mining",
@@ -75,6 +85,13 @@ const store = new Vuex.Store({
 				}
 			}
 		},
+		_resume() {
+			for (let [moduleName, module] of Object.entries(modules)) {
+				if (module.actions._resume) {
+					this.dispatch(moduleName + "/_resume");
+				}
+			}
+		},
 		resetData({ commit, dispatch }) {
 			dispatch("cancelAllActions");
 			commit("_resetState");
@@ -82,5 +99,7 @@ const store = new Vuex.Store({
 	},
 	plugins: [vuexLocal.plugin]
 });
+
+store.dispatch("_resume");
 
 export default store;
