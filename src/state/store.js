@@ -24,8 +24,8 @@ const vuexLocal = new VuexPersistence({
 	reducer: (state) => {
 		let reduced = cloneDeep(state);
 		Object.keys(modules).forEach(moduleName => {
-			delete state[moduleName].currentProgress;
-			delete state[moduleName].currentProgressTimeout;
+			delete reduced[moduleName].currentProgress;
+			delete reduced[moduleName].currentProgressTimeout;
 		});
 		return reduced;
 	}
@@ -85,6 +85,13 @@ const store = new Vuex.Store({
 				}
 			}
 		},
+		_resume() {
+			for (let [moduleName, module] of Object.entries(modules)) {
+				if (module.actions._resume) {
+					this.dispatch(moduleName + "/_resume");
+				}
+			}
+		},
 		resetData({ commit, dispatch }) {
 			dispatch("cancelAllActions");
 			commit("_resetState");
@@ -92,5 +99,7 @@ const store = new Vuex.Store({
 	},
 	plugins: [vuexLocal.plugin]
 });
+
+store.dispatch("_resume");
 
 export default store;
