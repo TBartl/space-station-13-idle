@@ -4,17 +4,6 @@ import { cloneDeep, merge } from 'lodash';
 
 Vue.use(Vuex)
 
-import VuexPersistence from 'vuex-persist'
-const vuexLocal = new VuexPersistence({
-	storage: window.localStorage,
-	filter: (mutation) => {
-		let upperType = mutation.type.toUpperCase();
-		if (upperType.includes("PROGRESS")) return false;
-		if (upperType.includes("TIMEOUT")) return false;
-		return true;
-	}
-})
-
 
 import ITEMS from "@/data/items";
 import mining from "./mining";
@@ -22,6 +11,27 @@ import mining from "./mining";
 const modules = {
 	mining
 }
+
+
+import VuexPersistence from 'vuex-persist'
+const vuexLocal = new VuexPersistence({
+	storage: window.localStorage,
+	filter: (mutation) => {
+		let upperType = mutation.type.toUpperCase();
+		if (upperType.includes("UPDATEPROGRESS")) return false;
+		return true;
+	},
+	reducer: (state) => {
+		let reduced = cloneDeep(state);
+		Object.keys(modules).forEach(moduleName => {
+			delete state[moduleName].currentProgress;
+			delete state[moduleName].currentProgressTimeout;
+		});
+		return reduced;
+	}
+})
+
+
 
 const initialState = {
 	visibleSidebarItem: "mining",
