@@ -23,13 +23,14 @@ export default {
   components: { ProgressBar },
   props: ["action", "actionId"],
   computed: {
+		...mapGetters(["chronoSpeed"]),
     ...mapGetters("mining", ["currentActionId", "currentProgress", "level"]),
     item() {
       return ITEMS.get(this.action.item);
     },
     progress() {
       if (this.currentActionId != this.actionId) return 0;
-      return this.currentProgress / this.action.time;
+      return this.currentProgress / this.action.time * this.chronoSpeed;
     },
     locked() {
       return this.level < this.action.requiredLevel;

@@ -42,7 +42,7 @@ export default {
         return xpFromLevel(this.level + 1);
       },
       progress() {
-        return (this.xp - this.thisLevelXP) / this.nextLevelXP;
+        return (this.xp - this.thisLevelXP) / (this.nextLevelXP - this.thisLevelXP);
       }
     })
   }

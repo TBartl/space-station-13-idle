@@ -35,7 +35,7 @@ export default {
   computed: {
     ...mapGetters(["chronoSpeed"]),
     speeds() {
-      return [1, 2, 5, 10];
+      return [1, 2, 5, 10, 25];
     }
   },
   methods: {
