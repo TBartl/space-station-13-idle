@@ -3,6 +3,9 @@
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
       <div class="row">
+        <div class="col-12 mb-4">
+          <experience-header :color="job.color" jobId="mining" />
+        </div>
         <div class="col-2" v-for="[actionId, action] in Object.entries(actions)" :key="actionId">
           <mining-action :action="action" :actionId="actionId" />
         </div>
@@ -14,10 +17,11 @@
 <script>
 import { JOB, ACTIONS } from "@/data/mining";
 import ContentAbstract from "@/components/Content/ContentAbstract";
+import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import MiningAction from "@/components/Content/Mining/MiningAction";
 export default {
   extends: ContentAbstract,
-  components: { MiningAction },
+  components: { MiningAction, ExperienceHeader },
   computed: {
     job() {
       return JOB;

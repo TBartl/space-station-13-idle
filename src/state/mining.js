@@ -1,9 +1,10 @@
-import { ACTIONS, finishAction } from "@/data/mining"
-
+import { cloneDeep, merge } from 'lodash';
+import jobBase from '@/state/jobBase';
 import { progressAction } from "@/utils/actionUtils";
 
-export default {
-	namespaced: true,
+import { ACTIONS, finishAction } from "@/data/mining"
+
+const mining = merge(cloneDeep(jobBase), {
 	state: {
 		currentActionId: "",
 		currentProgress: 0,
@@ -50,4 +51,6 @@ export default {
 
 		}
 	}
-}
+});
+
+export default mining;
