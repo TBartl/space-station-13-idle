@@ -1,6 +1,6 @@
 <template>
   <div class="content-header" :style="{'background-color': color}">
-    <img :src="icon" alt />
+    <img :src="icon" alt class="pixelated"/>
     <span>{{text}}</span>
   </div>
 </template>
@@ -23,6 +23,7 @@ img {
 	border-radius: 8px;
 	padding: 2px;
 	margin-right: 10px;
+	width: 36px;
 }
 span {
   font-size: 18px;

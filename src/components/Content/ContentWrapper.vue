@@ -10,6 +10,7 @@ import ContentShop from "./ContentShop";
 import ContentInventory from "./ContentInventory";
 import ContentMining from "./ContentMining";
 import ContentScavenging from "./ContentScavenging";
+import ContentSettings from "./ContentSettings";
 
 export default {
   name: "ContentWrapper",
@@ -17,7 +18,8 @@ export default {
     ContentShop,
     ContentInventory,
     ContentMining,
-    ContentScavenging
+    ContentScavenging,
+    ContentSettings
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"])

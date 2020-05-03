@@ -15,7 +15,7 @@ const mining = merge(cloneDeep(jobBase), {
 		currentProgress(state) { return state.currentProgress },
 	},
 	mutations: {
-		_cancelAction(state) {
+		cancelActions(state) {
 			if (!state.currentActionId) return;
 			clearInterval(state.currentProgressTimeout);
 			state.currentActionId = "";
@@ -31,12 +31,12 @@ const mining = merge(cloneDeep(jobBase), {
 		}
 	},
 	actions: {
-		tryStartAction({ commit, state, getters }, actionId) {
+		tryStartAction({ commit, state, getters, dispatch }, actionId) {
 			var action = ACTIONS[actionId];
 			if (getters["level"] < action.requiredLevel) return;
 
 			var previousActionId = state.currentActionId;
-			commit("_cancelAction");
+			dispatch("cancelAllActions", {}, { root: true });
 			if (previousActionId == actionId) return;
 
 			commit("_setAction", actionId);

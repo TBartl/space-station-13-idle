@@ -4,6 +4,7 @@
       <sidebar />
       <content-wrapper />
     </div>
+    <modals-container />
   </div>
 </template>
 
@@ -13,8 +14,8 @@ import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 export default {
   name: "App",
   components: {
-		Sidebar,
-		ContentWrapper
+    Sidebar,
+    ContentWrapper
   }
 };
 </script>
@@ -33,8 +34,8 @@ body {
 }
 
 .mega-container {
-	height: 100%;
-	display: flex;
-	align-items: stretch;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
 }
 </style>

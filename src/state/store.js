@@ -1,26 +1,42 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import mining from "./mining";
+import { cloneDeep, merge } from 'lodash';
 
 Vue.use(Vuex)
 
-import ITEMS from "@/data/items";
+import VuexPersistence from 'vuex-persist'
+const vuexLocal = new VuexPersistence({
+	storage: window.localStorage,
+	filter: (mutation) => {
+		let upperType = mutation.type.toUpperCase();
+		if (upperType.includes("PROGRESS")) return false;
+		if (upperType.includes("TIMEOUT")) return false;
+		return true;
+	}
+})
 
-const state = {
+
+import ITEMS from "@/data/items";
+import mining from "./mining";
+
+const modules = {
+	mining
+}
+
+const initialState = {
 	visibleSidebarItem: "mining",
 	money: 50000,
 	inventory: {
 		"iron": 150,
 		"glass": 10,
 		"silver": 1
-	}
+	},
+	mining: mining.state
 }
 
 const store = new Vuex.Store({
-	modules: {
-		mining
-	},
-	state,
+	modules,
+	state: cloneDeep(initialState),
 	getters: {
 		visibleSidebarItem(state) {
 			return state.visibleSidebarItem;
@@ -46,16 +62,25 @@ const store = new Vuex.Store({
 			state.inventory[itemId] -= count;
 			var item = ITEMS.get(itemId);
 			state.money += item.sellPrice * count;
+		},
+		_resetState(state) {
+			merge(state, cloneDeep(initialState));
+		},
+	},
+	actions: {
+		cancelAllActions({ commit }) {
+			for (let [moduleName, module] of Object.entries(modules)) {
+				if (module.mutations.cancelActions) {
+					commit(moduleName + "/cancelActions");
+				}
+			}
+		},
+		resetData({ commit, dispatch }) {
+			dispatch("cancelAllActions");
+			commit("_resetState");
 		}
-	}
+	},
+	plugins: [vuexLocal.plugin]
 });
-
-
-// TODO: figure out state saving at some point
-// store.subscribe((mutation, state) => {
-// 	// Store the state object as a JSON string
-// 	localStorage.setItem('store', JSON.stringify(state));
-// });
-
 
 export default store;
