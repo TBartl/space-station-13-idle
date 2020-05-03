@@ -1,3 +1,5 @@
+import { levelFromXP } from '@/data/experience'
+
 export default {
 	namespaced: true,
 	state: {
@@ -6,6 +8,9 @@ export default {
 	getters: {
 		xp(state) {
 			return state.xp;
+		},
+		level(state) {
+			return levelFromXP(state.xp);
 		}
 	},
 	mutations: {

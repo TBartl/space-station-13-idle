@@ -2,7 +2,7 @@
   <div class="action text-muted" @click="tryStartAction(actionId)">
     <p class="action-title">MINE</p>
     <p class="text-uppercase">{{item.name}}</p>
-    <p class="action-time mt-1">{{action.time}} SECONDS</p>
+    <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
     <img :src="action.icon" alt class="pixelated mt-2" />
     <progress-bar class="mt-3" :progress="progress" />
   </div>

@@ -6,11 +6,11 @@
     >
       <div class="d-flex align-items-center">
         <span class="mr-1">LEVEL</span>
-        <span class="p-1 level rounded">95/99</span>
+        <span class="p-1 level rounded">{{level}}/{{maxLevel}}</span>
       </div>
       <div class="d-flex align-items-center">
         <span class="mr-1">XP</span>
-        <span class="p-1 xp rounded">{{xp}}/456,789,012</span>
+        <span class="p-1 xp rounded">{{xp}}/{{nextLevelXP}}</span>
       </div>
     </div>
     <progress-bar style="border-radius: 0 !important" />
@@ -19,6 +19,7 @@
 
 <script>
 import ProgressBar from "@/components/ProgressBar";
+import { MAX_LEVEL, xpFromLevel, levelFromXP } from "@/data/experience";
 import { mapGetters, mapState } from "vuex";
 export default {
   components: { ProgressBar },
@@ -27,6 +28,18 @@ export default {
     ...mapState({
       xp(state, getters) {
         return getters[this.jobId + "/xp"];
+      },
+      level(state, getters) {
+        return getters[this.jobId + "/level"];
+      },
+      maxLevel() {
+        return MAX_LEVEL;
+      },
+      thisLevelXP() {
+        return xpFromLevel(this.level);
+      },
+      nextLevelXP() {
+        return xpFromLevel(this.level + 1);
       }
     })
   }

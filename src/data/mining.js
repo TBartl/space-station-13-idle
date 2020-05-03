@@ -20,17 +20,20 @@ export const ACTIONS = {
 	mineIron: {
 		time: 1.5,
 		item: "iron",
-		icon: require("@/assets/art/mining/Ironwall.png")
+		icon: require("@/assets/art/mining/Ironwall.png"),
+		xp: 5
 	},
 	mineSand: {
 		time: 2.0,
 		item: "glass",
-		icon: require("@/assets/art/mining/Sandore.png")
+		icon: require("@/assets/art/mining/Sandore.png"),
+		xp: 10
 	},
 	mineSilver: {
 		time: 2.5,
 		item: "silver",
-		icon: require("@/assets/art/mining/Silverwall.png")
+		icon: require("@/assets/art/mining/Silverwall.png"),
+		xp: 15
 	}
 }
 
@@ -45,4 +48,5 @@ export const JOB = {
 export function finishAction(commit, actionId) {
 	var action = ACTIONS[actionId];
 	commit("obtainItem", { itemId: action.item }, { root: true });
+	commit("addXP", action.xp);
 }
