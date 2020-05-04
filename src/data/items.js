@@ -1,6 +1,12 @@
 import { ALL_JOBS } from "./jobs";
 
-const jobItems = new Map(...ALL_JOBS.map(job => job.items));
+let jobItems = new Map();
+ALL_JOBS.forEach(job => {
+	console.log(jobItems, job.items);
+	jobItems = new Map([...jobItems, ...job.items]);
+});
+
+console.log(jobItems);
 
 const ITEMS = new Map(...[jobItems]);
 
