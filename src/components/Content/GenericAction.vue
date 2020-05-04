@@ -44,7 +44,7 @@ export default {
     },
     progress() {
       if (this.currentActionId != this.actionId) return 0;
-      return (this.currentProgress / this.action.time) * this.chronoSpeed;
+      return (this.currentProgress / this.action.time);
     },
     locked() {
       return this.level < this.action.requiredLevel;

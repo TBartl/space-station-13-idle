@@ -39,7 +39,8 @@ export default {
 			commit("_setAction", actionId);
 
 			progressAction(
-				action.time / rootGetters.chronoSpeed,
+				action.time,
+				rootGetters,
 				(progress, progressTimeout) => {
 					commit("_updateProgress", { progress, progressTimeout })
 				},
