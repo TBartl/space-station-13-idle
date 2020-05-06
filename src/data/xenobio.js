@@ -1,110 +1,110 @@
 export const ITEMS = new Map([
-	["item_slime_grey", {
+	["slimeGrey", {
 		name: "Grey Slime Core",
 		sellPrice: 0,
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif")
 	}],
-	["item_slime_orange", {
+	["slimeOrange", {
 		name: "Orange Slime Core",
 		sellPrice: 1,
 		icon: require("@/assets/art/xenobio/SlimeOrange.gif")
 	}],
-	["item_slime_purple", {
+	["slimePurple", {
 		name: "Purple Slime Core",
 		sellPrice: 1,
 		icon: require("@/assets/art/xenobio/SlimePurple.gif")
 	}],
-	["item_slime_blue", {
+	["slimeBlue", {
 		name: "Blue Slime Core",
 		sellPrice: 1,
 		icon: require("@/assets/art/xenobio/SlimeBlue.gif")
 	}],
-	["item_slime_metal", {
+	["slimeMetal", {
 		name: "Metal Slime Core",
 		sellPrice: 1,
 		icon: require("@/assets/art/xenobio/SlimeMetal.gif")
 	}],
-	["item_slime_yellow", {
+	["slimeYellow", {
 		name: "Yellow Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeYellow.gif")
 	}],
-	["item_slime_darkpurple", {
+	["slimeDarkPurple", {
 		name: "Dark Purple Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeDarkPurple.gif")
 	}],
-	["item_slime_darkblue", {
+	["slimeDarkBlue", {
 		name: "Dark Blue Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeDarkBlue.gif")
 	}],
-	["item_slime_silver", {
+	["slimeSilver", {
 		name: "Silver Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeSilver.gif")
 	}],
-	["item_slime_bluespace", {
+	["slimeBluespace", {
 		name: "Bluespace Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeBluespace.gif")
 	}],
-	["item_slime_sepia", {
+	["slimeSepia", {
 		name: "Sepia Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeSepia.gif")
 	}],
-	["item_slime_cerulean", {
+	["slimeCerulean", {
 		name: "Cerulean Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeCerulean.gif")
 	}],
-	["item_slime_pyrite", {
+	["slimePyrite", {
 		name: "Pyrite Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimePyrite.gif")
 	}],
-	["item_slime_red", {
+	["slimeRed", {
 		name: "Red Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeRed.gif")
 	}],
-	["item_slime_green", {
+	["slimeGreen", {
 		name: "Green Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeGreen.gif")
 	}],
-	["item_slime_pink", {
+	["slimePink", {
 		name: "Pink Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimePink.gif")
 	}],
-	["item_slime_gold", {
+	["slimeGold", {
 		name: "Gold Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeGold.gif")
 	}],
-	["item_slime_oil", {
+	["slimeOil", {
 		name: "Oil Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeOil.gif")
 	}],
-	["item_slime_black", {
+	["slimeBlack", {
 		name: "Black Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeBlack.gif")
 	}],
-	["item_slime_lightpink", {
+	["slimeLightPink", {
 		name: "Light Pink Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeLightPink.gif")
 	}],
-	["item_slime_addy", {
+	["slimeAddy", {
 		name: "Adamantite Slime Core",
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimeAddy.gif")
 	}],
-	["item_slime_rainbow", {
+	["slimeRainbow", {
 		name: "Rainbow Slime Core",
 		sellPrice: 6,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif")
@@ -114,154 +114,154 @@ export const ITEMS = new Map([
 export const ACTIONS = {
 	splitGrey: {
 		time: 1.5,
-		item: "item_slime_grey",
+		item: "slimeGrey",
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		xp: 5,
 		requiredLevel: 1
 	},
 	splitOrange: {
 		time: 1.5,
-		item: "item_slime_orange",
+		item: "slimeOrange",
 		icon: require("@/assets/art/xenobio/SlimeOrange.gif"),
 		xp: 5,
 		requiredLevel: 4
 	},
 	splitPurple: {
 		time: 1.5,
-		item: "item_slime_purple",
+		item: "slimePurple",
 		icon: require("@/assets/art/xenobio/SlimePurple.gif"),
 		xp: 5,
 		requiredLevel: 5
 	},
 	splitBlue: {
 		time: 1.5,
-		item: "item_slime_blue",
+		item: "slimeBlue",
 		icon: require("@/assets/art/xenobio/SlimeBlue.gif"),
 		xp: 5,
 		requiredLevel: 6
 	},
 	splitMetal: {
 		time: 1.5,
-		item: "item_slime_metal",
+		item: "slimeMetal",
 		icon: require("@/assets/art/xenobio/SlimeMetal.gif"),
 		xp: 5,
 		requiredLevel: 7
 	},
 	splitYellow: {
 		time: 1.5,
-		item: "item_slime_yellow",
+		item: "slimeYellow",
 		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
 		xp: 5,
 		requiredLevel: 14
 	},
 	splitDarkPurple: {
 		time: 1.5,
-		item: "item_slime_darkpurple",
+		item: "slimeDarkPurple",
 		icon: require("@/assets/art/xenobio/SlimeDarkPurple.gif"),
 		xp: 5,
 		requiredLevel: 15
 	},
 	splitDarkBlue: {
 		time: 1.5,
-		item: "item_slime_darkblue",
+		item: "slimeDarkBlue",
 		icon: require("@/assets/art/xenobio/SlimeDarkBlue.gif"),
 		xp: 5,
 		requiredLevel: 16
 	},
 	splitSilver: {
 		time: 1.5,
-		item: "item_slime_silver",
+		item: "slimeSilver",
 		icon: require("@/assets/art/xenobio/SlimeSilver.gif"),
 		xp: 5,
 		requiredLevel: 17
 	},
 	splitBluespace: {
 		time: 1.5,
-		item: "item_slime_bluespace",
+		item: "slimeBluespace",
 		icon: require("@/assets/art/xenobio/SlimeBluespace.gif"),
 		xp: 5,
 		requiredLevel: 24
 	},
 	splitSepia: {
 		time: 1.5,
-		item: "item_slime_sepia",
+		item: "slimeSepia",
 		icon: require("@/assets/art/xenobio/SlimeSepia.gif"),
 		xp: 5,
 		requiredLevel: 25
 	},
 	splitCerulean: {
 		time: 1.5,
-		item: "item_slime_cerulean",
+		item: "slimeCerulean",
 		icon: require("@/assets/art/xenobio/SlimeCerulean.gif"),
 		xp: 5,
 		requiredLevel: 26
 	},
 	splitPyrite: {
 		time: 1.5,
-		item: "item_slime_pyrite",
+		item: "slimePyrite",
 		icon: require("@/assets/art/xenobio/SlimePyrite.gif"),
 		xp: 5,
 		requiredLevel: 27
 	},
 	splitRed: {
 		time: 1.5,
-		item: "item_slime_red",
+		item: "slimeRed",
 		icon: require("@/assets/art/xenobio/SlimeRed.gif"),
 		xp: 5,
 		requiredLevel: 34
 	},
 	splitGreen: {
 		time: 1.5,
-		item: "item_slime_green",
+		item: "slimeGreen",
 		icon: require("@/assets/art/xenobio/SlimeGreen.gif"),
 		xp: 5,
 		requiredLevel: 35
 	},
 	splitPink: {
 		time: 1.5,
-		item: "item_slime_pink",
+		item: "slimePink",
 		icon: require("@/assets/art/xenobio/SlimePink.gif"),
 		xp: 5,
 		requiredLevel: 36
 	},
 	splitGold: {
 		time: 1.5,
-		item: "item_slime_gold",
+		item: "slimeGold",
 		icon: require("@/assets/art/xenobio/SlimeGold.gif"),
 		xp: 5,
 		requiredLevel: 37
 	},
 	splitOil: {
 		time: 1.5,
-		item: "item_slime_oil",
+		item: "slimeOil",
 		icon: require("@/assets/art/xenobio/SlimeOil.gif"),
 		xp: 5,
 		requiredLevel: 44
 	},
 	splitBlack: {
 		time: 1.5,
-		item: "item_slime_black",
+		item: "slimeBlack",
 		icon: require("@/assets/art/xenobio/SlimeBlack.gif"),
 		xp: 5,
 		requiredLevel: 45
 	},
 	splitLightPink: {
 		time: 1.5,
-		item: "item_slime_lightpink",
+		item: "slimeLightPink",
 		icon: require("@/assets/art/xenobio/SlimeLightPink.gif"),
 		xp: 5,
 		requiredLevel: 46
 	},
 	splitAddy: {
 		time: 1.5,
-		item: "item_slime_grey",
+		item: "slimeGrey",
 		icon: require("@/assets/art/xenobio/SlimeAddy.gif"),
 		xp: 5,
 		requiredLevel: 47
 	},
 	splitRainbow: {
 		time: 1.5,
-		item: "item_slime_rainbow",
+		item: "slimeRainbow",
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
 		xp: 5,
 		requiredLevel: 50
