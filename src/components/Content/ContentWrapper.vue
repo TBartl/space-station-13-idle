@@ -9,6 +9,7 @@ import { mapGetters } from "vuex";
 import ContentShop from "./ContentShop";
 import ContentInventory from "./ContentInventory";
 import ContentMining from "./ContentMining";
+import ContentXenobiology from "./ContentXenobiology";
 import ContentScavenging from "./ContentScavenging";
 import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
@@ -19,6 +20,7 @@ export default {
     ContentShop,
     ContentInventory,
     ContentMining,
+    ContentXenobiology,
     ContentScavenging,
 		ContentSettings,
 		ContentChronosphere

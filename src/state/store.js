@@ -7,9 +7,11 @@ Vue.use(Vuex)
 
 import ITEMS from "@/data/items";
 import mining from "./mining";
+import xenobio from "./xenobio";
 
 const modules = {
-	mining
+	mining,
+	xenobio
 }
 
 
@@ -40,7 +42,8 @@ const initialState = {
 		"silver": 1
 	},
 	chronoSpeed: 1,
-	mining: mining.state
+	mining: mining.state,
+	xenobio: xenobio.state
 }
 
 const store = new Vuex.Store({
