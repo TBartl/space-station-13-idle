@@ -62,6 +62,7 @@ export default {
 .action {
   transition: transform 0.15s ease-out, opacity 0.15s ease-out,
     box-shadow 0.15s ease-out, -webkit-transform 0.15s ease-out;
+	margin-bottom: 1.9rem;
 }
 .action.locked {
   background-color: rgb(68, 68, 68);

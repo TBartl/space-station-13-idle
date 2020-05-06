@@ -79,6 +79,11 @@ export const ITEMS = new Map([
 		sellPrice: 2,
 		icon: require("@/assets/art/xenobio/SlimePink.gif")
 	}],
+	["item_slime_gold", {
+		name: "Gold Slime Core",
+		sellPrice: 2,
+		icon: require("@/assets/art/xenobio/SlimeGold.gif")
+	}],
 	["item_slime_oil", {
 		name: "Oil Slime Core",
 		sellPrice: 2,
