@@ -20,8 +20,9 @@ export default {
     ContentShop,
     ContentInventory,
     ContentMining,
-		ContentScavenging,
 		ContentFabrication,
+    // 'content-xenobiology': ContentXenobio,
+    ContentScavenging,
 		ContentSettings,
 		ContentChronosphere
   },
