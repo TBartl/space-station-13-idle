@@ -67,11 +67,11 @@ const store = new Vuex.Store({
 		setVisibleSidebarItem(state, id) {
 			state.visibleSidebarItem = id;
 		},
-		obtainItem(state, { itemId }) {
+		changeItemCount(state, { itemId, count }) {
 			if (!state.inventory[itemId]) {
 				Vue.set(state.inventory, itemId, 0)
 			}
-			state.inventory[itemId] += 1;
+			state.inventory[itemId] += count;
 		},
 		sellItem(state, { itemId, count }) {
 			state.inventory[itemId] -= count;

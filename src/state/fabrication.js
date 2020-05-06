@@ -9,11 +9,6 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		jobActions() {
 			return ACTIONS;
 		}
-	},
-	actions: {
-		finishAction({ commit }, actionId) {
-			finishAction(commit, actionId)
-		}
 	}
 });
 

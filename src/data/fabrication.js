@@ -12,7 +12,10 @@ export const ACTIONS = {
 		item: "crowbar",
 		icon: require("@/assets/art/fabrication/crowbar.png"),
 		xp: 10,
-		requiredLevel: 1
+		requiredLevel: 1,
+		requiredItems: {
+			iron: 1
+		}
 	}
 }
 
@@ -22,10 +25,4 @@ export const JOB = {
 	icon: require("@/assets/art/fabrication/icon.png"),
 	color: "#89adac",
 	items: ITEMS
-}
-
-export function finishAction(commit, actionId) {
-	var action = ACTIONS[actionId];
-	commit("obtainItem", { itemId: action.item }, { root: true });
-	commit("addXP", action.xp);
 }
