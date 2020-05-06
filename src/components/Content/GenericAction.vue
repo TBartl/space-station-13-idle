@@ -6,7 +6,7 @@
   >
     <div v-if="!locked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{actionName}}</p>
-      <p class="text-uppercase">{{item.name}}</p>
+      <p class="text-uppercase text-center">{{item.name}}</p>
       <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
       <img :src="action.icon" alt class="pixelated mt-2" />
       <progress-bar class="mt-3" :progress="progress" />
