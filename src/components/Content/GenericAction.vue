@@ -8,7 +8,8 @@
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{item.name}}</p>
       <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
-      <img :src="action.icon" alt class="pixelated mt-2" />
+      <img :id="'action-item-'+id" :src="action.icon" alt class="pixelated mt-2" />
+      <item-popover :itemId="action.item" :target="'action-item-'+id" />
       <progress-bar class="mt-3" :progress="progress" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
@@ -22,13 +23,17 @@
 <script>
 import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
+import ItemPopover from "@/components/ItemPopover";
 import { mapGetters, mapActions, mapState } from "vuex";
 export default {
-  components: { ProgressBar },
+  components: { ProgressBar, ItemPopover },
   props: ["jobId", "actionName", "action", "actionId"],
   computed: {
     ...mapGetters(["chronoSpeed"]),
     ...mapState({
+      id() {
+        return this._uid.toString();
+      },
       currentActionId(state, getters) {
         return getters[this.jobId + "/currentActionId"];
       },
@@ -44,7 +49,7 @@ export default {
     },
     progress() {
       if (this.currentActionId != this.actionId) return 0;
-      return (this.currentProgress / this.action.time);
+      return this.currentProgress / this.action.time;
     },
     locked() {
       return this.level < this.action.requiredLevel;
@@ -62,7 +67,7 @@ export default {
 .action {
   transition: transform 0.15s ease-out, opacity 0.15s ease-out,
     box-shadow 0.15s ease-out, -webkit-transform 0.15s ease-out;
-	margin-bottom: 1.9rem;
+  margin-bottom: 1.9rem;
 }
 .action.locked {
   background-color: rgb(68, 68, 68);

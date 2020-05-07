@@ -1,11 +1,11 @@
 <template>
   <div>
-    <button class="item" :id="`item-${id}`">
+    <button class="item" :id="id">
       <img class="pixelated" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
-		<item-popover :id="id" :itemId="itemId" />
-    <b-popover :target="`item-${id}`" triggers="click blur" placement="bottom" delay="0">
+		<item-popover :target="id" :itemId="itemId" />
+    <b-popover :target="id" triggers="click blur" placement="bottom" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
@@ -39,7 +39,7 @@ export default {
   computed: {
     ...mapGetters(["inventory"]),
     id() {
-      return this._uid;
+      return this._uid.toString();
     },
     item() {
       return ITEMS.get(this.itemId);
