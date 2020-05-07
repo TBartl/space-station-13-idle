@@ -4,12 +4,7 @@
       <img class="pixelated" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
-    <b-popover :target="`item-${id}`" triggers="hover" placement="top" delay="0">
-      <div class="popup d-flex flex-column align-items-center">
-        <h6 class="title">{{item.name}}</h6>
-        <inventory-price-display :price="item.sellPrice" />
-      </div>
-    </b-popover>
+		<item-popover :id="id" :itemId="itemId" />
     <b-popover :target="`item-${id}`" triggers="click blur" placement="bottom" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
@@ -31,11 +26,11 @@
 <script>
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
-import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
+import ItemPopover from '@/components/ItemPopover'
 export default {
   props: ["itemId"],
-  components: { InventoryPriceDisplay, InventorySell },
+  components: { InventorySell, ItemPopover },
   data() {
     return {
       hover: false
