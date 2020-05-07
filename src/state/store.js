@@ -8,12 +8,12 @@ Vue.use(Vuex)
 import ITEMS from "@/data/items";
 import mining from "./mining";
 import fabrication from "./fabrication";
-import xenobio from "./xenobio";
+import xenobiology from "./xenobiology";
 
 const modules = {
 	mining,
 	fabrication,
-	xenobio
+	xenobiology
 }
 
 
@@ -46,7 +46,7 @@ const initialState = {
 	chronoSpeed: 1,
 	mining: mining.state,
 	fabrication: fabrication.state,
-	xenobio: xenobio.state
+	xenobiology: xenobiology.state
 }
 
 const store = new Vuex.Store({

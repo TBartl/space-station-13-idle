@@ -21,7 +21,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB, ACTIONS } from "@/data/xenobio";
+import { JOB, ACTIONS } from "@/data/xenobiology";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import GenericAction from "@/components/Content/GenericAction";
@@ -31,7 +31,7 @@ export default {
   components: { GenericAction, ExperienceHeader },
   computed: {
     jobId() {
-      return "xenobio";
+      return "xenobiology";
     },
     ...mapState({
       level(state, getters) {
