@@ -6,7 +6,7 @@
   >
     <div v-if="!locked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{actionName}}</p>
-      <p class="text-uppercase">{{item.name}}</p>
+      <p class="text-uppercase text-center">{{item.name}}</p>
       <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
       <img :src="action.icon" alt class="pixelated mt-2" />
       <progress-bar class="mt-3" :progress="progress" />
@@ -62,6 +62,7 @@ export default {
 .action {
   transition: transform 0.15s ease-out, opacity 0.15s ease-out,
     box-shadow 0.15s ease-out, -webkit-transform 0.15s ease-out;
+	margin-bottom: 1.9rem;
 }
 .action.locked {
   background-color: rgb(68, 68, 68);
