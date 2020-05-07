@@ -1,16 +1,11 @@
 <template>
   <div>
-    <button class="item" :id="`item-${id}`">
+    <button class="item" :id="id">
       <img class="pixelated" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
-    <b-popover :target="`item-${id}`" triggers="hover" placement="top" delay="0">
-      <div class="popup d-flex flex-column align-items-center">
-        <h6 class="title">{{item.name}}</h6>
-        <inventory-price-display :price="item.sellPrice" />
-      </div>
-    </b-popover>
-    <b-popover :target="`item-${id}`" triggers="click blur" placement="bottom" delay="0">
+		<item-popover :target="id" :itemId="itemId" />
+    <b-popover :target="id" triggers="click blur" placement="bottom" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
@@ -31,11 +26,11 @@
 <script>
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
-import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
+import ItemPopover from '@/components/ItemPopover'
 export default {
   props: ["itemId"],
-  components: { InventoryPriceDisplay, InventorySell },
+  components: { InventorySell, ItemPopover },
   data() {
     return {
       hover: false
@@ -44,7 +39,7 @@ export default {
   computed: {
     ...mapGetters(["inventory"]),
     id() {
-      return this._uid;
+      return this._uid.toString();
     },
     item() {
       return ITEMS.get(this.itemId);

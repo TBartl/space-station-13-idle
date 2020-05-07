@@ -7,11 +7,13 @@ Vue.use(Vuex)
 
 import ITEMS from "@/data/items";
 import mining from "./mining";
-import xenobio from "./xenobio";
+import fabrication from "./fabrication";
+import xenobiology from "./xenobiology";
 
 const modules = {
 	mining,
-	xenobio
+	fabrication,
+	xenobiology
 }
 
 
@@ -43,7 +45,8 @@ const initialState = {
 	},
 	chronoSpeed: 1,
 	mining: mining.state,
-	xenobio: xenobio.state
+	fabrication: fabrication.state,
+	xenobiology: xenobiology.state
 }
 
 const store = new Vuex.Store({
@@ -67,11 +70,11 @@ const store = new Vuex.Store({
 		setVisibleSidebarItem(state, id) {
 			state.visibleSidebarItem = id;
 		},
-		obtainItem(state, { itemId }) {
+		changeItemCount(state, { itemId, count }) {
 			if (!state.inventory[itemId]) {
 				Vue.set(state.inventory, itemId, 0)
 			}
-			state.inventory[itemId] += 1;
+			state.inventory[itemId] += count;
 		},
 		sellItem(state, { itemId, count }) {
 			state.inventory[itemId] -= count;

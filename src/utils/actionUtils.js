@@ -1,17 +1,17 @@
-const PROGRESS_INTERVAL = 0.03;
+const PROGRESS_INTERVAL = 0.025;
 
-export function progressAction(duration, updateProgress, onFinish, progress = 0) {
+export function progressAction(duration, rootGetters, updateProgress, onFinish, progress = 0) {
 	var from = new Date().getTime();
 	var timeout = setTimeout(() => {
 		// progress += PROGRESS_INTERVAL;
 		var to = new Date().getTime();
-		progress += (to - from) / 1000;
+		progress += (to - from) / 1000 * rootGetters.chronoSpeed;
 
 		if (progress >= duration) {
 			onFinish();
-			progressAction(duration, updateProgress, onFinish);
+			progressAction(duration, rootGetters, updateProgress, onFinish);
 		} else {
-			progressAction(duration, updateProgress, onFinish, progress);
+			progressAction(duration, rootGetters, updateProgress, onFinish, progress);
 		}
 	}, PROGRESS_INTERVAL * 1000)
 

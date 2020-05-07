@@ -11,6 +11,18 @@ export default {
 	getters: {
 		currentActionId(state) { return state.currentActionId },
 		currentProgress(state) { return state.currentProgress },
+		hasActionRequiredItems(state, getters, rootState) {
+			return (actionId) => {
+				let action = getters.jobActions[actionId];
+				if (!action.requiredItems) return true;
+				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
+					let count = rootState.inventory[itemId];
+					count = count ? count : 0;
+					if (count < requiredCount) return false;
+				}
+				return true;
+			}
+		}
 	},
 	mutations: {
 		cancelActions(state) {
@@ -39,12 +51,27 @@ export default {
 			commit("_setAction", actionId);
 
 			progressAction(
-				action.time / rootGetters.chronoSpeed,
+				action.time,
+				rootGetters,
 				(progress, progressTimeout) => {
 					commit("_updateProgress", { progress, progressTimeout })
 				},
 				() => { dispatch("finishAction", actionId) }
 			);
+		},
+		finishAction({ commit, getters }, actionId) {
+			if (!getters.hasActionRequiredItems(actionId)) return;
+			let action = getters.jobActions[actionId];
+			commit("changeItemCount", { itemId: action.item, count: 1 }, { root: true });
+			commit("addXP", action.xp);
+
+
+			if (action.requiredItems) {
+				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
+					commit("changeItemCount", { itemId, count: -requiredCount }, { root: true });
+				}
+			}
+
 		},
 		_resume({ state, commit, dispatch }) {
 			if (state.currentActionId && !state.currentProgressTimeout) {

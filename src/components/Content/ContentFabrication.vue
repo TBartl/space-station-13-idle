@@ -9,7 +9,7 @@
         <div class="col-2" v-for="[actionId, action] in viewableActions" :key="actionId">
           <generic-action
             :jobId="jobId"
-            :actionName="'RAISE'"
+            :actionName="'FABRICATE'"
             :action="action"
             :actionId="actionId"
           />
@@ -21,7 +21,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB, ACTIONS } from "@/data/xenobiology";
+import { JOB, ACTIONS } from "@/data/fabrication";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import GenericAction from "@/components/Content/GenericAction";
@@ -31,7 +31,7 @@ export default {
   components: { GenericAction, ExperienceHeader },
   computed: {
     jobId() {
-      return "xenobiology";
+      return "fabrication";
     },
     ...mapState({
       level(state, getters) {
