@@ -1,20 +1,35 @@
 <template>
   <div
     class="action content-block text-muted"
-    :class="{'locked': locked}"
+    :class="{'locked': locked || !hasItems}"
     @click="tryStartAction(actionId)"
   >
-    <div v-if="!locked" class="d-flex flex-column align-items-center">
+    <div
+      v-if="!locked"
+      class="d-flex flex-column align-items-center"
+    >
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{item.name}}</p>
       <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
-      <img :id="'action-item-'+id" :src="action.icon" alt class="pixelated mt-2" />
+      <img :id="'action-item-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
       <item-popover :itemId="action.item" :target="'action-item-'+id" />
-      <progress-bar class="mt-3" :progress="progress" />
+      <div
+        v-if="action.requiredItems"
+        class="requirements d-flex flex-column align-items-center mb-2"
+      >
+        <span v-if="!hasItems" class="danger color-weight text-light">MISSING ITEMS</span>
+        <item-requirement
+          v-for="(entry, index) in Object.entries(action.requiredItems)"
+          :key="index"
+          :itemId="entry[0]"
+          :count="entry[1]"
+        />
+      </div>
+      <progress-bar :progress="progress" v-if="hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
-      <img :src="require('@/assets/art/misc/airlock.png')" alt class="pixelated mt-2" />
+      <img :src="require('@/assets/art/misc/airlock.png')" alt class="pixelated mt-2 mb-2" />
       <span class="danger">LEVEL {{action.requiredLevel}}</span>
     </div>
   </div>
@@ -24,9 +39,10 @@
 import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
 import ItemPopover from "@/components/ItemPopover";
+import ItemRequirement from "@/components/ItemRequirement";
 import { mapGetters, mapActions, mapState } from "vuex";
 export default {
-  components: { ProgressBar, ItemPopover },
+  components: { ProgressBar, ItemPopover, ItemRequirement },
   props: ["jobId", "actionName", "action", "actionId"],
   computed: {
     ...mapGetters(["chronoSpeed"]),
@@ -42,6 +58,9 @@ export default {
       },
       level(state, getters) {
         return getters[this.jobId + "/level"];
+      },
+      hasActionRequiredItems(state, getters) {
+        return getters[this.jobId + "/hasActionRequiredItems"];
       }
     }),
     item() {
@@ -53,6 +72,9 @@ export default {
     },
     locked() {
       return this.level < this.action.requiredLevel;
+    },
+    hasItems() {
+      return this.hasActionRequiredItems(this.actionId);
     }
   },
   methods: {
@@ -93,7 +115,6 @@ export default {
 
 .danger {
   font-size: 14px;
-  margin-top: 0.5rem;
   padding: 0.15rem 0.25rem;
   background-color: rgb(179, 43, 43);
   border-radius: 8px;

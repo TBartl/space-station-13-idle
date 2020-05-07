@@ -11,7 +11,7 @@ export default {
 	getters: {
 		currentActionId(state) { return state.currentActionId },
 		currentProgress(state) { return state.currentProgress },
-		canFinishAction(state, getters, rootState) {
+		hasActionRequiredItems(state, getters, rootState) {
 			return (actionId) => {
 				let action = getters.jobActions[actionId];
 				if (!action.requiredItems) return true;
@@ -60,7 +60,7 @@ export default {
 			);
 		},
 		finishAction({ commit, getters }, actionId) {
-			if (!getters.canFinishAction(actionId)) return;
+			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.jobActions[actionId];
 			commit("changeItemCount", { itemId: action.item, count: 1 }, { root: true });
 			commit("addXP", action.xp);
