@@ -279,7 +279,7 @@ export const ACTIONS = {
 			slimePyrite: 1
 		}
 	},
-	splitGrey: {
+	splitGrey40: {
 		time: 1,
 		item: "slimeGrey",
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
