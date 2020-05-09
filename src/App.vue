@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+		<toast-container />
     <div class="mega-container">
       <sidebar />
       <content-wrapper />
@@ -9,11 +10,13 @@
 </template>
 
 <script>
+import ToastContainer from '@/components/ToastContainer'
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 export default {
   name: "App",
   components: {
+		ToastContainer,
     Sidebar,
     ContentWrapper
   }
