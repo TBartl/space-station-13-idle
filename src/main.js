@@ -9,7 +9,7 @@ import { BPopover } from 'bootstrap-vue'
 Vue.component('b-popover', BPopover)
 
 import VModal from 'vue-js-modal'
-Vue.use(VModal, { dynamic: true})
+Vue.use(VModal, { dynamic: true })
 
 
 Vue.config.productionTip = false

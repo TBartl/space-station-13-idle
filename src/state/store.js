@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { cloneDeep, merge } from 'lodash';
+import { EventBus } from "@/utils/eventBus.js";
 
 Vue.use(Vuex)
 
@@ -75,6 +76,7 @@ const store = new Vuex.Store({
 				Vue.set(state.inventory, itemId, 0)
 			}
 			state.inventory[itemId] += count;
+			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
 		sellItem(state, { itemId, count }) {
 			state.inventory[itemId] -= count;
