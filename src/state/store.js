@@ -10,11 +10,13 @@ import ITEMS from "@/data/items";
 import mining from "./mining";
 import fabrication from "./fabrication";
 import xenobiology from "./xenobiology";
+import precision from "./precision";
 
 const modules = {
 	mining,
 	fabrication,
-	xenobiology
+	xenobiology,
+	precision
 }
 
 
@@ -95,14 +97,14 @@ const store = new Vuex.Store({
 	actions: {
 		cancelAllActions({ commit }) {
 			for (let [moduleName, module] of Object.entries(modules)) {
-				if (module.mutations.cancelActions) {
+				if (module.mutations && module.mutations.cancelActions) {
 					commit(moduleName + "/cancelActions");
 				}
 			}
 		},
 		_resume() {
 			for (let [moduleName, module] of Object.entries(modules)) {
-				if (module.actions._resume) {
+				if (module.actions && module.actions._resume) {
 					this.dispatch(moduleName + "/_resume");
 				}
 			}

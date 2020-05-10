@@ -17,7 +17,7 @@
         v-if="action.requiredItems"
         class="requirements d-flex flex-column align-items-center mb-2"
       >
-        <span v-if="!hasItems" class="danger color-weight text-light">MISSING ITEMS</span>
+        <span v-if="!hasItems" class="danger-bubble color-weight text-light">MISSING ITEMS</span>
         <item-requirement
           v-for="(entry, index) in Object.entries(action.requiredItems)"
           :key="index"
@@ -30,7 +30,7 @@
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
       <img :src="require('@/assets/art/misc/airlock.png')" alt class="pixelated mt-2 mb-2" />
-      <span class="danger">LEVEL {{action.requiredLevel}}</span>
+      <span class="danger-bubble">LEVEL {{action.requiredLevel}}</span>
     </div>
   </div>
 </template>
@@ -113,10 +113,7 @@ export default {
   font-size: 12px;
 }
 
-.danger {
+.danger-bubble {
   font-size: 14px;
-  padding: 0.15rem 0.25rem;
-  background-color: rgb(179, 43, 43);
-  border-radius: 8px;
 }
 </style>
