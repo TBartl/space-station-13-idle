@@ -67,18 +67,18 @@ itemTable: [
 ```
 itemTables: [
 	{
-		chance: 100,
+		chance: 1,
 		item: 'iron'
 	},
 	{
-		chance 10,
+		chance: 0.1,
 		items: {
 			id: 'silver',
-			count: 0-2
+			count: [0, 2]
 		}
 	},
 	{
-		chance: 1,
+		chance: 0.01,
 		itemTable: [
 			{
 				id: 'gold',

@@ -65,7 +65,32 @@ export const ENEMIES = {
 		name: "Debug E",
 		icon: require("@/assets/art/debug/E.png"),
 		robustness: 5,
-		item: "iron"
+		itemTables: [
+			{
+				chance: 1,
+				item: 'iron'
+			},
+			{
+				chance: 0.1,
+				items: {
+					id: 'silver',
+					count: [0, 2]
+				}
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 3
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
+			}
+		]
 	}
 }
 
