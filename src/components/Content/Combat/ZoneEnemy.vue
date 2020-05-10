@@ -11,14 +11,15 @@
       </div>
     </div>
     <div>
-      <button type="button" class="btn btn-primary" @click="fight">View Loot</button>
-      <button type="button" class="btn btn-danger mx-2" @click="viewLoot">Fight!</button>
+      <button type="button" class="btn btn-primary" @click="viewLoot">View Loot</button>
+      <button type="button" class="btn btn-danger mx-2" @click="fight">Fight!</button>
     </div>
   </div>
 </template>
 
 <script>
 import { ENEMIES } from "@/data/combat";
+import ModalItemChance from "@/components/Modals/ModalItemChance";
 export default {
   props: ["enemyId"],
   computed: {
@@ -31,7 +32,11 @@ export default {
       console.log("TODO");
     },
     viewLoot() {
-      console.log("TODO");
+      this.$modal.show(
+        ModalItemChance,
+        { data: this.enemy },
+        { height: "auto", width: "320px" }
+      );
     }
   }
 };

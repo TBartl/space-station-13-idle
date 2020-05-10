@@ -10,7 +10,6 @@ export default {
 	},
 	getters: {
 		active(state) {
-			console.log(state.currentActionId);
 			return state.currentActionId;
 		},
 		currentActionId(state) { return state.currentActionId },
