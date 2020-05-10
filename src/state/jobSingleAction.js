@@ -9,6 +9,10 @@ export default {
 		currentProgressTimeout: 0
 	},
 	getters: {
+		active(state) {
+			console.log(state.currentActionId);
+			return state.currentActionId;
+		},
 		currentActionId(state) { return state.currentActionId },
 		currentProgress(state) { return state.currentProgress },
 		hasActionRequiredItems(state, getters, rootState) {

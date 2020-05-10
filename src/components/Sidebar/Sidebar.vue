@@ -23,8 +23,9 @@
       :text="job.name"
       :icon="job.icon"
       :color="job.color"
+      :textColor="getJobColor(job)"
     >
-      <span>{{$store.getters[job.id + '/level']}}/50</span>
+      <span>{{getLevelText(job)}}</span>
     </sidebar-item>
 
     <p class="items-header">Combat</p>
@@ -35,8 +36,9 @@
       :text="job.name"
       :icon="job.icon"
       :color="job.color"
+      :textColor="getJobColor(job)"
     >
-      <span>{{$store.getters[job.id + '/level']}}/50</span>
+      <span>{{getLevelText(job)}}</span>
     </sidebar-item>
 
     <p class="items-header">Other</p>
@@ -68,9 +70,19 @@ export default {
     },
     nonCombatJobs() {
       return ALL_JOBS.filter(job => !job.isCombat);
-		},
-		combatJobs() {
+    },
+    combatJobs() {
       return ALL_JOBS.filter(job => job.isCombat);
+    }
+  },
+  methods: {
+    getLevelText(job) {
+      return `${this.$store.getters[job.id + "/level"]}/50`;
+    },
+    getJobColor(job) {
+      if (this.$store.getters[job.id + "/active"]) {
+        return "#50c22e";
+      }
     }
   }
 };
