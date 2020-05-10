@@ -46,18 +46,18 @@ items: {
 itemTable: [
 	{
 		id: "iron",
-		count: [1, 3]
+		count: [1, 3],
 		weight: 6
 	}, {
 		id: "silver",
-		count: 2
+		count: 2,
 		weight: 2
 	}, {
 		id: "gold",
 		weight: 1
 	},
 	{
-		id: null
+		id: null,
 		weight: 1
 	}
 ]

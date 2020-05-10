@@ -1,9 +1,26 @@
 <template>
-  <div>D: {{data}}</div>
+  <div>
+    <item-chance-a-b-c
+      v-for="(subData, index) in data.itemTable"
+      :key="index"
+      :data="{'items': subData}"
+      :chance="weights[index]"
+    />
+  </div>
 </template>
 
 <script>
+import ItemChanceABC from "@/components/ItemTable/ItemChanceABC";
 export default {
-  props: ["data"]
+  components: { ItemChanceABC },
+  props: ["data"],
+  computed: {
+    weights() {
+      let total = this.data.itemTable.reduce((total, subData) => {
+        return total + subData.weight;
+      }, 0);
+      return this.data.itemTable.map(subData => subData.weight / total);
+    }
+  }
 };
 </script>

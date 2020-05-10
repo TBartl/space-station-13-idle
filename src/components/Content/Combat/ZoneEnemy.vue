@@ -35,7 +35,7 @@ export default {
       this.$modal.show(
         ModalItemChance,
         { data: this.enemy },
-        { height: "auto", width: "320px" }
+        { height: "auto", 'width': "240px" }
       );
     }
   }
