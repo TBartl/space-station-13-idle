@@ -12,6 +12,7 @@ import ContentMining from "./ContentMining";
 import ContentXenobiology from "./ContentXenobiology";
 import ContentScavenging from "./ContentScavenging";
 import ContentFabrication from "./ContentFabrication";
+import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
 
@@ -23,7 +24,8 @@ export default {
     ContentMining,
 		ContentScavenging,
 		ContentFabrication,
-    ContentXenobiology,
+		ContentXenobiology,
+		ContentCombat,
 		ContentSettings,
 		ContentChronosphere
   },

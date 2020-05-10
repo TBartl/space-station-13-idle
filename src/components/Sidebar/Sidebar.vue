@@ -17,14 +17,26 @@
 
     <p class="items-header">Jobs</p>
     <sidebar-item
-      v-for="job in allJobs"
+      v-for="job in nonCombatJobs"
       :key="job.id"
       :id="job.id"
       :text="job.name"
       :icon="job.icon"
       :color="job.color"
     >
-		<span>{{$store.getters[job.id + '/level']}}/50</span>
+      <span>{{$store.getters[job.id + '/level']}}/50</span>
+    </sidebar-item>
+
+    <p class="items-header">Combat</p>
+    <sidebar-item
+      v-for="job in combatJobs"
+      :key="job.id"
+      id="combat"
+      :text="job.name"
+      :icon="job.icon"
+      :color="job.color"
+    >
+      <span>{{$store.getters[job.id + '/level']}}/50</span>
     </sidebar-item>
 
     <p class="items-header">Other</p>
@@ -35,7 +47,7 @@
       :icon="require('@/assets/art/sidebar/chronohelmet.png')"
       :textColor="chronoSpeed != 1 ? '#3ac5ff' : ''"
     >
-		<span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
+      <span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
     </sidebar-item>
   </div>
 </template>
@@ -54,8 +66,11 @@ export default {
     version() {
       return `Alpha v${process.env.PACKAGE_VERSION}`;
     },
-    allJobs() {
-      return ALL_JOBS;
+    nonCombatJobs() {
+      return ALL_JOBS.filter(job => !job.isCombat);
+		},
+		combatJobs() {
+      return ALL_JOBS.filter(job => job.isCombat);
     }
   }
 };
