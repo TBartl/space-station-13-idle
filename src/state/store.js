@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { cloneDeep, merge } from 'lodash';
+import { cloneDeep, mergeWith, isArray } from 'lodash';
 import { EventBus } from "@/utils/eventBus.js";
 
 Vue.use(Vuex)
@@ -36,7 +36,7 @@ const vuexLocal = new VuexPersistence({
 	}
 })
 
-const initialState = {
+const state = {
 	visibleSidebarItem: "mining",
 	money: 50000,
 	inventory: {
@@ -44,15 +44,17 @@ const initialState = {
 		"glass": 10,
 		"silver": 1
 	},
-	chronoSpeed: 1,
-	mining: mining.state,
-	fabrication: fabrication.state,
-	xenobiology: xenobiology.state
+	chronoSpeed: 1
+}
+
+let initialState = cloneDeep(state);
+for (let [moduleName, module] of Object.entries(modules)) {
+	initialState[moduleName] = cloneDeep(module.state);
 }
 
 const store = new Vuex.Store({
 	modules,
-	state: cloneDeep(initialState),
+	state,
 	getters: {
 		visibleSidebarItem(state) {
 			return state.visibleSidebarItem;
@@ -84,7 +86,7 @@ const store = new Vuex.Store({
 			state.money += item.sellPrice * count;
 		},
 		_resetState(state) {
-			merge(state, cloneDeep(initialState));
+			Object.assign(state, cloneDeep(initialState));
 		},
 		setChronoSpeed(state, speed) {
 			state.chronoSpeed = speed;

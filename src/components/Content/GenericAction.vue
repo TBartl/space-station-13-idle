@@ -10,7 +10,7 @@
     >
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{item.name}}</p>
-      <p class="action-time mt-1">{{action.xp}} XP / {{action.time}} SECONDS</p>
+      <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time}} SECONDS</p>
       <img :id="'action-item-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
       <item-popover :itemId="action.item" :target="'action-item-'+id" />
       <div

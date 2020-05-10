@@ -29,6 +29,7 @@ export default {
   },
   mounted() {
     EventBus.$on("itemCountChanged", ({ itemId, count }) => {
+			if (count <=  0) return;
       let toast = { itemId, count, id: uniqueId() };
       this.toasts.push(toast);
       setTimeout(() => {
