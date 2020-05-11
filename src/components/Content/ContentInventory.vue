@@ -8,7 +8,7 @@
 
     <div class="content-container">
       <div class="row">
-        <div class="col-12 items">
+        <div class="col-12 items d-flex flex-row flex-wrap">
           <inventory-item
             v-for="item in orderedItems"
             :key="item"
@@ -40,7 +40,4 @@ export default {
 </script>
 
 <style scoped>
-.items {
-	display:flex;
-}
 </style>

@@ -39,3 +39,21 @@ img.pixelated {
 	border-top: 4px solid #afafaf;
 	padding: 1rem;
 }
+
+.clickable {
+	cursor: pointer;
+	background-color: white;
+  transition: background-color 0.1s;
+}
+.clickable:hover {
+	cursor: pointer;
+  background-color: rgb(223, 223, 223);
+}
+
+
+.danger-bubble {
+  padding: 0.1rem 0.35rem;
+  background-color: rgb(179, 43, 43);
+	border-radius: 8px;
+	color: white;
+}

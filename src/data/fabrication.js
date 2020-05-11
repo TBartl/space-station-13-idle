@@ -128,7 +128,7 @@ export const ACTIONS = {
 			silver: 50,
 			gold: 50
 		}
-	},	fabricateFirefighter: {
+	}, fabricateFirefighter: {
 		time: 60,
 		item: "firefighter",
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
@@ -242,7 +242,7 @@ export const ACTIONS = {
 			plasma: 50,
 			diamond: 50,
 			bluespace: 25,
-			bananium:5
+			bananium: 5
 		}
 	},
 	fabricateseraph: {
@@ -267,7 +267,7 @@ export const ACTIONS = {
 			plasma: 25,
 			diamond: 50,
 			bluespace: 50,
-			bananium:65
+			bananium: 65
 		}
 	},
 	fabricatephazon: {

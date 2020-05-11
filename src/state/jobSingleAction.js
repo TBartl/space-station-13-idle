@@ -1,6 +1,7 @@
 // Requires the store to implement getters.jobActions and actions.finishAction(actionId)
 
 import { progressAction } from "@/utils/actionUtils";
+import { acquireItemFrom } from "@/utils/itemChanceUtils";
 
 export default {
 	state: {
@@ -9,6 +10,9 @@ export default {
 		currentProgressTimeout: 0
 	},
 	getters: {
+		active(state) {
+			return state.currentActionId;
+		},
 		currentActionId(state) { return state.currentActionId },
 		currentProgress(state) { return state.currentProgress },
 		hasActionRequiredItems(state, getters, rootState) {
@@ -62,7 +66,7 @@ export default {
 		finishAction({ commit, getters }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.jobActions[actionId];
-			commit("changeItemCount", { itemId: action.item, count: 1 }, { root: true });
+			acquireItemFrom(action, commit);
 			commit("addXP", action.xp);
 
 
