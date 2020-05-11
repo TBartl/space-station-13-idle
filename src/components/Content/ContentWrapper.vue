@@ -10,6 +10,7 @@ import ContentShop from "./ContentShop";
 import ContentInventory from "./ContentInventory";
 import ContentMining from "./ContentMining";
 import ContentXenobiology from "./ContentXenobiology";
+import ContentBotany from "./ContentBotany";
 import ContentGraytiding from "./ContentGraytiding";
 import ContentFabrication from "./ContentFabrication";
 import ContentCombat from "./ContentCombat";
@@ -25,6 +26,7 @@ export default {
 		ContentGraytiding,
 		ContentFabrication,
 		ContentXenobiology,
+    ContentBotany,
 		ContentCombat,
 		ContentSettings,
 		ContentChronosphere
