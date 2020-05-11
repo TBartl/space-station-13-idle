@@ -20,6 +20,7 @@
 <script>
 import { ENEMIES } from "@/data/combat";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
+import { acquireItemFrom } from "@/utils/itemChanceUtils";
 export default {
   props: ["enemyId"],
   computed: {
@@ -29,13 +30,16 @@ export default {
   },
   methods: {
     fight() {
-      console.log("TODO");
+      // TODO: CONTINUE COMBAT FROM HERE
+      for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
+        acquireItemFrom(this.enemy, this.$store.commit);
+      }
     },
     viewLoot() {
       this.$modal.show(
         ModalItemChance,
         { data: this.enemy },
-        { height: "auto", 'width': "220px" }
+        { height: "auto", width: "220px" }
       );
     }
   }
