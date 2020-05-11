@@ -57,3 +57,7 @@ img.pixelated {
 	border-radius: 8px;
 	color: white;
 }
+
+.popover {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.459);
+}
