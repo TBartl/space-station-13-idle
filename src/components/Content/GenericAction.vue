@@ -76,7 +76,7 @@ export default {
       return this.hasActionRequiredItems(this.actionId);
     },
     actionTitle() {
-      if (this.action.title) return this.action.title;
+      if (this.action.name) return this.action.name;
       if (this.action.item) return this.item.name;
       return "BAD TITLE";
     }
