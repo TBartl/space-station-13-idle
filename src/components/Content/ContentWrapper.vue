@@ -8,6 +8,7 @@
 import { mapGetters } from "vuex";
 import ContentShop from "./ContentShop";
 import ContentInventory from "./ContentInventory";
+import ContentEngineering from "./ContentEngineering";
 import ContentMining from "./ContentMining";
 import ContentXenobiology from "./ContentXenobiology";
 import ContentBotany from "./ContentBotany";
@@ -22,6 +23,7 @@ export default {
   components: {
     ContentShop,
     ContentInventory,
+    ContentEngineering,
     ContentMining,
 		ContentGraytiding,
 		ContentFabrication,

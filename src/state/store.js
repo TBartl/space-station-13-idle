@@ -7,6 +7,7 @@ Vue.use(Vuex)
 
 
 import ITEMS from "@/data/items";
+import engineering from "./engineering";
 import mining from "./mining";
 import fabrication from "./fabrication";
 import xenobiology from "./xenobiology";
@@ -15,6 +16,7 @@ import graytiding from "./graytiding";
 import precision from "./precision";
 
 const modules = {
+	engineering,
 	mining,
 	fabrication,
 	xenobiology,
