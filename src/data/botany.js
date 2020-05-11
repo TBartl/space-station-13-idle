@@ -251,9 +251,3 @@ export const JOB = {
 	color: "#3df000",
 	items: ITEMS
 }
-
-export function finishAction(commit, actionId) {
-	var action = ACTIONS[actionId];
-	commit("obtainItem", { itemId: action.item }, { root: true });
-	commit("addXP", action.xp);
-}
