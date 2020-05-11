@@ -11,7 +11,10 @@
       </div>
     </div>
     <div>
-      <button type="button" class="btn btn-primary" @click="viewLoot">View Loot</button>
+      <button type="button" :id="id" class="btn btn-primary">View Loot</button>
+      <b-popover :target="id" triggers="click blur" placement="top" delay="0">
+        <item-chance :data="enemy" />
+      </b-popover>
       <button type="button" class="btn btn-danger mx-2" @click="fight">Fight!</button>
     </div>
   </div>
@@ -19,11 +22,15 @@
 
 <script>
 import { ENEMIES } from "@/data/combat";
-import ModalItemChance from "@/components/Modals/ModalItemChance";
+import ItemChance from "@/components/ItemTable/ItemChance";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 export default {
+  components: { ItemChance },
   props: ["enemyId"],
   computed: {
+    id() {
+      return this._uid.toString();
+    },
     enemy() {
       return ENEMIES[this.enemyId];
     }
@@ -34,13 +41,6 @@ export default {
       for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
         acquireItemFrom(this.enemy, this.$store.commit);
       }
-    },
-    viewLoot() {
-      this.$modal.show(
-        ModalItemChance,
-        { data: this.enemy },
-        { height: "auto", width: "220px" }
-      );
     }
   }
 };
