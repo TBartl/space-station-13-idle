@@ -6,24 +6,39 @@
       color="#a4a4a9"
     />
     <div class="content-container">
-      <div class="row">
+      <div class="row" v-if="targetEnemy == null">
         <div class="col-4" v-for="(zone, index) in zones" :key="index">
           <zone :zone="zone" />
         </div>
       </div>
+      <div class="row" v-else>
+				<div class="col-4">
+					<div class="content-block">A</div>
+				</div>
+				<div class="col-2">
+					<div class="content-block">B</div>
+				</div>
+				<div class="col-2">
+					<div class="content-block">C</div>
+				</div>
+				<div class="col-4">
+					<div class="content-block">D</div>
+				</div>
+			</div>
     </div>
   </div>
 </template>
 
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 import Zone from "@/components/Content/Combat/Zone";
 import { ZONES } from "@/data/combat";
 export default {
   extends: ContentAbstract,
   components: { Zone },
   computed: {
+    ...mapGetters("combat", ["targetEnemy"]),
     zones() {
       return ZONES;
     }

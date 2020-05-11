@@ -14,6 +14,7 @@ import xenobiology from "./xenobiology";
 import botany from "./botany";
 import graytiding from "./graytiding";
 import precision from "./precision";
+import combat from './combat';
 
 const modules = {
 	engineering,
@@ -22,7 +23,8 @@ const modules = {
 	xenobiology,
 	botany,
 	graytiding,
-	precision
+	precision,
+	combat
 }
 
 

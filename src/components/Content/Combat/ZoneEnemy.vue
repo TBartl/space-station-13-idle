@@ -24,6 +24,7 @@
 import { ENEMIES } from "@/data/combat";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { mapMutations } from "vuex";
 export default {
   components: { ItemChance },
   props: ["enemyId"],
@@ -36,11 +37,14 @@ export default {
     }
   },
   methods: {
+    ...mapMutations("combat", ["setTargetEnemy"]),
     fight() {
-      // TODO: CONTINUE COMBAT FROM HERE
-      for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
-        acquireItemFrom(this.enemy, this.$store.commit);
-      }
+      this.setTargetEnemy(this.enemyId);
+
+      // TODO: Support drops again
+      // for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
+      //   acquireItemFrom(this.enemy, this.$store.commit);
+      // }
     }
   }
 };
