@@ -54,7 +54,7 @@ export const ITEMS = new Map([
 		sellPrice: 10,
 		icon: require("@/assets/art/botany/PlantShroomred.png")
 	}],	
-	["pepperice", {
+	["peppercold", {
 		name: "Ice Pepper",
 		sellPrice: 44,
 		icon: require("@/assets/art/botany/PlantPeppercold.png")
