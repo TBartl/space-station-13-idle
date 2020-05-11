@@ -4,15 +4,14 @@
     :class="{'locked': locked || !hasItems}"
     @click="tryStartAction(actionId)"
   >
-    <div
-      v-if="!locked"
-      class="d-flex flex-column align-items-center"
-    >
+    <div v-if="!locked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{actionName}}</p>
-      <p class="text-uppercase text-center">{{item.name}}</p>
+      <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time}} SECONDS</p>
-      <img :id="'action-item-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
-      <item-popover :itemId="action.item" :target="'action-item-'+id" />
+      <img :id="'action-icon-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
+      <b-popover :target="'action-icon-'+id" triggers="hover" placement="top" delay="0">
+        <span>poop xd</span>
+      </b-popover>
       <div
         v-if="action.requiredItems"
         class="requirements d-flex flex-column align-items-center mb-2"
@@ -38,11 +37,10 @@
 <script>
 import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
-import ItemPopover from "@/components/ItemPopover";
 import ItemRequirement from "@/components/ItemRequirement";
 import { mapGetters, mapActions, mapState } from "vuex";
 export default {
-  components: { ProgressBar, ItemPopover, ItemRequirement },
+  components: { ProgressBar, ItemRequirement },
   props: ["jobId", "actionName", "action", "actionId"],
   computed: {
     ...mapGetters(["chronoSpeed"]),
@@ -75,6 +73,11 @@ export default {
     },
     hasItems() {
       return this.hasActionRequiredItems(this.actionId);
+    },
+    actionTitle() {
+      if (this.action.title) return this.action.title;
+      if (this.action.item) return this.item.name;
+      return "BAD TITLE";
     }
   },
   methods: {
