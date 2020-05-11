@@ -10,7 +10,7 @@
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time}} SECONDS</p>
       <img :id="'action-icon-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="top" delay="0">
-        <span>poop xd</span>
+        <item-chance :data="action" />
       </b-popover>
       <div
         v-if="action.requiredItems"
@@ -37,10 +37,11 @@
 <script>
 import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
+import ItemChance from '@/components/ItemTable/ItemChance';
 import ItemRequirement from "@/components/ItemRequirement";
 import { mapGetters, mapActions, mapState } from "vuex";
 export default {
-  components: { ProgressBar, ItemRequirement },
+  components: { ProgressBar, ItemChance, ItemRequirement },
   props: ["jobId", "actionName", "action", "actionId"],
   computed: {
     ...mapGetters(["chronoSpeed"]),
