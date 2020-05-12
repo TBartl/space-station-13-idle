@@ -9,7 +9,7 @@
 			<p>todo</p>
     </div>
     <div class="player-block">
-      <p class="player-block-header">STYLE</p>
+      <p class="player-block-header">ATTACK STYLE</p>
 			<p>todo</p>
     </div>
   </div>

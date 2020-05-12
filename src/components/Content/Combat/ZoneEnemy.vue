@@ -23,7 +23,6 @@
 <script>
 import { ENEMIES } from "@/data/combat";
 import ItemChance from "@/components/ItemTable/ItemChance";
-import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { mapActions } from "vuex";
 export default {
   components: { ItemChance },
@@ -40,11 +39,6 @@ export default {
     ...mapActions("combat", ["startCombat"]),
     fight() {
       this.startCombat(this.enemyId);
-
-      // TODO: Support drops again
-      // for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
-      //   acquireItemFrom(this.enemy, this.$store.commit);
-      // }
     }
   }
 };

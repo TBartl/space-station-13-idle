@@ -22,13 +22,13 @@
           <combat-player-panel />
         </div>
         <div class="col-2">
-          <div class="content-block">B</div>
+          <mob-card :isPlayer="true" />
         </div>
         <div class="col-2">
-          <div class="content-block">C</div>
+          <mob-card :isPlayer="false" />
         </div>
         <div class="col-4">
-          <div class="content-block">D</div>
+          <loot />
         </div>
       </div>
     </div>
@@ -43,9 +43,18 @@ import Zone from "@/components/Content/Combat/Zone";
 import RunAway from "@/components/Content/Combat/RunAway";
 import CombatExperience from "@/components/Content/Combat/CombatExperience";
 import CombatPlayerPanel from "@/components/Content/Combat/CombatPlayerPanel";
+import MobCard from "@/components/Content/Combat/MobCard";
+import Loot from "@/components/Content/Combat/Loot";
 export default {
   extends: ContentAbstract,
-  components: { Zone, RunAway, CombatExperience, CombatPlayerPanel },
+  components: {
+    Zone,
+    RunAway,
+    CombatExperience,
+    CombatPlayerPanel,
+    MobCard,
+    Loot
+  },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
     zones() {
