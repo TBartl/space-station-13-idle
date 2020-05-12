@@ -2,7 +2,7 @@ import { cloneDeep, merge } from 'lodash';
 import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
-import { ACTIONS, finishAction } from "@/data/fabrication"
+import { ACTIONS } from "@/data/fabrication"
 
 const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="content-block zone-block clickable"
+      class="content-block content-block-top clickable"
       :class="{'expanded': expanded}"
       @click="expanded=!expanded"
     >
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="content-block enemy-block" v-if="expanded">
+    <div class="content-block content-block-bottom" v-if="expanded">
       <hr class="mt-0 mb-2" />
       <div class="enemies">
         <zone-enemy v-for="(enemyId, index) in zone.enemies" :key="index" :enemyId="enemyId" />
@@ -64,19 +64,5 @@ img {
 .enemies {
   padding: 4px;
   background-color: rgb(230, 230, 230);
-}
-.zone-block.expanded {
-  margin-bottom: 0;
-  border-bottom-width: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding-bottom: 0.5rem;
-}
-.enemy-block {
-  border-top-width: 0;
-  margin-top: 0;
-  padding-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 </style>

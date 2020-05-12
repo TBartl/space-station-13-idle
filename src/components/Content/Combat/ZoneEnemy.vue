@@ -23,7 +23,7 @@
 <script>
 import { ENEMIES } from "@/data/combat";
 import ItemChance from "@/components/ItemTable/ItemChance";
-import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { mapActions } from "vuex";
 export default {
   components: { ItemChance },
   props: ["enemyId"],
@@ -36,11 +36,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions("combat", ["startCombat"]),
     fight() {
-      // TODO: CONTINUE COMBAT FROM HERE
-      for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
-        acquireItemFrom(this.enemy, this.$store.commit);
-      }
+      this.startCombat(this.enemyId);
     }
   }
 };
