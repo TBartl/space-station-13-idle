@@ -40,6 +40,22 @@ img.pixelated {
 	padding: 1rem;
 }
 
+.content-block-top.expanded {
+  margin-bottom: 0;
+  border-bottom-width: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 0.5rem;
+}
+
+.content-block-bottom {
+  border-top-width: 0;
+  margin-top: 0;
+  padding-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .clickable {
 	cursor: pointer;
 	background-color: white;

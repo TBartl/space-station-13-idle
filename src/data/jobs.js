@@ -16,3 +16,5 @@ export const ALL_JOBS = [
 	GRAYTIDING_JOB,
 	PRECISION_JOB
 ]
+
+export const COMBAT_JOBS = ALL_JOBS.filter(job => job.isCombat);
