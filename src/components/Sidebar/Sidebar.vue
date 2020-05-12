@@ -80,7 +80,14 @@ export default {
       return `${this.$store.getters[job.id + "/level"]}/50`;
     },
     getJobColor(job) {
-      if (this.$store.getters[job.id + "/active"]) {
+      var isGreen = false;
+
+      if (job.isCombat) {
+        isGreen = this.$store.getters["combat/targetEnemy"];
+      } else {
+        isGreen = this.$store.getters[job.id + "/active"];
+      }
+      if (isGreen) {
         return "#50c22e";
       }
     }

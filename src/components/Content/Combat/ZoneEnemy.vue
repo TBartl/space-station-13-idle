@@ -24,7 +24,7 @@
 import { ENEMIES } from "@/data/combat";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   components: { ItemChance },
   props: ["enemyId"],
@@ -37,9 +37,9 @@ export default {
     }
   },
   methods: {
-    ...mapMutations("combat", ["setTargetEnemy"]),
+    ...mapActions("combat", ["startCombat"]),
     fight() {
-      this.setTargetEnemy(this.enemyId);
+      this.startCombat(this.enemyId);
 
       // TODO: Support drops again
       // for (var i = 0; i < this.$store.state.chronoSpeed; i++) {

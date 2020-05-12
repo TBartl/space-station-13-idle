@@ -12,19 +12,22 @@
         </div>
       </div>
       <div class="row" v-else>
-				<div class="col-4">
-					<div class="content-block">A</div>
+        <div class="col-12 mb-3">
+					<run-away />
 				</div>
-				<div class="col-2">
-					<div class="content-block">B</div>
-				</div>
-				<div class="col-2">
-					<div class="content-block">C</div>
-				</div>
-				<div class="col-4">
-					<div class="content-block">D</div>
-				</div>
-			</div>
+        <div class="col-4">
+          <div class="content-block">A</div>
+        </div>
+        <div class="col-2">
+          <div class="content-block">B</div>
+        </div>
+        <div class="col-2">
+          <div class="content-block">C</div>
+        </div>
+        <div class="col-4">
+          <div class="content-block">D</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -33,10 +36,11 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import { mapState, mapGetters } from "vuex";
 import Zone from "@/components/Content/Combat/Zone";
+import RunAway from "@/components/Content/Combat/RunAway";
 import { ZONES } from "@/data/combat";
 export default {
   extends: ContentAbstract,
-  components: { Zone },
+  components: { Zone, RunAway },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
     zones() {

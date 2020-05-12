@@ -11,7 +11,15 @@ const combat = {
 		}
 	},
 	mutations: {
-		setTargetEnemy(state, enemyId) {
+		cancelActions(state) {
+			if (!state.targetEnemy) return;
+			state.targetEnemy = null;
+			// clearInterval(state.currentProgressTimeout);
+		},
+	},
+	actions: {
+		startCombat({ state, dispatch }, enemyId) {
+			dispatch("cancelAllActions", {}, { root: true });
 			state.targetEnemy = enemyId;
 		}
 	}
