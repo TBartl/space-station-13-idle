@@ -3,7 +3,7 @@
     <content-header
       text="Combat"
       :icon="require('@/assets/art/combat/combatIcon.png')"
-      color="#ff4d4d"
+      color="rgb(175, 99, 99)"
     />
     <div class="content-container">
       <div class="row" v-if="targetEnemy == null">
@@ -16,10 +16,10 @@
           <run-away />
         </div>
         <div class="col-12">
-					<combat-experience />
-				</div>
+          <combat-experience />
+        </div>
         <div class="col-4">
-          <div class="content-block">A</div>
+          <combat-player-panel />
         </div>
         <div class="col-2">
           <div class="content-block">B</div>
@@ -38,13 +38,14 @@
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import { mapState, mapGetters } from "vuex";
+import { ZONES } from "@/data/combat";
 import Zone from "@/components/Content/Combat/Zone";
 import RunAway from "@/components/Content/Combat/RunAway";
 import CombatExperience from "@/components/Content/Combat/CombatExperience";
-import { ZONES } from "@/data/combat";
+import CombatPlayerPanel from "@/components/Content/Combat/CombatPlayerPanel";
 export default {
   extends: ContentAbstract,
-  components: { Zone, RunAway, CombatExperience },
+  components: { Zone, RunAway, CombatExperience, CombatPlayerPanel },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
     zones() {
