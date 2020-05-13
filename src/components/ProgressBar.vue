@@ -1,5 +1,5 @@
 <template>
-  <div class="progress w-100" :style="text ? 'height: unset !important': ''">
+  <div class="progress w-100" :style="text ? 'height: 26px !important': ''">
     <div
       class="progress-bar progress-bar-striped font-weight-bold"
       :class="[customClass]"
@@ -30,11 +30,16 @@ export default {
 </script>
 
 <style scoped>
+.progress {
+	position: relative;
+}
 .progress-bar {
   transition: none !important;
 }
 .progress-text {
 	font-size: 14px;
 	padding: .2rem;
+	width: 100%;
+	position: absolute;
 }
 </style>

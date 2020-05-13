@@ -27,7 +27,7 @@ export function createMobModule(mobType) {
 		actions: {
 			startCombat({ state, getters }) {
 				if (state.mobType == "enemy") {
-					state.health = getters.stats.maxHealth;
+					state.health = getters.stats.maxHealth / 2;
 				}
 			}
 		}

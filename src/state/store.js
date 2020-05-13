@@ -45,6 +45,8 @@ const vuexLocal = new VuexPersistence({
 			delete reduced[moduleName].currentProgress;
 			delete reduced[moduleName].currentProgressTimeout;
 		});
+		delete reduced.playerMob;
+		delete reduced.enemyMob;
 		return reduced;
 	}
 })
