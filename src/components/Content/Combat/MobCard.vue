@@ -1,13 +1,10 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
-    <span class="text-uppercase mb-2">{{isPlayer ? "Player" : enemy.name}}</span>
-    <img
-      class="pixelated body-icon mb-2"
-      :src="isPlayer ? require('@/assets/art/combat/player.png') : enemy.icon"
-    />
-    <progress-bar class="mb-2" :progress="1" :text="'HP: 100/100'" :customClass="'bg-danger'"  />
-    <progress-bar class="mb-2" :progress="1" :text="'Attack Speed: 2.4s'"  />
-		<span>Stats: TODO</span>
+    <span class="text-uppercase mb-2">{{name}}</span>
+    <img class="pixelated body-icon mb-2" :src="icon" />
+    <progress-bar class="mb-2" :progress="healthPercent" :text="`${health}/${stats.maxHealth}`" :customClass="'bg-danger'" />
+    <progress-bar class="mb-2" :progress="1" :text="`Attack Speed: ${stats.attackSpeed.toFixed(1)}s`" />
+    <span>Stats: TODO</span>
   </div>
 </template>
 
@@ -15,14 +12,41 @@
 import { ENEMIES } from "@/data/combat";
 import { mapGetters } from "vuex";
 import ProgressBar from "@/components/ProgressBar";
+const playerIcon = require("@/assets/art/combat/player.png");
 export default {
   components: { ProgressBar },
-  props: ["isPlayer"],
+  props: ["mobType"],
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
     enemy() {
       return ENEMIES[this.targetEnemy];
-    }
+    },
+    icon() {
+      if (this.mobType == "player") {
+        return playerIcon;
+      } else if (this.mobType == "enemy") {
+        return this.enemy.icon;
+      }
+      return null;
+    },
+    name() {
+      if (this.mobType == "player") {
+        return "You";
+      } else if (this.mobType == "enemy") {
+        return this.enemy.name;
+			}
+			return null;
+		},
+		health() {
+			return this.$store.getters[this.mobType + "Mob/health"]
+		},
+		stats() {
+			return this.$store.getters[this.mobType + "Mob/stats"]
+		},
+		healthPercent() {
+			return 1;
+			return this.health / this.stats.maxHealth;
+		}
   }
 };
 </script>

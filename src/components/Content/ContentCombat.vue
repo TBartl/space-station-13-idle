@@ -22,10 +22,10 @@
           <combat-player-panel />
         </div>
         <div class="col-2">
-          <mob-card :isPlayer="true" />
+          <mob-card mobType="player" />
         </div>
         <div class="col-2">
-          <mob-card :isPlayer="false" />
+          <mob-card mobType="enemy" />
         </div>
         <div class="col-4">
           <loot />

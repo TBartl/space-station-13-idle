@@ -15,6 +15,7 @@ import botany from "./botany";
 import graytiding from "./graytiding";
 import precision from "./precision";
 import combat from './combat';
+import { createMobModule } from "./mob";
 
 const modules = {
 	engineering,
@@ -24,7 +25,9 @@ const modules = {
 	botany,
 	graytiding,
 	precision,
-	combat
+	combat,
+	playerMob: createMobModule('player'),
+	enemyMob: createMobModule('enemy')
 }
 
 
