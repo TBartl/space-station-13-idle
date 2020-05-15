@@ -1,5 +1,6 @@
 import { ENEMIES } from "@/data/combat";
 import { createCoroutineModule } from "./coroutine";
+import ModalDeath from "@/components/Modals/ModalDeath";
 
 export function createMobModule(mobType) {
 	return {
@@ -73,7 +74,8 @@ export function createMobModule(mobType) {
 				// Handle death
 				if (state.mobType == "player") {
 					commit("_setHealth", getters.stats.maxHealth / 2);
-					// TODO: Kick the player out of combat and pop up a modal
+					dispatch("cancelAllActions", {}, { root: true });
+					this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
 				} else {
 					dispatch("combat/pauseCombat", {}, { root: true });
 				}
