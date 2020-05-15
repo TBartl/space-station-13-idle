@@ -10,14 +10,12 @@ const combat = {
 			return state.targetEnemy;
 		}
 	},
-	mutations: {
+	actions: {
 		cancelActions(state) {
 			if (!state.targetEnemy) return;
 			state.targetEnemy = null;
 			// clearInterval(state.currentProgressTimeout);
-		}
-	},
-	actions: {
+		},
 		startCombat({ state, dispatch }, enemyId) {
 			dispatch("cancelAllActions", {}, { root: true });
 			state.targetEnemy = enemyId;

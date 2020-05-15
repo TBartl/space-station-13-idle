@@ -35,16 +35,17 @@ import VuexPersistence from 'vuex-persist'
 const vuexLocal = new VuexPersistence({
 	storage: window.localStorage,
 	filter: (mutation) => {
-		let upperType = mutation.type.toUpperCase();
-		if (upperType.includes("UPDATEPROGRESS")) return false;
+		// We don't need a filter right now, but we might in the future
 		return true;
 	},
 	reducer: (state) => {
 		let reduced = cloneDeep(state);
-		Object.keys(modules).forEach(moduleName => {
-			delete reduced[moduleName].currentProgress;
-			delete reduced[moduleName].currentProgressTimeout;
-		});
+		for (let [moduleName, module] of Object.entries(modules)) {
+			if (!module.modules) continue;
+			for (let subModuleName of Object.keys(module.modules)) {
+				delete reduced[moduleName][subModuleName];
+			}
+		}
 		delete reduced.playerMob;
 		delete reduced.enemyMob;
 		return reduced;
@@ -65,6 +66,10 @@ const state = {
 let initialState = cloneDeep(state);
 for (let [moduleName, module] of Object.entries(modules)) {
 	initialState[moduleName] = cloneDeep(module.state);
+	if (!module.modules) continue;
+	for (let [subModuleName, subModule] of Object.entries(module.modules)) {
+		initialState[moduleName][subModuleName] = cloneDeep(subModule.state);
+	}
 }
 
 const store = new Vuex.Store({
@@ -108,10 +113,10 @@ const store = new Vuex.Store({
 		}
 	},
 	actions: {
-		cancelAllActions({ commit }) {
+		cancelAllActions({ dispatch }) {
 			for (let [moduleName, module] of Object.entries(modules)) {
-				if (module.mutations && module.mutations.cancelActions) {
-					commit(moduleName + "/cancelActions");
+				if (module.actions && module.actions.cancelActions) {
+					dispatch(moduleName + "/cancelActions");
 				}
 			}
 		},

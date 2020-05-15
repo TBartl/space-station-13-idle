@@ -1,20 +1,20 @@
 // Requires the store to implement getters.jobActions and actions.finishAction(actionId)
 
-import { progressAction } from "@/utils/actionUtils";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { createCoroutineModule } from "./coroutine";
 
 export default {
+	modules: {
+		actionCoroutine: createCoroutineModule()
+	},
 	state: {
-		currentActionId: "",
-		currentProgress: 0,
-		currentProgressTimeout: 0
+		currentActionId: ""
 	},
 	getters: {
 		active(state) {
 			return state.currentActionId;
 		},
 		currentActionId(state) { return state.currentActionId },
-		currentProgress(state) { return state.currentProgress },
 		hasActionRequiredItems(state, getters, rootState) {
 			return (actionId) => {
 				let action = getters.jobActions[actionId];
@@ -29,13 +29,6 @@ export default {
 		}
 	},
 	mutations: {
-		cancelActions(state) {
-			if (!state.currentActionId) return;
-			clearInterval(state.currentProgressTimeout);
-			state.currentActionId = "";
-			state.currentProgress = 0;
-			state.currentProgressTimeout = 0;
-		},
 		_setAction(state, actionId) {
 			state.currentActionId = actionId;
 		},
@@ -44,7 +37,12 @@ export default {
 			state.currentProgressTimeout = progressTimeout;
 		}
 	}, actions: {
-		tryStartAction({ commit, state, getters, rootGetters, dispatch }, actionId) {
+		cancelActions({ state, dispatch }) {
+			if (!state.currentActionId) return;
+			state.currentActionId = "";
+			dispatch("actionCoroutine/cancel");
+		},
+		tryStartAction({ commit, state, getters, dispatch }, actionId) {
 			let action = getters.jobActions[actionId];
 			if (getters["level"] < action.requiredLevel) return;
 
@@ -54,21 +52,22 @@ export default {
 
 			commit("_setAction", actionId);
 
-			progressAction(
-				action.time,
-				rootGetters,
-				(progress, progressTimeout) => {
-					commit("_updateProgress", { progress, progressTimeout })
-				},
-				() => { dispatch("finishAction", actionId) }
-			);
+			dispatch("_dispatchStartCoroutine", { actionId, action })
 		},
-		finishAction({ commit, getters }, actionId) {
+		_dispatchStartCoroutine({ dispatch }, { actionId, action }) {
+			dispatch("actionCoroutine/start",
+				{
+					duration: action.time,
+					onFinish: () => {
+						dispatch("finishAction", actionId)
+					}
+				});
+		},
+		finishAction({ commit, getters, dispatch }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.jobActions[actionId];
 			acquireItemFrom(action, commit);
 			commit("addXP", action.xp);
-
 
 			if (action.requiredItems) {
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
@@ -76,12 +75,14 @@ export default {
 				}
 			}
 
+			// Start it againa automatically
+			dispatch("_dispatchStartCoroutine", { actionId, action })
 		},
-		_resume({ state, commit, dispatch }) {
+		_resume({ state, dispatch }) {
 			if (state.currentActionId && !state.currentProgressTimeout) {
 				let lastActionId = state.currentActionId
 				if (!lastActionId) return;
-				commit("cancelActions");
+				dispatch("cancelActions");
 				dispatch("tryStartAction", lastActionId)
 			}
 		}
