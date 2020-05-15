@@ -41,6 +41,19 @@ const combat = {
 		}
 	},
 	actions: {
+		lootItem({ state, commit }, index) {
+			let drop = state.drops[index];
+			commit("changeItemCount", {
+				itemId: drop.item,
+				count: drop.count
+			}, { root: true });
+			commit("removeLootItem", index);
+		},
+		lootAll({ state, dispatch }) {
+			while (state.drops.length) {
+				dispatch("lootItem", 0);
+			}
+		},
 		cancelActions({ state, commit, dispatch }) {
 			dispatch("moveCoroutine/cancel");
 			if (!state.targetEnemy) return;

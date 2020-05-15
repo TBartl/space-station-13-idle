@@ -25,11 +25,7 @@ export default {
   },
   methods: {
     lootItem() {
-      this.$store.commit("changeItemCount", {
-        itemId: this.itemId,
-        count: this.count
-      });
-      this.$store.commit("combat/removeLootItem", this.index);
+      this.$store.dispatch("combat/lootItem", this.index);
     }
   }
 };

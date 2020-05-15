@@ -32,9 +32,10 @@ export default {
   },
   methods: {
     lootAll() {
-      for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
-        acquireItemFrom(this.enemy, this.$store.commit);
-      }
+      this.$store.dispatch("combat/lootAll");
+      // for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
+      //   acquireItemFrom(this.enemy, this.$store.commit);
+      // }
     }
   }
 };
@@ -51,7 +52,7 @@ button {
   background-color: rgb(233, 233, 233);
   margin-top: 0.5rem;
   border-radius: 4px;
-  min-height: 20px;
+  min-height: 109px;
   box-shadow: inset 0 0 10px #00000018;
 }
 </style>
