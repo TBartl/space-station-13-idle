@@ -31,11 +31,6 @@ import ItemPopover from '@/components/ItemPopover'
 export default {
   props: ["itemId"],
   components: { InventorySell, ItemPopover },
-  data() {
-    return {
-      hover: false
-    };
-  },
   computed: {
     ...mapGetters(["inventory"]),
     id() {

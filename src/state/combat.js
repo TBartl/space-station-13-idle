@@ -7,6 +7,16 @@ const combat = {
 	},
 	state: {
 		targetEnemy: null,
+		drops: [{
+			item: "iron",
+			count: 5
+		}, {
+			item: "iron",
+			count: 1
+		}, {
+			item: "silver",
+			count: 2
+		}]
 	},
 	getters: {
 		targetEnemy(state) {
@@ -14,6 +24,12 @@ const combat = {
 		},
 		moveTime() {
 			return 3;
+		},
+		maxDrops() {
+			return 16;
+		},
+		drops(state) {
+			return state.drops;
 		}
 	},
 	mutations: {
