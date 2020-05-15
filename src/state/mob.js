@@ -19,7 +19,7 @@ export function createMobModule(mobType) {
 				if (state.mobType == "player") {
 					return {
 						maxHealth: 100,
-						attackSpeed: 1
+						attackSpeed: 1.3
 					}
 				}
 				else if (state.mobType == "enemy") {
@@ -38,14 +38,17 @@ export function createMobModule(mobType) {
 			},
 			startCombat({ state, getters, commit, dispatch }) {
 				if (state.mobType == "enemy") {
-					commit("_setHealth", getters.stats.maxHealth / 2);
+					commit("_setHealth", getters.stats.maxHealth);
 				}
 				dispatch("_startSwing");
 			},
+			pauseCombat({ dispatch }) {
+				dispatch("swingCoroutine/cancel");
+			},
 			_resume({ rootGetters, dispatch }) {
-				if (rootGetters["combat/targetEnemy"]) {
-					dispatch("_startSwing");
-				}
+				if (!rootGetters["combat/targetEnemy"]) return;
+				if (rootGetters["enemyMob/health"] == 0) return;
+				dispatch("_startSwing");
 			},
 			_startSwing({ getters, dispatch }) {
 				dispatch("swingCoroutine/start",
@@ -58,11 +61,23 @@ export function createMobModule(mobType) {
 			},
 			finishSwing({ state, dispatch, getters }) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
-				dispatch(inverseMobType + "Mob/_getHit", 10, { root: true });
 				dispatch("_startSwing", getters.stats.attackSpeed)
+				dispatch(inverseMobType + "Mob/_getHit", 10, { root: true });
+
 			},
-			_getHit({ state, commit }, damage) {
-				commit("_setHealth", state.health - damage);
+			_getHit({ state, commit, getters, dispatch }, damage) {
+				commit("_setHealth", Math.max(state.health - damage, 0));
+
+				if (state.health != 0) return;
+
+				// Handle death
+				if (state.mobType == "player") {
+					commit("_setHealth", getters.stats.maxHealth / 2);
+					// TODO: Kick the player out of combat and pop up a modal
+				} else {
+					dispatch("combat/pauseCombat", {}, { root: true });
+				}
+
 			}
 		}
 	}

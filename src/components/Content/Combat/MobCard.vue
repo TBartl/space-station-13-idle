@@ -1,17 +1,25 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
-    <span class="text-uppercase mb-2">{{name}}</span>
-    <img class="pixelated body-icon mb-2" :src="icon" />
+    <span class="text-uppercase mb-2 text-center">{{name}}</span>
+    <img class="pixelated body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
       class="mb-2 black-background"
       :progress="healthPercent"
-      :text="`${health}/${stats.maxHealth}`"
+      :text="health != 0 ? `${health}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
-      class="mb-2  black-background"
+      v-if="!moveProgress"
+      class="mb-2 black-background"
       :progress="swingProgress"
       :text="`Attack Speed: ${stats.attackSpeed.toFixed(1)}s`"
+    />
+    <progress-bar
+      v-else-if="mobType == 'player'"
+      class="mb-2 black-background"
+      :progress="moveProgress"
+      :customClass="'bg-success'"
+      :text="`Moving: ${moveTime.toFixed(1)}s`"
     />
     <span>Stats: TODO</span>
   </div>
@@ -54,10 +62,16 @@ export default {
     },
     healthPercent() {
       return this.health / this.stats.maxHealth;
-		},
-		swingProgress() {
-			return this.$store.getters[this.mobType + 'Mob/swingCoroutine/percent'];
-		}
+    },
+    swingProgress() {
+      return this.$store.getters[this.mobType + "Mob/swingCoroutine/percent"];
+    },
+    moveProgress() {
+      return this.$store.getters["combat/moveCoroutine/percent"];
+    },
+    moveTime() {
+      return this.$store.getters["combat/moveTime"];
+    }
   }
 };
 </script>
@@ -72,5 +86,8 @@ export default {
 }
 .black-background {
   background-color: rgb(61, 61, 61) !important;
+}
+.rotate-90 {
+  transform: rotate(90deg);
 }
 </style>
