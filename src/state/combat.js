@@ -35,6 +35,9 @@ const combat = {
 	mutations: {
 		_setTargetEnemy(state, enemyId) {
 			state.targetEnemy = enemyId;
+		},
+		removeLootItem(state, index) {
+			state.drops.splice(index, 1);
 		}
 	},
 	actions: {

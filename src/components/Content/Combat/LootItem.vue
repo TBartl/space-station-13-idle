@@ -29,6 +29,7 @@ export default {
         itemId: this.itemId,
         count: this.count
       });
+      this.$store.commit("combat/removeLootItem", this.index);
     }
   }
 };
