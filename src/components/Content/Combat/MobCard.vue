@@ -10,7 +10,7 @@
     />
     <progress-bar
       class="mb-2  black-background"
-      :progress="1"
+      :progress="swingProgress"
       :text="`Attack Speed: ${stats.attackSpeed.toFixed(1)}s`"
     />
     <span>Stats: TODO</span>
@@ -54,7 +54,10 @@ export default {
     },
     healthPercent() {
       return this.health / this.stats.maxHealth;
-    }
+		},
+		swingProgress() {
+			return this.$store.getters[this.mobType + 'Mob/swingCoroutine/percent'];
+		}
   }
 };
 </script>

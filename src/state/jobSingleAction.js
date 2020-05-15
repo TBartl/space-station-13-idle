@@ -52,9 +52,9 @@ export default {
 
 			commit("_setAction", actionId);
 
-			dispatch("_dispatchStartCoroutine", { actionId, action })
+			dispatch("_startCoroutine", { actionId, action })
 		},
-		_dispatchStartCoroutine({ dispatch }, { actionId, action }) {
+		_startCoroutine({ dispatch }, { actionId, action }) {
 			dispatch("actionCoroutine/start",
 				{
 					duration: action.time,
@@ -75,8 +75,8 @@ export default {
 				}
 			}
 
-			// Start it againa automatically
-			dispatch("_dispatchStartCoroutine", { actionId, action })
+			// Start it again automatically
+			dispatch("_startCoroutine", { actionId, action })
 		},
 		_resume({ state, dispatch }) {
 			if (state.currentActionId && !state.currentProgressTimeout) {

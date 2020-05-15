@@ -53,7 +53,7 @@ export default {
         return getters[this.jobId + "/currentActionId"];
       },
       currentProgress(state, getters) {
-        return getters[this.jobId + "/actionCoroutine/progress"];
+        return getters[this.jobId + "/actionCoroutine/percent"];
       },
       level(state, getters) {
         return getters[this.jobId + "/level"];

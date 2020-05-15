@@ -46,8 +46,6 @@ const vuexLocal = new VuexPersistence({
 				delete reduced[moduleName][subModuleName];
 			}
 		}
-		delete reduced.playerMob;
-		delete reduced.enemyMob;
 		return reduced;
 	}
 })

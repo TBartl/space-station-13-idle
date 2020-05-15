@@ -16,6 +16,9 @@ export function createCoroutineModule() {
 		getters: {
 			progress(state) {
 				return state.progress;
+			},
+			percent(state) {
+				return state.progress / state.duration;
 			}
 		},
 		actions: {
