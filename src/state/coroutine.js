@@ -11,7 +11,6 @@ export function createCoroutineModule() {
 			progress: 0,
 			duration: 0,
 			currentTimeout: 0
-
 		},
 		getters: {
 			progress(state) {

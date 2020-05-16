@@ -24,7 +24,7 @@
           :count="entry[1]"
         />
       </div>
-      <progress-bar :progress="progress" v-if="hasItems" />
+      <progress-bar :progress="currentPercent" v-if="hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
@@ -52,7 +52,8 @@ export default {
       currentActionId(state, getters) {
         return getters[this.jobId + "/currentActionId"];
       },
-      currentProgress(state, getters) {
+      currentPercent(state, getters) {
+      if (this.currentActionId != this.actionId) return 0;
         return getters[this.jobId + "/actionCoroutine/percent"];
       },
       level(state, getters) {
@@ -64,10 +65,6 @@ export default {
     }),
     item() {
       return ITEMS.get(this.action.item);
-    },
-    progress() {
-      if (this.currentActionId != this.actionId) return 0;
-      return this.currentProgress / this.action.time;
     },
     locked() {
       return this.level < this.action.requiredLevel;
