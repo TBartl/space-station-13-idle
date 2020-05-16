@@ -6,7 +6,7 @@
         <div class="col-12 mb-4">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
-        <div class="col-2" v-for="[actionId, action] in viewableActions" :key="actionId">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2" v-for="[actionId, action] in viewableActions" :key="actionId">
           <generic-action
             :jobId="jobId"
             :actionName="'ELECTRIFY'"

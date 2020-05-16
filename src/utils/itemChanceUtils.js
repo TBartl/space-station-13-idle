@@ -2,13 +2,18 @@ function randomIntFromInterval(min, max) { // min and max included
 	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function quickCommit(commit, itemId, count) {
-	commit("changeItemCount", { itemId, count }, { root: true });
+function addToReturn(toReturn, itemId, count) {
+	if (!toReturn[itemId]) {
+		toReturn[itemId] = count;
+	} else {
+		toReturn[itemId] += count;
+	}
 }
 
-export function acquireItemFrom(data, commit) {
+// Returns an object of key/values containing itemId/count
+export function acquireItemFrom(data, toReturn = {}) {
 	if (data.item) {
-		quickCommit(commit, data.item, 1);
+		addToReturn(toReturn, data.item, 1);
 	}
 	else if (data.items) {
 		if (data.items.id == undefined) return;
@@ -17,7 +22,7 @@ export function acquireItemFrom(data, commit) {
 		if (typeof count != "number") {
 			count = randomIntFromInterval(count[0], count[1]);
 		}
-		quickCommit(commit, data.items.id, count);
+		addToReturn(toReturn, data.items.id, count);
 	}
 	else if (data.itemTable) {
 		let total = data.itemTable.reduce((total, subData) => {
@@ -28,16 +33,17 @@ export function acquireItemFrom(data, commit) {
 		for (let subData of data.itemTable) {
 			runningTotal += subData.weight;
 			if (runningTotal > val) {
-				acquireItemFrom({ items: subData }, commit);
-				return;
+				acquireItemFrom({ items: subData }, toReturn);
+				break;
 			}
 		}
 	}
 	else if (data.itemTables) {
 		for (let subData of data.itemTables) {
 			if (Math.random() < subData.chance) {
-				acquireItemFrom(subData, commit);
+				acquireItemFrom(subData, toReturn);
 			}
 		}
 	}
+	return toReturn;
 } 
