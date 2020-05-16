@@ -5,9 +5,9 @@
   >
     <div class="d-flex align-items-center">
       <img :src="icon" alt class="pixelated" />
-      <span :style="textStyle">{{text}}</span>
+      <span class="d-none d-md-block" :style="textStyle">{{text}}</span>
     </div>
-    <div>
+    <div >
       <slot />
     </div>
   </div>

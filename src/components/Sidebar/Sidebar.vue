@@ -2,12 +2,14 @@
   <div class="sidebar">
     <div class="sidebar-title p-3 mb-2">
       <img src="@/assets/art/misc/logo.png" alt />
-      <span>SS13 Idle</span>
+      <span class="d-none d-md-block">SS13 Idle</span>
     </div>
-    <p class="items-header">{{version}}</p>
+    <p class="items-header d-none d-md-block">{{version}}</p>
 
     <sidebar-item id="shop" text="Cargo" :icon="require('@/assets/art/sidebar/cargo.png')">
-      <inventory-price-display :price="money" />
+      <div class="d-none d-md-block">
+        <inventory-price-display :price="money" />
+      </div>
     </sidebar-item>
     <sidebar-item
       id="inventory"
@@ -97,10 +99,15 @@ export default {
 
 <style scoped>
 .sidebar {
-  width: 230px;
+  width: 100px;
   height: 100%;
   color: #ebebeb;
   background-color: #2c343f;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    width: 230px;
+  }
 }
 .sidebar-title {
   color: whitesmoke;
