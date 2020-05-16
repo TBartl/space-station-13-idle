@@ -52,8 +52,8 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	money: 50000,
 	inventory: {
+		"money": 50000,
 		"iron": 150,
 		"glass": 10,
 		"silver": 1
@@ -81,7 +81,7 @@ const store = new Vuex.Store({
 			return state.inventory;
 		},
 		money(state) {
-			return state.money
+			return state.inventory.money
 		},
 		chronoSpeed(state) {
 			return state.chronoSpeed;
@@ -98,11 +98,6 @@ const store = new Vuex.Store({
 			state.inventory[itemId] += count;
 			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
-		sellItem(state, { itemId, count }) {
-			state.inventory[itemId] -= count;
-			var item = ITEMS.get(itemId);
-			state.money += item.sellPrice * count;
-		},
 		_resetState(state) {
 			Object.assign(state, cloneDeep(initialState));
 		},
@@ -111,6 +106,13 @@ const store = new Vuex.Store({
 		}
 	},
 	actions: {
+		sellItem({ commit }, { itemId, count }) {
+			commit("changeItemCount", { itemId, count: -count });
+			state.inventory[itemId] -= count;
+			let soldItem = ITEMS.get(itemId);
+			let profit = soldItem.sellPrice * count;
+			commit("changeItemCount", { itemId: "money", count: profit });
+		},
 		cancelAllActions({ dispatch }) {
 			for (let [moduleName, module] of Object.entries(modules)) {
 				if (module.actions && module.actions.cancelActions) {

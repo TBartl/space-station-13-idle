@@ -13,7 +13,7 @@
 <script>
 import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   components: { InventoryPriceDisplay },
   props: ["itemId", "count", "totalCount"],
@@ -26,13 +26,18 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(["sellItem"])
+    ...mapActions(["sellItem"])
   }
 };
 </script>
 
 <style scoped>
 .sell {
-  padding: 0.25rem;
+	padding: 0.25rem;
+	border-color: whitesmoke;
+	transition: background-color .2s;
+}
+.sell:hover{
+	background-color: rgb(181, 213, 226);
 }
 </style>
