@@ -18,16 +18,16 @@
         <div class="col-12">
           <combat-experience />
         </div>
-        <div class="col-4">
+        <div class="col-12 col-lg-4 mb-3">
           <combat-player-panel />
         </div>
-        <div class="col-2">
+        <div class="col-6 col-lg-2 mb-3">
           <mob-card mobType="player" />
         </div>
-        <div class="col-2">
+        <div class="col-6 col-lg-2 mb-3">
           <mob-card mobType="enemy" />
         </div>
-        <div class="col-4">
+        <div class="col-12 col-lg-4">
           <loot />
         </div>
       </div>
