@@ -1,6 +1,6 @@
 export const ITEMS = new Map([
 	["money", {
-		name: "Space Coin",
+		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
 	}],
 ]);
