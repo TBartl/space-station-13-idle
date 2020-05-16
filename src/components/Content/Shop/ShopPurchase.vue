@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     buy() {
-      this.$store.commit("changeItemCount", {
+      this.$store.commit("inventory/changeItemCount", {
         itemId: this.purchase.item,
         count: 100
       });

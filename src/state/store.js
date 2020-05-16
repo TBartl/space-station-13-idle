@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { cloneDeep, mergeWith, isArray } from 'lodash';
-import { EventBus } from "@/utils/eventBus.js";
 
 Vue.use(Vuex)
 
@@ -15,6 +14,7 @@ import botany from "./botany";
 import graytiding from "./graytiding";
 import precision from "./precision";
 import combat from './combat';
+import inventory from './inventory';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -26,6 +26,7 @@ const modules = {
 	graytiding,
 	precision,
 	combat,
+	inventory,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
@@ -52,9 +53,6 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	inventory: {
-		"money": 100
-	},
 	chronoSpeed: 1
 }
 
@@ -74,12 +72,6 @@ const store = new Vuex.Store({
 		visibleSidebarItem(state) {
 			return state.visibleSidebarItem;
 		},
-		inventory(state) {
-			return state.inventory;
-		},
-		money(state) {
-			return state.inventory.money
-		},
 		chronoSpeed(state) {
 			return state.chronoSpeed;
 		}
@@ -87,13 +79,6 @@ const store = new Vuex.Store({
 	mutations: {
 		setVisibleSidebarItem(state, id) {
 			state.visibleSidebarItem = id;
-		},
-		changeItemCount(state, { itemId, count }) {
-			if (!state.inventory[itemId]) {
-				Vue.set(state.inventory, itemId, 0)
-			}
-			state.inventory[itemId] += count;
-			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
 		_resetState(state) {
 			Object.assign(state, cloneDeep(initialState));
@@ -104,11 +89,10 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		sellItem({ commit }, { itemId, count }) {
-			commit("changeItemCount", { itemId, count: -count });
-			state.inventory[itemId] -= count;
+			commit("inventory/changeItemCount", { itemId, count: -count });
 			let soldItem = ITEMS.get(itemId);
 			let profit = soldItem.sellPrice * count;
-			commit("changeItemCount", { itemId: "money", count: profit });
+			commit("inventory/changeItemCount", { itemId: "money", count: profit });
 		},
 		cancelAllActions({ dispatch }) {
 			for (let [moduleName, module] of Object.entries(modules)) {

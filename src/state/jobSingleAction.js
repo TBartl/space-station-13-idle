@@ -15,12 +15,12 @@ export default {
 			return state.currentActionId;
 		},
 		currentActionId(state) { return state.currentActionId },
-		hasActionRequiredItems(state, getters, rootState) {
+		hasActionRequiredItems(state, getters, rootState, rootGetters) {
 			return (actionId) => {
 				let action = getters.jobActions[actionId];
 				if (!action.requiredItems) return true;
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
-					let count = rootState.inventory[itemId];
+					let count = rootGetters["inventory/bank"][itemId];
 					count = count ? count : 0;
 					if (count < requiredCount) return false;
 				}
@@ -37,9 +37,9 @@ export default {
 			state.currentProgressTimeout = progressTimeout;
 		}
 	}, actions: {
-		cancelActions({ state, dispatch }) {
+		cancelActions({ state, dispatch, commit }) {
 			if (!state.currentActionId) return;
-			state.currentActionId = "";
+			commit("_setAction", null);
 			dispatch("actionCoroutine/cancel");
 		},
 		tryStartAction({ commit, state, getters, dispatch }, actionId) {
@@ -68,13 +68,13 @@ export default {
 			let action = getters.jobActions[actionId];
 			let yieldedItems = acquireItemFrom(action);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
-				commit("changeItemCount", { itemId, count }, { root: true });
+				commit("inventory/changeItemCount", { itemId, count }, { root: true });
 			}
 			commit("addXP", action.xp);
 
 			if (action.requiredItems) {
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
-					commit("changeItemCount", { itemId, count: -requiredCount }, { root: true });
+					commit("inventory/changeItemCount", { itemId, count: -requiredCount }, { root: true });
 				}
 			}
 

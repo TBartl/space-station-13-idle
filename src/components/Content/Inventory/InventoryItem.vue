@@ -35,7 +35,9 @@ export default {
   props: ["itemId"],
   components: { InventorySell, ItemPopover },
   computed: {
-    ...mapGetters(["inventory"]),
+		bank() {
+			return this.$store.getters["inventory/bank"];
+		},
     id() {
       return this._uid.toString();
     },
@@ -43,7 +45,7 @@ export default {
       return ITEMS.get(this.itemId);
     },
     count() {
-      return this.inventory[this.itemId];
+      return this.bank[this.itemId];
     }
   }
 };

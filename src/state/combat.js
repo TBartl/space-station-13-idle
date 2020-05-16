@@ -43,7 +43,7 @@ const combat = {
 	actions: {
 		lootItem({ state, commit }, index) {
 			let drop = state.drops[index];
-			commit("changeItemCount", {
+			commit("inventory/changeItemCount", {
 				itemId: drop.itemId,
 				count: drop.count
 			}, { root: true });
