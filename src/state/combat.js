@@ -1,3 +1,4 @@
+import Vue from "vue";
 import { createCoroutineModule } from "./coroutine";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { ENEMIES } from "@/data/combat";
@@ -34,7 +35,10 @@ const combat = {
 		},
 		addLootItem(state, { itemId, count }) {
 			state.drops.push({ itemId, count });
-		}
+		},
+		clearLoot(state) {
+			Vue.set(state, "drops", [])
+		},
 	},
 	actions: {
 		lootItem({ state, commit }, index) {
@@ -72,6 +76,7 @@ const combat = {
 		startCombat({ dispatch, commit }, enemyId) {
 			dispatch("cancelAllActions", {}, { root: true });
 			commit("_setTargetEnemy", enemyId);
+			commit("clearLoot");
 			dispatch("playerMob/startCombat", {}, { root: true });
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
