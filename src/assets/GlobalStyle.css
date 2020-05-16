@@ -24,14 +24,22 @@ p {
 img.pixelated {
   image-rendering: pixelated;
 }
-
 .content-container {
-	margin: 35px 20px 20px 20px;
-
+	margin: 15px 4px 4px 4px;
+	
 	/* container-fluid */
 	padding-right: 15px;
 	padding-left: 15px;
+
 }
+
+
+@media (min-width: 768px) {
+	.content-container {
+		margin: 35px 20px 20px 20px;
+	}
+}
+
 
 .content-block {
 	border-radius: .25rem;
@@ -64,7 +72,7 @@ img.pixelated {
 }
 .clickable:hover {
 	cursor: pointer;
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(206, 233, 255);
 }
 
 

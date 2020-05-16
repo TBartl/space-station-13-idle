@@ -1,6 +1,6 @@
 <template>
-  <div class="content-block enemy p-1 d-flex flex-row align-items-center justify-content-between">
-    <div class="d-flex flex-row align-items-center">
+  <div class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between">
+    <div class="d-flex flex-column flex-md-row align-items-center">
       <img :src="enemy.icon" class="pixelated mr-2" alt />
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="d-flex flex-column d-xl-inline-block">
       <button type="button" :id="id" class="btn btn-primary">View Loot</button>
       <b-popover :target="id" triggers="click blur" placement="top" delay="0">
         <item-chance :data="enemy" />
