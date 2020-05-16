@@ -66,7 +66,10 @@ export default {
 		finishAction({ commit, getters, dispatch }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.jobActions[actionId];
-			acquireItemFrom(action, commit);
+			let yieldedItems = acquireItemFrom(action);
+			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				commit("changeItemCount", { itemId, count }, { root: true });
+			}
 			commit("addXP", action.xp);
 
 			if (action.requiredItems) {

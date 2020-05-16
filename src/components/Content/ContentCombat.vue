@@ -7,8 +7,8 @@
     />
     <div class="content-container">
       <div class="row" v-if="targetEnemy == null">
-        <div class="col-4" v-for="(zone, index) in zones" :key="index">
-          <zone :zone="zone" />
+        <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
+          <zone :zone="zone" class="mb-3"/>
         </div>
       </div>
       <div class="row" v-else>

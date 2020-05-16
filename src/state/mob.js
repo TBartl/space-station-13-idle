@@ -78,6 +78,7 @@ export function createMobModule(mobType) {
 					this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
 				} else {
 					dispatch("combat/pauseCombat", {}, { root: true });
+					dispatch("combat/dropEnemyLoot", {}, { root: true })
 				}
 
 			}

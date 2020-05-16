@@ -8,7 +8,7 @@
       <loot-item
         v-for="(drop, index) in drops"
         :key="index"
-        :itemId="drop.item"
+        :itemId="drop.itemId"
         :count="drop.count"
         :index="index"
       />
@@ -18,7 +18,6 @@
 
 <script>
 import { ENEMIES } from "@/data/combat";
-import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { mapGetters } from "vuex";
 import LootItem from "@/components/Content/Combat/LootItem";
 
@@ -32,10 +31,7 @@ export default {
   },
   methods: {
     lootAll() {
-      this.$store.dispatch("combat/lootAll");
-      // for (var i = 0; i < this.$store.state.chronoSpeed; i++) {
-      //   acquireItemFrom(this.enemy, this.$store.commit);
-      // }
+			this.$store.dispatch("combat/lootAll");
     }
   }
 };

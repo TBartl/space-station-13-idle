@@ -1,4 +1,6 @@
 import { createCoroutineModule } from "./coroutine";
+import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { ENEMIES } from "@/data/combat";
 
 const combat = {
 	namespaced: true,
@@ -7,16 +9,7 @@ const combat = {
 	},
 	state: {
 		targetEnemy: null,
-		drops: [{
-			item: "iron",
-			count: 5
-		}, {
-			item: "iron",
-			count: 1
-		}, {
-			item: "silver",
-			count: 2
-		}]
+		drops: []
 	},
 	getters: {
 		targetEnemy(state) {
@@ -38,6 +31,9 @@ const combat = {
 		},
 		removeLootItem(state, index) {
 			state.drops.splice(index, 1);
+		},
+		addLootItem(state, { itemId, count }) {
+			state.drops.push({ itemId, count });
 		}
 	},
 	actions: {
@@ -52,6 +48,13 @@ const combat = {
 		lootAll({ state, dispatch }) {
 			while (state.drops.length) {
 				dispatch("lootItem", 0);
+			}
+		},
+		dropEnemyLoot({ state, commit }) {
+			let enemy = ENEMIES[state.targetEnemy];
+			let yieldedItems = acquireItemFrom(enemy);
+			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				commit("addLootItem", { itemId, count });
 			}
 		},
 		cancelActions({ state, commit, dispatch }) {
