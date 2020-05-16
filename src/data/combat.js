@@ -15,9 +15,21 @@ export const ENEMIES = {
 		robustness: 6,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
-		},
-		item: "iron"
+			attackSpeed: 3
+		}, 
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	debugA: {
 		name: "Debug A",

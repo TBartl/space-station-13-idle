@@ -53,10 +53,7 @@ const vuexLocal = new VuexPersistence({
 const state = {
 	visibleSidebarItem: "mining",
 	inventory: {
-		"money": 50000,
-		"iron": 150,
-		"glass": 10,
-		"silver": 1
+		"money": 100
 	},
 	chronoSpeed: 1
 }
