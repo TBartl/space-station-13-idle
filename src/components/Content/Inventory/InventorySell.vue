@@ -1,7 +1,7 @@
 <template>
   <button
     v-if="count <= totalCount"
-    class="sell d-flex align-items-center justify-content-between w-100"
+    class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-between w-100"
     @click="sellItem({'itemId': itemId, 'count': count})"
   >
     <span>Sell x{{count | cleanNum}}</span>
@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .sell {
 	padding: 0.25rem;
-	border-color: whitesmoke;
+	border-color: rgb(226, 226, 226);
 	transition: background-color .2s;
 }
 .sell:hover{

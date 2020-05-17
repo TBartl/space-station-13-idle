@@ -6,6 +6,7 @@ export const ITEMS = new Map([
 		name: "Spaghetti",
 		sellPrice: 100,
 		icon: require('@/assets/art/shop/items/spaghetti.png'),
+		healAmount: 30
 	}],
 ]);
 

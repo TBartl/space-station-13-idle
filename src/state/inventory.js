@@ -29,6 +29,8 @@ const inventory = {
 		changeItemCount(state, { itemId, count }) {
 			if (!state.bank[itemId]) {
 				Vue.set(state.bank, itemId, count)
+			} else if (state.bank[itemId] + count == 0) {
+				Vue.delete(state.bank, itemId);
 			} else {
 				state.bank[itemId] += count;
 			}
@@ -42,8 +44,6 @@ const inventory = {
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
 			state.foodCount -= 1;
 			dispatch("playerMob/addHealth", 3, { root: true });
-
-
 		}
 	}
 }
