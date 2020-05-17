@@ -4,39 +4,46 @@ export const ITEMS = {
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/power.png")
 	},
-	meleesmall: {
-		name: "Claw",
+	mechWeaponClaw: {
+		name: "Mech Claw",
 		sellPrice: 0,
+		equipmentSlot: "hand",
 		icon: require("@/assets/art/engineering/meleesmall.png")
 	},
-	meleebig: {
-		name: "Drill",
+	mechWeaponDrill: {
+		name: "Mech Drill",
 		sellPrice: 0,
+		equipmentSlot: "hand",
 		icon: require("@/assets/art/engineering/meleebig.png")
 	},
-	gunsmall: {
+	mechGunRifle: {
 		name: "Mounted Rifle",
 		sellPrice: 0,
+		equipmentSlot: "hand",
 		icon: require("@/assets/art/engineering/gunsmall.png")
 	},
-	ammosmall: {
+	rifleAmmo: {
 		name: "Rifle Ammo",
 		sellPrice: 0,
+		equipmentSlot: "pocket",
 		icon: require("@/assets/art/engineering/ammosmall.png")
 	},
-	gunbig: {
+	mechGunCanno: {
 		name: "Mounted Cannon",
 		sellPrice: 0,
+		equipmentSlot: "pocket",
 		icon: require("@/assets/art/engineering/gunbig.png")
 	},
-	ammobig: {
+	cannonAmmo: {
 		name: "Cannon Ammo",
 		sellPrice: 0,
+		equipmentSlot: "pocket",
 		icon: require("@/assets/art/engineering/ammobig.png")
 	},
-	gunenergy: {
-		name: "Energy Rifle",
+	mechGunEnergyRifle: {
+		name: "Mech Energy Rifle",
 		sellPrice: 0,
+		equipmentSlot: "hand",
 		icon: require("@/assets/art/engineering/gunenergy.png")
 	},
 }
@@ -52,49 +59,49 @@ export const ACTIONS = {
 	},
 	engMeleesmall: {
 		time: 1,
-		item: "meleesmall",
+		item: "mechWeaponClaw",
 		icon: require("@/assets/art/engineering/meleesmall.png"),
 		xp: 5,
 		requiredLevel: 2
 	},
 	engMeleebig: {
 		time: 1,
-		item: "meleebig",
+		item: "mechWeaponDrill",
 		icon: require("@/assets/art/engineering/meleebig.png"),
 		xp: 5,
 		requiredLevel: 3
 	},
 	engGunsmall: {
 		time: 1,
-		item: "gunsmall",
+		item: "mechGunRifle",
 		icon: require("@/assets/art/engineering/gunsmall.png"),
 		xp: 5,
 		requiredLevel: 4
 	},
 	engAmmosmall: {
 		time: 1,
-		item: "ammosmall",
+		item: "rifleAmmo",
 		icon: require("@/assets/art/engineering/ammosmall.png"),
 		xp: 5,
 		requiredLevel: 5
 	},
 	engGunbig: {
 		time: 1,
-		item: "gunbig",
+		item: "mechGunCanno",
 		icon: require("@/assets/art/engineering/gunbig.png"),
 		xp: 5,
 		requiredLevel: 6
 	},
 	engAmmobig: {
 		time: 1,
-		item: "ammobig",
+		item: "cannonAmmo",
 		icon: require("@/assets/art/engineering/ammobig.png"),
 		xp: 5,
 		requiredLevel: 7
 	},
 	engGunenergy: {
 		time: 1,
-		item: "gunenergy",
+		item: "mechGunEnergyRifle",
 		icon: require("@/assets/art/engineering/gunenergy.png"),
 		xp: 5,
 		requiredLevel: 8

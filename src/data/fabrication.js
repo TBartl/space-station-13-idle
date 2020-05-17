@@ -2,81 +2,97 @@ export const ITEMS = {
 	crowbar: {
 		name: "Crowbar",
 		sellPrice: 1,
+		equipmentSlot: "hand",
 		icon: require("@/assets/art/fabrication/crowbar.png")
 	},
 	ripley: {
 		name: "R.I.P.L.E.Y.",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripley.png")
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripleymkii.png")
 	},
 	odysseus: {
 		name: "Odysseus",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechodysseus.png")
 	},
 	firefighter: {
 		name: "R.I.P.L.E.Y. MK3",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechfirefighter.png")
 	},
 	clarke: {
 		name: "Clarke",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif")
 	},
 	durand: {
 		name: "Durand",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdurand.png")
 	},
 	marauder: {
 		name: "Marauder",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechmarauder.png")
 	},
 	gygax: {
 		name: "Gygax",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechgygax.png")
 	},
 	mauler: {
 		name: "Mauler",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif")
 	},
 	deathripley: {
 		name: "R.I.P.L.E.Y. MK13",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdeathripley.png")
 	},
 	darkgygax: {
 		name: "Assault Gygax",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png")
 	},
 	reticence: {
 		name: ".........",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechreticence.png")
 	},
 	seraph: {
 		name: "Seraph",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechseraph.png")
 	},
 	honk: {
 		name: "H.O.N.K.",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechhonk.png")
 	},
 	phazon: {
 		name: "Phazon",
 		sellPrice: 1000,
+		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechphazon.png")
 	}
 }

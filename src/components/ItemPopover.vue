@@ -3,6 +3,7 @@
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
       <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
+      <span v-if="item.equipmentSlot" class="mt-1">Equippable</span>
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
   </b-popover>

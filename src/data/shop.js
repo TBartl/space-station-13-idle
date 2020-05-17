@@ -15,6 +15,11 @@ export const SECTIONS = [
 		name: "Debug Section",
 		purchases: ['debugFreeMoney', 'debugFreeSpaghetti'],
 		item: "money"
+	},
+	{
+		name: "Debug Equipment Section",
+		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand'],
+		item: "money"
 	}
 ]
 
@@ -30,5 +35,23 @@ export const PURCHASES = {
 		description: "I'll have the spaghetti and meatballs",
 		icon: require('@/assets/art/shop/items/spaghetti.png'),
 		item: "spaghetti"
+	},
+	debugMechClaw: {
+		item: "mechWeaponClaw"
+	},
+	debugMechDrill: {
+		item: "mechWeaponDrill"
+	},
+	debugCrowbar: {
+		item: "crowbar"
+	},
+	debugSord: {
+		item: "sord"
+	},
+	debugRipley: {
+		item: "ripley"
+	},
+	debugDurand: {
+		item: "durand"
 	}
 }

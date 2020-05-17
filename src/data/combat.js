@@ -5,6 +5,12 @@ export const ITEMS = {
 		icon: require("@/assets/art/combat/items/dead_mouse.png"),
 		healAmount: 15
 	},
+	sord: {
+		name: "SORD",
+		sellPrice: 420,
+		icon: require("@/assets/art/combat/items/sord.png"),
+		equipmentSlot: "hand"
+	}
 };
 
 export const ENEMIES = {
