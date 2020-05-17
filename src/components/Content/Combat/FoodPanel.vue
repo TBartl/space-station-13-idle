@@ -17,7 +17,7 @@
       ></button>
 
       <b-popover target="food-dropdown-button" triggers="click blur" placement="bottom" delay="0">
-				<food-dropdown-item v-for="(itemId, index) in validFoodItems" :key="index" :itemId="itemId" />
+				<food-dropdown-item class="w-100" v-for="(itemId, index) in validFoodItems" :key="index" :itemId="itemId" />
 				<button v-if="food" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
 			</b-popover>
     </div>
