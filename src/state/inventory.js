@@ -14,6 +14,18 @@ const inventory = {
 			food: {
 				itemId: null,
 				count: 0
+			},
+			hand: {
+				itemId: null,
+				count: 0
+			},
+			chest: {
+				itemId: null,
+				count: 0
+			},
+			pocket: {
+				itemId: null,
+				count: 0
 			}
 		}
 	},

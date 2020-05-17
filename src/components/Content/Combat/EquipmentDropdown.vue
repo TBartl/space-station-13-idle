@@ -7,7 +7,7 @@
       :itemId="itemId"
     />
     <button v-if="currentItemId" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
-    <span v-if="!currentItemId && validItems.length == 0">No {{equipmentSlot}} available.</span>
+    <span v-if="!currentItemId && validItems.length == 0">No {{equipmentSlot}} items available.</span>
   </b-popover>
 </template>
 
