@@ -1,13 +1,17 @@
 <template>
   <div>
     <button :id="target" class="m-1 equipment-slot">
-      <img :src="icon" class="pixelated" />
+      <div class="overlay-div">
+        <img :src="icon" />
+        <img :src="equippedIcon" />
+      </div>
     </button>
     <equipment-dropdown :target="target" :equipmentSlot="equipmentSlot" />
   </div>
 </template>
 
 <script>
+import ITEMS from "@/data/items";
 import EquipmentDropdown from "@/components/Content/Combat/EquipmentDropdown";
 export default {
   components: { EquipmentDropdown },
@@ -18,6 +22,17 @@ export default {
     },
     target() {
       return "equipment-slot-" + this.id;
+    },
+    equipped() {
+      return this.$store.getters["inventory/equipment"][this.equipmentSlot];
+    },
+    equippedItem() {
+      if (!this.equipped.itemId) return;
+      return ITEMS[this.equipped.itemId];
+    },
+    equippedIcon() {
+      if (!this.equippedItem) return this.icon;
+      return this.equippedItem.icon;
     }
   }
 };
@@ -39,8 +54,9 @@ export default {
   transform: translateY(-2px);
 }
 
-.equipment-slot img {
-  width: 48px;
+.overlay-div {
+	width: 48px;
+	height: 48px;
 }
 </style>
 
