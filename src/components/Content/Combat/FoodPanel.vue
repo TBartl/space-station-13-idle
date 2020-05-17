@@ -18,7 +18,7 @@
 
       <b-popover target="food-dropdown-button" triggers="click blur" placement="bottom" delay="0">
 				<food-dropdown-item v-for="(itemId, index) in validFoodItems" :key="index" :itemId="itemId" />
-				<button class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
+				<button v-if="food" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
 			</b-popover>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
       this.$store.dispatch("inventory/eat");
 		},
 		unequip() {
-      console.log("TODO: UNEQUIP");
+			this.$store.dispatch("inventory/unequipFood");
 		}
   }
 };

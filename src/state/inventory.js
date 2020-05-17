@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
+import ITEMS from "@/data/items";
 
 const inventory = {
 	namespaced: true,
@@ -36,6 +37,10 @@ const inventory = {
 			}
 			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
+		setFood(state, { itemId, count }) {
+			state.foodId = itemId;
+			state.foodCount = count;
+		}
 	},
 	actions: {
 		eat({ state, getters, rootGetters, dispatch }) {
@@ -43,7 +48,20 @@ const inventory = {
 			if (!getters.foodCount) return;
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
 			state.foodCount -= 1;
-			dispatch("playerMob/addHealth", 3, { root: true });
+			dispatch("playerMob/addHealth", ITEMS.get(state.foodId).healAmount, { root: true });
+		},
+		unequipFood({ state, commit }) {
+			if (state.foodId) {
+				commit("changeItemCount", { itemId: state.foodId, count: state.foodCount });
+			}
+			commit("setFood", { itemId: null, count: 0 });
+		},
+		equipFood({ state, commit, dispatch }, itemId) {
+			dispatch("unequipFood");
+			let count = state.bank[itemId];
+			console.log(count);
+			commit("setFood", { itemId, count });
+			commit("changeItemCount", { itemId, count: -count });
 		}
 	}
 }
