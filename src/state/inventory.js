@@ -7,6 +7,8 @@ const inventory = {
 		bank: {
 			"money": 100
 		},
+		foodId: "spaghetti",
+		foodCount: 20
 	},
 	getters: {
 		bank(state) {
@@ -15,6 +17,13 @@ const inventory = {
 		money(state) {
 			return state.bank.money
 		},
+		foodId(state) {
+			if (!state.foodCount) return null;
+			return state.foodId;
+		},
+		foodCount(state) {
+			return state.foodCount;
+		}
 	},
 	mutations: {
 		changeItemCount(state, { itemId, count }) {
@@ -25,6 +34,17 @@ const inventory = {
 			}
 			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
+	},
+	actions: {
+		eat({ state, getters, rootGetters, dispatch }) {
+			if (!getters.foodId) return;
+			if (!getters.foodCount) return;
+			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
+			state.foodCount -= 1;
+			dispatch("playerMob/addHealth", 3, { root: true });
+
+
+		}
 	}
 }
 

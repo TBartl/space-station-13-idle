@@ -31,7 +31,7 @@ export function createMobModule(mobType) {
 		mutations: {
 			_setHealth(state, health) {
 				state.health = health;
-			}
+			},
 		},
 		actions: {
 			cancelActions({ dispatch }) {
@@ -80,7 +80,10 @@ export function createMobModule(mobType) {
 					dispatch("combat/pauseCombat", {}, { root: true });
 					dispatch("combat/dropEnemyLoot", {}, { root: true })
 				}
-
+			},
+			// Add health, like from healing
+			addHealth({getters, commit}, health) {
+				commit("_setHealth", Math.min(getters.health + health, getters.stats.maxHealth))
 			}
 		}
 	}
