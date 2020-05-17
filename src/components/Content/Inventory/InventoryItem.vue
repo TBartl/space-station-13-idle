@@ -4,20 +4,23 @@
       <img class="pixelated" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
-		<item-popover :target="id" :itemId="itemId" />
+    <item-popover :target="id" :itemId="itemId" />
     <b-popover :target="id" triggers="click blur" placement="bottom" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
-        <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
-        <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />
-        <inventory-sell :itemId="itemId" :count="100" :totalCount="count" />
-        <inventory-sell :itemId="itemId" :count="1000" :totalCount="count" />
-        <inventory-sell
-          :itemId="itemId"
-          :count="count"
-          :totalCount="count"
-          v-if="count != 1 && count != 10 && count != 100 && count != 1000"
-        />
+        <div v-if="item.sellPrice" class="mt-2">
+          <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
+          <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />
+          <inventory-sell :itemId="itemId" :count="100" :totalCount="count" />
+          <inventory-sell :itemId="itemId" :count="1000" :totalCount="count" />
+          <inventory-sell
+            :itemId="itemId"
+            :count="count"
+            :totalCount="count"
+            v-if="count != 1 && count != 10 && count != 100 && count != 1000"
+          />
+        </div>
+				<span v-else class="mt-1">Can't be sold</span>
       </div>
     </b-popover>
   </div>
@@ -27,12 +30,14 @@
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
-import ItemPopover from '@/components/ItemPopover'
+import ItemPopover from "@/components/ItemPopover";
 export default {
   props: ["itemId"],
   components: { InventorySell, ItemPopover },
   computed: {
-    ...mapGetters(["inventory"]),
+		bank() {
+			return this.$store.getters["inventory/bank"];
+		},
     id() {
       return this._uid.toString();
     },
@@ -40,7 +45,7 @@ export default {
       return ITEMS.get(this.itemId);
     },
     count() {
-      return this.inventory[this.itemId];
+      return this.bank[this.itemId];
     }
   }
 };

@@ -5,7 +5,7 @@
       :class="{'expanded': expanded}"
       @click="expanded=!expanded"
     >
-      <div class="d-flex align-items-top">
+      <div class="d-flex flex-column flex-md-row align-items-center align-items-md-top">
         <img :src="zone.icon" class="pixelated mr-2" alt />
         <div class="d-flex flex-column align-items-left">
           <span class="zone-title mr">{{zone.name}}</span>
@@ -56,7 +56,7 @@ export default {
   font-size: 24px;
 }
 img {
-  height: 96px;
+  width: 150px;
 }
 .zone-difficulty {
   font-size: 13px;

@@ -1,3 +1,12 @@
+export const ITEMS = new Map([
+	["mouseCarcass", {
+		name: "Mouse Carcass",
+		sellPrice: 3,
+		icon: require("@/assets/art/combat/items/dead_mouse.png"),
+		healAmount: 15
+	}],
+]);
+
 export const ENEMIES = {
 	mouse: {
 		name: "Mouse",
@@ -7,7 +16,7 @@ export const ENEMIES = {
 			attackSpeed: 2
 		},
 		robustness: 1,
-		item: "iron"
+		item: "mouseCarcass"
 	},
 	cargoTech: {
 		name: "Cargo Technician",
@@ -15,9 +24,21 @@ export const ENEMIES = {
 		robustness: 6,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 3
 		},
-		item: "iron"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	debugA: {
 		name: "Debug A",

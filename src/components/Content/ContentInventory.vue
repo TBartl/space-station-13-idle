@@ -29,10 +29,12 @@ export default {
   extends: ContentAbstract,
   components: { InventoryItem },
   computed: {
-    ...mapGetters(["inventory"]),
+		bank() {
+			return this.$store.getters["inventory/bank"];
+		},
     orderedItems() {
       var toReturn = Array.from(ITEMS.keys())
-        .filter(itemId => this.inventory[itemId])
+        .filter(itemId => this.bank[itemId])
       return toReturn;
     }
   }

@@ -2,7 +2,7 @@
   <b-popover :target="target" triggers="hover" placement="top" delay="0">
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
-      <inventory-price-display :price="item.sellPrice" />
+      <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
   </b-popover>
 </template>

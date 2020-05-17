@@ -2,7 +2,7 @@
   <div class="d-flex fledx-row align-items-center">
     <img :src="item.icon" :id="id" />
     <item-popover :itemId="itemId" :target="id" />
-    <span :style="{opacity: inventoryCount >= count ? 1: .5}">x{{count}} ({{inventoryCount ? inventoryCount : 0}})</span>
+    <span :style="{opacity: bankCount >= count ? 1: .5}">x{{count}} ({{bankCount ? bankCount : 0}})</span>
   </div>
 </template>
 
@@ -14,15 +14,17 @@ export default {
   props: ["itemId", "count"],
   components: { ItemPopover },
   computed: {
-    ...mapGetters(["inventory"]),
+		bank() {
+			return this.$store.getters["inventory/bank"];
+		},
     id() {
       return this._uid.toString();
     },
     item() {
       return ITEMS.get(this.itemId);
     },
-    inventoryCount() {
-      return this.inventory[this.itemId];
+    bankCount() {
+      return this.bank[this.itemId];
     }
   }
 };

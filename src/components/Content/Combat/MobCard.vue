@@ -9,17 +9,17 @@
       :customClass="'bg-danger'"
     />
     <progress-bar
-      v-if="!moveProgress"
+      v-if="!targetEnemy || !moveProgress"
       class="mb-2 black-background"
       :progress="swingProgress"
       :text="`Attack Speed: ${stats.attackSpeed.toFixed(1)}s`"
     />
     <progress-bar
-      v-else-if="mobType == 'player'"
+      v-if="!targetEnemy || (moveProgress && mobType == 'player')"
       class="mb-2 black-background"
       :progress="moveProgress"
       :customClass="'bg-success'"
-      :text="`Moving: ${moveTime.toFixed(1)}s`"
+      :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
     <span>Stats: TODO</span>
   </div>
@@ -64,9 +64,13 @@ export default {
       return this.health / this.stats.maxHealth;
     },
     swingProgress() {
+			// Show the bar full when there's not an enemy
+			if (!this.targetEnemy) return 1;
       return this.$store.getters[this.mobType + "Mob/swingCoroutine/percent"];
     },
     moveProgress() {
+			// Show the bar full when there's not an enemy
+			if (!this.targetEnemy) return 1;
       return this.$store.getters["combat/moveCoroutine/percent"];
     },
     moveTime() {

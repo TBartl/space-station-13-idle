@@ -66,7 +66,10 @@ export default {
   name: "Sidebar",
   components: { SidebarItem, InventoryPriceDisplay },
   computed: {
-    ...mapGetters(["money", "chronoSpeed"]),
+		...mapGetters([ "chronoSpeed"]),
+		money() {
+			return this.$store.getters["inventory/money"];
+		},
     version() {
       return `Alpha v${process.env.PACKAGE_VERSION}`;
     },

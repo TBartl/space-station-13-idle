@@ -6,13 +6,13 @@
       color="rgb(175, 99, 99)"
     />
     <div class="content-container">
-      <div class="row" v-if="targetEnemy == null">
+      <div class="row" v-if="!inCombat">
         <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
           <zone :zone="zone" class="mb-3"/>
         </div>
       </div>
-      <div class="row" v-else>
-        <div class="col-12 mb-3">
+      <div class="row" >
+        <div class="col-12 mb-3" v-if="inCombat">
           <run-away />
         </div>
         <div class="col-12">
@@ -21,13 +21,13 @@
         <div class="col-12 col-lg-4 mb-3">
           <combat-player-panel />
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-6 col-lg-2 mb-3" >
           <mob-card mobType="player" />
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-6 col-lg-2 mb-3" v-if="inCombat">
           <mob-card mobType="enemy" />
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" v-if="inCombat">
           <loot />
         </div>
       </div>
@@ -59,7 +59,10 @@ export default {
     ...mapGetters("combat", ["targetEnemy"]),
     zones() {
       return ZONES;
-    }
+		},
+		inCombat() {
+			return this.targetEnemy != null;
+		}
   }
 };
 </script>
