@@ -18,7 +18,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Debug Equipment Section",
-		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand'],
+		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand', "debugRiotSuit", "debugSyndiHardsuit"],
 		item: "money"
 	}
 ]
@@ -53,5 +53,11 @@ export const PURCHASES = {
 	},
 	debugDurand: {
 		item: "durand"
+	},
+	debugSyndiHardsuit: {
+		item: "syndiHardsuit"
+	},
+	debugRiotSuit: {
+		item: "riotSuit"
 	}
 }

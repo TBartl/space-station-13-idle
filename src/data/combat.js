@@ -10,6 +10,20 @@ export const ITEMS = {
 		sellPrice: 420,
 		icon: require("@/assets/art/combat/items/sord.png"),
 		equipmentSlot: "hand"
+	},
+	riotSuit: {
+		name: "Riot Suit",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/riot_suit.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/riot_suit_overlay.png"),
+	},
+	syndiHardsuit: {
+		name: "Syndicate Hardsuit",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
 	}
 };
 
