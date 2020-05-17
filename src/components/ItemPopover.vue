@@ -2,6 +2,7 @@
   <b-popover :target="target" triggers="hover" placement="top" delay="0">
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
+      <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
   </b-popover>
