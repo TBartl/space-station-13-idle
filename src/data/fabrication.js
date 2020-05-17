@@ -3,13 +3,16 @@ export const ITEMS = {
 		name: "Crowbar",
 		sellPrice: 1,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/fabrication/crowbar.png")
+		icon: require("@/assets/art/fabrication/crowbar.png"),
+		overlay: require("@/assets/art/fabrication/crowbar_overlay.png"),
+		
 	},
 	ripley: {
 		name: "R.I.P.L.E.Y.",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechripley.png")
+		icon: require("@/assets/art/fabrication/mechripley.png"),
+		overlay: require("@/assets/art/fabrication/mechripley.png")
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
@@ -39,7 +42,8 @@ export const ITEMS = {
 		name: "Durand",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechdurand.png")
+		icon: require("@/assets/art/fabrication/mechdurand.png"),
+		overlay: require("@/assets/art/fabrication/mechdurand.png")
 	},
 	marauder: {
 		name: "Marauder",

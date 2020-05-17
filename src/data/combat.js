@@ -9,6 +9,7 @@ export const ITEMS = {
 		name: "SORD",
 		sellPrice: 420,
 		icon: require("@/assets/art/combat/items/sord.png"),
+		overlay: require("@/assets/art/combat/items/sord_overlay.png"),
 		equipmentSlot: "hand"
 	},
 	riotSuit: {
