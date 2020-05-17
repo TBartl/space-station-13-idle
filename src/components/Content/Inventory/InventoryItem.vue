@@ -11,7 +11,7 @@
         <button
           v-if="item.healAmount"
           class="mt-1 btn btn-primary btn-sm"
-          @click="$store.dispatch('inventory/equipFood', itemId)"
+          @click="$store.dispatch('inventory/equip', itemId)"
         >Equip Food</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />

@@ -17,9 +17,14 @@
       ></button>
 
       <b-popover target="food-dropdown-button" triggers="click blur" placement="bottom" delay="0">
-				<food-dropdown-item class="w-100" v-for="(itemId, index) in validFoodItems" :key="index" :itemId="itemId" />
-				<button v-if="food" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
-			</b-popover>
+        <food-dropdown-item
+          class="w-100"
+          v-for="(itemId, index) in validFoodItems"
+          :key="index"
+          :itemId="itemId"
+        />
+        <button v-if="food" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
+      </b-popover>
     </div>
   </div>
 </template>
@@ -31,13 +36,15 @@ import FoodDropdownItem from "@/components/Content/Combat/FoodDropdownItem";
 export default {
   components: { FoodDropdownItem },
   computed: {
+    foodId() {
+      return this.$store.getters["inventory/equipment"].food.itemId;
+    },
     food() {
-      let foodId = this.$store.getters["inventory/foodId"];
-      if (!foodId) return;
-      return ITEMS[foodId];
+      if (!this.foodId) return;
+      return ITEMS[this.foodId];
     },
     foodCount() {
-      return this.$store.getters["inventory/foodCount"];
+      return this.$store.getters["inventory/equipment"].food.count;
     },
     validFoodItems() {
       let bank = this.$store.getters["inventory/bank"];
@@ -48,10 +55,10 @@ export default {
     eat() {
       if (!this.food) return;
       this.$store.dispatch("inventory/eat");
-		},
-		unequip() {
-			this.$store.dispatch("inventory/unequipFood");
-		}
+    },
+    unequip() {
+      this.$store.dispatch("inventory/unequip", this.foodId);
+    }
   }
 };
 </script>

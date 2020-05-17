@@ -2,14 +2,20 @@ import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 
+import { getEquipmentSlot } from '@/utils/equipmentUtils';
+
 const inventory = {
 	namespaced: true,
 	state: {
 		bank: {
 			"money": 100
 		},
-		foodId: "spaghetti",
-		foodCount: 20
+		equipment: {
+			food: {
+				itemId: null,
+				count: 0
+			}
+		}
 	},
 	getters: {
 		bank(state) {
@@ -18,12 +24,8 @@ const inventory = {
 		money(state) {
 			return state.bank.money
 		},
-		foodId(state) {
-			if (!state.foodCount) return null;
-			return state.foodId;
-		},
-		foodCount(state) {
-			return state.foodCount;
+		equipment(state) {
+			return state.equipment;
 		}
 	},
 	mutations: {
@@ -37,9 +39,9 @@ const inventory = {
 			}
 			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
-		setFood(state, { itemId, count }) {
-			state.foodId = itemId;
-			state.foodCount = count;
+		setEquipment(state, { slot, itemId, count }) {
+			state.equipment[slot].itemId = itemId;
+			state.equipment[slot].count = count;
 		},
 		quickSort(state) {
 			let allSortedKeys = Object.keys(ITEMS);
@@ -61,17 +63,18 @@ const inventory = {
 			state.foodCount -= 1;
 			dispatch("playerMob/addHealth", ITEMS[state.foodId].healAmount, { root: true });
 		},
-		unequipFood({ state, commit }) {
-			if (state.foodId) {
-				commit("changeItemCount", { itemId: state.foodId, count: state.foodCount });
+		unequip({ state, commit }, itemId) {
+			let slot = getEquipmentSlot(itemId);
+			let equippedItemId = state.equipment[slot].itemId;
+			if (equippedItemId) {
+				commit("changeItemCount", { itemId: equippedItemId, count: state.equipment[slot].count });
 			}
-			commit("setFood", { itemId: null, count: 0 });
+			commit("setEquipment", { slot, itemId: null, count: 0 });
 		},
-		equipFood({ state, commit, dispatch }, itemId) {
-			dispatch("unequipFood");
+		equip({ state, commit, dispatch }, itemId) {
+			dispatch("unequip", itemId);
 			let count = state.bank[itemId];
-			console.log(count);
-			commit("setFood", { itemId, count });
+			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
 		}
 	}

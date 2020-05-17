@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     equip() {
-      this.$store.dispatch("inventory/equipFood", this.itemId);
+      this.$store.dispatch("inventory/equip", this.itemId);
     }
   }
 };
