@@ -7,3 +7,7 @@ export function getEquipmentSlot(itemId) {
 	if (item.healAmount) return "food";
 	return null;
 }
+
+export function getBankItemsOfSlot(bank, slot) {
+	return Object.keys(bank).filter(itemId => getEquipmentSlot(itemId) == slot);
+}

@@ -1,8 +1,8 @@
 <template>
   <button class="btn btn-outline-primary d-flex flex-row align-items-center" @click="equip">
     <span>({{itemCount}})</span>
-    <img class="food-icon pixelated" :src="item.icon" />
-    <span>+{{item.healAmount}} HP</span>
+    <img class="equipment-icon pixelated" :src="item.icon" />
+    <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
   </button>
 </template>
 
@@ -25,3 +25,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.equipment-icon {
+  width: 48px;
+}
+</style>
