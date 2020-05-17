@@ -57,11 +57,16 @@ const inventory = {
 	},
 	actions: {
 		eat({ state, getters, rootGetters, dispatch }) {
-			if (!getters.foodId) return;
-			if (!getters.foodCount) return;
+			if (!state.equipment.food.itemId) return;
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
-			state.foodCount -= 1;
-			dispatch("playerMob/addHealth", ITEMS[state.foodId].healAmount, { root: true });
+			dispatch("playerMob/addHealth", ITEMS[state.equipment.food.itemId].healAmount, { root: true });
+
+			if (state.equipment.food.count == 1) {
+				state.equipment.food.count = 0;
+				state.equipment.food.itemId = null;
+			} else {
+				state.equipment.food.count -= 1;
+			}
 		},
 		unequip({ state, commit }, itemId) {
 			let slot = getEquipmentSlot(itemId);
