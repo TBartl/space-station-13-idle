@@ -12,7 +12,8 @@ export const ITEMS = {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripley.png"),
-		overlay: require("@/assets/art/fabrication/mechripley.png")
+		overlay: require("@/assets/art/fabrication/mechripley.png"),
+		overlayHidePlayer: true
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
@@ -43,7 +44,8 @@ export const ITEMS = {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
-		overlay: require("@/assets/art/fabrication/mechdurand.png")
+		overlay: require("@/assets/art/fabrication/mechdurand.png"),
+		overlayHidePlayer: true
 	},
 	marauder: {
 		name: "Marauder",

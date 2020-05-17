@@ -81,13 +81,21 @@ export default {
       return this.$store.getters["combat/moveTime"];
     },
     playerOverlayIcons() {
-      let icons = [playerBaseIcon];
+      let icons = [];
+      let hidePlayer = false;
       let equipment = this.$store.getters["inventory/equipment"];
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
         if (!itemId) continue;
         let item = ITEMS[itemId];
-        if (!item.overlay) continue;
-        icons.push(item.overlay);
+        if (item.overlay) {
+          icons.push(item.overlay);
+        }
+        if (item.overlayHidePlayer) {
+          hidePlayer = true;
+        }
+      }
+      if (!hidePlayer) {
+        icons.unshift(playerBaseIcon);
       }
       return icons;
     }

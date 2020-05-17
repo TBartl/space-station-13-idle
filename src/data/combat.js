@@ -24,7 +24,7 @@ export const ITEMS = {
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
 		equipmentSlot: "chest",
-		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png")
 	}
 };
 
