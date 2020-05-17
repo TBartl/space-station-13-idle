@@ -1,14 +1,14 @@
-export const ITEMS = new Map([
-	["money", {
+export const ITEMS = {
+	money: {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
-	}], ["spaghetti", {
+	}, spaghetti: {
 		name: "Spaghetti",
 		sellPrice: 100,
 		icon: require('@/assets/art/shop/items/spaghetti.png'),
 		healAmount: 30
-	}],
-]);
+	},
+};
 
 export const SECTIONS = [
 	{

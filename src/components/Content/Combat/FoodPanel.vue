@@ -34,14 +34,14 @@ export default {
     food() {
       let foodId = this.$store.getters["inventory/foodId"];
       if (!foodId) return;
-      return ITEMS.get(foodId);
+      return ITEMS[foodId];
     },
     foodCount() {
       return this.$store.getters["inventory/foodCount"];
     },
     validFoodItems() {
       let bank = this.$store.getters["inventory/bank"];
-      return Object.keys(bank).filter(itemId => ITEMS.get(itemId).healAmount);
+      return Object.keys(bank).filter(itemId => ITEMS[itemId].healAmount);
     }
   },
   methods: {

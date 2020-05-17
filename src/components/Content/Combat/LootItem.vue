@@ -20,7 +20,7 @@ export default {
       return this._uid.toString();
     },
     item() {
-      return ITEMS.get(this.itemId);
+      return ITEMS[this.itemId];
     }
   },
   methods: {

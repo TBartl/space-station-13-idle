@@ -64,7 +64,7 @@ export default {
       }
     }),
     item() {
-      return ITEMS.get(this.action.item);
+      return ITEMS[this.action.item];
     },
     locked() {
       return this.level < this.action.requiredLevel;

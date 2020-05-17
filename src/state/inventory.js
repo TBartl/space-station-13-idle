@@ -40,6 +40,17 @@ const inventory = {
 		setFood(state, { itemId, count }) {
 			state.foodId = itemId;
 			state.foodCount = count;
+		},
+		quickSort(state) {
+			let allSortedKeys = Object.keys(ITEMS);
+			let newBank = {};
+			allSortedKeys.forEach(itemId => {
+				let val = state.bank[itemId];
+				if (val) {
+					newBank[itemId] = val;
+				}
+			});
+			Vue.set(state, "bank", newBank);
 		}
 	},
 	actions: {
@@ -48,7 +59,7 @@ const inventory = {
 			if (!getters.foodCount) return;
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
 			state.foodCount -= 1;
-			dispatch("playerMob/addHealth", ITEMS.get(state.foodId).healAmount, { root: true });
+			dispatch("playerMob/addHealth", ITEMS[state.foodId].healAmount, { root: true });
 		},
 		unequipFood({ state, commit }) {
 			if (state.foodId) {

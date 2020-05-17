@@ -1,5 +1,5 @@
-export const ITEMS = new Map([
-]);
+export const ITEMS = {
+}
 
 export const ACTIONS = {
 	graytideDebugA: {

@@ -12,7 +12,7 @@ export default {
   props: ["itemId"],
   computed: {
     item() {
-      return ITEMS.get(this.itemId);
+      return ITEMS[this.itemId];
     },
     itemCount() {
       return this.$store.getters["inventory/bank"][this.itemId];

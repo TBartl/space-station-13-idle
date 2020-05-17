@@ -1,105 +1,105 @@
-export const ITEMS = new Map([
-	["potato", {
+export const ITEMS = {
+	potato: {
 		name: "Potato",
 		sellPrice: 1,
 		icon: require("@/assets/art/botany/PlantPotato.png")
-	}],
-	["tomato", {
+	},
+	tomato: {
 		name: "Tomato",
 		sellPrice: 2,
 		icon: require("@/assets/art/botany/PlantTomato.png")
-	}],
-	["banana", {
+	},
+	banana: {
 		name: "Banana",
 		sellPrice: 5,
 		icon: require("@/assets/art/botany/PlantBanana.png")
-	}],
-	["flowersun", {
+	},
+	flowersun: {
 		name: "Sunflower",
 		sellPrice: 8,
 		icon: require("@/assets/art/botany/PlantFlowersun.png")
-	}],
-	["mushroom", {
+	},
+	mushroom: {
 		name: "Glowshroom",
 		sellPrice: 10,
 		icon: require("@/assets/art/botany/PlantShroomglow.png")
-	}],
-	["pepper", {
+	},
+	pepper: {
 		name: "Hot Pepper",
 		sellPrice: 10,
 		icon: require("@/assets/art/botany/PlantPepperhot.png")
-	}],
-	["potatobattery", {
+	},
+	potatobattery: {
 		name: "Potato Battery",
 		sellPrice: 12,
 		icon: require("@/assets/art/botany/PlantPotatobattery.png")
-	}],
-	["tomatoblue", {
+	},
+	tomatoblue: {
 		name: "Blue Tomato",
 		sellPrice: 23,
 		icon: require("@/assets/art/botany/PlantTomatoblue.png")
-	}],
-	["bananamime", {
+	},
+	bananamime: {
 		name: "...",
 		sellPrice: 27,
 		icon: require("@/assets/art/botany/PlantBananamime.png")
-	}],
-	["flowermoon", {
+	},
+	flowermoon: {
 		name: "Moonflower",
 		sellPrice: 30,
 		icon: require("@/assets/art/botany/PlantFlowermoon.png")
-	}],
-	["mushroomred", {
+	},
+	mushroomred: {
 		name: "Glowcap",
 		sellPrice: 10,
 		icon: require("@/assets/art/botany/PlantShroomred.png")
-	}],	
-	["peppercold", {
+	},
+	peppercold: {
 		name: "Ice Pepper",
 		sellPrice: 44,
 		icon: require("@/assets/art/botany/PlantPeppercold.png")
-	}],
-	["orange", {
+	},
+	orange: {
 		name: "Orange",
 		sellPrice: 12,
 		icon: require("@/assets/art/botany/PlantOrange.png")
-	}],
-	["tomatobluespace", {
+	},
+	tomatobluespace: {
 		name: "Bluespace Tomato",
 		sellPrice: 23,
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif")
-	}],
-	["bananablue", {
+	},
+	bananablue: {
 		name: "Blue Banana",
 		sellPrice: 27,
 		icon: require("@/assets/art/botany/PlantBananablue.png")
-	}],
-	["flowernova", {
+	},
+	flowernova: {
 		name: "Novaflower",
 		sellPrice: 30,
 		icon: require("@/assets/art/botany/PlantFlowernova.png")
-	}],
-	["mushroomshadow", {
+	},
+	mushroomshadow: {
 		name: "Shadowshroom",
 		sellPrice: 10,
 		icon: require("@/assets/art/botany/PlantShroomshadow.png")
-	}],	
-	["pepperghost", {
+	},
+	pepperghost: {
 		name: "Ghost Pepper",
 		sellPrice: 44,
 		icon: require("@/assets/art/botany/PlantPepperghost.png")
-	}],
-	["orange3d", {
+	},
+	orange3d: {
 		name: "Multidimensional Orange",
 		sellPrice: 12,
 		icon: require("@/assets/art/botany/PlantOrange3d_anim.gif")
-	}],
-	["tomatokiller", {
+	},
+	tomatokiller: {
 		name: "Killer Tomato",
 		sellPrice: 23,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png")
-	}],	
-]);
+	},
+};
 
 export const ACTIONS = {
 	growPotato: {

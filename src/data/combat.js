@@ -1,11 +1,11 @@
-export const ITEMS = new Map([
-	["mouseCarcass", {
+export const ITEMS = {
+	mouseCarcass: {
 		name: "Mouse Carcass",
 		sellPrice: 3,
 		icon: require("@/assets/art/combat/items/dead_mouse.png"),
 		healAmount: 15
-	}],
-]);
+	},
+};
 
 export const ENEMIES = {
 	mouse: {

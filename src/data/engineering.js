@@ -1,45 +1,45 @@
-export const ITEMS = new Map([
-	["power", {
+export const ITEMS = {
+	power: {
 		name: "Power",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/power.png")
-	}],
-	["meleesmall", {
+	},
+	meleesmall: {
 		name: "Claw",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/meleesmall.png")
-	}],
-	["meleebig", {
+	},
+	meleebig: {
 		name: "Drill",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/meleebig.png")
-	}],
-	["gunsmall", {
+	},
+	gunsmall: {
 		name: "Mounted Rifle",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/gunsmall.png")
-	}],
-	["ammosmall", {
+	},
+	ammosmall: {
 		name: "Rifle Ammo",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/ammosmall.png")
-	}],
-	["gunbig", {
+	},
+	gunbig: {
 		name: "Mounted Cannon",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/gunbig.png")
-	}],
-	["ammobig", {
+	},
+	ammobig: {
 		name: "Cannon Ammo",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/ammobig.png")
-	}],
-	["gunenergy", {
+	},
+	gunenergy: {
 		name: "Energy Rifle",
 		sellPrice: 0,
 		icon: require("@/assets/art/engineering/gunenergy.png")
-	}],
-]);	
+	},
+}
 
 export const ACTIONS = {
 	engBike: {

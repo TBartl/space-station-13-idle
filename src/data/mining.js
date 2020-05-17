@@ -1,55 +1,55 @@
-export const ITEMS = new Map([
-	["iron", {
+export const ITEMS = {
+	iron: {
 		name: "Iron",
 		sellPrice: 1,
 		icon: require("@/assets/art/mining/SheetIron.png")
-	}],
-	["glass", {
+	},
+	glass: {
 		name: "Glass",
 		sellPrice: 2,
 		icon: require("@/assets/art/mining/SheetGlass.png")
-	}],
-	["silver", {
+	},
+	silver: {
 		name: "Silver",
 		sellPrice: 5,
 		icon: require("@/assets/art/mining/SheetSilver.png")
-	}],
-	["gold", {
+	},
+	gold: {
 		name: "Gold",
 		sellPrice: 8,
 		icon: require("@/assets/art/mining/SheetGold.png")
-	}],
-	["titanium", {
+	},
+	titanium: {
 		name: "Titanium",
 		sellPrice: 10,
 		icon: require("@/assets/art/mining/SheetTitanium.png")
-	}],
-	["uranium", {
+	},
+	uranium: {
 		name: "Uranium",
 		sellPrice: 12,
 		icon: require("@/assets/art/mining/SheetUranium.png")
-	}],
-	["plasma", {
+	},
+	plasma: {
 		name: "Plasma",
 		sellPrice: 23,
 		icon: require("@/assets/art/mining/SheetPlasma.png")
-	}],
-	["diamond", {
+	},
+	diamond: {
 		name: "Diamond",
 		sellPrice: 27,
 		icon: require("@/assets/art/mining/SheetDiamond.png")
-	}],
-	["bluespace", {
+	},
+	bluespace: {
 		name: "Bluespace Crystal",
 		sellPrice: 30,
 		icon: require("@/assets/art/mining/SheetBluespace.png")
-	}],
-	["bananium", {
+	},
+	bananium: {
 		name: "Bananium",
 		sellPrice: 44,
 		icon: require("@/assets/art/mining/SheetBanana.png")
-	}],
-]);
+	},
+}
 
 export const ACTIONS = {
 	mineIron: {

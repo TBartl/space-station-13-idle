@@ -16,7 +16,7 @@ export default {
   components: { InventoryPriceDisplay },
   computed: {
     item() {
-      return ITEMS.get(this.itemId);
+      return ITEMS[this.itemId];
     }
   }
 };
