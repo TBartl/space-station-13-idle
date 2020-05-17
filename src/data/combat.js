@@ -171,6 +171,61 @@ export const ZONES = [
 		enemies: ["mouse", "cargoTech"]
 	},
 	{
+		name: "Departures Lounge",
+		icon: require("@/assets/art/combat/zones/departures.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Dorms 4",
+		icon: require("@/assets/art/combat/zones/dorms4.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Head of Personal Line",
+		icon: require("@/assets/art/combat/zones/hopline.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Kitchen",
+		icon: require("@/assets/art/combat/zones/kitchen.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Medical",
+		icon: require("@/assets/art/combat/zones/medical.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Engineering",
+		icon: require("@/assets/art/combat/zones/engineering.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Showroom",
+		icon: require("@/assets/art/combat/zones/showroom.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Robotics",
+		icon: require("@/assets/art/combat/zones/robotics.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Virology",
+		icon: require("@/assets/art/combat/zones/viro.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "Bridge",
+		icon: require("@/assets/art/combat/zones/bridge.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
+		name: "AI Core",
+		icon: require("@/assets/art/combat/zones/core.png"),
+		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	},
+	{
 		name: "Debug Land",
 		icon: require("@/assets/art/debug/banner.png"),
 		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
