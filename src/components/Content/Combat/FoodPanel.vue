@@ -13,13 +13,8 @@
         id="food-dropdown-button"
         type="button"
         class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
-        v-if="food || validFoodItems.length"
       ></button>
-
-      <b-popover target="food-dropdown-button" triggers="click blur" placement="bottom" delay="0">
-				<food-dropdown-item class="w-100" v-for="(itemId, index) in validFoodItems" :key="index" :itemId="itemId" />
-				<button v-if="food" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
-			</b-popover>
+      <equipment-dropdown target="food-dropdown-button" equipmentSlot="food" />
     </div>
   </div>
 </template>
@@ -27,31 +22,26 @@
 
 <script>
 import ITEMS from "@/data/items";
-import FoodDropdownItem from "@/components/Content/Combat/FoodDropdownItem";
+import EquipmentDropdown from "@/components/Content/Combat/EquipmentDropdown";
 export default {
-  components: { FoodDropdownItem },
+  components: { EquipmentDropdown },
   computed: {
+    foodId() {
+      return this.$store.getters["inventory/equipment"].food.itemId;
+    },
     food() {
-      let foodId = this.$store.getters["inventory/foodId"];
-      if (!foodId) return;
-      return ITEMS[foodId];
+      if (!this.foodId) return;
+      return ITEMS[this.foodId];
     },
     foodCount() {
-      return this.$store.getters["inventory/foodCount"];
-    },
-    validFoodItems() {
-      let bank = this.$store.getters["inventory/bank"];
-      return Object.keys(bank).filter(itemId => ITEMS[itemId].healAmount);
+      return this.$store.getters["inventory/equipment"].food.count;
     }
   },
   methods: {
     eat() {
       if (!this.food) return;
       this.$store.dispatch("inventory/eat");
-		},
-		unequip() {
-			this.$store.dispatch("inventory/unequipFood");
-		}
+    }
   }
 };
 </script>
@@ -60,8 +50,5 @@ export default {
 .food-group {
   font-size: 16px;
   padding: 0.12rem 0.55rem;
-}
-.food-icon {
-  width: 48px;
 }
 </style>

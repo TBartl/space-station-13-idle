@@ -5,6 +5,27 @@ export const ITEMS = {
 		icon: require("@/assets/art/combat/items/dead_mouse.png"),
 		healAmount: 15
 	},
+	sord: {
+		name: "SORD",
+		sellPrice: 420,
+		icon: require("@/assets/art/combat/items/sord.png"),
+		overlay: require("@/assets/art/combat/items/sord_overlay.png"),
+		equipmentSlot: "hand"
+	},
+	riotSuit: {
+		name: "Riot Suit",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/riot_suit.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/riot_suit_overlay.png"),
+	},
+	syndiHardsuit: {
+		name: "Syndicate Hardsuit",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png")
+	}
 };
 
 export const ENEMIES = {

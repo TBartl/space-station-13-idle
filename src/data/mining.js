@@ -47,6 +47,7 @@ export const ITEMS = {
 	bananium: {
 		name: "Bananium",
 		sellPrice: 44,
+		healAmount: 69,
 		icon: require("@/assets/art/mining/SheetBanana.png")
 	},
 }

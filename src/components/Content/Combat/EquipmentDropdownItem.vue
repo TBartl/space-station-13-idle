@@ -1,8 +1,8 @@
 <template>
   <button class="btn btn-outline-primary d-flex flex-row align-items-center" @click="equip">
     <span>({{itemCount}})</span>
-    <img class="food-icon pixelated" :src="item.icon" />
-    <span>+{{item.healAmount}} HP</span>
+    <img class="equipment-icon pixelated" :src="item.icon" />
+    <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
   </button>
 </template>
 
@@ -20,8 +20,14 @@ export default {
   },
   methods: {
     equip() {
-      this.$store.dispatch("inventory/equipFood", this.itemId);
+      this.$store.dispatch("inventory/equip", this.itemId);
     }
   }
 };
 </script>
+
+<style scoped>
+.equipment-icon {
+  width: 48px;
+}
+</style>

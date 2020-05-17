@@ -2,14 +2,32 @@ import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 
+import { getEquipmentSlot } from '@/utils/equipmentUtils';
+
 const inventory = {
 	namespaced: true,
 	state: {
 		bank: {
 			"money": 100
 		},
-		foodId: "spaghetti",
-		foodCount: 20
+		equipment: {
+			food: {
+				itemId: null,
+				count: 0
+			},
+			hand: {
+				itemId: null,
+				count: 0
+			},
+			chest: {
+				itemId: null,
+				count: 0
+			},
+			pocket: {
+				itemId: null,
+				count: 0
+			}
+		}
 	},
 	getters: {
 		bank(state) {
@@ -18,12 +36,8 @@ const inventory = {
 		money(state) {
 			return state.bank.money
 		},
-		foodId(state) {
-			if (!state.foodCount) return null;
-			return state.foodId;
-		},
-		foodCount(state) {
-			return state.foodCount;
+		equipment(state) {
+			return state.equipment;
 		}
 	},
 	mutations: {
@@ -37,9 +51,9 @@ const inventory = {
 			}
 			EventBus.$emit("itemCountChanged", { itemId, count });
 		},
-		setFood(state, { itemId, count }) {
-			state.foodId = itemId;
-			state.foodCount = count;
+		setEquipment(state, { slot, itemId, count }) {
+			state.equipment[slot].itemId = itemId;
+			state.equipment[slot].count = count;
 		},
 		quickSort(state) {
 			let allSortedKeys = Object.keys(ITEMS);
@@ -55,23 +69,29 @@ const inventory = {
 	},
 	actions: {
 		eat({ state, getters, rootGetters, dispatch }) {
-			if (!getters.foodId) return;
-			if (!getters.foodCount) return;
+			if (!state.equipment.food.itemId) return;
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
-			state.foodCount -= 1;
-			dispatch("playerMob/addHealth", ITEMS[state.foodId].healAmount, { root: true });
-		},
-		unequipFood({ state, commit }) {
-			if (state.foodId) {
-				commit("changeItemCount", { itemId: state.foodId, count: state.foodCount });
+			dispatch("playerMob/addHealth", ITEMS[state.equipment.food.itemId].healAmount, { root: true });
+
+			if (state.equipment.food.count == 1) {
+				state.equipment.food.count = 0;
+				state.equipment.food.itemId = null;
+			} else {
+				state.equipment.food.count -= 1;
 			}
-			commit("setFood", { itemId: null, count: 0 });
 		},
-		equipFood({ state, commit, dispatch }, itemId) {
-			dispatch("unequipFood");
+		unequip({ state, commit }, itemId) {
+			let slot = getEquipmentSlot(itemId);
+			let equippedItemId = state.equipment[slot].itemId;
+			if (equippedItemId) {
+				commit("changeItemCount", { itemId: equippedItemId, count: state.equipment[slot].count });
+			}
+			commit("setEquipment", { slot, itemId: null, count: 0 });
+		},
+		equip({ state, commit, dispatch }, itemId) {
+			dispatch("unequip", itemId);
 			let count = state.bank[itemId];
-			console.log(count);
-			commit("setFood", { itemId, count });
+			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
 		}
 	}

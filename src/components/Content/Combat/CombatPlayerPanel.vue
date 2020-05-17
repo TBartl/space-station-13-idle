@@ -2,11 +2,11 @@
   <div class="content-block">
     <div class="player-block">
       <p class="player-block-header">FOOD</p>
-			<food-panel />
+      <food-panel />
     </div>
     <div class="player-block">
       <p class="player-block-header">EQUIPMENT</p>
-      <p>todo</p>
+      <equipment-panel />
     </div>
     <div class="player-block">
       <p class="player-block-header">ATTACK STYLE</p>
@@ -17,8 +17,9 @@
 
 <script>
 import FoodPanel from "@/components/Content/Combat/FoodPanel";
+import EquipmentPanel from "@/components/Content/Combat/EquipmentPanel";
 export default {
-  components: { FoodPanel }
+  components: { FoodPanel, EquipmentPanel }
 };
 </script>
 
@@ -33,5 +34,8 @@ export default {
 }
 .player-block:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+.player-block-header{
+	margin-bottom: .25rem;
 }
 </style>
