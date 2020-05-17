@@ -19,7 +19,7 @@ export default {
   props: ["itemId", "count", "totalCount"],
   computed: {
     item() {
-      return ITEMS.get(this.itemId);
+      return ITEMS[this.itemId];
     },
     totalSellPrice() {
       return this.item.sellPrice * this.count;

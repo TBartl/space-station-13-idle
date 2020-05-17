@@ -8,12 +8,14 @@
 
     <div class="content-container">
       <div class="row">
+        <div class="col-12">
+          <button
+            class="btn btn-primary run-away d-flex flex-row align-items-center"
+            @click="quickSort"
+          >Quick Sort Bank</button>
+        </div>
         <div class="col-12 items d-flex flex-row flex-wrap">
-          <inventory-item
-            v-for="item in orderedItems"
-            :key="item"
-            :itemId="item"
-          />
+          <inventory-item v-for="itemId in bankItemIds" :key="itemId" :itemId="itemId" />
         </div>
       </div>
     </div>
@@ -29,17 +31,22 @@ export default {
   extends: ContentAbstract,
   components: { InventoryItem },
   computed: {
-		bank() {
-			return this.$store.getters["inventory/bank"];
-		},
-    orderedItems() {
-      var toReturn = Array.from(ITEMS.keys())
-        .filter(itemId => this.bank[itemId])
-      return toReturn;
+    bankItemIds() {
+      return Object.keys(this.$store.getters["inventory/bank"]).filter(
+        itemId => itemId != "money"
+      );
+    }
+  },
+  methods: {
+    quickSort() {
+      this.$store.commit("inventory/quickSort");
     }
   }
 };
 </script>
 
 <style scoped>
+.items {
+  margin: 0 -0.5rem;
+}
 </style>

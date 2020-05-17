@@ -1,85 +1,85 @@
-export const ITEMS = new Map([
-	["crowbar", {
+export const ITEMS = {
+	crowbar: {
 		name: "Crowbar",
 		sellPrice: 1,
 		icon: require("@/assets/art/fabrication/crowbar.png")
-	}],
-	["ripley", {
+	},
+	ripley: {
 		name: "R.I.P.L.E.Y.",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechripley.png")
-	}],
-	["ripleymk2", {
+	},
+	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechripleymkii.png")
-	}],
-	["odysseus", {
+	},
+	odysseus: {
 		name: "Odysseus",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechodysseus.png")
-	}],
-	["firefighter", {
+	},
+	firefighter: {
 		name: "R.I.P.L.E.Y. MK3",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechfirefighter.png")
-	}],
-	["clarke", {
+	},
+	clarke: {
 		name: "Clarke",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif")
-	}],
-	["durand", {
+	},
+	durand: {
 		name: "Durand",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdurand.png")
-	}],
-	["marauder", {
+	},
+	marauder: {
 		name: "Marauder",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmarauder.png")
-	}],
-	["gygax", {
+	},
+	gygax: {
 		name: "Gygax",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechgygax.png")
-	}],
-	["mauler", {
+	},
+	mauler: {
 		name: "Mauler",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif")
-	}],
-	["deathripley", {
+	},
+	deathripley: {
 		name: "R.I.P.L.E.Y. MK13",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdeathripley.png")
-	}],
-	["darkgygax", {
+	},
+	darkgygax: {
 		name: "Assault Gygax",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png")
-	}],
-	["reticence", {
+	},
+	reticence: {
 		name: ".........",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechreticence.png")
-	}],
-	["seraph", {
+	},
+	seraph: {
 		name: "Seraph",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechseraph.png")
-	}],
-	["honk", {
+	},
+	honk: {
 		name: "H.O.N.K.",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechhonk.png")
-	}],
-	["phazon", {
+	},
+	phazon: {
 		name: "Phazon",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechphazon.png")
-	}]
-]);
+	}
+}
 
 export const ACTIONS = {
 	fabricateCrowbar: {

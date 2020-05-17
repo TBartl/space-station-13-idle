@@ -18,8 +18,8 @@ export default {
       return this.data.items.id;
     },
     item() {
-      if (this.data.item) return ITEMS.get(this.data.item);
-      return ITEMS.get(this.data.items.id);
+      if (this.data.item) return ITEMS[this.data.item];
+      return ITEMS[this.data.items.id];
     },
     countText() {
       // A

@@ -1,115 +1,115 @@
-export const ITEMS = new Map([
-	["slimeGrey", {
+export const ITEMS = {
+	slimeGrey: {
 		name: "Grey Slime Core",
 		sellPrice: 3,
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif")
-	}],
-	["slimeOrange", {
+	},
+	slimeOrange: {
 		name: "Orange Slime Core",
 		sellPrice: 10,
 		icon: require("@/assets/art/xenobio/SlimeOrange.gif")
-	}],
-	["slimePurple", {
+	},
+	slimePurple: {
 		name: "Purple Slime Core",
 		sellPrice: 10,
 		icon: require("@/assets/art/xenobio/SlimePurple.gif")
-	}],
-	["slimeBlue", {
+	},
+	slimeBlue: {
 		name: "Blue Slime Core",
 		sellPrice: 10,
 		icon: require("@/assets/art/xenobio/SlimeBlue.gif")
-	}],
-	["slimeMetal", {
+	},
+	slimeMetal: {
 		name: "Metal Slime Core",
 		sellPrice: 10,
 		icon: require("@/assets/art/xenobio/SlimeMetal.gif")
-	}],
-	["slimeYellow", {
+	},
+	slimeYellow: {
 		name: "Yellow Slime Core",
 		sellPrice: 25,
 		icon: require("@/assets/art/xenobio/SlimeYellow.gif")
-	}],
-	["slimeDarkPurple", {
+	},
+	slimeDarkPurple: {
 		name: "Dark Purple Slime Core",
 		sellPrice: 25,
 		icon: require("@/assets/art/xenobio/SlimeDarkPurple.gif")
-	}],
-	["slimeDarkBlue", {
+	},
+	slimeDarkBlue: {
 		name: "Dark Blue Slime Core",
 		sellPrice: 25,
 		icon: require("@/assets/art/xenobio/SlimeDarkBlue.gif")
-	}],
-	["slimeSilver", {
+	},
+	slimeSilver: {
 		name: "Silver Slime Core",
 		sellPrice: 25,
 		icon: require("@/assets/art/xenobio/SlimeSilver.gif")
-	}],
-	["slimeBluespace", {
+	},
+	slimeBluespace: {
 		name: "Bluespace Slime Core",
 		sellPrice: 40,
 		icon: require("@/assets/art/xenobio/SlimeBluespace.gif")
-	}],
-	["slimeSepia", {
+	},
+	slimeSepia: {
 		name: "Sepia Slime Core",
 		sellPrice: 40,
 		icon: require("@/assets/art/xenobio/SlimeSepia.gif")
-	}],
-	["slimeCerulean", {
+	},
+	slimeCerulean: {
 		name: "Cerulean Slime Core",
 		sellPrice: 40,
 		icon: require("@/assets/art/xenobio/SlimeCerulean.gif")
-	}],
-	["slimePyrite", {
+	},
+	slimePyrite: {
 		name: "Pyrite Slime Core",
 		sellPrice: 40,
 		icon: require("@/assets/art/xenobio/SlimePyrite.gif")
-	}],
-	["slimeRed", {
+	},
+	slimeRed: {
 		name: "Red Slime Core",
 		sellPrice: 60,
 		icon: require("@/assets/art/xenobio/SlimeRed.gif")
-	}],
-	["slimeGreen", {
+	},
+	slimeGreen: {
 		name: "Green Slime Core",
 		sellPrice: 60,
 		icon: require("@/assets/art/xenobio/SlimeGreen.gif")
-	}],
-	["slimePink", {
+	},
+	slimePink: {
 		name: "Pink Slime Core",
 		sellPrice: 60,
 		icon: require("@/assets/art/xenobio/SlimePink.gif")
-	}],
-	["slimeGold", {
+	},
+	slimeGold: {
 		name: "Gold Slime Core",
 		sellPrice: 60,
 		icon: require("@/assets/art/xenobio/SlimeGold.gif")
-	}],
-	["slimeOil", {
+	},
+	slimeOil: {
 		name: "Oil Slime Core",
 		sellPrice: 100,
 		icon: require("@/assets/art/xenobio/SlimeOil.gif")
-	}],
-	["slimeBlack", {
+	},
+	slimeBlack: {
 		name: "Black Slime Core",
 		sellPrice: 100,
 		icon: require("@/assets/art/xenobio/SlimeBlack.gif")
-	}],
-	["slimeLightPink", {
+	},
+	slimeLightPink: {
 		name: "Light Pink Slime Core",
 		sellPrice: 100,
 		icon: require("@/assets/art/xenobio/SlimeLightPink.gif")
-	}],
-	["slimeAddy", {
+	},
+	slimeAddy: {
 		name: "Adamantite Slime Core",
 		sellPrice: 100,
 		icon: require("@/assets/art/xenobio/SlimeAddy.gif")
-	}],
-	["slimeRainbow", {
+	},
+	slimeRainbow: {
 		name: "Rainbow Slime Core",
 		sellPrice: 500,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif")
-	}],
-]);
+	},
+};
 
 export const ACTIONS = {
 	splitGrey: {
@@ -334,26 +334,26 @@ export const ACTIONS = {
 		requiredLevel: 50,
 		requiredItems: {
 			slimeGrey: 1,
-			slimeOrange:1,
-			slimePurple:1,
-			slimeBlue:1,
-			slimeMetal:1,
-			slimeYellow:1,
-			slimeDarkPurple:1,
-			slimeDarkBlue:1,
-			slimeSilver:1,
-			SlimeBluespace:1,
-			slimeSepia:1,
-			slimeCerulean:1,
-			slimePyrite:1,
-			slimeRed:1,
-			slimeGreen:1,
-			slimePink:1,
-			slimeGold:1,
-			slimeOil:1,
-			slimeBlack:1,
-			slimeLightPink:1,
-			slimeAddy:1,
+			slimeOrange: 1,
+			slimePurple: 1,
+			slimeBlue: 1,
+			slimeMetal: 1,
+			slimeYellow: 1,
+			slimeDarkPurple: 1,
+			slimeDarkBlue: 1,
+			slimeSilver: 1,
+			SlimeBluespace: 1,
+			slimeSepia: 1,
+			slimeCerulean: 1,
+			slimePyrite: 1,
+			slimeRed: 1,
+			slimeGreen: 1,
+			slimePink: 1,
+			slimeGold: 1,
+			slimeOil: 1,
+			slimeBlack: 1,
+			slimeLightPink: 1,
+			slimeAddy: 1,
 		}
 	},
 }

@@ -18,7 +18,7 @@ export default {
   props: ["args"],
   computed: {
     item() {
-      return ITEMS.get(this.args.itemId);
+      return ITEMS[this.args.itemId];
     },
     count() {
       var count = this.args.count;
