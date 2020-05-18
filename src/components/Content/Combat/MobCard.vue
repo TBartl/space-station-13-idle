@@ -8,7 +8,7 @@
     <progress-bar
       class="mb-2 black-background"
       :progress="healthPercent"
-      :text="health != 0 ? `${health}/${stats.maxHealth}` : 'Dead'"
+      :text="health != 0 ? `${health.toFixed(0)}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
@@ -24,11 +24,12 @@
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <div class="stat">
+    <div class="stat" :id="`${mobType}-stat-max-hit`">
       <img :src="require('@/assets/art/combat/skull.png')" />
-			<span class="stat-desc">Max Hit: </span>
-			<span>30</span>
+      <span class="stat-desc">Max Hit:</span>
+      <span>{{maxHit.toFixed(0)}}</span>
     </div>
+    <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
   </div>
 </template>
 
@@ -37,9 +38,11 @@ import ITEMS from "@/data/items";
 import { ENEMIES } from "@/data/combat";
 import { mapGetters } from "vuex";
 import ProgressBar from "@/components/ProgressBar";
+import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
+
 export default {
-  components: { ProgressBar },
+  components: { ProgressBar, StatExplainMaxHit },
   props: ["mobType"],
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
@@ -67,6 +70,9 @@ export default {
     },
     stats() {
       return this.$store.getters[this.mobType + "Mob/stats"];
+    },
+    maxHit() {
+      return this.$store.getters[this.mobType + "Mob/maxHit"];
     },
     healthPercent() {
       return this.health / this.stats.maxHealth;
@@ -129,26 +135,26 @@ export default {
 }
 
 .stat {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	text-transform: uppercase;
-	font-size: 14px;
-	border: 1px solid #dee2e6 !important;
-	transition: background-color .15s;
-	background-color: white;
-	font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid #dee2e6 !important;
+  transition: background-color 0.15s;
+  background-color: white;
+  font-weight: bold;
 }
-.stat:hover{
-	background-color: rgba(124, 124, 124, 0.096);
+.stat:hover {
+  background-color: rgba(124, 124, 124, 0.096);
 }
 .stat-desc {
-	color: rgb(112, 112, 112);
-	margin-right: .4rem;
-	font-weight: normal;
+  color: rgb(112, 112, 112);
+  margin-right: 0.4rem;
+  font-weight: normal;
 }
 .stat img {
-	width: 32px;
+  width: 32px;
 }
 </style>

@@ -27,6 +27,11 @@ Vue.filter('cleanNum', function (value) {
 	return value.toLocaleString();
 })
 
+Vue.filter('stat', function(value){
+	if (!value) return"";
+	return +value.toFixed(2);
+})
+
 new Vue({
 	store,
 	render: h => h(App),

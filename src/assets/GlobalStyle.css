@@ -102,3 +102,8 @@ img {
 	height: 100%;
   image-rendering: pixelated;
 }
+
+
+.popover {
+	max-width: 600px !important;
+}

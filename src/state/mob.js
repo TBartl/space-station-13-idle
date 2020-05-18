@@ -37,8 +37,21 @@ export function createMobModule(mobType) {
 						mobility: 1,
 						protection: 1
 					}
-					return Object.merge(baseStats, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
+					return Object.assign(baseStats, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
+			},
+			baseDps() {
+				return 3
+			},
+			powerRatio() {
+				return .5;
+			},
+			dps(state, getters) {
+				return getters.baseDps + getters.powerRatio * getters.stats.power;
+			},
+			maxHit(state, getters) {
+				let hit = getters.dps * getters.stats.attackSpeed;
+				return hit;
 			}
 		},
 		mutations: {
@@ -76,7 +89,8 @@ export function createMobModule(mobType) {
 			finishSwing({ state, dispatch, getters }) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
-				dispatch(inverseMobType + "Mob/_getHit", 10, { root: true });
+
+				dispatch(inverseMobType + "Mob/_getHit", getters.maxHit, { root: true });
 
 			},
 			_getHit({ state, commit, getters, dispatch }, damage) {

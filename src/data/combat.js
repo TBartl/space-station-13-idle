@@ -180,10 +180,3 @@ export const ZONES = [
 		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
 	}
 ]
-
-export function calcMaxHit(stats) {
-	let dps = 3 + stats.power / 3;
-	let hit = dps * stats.attackSpeed;
-	return hit;
-}
-
