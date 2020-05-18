@@ -71,7 +71,10 @@ export const ENEMIES = {
 		robustness: 1,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: -20,
+			power: -1,
+			evasion: -20,
 		},
 		item: "iron"
 	},
@@ -81,7 +84,10 @@ export const ENEMIES = {
 		robustness: 2,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: -10,
+			power: -1,
+			evasion: -10,
 		},
 		items: {
 			id: "iron",
@@ -94,7 +100,10 @@ export const ENEMIES = {
 		robustness: 3,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 0,
+			power: -1,
+			evasion: 0,
 		},
 		items: {
 			id: "iron",
@@ -107,7 +116,10 @@ export const ENEMIES = {
 		robustness: 4,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 10,
+			power: -1,
+			evasion: 10,
 		},
 		itemTable: [
 			{
@@ -137,7 +149,10 @@ export const ENEMIES = {
 		robustness: 5,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 20,
+			power: -1,
+			evasion: 20,
 		},
 		itemTables: [
 			{
