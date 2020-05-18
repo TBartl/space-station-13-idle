@@ -40,13 +40,11 @@ export const ENEMIES = {
 			evasion: -1,
 			protection: 1
 		},
-		robustness: 1,
 		item: "mouseCarcass"
 	},
 	cargoTech: {
 		name: "Cargo Technician",
 		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
-		robustness: 6,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 3
@@ -68,7 +66,6 @@ export const ENEMIES = {
 	debugA: {
 		name: "Debug A",
 		icon: require("@/assets/art/debug/A.png"),
-		robustness: 1,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 2,
@@ -81,7 +78,6 @@ export const ENEMIES = {
 	debugB: {
 		name: "Debug B",
 		icon: require("@/assets/art/debug/B.png"),
-		robustness: 2,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 2,
@@ -97,7 +93,6 @@ export const ENEMIES = {
 	debugC: {
 		name: "Debug C",
 		icon: require("@/assets/art/debug/C.png"),
-		robustness: 3,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 2,
@@ -113,7 +108,6 @@ export const ENEMIES = {
 	debugD: {
 		name: "Debug D",
 		icon: require("@/assets/art/debug/D.png"),
-		robustness: 4,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 2,
@@ -146,7 +140,6 @@ export const ENEMIES = {
 	debugE: {
 		name: "Debug E",
 		icon: require("@/assets/art/debug/E.png"),
-		robustness: 5,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 2,

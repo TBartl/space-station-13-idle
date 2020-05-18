@@ -6,7 +6,7 @@
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
           <span class="mr-1">Robustness:</span>
-          <span class="danger-bubble">{{enemy.robustness}}</span>
+          <span class="danger-bubble">{{robustness}}</span>
         </div>
       </div>
     </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { calcRobustness } from "@/utils/combatUtils";
 import { ENEMIES } from "@/data/combat";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
@@ -33,7 +34,10 @@ export default {
     },
     enemy() {
       return ENEMIES[this.enemyId];
-    }
+		},
+		robustNess() {
+			return calcRobustness(this.enemy.stats);
+		}
   },
   methods: {
     ...mapActions("combat", ["startCombat"]),
