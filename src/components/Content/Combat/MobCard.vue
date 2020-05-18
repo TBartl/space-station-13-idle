@@ -1,6 +1,7 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
-    <span class="text-uppercase mb-2 text-center">{{name}}</span>
+    <span class="text-uppercase text-center">{{name}}</span>
+    <robustness-badge class="mb-1" :stats="stats" />
     <div v-if="mobType == 'player'" class="pixelated body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
     </div>
@@ -45,13 +46,19 @@
 import ITEMS from "@/data/items";
 import { ENEMIES } from "@/data/combat";
 import { mapGetters } from "vuex";
+import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ProgressBar from "@/components/ProgressBar";
 import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 
 export default {
-  components: { ProgressBar, StatExplainMaxHit, StatExplainHitChance },
+  components: {
+    RobustnessBadge,
+    ProgressBar,
+    StatExplainMaxHit,
+    StatExplainHitChance
+  },
   props: ["mobType"],
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),

@@ -57,7 +57,6 @@ export default {
 			sigma = Math.round(sigma * 2) / 2;
 			sigma = Math.sign(sigma) * Math.min(Math.abs(sigma), 3);
 			sigma = sigma.toFixed(1);
-			console.log(sigma);
 			return curves[sigma];
 		}
   }

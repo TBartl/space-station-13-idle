@@ -8,7 +8,7 @@ export const BASE_STATS = {
 }
 
 export function calcRobustness(stats) {
-	stats = Object.assign(BASE_STATS, stats);
+	stats = Object.assign({}, BASE_STATS, stats);
 
 	let robustness = 0;
 

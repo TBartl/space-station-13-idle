@@ -32,7 +32,7 @@ export function createMobModule(mobType) {
 					return baseStats;
 				}
 				else if (state.mobType == "enemy") {
-					return Object.assign(BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
+					return Object.assign({}, BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
 			},
 			targetStats(state, getters, rootState, rootGetters) {
