@@ -24,16 +24,18 @@
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <div class="stat" :id="`${mobType}-stat-max-hit`">
-      <img :src="require('@/assets/art/combat/skull.png')" />
-      <span class="stat-desc">Max Hit:</span>
-      <span>{{maxHit.toFixed(0)}}</span>
-    </div>
-    <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
-    <div class="stat" :id="`${mobType}-stat-hit-chance`">
-      <img :src="require('@/assets/art/combat/precision.png')" />
-      <span class="stat-desc">Hit Chance:</span>
-      <span>{{+(hitChance*100).toFixed(1)}}%</span>
+    <div v-if="targetEnemy">
+      <div class="stat" :id="`${mobType}-stat-max-hit`">
+        <img :src="require('@/assets/art/combat/skull.png')" />
+        <span class="stat-desc">Max Hit:</span>
+        <span>{{maxHit.toFixed(0)}}</span>
+      </div>
+      <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
+      <div class="stat" :id="`${mobType}-stat-hit-chance`">
+        <img :src="require('@/assets/art/combat/precision.png')" />
+        <span class="stat-desc">Hit Chance:</span>
+        <span>{{+(hitChance*100).toFixed(1)}}%</span>
+      </div>
     </div>
   </div>
 </template>
@@ -159,8 +161,8 @@ export default {
 }
 .stat-desc {
   color: rgb(112, 112, 112);
-	margin-right: 0.4rem;
-	margin-left: .25rem;
+  margin-right: 0.4rem;
+  margin-left: 0.25rem;
   font-weight: normal;
 }
 .stat img {

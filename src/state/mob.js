@@ -2,6 +2,8 @@ import { ENEMIES } from "@/data/combat";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
 
+import { getZPercent } from "@/utils/mathUtils";
+
 export function createMobModule(mobType) {
 	return {
 		namespaced: true,
@@ -23,7 +25,7 @@ export function createMobModule(mobType) {
 						attackSpeed: 1.5,
 						precision: 1,
 						power: 1,
-						mobility: 1,
+						evasion: 1,
 						protection: 1
 					}
 					return baseStats;
@@ -34,11 +36,19 @@ export function createMobModule(mobType) {
 						attackSpeed: 2.5,
 						precision: 1,
 						power: 1,
-						mobility: 1,
+						evasion: 1,
 						protection: 1
 					}
 					return Object.assign(baseStats, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
+			},
+			targetStats(state, getters, rootState, rootGetters) {
+				if (state.mobType == "player") {
+					return rootGetters["enemyMob/stats"];
+				} else if (state.mobType == "enemy") {
+					return rootGetters["playerMob/stats"];
+				}
+				return null
 			},
 			baseDps() {
 				return 1
@@ -53,8 +63,14 @@ export function createMobModule(mobType) {
 				let hit = getters.dps * getters.stats.attackSpeed;
 				return hit;
 			},
-			hitChance(state) {
-				return 0.5;
+			hitSigma() {
+				return 15;
+			},
+			hitDiff(state, getters) {
+				return getters.stats.precision - getters.targetStats.evasion;
+			},
+			hitChance(state, getters) {
+				return getZPercent(getters.hitDiff / getters.hitSigma);
 			}
 		},
 		mutations: {

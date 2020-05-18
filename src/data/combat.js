@@ -35,9 +35,9 @@ export const ENEMIES = {
 		stats: {
 			maxHealth: 10,
 			attackSpeed: 2.5,
-			precision: 1,
+			precision: -1,
 			power: -1,
-			mobility: 1,
+			evasion: -1,
 			protection: 1
 		},
 		robustness: 1,
