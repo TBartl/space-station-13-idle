@@ -35,7 +35,7 @@ export default {
     enemy() {
       return ENEMIES[this.enemyId];
 		},
-		robustNess() {
+		robustness() {
 			return calcRobustness(this.enemy.stats);
 		}
   },
