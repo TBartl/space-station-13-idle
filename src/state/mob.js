@@ -18,13 +18,26 @@ export function createMobModule(mobType) {
 			},
 			stats(state, getters, rootState, rootGetters) {
 				if (state.mobType == "player") {
-					return {
+					let baseStats = {
 						maxHealth: 100,
-						attackSpeed: 1.3
+						attackSpeed: 1.5,
+						precision: 1,
+						power: 1,
+						mobility: 1,
+						protection: 1
 					}
+					return baseStats;
 				}
 				else if (state.mobType == "enemy") {
-					return ENEMIES[rootGetters["combat/targetEnemy"]].stats;
+					let baseStats = {
+						maxHealth: 10,
+						attackSpeed: 2.5,
+						precision: 1,
+						power: 1,
+						mobility: 1,
+						protection: 1
+					}
+					return Object.merge(baseStats, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
 			}
 		},
@@ -82,7 +95,7 @@ export function createMobModule(mobType) {
 				}
 			},
 			// Add health, like from healing
-			addHealth({getters, commit}, health) {
+			addHealth({ getters, commit }, health) {
 				commit("_setHealth", Math.min(getters.health + health, getters.stats.maxHealth))
 			}
 		}

@@ -33,8 +33,12 @@ export const ENEMIES = {
 		name: "Mouse",
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
 		stats: {
-			maxHealth: 20,
-			attackSpeed: 2
+			maxHealth: 10,
+			attackSpeed: 2.5,
+			precision: 1,
+			power: 1,
+			mobility: 1,
+			protection: 1
 		},
 		robustness: 1,
 		item: "mouseCarcass"
@@ -176,4 +180,10 @@ export const ZONES = [
 		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
 	}
 ]
+
+export function calcMaxHit(stats) {
+	let dps = 3 + stats.power / 3;
+	let hit = dps * stats.attackSpeed;
+	return hit;
+}
 

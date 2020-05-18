@@ -10,12 +10,12 @@
         </div>
       </div>
     </div>
-    <div class="d-flex flex-column d-xl-inline-block">
-      <button type="button" :id="id" class="btn btn-primary">View Loot</button>
+    <div class="d-flex flex-column mr-2">
+      <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
       <b-popover :target="id" triggers="click blur" placement="top" delay="0">
         <item-chance :data="enemy" />
       </b-popover>
-      <button type="button" class="btn btn-danger mx-2" @click="fight">Fight!</button>
+      <button type="button" class="btn btn-danger btn-sm w-100 mt-1" @click="fight">Fight!</button>
     </div>
   </div>
 </template>

@@ -21,7 +21,7 @@ p {
 	background-color: unset;
 }
 
-img.pixelated {
+img {
   image-rendering: pixelated;
 }
 .content-container {

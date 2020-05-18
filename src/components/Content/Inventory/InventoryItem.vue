@@ -9,10 +9,10 @@
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <button
-          v-if="item.healAmount"
+          v-if="item.healAmount || item.equipmentSlot"
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
-        >Equip Food</button>
+        >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
           <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />

@@ -24,7 +24,11 @@
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <span>Stats: TODO</span>
+    <div class="stat">
+      <img :src="require('@/assets/art/combat/skull.png')" />
+			<span class="stat-desc">Max Hit: </span>
+			<span>30</span>
+    </div>
   </div>
 </template>
 
@@ -122,5 +126,29 @@ export default {
 }
 .rotate-90 {
   transform: rotate(90deg);
+}
+
+.stat {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	border: 1px solid #dee2e6 !important;
+	transition: background-color .15s;
+	background-color: white;
+	font-weight: bold;
+}
+.stat:hover{
+	background-color: rgba(124, 124, 124, 0.096);
+}
+.stat-desc {
+	color: rgb(112, 112, 112);
+	margin-right: .4rem;
+	font-weight: normal;
+}
+.stat img {
+	width: 32px;
 }
 </style>
