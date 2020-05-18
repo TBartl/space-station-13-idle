@@ -30,6 +30,11 @@
       <span>{{maxHit.toFixed(0)}}</span>
     </div>
     <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
+    <div class="stat" :id="`${mobType}-stat-hit-chance`">
+      <img :src="require('@/assets/art/combat/precision.png')" />
+      <span class="stat-desc">Hit Chance:</span>
+      <span>{{+(hitChance*100).toFixed(1)}}%</span>
+    </div>
   </div>
 </template>
 
@@ -73,6 +78,9 @@ export default {
     },
     maxHit() {
       return this.$store.getters[this.mobType + "Mob/maxHit"];
+    },
+    hitChance() {
+      return this.$store.getters[this.mobType + "Mob/hitChance"];
     },
     healthPercent() {
       return this.health / this.stats.maxHealth;
@@ -151,7 +159,8 @@ export default {
 }
 .stat-desc {
   color: rgb(112, 112, 112);
-  margin-right: 0.4rem;
+	margin-right: 0.4rem;
+	margin-left: .25rem;
   font-weight: normal;
 }
 .stat img {

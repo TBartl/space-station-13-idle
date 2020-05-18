@@ -41,10 +41,10 @@ export function createMobModule(mobType) {
 				}
 			},
 			baseDps() {
-				return 3
+				return 1
 			},
 			powerRatio() {
-				return .5;
+				return .25;
 			},
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
@@ -52,6 +52,9 @@ export function createMobModule(mobType) {
 			maxHit(state, getters) {
 				let hit = getters.dps * getters.stats.attackSpeed;
 				return hit;
+			},
+			hitChance(state) {
+				return 0.5;
 			}
 		},
 		mutations: {
@@ -90,7 +93,9 @@ export function createMobModule(mobType) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
-				dispatch(inverseMobType + "Mob/_getHit", getters.maxHit, { root: true });
+				if (Math.random() >= getters.hitChance) {
+					dispatch(inverseMobType + "Mob/_getHit", getters.maxHit, { root: true });
+				}
 
 			},
 			_getHit({ state, commit, getters, dispatch }, damage) {

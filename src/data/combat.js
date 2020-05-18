@@ -36,7 +36,7 @@ export const ENEMIES = {
 			maxHealth: 10,
 			attackSpeed: 2.5,
 			precision: 1,
-			power: 1,
+			power: -1,
 			mobility: 1,
 			protection: 1
 		},
