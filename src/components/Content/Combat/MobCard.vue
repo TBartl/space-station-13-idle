@@ -8,7 +8,7 @@
     <progress-bar
       class="mb-2 black-background"
       :progress="healthPercent"
-      :text="health != 0 ? `${health.toFixed(0)}/${stats.maxHealth}` : 'Dead'"
+      :text="health != 0 ? `${Math.round(health)}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
@@ -28,7 +28,7 @@
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Max Hit:</span>
-        <span>{{maxHit.toFixed(0)}}</span>
+        <span>{{Math.round(maxHit)}}</span>
       </div>
       <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
       <div class="stat" :id="`${mobType}-stat-hit-chance`">

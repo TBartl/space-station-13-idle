@@ -2,6 +2,7 @@ import { ENEMIES } from "@/data/combat";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
 
+import { BASE_STATS } from "@/utils/combatUtils";
 import { getZPercent } from "@/utils/mathUtils";
 
 export function createMobModule(mobType) {
@@ -31,15 +32,7 @@ export function createMobModule(mobType) {
 					return baseStats;
 				}
 				else if (state.mobType == "enemy") {
-					let baseStats = {
-						maxHealth: 10,
-						attackSpeed: 2.5,
-						precision: 1,
-						power: 1,
-						evasion: 1,
-						protection: 1
-					}
-					return Object.assign(baseStats, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
+					return Object.assign(BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
 			},
 			targetStats(state, getters, rootState, rootGetters) {
