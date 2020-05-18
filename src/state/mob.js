@@ -51,10 +51,10 @@ export function createMobModule(mobType) {
 				return null
 			},
 			baseDps() {
-				return 1
+				return 2
 			},
 			powerRatio() {
-				return .25;
+				return .5;
 			},
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
@@ -110,7 +110,7 @@ export function createMobModule(mobType) {
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() >= getters.hitChance) {
-					dispatch(inverseMobType + "Mob/_getHit", getters.maxHit, { root: true });
+					dispatch(inverseMobType + "Mob/_getHit", Math.random() * getters.maxHit, { root: true });
 				}
 
 			},

@@ -24,7 +24,7 @@
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <div v-if="targetEnemy">
+    <div v-if="targetEnemy" class="w-100">
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Max Hit:</span>
@@ -36,6 +36,7 @@
         <span class="stat-desc">Hit Chance:</span>
         <span>{{+(hitChance*100).toFixed(1)}}%</span>
       </div>
+      <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
     </div>
   </div>
 </template>
@@ -46,10 +47,11 @@ import { ENEMIES } from "@/data/combat";
 import { mapGetters } from "vuex";
 import ProgressBar from "@/components/ProgressBar";
 import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
+import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 
 export default {
-  components: { ProgressBar, StatExplainMaxHit },
+  components: { ProgressBar, StatExplainMaxHit, StatExplainHitChance },
   props: ["mobType"],
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
