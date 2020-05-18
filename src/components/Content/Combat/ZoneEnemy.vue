@@ -5,8 +5,7 @@
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
-          <span class="mr-1">Robustness:</span>
-          <span class="danger-bubble">{{robustness}}</span>
+          <robustness-badge class="mt-1" :stats="enemy.stats"/>
         </div>
       </div>
     </div>
@@ -21,12 +20,12 @@
 </template>
 
 <script>
-import { calcRobustness } from "@/utils/combatUtils";
 import { ENEMIES } from "@/data/combat";
+import RobustnessBadge from '@/components/Content/Combat/RobustnessBadge';
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
 export default {
-  components: { ItemChance },
+  components: { RobustnessBadge, ItemChance },
   props: ["enemyId"],
   computed: {
     id() {
@@ -34,9 +33,6 @@ export default {
     },
     enemy() {
       return ENEMIES[this.enemyId];
-		},
-		robustness() {
-			return calcRobustness(this.enemy.stats);
 		}
   },
   methods: {
