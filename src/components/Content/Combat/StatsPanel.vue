@@ -7,7 +7,7 @@
       :id="id+'-'+detail.id"
     >
       <div class="w-100 d-flex flex-row align-items-center">
-        <img :src="detail.icon" class="pixelated mr-1" />
+        <img :src="detail.icon" class="mr-1" />
         <span>{{stats[detail.id]}}{{detail.id == "protection" ? "%" : ""}}</span>
       </div>
       <b-popover :target="id+'-'+detail.id" triggers="hover" placement="top" delay="0">

@@ -8,7 +8,7 @@
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time}} SECONDS</p>
-      <img :id="'action-icon-'+id" :src="action.icon" alt class="pixelated mt-2 mb-2" />
+      <img :id="'action-icon-'+id" :src="action.icon" alt class="mt-2 mb-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="top" delay="0">
         <item-chance :data="action" />
       </b-popover>
@@ -28,7 +28,7 @@
     </div>
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
-      <img :src="require('@/assets/art/misc/airlock.png')" alt class="pixelated mt-2 mb-2" />
+      <img :src="require('@/assets/art/misc/airlock.png')" alt class="mt-2 mb-2" />
       <span class="danger-bubble">LEVEL {{action.requiredLevel}}</span>
     </div>
   </div>

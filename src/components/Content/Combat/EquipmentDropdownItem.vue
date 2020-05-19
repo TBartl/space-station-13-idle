@@ -6,7 +6,7 @@
       @click="equip"
     >
       <span>({{itemCount}})</span>
-      <img class="equipment-icon pixelated" :src="item.icon" />
+      <img class="equipment-icon" :src="item.icon" />
       <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
     </button>
     <b-popover v-if="item.stats" :target="id" triggers="hover" placement="right" delay="0">

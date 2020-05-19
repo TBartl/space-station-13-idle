@@ -1,7 +1,7 @@
 <template>
   <div v-if="valid" class="d-flex flex-row align-items-center">
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
-    <img :src="item.icon" class="pixelated mr-1" />
+    <img :src="item.icon" class="mr-1" />
     <span>{{countText}}&nbsp;</span>
     <span>{{item.name}}</span>
   </div>

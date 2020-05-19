@@ -1,6 +1,6 @@
 <template>
   <div class="content-header" :style="{'background-color': color}">
-    <img :src="icon" alt class="pixelated"/>
+    <img :src="icon" alt />
     <span>{{text}}</span>
   </div>
 </template>

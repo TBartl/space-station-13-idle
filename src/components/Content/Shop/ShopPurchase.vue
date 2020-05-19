@@ -3,7 +3,7 @@
     class="content-block clickable p-1 my-1 d-flex flex-column flex-md-row align-items-center"
     @click="buy"
   >
-    <img :src="icon" class="pixelated mr-2 purchase-icon" alt />
+    <img :src="icon" class="mr-2 purchase-icon" alt />
     <div class="d-flex flex-column">
       <span class="name">{{name}} x100</span>
       <span class="description">{{purchase.description}}</span>

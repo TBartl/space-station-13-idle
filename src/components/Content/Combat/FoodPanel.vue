@@ -4,7 +4,7 @@
       <button type="button" class="btn btn-outline-secondary food-group" @click="eat">
         <div v-if="food">
           <span>({{foodCount}})</span>
-          <img class="food-icon pixelated" :src="food.icon" />
+          <img class="food-icon" :src="food.icon" />
           <span>+{{food.healAmount}} HP</span>
         </div>
         <span v-else>No food</span>

@@ -5,7 +5,7 @@
       :class="{expanded: expanded}"
       @click="expanded = !expanded"
     >
-      <img :src="require('@/assets/art/misc/eyes.png')" class="pixelated mr-2" />
+      <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
       <span>{{section.name}}</span>
     </div>
     <div v-if="expanded" class="content-block content-block-bottom">

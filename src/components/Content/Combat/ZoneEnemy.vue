@@ -3,7 +3,7 @@
     class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
   >
     <div class="d-flex flex-column flex-md-row align-items-center">
-      <img :src="enemy.icon" class="pixelated mr-2" alt />
+      <img :src="enemy.icon" class="mr-2" alt />
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
