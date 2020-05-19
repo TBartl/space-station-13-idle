@@ -9,7 +9,7 @@
       <img class="equipment-icon pixelated" :src="item.icon" />
       <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
     </button>
-    <b-popover v-if="item.stats" :target="id" triggers="hover" placement="top" delay="0">
+    <b-popover v-if="item.stats" :target="id" triggers="hover" placement="right" delay="0">
       <stats-panel :stats="item.stats" />
     </b-popover>
   </div>
