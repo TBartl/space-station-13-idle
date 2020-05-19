@@ -1,12 +1,21 @@
 <template>
   <div class="stats-panel d-flex flex-row flex-wrap-reverse justify-content-center">
     <div
-      class="stat-detail d-flex flex-row align-items-center"
+      class="stat-detail"
       v-for="(detail, index) in statDetails"
       :key="index"
+      :id="id+'-'+detail.id"
     >
-      <img :src="detail.icon" class="pixelated mr-1" />
-      <span>{{stats[detail.id]}}{{detail.id == "protection" ? "%" : ""}}</span>
+      <div class="w-100 d-flex flex-row align-items-center">
+        <img :src="detail.icon" class="pixelated mr-1" />
+        <span>{{stats[detail.id]}}{{detail.id == "protection" ? "%" : ""}}</span>
+      </div>
+      <b-popover :target="id+'-'+detail.id" triggers="hover" placement="top" delay="0">
+        <div class="d-flex flex-column align-items-center">
+          <h6>{{detail.name}}</h6>
+          <span>{{detail.description}}</span>
+        </div>
+      </b-popover>
     </div>
   </div>
 </template>
@@ -15,27 +24,40 @@
 export default {
   props: ["stats"],
   computed: {
+    id() {
+      return this._uid.toString();
+    },
     statDetails() {
       return [
         {
           id: "maxHealth",
-          icon: require("@/assets/art/combat/health.gif")
+          icon: require("@/assets/art/combat/health.gif"),
+          name: "Max Health",
+          description: "Increases total health pool"
         },
         {
           id: "evasion",
-          icon: require("@/assets/art/combat/black_shoes.png")
+          icon: require("@/assets/art/combat/black_shoes.png"),
+          name: "Evasion",
+          description: "Increases dodge chance"
         },
         {
           id: "precision",
-          icon: require("@/assets/art/combat/precision.png")
+          icon: require("@/assets/art/combat/precision.png"),
+          name: "Precision",
+          description: "Increases hit chance"
         },
         {
           id: "protection",
-          icon: require("@/assets/art/combat/armor.png")
+					icon: require("@/assets/art/combat/armor.png"),
+					name: "Protection",
+          description: "Reduces damage taken"
         },
         {
           id: "power",
-          icon: require("@/assets/art/combat/skull.png")
+					icon: require("@/assets/art/combat/skull.png"),
+					name: "Power",
+          description: "Increases damage dealt"
         }
       ].reverse(); //flex-wrap-reverse'ing
     }
@@ -45,7 +67,7 @@ export default {
 
 <style scoped>
 .stats-panel {
-  width: 140px;
+  max-width: 140px;
 }
 .stat-detail {
   display: inline-block;
