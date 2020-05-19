@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";

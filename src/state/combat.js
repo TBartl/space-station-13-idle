@@ -1,7 +1,7 @@
 import Vue from "vue";
 import { createCoroutineModule } from "./coroutine";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 
 const combat = {
 	namespaced: true,

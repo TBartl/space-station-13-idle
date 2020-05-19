@@ -28,7 +28,7 @@
 </template>
 <script>
 import { calcRobustness } from "@/utils/combatUtils";
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 import ZoneEnemy from "@/components/Content/Combat/ZoneEnemy";
 export default {
   components: { ZoneEnemy },

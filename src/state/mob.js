@@ -1,7 +1,7 @@
 import { clone } from "lodash";
 
 import ITEMS from "@/data/items";
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
 
