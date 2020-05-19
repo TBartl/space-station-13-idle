@@ -101,16 +101,16 @@ export function createMobModule(mobType) {
 						}
 					});
 			},
-			finishSwing({ state, dispatch, getters }) {
+			finishSwing({ state, dispatch, getters, rootGetters }) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() <= getters.hitChance) {
 					let damage = Math.random() * getters.maxHit;
+					let noOverkillDamage = Math.min(rootGetters[inverseMobType + "Mob/health"], damage);
 					dispatch(inverseMobType + "Mob/_getHit", damage, { root: true });
 					if (state.mobType == "player") {
-						// TODO: maybe don't give overkill xp
-						dispatch("combat/addXP", damage, { root: true });
+						dispatch("combat/addXP", noOverkillDamage, { root: true });
 					}
 				}
 
