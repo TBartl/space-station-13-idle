@@ -1,5 +1,5 @@
 import { ITEMS as SHOP_ITEMS } from "./shop";
-import { ITEMS as COMBAT_ITEMS } from "./combat";
+import COMBAT_ITEMS from "./combatItems";
 import { ALL_JOBS } from "./jobs";
 
 let jobItems = {};

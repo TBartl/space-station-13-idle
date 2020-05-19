@@ -44,7 +44,7 @@
 
 <script>
 import ITEMS from "@/data/items";
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 import { mapGetters } from "vuex";
 import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ProgressBar from "@/components/ProgressBar";

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { ENEMIES } from "@/data/combat";
+import ENEMIES from "@/data/enemies";
 import { mapGetters } from "vuex";
 import LootItem from "@/components/Content/Combat/LootItem";
 

@@ -38,7 +38,7 @@
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import { mapState, mapGetters } from "vuex";
-import { ZONES } from "@/data/combat";
+import ZONES from "@/data/zones";
 import Zone from "@/components/Content/Combat/Zone";
 import RunAway from "@/components/Content/Combat/RunAway";
 import CombatExperience from "@/components/Content/Combat/CombatExperience";
