@@ -6,7 +6,7 @@
       :key="index"
     >
       <img :src="detail.icon" class="pixelated mr-1" />
-      <span>{{stats[detail.id]}}</span>
+      <span>{{stats[detail.id]}}{{detail.id == "protection" ? "%" : ""}}</span>
     </div>
   </div>
 </template>
@@ -22,20 +22,20 @@ export default {
           icon: require("@/assets/art/combat/health.gif")
         },
         {
-          id: "precision",
-          icon: require("@/assets/art/combat/precision.png")
-        },
-        {
           id: "evasion",
           icon: require("@/assets/art/combat/evasion.png")
         },
         {
-          id: "power",
-          icon: require("@/assets/art/combat/skull.png")
+          id: "precision",
+          icon: require("@/assets/art/combat/precision.png")
         },
         {
           id: "protection",
           icon: require("@/assets/art/combat/armor.png")
+        },
+        {
+          id: "power",
+          icon: require("@/assets/art/combat/skull.png")
         }
       ].reverse(); //flex-wrap-reverse'ing
     }
@@ -45,16 +45,16 @@ export default {
 
 <style scoped>
 .stats-panel {
-	width: 160px;
+  width: 140px;
 }
 .stat-detail {
-	display: inline-block;
-	width: 50%;
-	padding: 2px 4px;
-	border: 1px solid rgba(135, 138, 148, 0.322);
-	background-color: rgba(176, 200, 216, 0.438);
+  display: inline-block;
+  width: 50%;
+  padding: 2px 4px;
+  border: 1px solid rgba(135, 138, 148, 0.322);
+  background-color: rgba(176, 200, 216, 0.438);
 }
 img {
-	width: 32px;
+  width: 32px;
 }
 </style>
