@@ -1,7 +1,7 @@
 <template>
   <tr>
     <td>
-      <img :src="icon" class="pixelated" />
+      <img :src="icon" />
     </td>
     <td>{{level}}/{{maxLevel}}</td>
     <td>{{xp}}/{{nextLevelXP}}</td>

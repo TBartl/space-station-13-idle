@@ -6,7 +6,7 @@
       @click="expanded=!expanded"
     >
       <div class="d-flex flex-column flex-md-row align-items-center align-items-md-top">
-        <img :src="zone.icon" class="pixelated mr-2" alt />
+        <img :src="zone.icon" class="mr-2" alt />
         <div class="d-flex flex-column align-items-left">
           <span class="zone-title mr">{{zone.name}}</span>
           <span class="zone-difficulty">Robustness Range:</span>

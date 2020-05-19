@@ -8,6 +8,13 @@ export function getEquipmentSlot(itemId) {
 	return null;
 }
 
+export function getEquipmentStackable(itemId) {
+	let equipmentSlot = getEquipmentSlot(itemId);
+	if (equipmentSlot == "food") return true;
+	if (equipmentSlot == "pockets") return true;
+	return false;
+}
+
 export function getBankItemsOfSlot(bank, slot) {
 	return Object.keys(bank).filter(itemId => getEquipmentSlot(itemId) == slot);
 }

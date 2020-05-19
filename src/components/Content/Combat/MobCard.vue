@@ -2,10 +2,10 @@
   <div class="content-block d-flex flex-column align-items-center">
     <span class="text-uppercase text-center">{{name}}</span>
     <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
-    <div v-if="mobType == 'player'" class="pixelated body-icon overlay-div mb-2">
+    <div v-if="mobType == 'player'" class="body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
     </div>
-    <img v-else class="pixelated body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
+    <img v-else class="body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
       class="mb-2 black-background"
       :progress="healthPercent"

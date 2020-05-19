@@ -56,7 +56,7 @@ export function createMobModule(mobType) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
 			},
 			maxHit(state, getters) {
-				let hit = getters.dps * getters.stats.attackSpeed;
+				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetStats.protection / 100);
 				return hit;
 			},
 			hitSigma() {

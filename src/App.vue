@@ -2,7 +2,7 @@
   <div id="app">
 		<toast-container />
     <div class="mega-container">
-      <sidebar />
+      <sidebar/>
       <content-wrapper />
     </div>
     <modals-container />
@@ -40,5 +40,9 @@ body {
   height: 100%;
   display: flex;
   align-items: stretch;
+}
+.mega-container * {
+	height: 100%;
+	overflow-y: auto;
 }
 </style>

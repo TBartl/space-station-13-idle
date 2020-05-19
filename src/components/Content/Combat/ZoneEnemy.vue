@@ -1,11 +1,13 @@
 <template>
-  <div class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between">
+  <div
+    class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
+  >
     <div class="d-flex flex-column flex-md-row align-items-center">
-      <img :src="enemy.icon" class="pixelated mr-2" alt />
+      <img :src="enemy.icon" class="mr-2" alt />
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
-          <robustness-badge class="mt-1" :stats="enemy.stats" mobType="enemy"/>
+          <robustness-badge class="mt-1" :stats="basedStats" mobType="enemy" />
         </div>
       </div>
     </div>
@@ -21,9 +23,10 @@
 
 <script>
 import { ENEMIES } from "@/data/combat";
-import RobustnessBadge from '@/components/Content/Combat/RobustnessBadge';
+import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
+import { getBasedStats } from "@/utils/combatUtils";
 export default {
   components: { RobustnessBadge, ItemChance },
   props: ["enemyId"],
@@ -33,7 +36,10 @@ export default {
     },
     enemy() {
       return ENEMIES[this.enemyId];
-		}
+    },
+    basedStats() {
+      return getBasedStats(this.enemy.stats);
+    }
   },
   methods: {
     ...mapActions("combat", ["startCombat"]),

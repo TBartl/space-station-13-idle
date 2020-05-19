@@ -32,8 +32,13 @@ export function combineStats(a, b) {
 	return a;
 }
 
+// The stats, based off of the base stats
+export function getBasedStats(stats, mobType) {
+	return Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+}
+
 export function calcRobustness(stats, mobType) {
-	stats = Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+	stats = getBasedStats(stats, mobType);
 
 	let robustness = 0;
 
@@ -41,13 +46,12 @@ export function calcRobustness(stats, mobType) {
 	robustness += stats.precision / 3;
 	robustness += stats.power / 3;
 	robustness += stats.evasion / 3;
-	robustness /= 3;
 
 	// Health should matter, but only a little
 	robustness += stats.maxHealth / 25;
 
 	// Protection is a survivability multiplier
-	robustness *= stats.protection;
+	robustness *= 1 + (stats.protection / 100);
 
 	return Math.round(robustness);
 }

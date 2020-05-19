@@ -552,6 +552,7 @@ export const ENEMIES = {
 			precision: -20,
 			power: -1,
 			evasion: -20,
+			protection: 30
 		},
 		item: "iron"
 	},

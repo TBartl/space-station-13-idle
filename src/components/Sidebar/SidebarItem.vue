@@ -4,7 +4,7 @@
     @click="setVisibleSidebarItem(id)"
   >
     <div class="d-flex align-items-center">
-      <img :src="icon" alt class="pixelated" />
+      <img :src="icon" alt />
       <span class="d-none d-md-block" :style="textStyle">{{text}}</span>
     </div>
     <div >

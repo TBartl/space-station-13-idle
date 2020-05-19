@@ -1,7 +1,7 @@
 <template>
   <div>
     <button class="item" :id="id">
-      <img class="pixelated" :src="item.icon" />
+      <img :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
     <item-popover :target="id" :itemId="itemId" />

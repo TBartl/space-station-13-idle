@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 
-import { getEquipmentSlot } from '@/utils/equipmentUtils';
+import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
 
 const inventory = {
 	namespaced: true,
@@ -90,7 +90,8 @@ const inventory = {
 		},
 		equip({ state, commit, dispatch }, itemId) {
 			dispatch("unequip", itemId);
-			let count = state.bank[itemId];
+			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
+			console.log(count);
 			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
 		}

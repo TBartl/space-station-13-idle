@@ -3,7 +3,7 @@
     class="btn btn-primary run-away d-flex flex-row align-items-center"
     @click="()=>{cancelAllActions()}"
   >
-    <img :src="require('@/assets/art/combat/run.png')" class="pixelated" alt />
+    <img :src="require('@/assets/art/combat/run.png')" alt />
     <span>Yakety sax away...</span>
   </button>
 </template>
