@@ -1,8 +1,11 @@
+import { clone } from "lodash";
+
+import ITEMS from "@/data/items";
 import { ENEMIES } from "@/data/combat";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
 
-import { PLAYER_BASE_STATS, ENEMY_BASE_STATS } from "@/utils/combatUtils";
+import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats } from "@/utils/combatUtils";
 import { getZPercent } from "@/utils/mathUtils";
 
 export function createMobModule(mobType) {
@@ -21,7 +24,15 @@ export function createMobModule(mobType) {
 			},
 			stats(state, getters, rootState, rootGetters) {
 				if (state.mobType == "player") {
-					return PLAYER_BASE_STATS;
+					let fullStats = clone(PLAYER_BASE_STATS);
+					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
+						if (!equipment.itemId) return;
+						let item = ITEMS[equipment.itemId];
+						if (!item) return;
+						if (!item.stats) return;
+						combineStats(fullStats, item.stats)
+					});
+					return fullStats;
 				}
 				else if (state.mobType == "enemy") {
 					return Object.assign({}, ENEMY_BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
@@ -94,7 +105,7 @@ export function createMobModule(mobType) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
-				if (Math.random() >= getters.hitChance) {
+				if (Math.random() <= getters.hitChance) {
 					dispatch(inverseMobType + "Mob/_getHit", Math.random() * getters.maxHit, { root: true });
 				}
 

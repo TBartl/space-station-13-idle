@@ -1,3 +1,4 @@
+
 export const PLAYER_BASE_STATS = {
 	maxHealth: 100,
 	attackSpeed: 3,
@@ -16,6 +17,19 @@ export const ENEMY_BASE_STATS = {
 	evasion: 1,
 	protection: 0,
 	moveTime: 3
+}
+
+// This adds to a, so it should only be used on a fresh object
+export function combineStats(a, b) {
+	for (let [statId, value] of Object.entries(b)) {
+		if (statId == "attackSpeed") {
+			a[statId] = value;
+		} else {
+			a[statId] += value;
+		}
+	}
+
+	return a;
 }
 
 export function calcRobustness(stats, mobType) {

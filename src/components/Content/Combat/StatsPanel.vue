@@ -23,7 +23,7 @@ export default {
         },
         {
           id: "evasion",
-          icon: require("@/assets/art/combat/evasion.png")
+          icon: require("@/assets/art/combat/black_shoes.png")
         },
         {
           id: "precision",
