@@ -1,16 +1,30 @@
 <template>
-  <button class="btn btn-outline-primary d-flex flex-row align-items-center" @click="equip">
-    <span>({{itemCount}})</span>
-    <img class="equipment-icon pixelated" :src="item.icon" />
-    <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
-  </button>
+  <div>
+    <button
+      :id="id"
+      class="btn btn-outline-primary d-flex flex-row align-items-center"
+      @click="equip"
+    >
+      <span>({{itemCount}})</span>
+      <img class="equipment-icon pixelated" :src="item.icon" />
+      <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
+    </button>
+    <b-popover v-if="item.stats" :target="id" triggers="hover" placement="top" delay="0">
+      <stats-panel :stats="item.stats" />
+    </b-popover>
+  </div>
 </template>
 
 <script>
 import ITEMS from "@/data/items";
+import StatsPanel from "@/components/Content/Combat/StatsPanel";
 export default {
   props: ["itemId"],
+  components: { StatsPanel },
   computed: {
+    id() {
+      return this._uid.toString();
+    },
     item() {
       return ITEMS[this.itemId];
     },
