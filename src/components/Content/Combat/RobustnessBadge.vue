@@ -7,10 +7,10 @@
 <script>
 import { calcRobustness } from "@/utils/combatUtils";
 export default {
-  props: ["usePrefix", "stats"],
+  props: ["stats", "mobType"],
   computed: {
     robustness() {
-      return calcRobustness(this.stats);
+      return calcRobustness(this.stats, this.mobType);
     }
   }
 };

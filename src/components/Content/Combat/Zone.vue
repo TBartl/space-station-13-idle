@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     robustnessLevels() {
-      return this.zone.enemies.map(enemy => calcRobustness(ENEMIES[enemy].stats));
+      return this.zone.enemies.map(enemy => calcRobustness(ENEMIES[enemy].stats, "enemy"));
     },
     robustnessMin() {
       return Math.min(...this.robustnessLevels);

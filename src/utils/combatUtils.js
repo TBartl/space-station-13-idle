@@ -1,14 +1,25 @@
-export const BASE_STATS = {
+export const PLAYER_BASE_STATS = {
+	maxHealth: 100,
+	attackSpeed: 3,
+	precision: 1,
+	power: 1,
+	evasion: 1,
+	protection: 0,
+	moveTime: 3
+}
+
+export const ENEMY_BASE_STATS = {
 	maxHealth: 10,
 	attackSpeed: 2.5,
 	precision: 1,
 	power: 1,
 	evasion: 1,
-	protection: 1
+	protection: 0,
+	moveTime: 3
 }
 
-export function calcRobustness(stats) {
-	stats = Object.assign({}, BASE_STATS, stats);
+export function calcRobustness(stats, mobType) {
+	stats = Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
 
 	let robustness = 0;
 

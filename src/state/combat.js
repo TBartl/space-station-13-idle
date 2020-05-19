@@ -16,9 +16,6 @@ const combat = {
 		targetEnemy(state) {
 			return state.targetEnemy;
 		},
-		moveTime() {
-			return 3;
-		},
 		maxDrops() {
 			return 16;
 		},
@@ -90,10 +87,10 @@ const combat = {
 			dispatch("playerMob/startCombat", {}, { root: true });
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
-		_startMove({ dispatch, getters }) {
+		_startMove({ dispatch, rootGetters }) {
 			dispatch("moveCoroutine/start",
 				{
-					duration: getters.moveTime,
+					duration: rootGetters["playerMob/stats"].moveTime,
 					onFinish: () => {
 						dispatch("continueCombat");
 					}

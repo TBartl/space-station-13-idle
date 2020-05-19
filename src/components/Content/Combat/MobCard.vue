@@ -1,7 +1,7 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
     <span class="text-uppercase text-center">{{name}}</span>
-    <robustness-badge class="mb-1" :stats="stats" />
+    <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
     <div v-if="mobType == 'player'" class="pixelated body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
     </div>
@@ -107,7 +107,7 @@ export default {
       return this.$store.getters["combat/moveCoroutine/percent"];
     },
     moveTime() {
-      return this.$store.getters["combat/moveTime"];
+      return this.$store.getters["playerMob/stats"].moveTime;
     },
     playerOverlayIcons() {
       let icons = [];
