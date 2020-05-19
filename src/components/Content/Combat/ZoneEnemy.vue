@@ -5,27 +5,27 @@
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
-          <span class="mr-1">Robustness:</span>
-          <span class="danger-bubble">{{enemy.robustness}}</span>
+          <robustness-badge class="mt-1" :stats="enemy.stats" mobType="enemy"/>
         </div>
       </div>
     </div>
-    <div class="d-flex flex-column d-xl-inline-block">
-      <button type="button" :id="id" class="btn btn-primary">View Loot</button>
+    <div class="d-flex flex-column mr-2">
+      <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
       <b-popover :target="id" triggers="click blur" placement="top" delay="0">
         <item-chance :data="enemy" />
       </b-popover>
-      <button type="button" class="btn btn-danger mx-2" @click="fight">Fight!</button>
+      <button type="button" class="btn btn-danger btn-sm w-100 mt-1" @click="fight">Fight!</button>
     </div>
   </div>
 </template>
 
 <script>
 import { ENEMIES } from "@/data/combat";
+import RobustnessBadge from '@/components/Content/Combat/RobustnessBadge';
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
 export default {
-  components: { ItemChance },
+  components: { RobustnessBadge, ItemChance },
   props: ["enemyId"],
   computed: {
     id() {
@@ -33,7 +33,7 @@ export default {
     },
     enemy() {
       return ENEMIES[this.enemyId];
-    }
+		}
   },
   methods: {
     ...mapActions("combat", ["startCombat"]),

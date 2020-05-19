@@ -21,7 +21,7 @@ p {
 	background-color: unset;
 }
 
-img.pixelated {
+img {
   image-rendering: pixelated;
 }
 .content-container {
@@ -101,4 +101,9 @@ img.pixelated {
 	width: 100%;
 	height: 100%;
   image-rendering: pixelated;
+}
+
+
+.popover {
+	max-width: 600px !important;
 }

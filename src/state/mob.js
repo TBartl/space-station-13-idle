@@ -1,6 +1,12 @@
+import { clone } from "lodash";
+
+import ITEMS from "@/data/items";
 import { ENEMIES } from "@/data/combat";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
+
+import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats } from "@/utils/combatUtils";
+import { getZPercent } from "@/utils/mathUtils";
 
 export function createMobModule(mobType) {
 	return {
@@ -18,14 +24,49 @@ export function createMobModule(mobType) {
 			},
 			stats(state, getters, rootState, rootGetters) {
 				if (state.mobType == "player") {
-					return {
-						maxHealth: 100,
-						attackSpeed: 1.3
-					}
+					let fullStats = clone(PLAYER_BASE_STATS);
+					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
+						if (!equipment.itemId) return;
+						let item = ITEMS[equipment.itemId];
+						if (!item) return;
+						if (!item.stats) return;
+						combineStats(fullStats, item.stats)
+					});
+					return fullStats;
 				}
 				else if (state.mobType == "enemy") {
-					return ENEMIES[rootGetters["combat/targetEnemy"]].stats;
+					return Object.assign({}, ENEMY_BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
+			},
+			targetStats(state, getters, rootState, rootGetters) {
+				if (state.mobType == "player") {
+					return rootGetters["enemyMob/stats"];
+				} else if (state.mobType == "enemy") {
+					return rootGetters["playerMob/stats"];
+				}
+				return null
+			},
+			baseDps() {
+				return 2
+			},
+			powerRatio() {
+				return .5;
+			},
+			dps(state, getters) {
+				return getters.baseDps + getters.powerRatio * getters.stats.power;
+			},
+			maxHit(state, getters) {
+				let hit = getters.dps * getters.stats.attackSpeed;
+				return hit;
+			},
+			hitSigma() {
+				return 15;
+			},
+			hitDiff(state, getters) {
+				return getters.stats.precision - getters.targetStats.evasion;
+			},
+			hitChance(state, getters) {
+				return getZPercent(getters.hitDiff / getters.hitSigma);
 			}
 		},
 		mutations: {
@@ -63,7 +104,10 @@ export function createMobModule(mobType) {
 			finishSwing({ state, dispatch, getters }) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
-				dispatch(inverseMobType + "Mob/_getHit", 10, { root: true });
+
+				if (Math.random() <= getters.hitChance) {
+					dispatch(inverseMobType + "Mob/_getHit", Math.random() * getters.maxHit, { root: true });
+				}
 
 			},
 			_getHit({ state, commit, getters, dispatch }, damage) {
@@ -82,7 +126,7 @@ export function createMobModule(mobType) {
 				}
 			},
 			// Add health, like from healing
-			addHealth({getters, commit}, health) {
+			addHealth({ getters, commit }, health) {
 				commit("_setHealth", Math.min(getters.health + health, getters.stats.maxHealth))
 			}
 		}

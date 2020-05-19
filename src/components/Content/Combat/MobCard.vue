@@ -1,6 +1,7 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
-    <span class="text-uppercase mb-2 text-center">{{name}}</span>
+    <span class="text-uppercase text-center">{{name}}</span>
+    <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
     <div v-if="mobType == 'player'" class="pixelated body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
     </div>
@@ -8,7 +9,7 @@
     <progress-bar
       class="mb-2 black-background"
       :progress="healthPercent"
-      :text="health != 0 ? `${health}/${stats.maxHealth}` : 'Dead'"
+      :text="health != 0 ? `${Math.round(health)}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
@@ -24,7 +25,20 @@
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <span>Stats: TODO</span>
+    <div v-if="targetEnemy" class="w-100">
+      <div class="stat" :id="`${mobType}-stat-max-hit`">
+        <img :src="require('@/assets/art/combat/skull.png')" />
+        <span class="stat-desc">Max Hit:</span>
+        <span>{{Math.round(maxHit)}}</span>
+      </div>
+      <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
+      <div class="stat" :id="`${mobType}-stat-hit-chance`">
+        <img :src="require('@/assets/art/combat/precision.png')" />
+        <span class="stat-desc">Hit Chance:</span>
+        <span>{{+(hitChance*100).toFixed(1)}}%</span>
+      </div>
+      <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
+    </div>
   </div>
 </template>
 
@@ -32,10 +46,19 @@
 import ITEMS from "@/data/items";
 import { ENEMIES } from "@/data/combat";
 import { mapGetters } from "vuex";
+import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ProgressBar from "@/components/ProgressBar";
+import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
+import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
+
 export default {
-  components: { ProgressBar },
+  components: {
+    RobustnessBadge,
+    ProgressBar,
+    StatExplainMaxHit,
+    StatExplainHitChance
+  },
   props: ["mobType"],
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
@@ -64,6 +87,12 @@ export default {
     stats() {
       return this.$store.getters[this.mobType + "Mob/stats"];
     },
+    maxHit() {
+      return this.$store.getters[this.mobType + "Mob/maxHit"];
+    },
+    hitChance() {
+      return this.$store.getters[this.mobType + "Mob/hitChance"];
+    },
     healthPercent() {
       return this.health / this.stats.maxHealth;
     },
@@ -78,7 +107,7 @@ export default {
       return this.$store.getters["combat/moveCoroutine/percent"];
     },
     moveTime() {
-      return this.$store.getters["combat/moveTime"];
+      return this.$store.getters["playerMob/stats"].moveTime;
     },
     playerOverlayIcons() {
       let icons = [];
@@ -122,5 +151,30 @@ export default {
 }
 .rotate-90 {
   transform: rotate(90deg);
+}
+
+.stat {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid #dee2e6 !important;
+  transition: background-color 0.15s;
+  background-color: white;
+  font-weight: bold;
+}
+.stat:hover {
+  background-color: rgba(124, 124, 124, 0.096);
+}
+.stat-desc {
+  color: rgb(112, 112, 112);
+  margin-right: 0.4rem;
+  margin-left: 0.25rem;
+  font-weight: normal;
+}
+.stat img {
+  width: 32px;
 }
 </style>

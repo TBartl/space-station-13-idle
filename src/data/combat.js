@@ -10,7 +10,14 @@ export const ITEMS = {
 		sellPrice: 420,
 		icon: require("@/assets/art/combat/items/sord.png"),
 		overlay: require("@/assets/art/combat/items/sord_overlay.png"),
-		equipmentSlot: "hand"
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: -20,
+			evasion: -30,
+			precision: -40,
+			attackSpeed: .5,
+			power: 80,
+		}
 	},
 	riotSuit: {
 		name: "Riot Suit",
@@ -18,13 +25,27 @@ export const ITEMS = {
 		icon: require("@/assets/art/combat/items/riot_suit.png"),
 		equipmentSlot: "chest",
 		overlay: require("@/assets/art/combat/items/riot_suit_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 15,
+			protection: 3,
+			precision: 2,
+			power: 1,
+		}
 	},
 	syndiHardsuit: {
 		name: "Syndicate Hardsuit",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
 		equipmentSlot: "chest",
-		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png")
+		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		stats: {
+			maxHealth: 60,
+			evasion: 30,
+			protection: 6,
+			precision: 4,
+			power: 2,
+		}
 	}
 };
 
@@ -33,16 +54,18 @@ export const ENEMIES = {
 		name: "Mouse",
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
 		stats: {
-			maxHealth: 20,
-			attackSpeed: 2
+			maxHealth: 10,
+			attackSpeed: 2.5,
+			precision: -1,
+			power: -1,
+			evasion: -1,
+			protection: 1
 		},
-		robustness: 1,
 		item: "mouseCarcass"
 	},
 	cargoTech: {
 		name: "Cargo Technician",
 		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
-		robustness: 6,
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 3
@@ -64,20 +87,24 @@ export const ENEMIES = {
 	debugA: {
 		name: "Debug A",
 		icon: require("@/assets/art/debug/A.png"),
-		robustness: 1,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: -20,
+			power: -1,
+			evasion: -20,
 		},
 		item: "iron"
 	},
 	debugB: {
 		name: "Debug B",
 		icon: require("@/assets/art/debug/B.png"),
-		robustness: 2,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: -10,
+			power: -1,
+			evasion: -10,
 		},
 		items: {
 			id: "iron",
@@ -87,10 +114,12 @@ export const ENEMIES = {
 	debugC: {
 		name: "Debug C",
 		icon: require("@/assets/art/debug/C.png"),
-		robustness: 3,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 0,
+			power: -1,
+			evasion: 0,
 		},
 		items: {
 			id: "iron",
@@ -100,10 +129,12 @@ export const ENEMIES = {
 	debugD: {
 		name: "Debug D",
 		icon: require("@/assets/art/debug/D.png"),
-		robustness: 4,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 10,
+			power: -1,
+			evasion: 10,
 		},
 		itemTable: [
 			{
@@ -130,10 +161,12 @@ export const ENEMIES = {
 	debugE: {
 		name: "Debug E",
 		icon: require("@/assets/art/debug/E.png"),
-		robustness: 5,
 		stats: {
 			maxHealth: 20,
-			attackSpeed: 2
+			attackSpeed: 2,
+			precision: 20,
+			power: -1,
+			evasion: 20,
 		},
 		itemTables: [
 			{
@@ -231,4 +264,3 @@ export const ZONES = [
 		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
 	}
 ]
-

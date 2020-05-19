@@ -27,6 +27,7 @@
   </div>
 </template>
 <script>
+import { calcRobustness } from "@/utils/combatUtils";
 import { ENEMIES } from "@/data/combat";
 import ZoneEnemy from "@/components/Content/Combat/ZoneEnemy";
 export default {
@@ -39,7 +40,7 @@ export default {
   },
   computed: {
     robustnessLevels() {
-      return this.zone.enemies.map(enemy => ENEMIES[enemy].robustness);
+      return this.zone.enemies.map(enemy => calcRobustness(ENEMIES[enemy].stats, "enemy"));
     },
     robustnessMin() {
       return Math.min(...this.robustnessLevels);
