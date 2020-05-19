@@ -95,6 +95,9 @@ const combat = {
 						dispatch("continueCombat");
 					}
 				});
+		},
+		addXP({ commit }, damage) {
+			commit("precision/addXP", damage, { root: true });
 		}
 	}
 };

@@ -106,7 +106,12 @@ export function createMobModule(mobType) {
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() <= getters.hitChance) {
-					dispatch(inverseMobType + "Mob/_getHit", Math.random() * getters.maxHit, { root: true });
+					let damage = Math.random() * getters.maxHit;
+					dispatch(inverseMobType + "Mob/_getHit", damage, { root: true });
+					if (state.mobType == "player") {
+						// TODO: maybe don't give overkill xp
+						dispatch("combat/addXP", damage, { root: true });
+					}
 				}
 
 			},
