@@ -32,8 +32,13 @@ export function combineStats(a, b) {
 	return a;
 }
 
+// The stats, based off of the base stats
+export function getBasedStats(stats, mobType) {
+	return Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+}
+
 export function calcRobustness(stats, mobType) {
-	stats = Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+	stats = getBasedStats(stats, mobType);
 
 	let robustness = 0;
 
