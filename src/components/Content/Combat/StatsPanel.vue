@@ -49,17 +49,19 @@ export default {
         },
         {
           id: "protection",
-					icon: require("@/assets/art/combat/armor.png"),
-					name: "Protection",
+          icon: require("@/assets/art/combat/armor.png"),
+          name: "Protection",
           description: "Reduces damage taken"
         },
         {
           id: "power",
-					icon: require("@/assets/art/combat/skull.png"),
-					name: "Power",
+          icon: require("@/assets/art/combat/skull.png"),
+          name: "Power",
           description: "Increases damage dealt"
         }
-      ].reverse(); //flex-wrap-reverse'ing
+      ]
+        .filter(detail => this.stats[detail.id] != undefined)
+        .reverse(); //flex-wrap-reverse'ing
     }
   }
 };
