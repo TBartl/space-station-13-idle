@@ -103,8 +103,12 @@ const combat = {
 					}
 				});
 		},
-		addXP({ commit }, damage) {
-			commit("precision/addXP", damage, { root: true });
+		addXP({ commit, getters }, damage) {
+			let skill = getters.focus;
+			if (skill == "power") {
+				skill = "meleePower";
+			}
+			commit(skill + "/addXP", damage, { root: true });
 		}
 	}
 };
