@@ -13,6 +13,9 @@ import xenobiology from "./xenobiology";
 import botany from "./botany";
 import graytiding from "./graytiding";
 import precision from "./precision";
+import meleePower from "./meleePower";
+import rangedPower from "./rangedPower";
+import evasion from "./evasion";
 import combat from './combat';
 import inventory from './inventory';
 import { createMobModule } from "./mob";
@@ -25,6 +28,9 @@ const modules = {
 	botany,
 	graytiding,
 	precision,
+	meleePower,
+	rangedPower,
+	evasion,
 	combat,
 	inventory,
 	playerMob: createMobModule('player'),

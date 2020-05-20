@@ -11,7 +11,7 @@ export function getEquipmentSlot(itemId) {
 export function getEquipmentStackable(itemId) {
 	let equipmentSlot = getEquipmentSlot(itemId);
 	if (equipmentSlot == "food") return true;
-	if (equipmentSlot == "pockets") return true;
+	if (equipmentSlot == "pocket") return true;
 	return false;
 }
 

@@ -25,6 +25,10 @@ export function createMobModule(mobType) {
 			stats(state, getters, rootState, rootGetters) {
 				if (state.mobType == "player") {
 					let fullStats = clone(PLAYER_BASE_STATS);
+					fullStats.precision += rootGetters["precision/level"];
+					fullStats.power += rootGetters["meleePower/level"]; // TODO: Base this off of in-hand weapon
+					fullStats.evasion += rootGetters["evasion/level"];
+					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
 						if (!equipment.itemId) return;
 						let item = ITEMS[equipment.itemId];
@@ -101,12 +105,17 @@ export function createMobModule(mobType) {
 						}
 					});
 			},
-			finishSwing({ state, dispatch, getters }) {
+			finishSwing({ state, dispatch, getters, rootGetters }) {
 				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() <= getters.hitChance) {
-					dispatch(inverseMobType + "Mob/_getHit", Math.random() * getters.maxHit, { root: true });
+					let damage = Math.random() * getters.maxHit;
+					let noOverkillDamage = Math.min(rootGetters[inverseMobType + "Mob/health"], damage);
+					dispatch(inverseMobType + "Mob/_getHit", damage, { root: true });
+					if (state.mobType == "player") {
+						dispatch("combat/addXP", noOverkillDamage, { root: true });
+					}
 				}
 
 			},

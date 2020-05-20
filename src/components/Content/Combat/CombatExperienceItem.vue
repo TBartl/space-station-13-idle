@@ -21,7 +21,7 @@ export default {
   computed: {
     ...mapState({
       xp(state, getters) {
-        return getters[this.jobId + "/xp"];
+        return Math.floor(getters[this.jobId + "/xp"]);
       },
       level(state, getters) {
         return getters[this.jobId + "/level"];

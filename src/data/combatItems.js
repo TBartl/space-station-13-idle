@@ -17,6 +17,10 @@ export default {
 			precision: -40,
 			attackSpeed: .5,
 			power: 80,
+		},
+		requires:{
+			precision: 3,
+			meleePower: 2
 		}
 	},
 	toolbox: {
@@ -101,6 +105,9 @@ export default {
 			protection: 3,
 			precision: 2,
 			power: 1,
+		},
+		requires: {
+			evasion: 2
 		}
 	},
 	syndiHardsuit: {
@@ -115,6 +122,9 @@ export default {
 			protection: 6,
 			precision: 4,
 			power: 2,
+		},
+		requires:{
+			evasion: 3,
 		}
 	},
 	pill10: {

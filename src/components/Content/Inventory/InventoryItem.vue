@@ -9,7 +9,7 @@
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <button
-          v-if="item.healAmount || item.equipmentSlot"
+          v-if="canEquip"
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
         >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
@@ -51,6 +51,10 @@ export default {
     },
     count() {
       return this.bank[this.itemId];
+    },
+    canEquip() {
+      if (!this.$store.getters["inventory/canEquip"](this.itemId)) return false;
+      return true;
     }
   }
 };

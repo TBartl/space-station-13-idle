@@ -10,6 +10,7 @@ const combat = {
 	},
 	state: {
 		targetEnemy: null,
+		focus: "precision",
 		drops: []
 	},
 	getters: {
@@ -21,6 +22,9 @@ const combat = {
 		},
 		drops(state) {
 			return state.drops;
+		},
+		focus(state) {
+			return state.focus;
 		}
 	},
 	mutations: {
@@ -36,6 +40,9 @@ const combat = {
 		clearLoot(state) {
 			Vue.set(state, "drops", [])
 		},
+		setFocus(state, focus) {
+			state.focus = focus;
+		}
 	},
 	actions: {
 		lootItem({ state, commit }, index) {
@@ -95,6 +102,13 @@ const combat = {
 						dispatch("continueCombat");
 					}
 				});
+		},
+		addXP({ commit, getters }, damage) {
+			let skill = getters.focus;
+			if (skill == "power") {
+				skill = "meleePower"; // TODO: Base this off weapon
+			}
+			commit(skill + "/addXP", damage, { root: true });
 		}
 	}
 };

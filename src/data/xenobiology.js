@@ -360,7 +360,7 @@ export const ACTIONS = {
 
 export const JOB = {
 	id: "xenobiology",
-	name: "XenoBiology",
+	name: "Xenobiology",
 	icon: require("@/assets/art/xenobio/icon.gif"),
 	color: "#95857a",
 	items: ITEMS

@@ -2,9 +2,9 @@
 export const PLAYER_BASE_STATS = {
 	maxHealth: 100,
 	attackSpeed: 3,
-	precision: 1,
-	power: 1,
-	evasion: 1,
+	precision: 0,
+	power: 0,
+	evasion: 0,
 	protection: 0,
 	moveTime: 3
 }

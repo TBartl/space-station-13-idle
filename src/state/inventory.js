@@ -38,6 +38,19 @@ const inventory = {
 		},
 		equipment(state) {
 			return state.equipment;
+		},
+		canEquip(state, getters, rootState, rootGetters) {
+			return (itemId) => {
+				let item = ITEMS[itemId];
+				if (!getEquipmentSlot(itemId)) return false;
+				if (!item.requires) return true;
+				for (let [jobId, requiredLevel] of Object.entries(item.requires))
+				{
+					let jobLevel = rootGetters[jobId + "/level"];
+					if (jobLevel < requiredLevel) return false;
+				}
+				return true;
+			};
 		}
 	},
 	mutations: {
@@ -91,7 +104,6 @@ const inventory = {
 		equip({ state, commit, dispatch }, itemId) {
 			dispatch("unequip", itemId);
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
-			console.log(count);
 			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
 		}

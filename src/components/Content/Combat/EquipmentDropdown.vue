@@ -26,7 +26,7 @@ export default {
       return getBankItemsOfSlot(
         this.$store.getters["inventory/bank"],
         this.equipmentSlot
-      );
+      ).filter(itemId => this.$store.getters["inventory/canEquip"](itemId));
     }
   },
   methods: {
