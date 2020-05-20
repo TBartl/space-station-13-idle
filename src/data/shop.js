@@ -18,7 +18,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Debug Equipment Section",
-		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand', "debugRiotSuit", "debugSyndiHardsuit"],
+		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand', "debugRiotSuit", "debugSyndiHardsuit", "debuglvl10", "debuglvl20", "debuglvl30", "debuglvl40", "debuglvl50"],
 		item: "money"
 	}
 ]
@@ -59,5 +59,20 @@ export const PURCHASES = {
 	},
 	debugRiotSuit: {
 		item: "riotSuit"
+	},
+	debuglvl10: {
+		item: "pill10"
+	},
+	debuglvl20: {
+		item: "pill20"
+	},
+	debuglvl30: {
+		item: "pill30"
+	},
+	debuglvl40: {
+		item: "pill40"
+	},
+	debuglvl50: {
+		item: "pill50"
 	}
 }

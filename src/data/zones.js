@@ -1,18 +1,13 @@
 export default [
 	{
-		name: "Maintenance",
-		icon: require("@/assets/art/combat/zones/maint.png"),
-		enemies: ["mouse","lostscientist", "cargoTech"]
-	},
-	{
-		name: "Departures Lounge",
+		name: "Arrival Lounge",
 		icon: require("@/assets/art/combat/zones/departures.png"),
 		enemies: ["chaplain", "miner"]
 	},
 	{
-		name: "Dorms 4",
-		icon: require("@/assets/art/combat/zones/dorms4.png"),
-		enemies: ["catgirl", "braindead", "traitor"]
+		name: "Maintenance",
+		icon: require("@/assets/art/combat/zones/maint.png"),
+		enemies: ["mouse","lostscientist", "cargoTech"]
 	},
 	{
 		name: "Head of Personal Line",
@@ -20,14 +15,9 @@ export default [
 		enemies: ["Ian", "paperworkhop", "hopcurity"]
 	},
 	{
-		name: "Kitchen",
-		icon: require("@/assets/art/combat/zones/kitchen.png"),
-		enemies: ["goodchef", "pete", "cannibal"]
-	},
-	{
-		name: "Medical",
-		icon: require("@/assets/art/combat/zones/medical.png"),
-		enemies: ["cluelessdoctor", "surgeon", "hulk"]
+		name: "Dorms 4",
+		icon: require("@/assets/art/combat/zones/dorms4.png"),
+		enemies: ["catgirl", "braindead", "traitor"]
 	},
 	{
 		name: "Engineering",
@@ -40,9 +30,20 @@ export default [
 		enemies: ["mime", "badclown", "goodclown"]
 	},
 	{
-		name: "Robotics",
-		icon: require("@/assets/art/combat/zones/robotics.png"),
-		enemies: ["minibot", "techpriest", "mech"]
+		name: "Kitchen",
+		icon: require("@/assets/art/combat/zones/kitchen.png"),
+		enemies: ["goodchef", "pete", "cannibal"]
+	},
+
+	{
+		name: "Medical",
+		icon: require("@/assets/art/combat/zones/medical.png"),
+		enemies: ["cluelessdoctor", "surgeon", "hulk"]
+	},
+	{
+		name: "Bridge",
+		icon: require("@/assets/art/combat/zones/bridge.png"),
+		enemies: ["locker", "axeassistant", "captain"]
 	},
 	{
 		name: "Virology",
@@ -50,9 +51,9 @@ export default [
 		enemies: ["afkviro", "monkey", "movingviro", "cultist"]
 	},
 	{
-		name: "Bridge",
-		icon: require("@/assets/art/combat/zones/bridge.png"),
-		enemies: ["locker", "axeassistant", "captain"]
+		name: "Science",
+		icon: require("@/assets/art/combat/zones/robotics.png"),
+		enemies: ["minibot", "techpriest", "mech"]
 	},
 	{
 		name: "AI Core",

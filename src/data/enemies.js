@@ -1,5 +1,43 @@
 
 export default {
+	chaplain: {
+		name: "Chaplain",
+		icon: require("@/assets/art/combat/enemies/missing.png"),
+		stats: {
+			maxHealth: 40,
+			attackSpeed: 1.6,
+			precision: 13,
+			power: 15,
+			evasion: 25,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "toolbox"
+			}
+		]
+	},
+	miner: {
+		name: "Overgeared Miner",
+		icon: require("@/assets/art/combat/enemies/miner.png"),
+		stats: {
+			maxHealth: 50,
+			attackSpeed: 3,
+			precision: 2,
+			power: 10,
+			evasion: 6,
+			protection: 1
+		},
+		item: "mouseCarcass"
+	},
 	mouse: {
 		name: "Mouse",
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
@@ -20,21 +58,8 @@ export default {
 			maxHealth: 20,
 			attackSpeed: 1.6,
 			precision: 1,
-			power: 7,
-			evasion: 3,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	cargoTech: {
-		name: "Cargo Technician",
-		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 1.1,
-			precision: 2,
-			power: 8,
-			evasion: 8,
+			power: 11,
+			evasion: 4,
 			protection: 1
 		},
 		itemTables: [
@@ -51,31 +76,105 @@ export default {
 			}
 		]
 	},
-	chaplain: {
-		name: "Chaplain",
+	cargoTech: {
+		name: "Cargo Technician",
+		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
+		stats: {
+			maxHealth: 20,
+			attackSpeed: 1.1,
+			precision: 6,
+			power: 13,
+			evasion: 10,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	Ian: {
+		name: "Ian",
+		icon: require("@/assets/art/combat/enemies/Ian.png"),
+		stats: {
+			maxHealth: 90,
+			attackSpeed: 2.1,
+			precision: 6,
+			power: 6,
+			evasion: 11,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	paperworkhop: {
+		name: "Head Of Personal",
+		icon: require("@/assets/art/combat/enemies/goodhop.png"),
+		stats: {
+			maxHealth: 100,
+			attackSpeed: 1.9,
+			precision: 10,
+			power: 14,
+			evasion: 7,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	hopcurity: {
+		name: "Self Declared Head of GUNS",
 		icon: require("@/assets/art/combat/enemies/missing.png"),
 		stats: {
-			maxHealth: 40,
-			attackSpeed: 1.6,
-			precision: 5,
-			power: 2,
-			evasion: 1,
+			maxHealth: 110,
+			attackSpeed: 1.7,
+			precision: 9,
+			power: 12,
+			evasion: 11,
 			protection: 1
 		},
-		item: "mouseCarcass"
-	},
-	miner: {
-		name: "Overgeared Miner",
-		icon: require("@/assets/art/combat/enemies/miner.png"),
-		stats: {
-			maxHealth: 50,
-			attackSpeed: 3,
-			precision: 2,
-			power: 10,
-			evasion: 6,
-			protection: 1
-		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "pill10"
+			}
+		]
 	},
 	catgirl: {
 		name: "Catgirl",
@@ -88,7 +187,19 @@ export default {
 			evasion: 8,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "baseball"
+			}
+		]
 	},
 	braindead: {
 		name: "Braindead Assistant",
@@ -114,46 +225,194 @@ export default {
 			evasion: -1,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
-	Ian: {
-		name: "Ian",
-		icon: require("@/assets/art/combat/enemies/Ian.png"),
+	flamingatmostech: {
+		name: "Wannabe Pyromancer Atmospheric Technician",
+		icon: require("@/assets/art/combat/enemies/atmos.png"),
 		stats: {
-			maxHealth: 90,
+			maxHealth: 180,
+			attackSpeed: 1.5,
+			precision: 26,
+			power: 21,
+			evasion: 41,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	goodengineer: {
+		name: "Responsible Engineer",
+		icon: require("@/assets/art/combat/enemies/badengie.png"),
+		stats: {
+			maxHealth: 190,
 			attackSpeed: 2.1,
-			precision: 6,
-			power: 6,
-			evasion: 11,
+			precision: 17,
+			power: 8,
+			evasion: 30,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
-	paperworkhop: {
-		name: "Head Of Personal",
-		icon: require("@/assets/art/combat/enemies/goodhop.png"),
-		stats: {
-			maxHealth: 100,
-			attackSpeed: 1.9,
-			precision: 10,
-			power: 14,
-			evasion: 7,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	hopcurity: {
-		name: "Self Declared Head of GUNS",
+	badengineer: {
+		name: "Fusion Engineer",
 		icon: require("@/assets/art/combat/enemies/missing.png"),
 		stats: {
-			maxHealth: 110,
-			attackSpeed: 1.7,
-			precision: 9,
-			power: 12,
-			evasion: 11,
+			maxHealth: 200,
+			attackSpeed: 3.0,
+			precision: 19,
+			power: 8,
+			evasion: 27,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	redslime: {
+		name: "Supermatter Anomaly",
+		icon: require("@/assets/art/combat/enemies/missing.png"),
+		stats: {
+			maxHealth: 210,
+			attackSpeed: 2.7,
+			precision: 14,
+			power: 12,
+			evasion: 30,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	mime: {
+		name: ".....",
+		icon: require("@/assets/art/combat/enemies/mime.png"),
+		stats: {
+			maxHealth: 220,
+			attackSpeed: 2.0,
+			precision: 13,
+			power: 24,
+			evasion: 34,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	badclown: {
+		name: "Shoeless Clown",
+		icon: require("@/assets/art/combat/enemies/badclown.png"),
+		stats: {
+			maxHealth: 230,
+			attackSpeed: 2.1,
+			precision: 15,
+			power: 22,
+			evasion: 23,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	goodclown: {
+		name: "Actually Funny Clown",
+		icon: require("@/assets/art/combat/enemies/goodclown.png"),
+		stats: {
+			maxHealth: 240,
+			attackSpeed: 2.4,
+			precision: 14,
+			power: 23,
+			evasion: 10,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "pill20"
+			}
+		]
 	},
 	goodchef: {
 		name: "Iron Chef",
@@ -166,7 +425,19 @@ export default {
 			evasion: 20,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	pete: {
 		name: "Pete",
@@ -179,7 +450,19 @@ export default {
 			evasion: 14,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	cannibal: {
 		name: "Soylent Green Chef",
@@ -192,7 +475,19 @@ export default {
 			evasion: 16,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "spear"
+			}
+		]
 	},
 	cluelessdoctor: {
 		name: "Useless Doctor",
@@ -205,7 +500,19 @@ export default {
 			evasion: 24,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	surgeon: {
 		name: "Chirurgeon",
@@ -231,98 +538,19 @@ export default {
 			evasion: 27,
 			protection: 1
 		},
-		item: "mouseCarcass"
-	},
-	flamingatmostech: {
-		name: "Wannabe Pyromancer Atmospheric Technician",
-		icon: require("@/assets/art/combat/enemies/atmos.png"),
-		stats: {
-			maxHealth: 180,
-			attackSpeed: 1.5,
-			precision: 26,
-			power: 21,
-			evasion: 41,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	goodengineer: {
-		name: "Responsible Engineer",
-		icon: require("@/assets/art/combat/enemies/badengie.png"),
-		stats: {
-			maxHealth: 190,
-			attackSpeed: 2.1,
-			precision: 17,
-			power: 8,
-			evasion: 30,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	badengineer: {
-		name: "Fusion Engineer",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
-		stats: {
-			maxHealth: 200,
-			attackSpeed: 3.0,
-			precision: 19,
-			power: 8,
-			evasion: 27,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	redslime: {
-		name: "Supermatter Anomaly",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
-		stats: {
-			maxHealth: 210,
-			attackSpeed: 2.7,
-			precision: 14,
-			power: 12,
-			evasion: 30,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	mime: {
-		name: ".....",
-		icon: require("@/assets/art/combat/enemies/mime.png"),
-		stats: {
-			maxHealth: 220,
-			attackSpeed: 2.0,
-			precision: 13,
-			power: 24,
-			evasion: 34,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	badclown: {
-		name: "Shoeless Clown",
-		icon: require("@/assets/art/combat/enemies/badclown.png"),
-		stats: {
-			maxHealth: 230,
-			attackSpeed: 2.1,
-			precision: 15,
-			power: 22,
-			evasion: 23,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	goodclown: {
-		name: "Actually Funny Clown",
-		icon: require("@/assets/art/combat/enemies/goodclown.png"),
-		stats: {
-			maxHealth: 240,
-			attackSpeed: 2.4,
-			precision: 14,
-			power: 23,
-			evasion: 10,
-			protection: 1
-		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .01,
+				item: "pill50"
+			}
+		]
 	},
 	minibot: {
 		name: "Minibot",
@@ -335,7 +563,19 @@ export default {
 			evasion: 36,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	techpriest: {
 		name: "Techpriest Roboticist",
@@ -348,7 +588,19 @@ export default {
 			evasion: 42,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .01,
+				item: "sabre"
+			}
+		]
 	},
 	mech: {
 		name: "Mech Building Roboticist",
@@ -361,59 +613,19 @@ export default {
 			evasion: 20,
 			protection: 1
 		},
-		item: "mouseCarcass"
-	},
-	afkviro: {
-		name: "Harmless Virologist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
-		stats: {
-			maxHealth: 280,
-			attackSpeed: 3.0,
-			precision: 9,
-			power: 14,
-			evasion: 31,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	monkey: {
-		name: "Infected Monkey",
-		icon: require("@/assets/art/combat/enemies/monkey.png"),
-		stats: {
-			maxHealth: 290,
-			attackSpeed: 1.9,
-			precision: 21,
-			power: 11,
-			evasion: 22,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	movingviro: {
-		name: "Moving Virologist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
-		stats: {
-			maxHealth: 300,
-			attackSpeed: 1.9,
-			precision: -1,
-			power: -1,
-			evasion: -1,
-			protection: 1
-		},
-		item: "mouseCarcass"
-	},
-	cultist: {
-		name: "Cultist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
-		stats: {
-			maxHealth: 310,
-			attackSpeed: 1.5,
-			precision: 20,
-			power: 22,
-			evasion: 34,
-			protection: 1
-		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	locker: {
 		name: "Captains Locker",
@@ -426,7 +638,19 @@ export default {
 			evasion: -10,
 			protection: 10
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	axeassistant: {
 		name: "Window Breaking Assistant",
@@ -439,7 +663,19 @@ export default {
 			evasion: 25,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	captain: {
 		name: "Captain",
@@ -452,7 +688,119 @@ export default {
 			evasion: 34,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "pill30"
+			}
+		]
+	},
+	afkviro: {
+		name: "Harmless Virologist",
+		icon: require("@/assets/art/combat/enemies/missing.png"),
+		stats: {
+			maxHealth: 280,
+			attackSpeed: 3.0,
+			precision: 9,
+			power: 14,
+			evasion: 31,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	monkey: {
+		name: "Infected Monkey",
+		icon: require("@/assets/art/combat/enemies/monkey.png"),
+		stats: {
+			maxHealth: 290,
+			attackSpeed: 1.9,
+			precision: 21,
+			power: 11,
+			evasion: 22,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
+	},
+	movingviro: {
+		name: "Moving Virologist",
+		icon: require("@/assets/art/combat/enemies/missing.png"),
+		stats: {
+			maxHealth: 300,
+			attackSpeed: 1.9,
+			precision: -1,
+			power: -1,
+			evasion: -1,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "fireaxe"
+			}
+		]
+	},
+	cultist: {
+		name: "Cultist",
+		icon: require("@/assets/art/combat/enemies/missing.png"),
+		stats: {
+			maxHealth: 310,
+			attackSpeed: 1.5,
+			precision: 20,
+			power: 22,
+			evasion: 34,
+			protection: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	securitybot: {
 		name: "Security Bot",
@@ -465,7 +813,19 @@ export default {
 			evasion: 28,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	turrets: {
 		name: "Defense Turret",
@@ -478,7 +838,19 @@ export default {
 			evasion: 34,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .8,
+				item: "iron"
+			}
+		]
 	},
 	AI: {
 		name: "AI",
@@ -491,7 +863,19 @@ export default {
 			evasion: 33,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .2,
+				item: "pill40"
+			}
+		]
 	},
 	debugA: {
 		name: "Debug A",
