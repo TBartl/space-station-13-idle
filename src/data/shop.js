@@ -13,7 +13,7 @@ export const ITEMS = {
 export const SECTIONS = [
 	{
 		name: "Debug Section",
-		purchases: ['debugFreeMoney', 'debugFreeSpaghetti'],
+		purchases: ['debugFreeMoney', 'debugFreeSpaghetti','buyPlantseed'],
 		item: "money"
 	},
 	{
@@ -24,6 +24,9 @@ export const SECTIONS = [
 ]
 
 export const PURCHASES = {
+	buyPlantseed: {
+		item: "plantseed"
+	},
 	debugFreeMoney: {
 		name: "Lods o' emone",
 		description: "What's that spell? Loads of money! Prob'ly...",
@@ -55,10 +58,10 @@ export const PURCHASES = {
 		item: "durand"
 	},
 	debugSyndiHardsuit: {
-		item: "syndiHardsuit"
+		item: "armSyndiSuit"
 	},
 	debugRiotSuit: {
-		item: "riotSuit"
+		item: "armRiotSuit"
 	},
 	debuglvl10: {
 		item: "pill10"

@@ -25,103 +25,151 @@ export default {
 	},
 	toolbox: {
 		name: "Toolbox",
-		sellPrice: 420,
+		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/toolbox.png"),
 		overlay: require("@/assets/art/combat/items/toolbox_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	baseball: {
+		name: "Baseball Bat",
+		sellPrice: 40,
+		icon: require("@/assets/art/combat/items/baseball.png"),
+		overlay: require("@/assets/art/combat/items/baseball_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 10,
 			evasion: -10,
 			precision: 10,
 			attackSpeed: 2,
 			power: 20,
 		}
 	},
-	baseball: {
-		name: "Baseball Bat",
-		sellPrice: 420,
-		icon: require("@/assets/art/combat/items/baseball.png"),
-		overlay: require("@/assets/art/combat/items/baseball_overlay.png"),
+	spear: {
+		name: "Spear",
+		sellPrice: 50,
+		icon: require("@/assets/art/combat/items/spear.png"),
+		overlay: require("@/assets/art/combat/items/spear_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 10,
+			maxHealth: 15,
+			evasion: -15,
+			precision: 15,
+			attackSpeed: 2,
+			power: 30,
+		}
+	},
+	fireaxe: {
+		name: "Fireaxe",
+		sellPrice: 80,
+		icon: require("@/assets/art/combat/items/fireaxe.png"),
+		overlay: require("@/assets/art/combat/items/fireaxe_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 20,
 			evasion: -20,
 			precision: 20,
 			attackSpeed: 2,
 			power: 40,
 		}
 	},
-	spear: {
-		name: "Spear",
-		sellPrice: 420,
-		icon: require("@/assets/art/combat/items/spear.png"),
-		overlay: require("@/assets/art/combat/items/spear_overlay.png"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: 15,
-			evasion: -30,
-			precision: 30,
-			attackSpeed: 2,
-			power: 60,
-		}
-	},
-	fireaxe: {
-		name: "Fireaxe",
-		sellPrice: 420,
-		icon: require("@/assets/art/combat/items/fireaxe.png"),
-		overlay: require("@/assets/art/combat/items/fireaxe_overlay.png"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: 20,
-			evasion: -40,
-			precision: 40,
-			attackSpeed: 2,
-			power: 80,
-		}
-	},
 	sabre: {
 		name: "Captain's Sabre",
-		sellPrice: 420,
+		sellPrice: 100,
 		icon: require("@/assets/art/combat/items/sabre.png"),
 		overlay: require("@/assets/art/combat/items/sabre_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 25,
-			evasion: -50,
-			precision: 50,
+			evasion: -25,
+			precision: 25,
 			attackSpeed: 2,
-			power: 100,
+			power: 50,
 		}
 	},
-	riotSuit: {
-		name: "Riot Suit",
+	armCardboard: {
+		name: "Cardborg Disguise",
 		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/riot_suit.png"),
+		icon: require("@/assets/art/combat/items/arm_cardborg.png"),
 		equipmentSlot: "chest",
-		overlay: require("@/assets/art/combat/items/riot_suit_overlay.png"),
+		overlay: require("@/assets/art/combat/items/arm_cardborg_overlay.png"),
+		stats: {
+			maxHealth: 10,
+			evasion: 6,
+			protection: 4,
+			precision: 2,
+			power: 2,
+		},
+		requires: {
+			evasion: 1
+		}
+	},	armFiresuit: {
+		name: "Firefighting Suit",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/arm_firesuit.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/arm_firesuit_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 12,
+			protection: 8,
+			precision: 4,
+			power: 4,
+		},
+		requires: {
+			evasion: 2
+		}
+	},	armVest: {
+		name: "Personal Protection Vest PPV",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/arm_vest.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/arm_vest_overlay.png"),
 		stats: {
 			maxHealth: 30,
-			evasion: 15,
-			protection: 3,
-			precision: 2,
-			power: 1,
+			evasion: 18,
+			protection: 12,
+			precision: 6,
+			power: 6,
+		},
+		requires: {
+			evasion: 2
+		}
+	},	armRiotSuit: {
+		name: "Riot Suit",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/arm_riot.png"),
+		equipmentSlot: "chest",
+		overlay: require("@/assets/art/combat/items/arm_riot_overlay.png"),
+		stats: {
+			maxHealth: 40,
+			evasion: 24,
+			protection: 16,
+			precision: 8,
+			power: 8,
 		},
 		requires: {
 			evasion: 2
 		}
 	},
-	syndiHardsuit: {
+	armSyndiSuit: {
 		name: "Syndicate Hardsuit",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		icon: require("@/assets/art/combat/items/arm_syndi.png"),
 		equipmentSlot: "chest",
-		overlay: require("@/assets/art/combat/items/syndi_hardsuit_overlay.png"),
+		overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
 		stats: {
-			maxHealth: 60,
+			maxHealth: 50,
 			evasion: 30,
-			protection: 6,
-			precision: 4,
-			power: 2,
+			protection: 20,
+			precision: 10,
+			power: 10,
 		},
 		requires:{
 			evasion: 3,
