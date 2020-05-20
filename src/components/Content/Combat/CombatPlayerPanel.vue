@@ -16,8 +16,8 @@
       </div>
     </div>
     <div class="player-block">
-      <p class="player-block-header">ATTACK STYLE</p>
-      <p>todo</p>
+      <p class="player-block-header">COMBAT FOCUS</p>
+      <combat-focus-panel />
     </div>
   </div>
 </template>
@@ -26,8 +26,9 @@
 import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import EquipmentPanel from "@/components/Content/Combat/EquipmentPanel";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
+import CombatFocusPanel from "@/components/Content/Combat/CombatFocusPanel";
 export default {
-  components: { FoodPanel, EquipmentPanel, StatsPanel },
+  components: { FoodPanel, EquipmentPanel, StatsPanel, CombatFocusPanel },
   computed: {
     stats() {
       return this.$store.getters["playerMob/stats"];
