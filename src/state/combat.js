@@ -106,7 +106,7 @@ const combat = {
 		addXP({ commit, getters }, damage) {
 			let skill = getters.focus;
 			if (skill == "power") {
-				skill = "meleePower";
+				skill = "meleePower"; // TODO: Base this off weapon
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		}

@@ -28,6 +28,7 @@ export function createMobModule(mobType) {
 					fullStats.precision += rootGetters["precision/level"];
 					fullStats.power += rootGetters["meleePower/level"]; // TODO: Base this off of in-hand weapon
 					fullStats.evasion += rootGetters["evasion/level"];
+					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
 						if (!equipment.itemId) return;
 						let item = ITEMS[equipment.itemId];
