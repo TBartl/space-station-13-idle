@@ -191,5 +191,108 @@ export default {
 			precision: 50,
 			power: 50,
 		}
+	},
+
+	capeeng: {
+		name: "Engineering Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/engcloak.png"),
+		overlay: require("@/assets/art/combat/items/engcloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Engineering: 50
+		}
+	},
+	capemining: {
+		name: "Mining Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/hoscloak.png"),
+		overlay: require("@/assets/art/combat/items/hoscloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Mining: 3
+		}
+	},
+	capefabrication: {
+		name: "Fabrication Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/cmocloak.png"),
+		overlay: require("@/assets/art/combat/items/cmocloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Fabrication: 50
+		}
+	},
+	capexenobiology: {
+		name: "Xenobiology Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/scicloak.png"),
+		overlay: require("@/assets/art/combat/items/scicloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Xenobiology: 50
+		}
+	},
+	capebotany: {
+		name: "Botany Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/hopcloak.png"),
+		overlay: require("@/assets/art/combat/items/hopcloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Botany: 50
+		}
+	},
+	capetiding: {
+		name: "Master of the Tides",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/capcloak.png"),
+		overlay: require("@/assets/art/combat/items/capcloak_overlay.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Engineering: 50
+		}
 	}
 };
