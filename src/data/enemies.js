@@ -71,8 +71,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .2,
+				item: "armCardboard"
 			}
 		]
 	},
@@ -234,8 +234,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .02,
+				item: "armSyndiSuit"
 			}
 		]
 	},
@@ -259,8 +259,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .2,
+				item: "armFiresuit"
 			}
 		]
 	},
@@ -509,8 +509,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .2,
+				item: "armVest"
 			}
 		]
 	},
@@ -622,8 +622,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .2,
+				item: "armRiotSuit"
 			}
 		]
 	},
