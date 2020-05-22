@@ -25,13 +25,24 @@ export const ITEMS = {
 		name: "Mounted Rifle",
 		sellPrice: 0,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunsmall.png")
+		icon: require("@/assets/art/engineering/gunsmall.png"),
+		restrictions: ["mech"],
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 4,
+			power: 15,
+			precision: 5
+		}
 	},
 	rifleAmmo: {
 		name: "Rifle Ammo",
 		sellPrice: 0,
 		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammosmall.png")
+		icon: require("@/assets/art/engineering/ammosmall.png"),
+		ammoType: "ballistic",
+		stats: {
+			power: 3
+		}
 	},
 	mechGunCanno: {
 		name: "Mounted Cannon",

@@ -15,7 +15,12 @@
         <span>{{requirement.text}}</span>
       </div>
       <span
-        v-for="(restriction, index) in item.restrictions ? item.restrictions : []"
+        v-for="(allow, index) in allows"
+        :key="index"
+        class="success-bubble my-1"
+      >Allows: {{allow.toUpperCase()}}</span>
+      <span
+        v-for="(restriction, index) in restrictions"
         :key="index"
         class="warning-bubble my-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
@@ -30,6 +35,7 @@ import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import { ALL_JOBS } from "@/data/jobs";
+import { getEquipmentSlot } from '@/utils/equipmentUtils';
 
 export default {
   props: ["itemId", "target"],
@@ -42,11 +48,11 @@ export default {
       if (!this.item.requires) return;
       return Object.entries(this.item.requires).map(entry => {
         let jobId = entry[0];
-				let job = ALL_JOBS.find(job => job.id == jobId);
-				if (!job) {
-					console.error("Could not find job:", jobId);
-					return;
-				}
+        let job = ALL_JOBS.find(job => job.id == jobId);
+        if (!job) {
+          console.error("Could not find job:", jobId);
+          return;
+        }
         let requiredLevel = entry[1];
         let jobLevel = this.$store.getters[jobId + "/level"];
         return {
@@ -55,6 +61,26 @@ export default {
           class: jobLevel >= requiredLevel ? "alert-success" : "alert-danger"
         };
       });
+		},
+		allows() {
+      let allows = [];
+      if (this.item.liftsRestrictions) {
+        allows = allows.concat(this.item.liftsRestrictions);
+      }
+      if (this.item.ammoType && getEquipmentSlot(this.itemId) == "pocket") {
+        allows = allows.concat(this.item.ammoType);
+      }
+      return allows;
+    },
+    restrictions() {
+      let restrictions = [];
+      if (this.item.restrictions) {
+        restrictions = restrictions.concat(this.item.restrictions);
+      }
+      if (this.item.ammoType && getEquipmentSlot(this.itemId) == "hand") {
+        restrictions = restrictions.concat(this.item.ammoType);
+      }
+      return restrictions;
     }
   }
 };

@@ -116,6 +116,7 @@ export default {
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
         if (!itemId) continue;
         let item = ITEMS[itemId];
+        if (this.$store.getters["inventory/checkRestricted"](itemId)) continue;
         if (item.overlay) {
           icons.push(item.overlay);
         }

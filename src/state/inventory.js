@@ -80,6 +80,14 @@ const inventory = {
 						if (!getters.liftedRestrictions.includes(restriction)) return true;
 					}
 				}
+				if (item.ammoType) {
+					let equipmentSlot = getEquipmentSlot(itemId);
+					let inverseSlot = equipmentSlot == "hand" ? "pocket" : "hand";
+					let inverseItemId = state.equipment[inverseSlot].itemId;
+					if (!inverseItemId) return true;
+					let inverseItem = ITEMS[inverseItemId];
+					if (item.ammoType != inverseItem.ammoType) return true;
+				}
 				return false;
 			};
 		},
