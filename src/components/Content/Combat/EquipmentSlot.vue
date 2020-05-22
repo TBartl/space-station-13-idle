@@ -1,9 +1,13 @@
 <template>
   <div>
     <button :id="target" class="m-1 equipment-slot">
-      <div class="overlay-div">
+      <div class="overlay-div position-relative">
         <img :src="restricted ? restrictedIcon : icon" />
         <img v-if="equippedIcon" :src="equippedIcon" />
+        <span
+          v-if="equipped.count > 1"
+          class="ammo-count danger-bubble"
+        >{{equipped.count |cleanNum}}</span>
       </div>
     </button>
     <item-popover v-if="equippedItem" :target="target" :itemId="equipped.itemId" />
@@ -37,7 +41,9 @@ export default {
       return this.equippedItem.icon;
     },
     restricted() {
-			return this.$store.getters["inventory/checkRestricted"](this.equipped.itemId);
+      return this.$store.getters["inventory/checkRestricted"](
+        this.equipped.itemId
+      );
     }
   }
 };
@@ -62,6 +68,12 @@ export default {
 .overlay-div {
   width: 64px;
   height: 64px;
+}
+
+.ammo-count {
+  position: absolute;
+  bottom: -8px;
+  right: -6px;
 }
 </style>
 
