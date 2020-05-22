@@ -7,7 +7,27 @@
       />
       <equipment-slot
         equipmentSlot="chest"
-        :icon="require('@/assets/art/combat/equipment/uniform.png')"
+        :icon="require('@/assets/art/combat/equipment/chest.png')"
+      />
+      <equipment-slot
+        equipmentSlot="head"
+        :icon="require('@/assets/art/combat/equipment/head.png')"
+      />
+      <equipment-slot
+        equipmentSlot="face"
+        :icon="require('@/assets/art/combat/equipment/face.png')"
+      />
+      <equipment-slot
+        equipmentSlot="limb"
+        :icon="require('@/assets/art/combat/equipment/limb.png')"
+      />
+      <equipment-slot
+        equipmentSlot="jumpsuit"
+        :icon="require('@/assets/art/combat/equipment/jumpsuit.png')"
+      />
+      <equipment-slot
+        equipmentSlot="neck"
+        :icon="require('@/assets/art/combat/equipment/neck.png')"
       />
       <equipment-slot
         equipmentSlot="pocket"
