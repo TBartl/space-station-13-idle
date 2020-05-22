@@ -2,6 +2,7 @@ import Vue from "vue";
 import { createCoroutineModule } from "./coroutine";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import ENEMIES from "@/data/enemies";
+import ITEMS from "@/data/items";
 
 const combat = {
 	namespaced: true,
@@ -103,10 +104,17 @@ const combat = {
 					}
 				});
 		},
-		addXP({ commit, getters }, damage) {
+		addXP({ commit, getters, rootGetters }, damage) {
 			let skill = getters.focus;
 			if (skill == "power") {
-				skill = "meleePower"; // TODO: Base this off weapon
+				skill = "meleePower";
+				let handItemId = rootGetters["inventory/equipment"].hand.itemId;
+				if (handItemId) {
+					let handItem = ITEMS[handItemId];
+					if (handItem.ammoType && !rootGetters["inventory/checkRestricted"](handItemId)) {
+						skill = "rangedPower";
+					}
+				}
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		}
