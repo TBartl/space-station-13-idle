@@ -26,6 +26,16 @@ const combat = {
 		},
 		focus(state) {
 			return state.focus;
+		},
+		isRanged(state, getters, rootState, rootGetters) {
+			let handItemId = rootGetters["inventory/equipment"].hand.itemId;
+			if (handItemId) {
+				let handItem = ITEMS[handItemId];
+				if (handItem.ammoType && !rootGetters["inventory/checkRestricted"](handItemId)) {
+					return true;
+				}
+			}
+			return false;
 		}
 	},
 	mutations: {
@@ -107,14 +117,7 @@ const combat = {
 		addXP({ commit, getters, rootGetters }, damage) {
 			let skill = getters.focus;
 			if (skill == "power") {
-				skill = "meleePower";
-				let handItemId = rootGetters["inventory/equipment"].hand.itemId;
-				if (handItemId) {
-					let handItem = ITEMS[handItemId];
-					if (handItem.ammoType && !rootGetters["inventory/checkRestricted"](handItemId)) {
-						skill = "rangedPower";
-					}
-				}
+				skill = getters.isRanged ? "meleePower" : "rangedPower";
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		}
