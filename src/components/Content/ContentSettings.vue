@@ -26,7 +26,8 @@
 							<p>Nothing was risked and nothing was gained.</p>
 							<p>It's sad that you don't know the difference.</p>
             </div>
-            <button type="button" class="btn btn-primary" @click="openItemSpawner">Open Item Spawner</button>
+            <button type="button" class="btn btn-primary my-1" @click="openItemSpawner">Open Item Spawner</button>
+            <button type="button" class="btn btn-primary my-1 d-block" @click="openSkillLeveler">Open Job Leveler</button>
           </div>
         </div>
       </div>
@@ -38,10 +39,11 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ModalResetData from "@/components/Modals/ModalResetData";
 import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
+import ModalSkillLeveler from "@/components/Modals/ModalSkillLeveler";
 export default {
   extends: ContentAbstract,
   // eslint-disable-next-line
-  components: { ModalResetData, ModalItemSpawner },
+  components: { ModalResetData, ModalItemSpawner, ModalSkillLeveler },
   computed: {},
   methods: {
     resetClicked() {
@@ -49,6 +51,9 @@ export default {
     },
     openItemSpawner() {
       this.$modal.show(ModalItemSpawner, {}, { height: "600px", width: "980px" });
+    },
+    openSkillLeveler() {
+      this.$modal.show(ModalSkillLeveler, {}, { height: "auto", width: "320px" });
     }
   }
 };
