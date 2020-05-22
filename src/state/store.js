@@ -7,11 +7,15 @@ Vue.use(Vuex)
 
 import ITEMS from "@/data/items";
 import engineering from "./engineering";
+import chemistry from "./chemistry";
 import mining from "./mining";
 import fabrication from "./fabrication";
 import xenobiology from "./xenobiology";
 import botany from "./botany";
+import cooking from "./cooking";
 import graytiding from "./graytiding";
+import security from "./security";
+import shitposting from "./shitposting";
 import precision from "./precision";
 import meleePower from "./meleePower";
 import rangedPower from "./rangedPower";
@@ -22,11 +26,15 @@ import { createMobModule } from "./mob";
 
 const modules = {
 	engineering,
+	chemistry,
 	mining,
 	fabrication,
 	xenobiology,
 	botany,
+	cooking,
 	graytiding,
+	security,
+	shitposting,
 	precision,
 	meleePower,
 	rangedPower,

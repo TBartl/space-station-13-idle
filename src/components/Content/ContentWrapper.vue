@@ -9,10 +9,14 @@ import { mapGetters } from "vuex";
 import ContentShop from "./ContentShop";
 import ContentInventory from "./ContentInventory";
 import ContentEngineering from "./ContentEngineering";
+import ContentChemistry from "./ContentChemistry";
 import ContentMining from "./ContentMining";
 import ContentXenobiology from "./ContentXenobiology";
 import ContentBotany from "./ContentBotany";
+import ContentCooking from "./ContentCooking";
 import ContentGraytiding from "./ContentGraytiding";
+import ContentSecurity from "./ContentSecurity";
+import ContentShitposting from "./ContentShitposting";
 import ContentFabrication from "./ContentFabrication";
 import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
@@ -24,11 +28,15 @@ export default {
     ContentShop,
     ContentInventory,
     ContentEngineering,
+    ContentChemistry,
     ContentMining,
-		ContentGraytiding,
+    ContentGraytiding,
+    ContentSecurity,
+    ContentShitposting,
 		ContentFabrication,
 		ContentXenobiology,
     ContentBotany,
+    ContentCooking,
 		ContentCombat,
 		ContentSettings,
 		ContentChronosphere
