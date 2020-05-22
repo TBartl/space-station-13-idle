@@ -35,11 +35,10 @@ export default {
     equippedIcon() {
       if (!this.equippedItem) return null;
       return this.equippedItem.icon;
-		},
-		restricted() {
-			if (!this.equippedItem) return;
-			return this.equippedItem.restrictions;
-		}
+    },
+    restricted() {
+			return this.$store.getters["inventory/checkRestricted"](this.equipped.itemId);
+    }
   }
 };
 </script>

@@ -64,13 +64,34 @@ const inventory = {
 				let item = ITEMS[itemId];
 				if (!getEquipmentSlot(itemId)) return false;
 				if (!item.requires) return true;
-				for (let [jobId, requiredLevel] of Object.entries(item.requires))
-				{
+				for (let [jobId, requiredLevel] of Object.entries(item.requires)) {
 					let jobLevel = rootGetters[jobId + "/level"];
 					if (jobLevel < requiredLevel) return false;
 				}
 				return true;
 			};
+		},
+		checkRestricted(state, getters) {
+			return (itemId) => {
+				if (!itemId) return false;
+				let item = ITEMS[itemId];
+				if (item.restrictions) {
+					for (let restriction of item.restrictions) {
+						if (!getters.liftedRestrictions.includes(restriction)) return true;
+					}
+				}
+				return false;
+			};
+		},
+		liftedRestrictions(state) {
+			let lifted = [];
+			for (let [equipmentSlot, equipment] of Object.entries(state.equipment)) {
+				if (!equipment.itemId) continue;
+				let item = ITEMS[equipment.itemId];
+				if (!item.liftsRestrictions) continue;
+				lifted = lifted.concat(item.liftsRestrictions);
+			}
+			return lifted;
 		}
 	},
 	mutations: {
