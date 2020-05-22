@@ -14,6 +14,21 @@
             <button type="button" class="btn btn-primary" @click="resetClicked">Reset Data</button>
           </div>
         </div>
+        <div class="col-12 mt-3">
+          <div class="content-block">
+            <h5>CHEATS</h5>
+            <hr />
+            <div class="cheater w-100">
+              <p>You cheated not only the game, but yourself.</p>
+							<p>You experienced a hollow victory.</p>
+							<p>You didn't grow. You didn't improve.</p>
+							<p>You took a shortcut and gained nothing.</p>
+							<p>Nothing was risked and nothing was gained.</p>
+							<p>It's sad that you don't know the difference.</p>
+            </div>
+            <button type="button" class="btn btn-primary" @click="openItemSpawner">Open Item Spawner</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -22,15 +37,30 @@
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ModalResetData from "@/components/Modals/ModalResetData";
+import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
 export default {
   extends: ContentAbstract,
   // eslint-disable-next-line
-  components: { ModalResetData },
+  components: { ModalResetData, ModalItemSpawner },
   computed: {},
   methods: {
     resetClicked() {
       this.$modal.show(ModalResetData, {}, { height: "auto", width: "320px" });
+    },
+    openItemSpawner() {
+      this.$modal.show(ModalItemSpawner, {}, { height: "600px", width: "980px" });
     }
   }
 };
 </script>
+
+<style scoped>
+.cheater {
+  max-width: 400px;
+  margin: auto;
+	text-align: center;
+	font-style: italic;
+	color: rgb(179, 179, 179);
+	font-size: 14px;
+}
+</style>

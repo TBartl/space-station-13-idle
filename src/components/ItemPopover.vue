@@ -42,7 +42,11 @@ export default {
       if (!this.item.requires) return;
       return Object.entries(this.item.requires).map(entry => {
         let jobId = entry[0];
-        let job = ALL_JOBS.find(job => job.id == jobId);
+				let job = ALL_JOBS.find(job => job.id == jobId);
+				if (!job) {
+					console.error("Could not find job:", jobId);
+					return;
+				}
         let requiredLevel = entry[1];
         let jobLevel = this.$store.getters[jobId + "/level"];
         return {
