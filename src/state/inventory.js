@@ -23,6 +23,26 @@ const inventory = {
 				itemId: null,
 				count: 0
 			},
+			head: {
+				itemId: null,
+				count: 0
+			},
+			face: {
+				itemId: null,
+				count: 0
+			},
+			limb: {
+				itemId: null,
+				count: 0
+			},
+			jumpsuit: {
+				itemId: null,
+				count: 0
+			},
+			neck: {
+				itemId: null,
+				count: 0
+			},
 			pocket: {
 				itemId: null,
 				count: 0

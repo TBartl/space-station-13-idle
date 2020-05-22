@@ -148,7 +148,7 @@ export default {
 		equipmentSlot: "chest",
 		overlay: require("@/assets/art/combat/items/arm_riot_overlay.png"),
 		stats: {
-			maxHealth: 40,
+			maxHealth: 0,
 			evasion: 24,
 			protection: 16,
 			precision: 8,
@@ -173,6 +173,329 @@ export default {
 		},
 		requires:{
 			evasion: 3,
+		}
+	},
+	headCake: {
+		name: "Cakehat",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/head_cakehat.png"),
+		equipmentSlot: "head",
+		overlay: require("@/assets/art/combat/items/head_cakehat_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	faceMeson: {
+		name: "Meson Goggles",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/face_meson.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face_meson_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	limbBlack: {
+		name: "Insulated Gloves",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/glove_yellow.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/glove_yellow_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbBlack: {
+		name: "Boxing Gloves",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/glove_boxing.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/glove_boxing_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbBlack: {
+		name: "Mag Krava Gloves",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/glove_fightgloves.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/glove_fightgloves_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbBlack: {
+		name: "Captain's Gloves",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/glove_captain.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/glove_captain_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbBlack: {
+		name: "Ninja Gloves",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/glove_ninja.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/glove_ninja_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbBlack: {
+		name: "Black Sneakers",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/shoe_black.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/shoe_black_overlay.png"),
+		stats: {
+			maxHealth: 1,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbMagboot: {
+		name: "Magnetic Boots",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/shoe_magboots.png"),
+		equipmentSlot: "climb",
+		overlay: require("@/assets/art/combat/items/shoe_magboots_overlay.png"),
+		stats: {
+			maxHealth: 2,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},	
+	limbClown: {
+		name: "Clown Shoes",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/shoe_clown.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/shoe_clown_overlay.png"),
+		stats: {
+			maxHealth: 3,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	limbJack: {
+		name: "Jackboots",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/shoe_jackboots.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/shoe_jackboots_overlay.png"),
+		stats: {
+			maxHealth: 4,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	limbAdvanced: {
+		name: "Syndicate Hardsuit",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/shoe_advmag.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/shoe_advmag_overlay.png"),
+		stats: {
+			maxHealth: 5,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	jumpsuitGrey: {
+		name: "Assistants Jumpsuit",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/jumpsuit_grey.png"),
+		equipmentSlot: "jumpsuit",
+		overlay: require("@/assets/art/combat/items/jumpsuit_grey.png"),
+		stats: {
+			maxHealth: 5,
+			evasion: 30,
+			protection: 20,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			evasion: 3,
+		}
+	},
+	neckEng: {
+		name: "Engineering Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/engcloak.png"),
+		overlay: require("@/assets/art/combat/items/engcloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Engineering: 50
+		}
+	},
+	capemining: {
+		name: "Mining Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/hoscloak.png"),
+		overlay: require("@/assets/art/combat/items/hoscloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Mining: 3
+		}
+	},
+	capefabrication: {
+		name: "Fabrication Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/cmocloak.png"),
+		overlay: require("@/assets/art/combat/items/cmocloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Fabrication: 50
+		}
+	},
+	capexenobiology: {
+		name: "Xenobiology Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/scicloak.png"),
+		overlay: require("@/assets/art/combat/items/scicloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Xenobiology: 50
+		}
+	},
+	capebotany: {
+		name: "Botany Mastery Cloak",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/hopcloak.png"),
+		overlay: require("@/assets/art/combat/items/hopcloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Botany: 50
+		}
+	},
+	capetiding: {
+		name: "Master of the Tides",
+		sellPrice: 600,
+		icon: require("@/assets/art/combat/items/capcloak.png"),
+		overlay: require("@/assets/art/combat/items/capcloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 10,
+			protection: 0,
+			precision: 10,
+			power: 10,
+		},
+		requires:{
+			Engineering: 50
 		}
 	},
 	pill10: {
@@ -238,109 +561,6 @@ export default {
 			protection: 0,
 			precision: 50,
 			power: 50,
-		}
-	},
-
-	capeeng: {
-		name: "Engineering Mastery Cloak",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/engcloak.png"),
-		overlay: require("@/assets/art/combat/items/engcloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Engineering: 50
-		}
-	},
-	capemining: {
-		name: "Mining Mastery Cloak",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/hoscloak.png"),
-		overlay: require("@/assets/art/combat/items/hoscloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Mining: 3
-		}
-	},
-	capefabrication: {
-		name: "Fabrication Mastery Cloak",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/cmocloak.png"),
-		overlay: require("@/assets/art/combat/items/cmocloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Fabrication: 50
-		}
-	},
-	capexenobiology: {
-		name: "Xenobiology Mastery Cloak",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/scicloak.png"),
-		overlay: require("@/assets/art/combat/items/scicloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Xenobiology: 50
-		}
-	},
-	capebotany: {
-		name: "Botany Mastery Cloak",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/hopcloak.png"),
-		overlay: require("@/assets/art/combat/items/hopcloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Botany: 50
-		}
-	},
-	capetiding: {
-		name: "Master of the Tides",
-		sellPrice: 600,
-		icon: require("@/assets/art/combat/items/capcloak.png"),
-		overlay: require("@/assets/art/combat/items/capcloak_overlay.png"),
-		equipmentSlot: "pocket",
-		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			protection: 0,
-			precision: 10,
-			power: 10,
-		},
-		requires:{
-			Engineering: 50
 		}
 	}
 };
