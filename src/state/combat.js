@@ -7,7 +7,8 @@ import ITEMS from "@/data/items";
 const combat = {
 	namespaced: true,
 	modules: {
-		moveCoroutine: createCoroutineModule()
+		moveCoroutine: createCoroutineModule(),
+		regenCoroutine: createCoroutineModule()
 	},
 	state: {
 		targetEnemy: null,
@@ -20,6 +21,11 @@ const combat = {
 		},
 		maxDrops() {
 			return 16;
+		},
+		regenTime(state, getters, rootState, rootGetters) {
+			let baseRegenTime = 8;
+			let ratio = 100 / rootGetters["playerMob/stats"].maxHealth;
+			return baseRegenTime * ratio;
 		},
 		drops(state) {
 			return state.drops;
@@ -82,6 +88,7 @@ const combat = {
 			commit("_setTargetEnemy", null);
 		},
 		_resume({ state, dispatch, rootGetters }) {
+			dispatch("_startRegen");
 			if (!state.targetEnemy) return;
 
 			if (rootGetters["enemyMob/health"] == 0) {
@@ -111,6 +118,16 @@ const combat = {
 					duration: rootGetters["playerMob/stats"].moveTime,
 					onFinish: () => {
 						dispatch("continueCombat");
+					}
+				});
+		},
+		_startRegen({ dispatch, getters }) {
+			dispatch("regenCoroutine/start",
+				{
+					duration: getters["regenTime"],
+					onFinish: () => {
+						dispatch("_startRegen");
+						dispatch("playerMob/addHealth", 1, { root: true });
 					}
 				});
 		},

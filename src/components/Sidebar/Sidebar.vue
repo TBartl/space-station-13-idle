@@ -30,7 +30,10 @@
       <span>{{getLevelText(job)}}</span>
     </sidebar-item>
 
-    <p class="items-header">Combat</p>
+    <div class="items-header d-none d-md-flex flex-row align-items-center justify-content-between">
+      <span>Combat</span>
+      <span :class="healthClass">({{playerHealth}}/{{playerMaxHealth}})</span>
+    </div>
     <sidebar-item
       v-for="job in combatJobs"
       :key="job.id"
@@ -66,10 +69,10 @@ export default {
   name: "Sidebar",
   components: { SidebarItem, InventoryPriceDisplay },
   computed: {
-		...mapGetters([ "chronoSpeed"]),
-		money() {
-			return this.$store.getters["inventory/money"];
-		},
+    ...mapGetters(["chronoSpeed"]),
+    money() {
+      return this.$store.getters["inventory/money"];
+    },
     version() {
       return `Alpha v${process.env.PACKAGE_VERSION}`;
     },
@@ -78,6 +81,17 @@ export default {
     },
     combatJobs() {
       return ALL_JOBS.filter(job => job.isCombat);
+    },
+    playerHealth() {
+      return Math.round(this.$store.getters["playerMob/health"]);
+    },
+    playerMaxHealth() {
+      return this.$store.getters["playerMob/stats"].maxHealth;
+    },
+    healthClass() {
+      return this.playerHealth == this.playerMaxHealth
+        ? "health-full"
+        : "health-damaged";
     }
   },
   methods: {
@@ -130,5 +144,12 @@ export default {
   text-transform: uppercase;
   padding: 1rem 1rem 0.25rem 1rem;
   font-weight: bold;
+}
+
+.health-damaged{
+	color: rgb(202, 80, 80);
+}
+.health-full {
+	color: green;
 }
 </style>
