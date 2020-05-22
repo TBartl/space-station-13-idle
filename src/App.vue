@@ -57,7 +57,7 @@ body {
  
 /* Handle */
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgb(109, 109, 109); 
+  background: rgba(109, 109, 109, 0.5); 
 }
 
 /* Handle on hover */
