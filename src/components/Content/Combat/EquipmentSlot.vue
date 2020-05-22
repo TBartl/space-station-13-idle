@@ -2,8 +2,8 @@
   <div>
     <button :id="target" class="m-1 equipment-slot">
       <div class="overlay-div">
-        <img :src="icon" />
-        <img :src="equippedIcon" />
+        <img :src="restricted ? restrictedIcon : icon" />
+        <img v-if="equippedIcon" :src="equippedIcon" />
       </div>
     </button>
     <item-popover v-if="equippedItem" :target="target" :itemId="equipped.itemId" />
@@ -17,7 +17,7 @@ import ItemPopover from "@/components/ItemPopover";
 import EquipmentDropdown from "@/components/Content/Combat/EquipmentDropdown";
 export default {
   components: { ItemPopover, EquipmentDropdown },
-  props: ["equipmentSlot", "icon"],
+  props: ["equipmentSlot", "icon", "restrictedIcon"],
   computed: {
     id() {
       return this._uid.toString();
@@ -33,9 +33,13 @@ export default {
       return ITEMS[this.equipped.itemId];
     },
     equippedIcon() {
-      if (!this.equippedItem) return this.icon;
+      if (!this.equippedItem) return null;
       return this.equippedItem.icon;
-    }
+		},
+		restricted() {
+			if (!this.equippedItem) return;
+			return this.equippedItem.restrictions;
+		}
   }
 };
 </script>
