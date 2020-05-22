@@ -26,7 +26,11 @@ export function createMobModule(mobType) {
 				if (state.mobType == "player") {
 					let fullStats = clone(PLAYER_BASE_STATS);
 					fullStats.precision += rootGetters["precision/level"];
-					fullStats.power += rootGetters["meleePower/level"]; // TODO: Base this off of in-hand weapon
+					if (rootGetters["combat/isRanged"]) {
+						fullStats.power += rootGetters["rangedPower/level"];
+					} else {
+						fullStats.power += rootGetters["meleePower/level"];
+					}
 					fullStats.evasion += rootGetters["evasion/level"];
 					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
@@ -34,6 +38,8 @@ export function createMobModule(mobType) {
 						let item = ITEMS[equipment.itemId];
 						if (!item) return;
 						if (!item.stats) return;
+						let restricted = rootGetters["inventory/checkRestricted"](equipment.itemId);
+						if (restricted) return;
 						combineStats(fullStats, item.stats)
 					});
 					return fullStats;

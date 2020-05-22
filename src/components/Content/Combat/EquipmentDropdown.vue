@@ -1,13 +1,16 @@
 <template>
   <b-popover :target="target" triggers="click blur" placement="bottom" delay="0">
-    <equipment-dropdown-item
-      class="w-100"
-      v-for="(itemId, index) in validItems"
-      :key="index"
-      :itemId="itemId"
-    />
-    <button v-if="currentItemId" class="btn btn-outline-danger w-100" @click="unequip">UNEQUIP</button>
-    <span v-if="!currentItemId && validItems.length == 0">No {{equipmentSlot}} items available.</span>
+    <div class="d-flex flex-column align-items-center">
+      <p class="title text-uppercase">{{equipmentSlot}}</p>
+      <equipment-dropdown-item
+        class="w-100"
+        v-for="(itemId, index) in validItems"
+        :key="index"
+        :itemId="itemId"
+      />
+      <button v-if="currentItemId" class="btn btn-outline-danger" @click="unequip">UNEQUIP</button>
+      <span v-if="!currentItemId && validItems.length == 0">No {{equipmentSlot}} items available.</span>
+    </div>
   </b-popover>
 </template>
 
@@ -36,3 +39,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+.title {
+	font-size: 12px;
+	font-weight: bold;
+	color: rgb(152, 156, 165);
+}
+</style>

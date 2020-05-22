@@ -410,7 +410,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Engineering: 50
+			engineering: 50
 		}
 	},
 	capemining: {
@@ -427,7 +427,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Mining: 3
+			mining: 3
 		}
 	},
 	capefabrication: {
@@ -444,7 +444,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Fabrication: 50
+			fabrication: 50
 		}
 	},
 	capexenobiology: {
@@ -461,7 +461,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Xenobiology: 50
+			xenobiology: 50
 		}
 	},
 	capebotany: {
@@ -478,7 +478,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Botany: 50
+			botany: 50
 		}
 	},
 	capetiding: {
@@ -495,7 +495,7 @@ export default {
 			power: 10,
 		},
 		requires:{
-			Engineering: 50
+			engineering: 50
 		}
 	},
 	pill10: {

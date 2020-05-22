@@ -2,7 +2,7 @@
   <div>
     <button
       :id="id"
-      class="btn btn-outline-primary d-flex flex-row align-items-center"
+      class="btn btn-outline-primary d-flex flex-row align-items-center w-100"
       @click="equip"
     >
       <span>({{itemCount}})</span>

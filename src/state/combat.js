@@ -2,11 +2,13 @@ import Vue from "vue";
 import { createCoroutineModule } from "./coroutine";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import ENEMIES from "@/data/enemies";
+import ITEMS from "@/data/items";
 
 const combat = {
 	namespaced: true,
 	modules: {
-		moveCoroutine: createCoroutineModule()
+		moveCoroutine: createCoroutineModule(),
+		regenCoroutine: createCoroutineModule()
 	},
 	state: {
 		targetEnemy: null,
@@ -20,11 +22,26 @@ const combat = {
 		maxDrops() {
 			return 16;
 		},
+		regenTime(state, getters, rootState, rootGetters) {
+			let baseRegenTime = 8;
+			let ratio = 100 / rootGetters["playerMob/stats"].maxHealth;
+			return baseRegenTime * ratio;
+		},
 		drops(state) {
 			return state.drops;
 		},
 		focus(state) {
 			return state.focus;
+		},
+		isRanged(state, getters, rootState, rootGetters) {
+			let handItemId = rootGetters["inventory/equipment"].hand.itemId;
+			if (handItemId) {
+				let handItem = ITEMS[handItemId];
+				if (handItem.ammoType && !rootGetters["inventory/checkRestricted"](handItemId)) {
+					return true;
+				}
+			}
+			return false;
 		}
 	},
 	mutations: {
@@ -71,6 +88,7 @@ const combat = {
 			commit("_setTargetEnemy", null);
 		},
 		_resume({ state, dispatch, rootGetters }) {
+			dispatch("_startRegen");
 			if (!state.targetEnemy) return;
 
 			if (rootGetters["enemyMob/health"] == 0) {
@@ -103,10 +121,20 @@ const combat = {
 					}
 				});
 		},
-		addXP({ commit, getters }, damage) {
+		_startRegen({ dispatch, getters }) {
+			dispatch("regenCoroutine/start",
+				{
+					duration: getters["regenTime"],
+					onFinish: () => {
+						dispatch("_startRegen");
+						dispatch("playerMob/addHealth", 1, { root: true });
+					}
+				});
+		},
+		addXP({ commit, getters, rootGetters }, damage) {
 			let skill = getters.focus;
 			if (skill == "power") {
-				skill = "meleePower"; // TODO: Base this off weapon
+				skill = getters.isRanged ? "meleePower" : "rangedPower";
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		}

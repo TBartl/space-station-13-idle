@@ -1,9 +1,9 @@
 <template>
-  <b-popover :target="target" triggers="hover" placement="top" delay="0">
+  <b-popover :target="target" triggers="hover" placement="bottom" delay="0">
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
-      <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
-      <span v-if="item.equipmentSlot" class="mt-1">Equippable</span>
+      <span v-if="item.healAmount" class="my-1">Heals +{{item.healAmount}} HP</span>
+      <span v-if="item.equipmentSlot" class="my-1">Equippable</span>
       <div
         class="requirement p-1 my-1 rounded d-flex flex-row align-items-center"
         :class="requirement.class"
@@ -14,7 +14,17 @@
         <img class="mx-1" :src="requirement.icon" alt />
         <span>{{requirement.text}}</span>
       </div>
-      <stats-panel v-if="item.stats" :stats="item.stats" />
+      <span
+        v-for="(allow, index) in allows"
+        :key="index"
+        class="success-bubble my-1"
+      >Allows: {{allow.toUpperCase()}}</span>
+      <span
+        v-for="(restriction, index) in restrictions"
+        :key="index"
+        class="warning-bubble my-1"
+      >Restriction: {{restriction.toUpperCase()}}</span>
+      <stats-panel class="my-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
   </b-popover>
@@ -25,6 +35,7 @@ import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import { ALL_JOBS } from "@/data/jobs";
+import { getEquipmentSlot } from '@/utils/equipmentUtils';
 
 export default {
   props: ["itemId", "target"],
@@ -38,15 +49,38 @@ export default {
       return Object.entries(this.item.requires).map(entry => {
         let jobId = entry[0];
         let job = ALL_JOBS.find(job => job.id == jobId);
-				let requiredLevel = entry[1];
-				let jobLevel = this.$store.getters[jobId + "/level"];
-				console.log(jobLevel, requiredLevel);
+        if (!job) {
+          console.error("Could not find job:", jobId);
+          return;
+        }
+        let requiredLevel = entry[1];
+        let jobLevel = this.$store.getters[jobId + "/level"];
         return {
           icon: job.icon,
           text: requiredLevel,
-          class: (jobLevel >= requiredLevel) ? "alert-success" : "alert-danger"
+          class: jobLevel >= requiredLevel ? "alert-success" : "alert-danger"
         };
       });
+		},
+		allows() {
+      let allows = [];
+      if (this.item.liftsRestrictions) {
+        allows = allows.concat(this.item.liftsRestrictions);
+      }
+      if (this.item.ammoType && getEquipmentSlot(this.itemId) == "pocket") {
+        allows = allows.concat(this.item.ammoType);
+      }
+      return allows;
+    },
+    restrictions() {
+      let restrictions = [];
+      if (this.item.restrictions) {
+        restrictions = restrictions.concat(this.item.restrictions);
+      }
+      if (this.item.ammoType && getEquipmentSlot(this.itemId) == "hand") {
+        restrictions = restrictions.concat(this.item.ammoType);
+      }
+      return restrictions;
     }
   }
 };
