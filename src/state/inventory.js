@@ -3,6 +3,7 @@ import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
+import { acquireItemFrom } from "@/utils/itemChanceUtils";
 
 const inventory = {
 	namespaced: true,
@@ -101,6 +102,16 @@ const inventory = {
 				lifted = lifted.concat(item.liftsRestrictions);
 			}
 			return lifted;
+		},
+		canPurchase(state) {
+			return (purchase) => {
+				if (purchase.requiredItems) {
+					for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
+						if (state.bank[itemId] < count) return false;
+					}
+				}
+				return true;
+			}
 		}
 	},
 	mutations: {
@@ -156,6 +167,16 @@ const inventory = {
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
 			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
+		},
+		purchase({ commit }, purchase) {
+			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
+				commit("changeItemCount", { itemId, count: -count });
+			}
+
+			let yieldedItems = acquireItemFrom(purchase);
+			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				commit("changeItemCount", { itemId, count });
+			}
 		}
 	}
 }
