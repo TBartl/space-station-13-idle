@@ -87,6 +87,7 @@ const inventory = {
 					if (!inverseItemId) return true;
 					let inverseItem = ITEMS[inverseItemId];
 					if (item.ammoType != inverseItem.ammoType) return true;
+					if (equipmentSlot == "pocket" && getters["checkRestricted"](inverseItemId)) return true;
 				}
 				return false;
 			};
