@@ -6,15 +6,17 @@
         <img :src="equippedIcon" />
       </div>
     </button>
+    <item-popover v-if="equippedItem" :target="target" :itemId="equipped.itemId" />
     <equipment-dropdown :target="target" :equipmentSlot="equipmentSlot" />
   </div>
 </template>
 
 <script>
 import ITEMS from "@/data/items";
+import ItemPopover from "@/components/ItemPopover";
 import EquipmentDropdown from "@/components/Content/Combat/EquipmentDropdown";
 export default {
-  components: { EquipmentDropdown },
+  components: { ItemPopover, EquipmentDropdown },
   props: ["equipmentSlot", "icon"],
   computed: {
     id() {
@@ -55,8 +57,8 @@ export default {
 }
 
 .overlay-div {
-	width: 64px;
-	height: 64px;
+  width: 64px;
+  height: 64px;
 }
 </style>
 

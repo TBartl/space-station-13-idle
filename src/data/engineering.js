@@ -8,7 +8,12 @@ export const ITEMS = {
 		name: "Mech Claw",
 		sellPrice: 0,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/meleesmall.png")
+		icon: require("@/assets/art/engineering/meleesmall.png"),
+		restrictions: ["mech"],
+		stats: {
+			power: 10,
+			attackSpeed: 4
+		}
 	},
 	mechWeaponDrill: {
 		name: "Mech Drill",

@@ -74,6 +74,7 @@ export default {
 .stat-detail {
   display: inline-block;
   width: 50%;
+	min-width: 64px;
   padding: 2px 4px;
   border: 1px solid rgba(135, 138, 148, 0.322);
   background-color: rgba(176, 200, 216, 0.438);

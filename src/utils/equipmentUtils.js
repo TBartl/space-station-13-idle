@@ -18,3 +18,14 @@ export function getEquipmentStackable(itemId) {
 export function getBankItemsOfSlot(bank, slot) {
 	return Object.keys(bank).filter(itemId => getEquipmentSlot(itemId) == slot);
 }
+
+export function getRestricted({ }, itemId) {
+	let item = ITEMS[itemId];
+	if (!item.restrictions) return false;
+	for (let restriction of item.restrictions) {
+		if (restriction) {
+			return true;
+		}
+	}
+	return false;
+}

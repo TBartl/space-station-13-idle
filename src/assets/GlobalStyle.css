@@ -82,6 +82,12 @@ img {
 	border-radius: 8px;
 	color: white;
 }
+.warning-bubble {
+  padding: 0.1rem 0.35rem;
+  background-color: rgb(134, 115, 5);
+	border-radius: 8px;
+	color: white;
+}
 
 .popover {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.459);

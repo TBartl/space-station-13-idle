@@ -5,7 +5,6 @@ export const ITEMS = {
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/fabrication/crowbar.png"),
 		overlay: require("@/assets/art/fabrication/crowbar_overlay.png"),
-		
 	},
 	ripley: {
 		name: "R.I.P.L.E.Y.",
@@ -13,7 +12,14 @@ export const ITEMS = {
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		overlay: require("@/assets/art/fabrication/mechripley.png"),
-		overlayHidePlayer: true
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
