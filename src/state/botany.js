@@ -6,8 +6,12 @@ import { ACTIONS } from "@/data/botany"
 
 const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters:{
-		jobActions() {
-			return ACTIONS;
+		jobId() {
+			return "botany";
+		},
+		baseActions(state, getters, rootState, rootGetters) {
+			let actions = cloneDeep(ACTIONS);
+			return actions;
 		}
 	}
 });

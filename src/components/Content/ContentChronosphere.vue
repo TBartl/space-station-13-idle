@@ -2,8 +2,8 @@
   <div class="content-settings">
     <content-header
       text="Settings"
-      :icon="require('@/assets/art/sidebar/gear.png')"
-      color="rgb(231, 150, 28)"
+      :icon="require('@/assets/art/sidebar/chronohelmet.png')"
+      color="#3ac5ff"
     />
     <div class="content-container">
       <div class="row">

@@ -8,7 +8,7 @@
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time | stat}} SECONDS</p>
-      <img :id="'action-icon-'+id" :src="action.icon" alt class="mt-2 mb-2" />
+      <img :id="'action-icon-'+id" :src="icon" alt class="mt-2 mb-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="top" delay="0">
         <item-chance :data="action" />
       </b-popover>
@@ -75,8 +75,13 @@ export default {
     actionTitle() {
       if (this.action.name) return this.action.name;
       if (this.action.item) return this.item.name;
-      return "BAD TITLE";
-    }
+      return "BAD NAME";
+		},
+		icon() {
+			if (this.action.icon) return this.action.icon;
+			if (this.action.item) return this.item.icon;
+			return null;
+		}
   },
   methods: {
     tryStartAction(actionId) {

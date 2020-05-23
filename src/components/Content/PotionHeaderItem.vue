@@ -6,10 +6,9 @@
       @click="equip"
     >
       <span>({{itemCount}})</span>
-      <img class="equipment-icon" :src="item.icon" />
-      <span v-if="item.healAmount">+{{item.healAmount}} HP</span>
+      <img class="potion-icon" :src="item.icon" />
     </button>
-    <item-popover :itemId="itemId" :target="id" placement="right" />
+    <item-popover :itemId="itemId" :target="id" placement="left" />
   </div>
 </template>
 
@@ -32,14 +31,14 @@ export default {
   },
   methods: {
     equip() {
-      this.$store.dispatch("inventory/equip", this.itemId);
+      this.$store.dispatch("potions/set", this.itemId);
     }
   }
 };
 </script>
 
 <style scoped>
-.equipment-icon {
-  width: 48px;
+.potion-icon {
+  width: 32px;
 }
 </style>

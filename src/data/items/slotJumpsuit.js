@@ -16,4 +16,19 @@ export default {
 			evasion: 3,
 		}
 	},
+	jumpsuitExplorer: {
+		name: "Explorer's Jumpsuit",
+		sellPrice: 300,
+		equipmentSlot: "jumpsuit",
+		icon: require("@/assets/art/combat/items/explorerjumpsuit.png"),
+		overlay: require("@/assets/art/combat/items/explorerjumpsuit_overlay.png"),
+		stats: {
+			maxHealth: 5,
+			evasion: 2
+		},
+		description: "+20% mining XP",
+		xpBonuses: {
+			mining: 20
+		}
+	}
 }
