@@ -18,10 +18,17 @@ const upgrades = {
 	mutations: {
 		_set(state, itemId) {
 			let item = ITEMS[itemId];
-			Vue.set(state.potions, item.potionJob, {
-				itemId,
-				charges: item.potionCharges
-			})
+			let currentPotion = state.potions[item.potionJob];
+			// Minor optimization; don't set the whole object or anything just looking for the itemid will need to recompute
+			if (currentPotion && currentPotion.itemId == itemId) {
+				currentPotion.count = item.potionCharges
+			}
+			else {
+				Vue.set(state.potions, item.potionJob, {
+					itemId,
+					charges: item.potionCharges
+				})
+			}
 		},
 		remove(state, jobId) {
 			Vue.delete(state.potions, jobId);

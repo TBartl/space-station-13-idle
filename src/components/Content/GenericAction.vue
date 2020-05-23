@@ -75,7 +75,7 @@ export default {
     actionTitle() {
       if (this.action.name) return this.action.name;
       if (this.action.item) return this.item.name;
-      return "BAD TITLE";
+      return "BAD NAME";
 		},
 		icon() {
 			if (this.action.icon) return this.action.icon;
