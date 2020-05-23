@@ -64,14 +64,88 @@ export default {
 			power: 50,
 		}
 	},
-	rifleAmmo: {
-		name: "Rifle Ammo",
-		sellPrice: 0,
+	ammoE1: {
+		name: "Disabling Cell",
+		sellPrice: 3,
 		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammosmall.png"),
+		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		ammoType: "energized",
+		stats: {
+			power: 7,
+		}
+	},
+	ammoE2: {
+		name: "Stunning Cell",
+		sellPrice: 9,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_e2.png"),
+		ammoType: "energized",
+		stats: {
+			power: 18,
+		}
+	},
+	ammoE3: {
+		name: "Lethal Cell",
+		sellPrice: 22,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_e3.png"),
+		ammoType: "energized",
+		stats: {
+			power: 28,
+		}
+	},
+	ammoE4: {
+		name: "Disintegration Cell",
+		sellPrice: 75,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_e4.png"),
+		ammoType: "energized",
+		stats: {
+			power: 35,
+		}
+	},
+	ammoB1: {
+		name: "Beanbag Shell",
+		sellPrice: 2,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_b1.png"),
 		ammoType: "ballistic",
 		stats: {
-			power: 3
+			power: 5,
+			precision: 50
+		}
+	},
+	ammoB2: {
+		name: "Birdshot Shell",
+		sellPrice: 8,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_b2.png"),
+		ammoType: "ballistic",
+		stats: {
+			power: 13,
+			precision: 50
+		}
+	},
+	ammoB3: {
+		name: "Buckshot Shell",
+		sellPrice: 16,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_b3.png"),
+		ammoType: "ballistic",
+		stats: {
+			power: 20,
+			precision: 50
+		}
+	},
+	ammoB4: {
+		name: "Breaching Shell",
+		sellPrice: 52,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/ammo_b4_anim.gif"),
+		ammoType: "ballistic",
+		stats: {
+			power: 25,
+			precision: 50
 		}
 	},
 	mechGunCanno: {

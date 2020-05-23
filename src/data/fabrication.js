@@ -1,20 +1,10 @@
 export const ACTIONS = {
-	fabricateCrowbar: {
-		time: 2,
-		item: "crowbar",
-		icon: require("@/assets/art/fabrication/crowbar.png"),
-		xp: 10,
-		requiredLevel: 1,
-		requiredItems: {
-			iron: 1
-		}
-	},
 	fabricateRipley: {
 		time: 60,
 		item: "ripley",
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		xp: 2600,
-		requiredLevel: 2,
+		requiredLevel: 7,
 		requiredItems: {
 			iron: 100,
 			glass: 20,
@@ -194,12 +184,150 @@ export const ACTIONS = {
 		xp: 3900,
 		requiredLevel: 50,
 		requiredItems: {
-			uranium: 10,
-			plasma: 60,
-			diamond: 50,
-			bluespace: 75
+			iron: 1
 		}
-	}
+	},
+	fabricateEammo1: {
+		time: .1,
+		item: "ammoE1",
+		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		xp: 10,
+		requiredLevel: 1,
+		requiredItems: {
+			iron: 1
+		}
+	},
+	fabricateEammo2: {
+		time: .1,
+		item: "ammoE2",
+		icon: require("@/assets/art/combat/items/ammo_e2.png"),
+		xp: 20,
+		requiredLevel: 20,
+		requiredItems: {
+			gold: 1
+		}
+	},
+	fabricateEammo3: {
+		time: .1,
+		item: "ammoE3",
+		icon: require("@/assets/art/combat/items/ammo_e3.png"),
+		xp: 30,
+		requiredLevel: 30,
+		requiredItems: {
+			plasma: 1
+		}
+	},
+	fabricateBammo1: {
+		time: .1,
+		item: "ammoB1",
+		icon: require("@/assets/art/combat/items/ammo_b1.png"),
+		xp: 10,
+		requiredLevel: 5,
+		requiredItems: {
+			glass: 1
+		}
+	},
+	fabricateBammo2: {
+		time: .1,
+		item: "ammoB2",
+		icon: require("@/assets/art/combat/items/ammo_b2.png"),
+		xp: 20,
+		requiredLevel: 21,
+		requiredItems: {
+			titanium: 1
+		}
+	},
+	fabricateBammo3: {
+		time: .1,
+		item: "ammoB3",
+		icon: require("@/assets/art/combat/items/ammo_b3.png"),
+		xp: 30,
+		requiredLevel: 34,
+		requiredItems: {
+			diamond: 1
+		}
+	},
+	fabricateEgun1: {
+		time: 8,
+		item: "gunE1",
+		icon: require("@/assets/art/combat/items/gune_PKA.png"),
+		xp: 100,
+		requiredLevel: 10,
+		requiredItems: {
+			silver: 5
+		}
+	},
+	fabricateEgun3: {
+		time: 8,
+		item: "gunE3",
+		icon: require("@/assets/art/combat/items/gune_cutter.png"),
+		xp: 60,
+		requiredLevel: 20,
+		requiredItems: {
+			titanium: 5
+		}
+	},
+	fabricateEgun4: {
+		time: 8,
+		item: "gunE4",
+		icon: require("@/assets/art/combat/items/gune_laser.png"),
+		xp: 60,
+		requiredLevel: 30,
+		requiredItems: {
+			plasma: 5
+		}
+	},
+	fabricateEgun6: {
+		time: 8,
+		item: "gunE6",
+		icon: require("@/assets/art/combat/items/gune_energy.png"),
+		xp: 60,
+		requiredLevel: 40,
+		requiredItems: {
+			bluespace: 5
+		}
+	},
+	fabricateBgun1: {
+		time: 8,
+		item: "gunB1",
+		icon: require("@/assets/art/combat/items/gunb_shot1.png"),
+		xp: 60,
+		requiredLevel: 8,
+		requiredItems: {
+			glass: 5
+		}
+	},
+	fabricateBgun3: {
+		time: 8,
+		item: "gunB3",
+		icon: require("@/assets/art/combat/items/gunb_shot3.png"),
+		xp: 60,
+		requiredLevel: 16,
+		requiredItems: {
+			gold: 5
+		}
+	},
+	fabricateBgun4: {
+		time: 8,
+		item: "gunB4",
+		icon: require("@/assets/art/combat/items/gunb_shot4.png"),
+		xp: 60,
+		requiredLevel: 24,
+		requiredItems: {
+			uranium: 5
+		}
+	},
+	fabricateBgun6: {
+		time: 8,
+		item: "gunB6",
+		icon: require("@/assets/art/combat/items/gunb_shot6.png"),
+		xp: 60,
+		requiredLevel: 36,
+		requiredItems: {
+			diamond: 5
+		}
+	},
+
 }
 
 export const JOB = {
