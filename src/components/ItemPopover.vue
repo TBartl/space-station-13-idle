@@ -2,10 +2,10 @@
   <b-popover :target="target" triggers="hover" placement="bottom" delay="0">
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
-      <span v-if="item.healAmount" class="my-1">Heals +{{item.healAmount}} HP</span>
-      <span v-if="item.equipmentSlot" class="my-1">Equippable</span>
+      <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
+      <span v-if="item.equipmentSlot" class="mt-1">Equippable</span>
       <div
-        class="requirement p-1 my-1 rounded d-flex flex-row align-items-center"
+        class="requirement p-1 mt-1 rounded d-flex flex-row align-items-center"
         :class="requirement.class"
         v-for="(requirement, index) in requirements"
         :key="index"
@@ -17,14 +17,15 @@
       <span
         v-for="(allow, index) in allows"
         :key="index"
-        class="success-bubble my-1"
+        class="success-bubble mt-1"
       >Allows: {{allow.toUpperCase()}}</span>
       <span
         v-for="(restriction, index) in restrictions"
         :key="index"
-        class="warning-bubble my-1"
+        class="warning-bubble mt-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
-      <stats-panel class="my-1" v-if="item.stats" :stats="item.stats" />
+			<span class="mt-1" v-if="item.description">{{item.description}}</span>
+      <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
   </b-popover>
