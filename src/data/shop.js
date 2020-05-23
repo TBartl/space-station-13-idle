@@ -5,7 +5,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-matic",
-		purchases: []
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology"]
 	},
 ]
 
@@ -69,5 +69,47 @@ export const PURCHASES = {
 		requiredItems: {
 			money: Math.round(5000 * 50 * .8)
 		}
-	}
+	},
+	capeMining: {
+		item: "capeMining",
+		description: "Requires max fabrication to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeEngineering: {
+		item: "capeEngineering",
+		description: "Requires max engineering to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeFabrication: {
+		item: "capeFabrication",
+		description: "Requires max mining to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeGraytiding: {
+		item: "capeGraytiding",
+		description: "Requires max Graytiding to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeBotany: {
+		item: "capeBotany",
+		description: "Requires max botany to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeXenobiology: {
+		item: "capeXenobiology",
+		description: "Requires max xenobiology to wear.",
+		requiredItems: {
+			money: 1000000
+		}
+	},
 }
