@@ -161,7 +161,7 @@ export const PURCHASES = {
 		}
 	},
 	seed2000: {
-		name: "Plant seeds x2000",
+		name: "Plant seeds x2,000",
 		description: "For all your botany needs. 15% discount!",
 		icon: require('@/assets/art/botany/seed.png'),
 		items: {
@@ -173,7 +173,7 @@ export const PURCHASES = {
 		}
 	},
 	seed5000: {
-		name: "Plant seeds x5000",
+		name: "Plant seeds x5,000",
 		description: "For all your botany needs. 20% discount!",
 		icon: require('@/assets/art/botany/seed.png'),
 		items: {
