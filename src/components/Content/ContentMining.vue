@@ -46,7 +46,7 @@ export default {
       return JOB;
     },
     viewableActions() {
-			let actions = this.$store.getters[this.jobId + "/jobActions"];
+			let actions = this.$store.getters[this.jobId + "/completeActions"];
       let entries = Object.entries(actions);
       let lastActionable = findLastIndex(entries, entry => {
         return this.level >= entry[1].requiredLevel;

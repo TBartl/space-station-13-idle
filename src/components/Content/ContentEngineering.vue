@@ -21,7 +21,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB, ACTIONS } from "@/data/engineering";
+import { JOB } from "@/data/engineering";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import GenericAction from "@/components/Content/GenericAction";
@@ -42,7 +42,8 @@ export default {
       return JOB;
     },
     viewableActions() {
-      let entries = Object.entries(ACTIONS);
+			let actions = this.$store.getters[this.jobId + "/completeActions"];
+      let entries = Object.entries(actions);
       let lastActionable = findLastIndex(entries, entry => {
         return this.level >= entry[1].requiredLevel;
       });

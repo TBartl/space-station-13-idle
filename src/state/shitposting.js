@@ -6,8 +6,12 @@ import { ACTIONS } from "@/data/shitposting"
 
 const shitposting = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
-		jobActions() {
-			return ACTIONS;
+		jobId() {
+			return "shitposting";
+		},
+		baseActions(state, getters, rootState, rootGetters) {
+			let actions = cloneDeep(ACTIONS);
+			return actions;
 		}
 	}
 });

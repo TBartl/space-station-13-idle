@@ -17,7 +17,7 @@ export default {
 		}
 	},
 	jumpsuitExplorer: {
-		name: "Explorers Jumpsuit",
+		name: "Explorer's Jumpsuit",
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/explorerjumpsuit.png"),

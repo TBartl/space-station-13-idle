@@ -6,8 +6,12 @@ import { ACTIONS } from "@/data/fabrication"
 
 const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
-		jobActions() {
-			return ACTIONS;
+		jobId() {
+			return "fabrication";
+		},
+		baseActions(state, getters, rootState, rootGetters) {
+			let actions = cloneDeep(ACTIONS);
+			return actions;
 		}
 	}
 });

@@ -6,8 +6,12 @@ import { ACTIONS } from "@/data/graytiding"
 
 const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
-		jobActions() {
-			return ACTIONS;
+		jobId() {
+			return "graytiding";
+		},
+		baseActions(state, getters, rootState, rootGetters) {
+			let actions = cloneDeep(ACTIONS);
+			return actions;
 		}
 	}
 });

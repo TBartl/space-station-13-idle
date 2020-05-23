@@ -1,5 +1,6 @@
-// Requires the store to implement getters.jobActions and actions.finishAction(actionId)
+// Requires the store to implement getters.completeActions and actions.finishAction(actionId)
 
+import ITEMS from "@/data/items";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { createCoroutineModule } from "./coroutine";
 
@@ -17,7 +18,7 @@ export default {
 		currentActionId(state) { return state.currentActionId },
 		hasActionRequiredItems(state, getters, rootState, rootGetters) {
 			return (actionId) => {
-				let action = getters.jobActions[actionId];
+				let action = getters.completeActions[actionId];
 				if (!action.requiredItems) return true;
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
 					let count = rootGetters["inventory/bank"][itemId];
@@ -26,6 +27,24 @@ export default {
 				}
 				return true;
 			}
+		},
+		completeActions(state, getters, rootState, rootGetters) {
+			let xpBonus = 0;
+			for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+				let itemId = equipment.itemId;
+				if (!itemId) continue;
+				let item = ITEMS[itemId];
+				if (item.xpBonuses) {
+					let bonus = item.xpBonuses[getters["jobId"]];
+					if (bonus) xpBonus += bonus;
+				}
+			}
+			// We could clone this, but it's already getting cloned a layer down so *shrug*
+			let actions = getters.baseActions;
+			for (let action of Object.values(actions)) {
+				action.xp *= (1 + xpBonus / 100);
+			}
+			return actions;
 		}
 	},
 	mutations: {
@@ -43,7 +62,7 @@ export default {
 			dispatch("actionCoroutine/cancel");
 		},
 		tryStartAction({ commit, state, getters, dispatch }, actionId) {
-			let action = getters.jobActions[actionId];
+			let action = getters.completeActions[actionId];
 			if (getters["level"] < action.requiredLevel) return;
 
 			let previousActionId = state.currentActionId;
@@ -65,7 +84,7 @@ export default {
 		},
 		finishAction({ commit, getters, dispatch }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
-			let action = getters.jobActions[actionId];
+			let action = getters.completeActions[actionId];
 			let yieldedItems = acquireItemFrom(action);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
 				commit("inventory/changeItemCount", { itemId, count }, { root: true });
