@@ -1,5 +1,5 @@
 <template>
-  <b-popover :target="target" triggers="hover" placement="bottom" delay="0">
+  <b-popover :target="target" triggers="hover" :placement="popoverPlacement" delay="0">
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
       <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
@@ -24,8 +24,8 @@
         :key="index"
         class="warning-bubble mt-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
-			<span class="description mt-1" v-if="item.description">{{item.description}}</span>
-			<span class="potion-charges mt=1" v-if="item.potionCharges">Charges: {{item.potionCharges}}</span>
+      <span class="description mt-1" v-if="item.description">{{item.description}}</span>
+      <span class="potion-charges mt=1" v-if="item.potionCharges">Charges: {{item.potionCharges}}</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
@@ -37,14 +37,17 @@ import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import { ALL_JOBS } from "@/data/jobs";
-import { getEquipmentSlot } from '@/utils/equipmentUtils';
+import { getEquipmentSlot } from "@/utils/equipmentUtils";
 
 export default {
-  props: ["itemId", "target"],
+  props: ["itemId", "target", "placement"],
   components: { StatsPanel, InventoryPriceDisplay },
   computed: {
     item() {
       return ITEMS[this.itemId];
+    },
+    popoverPlacement() {
+      return this.placement ? this.placement : "bottom";
     },
     requirements() {
       if (!this.item.requires) return;
@@ -63,8 +66,8 @@ export default {
           class: jobLevel >= requiredLevel ? "alert-success" : "alert-danger"
         };
       });
-		},
-		allows() {
+    },
+    allows() {
       let allows = [];
       if (this.item.liftsRestrictions) {
         allows = allows.concat(this.item.liftsRestrictions);
@@ -96,12 +99,12 @@ export default {
   width: 32px;
 }
 .description {
-	max-width: 200px;
-	text-align: center;
-	white-space: pre-wrap;
+  max-width: 200px;
+  text-align: center;
+  white-space: pre-wrap;
 }
 .potion-charges {
-	font-weight: bold;
-	color: gray;
+  font-weight: bold;
+  color: gray;
 }
 </style>

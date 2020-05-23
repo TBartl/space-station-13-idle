@@ -17,6 +17,7 @@ const POTIONS = {
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/faunaPerfume.png"),
 		description: "Mining has a chance to yield a special bonus item.",
+		potionJob: "mining",
 		potionCharges: "20"
 	},
 	lube: {
