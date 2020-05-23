@@ -11,15 +11,23 @@
       <div class="requires d-flex flex-row align-items-center">
         <span class="requires mr-1">Requires:</span>
         <div
+          v-for="(pair, index) in Object.entries(requiredLevels)"
+          :key="'level'+index"
+          class="d-flex flex-row align-items-center"
+        >
+          {{allJobs[pair[0]]}}
+          <img :src="allJobs.find(job => job.id == pair[0]).icon" />
+          <span>lvl{{pair[1]}}</span>
+        </div>
+        <div
           v-for="(pair, index) in Object.entries(requiredItems)"
-          :key="index"
+          :key="'item'+index"
           class="d-flex flex-row align-items-center"
         >
           <img :id="id+index" :src="items[pair[0]].icon" />
           <item-popover :target="id+index" :itemId="pair[0]" />
           <span>x{{pair[1] | cleanNum}}</span>
         </div>
-        <span v-if="isFree">Free!</span>
       </div>
     </div>
   </div>
@@ -29,6 +37,7 @@
 import ITEMS from "@/data/items";
 import { PURCHASES } from "@/data/shop";
 import ItemPopover from "@/components/ItemPopover";
+import { ALL_JOBS } from "@/data/jobs";
 export default {
   components: { ItemPopover },
   props: ["purchaseId"],
@@ -41,6 +50,9 @@ export default {
     },
     items() {
       return ITEMS;
+    },
+    allJobs() {
+      return ALL_JOBS;
     },
     purchase() {
       return PURCHASES[this.purchaseId];
@@ -62,9 +74,9 @@ export default {
       if (!this.purchase.requiredItems) return {};
       return this.purchase.requiredItems;
     },
-    isFree() {
-      if (this.purchase.requiredItems) return false;
-      return false;
+    requiredLevels() {
+      if (!this.purchase.requiredLevels) return {};
+      return this.purchase.requiredLevels;
     }
   },
   methods: {
@@ -96,5 +108,8 @@ export default {
 }
 .locked .requires {
   color: rgb(241, 241, 241);
+}
+.requires img {
+  width: 32px;
 }
 </style>

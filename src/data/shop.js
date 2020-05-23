@@ -1,7 +1,13 @@
+import { MAX_LEVEL } from "@/data/experience";
+
 export const SECTIONS = [
 	{
 		name: "MegaSeed Servitor",
 		purchases: ['seed10', 'seed100', 'seed500', 'seed2000', 'seed5000']
+	},
+	{
+		name: "Upgrade Terminal",
+		purchases: ["upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5"]
 	},
 	{
 		name: "Clothes Vendo-matic",
@@ -73,6 +79,9 @@ export const PURCHASES = {
 	capeMining: {
 		item: "capeMining",
 		description: "Requires max fabrication to wear.",
+		requiredLevels: {
+			mining: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
@@ -80,6 +89,9 @@ export const PURCHASES = {
 	capeEngineering: {
 		item: "capeEngineering",
 		description: "Requires max engineering to wear.",
+		requiredLevels: {
+			engineering: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
@@ -87,6 +99,9 @@ export const PURCHASES = {
 	capeFabrication: {
 		item: "capeFabrication",
 		description: "Requires max mining to wear.",
+		requiredLevels: {
+			fabrication: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
@@ -94,6 +109,9 @@ export const PURCHASES = {
 	capeGraytiding: {
 		item: "capeGraytiding",
 		description: "Requires max Graytiding to wear.",
+		requiredLevels: {
+			graytiding: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
@@ -101,6 +119,9 @@ export const PURCHASES = {
 	capeBotany: {
 		item: "capeBotany",
 		description: "Requires max botany to wear.",
+		requiredLevels: {
+			botany: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
@@ -108,8 +129,86 @@ export const PURCHASES = {
 	capeXenobiology: {
 		item: "capeXenobiology",
 		description: "Requires max xenobiology to wear.",
+		requiredLevels: {
+			xenobiology: MAX_LEVEL
+		},
 		requiredItems: {
 			money: 1000000
 		}
 	},
+	upgradeMining1: {
+		name: "Upgrade Mining Tools",
+		description: "Increases mining speed by +20%",
+		icon: require('@/assets/art/mining/upgrade1.png'),
+		requiredItems: {
+			money: 10000
+		},
+		requiredLevels: {
+			mining: 10
+		},
+		upgrade: "miningTools",
+		requiredUpgrades: {
+			miningTools: 0
+		}
+	},
+	upgradeMining2: {
+		name: "Upgrade Mining Tools",
+		description: "Increases mining speed by +20%, to +40%",
+		icon: require('@/assets/art/mining/upgrade1.png'),
+		requiredItems: {
+			money: 75000
+		},
+		requiredLevels: {
+			mining: 20
+		},
+		upgrade: "miningTools",
+		requiredUpgrades: {
+			miningTools: 1
+		}
+	},
+	upgradeMining3: {
+		name: "Upgrade Mining Tools",
+		description: "Increases mining speed by an additional +20%, to +60%",
+		icon: require('@/assets/art/mining/upgrade1.png'),
+		requiredItems: {
+			money: 250000
+		},
+		requiredLevels: {
+			mining: 30
+		},
+		upgrade: "miningTools",
+		requiredUpgrades: {
+			miningTools: 2
+		}
+	},
+	upgradeMining4: {
+		name: "Upgrade Mining Tools",
+		description: "Increases mining speed by an additional +20%, to +80%",
+		icon: require('@/assets/art/mining/upgrade1.png'),
+		requiredItems: {
+			money: 800000
+		},
+		requiredLevels: {
+			mining: 40
+		},
+		upgrade: "miningTools",
+		requiredUpgrades: {
+			miningTools: 3
+		}
+	},
+	upgradeMining5: {
+		name: "Upgrade Mining Tools",
+		description: "Increases mining speed by an additional +20%, to +100%",
+		icon: require('@/assets/art/mining/upgrade1.png'),
+		requiredItems: {
+			money: 2000000
+		},
+		requiredLevels: {
+			mining: 50
+		},
+		upgrade: "miningTools",
+		requiredUpgrades: {
+			miningTools: 4
+		}
+	}
 }

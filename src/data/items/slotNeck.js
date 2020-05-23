@@ -1,3 +1,5 @@
+import { MAX_LEVEL } from "@/data/experience";
+
 export default {
 	capeMining: {
 		name: "Mining Mastery Cloak",
@@ -13,7 +15,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			mining: 50
+			mining: MAX_LEVEL
 		}
 	},
 	capeEngineering: {
@@ -30,7 +32,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			engineering: 50
+			engineering: MAX_LEVEL
 		}
 	},
 	capeFabrication: {
@@ -47,7 +49,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			fabrication: 50
+			fabrication: MAX_LEVEL
 		}
 	},
 	capeGraytiding: {
@@ -64,7 +66,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			graytiding: 50
+			graytiding: MAX_LEVEL
 		}
 	},
 	capeBotany: {
@@ -81,7 +83,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			botany: 50
+			botany: MAX_LEVEL
 		}
 	},
 	capeXenobiology: {
@@ -98,7 +100,7 @@ export default {
 			power: 10,
 		},
 		requires: {
-			xenobiology: 50
+			xenobiology: MAX_LEVEL
 		}
 	},
 }

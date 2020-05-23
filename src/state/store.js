@@ -22,6 +22,7 @@ import rangedPower from "./rangedPower";
 import evasion from "./evasion";
 import combat from './combat';
 import inventory from './inventory';
+import upgrades from './upgrades';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -41,6 +42,7 @@ const modules = {
 	evasion,
 	combat,
 	inventory,
+	upgrades,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
