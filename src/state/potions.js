@@ -27,10 +27,11 @@ const upgrades = {
 			Vue.delete(state.potions, jobId);
 		},
 		useCharge(state, jobId) {
+			if (!state.potions[jobId]) return;
 			state.potions[jobId].charges -= 1;
 			if (state.potions[jobId].charges == 0) {
 				//TODO add reuse
-				Vue.delete(state.potion, jobId);
+				Vue.delete(state.potions, jobId);
 			}
 		}
 	},
