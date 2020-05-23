@@ -152,10 +152,10 @@ export default {
 			evasion: 3,
 		}
 	},
-	faceMeson: {
+	faceSyndicate: {
 		name: "Syndicate Mask",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/face_syndicat.png"),
+		icon: require("@/assets/art/combat/items/face_syndicate.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_syndicate_overlay_anim.gif"),
 		stats: {
