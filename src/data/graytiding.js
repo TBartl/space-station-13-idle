@@ -1,6 +1,3 @@
-export const ITEMS = {
-}
-
 export const ACTIONS = {
 	graytideDebugA: {
 		name: "DEBUG A",
@@ -99,6 +96,5 @@ export const JOB = {
 	id: "graytiding",
 	name: "Graytiding",
 	icon: require("@/assets/art/graytiding/icon.png"),
-	color: "#B0B0B0",
-	items: ITEMS
+	color: "#B0B0B0"
 }

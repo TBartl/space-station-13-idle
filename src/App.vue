@@ -2,7 +2,7 @@
   <div id="app">
 		<toast-container />
     <div class="mega-container">
-      <sidebar/>
+      <sidebar class="side-bar"/>
       <content-wrapper />
     </div>
     <modals-container />
@@ -44,5 +44,24 @@ body {
 .mega-container * {
 	height: 100%;
 	overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: #2C343F; 
+}
+ 
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(109, 109, 109, 0.5); 
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 </style>

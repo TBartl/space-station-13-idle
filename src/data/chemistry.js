@@ -1,11 +1,3 @@
-export const ITEMS = {
-	lube: {
-		name: "SpaceLube",
-		sellPrice: 0,
-		icon: require("@/assets/art/chemistry/lube.png")
-	}
-}
-
 export const ACTIONS = {
 	chemLube: {
 		time: 1,
@@ -25,5 +17,4 @@ export const JOB = {
 	name: "Chemistry",
 	icon: require("@/assets/art/chemistry/icon.png"),
 	color: "#FFAE19",
-	items: ITEMS
 }

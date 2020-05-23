@@ -1,69 +1,3 @@
-export const ITEMS = {
-	power: {
-		name: "Power",
-		sellPrice: 0,
-		icon: require("@/assets/art/engineering/power.png")
-	},
-	mechWeaponClaw: {
-		name: "Mech Claw",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/meleesmall.png"),
-		restrictions: ["mech"],
-		stats: {
-			power: 10,
-			attackSpeed: 4
-		}
-	},
-	mechWeaponDrill: {
-		name: "Mech Drill",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/meleebig.png")
-	},
-	mechGunRifle: {
-		name: "Mounted Rifle",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunsmall.png"),
-		restrictions: ["mech"],
-		ammoType: "ballistic",
-		stats: {
-			weaponSpeed: 4,
-			power: 15,
-			precision: 5
-		}
-	},
-	rifleAmmo: {
-		name: "Rifle Ammo",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammosmall.png"),
-		ammoType: "ballistic",
-		stats: {
-			power: 3
-		}
-	},
-	mechGunCanno: {
-		name: "Mounted Cannon",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/gunbig.png")
-	},
-	cannonAmmo: {
-		name: "Cannon Ammo",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammobig.png")
-	},
-	mechGunEnergyRifle: {
-		name: "Mech Energy Rifle",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunenergy.png")
-	},
-}
-
 export const ACTIONS = {
 	engBike: {
 		time: 1,
@@ -128,6 +62,5 @@ export const JOB = {
 	id: "engineering",
 	name: "Engineering",
 	icon: require("@/assets/art/engineering/icon.png"),
-	color: "#FFDB00",
-	items: ITEMS
+	color: "#FFDB00"
 }

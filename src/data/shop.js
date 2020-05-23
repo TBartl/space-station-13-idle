@@ -1,81 +1,73 @@
-export const ITEMS = {
-	money: {
-		name: "Space Coins",
-		icon: require("@/assets/art/misc/coin-padded.png")
-	}, spaghetti: {
-		name: "Spaghetti",
-		sellPrice: 100,
-		icon: require('@/assets/art/shop/items/spaghetti.png'),
-		healAmount: 30
-	},
-};
-
 export const SECTIONS = [
 	{
-		name: "Debug Section",
-		purchases: ['debugFreeMoney', 'debugFreeSpaghetti','buyPlantseed'],
-		item: "money"
+		name: "MegaSeed Servitor",
+		purchases: ['seed10', 'seed100', 'seed500', 'seed2000', 'seed5000']
 	},
 	{
-		name: "Debug Equipment Section",
-		purchases: ['debugMechClaw', 'debugMechDrill', 'debugCrowbar', 'debugSord', 'debugRipley', 'debugDurand', "debugRiotSuit", "debugSyndiHardsuit", "debuglvl10", "debuglvl20", "debuglvl30", "debuglvl40", "debuglvl50"],
-		item: "money"
-	}
+		name: "Clothes Vendo-matic",
+		purchases: []
+	},
 ]
 
 export const PURCHASES = {
-	buyPlantseed: {
-		item: "plantseed"
+	seed10: {
+		name: "Plant seeds x10",
+		description: "For all your botany needs.",
+		icon: require('@/assets/art/botany/seed.png'),
+		items: {
+			id: "plantSeed",
+			count: 10
+		},
+		requiredItems: {
+			money: 10 * 50
+		}
 	},
-	debugFreeMoney: {
-		name: "Lods o' emone",
-		description: "What's that spell? Loads of money! Prob'ly...",
-		icon: require('@/assets/art/misc/coin.png'),
-		item: "money"
+	seed100: {
+		name: "Plant seeds x100",
+		description: "For all your botany needs. 5% discount!",
+		icon: require('@/assets/art/botany/seed.png'),
+		items: {
+			id: "plantSeed",
+			count: 100
+		},
+		requiredItems: {
+			money: Math.round(100 * 50 * .95)
+		}
 	},
-	debugFreeSpaghetti: {
-		name: "Spaghetti",
-		description: "I'll have the spaghetti and meatballs",
-		icon: require('@/assets/art/shop/items/spaghetti.png'),
-		item: "spaghetti"
+	seed500: {
+		name: "Plant seeds x500",
+		description: "For all your botany needs. 10% discount!",
+		icon: require('@/assets/art/botany/seed.png'),
+		items: {
+			id: "plantSeed",
+			count: 500
+		},
+		requiredItems: {
+			money: Math.round(500 * 50 * .90)
+		}
 	},
-	debugMechClaw: {
-		item: "mechWeaponClaw"
+	seed2000: {
+		name: "Plant seeds x2,000",
+		description: "For all your botany needs. 15% discount!",
+		icon: require('@/assets/art/botany/seed.png'),
+		items: {
+			id: "plantSeed",
+			count: 2000
+		},
+		requiredItems: {
+			money: Math.round(2000 * 50 * .85)
+		}
 	},
-	debugMechDrill: {
-		item: "mechWeaponDrill"
-	},
-	debugCrowbar: {
-		item: "crowbar"
-	},
-	debugSord: {
-		item: "sord"
-	},
-	debugRipley: {
-		item: "ripley"
-	},
-	debugDurand: {
-		item: "durand"
-	},
-	debugSyndiHardsuit: {
-		item: "armSyndiSuit"
-	},
-	debugRiotSuit: {
-		item: "armRiotSuit"
-	},
-	debuglvl10: {
-		item: "pill10"
-	},
-	debuglvl20: {
-		item: "pill20"
-	},
-	debuglvl30: {
-		item: "pill30"
-	},
-	debuglvl40: {
-		item: "pill40"
-	},
-	debuglvl50: {
-		item: "pill50"
+	seed5000: {
+		name: "Plant seeds x5,000",
+		description: "For all your botany needs. 20% discount!",
+		icon: require('@/assets/art/botany/seed.png'),
+		items: {
+			id: "plantSeed",
+			count: 5000
+		},
+		requiredItems: {
+			money: Math.round(5000 * 50 * .8)
+		}
 	}
 }

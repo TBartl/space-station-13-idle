@@ -92,11 +92,6 @@ export default {
     box-shadow 0.15s ease-out, -webkit-transform 0.15s ease-out;
   margin-bottom: 1.9rem;
 }
-.action.locked {
-  background-color: rgb(68, 68, 68);
-  border-top: 4px solid #953d3d !important;
-  color: rgb(255, 255, 255) !important;
-}
 .action:not(.locked):hover {
   cursor: pointer;
   box-shadow: 0 0.5rem 2.5rem #e6e6e6;
