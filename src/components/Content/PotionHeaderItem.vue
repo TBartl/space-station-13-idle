@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     equip() {
-      this.$store.commit("potions/set", this.itemId);
+      this.$store.dispatch("potions/set", this.itemId);
     }
   }
 };

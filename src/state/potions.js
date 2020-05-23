@@ -16,7 +16,7 @@ const upgrades = {
 		}
 	},
 	mutations: {
-		set(state, itemId) {
+		_set(state, itemId) {
 			let item = ITEMS[itemId];
 			Vue.set(state.potions, item.potionJob, {
 				itemId,
@@ -32,6 +32,12 @@ const upgrades = {
 				//TODO add reuse
 				Vue.delete(state.potion, jobId);
 			}
+		}
+	},
+	actions: {
+		set({ commit }, itemId) {
+			commit("_set", itemId);
+			commit("inventory/changeItemCount", { itemId, count: -1 }, { root: true });
 		}
 	}
 }

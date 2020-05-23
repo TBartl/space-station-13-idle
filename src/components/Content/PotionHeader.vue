@@ -6,7 +6,7 @@
     <div class="overlay-div position-relative potion-slot mr-2" :id="target">
       <img :src="require('@/assets/art/chemistry/potion.png')" />
       <img v-if="currentPotionItem" :src="currentPotionItem.icon" />
-      <span v-if="currentCount > 1" class="ammo-count danger-bubble">{{currentCount |cleanNum}}</span>
+      <span v-if="currentCount > 1" class="potion-count danger-bubble">{{currentCount |cleanNum}}</span>
     </div>
     <b-popover :target="target" triggers="click blur" placement="bottom" delay="0">
       <div class="d-flex flex-column align-items-center">
@@ -20,9 +20,9 @@
         <span v-if="!currentPotionItemId && validItems.length == 0">No potions available.</span>
       </div>
     </b-popover>
-    <div class="d-flex flex-column align-items-center">
+    <div v-if="currentPotion" class="d-flex flex-column align-items-center">
       <p class="charge-title">CHARGES</p>
-      <p class="charge-number">20/20</p>
+      <p class="charge-number">{{charges}}/{{maxCharges}}</p>
     </div>
   </div>
 </template>
@@ -63,6 +63,14 @@ export default {
         this.currentPotionItemId
       ];
       return count ? count : 0;
+    },
+    charges() {
+			if (!this.currentPotion) return 0;
+			return this.currentPotion.charges;
+    },
+    maxCharges() {
+			if (!this.currentPotion) return 0;
+			return ITEMS[this.currentPotion.itemId].potionCharges;
     }
   },
   methods: {
@@ -75,12 +83,13 @@ export default {
 
 <style scoped>
 .content-block {
-  padding: 0.7rem 0 !important;
+  padding: 01rem 0 !important;
 }
 .potion-count {
   position: absolute;
   bottom: -8px;
   right: -6px;
+	font-size: 10px;
 }
 .potion-slot:hover {
   cursor: pointer;
@@ -94,5 +103,8 @@ export default {
 }
 .charge-title {
   font-size: 11px;
+}
+.charge-number {
+	margin-top: -.5rem;
 }
 </style>
