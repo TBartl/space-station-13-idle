@@ -26,19 +26,26 @@ const upgrades = {
 		remove(state, jobId) {
 			Vue.delete(state.potions, jobId);
 		},
-		useCharge(state, jobId) {
-			if (!state.potions[jobId]) return;
+		_useCharge(state, jobId) {
 			state.potions[jobId].charges -= 1;
-			if (state.potions[jobId].charges == 0) {
-				//TODO add reuse
-				Vue.delete(state.potions, jobId);
-			}
 		}
 	},
 	actions: {
 		set({ commit }, itemId) {
 			commit("_set", itemId);
 			commit("inventory/changeItemCount", { itemId, count: -1 }, { root: true });
+		},
+		useCharge({ state, commit, dispatch, rootGetters }, jobId) {
+			if (!state.potions[jobId]) return;
+			commit("_useCharge", jobId)
+			if (state.potions[jobId].charges <= 0) {
+				let itemId = state.potions[jobId].itemId;
+				if (rootGetters["inventory/bank"][itemId]) {
+					dispatch("set", state.potions[jobId].itemId);
+				} else {
+					commit("remove", jobId);
+				}
+			}
 		}
 	}
 }

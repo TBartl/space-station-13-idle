@@ -97,7 +97,7 @@ export default {
 				}
 			}
 
-			commit("potions/useCharge", getters["jobId"], { root: true });
+			dispatch("potions/useCharge", getters["jobId"], { root: true });
 
 			// Start it again automatically
 			dispatch("_startCoroutine", { actionId, action })
