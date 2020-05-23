@@ -6,7 +6,11 @@
         <div class="col-12 mb-4">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
-        <div class="col-6 col-md-4 col-lg-3 col-xl-2" v-for="[actionId, action] in viewableActions" :key="actionId">
+        <div
+          class="col-6 col-md-4 col-lg-3 col-xl-2"
+          v-for="[actionId, action] in viewableActions"
+          :key="actionId"
+        >
           <generic-action
             :jobId="jobId"
             :actionName="'MINE'"
@@ -21,7 +25,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB, ACTIONS } from "@/data/mining";
+import { JOB } from "@/data/mining";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import GenericAction from "@/components/Content/GenericAction";
@@ -42,7 +46,8 @@ export default {
       return JOB;
     },
     viewableActions() {
-      let entries = Object.entries(ACTIONS);
+			let actions = this.$store.getters[this.jobId + "/jobActions"];
+      let entries = Object.entries(actions);
       let lastActionable = findLastIndex(entries, entry => {
         return this.level >= entry[1].requiredLevel;
       });
