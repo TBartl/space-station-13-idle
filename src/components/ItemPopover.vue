@@ -24,7 +24,8 @@
         :key="index"
         class="warning-bubble mt-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
-			<span class="mt-1" v-if="item.description">{{item.description}}</span>
+			<span class="description mt-1" v-if="item.description">{{item.description}}</span>
+			<span class="potion-charges mt=1" v-if="item.potionCharges">Charges: {{item.potionCharges}}</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
@@ -93,5 +94,14 @@ export default {
 }
 .requirement img {
   width: 32px;
+}
+.description {
+	max-width: 200px;
+	text-align: center;
+	white-space: pre-wrap;
+}
+.potion-charges {
+	font-weight: bold;
+	color: gray;
 }
 </style>
