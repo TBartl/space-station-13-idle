@@ -103,11 +103,26 @@ const inventory = {
 			}
 			return lifted;
 		},
-		canPurchase(state) {
+		shouldShowPurchase(state, getters, rootState, rootGetters) {
+			return (purchase) => {
+				if (purchase.requiredUpgrades) {
+					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
+						if (rootGetters["upgrades/get"](upgradeId) != count) return false;
+					}
+				}
+				return true;
+			}
+		},
+		canPurchase(state, getters, rootState, rootGetters) {
 			return (purchase) => {
 				if (purchase.requiredItems) {
 					for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
 						if (state.bank[itemId] < count) return false;
+					}
+				}
+				if (purchase.requiredLevels) {
+					for (let [jobId, level] of Object.entries(purchase.requiredLevels)) {
+						if (rootGetters[jobId + "/level"] < level) return false;
 					}
 				}
 				return true;
@@ -173,9 +188,13 @@ const inventory = {
 				commit("changeItemCount", { itemId, count: -count });
 			}
 
-			let yieldedItems = acquireItemFrom(purchase);
-			for (let [itemId, count] of Object.entries(yieldedItems)) {
-				commit("changeItemCount", { itemId, count });
+			if (purchase.upgrade) {
+				commit("upgrades/set", purchase.upgrade, { root: true });
+			} else {
+				let yieldedItems = acquireItemFrom(purchase);
+				for (let [itemId, count] of Object.entries(yieldedItems)) {
+					commit("changeItemCount", { itemId, count });
+				}
 			}
 		}
 	}

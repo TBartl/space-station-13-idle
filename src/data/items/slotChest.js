@@ -177,7 +177,7 @@ export default {
 	},
 	phazon: {
 		name: "Phazon",
-		sellPrice: 1000,
+		sellPrice: 100000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechphazon.png")
 	}

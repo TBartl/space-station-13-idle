@@ -14,7 +14,7 @@
           <div class="row">
             <div
               class="col-12 col-lg-6 col-xl-4"
-              v-for="(purchase, index) in section.purchases"
+              v-for="(purchase, index) in filteredPurchases"
               :key="index"
             >
               <shop-purchase :purchaseId="purchase" />
@@ -28,6 +28,7 @@
 
 <script>
 import ShopPurchase from "@/components/Content/Shop/ShopPurchase";
+import { PURCHASES } from "@/data/shop";
 export default {
   components: { ShopPurchase },
   props: ["section"],
@@ -35,6 +36,13 @@ export default {
     return {
       expanded: true
     };
+  },
+  computed: {
+    filteredPurchases() {
+      return this.section.purchases.filter(purchase => {
+        return this.$store.getters["inventory/shouldShowPurchase"](PURCHASES[purchase]);
+      });
+    }
   }
 };
 </script>
