@@ -9,6 +9,7 @@ export const SECTIONS = [
 		name: "Upgrade Terminal",
 		purchases: [
 			"upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5",
+			"upgradeEngineering1", "upgradeEngineering2", "upgradeEngineering3", "upgradeEngineering4", "upgradeEngineering5",
 			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3"
 		]
 	},
@@ -269,11 +270,89 @@ const XENOBIO_UPGRADES = {
 		}
 	}
 }
+const ENGINEERING_UPGRADES = {
+	upgradeEngineering1: {
+		name: "Upgrade Cable Management",
+		description: "Increases engineering XP by 15%",
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {
+			money: 10000
+		},
+		requiredLevels: {
+			engineering: 10
+		},
+		upgrade: "cableManagement",
+		requiredUpgrades: {
+			cableManagement: 0
+		}
+	},
+	upgradeEngineering2: {
+		name: "Upgrade Cable Management",
+		description: "Increases engineering XP by 15%, to +30%",
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {
+			money: 75000
+		},
+		requiredLevels: {
+			engineering: 20
+		},
+		upgrade: "cableManagement",
+		requiredUpgrades: {
+			cableManagement: 1
+		}
+	},
+	upgradeEngineering3: {
+		name: "Upgrade Cable Management",
+		description: "Increases engineering XP by 15%, to +45%",
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {
+			money: 250000
+		},
+		requiredLevels: {
+			engineering: 30
+		},
+		upgrade: "cableManagement",
+		requiredUpgrades: {
+			cableManagement: 2
+		}
+	},
+	upgradeEngineering4: {
+		name: "Upgrade Cable Management",
+		description: "Increases engineering XP by 15%, to +60%",
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {
+			money: 800000
+		},
+		requiredLevels: {
+			engineering: 40
+		},
+		upgrade: "cableManagement",
+		requiredUpgrades: {
+			cableManagement: 3
+		}
+	},
+	upgradeEngineering5: {
+		name: "Upgrade Cable Management",
+		description: "Increases engineering XP by 15%, to +75%",
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {
+			money: 2000000
+		},
+		requiredLevels: {
+			engineering: 50
+		},
+		upgrade: "cableManagement",
+		requiredUpgrades: {
+			cableManagement: 4
+		}
+	}
+}
 
 export const PURCHASES = {
 	...SEEDS,
 	...CAPES,
 	...MINING_UPGRADES,
+	...ENGINEERING_UPGRADES,
 	...XENOBIO_UPGRADES
 
 

@@ -2,7 +2,21 @@ export const ACTIONS = {
 	engBike: {
 		time: 1,
 		name: "Stationary Bicycle",
-		item: "power",
+		items: {
+			id: "power",
+			count: 1
+		},
+		icon: require("@/assets/art/engineering/bicycle.png"),
+		xp: 5,
+		requiredLevel: 1
+	},
+	engDebug: {
+		time: 1,
+		name: "DEBUG REMOVE THIS",
+		items: {
+			id: "power",
+			count: 100
+		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
 		xp: 5,
 		requiredLevel: 1
@@ -28,13 +42,14 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 4
 	},
-	engAmmosmall: {
-		time: 1,
-		item: "rifleAmmo",
-		icon: require("@/assets/art/engineering/ammosmall.png"),
-		xp: 5,
-		requiredLevel: 5
-	},
+	// These ammos will all probably be removed from here, but this one is causing issues
+	// engAmmosmall: {
+	// 	time: 1,
+	// 	item: "rifleAmmo",
+	// 	icon: require("@/assets/art/engineering/ammosmall.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 5
+	// },
 	engGunbig: {
 		time: 1,
 		item: "mechGunCanno",

@@ -52,13 +52,7 @@ export default {
       return JOB;
     },
     viewableActions() {
-      let actions = this.$store.getters[this.jobId + "/completeActions"];
-      let entries = Object.entries(actions);
-      let lastActionable = findLastIndex(entries, entry => {
-        return this.level >= entry[1].requiredLevel;
-      });
-
-      return entries.slice(0, lastActionable + 2);
+			return this.$store.getters[this.jobId + "/filteredActionEntries"];
     }
   }
 };

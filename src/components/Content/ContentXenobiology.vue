@@ -55,12 +55,7 @@ export default {
       return JOB;
     },
     viewableTieredActions() {
-      let actions = this.$store.getters[this.jobId + "/completeActions"];
-      let entries = Object.entries(actions);
-      let lastActionable = findLastIndex(entries, entry => {
-        return this.level >= entry[1].requiredLevel;
-      });
-      entries = entries.slice(0, lastActionable + 2);
+      let entries = this.$store.getters[this.jobId + "/filteredActionEntries"];
 
       let highestTier = 0;
       entries.forEach(entry => {
@@ -69,8 +64,7 @@ export default {
       let tiers = [];
       for (let t = 0; t < highestTier; t++) tiers.push([]);
 
-      while (entries.length) {
-        let entry = entries.shift();
+      for (let entry of entries) {
         let tier = entry[1].tier;
         tiers[tier - 1].push(entry);
       }
