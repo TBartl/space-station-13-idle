@@ -340,8 +340,8 @@ Object.values(AMMO).forEach(action => action.fabType = "ammo");
 Object.values(MECHS).forEach(action => action.fabType = "mechs");
 
 export const ACTIONS = {
-	...GUNS,
 	...AMMO,
+	...GUNS,
 	...MECHS
 }
 
