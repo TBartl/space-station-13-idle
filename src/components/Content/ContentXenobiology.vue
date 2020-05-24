@@ -2,15 +2,18 @@
   <div>
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
-      <div class="row">
-        <div class="col-12 mb-4">
+      <div class="row mb-4">
+        <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-2">
+          <potion-header :jobId="jobId" />
         </div>
       </div>
       <div class="tier row" v-for="(tierEntries, tier) in viewableTieredActions" :key="tier">
-				<div class="col-12">
-					<span class="tier-text">TIER {{tier+1}}</span>
-				</div>
+        <div class="col-12">
+          <span class="tier-text">TIER {{tier+1}}</span>
+        </div>
         <div
           class="col-6 col-md-4 col-lg-3 col-xl-2"
           v-for="[actionId, action] in tierEntries"
@@ -33,11 +36,12 @@ import { findLastIndex } from "lodash";
 import { JOB } from "@/data/xenobiology";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
+import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader },
+  components: { GenericAction, ExperienceHeader, PotionHeader },
   computed: {
     jobId() {
       return "xenobiology";
@@ -67,7 +71,7 @@ export default {
 
       while (entries.length) {
         let entry = entries.shift();
-				let tier = entry[1].tier;
+        let tier = entry[1].tier;
         tiers[tier - 1].push(entry);
       }
 
@@ -79,8 +83,8 @@ export default {
 
 <style scoped>
 .tier-text {
-	font-size: 20;
-	font-weight: bold;
-	color: rgba(245, 245, 245, 0.555);
+  font-size: 20;
+  font-weight: bold;
+  color: rgba(245, 245, 245, 0.555);
 }
 </style>
