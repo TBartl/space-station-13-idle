@@ -4,7 +4,8 @@ export const ACTIONS = {
 		item: "slimeGrey",
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		xp: 5,
-		requiredLevel: 1
+		requiredLevel: 1,
+		tier: 1
 	},
 	splitOrange: {
 		time: 5,
@@ -14,7 +15,8 @@ export const ACTIONS = {
 		requiredLevel: 4,
 		requiredItems: {
 			slimeGrey: 1
-		}
+		},
+		tier: 2
 	},
 	splitPurple: {
 		time: 5,
@@ -24,7 +26,8 @@ export const ACTIONS = {
 		requiredLevel: 5,
 		requiredItems: {
 			slimeGrey: 1
-		}
+		},
+		tier: 2
 	},
 	splitBlue: {
 		time: 5,
@@ -34,7 +37,8 @@ export const ACTIONS = {
 		requiredLevel: 6,
 		requiredItems: {
 			slimeGrey: 1
-		}
+		},
+		tier: 2
 	},
 	splitMetal: {
 		time: 5,
@@ -44,7 +48,8 @@ export const ACTIONS = {
 		requiredLevel: 7,
 		requiredItems: {
 			slimeGrey: 1
-		}
+		},
+		tier: 2
 	},
 	splitYellow: {
 		time: 5,
@@ -54,7 +59,8 @@ export const ACTIONS = {
 		requiredLevel: 14,
 		requiredItems: {
 			slimeOrange: 1
-		}
+		},
+		tier: 3
 	},
 	splitDarkPurple: {
 		time: 5,
@@ -64,7 +70,8 @@ export const ACTIONS = {
 		requiredLevel: 15,
 		requiredItems: {
 			slimePurple: 1
-		}
+		},
+		tier: 3
 	},
 	splitDarkBlue: {
 		time: 5,
@@ -74,7 +81,8 @@ export const ACTIONS = {
 		requiredLevel: 16,
 		requiredItems: {
 			slimeBlue: 1
-		}
+		},
+		tier: 3
 	},
 	splitSilver: {
 		time: 5,
@@ -84,7 +92,8 @@ export const ACTIONS = {
 		requiredLevel: 17,
 		requiredItems: {
 			slimeMetal: 1
-		}
+		},
+		tier: 3
 	},
 	splitBluespace: {
 		time: 5,
@@ -94,7 +103,8 @@ export const ACTIONS = {
 		requiredLevel: 24,
 		requiredItems: {
 			slimeYellow: 1
-		}
+		},
+		tier: 4
 	},
 	splitSepia: {
 		time: 5,
@@ -104,7 +114,8 @@ export const ACTIONS = {
 		requiredLevel: 25,
 		requiredItems: {
 			slimeDarkPurple: 1
-		}
+		},
+		tier: 4
 	},
 	splitCerulean: {
 		time: 5,
@@ -114,7 +125,8 @@ export const ACTIONS = {
 		requiredLevel: 26,
 		requiredItems: {
 			slimeDarkBlue: 1
-		}
+		},
+		tier: 4
 	},
 	splitPyrite: {
 		time: 5,
@@ -124,7 +136,8 @@ export const ACTIONS = {
 		requiredLevel: 27,
 		requiredItems: {
 			slimeSilver: 1
-		}
+		},
+		tier: 4
 	},
 	splitRed: {
 		time: 5,
@@ -134,7 +147,8 @@ export const ACTIONS = {
 		requiredLevel: 34,
 		requiredItems: {
 			slimeBluespace: 1
-		}
+		},
+		tier: 5
 	},
 	splitGreen: {
 		time: 5,
@@ -144,7 +158,8 @@ export const ACTIONS = {
 		requiredLevel: 35,
 		requiredItems: {
 			slimeSepia: 1
-		}
+		},
+		tier: 5
 	},
 	splitPink: {
 		time: 5,
@@ -154,7 +169,8 @@ export const ACTIONS = {
 		requiredLevel: 36,
 		requiredItems: {
 			slimeCerulean: 1
-		}
+		},
+		tier: 5
 	},
 	splitGold: {
 		time: 5,
@@ -164,15 +180,16 @@ export const ACTIONS = {
 		requiredLevel: 37,
 		requiredItems: {
 			slimePyrite: 1
-		}
+		},
+		tier: 5
 	},
-	splitGrey40: {
-		time: 1,
-		item: "slimeGrey",
-		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
-		xp: -5,
-		requiredLevel: 40
-	},
+	// splitGrey40: {
+	// 	time: 1,
+	// 	item: "slimeGrey",
+	// 	icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
+	// 	xp: -5,
+	// 	requiredLevel: 40
+	// },
 	splitOil: {
 		time: 5,
 		item: "slimeOil",
@@ -181,7 +198,8 @@ export const ACTIONS = {
 		requiredLevel: 44,
 		requiredItems: {
 			slimeRed: 1
-		}
+		},
+		tier: 6
 	},
 	splitBlack: {
 		time: 5,
@@ -191,7 +209,8 @@ export const ACTIONS = {
 		requiredLevel: 45,
 		requiredItems: {
 			slimeGreen: 1
-		}
+		},
+		tier: 6
 	},
 	splitLightPink: {
 		time: 5,
@@ -201,7 +220,8 @@ export const ACTIONS = {
 		requiredLevel: 46,
 		requiredItems: {
 			slimePink: 1
-		}
+		},
+		tier: 6
 	},
 	splitAddy: {
 		time: 5,
@@ -211,7 +231,8 @@ export const ACTIONS = {
 		requiredLevel: 47,
 		requiredItems: {
 			slimeGold: 1
-		}
+		},
+		tier: 6
 	},
 	splitRainbow: {
 		time: 5,
@@ -229,7 +250,7 @@ export const ACTIONS = {
 			slimeDarkPurple: 1,
 			slimeDarkBlue: 1,
 			slimeSilver: 1,
-			SlimeBluespace: 1,
+			slimeBluespace: 1,
 			slimeSepia: 1,
 			slimeCerulean: 1,
 			slimePyrite: 1,
@@ -241,7 +262,8 @@ export const ACTIONS = {
 			slimeBlack: 1,
 			slimeLightPink: 1,
 			slimeAddy: 1,
-		}
+		},
+		tier: 7
 	},
 }
 

@@ -14,13 +14,14 @@ export default {
   props: ["itemId", "count"],
   components: { ItemPopover },
   computed: {
-		bank() {
-			return this.$store.getters["inventory/bank"];
-		},
+    bank() {
+      return this.$store.getters["inventory/bank"];
+    },
     id() {
       return this._uid.toString();
     },
     item() {
+      if (!ITEMS[this.itemId]) console.log(this.itemId);
       return ITEMS[this.itemId];
     },
     bankCount() {
@@ -35,6 +36,6 @@ img {
   max-width: 32px;
 }
 span {
-	font-size: 14px;
+  font-size: 14px;
 }
 </style>
