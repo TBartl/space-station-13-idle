@@ -1,5 +1,5 @@
 export default {
-	limbBlack: {
+	limbInsuls: {
 		name: "Insulated Gloves",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/glove_yellow.png"),
@@ -16,7 +16,7 @@ export default {
 			evasion: 3,
 		}
 	},
-	limbBlack: {
+	limbBoxing: {
 		name: "Boxing Gloves",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/glove_boxing.png"),
@@ -33,7 +33,7 @@ export default {
 			evasion: 3,
 		}
 	},
-	limbBlack: {
+	limbMagkrava: {
 		name: "Mag Krava Gloves",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/glove_fightgloves.png"),
@@ -50,7 +50,7 @@ export default {
 			evasion: 3,
 		}
 	},
-	limbBlack: {
+	limbCapt: {
 		name: "Captain's Gloves",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/glove_captain.png"),
@@ -67,7 +67,7 @@ export default {
 			evasion: 3,
 		}
 	},
-	limbBlack: {
+	limbNinja: {
 		name: "Ninja Gloves",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/glove_ninja.png"),

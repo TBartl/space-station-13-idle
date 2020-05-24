@@ -14,6 +14,7 @@ import xenobiology from "./xenobiology";
 import botany from "./botany";
 import cooking from "./cooking";
 import graytiding from "./graytiding";
+import tinkering from "./tinkering";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
 import precision from "./precision";
@@ -35,6 +36,7 @@ const modules = {
 	botany,
 	cooking,
 	graytiding,
+	tinkering,
 	validhunting,
 	shitposting,
 	precision,
