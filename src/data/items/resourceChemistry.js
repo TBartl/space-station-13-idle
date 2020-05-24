@@ -20,6 +20,14 @@ const POTIONS = {
 		potionJob: "mining",
 		potionCharges: 5
 	},
+	splittingAgent: {
+		name: "Splitting Agent", // TODO: Maybe get a better name
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		description: "Xenobiology actions will give a slime of a lower tier.",
+		potionJob: "xenobiology",
+		potionCharges: 5
+	},
 	lube: {
 		name: "SpaceLube",
 		sellPrice: 5,

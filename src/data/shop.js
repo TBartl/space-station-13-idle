@@ -7,7 +7,10 @@ export const SECTIONS = [
 	},
 	{
 		name: "Upgrade Terminal",
-		purchases: ["upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5"]
+		purchases: [
+			"upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5",
+			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3"
+		]
 	},
 	{
 		name: "Clothes Vendo-matic",
@@ -15,7 +18,7 @@ export const SECTIONS = [
 	},
 ]
 
-export const PURCHASES = {
+const SEEDS = {
 	seed10: {
 		name: "Plant seeds x10",
 		description: "For all your botany needs.",
@@ -75,7 +78,10 @@ export const PURCHASES = {
 		requiredItems: {
 			money: Math.round(5000 * 50 * .8)
 		}
-	},
+	}
+}
+
+const CAPES = {
 	capeMining: {
 		item: "capeMining",
 		description: "Requires max fabrication to wear.",
@@ -136,6 +142,9 @@ export const PURCHASES = {
 			money: 1000000
 		}
 	},
+}
+
+const MINING_UPGRADES = {
 	upgradeMining1: {
 		name: "Upgrade Mining Tools",
 		description: "Increases mining speed by +20%",
@@ -211,4 +220,61 @@ export const PURCHASES = {
 			miningTools: 4
 		}
 	}
+}
+
+const XENOBIO_UPGRADES = {
+	upgradeXenobio1: {
+		name: "Upgrade Xenobiology Pens",
+		description: "x2 tier 1 slime yield.",
+		icon: require('@/assets/art/xenobio/upgrade1.png'),
+		requiredItems: {
+			money: 10000
+		},
+		requiredLevels: {
+			xenobiology: 10
+		},
+		upgrade: "xenobiologyPens",
+		requiredUpgrades: {
+			xenobiologyPens: 0
+		}
+	},
+	upgradeXenobio2: {
+		name: "Upgrade Xenobiology Pens",
+		description: "x4 tier 1 slime yield, x2 tier 2 slime yield.",
+		icon: require('@/assets/art/xenobio/upgrade1.png'),
+		requiredItems: {
+			money: 500000
+		},
+		requiredLevels: {
+			xenobiology: 25
+		},
+		upgrade: "xenobiologyPens",
+		requiredUpgrades: {
+			xenobiologyPens: 1
+		}
+	},
+	upgradeXenobio3: {
+		name: "Upgrade Xenobiology Pens",
+		description: "x8 tier 1 slime yield, x4 tier 2 slime yield, x2 tier 3 slime yield.",
+		icon: require('@/assets/art/xenobio/upgrade1.png'),
+		requiredItems: {
+			money: 1500000
+		},
+		requiredLevels: {
+			xenobiology: 40
+		},
+		upgrade: "xenobiologyPens",
+		requiredUpgrades: {
+			xenobiologyPens: 2
+		}
+	}
+}
+
+export const PURCHASES = {
+	...SEEDS,
+	...CAPES,
+	...MINING_UPGRADES,
+	...XENOBIO_UPGRADES
+
+
 }
