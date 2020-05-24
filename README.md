@@ -17,6 +17,7 @@ npm run serve
 4. Add the job module in the `src/state/store.js` file. Note that it must be added as both a module and in the initial state
 5. Add a new content file for the job under `src/components/content/`
 6. Add the new file in the `src/components/content/ContentWrapper.vue` file
+7. Update items.js
 
 ### Understanding drop tables
 There are multiple valid ways to make drop tables:
