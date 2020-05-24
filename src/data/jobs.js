@@ -6,6 +6,7 @@ import { JOB as BOTANY_JOB } from "./botany";
 import { JOB as COOKING_JOB } from "./cooking";
 import { JOB as FABRICATION_JOB } from "./fabrication";
 import { JOB as GRAYTIDING_JOB } from "./graytiding";
+import { JOB as TINKERING_JOB } from "./tinkering";
 import { JOB as VALIDHUNTING_JOB } from "./validhunting";
 import { JOB as SHITPOSTING_JOB } from "./shitposting";
 
@@ -19,7 +20,7 @@ export const ALL_JOBS = [
 	ENGINEERING_JOB,
 	FABRICATION_JOB,
 	GRAYTIDING_JOB,
-	// TODO: TINKERING_JOB
+	TINKERING_JOB,
 	BOTANY_JOB,
 	COOKING_JOB,
 	XENOBIO_JOB,
