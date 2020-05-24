@@ -11,13 +11,14 @@ npm run serve
 ```
 
 ### How to add a new job
-1. Create and populate job data, items, and actions in a new file under the `src/data/` folder
+1. Create and populate job data and actions in a new file under the `src/data/` folder
 2. Add the job in the `src/data/jobs.js` file
-3. Create a module for the job in a new file under the `src/state/`
-4. Add the job module in the `src/state/store.js` file. Note that it must be added as both a module and in the initial state
-5. Add a new content file for the job under `src/components/content/`
-6. Add the new file in the `src/components/content/ContentWrapper.vue` file
-7. Update items.js
+3. Create and populate new item data in a new file under the `src/data/items/` folder
+4. Add the items in the `src/data/items.js` file
+5. Create a module for the job in a new file under the `src/state/`
+6. Add the job module in the `src/state/store.js` file. Note that it must be added as both a module and in the initial state
+7. Add a new content file for the job under `src/components/content/`
+8. Add the new file in the `src/components/content/ContentWrapper.vue` file
 
 ### Understanding drop tables
 There are multiple valid ways to make drop tables:
