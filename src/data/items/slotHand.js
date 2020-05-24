@@ -124,6 +124,259 @@ export default {
 			precision: 5
 		}
 	},
+	mechGunRifle: {
+		name: "Mounted Rifle",
+		sellPrice: 0,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/engineering/gunsmall.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 4,
+			power: 15,
+			precision: 5,
+			requires: {
+				rangedPower: 1
+			}
+		}
+	},
+	gunE1: {
+		name: "Kinetic Accelerator",
+		sellPrice: 22,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_PKA.png"),
+		overlay: require("@/assets/art/combat/items/gune_PKA_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 1,
+			power: 2,
+			precision: 0,
+			requires: {
+				rangedPower: 1
+			}
+		}
+	},
+	gunE2: {
+		name: "Advanced Kinetic Accelerator",
+		sellPrice: 75,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_PKA+.png"),
+		overlay: require("@/assets/art/combat/items/gune_PKA+_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 1,
+			power: 3,
+			precision: 0,
+			requires: {
+				rangedPower: 15
+			}
+		}
+	},
+	gunE3: {
+		name: "Plasma Cutter",
+		sellPrice: 80,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_cutter.png"),
+		overlay: require("@/assets/art/combat/items/gune_cutter_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 1,
+			power: 3,
+			precision: 1,
+			requires: {
+				rangedPower: 20
+			}
+		}
+	},	
+	gunE4: {
+		name: "Laser Gun",
+		sellPrice: 180,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_laser.png"),
+		overlay: require("@/assets/art/combat/items/gune_laser_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 2,
+			power: 4,
+			precision: 2,
+			requires: {
+				rangedPower: 30
+			}
+		}
+	},
+	gunE5: {
+		name: "Tesla Rifle",
+		sellPrice: 250,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_tesla.png"),
+		overlay: require("@/assets/art/combat/items/gune_tesla_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 2,
+			power: 5,
+			precision: 2,
+			requires: {
+				rangedPower: 35
+			}
+		}
+	},
+	gunE6: {
+		name: "Energy Gun",
+		sellPrice: 210,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_energy.png"),
+		overlay: require("@/assets/art/combat/items/gune_energy_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 2,
+			power: 5,
+			precision: 3,
+			requires: {
+				rangedPower: 40
+			}
+		}
+	},
+	gunE7: {
+		name: "Wartime Rifle",
+		sellPrice: 0,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_caplaser.png"),
+		overlay: require("@/assets/art/combat/items/gune_caplaser_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 3,
+			power: 6,
+			precision: 4,
+			requires: {
+				rangedPower: 50
+			}
+		}
+	},
+	gunB1: {
+		name: "Pipe Shotgun",
+		sellPrice: 18,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot1.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot1_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 7,
+			evasion: 3,
+			power: 2,
+			precision: 0,
+			requires: {
+				rangedPower: 1
+			}
+		}
+	},
+	gunB2: {
+		name: "Double Barreled Shotgun",
+		sellPrice: 75,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot2.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 6,
+			evasion: 4,
+			power: 3,
+			precision: 0,
+			requires: {
+				rangedPower: 20
+			}
+		}
+	},
+	gunB3: {
+		name: "Cycling Shotgun",
+		sellPrice: 42,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot3.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 5,
+			evasion: 5,
+			power: 3,
+			precision: 0,
+			requires: {
+				rangedPower: 25
+			}
+		}
+	},	
+	gunB4: {
+		name: "Riot Shotgun",
+		sellPrice: 64,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot4.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 4,
+			evasion: 7,
+			power: 4,
+			precision: 0,
+			requires: {
+				rangedPower: 35
+			}
+		}
+	},
+	gunB5: {
+		name: "Sawed Off Shotgun",
+		sellPrice: 125,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot5.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 3,
+			evasion: 8,
+			power: 4,
+			precision: 0,
+			requires: {
+				rangedPower: 40
+			}
+		}
+	},
+	gunB6: {
+		name: "Compact Shotgun",
+		sellPrice: 86,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot6.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 2,
+			evasion: 9,
+			power: 5,
+			precision: 0,
+			requires: {
+				rangedPower: 45
+			}
+		}
+	},
+	gunB7: {
+		name: "Combat Shotgun",
+		sellPrice: 104,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gunb_shot7.png"),
+		overlay: require("@/assets/art/combat/items/gunb_shot7_overlay.png"),
+		ammoType: "ballistic",
+		stats: {
+			weaponSpeed: 1,
+			evasion: 10,
+			power: 5,
+			precision: 0,
+			requires: {
+				rangedPower: 50
+			}
+		}
+	},
 	mechGunEnergyRifle: {
 		name: "Mech Energy Rifle",
 		sellPrice: 0,
