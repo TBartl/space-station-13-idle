@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const MECHS = {
 	fabricateRipley: {
 		time: 60,
 		item: "ripley",
@@ -187,6 +187,9 @@ export const ACTIONS = {
 			iron: 1
 		}
 	},
+}
+
+const AMMO = {
 	fabricateEammo1: {
 		time: .1,
 		item: "ammoE1",
@@ -247,6 +250,9 @@ export const ACTIONS = {
 			diamond: 1
 		}
 	},
+}
+
+const GUNS = {
 	fabricateEgun1: {
 		time: 8,
 		item: "gunE1",
@@ -327,7 +333,16 @@ export const ACTIONS = {
 			diamond: 5
 		}
 	},
+}
 
+Object.values(GUNS).forEach(action => action.fabType = "guns");
+Object.values(AMMO).forEach(action => action.fabType = "ammo");
+Object.values(MECHS).forEach(action => action.fabType = "mechs");
+
+export const ACTIONS = {
+	...GUNS,
+	...AMMO,
+	...MECHS
 }
 
 export const JOB = {

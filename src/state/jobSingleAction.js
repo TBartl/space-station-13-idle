@@ -45,6 +45,22 @@ export default {
 				action.xp *= (1 + xpBonus / 100);
 			}
 			return actions;
+		},
+		// Returns entries for all actions, up to  and including the next one to unlock
+		filteredActionEntries(state, getters) {
+			let actions = getters["completeActions"];
+			let entries = Object.entries(actions);
+
+			let currentLevel = getters["level"];
+			let nextHighestLevel = Number.MAX_VALUE;
+			for (let [actionId, action] of entries) {
+				if (action.requiredLevel > currentLevel) {
+					nextHighestLevel = Math.min(nextHighestLevel, action.requiredLevel);
+				}
+			}
+			entries = entries.filter(entry => entry[1].requiredLevel <= nextHighestLevel);
+			return entries;
+
 		}
 	},
 	mutations: {

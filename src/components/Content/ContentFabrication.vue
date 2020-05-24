@@ -2,11 +2,27 @@
   <div>
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
-      <div class="row">
-        <div class="col-12 mb-4">
+      <div class="row mb-4">
+        <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
-        <div class="col-6 col-md-4 col-lg-3 col-xl-2" v-for="[actionId, action] in viewableActions" :key="actionId">
+        <div class="col-md-4 col-lg-3 col-xl-2">
+          <potion-header :jobId="jobId" />
+        </div>
+      </div>
+      <div
+        class="tier row"
+        v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
+        :key="tier"
+      >
+        <div class="col-12">
+          <span class="type-text text-uppercase">{{typedEntry[0]}}</span>
+        </div>
+        <div
+          class="col-6 col-md-4 col-lg-3 col-xl-2"
+          v-for="[actionId, action] in typedEntry[1]"
+          :key="actionId"
+        >
           <generic-action
             :jobId="jobId"
             :actionName="'FABRICATE'"
@@ -24,11 +40,12 @@ import { findLastIndex } from "lodash";
 import { JOB } from "@/data/fabrication";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
+import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader },
+  components: { GenericAction, ExperienceHeader, PotionHeader },
   computed: {
     jobId() {
       return "fabrication";
@@ -41,18 +58,26 @@ export default {
     job() {
       return JOB;
     },
-    viewableActions() {
-			let actions = this.$store.getters[this.jobId + "/completeActions"];
-      let entries = Object.entries(actions);
-      let lastActionable = findLastIndex(entries, entry => {
-        return this.level >= entry[1].requiredLevel;
-      });
+    viewableTypedActionEntries() {
+      let entries = this.$store.getters[this.jobId + "/filteredActionEntries"];
 
-      return entries.slice(0, lastActionable + 2);
+      let toReturn = {}; // type: [entries]
+      for (let entry of entries) {
+        let fabType = entry[1].fabType;
+        if (!toReturn[fabType]) toReturn[fabType] = [entry];
+        else toReturn[fabType].push(entry);
+      }
+
+      return toReturn;
     }
   }
 };
 </script>
 
 <style scoped>
+.type-text {
+  font-size: 20;
+  font-weight: bold;
+  color: rgba(245, 245, 245, 0.555);
+}
 </style>
