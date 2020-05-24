@@ -20,6 +20,22 @@ const POTIONS = {
 		potionJob: "mining",
 		potionCharges: 5
 	},
+	faunaPerfume: {
+		name: "Fauna Perfume",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/faunaPerfume.png"),
+		description: "Mining has a chance to yield a special bonus item.",
+		potionJob: "mining",
+		potionCharges: 5
+	},
+	energyDrink: {
+		name: "Energy Drink",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/energy_drink.png"),
+		description: "Whenever you get energy from engineering, also get money of the same amount.",
+		potionJob: "engineering",
+		potionCharges: 5
+	},
 	splittingAgent: {
 		name: "Splitting Agent", // TODO: Maybe get a better name
 		sellPrice: 3,
