@@ -24,11 +24,11 @@ export default {
 			meleePower: 2
 		}
 	},
-	toolbox: {
+	meleeB1: {
 		name: "Toolbox",
 		sellPrice: 30,
-		icon: require("@/assets/art/combat/items/toolbox.png"),
-		overlay: require("@/assets/art/combat/items/toolbox_overlay.png"),
+		icon: require("@/assets/art/combat/items/melee_b1.png"),
+		overlay: require("@/assets/art/combat/items/melee_b1_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
@@ -38,60 +38,214 @@ export default {
 			power: 10,
 		}
 	},
-	baseball: {
-		name: "Baseball Bat",
-		sellPrice: 40,
-		icon: require("@/assets/art/combat/items/baseball.png"),
-		overlay: require("@/assets/art/combat/items/baseball_overlay.png"),
+	meleeB2: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b2.png"),
+		overlay: require("@/assets/art/combat/items/melee_b2_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 10,
-			evasion: -10,
-			precision: 10,
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
 			attackSpeed: 2,
-			power: 20,
+			power: 10,
 		}
 	},
-	spear: {
+	meleeB3: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b3.png"),
+		overlay: require("@/assets/art/combat/items/melee_b3_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+		meleeB4: {
+			name: "Toolbox",
+			sellPrice: 30,
+			icon: require("@/assets/art/combat/items/melee_b4.png"),
+			overlay: require("@/assets/art/combat/items/melee_b4_overlay.png"),
+			equipmentSlot: "hand",
+			stats: {
+				maxHealth: 5,
+				evasion: -5,
+				precision: 5,
+				attackSpeed: 2,
+				power: 10,
+			}
+	},
+	meleeB5: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b5.png"),
+		overlay: require("@/assets/art/combat/items/melee_b5_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeB6: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b6.png"),
+		overlay: require("@/assets/art/combat/items/melee_b6_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeB7: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b7.png"),
+		overlay: require("@/assets/art/combat/items/melee_b7_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeB8: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b8.png"),
+		overlay: require("@/assets/art/combat/items/melee_b8_overlay_anim.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeB9: {
+		name: "Stun Baton",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b9.png"),
+		overlay: require("@/assets/art/combat/items/melee_b9_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeC1: {
+		name: "Kitchen Fork",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c1.png"),
+		overlay: require("@/assets/art/combat/items/melee_c1_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeC2: {
+		name: "Kitchen Kinfe",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c2.png"),
+		overlay: require("@/assets/art/combat/items/melee_c2_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeC3: {
+		name: "Butcher Cleaver",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c3.png"),
+		overlay: require("@/assets/art/combat/items/melee_c3_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeC4: {
 		name: "Spear",
-		sellPrice: 50,
-		icon: require("@/assets/art/combat/items/spear.png"),
-		overlay: require("@/assets/art/combat/items/spear_overlay.png"),
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c4.png"),
+		overlay: require("@/assets/art/combat/items/melee_c4_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 15,
-			evasion: -15,
-			precision: 15,
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
 			attackSpeed: 2,
-			power: 30,
+			power: 10,
 		}
 	},
-	fireaxe: {
-		name: "Fireaxe",
-		sellPrice: 80,
-		icon: require("@/assets/art/combat/items/fireaxe.png"),
-		overlay: require("@/assets/art/combat/items/fireaxe_overlay.png"),
+	meleeC5: {
+		name: "Fire Axe",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c5.png"),
+		overlay: require("@/assets/art/combat/items/melee_c5_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 20,
-			evasion: -20,
-			precision: 20,
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
 			attackSpeed: 2,
-			power: 40,
+			power: 10,
 		}
 	},
-	sabre: {
-		name: "Captain's Sabre",
-		sellPrice: 100,
-		icon: require("@/assets/art/combat/items/sabre.png"),
-		overlay: require("@/assets/art/combat/items/sabre_overlay.png"),
+	meleeC6: {
+		name: "Chainsaw",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c6.png"),
+		overlay: require("@/assets/art/combat/items/melee_c6_overlay_anim.gif"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 25,
-			evasion: -25,
-			precision: 25,
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
 			attackSpeed: 2,
-			power: 50,
+			power: 10,
+		}
+	},
+	meleeC7: {
+		name: "Officer Sabre",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_c7.png"),
+		overlay: require("@/assets/art/combat/items/melee_c7_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
 		}
 	},
 	mechWeaponClaw: {
