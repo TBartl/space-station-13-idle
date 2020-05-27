@@ -1,0 +1,1 @@
+The sprite name used for doors is "Closed" in /icons/obj/doors/airlocks/station

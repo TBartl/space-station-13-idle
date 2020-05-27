@@ -6,14 +6,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_yellow_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: -4,
+			power: 7,
+			evasion: 7,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 15,
 		}
 	},
 	limbBoxing: {
@@ -23,14 +23,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_boxing_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 7,
+			power: -4,
+			evasion: 7,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 15,
 		}
 	},
 	limbMagkrava: {
@@ -40,14 +40,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_fightgloves_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 7,
+			power: 7,
+			evasion: -4,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 15,
 		}
 	},
 	limbCapt: {
@@ -57,14 +57,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_captain_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 14,
+			precision: 0,
+			power: 0,
+			evasion: 0,
+			protection: -2,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 15,
 		}
 	},
 	limbNinja: {
@@ -74,14 +74,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_ninja_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 14,
+			precision: 0,
+			power: 0,
+			evasion: 0,
+			protection: -2,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 15,
 		}
 	},
 	limbBlack: {
@@ -91,14 +91,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/shoe_black_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 5,
+			power: 0,
+			evasion: 5,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 10,
 		}
 	},
 	limbMagBoots: {
@@ -108,14 +108,14 @@ export default {
 		equipmentSlot: "climb",
 		overlay: require("@/assets/art/combat/items/shoe_magboots_overlay.png"),
 		stats: {
-			maxHealth: 2,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 5,
+			power: 5,
+			evasion: 0,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 10,
 		}
 	},
 	limbClownShoes: {
@@ -125,14 +125,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/shoe_clown_overlay.png"),
 		stats: {
-			maxHealth: 3,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 0,
+			power: 5,
+			evasion: 5,
+			protection: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 10,
 		}
 	},
 	limbJackboots: {
@@ -142,14 +142,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/shoe_jackboots_overlay.png"),
 		stats: {
-			maxHealth: 4,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 0,
+			precision: 0,
+			power: 0,
+			evasion: 0,
+			protection: 4,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 10,
 		}
 	},
 	limbAdvancedMagboots: {
@@ -159,14 +159,14 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/shoe_advmag_overlay.png"),
 		stats: {
-			maxHealth: 5,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 3,
+			precision: 3,
+			power: 3,
+			evasion: 3,
+			protection: 1,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 10,
 		}
 	},
 }
