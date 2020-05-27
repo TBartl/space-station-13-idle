@@ -169,6 +169,106 @@ export const ACTIONS = {
 			junk: 1
 		}
 	},
+	tinkerArmB1: {
+		time: 2,
+		item: "armB1",
+		icon: require("@/assets/art/combat/items/arm_b1.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 1
+		}
+	},
+	tinkerArm21: {
+		time: 2,
+		item: "armB1",
+		icon: require("@/assets/art/combat/items/arm_b2.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 1
+		}
+	},
+	tinkerArmB3: {
+		time: 2,
+		item: "armB3",
+		icon: require("@/assets/art/combat/items/arm_b3.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 1
+		}
+	},
+	tinkerArmB4: {
+		time: 2,
+		item: "armB4",
+		icon: require("@/assets/art/combat/items/arm_b4.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 1
+		}
+	},
+	tinkerArmB5: {
+		time: 2,
+		item: "armB5",
+		icon: require("@/assets/art/combat/items/arm_b5.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 1
+		}
+	},
+	tinkerArmS1: {
+		time: 2,
+		item: "armS1",
+		icon: require("@/assets/art/combat/items/arm_s1.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 1
+		}
+	},
+	tinkerArmS2: {
+		time: 2,
+		item: "armS2",
+		icon: require("@/assets/art/combat/items/arm_s2.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 1
+		}
+	},
+	tinkerArmS3: {
+		time: 2,
+		item: "armS3",
+		icon: require("@/assets/art/combat/items/arm_s3.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 1
+		}
+	},
+	tinkerArmS4: {
+		time: 2,
+		item: "armS4",
+		icon: require("@/assets/art/combat/items/arm_s4.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 1
+		}
+	},
+	tinkerArmS5: {
+		time: 2,
+		item: "armS5",
+		icon: require("@/assets/art/combat/items/arm_s5.png"),
+		xp: 20,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 1
+		}
+	},
 }
 
 export const JOB = {
