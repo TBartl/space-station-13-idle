@@ -14,7 +14,7 @@ export const ACTIONS = {
 		item: "meleeB1",
 		icon: require("@/assets/art/combat/items/melee_b1.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 2,
 		requiredItems: {
 			junk: 1
 		}
@@ -24,7 +24,7 @@ export const ACTIONS = {
 		item: "meleeB2",
 		icon: require("@/assets/art/combat/items/melee_b2.png"),
 		xp: 20,
-		requiredLevel: 2,
+		requiredLevel: 8,
 		requiredItems: {
 			junk: 1
 		}
@@ -34,7 +34,7 @@ export const ACTIONS = {
 		item: "meleeB3",
 		icon: require("@/assets/art/combat/items/melee_b3.png"),
 		xp: 20,
-		requiredLevel: 3,
+		requiredLevel: 14,
 		requiredItems: {
 			junk: 1
 		}
@@ -44,7 +44,7 @@ export const ACTIONS = {
 		item: "meleeB4",
 		icon: require("@/assets/art/combat/items/melee_b4.png"),
 		xp: 20,
-		requiredLevel: 4,
+		requiredLevel: 20,
 		requiredItems: {
 			junk: 1
 		}
@@ -54,7 +54,7 @@ export const ACTIONS = {
 		item: "meleeB95",
 		icon: require("@/assets/art/combat/items/melee_b5.png"),
 		xp: 20,
-		requiredLevel: 5,
+		requiredLevel: 26,
 		requiredItems: {
 			junk: 1
 		}
@@ -64,7 +64,7 @@ export const ACTIONS = {
 		item: "meleeB6",
 		icon: require("@/assets/art/combat/items/melee_b6.png"),
 		xp: 20,
-		requiredLevel: 6,
+		requiredLevel: 32,
 		requiredItems: {
 			junk: 1
 		}
@@ -74,7 +74,7 @@ export const ACTIONS = {
 		item: "meleeB7",
 		icon: require("@/assets/art/combat/items/melee_b7.png"),
 		xp: 20,
-		requiredLevel: 7,
+		requiredLevel: 38,
 		requiredItems: {
 			junk: 1
 		}
@@ -84,7 +84,7 @@ export const ACTIONS = {
 		item: "meleeB8",
 		icon: require("@/assets/art/combat/items/melee_b8.png"),
 		xp: 20,
-		requiredLevel: 8,
+		requiredLevel: 44,
 		requiredItems: {
 			junk: 1
 		}
@@ -94,7 +94,7 @@ export const ACTIONS = {
 		item: "meleeB9",
 		icon: require("@/assets/art/combat/items/melee_b9.png"),
 		xp: 20,
-		requiredLevel: 9,
+		requiredLevel: 50,
 		requiredItems: {
 			junk: 1
 		}
@@ -104,7 +104,7 @@ export const ACTIONS = {
 		item: "meleeC1",
 		icon: require("@/assets/art/combat/items/melee_c1.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 5,
 		requiredItems: {
 			junk: 1
 		}
@@ -114,7 +114,7 @@ export const ACTIONS = {
 		item: "meleeC2",
 		icon: require("@/assets/art/combat/items/melee_c2.png"),
 		xp: 20,
-		requiredLevel: 2,
+		requiredLevel: 10,
 		requiredItems: {
 			junk: 1
 		}
@@ -124,7 +124,7 @@ export const ACTIONS = {
 		item: "meleeC3",
 		icon: require("@/assets/art/combat/items/melee_c3.png"),
 		xp: 20,
-		requiredLevel: 3,
+		requiredLevel: 16,
 		requiredItems: {
 			junk: 1
 		}
@@ -134,7 +134,7 @@ export const ACTIONS = {
 		item: "meleeC4",
 		icon: require("@/assets/art/combat/items/melee_c4.png"),
 		xp: 20,
-		requiredLevel: 4,
+		requiredLevel: 21,
 		requiredItems: {
 			junk: 1
 		}
@@ -144,7 +144,7 @@ export const ACTIONS = {
 		item: "meleeC5",
 		icon: require("@/assets/art/combat/items/melee_c5.png"),
 		xp: 20,
-		requiredLevel: 5,
+		requiredLevel: 27,
 		requiredItems: {
 			junk: 1
 		}
@@ -154,7 +154,7 @@ export const ACTIONS = {
 		item: "meleeC6",
 		icon: require("@/assets/art/combat/items/melee_c6.png"),
 		xp: 20,
-		requiredLevel: 6,
+		requiredLevel: 32,
 		requiredItems: {
 			junk: 1
 		}
@@ -164,7 +164,7 @@ export const ACTIONS = {
 		item: "meleeC7",
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
 		xp: 20,
-		requiredLevel: 7,
+		requiredLevel: 38,
 		requiredItems: {
 			junk: 1
 		}
@@ -174,17 +174,17 @@ export const ACTIONS = {
 		item: "armB1",
 		icon: require("@/assets/art/combat/items/arm_b1.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 4,
 		requiredItems: {
 			armorjunk: 1
 		}
 	},
-	tinkerArm21: {
+	tinkerArmB2: {
 		time: 2,
-		item: "armB1",
+		item: "armB2",
 		icon: require("@/assets/art/combat/items/arm_b2.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 15,
 		requiredItems: {
 			armorjunk: 1
 		}
@@ -194,7 +194,7 @@ export const ACTIONS = {
 		item: "armB3",
 		icon: require("@/assets/art/combat/items/arm_b3.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 26,
 		requiredItems: {
 			armorjunk: 1
 		}
@@ -204,7 +204,7 @@ export const ACTIONS = {
 		item: "armB4",
 		icon: require("@/assets/art/combat/items/arm_b4.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 37,
 		requiredItems: {
 			armorjunk: 1
 		}
@@ -214,7 +214,7 @@ export const ACTIONS = {
 		item: "armB5",
 		icon: require("@/assets/art/combat/items/arm_b5.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 48,
 		requiredItems: {
 			armorjunk: 1
 		}
@@ -224,7 +224,7 @@ export const ACTIONS = {
 		item: "armS1",
 		icon: require("@/assets/art/combat/items/arm_s1.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 3,
 		requiredItems: {
 			spacejunk: 1
 		}
@@ -234,7 +234,7 @@ export const ACTIONS = {
 		item: "armS2",
 		icon: require("@/assets/art/combat/items/arm_s2.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 14,
 		requiredItems: {
 			spacejunk: 1
 		}
@@ -244,7 +244,7 @@ export const ACTIONS = {
 		item: "armS3",
 		icon: require("@/assets/art/combat/items/arm_s3.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 25,
 		requiredItems: {
 			spacejunk: 1
 		}
@@ -254,7 +254,7 @@ export const ACTIONS = {
 		item: "armS4",
 		icon: require("@/assets/art/combat/items/arm_s4.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 36,
 		requiredItems: {
 			spacejunk: 1
 		}
@@ -264,7 +264,7 @@ export const ACTIONS = {
 		item: "armS5",
 		icon: require("@/assets/art/combat/items/arm_s5.png"),
 		xp: 20,
-		requiredLevel: 1,
+		requiredLevel: 47,
 		requiredItems: {
 			spacejunk: 1
 		}
