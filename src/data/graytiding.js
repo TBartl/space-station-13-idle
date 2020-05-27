@@ -8,7 +8,20 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				item: 'junk'
+				itemTable: [
+					{
+						chance: 1,
+						item: 'junk'
+					},
+					{
+						chance: 1,
+						item: 'spacejunk'
+					},
+					{
+						chance: 1,
+						item: 'armorjunk'
+					},
+				]
 			},
 			{
 				chance: 0.1,
