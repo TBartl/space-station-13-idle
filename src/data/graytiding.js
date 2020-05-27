@@ -10,16 +10,16 @@ export const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						chance: 1,
-						item: 'junk'
+						id: 'junk',
+						weight: 3
 					},
 					{
-						chance: 1,
-						item: 'spacejunk'
+						id: 'spacejunk',
+						weight: 3
 					},
 					{
-						chance: 1,
-						item: 'armorjunk'
+						id: 'armorjunk',
+						weight: 3
 					},
 				]
 			},

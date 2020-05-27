@@ -20,8 +20,8 @@ export default {
 		name: "Explorer's Jumpsuit",
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
-		icon: require("@/assets/art/combat/items/explorerjumpsuit.png"),
-		overlay: require("@/assets/art/combat/items/explorerjumpsuit_overlay.png"),
+		icon: require("@/assets/art/combat/items/jumpsuit_mining.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_mining_overlay.png"),
 		stats: {
 			maxHealth: 5,
 			evasion: 2
@@ -92,7 +92,7 @@ export default {
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_medical.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay_overlay.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay.png"),
 		stats: {
 			maxHealth: 10,
 		},
@@ -102,7 +102,7 @@ export default {
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_botany.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_botany_overlay_overlay.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_botany_overlay.png"),
 		stats: {
 			maxHealth: 5,
 		},
@@ -116,7 +116,7 @@ export default {
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_chef.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_chef_overlay_overlay.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_chef_overlay.png"),
 		stats: {
 			maxHealth: 5,
 		},
@@ -130,7 +130,7 @@ export default {
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_science.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_science_overlay_overlay.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_science_overlay.png"),
 		stats: {
 			maxHealth: 5,
 		},
@@ -144,7 +144,7 @@ export default {
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_chemistry.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_chemistry_overlay_overlay.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_chemistry_overlay.png"),
 		stats: {
 			maxHealth: 5,
 		},

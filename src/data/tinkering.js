@@ -229,7 +229,7 @@ export const ACTIONS = {
 			spacejunk: 1
 		}
 	},
-	tinkerArmS1: {
+	tinkerArmS2: {
 		time: 2,
 		item: "armS2",
 		icon: require("@/assets/art/combat/items/arm_s2.png"),
@@ -239,7 +239,7 @@ export const ACTIONS = {
 			spacejunk: 1
 		}
 	},
-	tinkerArmS1: {
+	tinkerArmS3: {
 		time: 2,
 		item: "armS3",
 		icon: require("@/assets/art/combat/items/arm_s3.png"),
@@ -249,7 +249,7 @@ export const ACTIONS = {
 			spacejunk: 1
 		}
 	},
-	tinkerArmS1: {
+	tinkerArmS4: {
 		time: 2,
 		item: "armS4",
 		icon: require("@/assets/art/combat/items/arm_s4.png"),
