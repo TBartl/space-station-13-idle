@@ -396,7 +396,7 @@ export default {
 	},
 	redslime: {
 		name: "Supermatter Anomaly",
-		icon: require("@/assets/art/combat/enemies/SlimeRed.gif"),
+		icon: require("@/assets/art/combat/enemies/redslime_anim.gif"),
 		stats: {
 			maxHealth: 150,
 			attackSpeed: 2.7,
@@ -670,7 +670,7 @@ export default {
 	},
 	minibot: {
 		name: "Minibot",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/minibots.png"),
 		stats: {
 			maxHealth: 250,
 			attackSpeed: 1.4,
@@ -699,7 +699,7 @@ export default {
 	},
 	techpriest: {
 		name: "Techpriest Roboticist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/techpriest.png"),
 		stats: {
 			maxHealth: 260,
 			attackSpeed: 1.7,
@@ -815,7 +815,7 @@ export default {
 	},
 	captain: {
 		name: "Captain",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/captain.png"),
 		stats: {
 			maxHealth: 300,
 			attackSpeed: 1.1,
@@ -844,7 +844,7 @@ export default {
 	},
 	afkviro: {
 		name: "Harmless Virologist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/goodviro.png"),
 		stats: {
 			maxHealth: 310,
 			attackSpeed: 3.0,
@@ -902,7 +902,7 @@ export default {
 	},
 	movingviro: {
 		name: "Moving Virologist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/badviro.png"),
 		stats: {
 			maxHealth: 330,
 			attackSpeed: 1.9,
@@ -931,7 +931,7 @@ export default {
 	},
 	cultist: {
 		name: "Cultist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/cultist.png"),
 		stats: {
 			maxHealth: 340,
 			attackSpeed: 1.5,
@@ -960,7 +960,7 @@ export default {
 	},
 	securitybot: {
 		name: "Security Bot",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/secbot.png"),
 		stats: {
 			maxHealth: 350,
 			attackSpeed: 2.1,
@@ -1008,17 +1008,13 @@ export default {
 			},
 			{
 				chance: .8,
-				item: "iron"
-			},
-			{
-				chance: 1,
-				item: "foodMeatZ"
+				item: "diamond"
 			}
 		]
 	},
 	AI: {
 		name: "AI",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/ai_anim.gif"),
 		stats: {
 			maxHealth: 1337,
 			attackSpeed: 1.9,
