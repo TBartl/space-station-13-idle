@@ -8,6 +8,7 @@ const combat = {
 	namespaced: true,
 	modules: {
 		moveCoroutine: createCoroutineModule(),
+		foodCoroutine: createCoroutineModule(),
 		regenCoroutine: createCoroutineModule()
 	},
 	state: {
@@ -26,6 +27,12 @@ const combat = {
 			let baseRegenTime = 8;
 			let ratio = 100 / rootGetters["playerMob/stats"].maxHealth;
 			return baseRegenTime * ratio;
+		},
+		baseFoodCooldown() {
+			return 2;
+		},
+		foodCooldown(state, getters) {
+			return getters["baseFoodCooldown"];
 		},
 		drops(state) {
 			return state.drops;
@@ -137,7 +144,32 @@ const combat = {
 				skill = getters.isRanged ? "meleePower" : "rangedPower";
 			}
 			commit(skill + "/addXP", damage, { root: true });
-		}
+		},
+
+		eat({ state, rootState, getters, rootGetters, dispatch }) {
+			var food = rootState["inventory"].equipment.food;
+			if (!food.itemId) return;
+			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
+			dispatch("playerMob/addHealth", ITEMS[food.itemId].healAmount, { root: true });
+
+			if (food.count == 1) {
+				food.count = 0;
+				food.itemId = null;
+			} else {
+				food.count -= 1;
+			}
+			dispatch("_startFoodCD")
+		},
+		_startFoodCD({ dispatch, getters }) {
+			dispatch("foodCoroutine/start",
+				{
+					duration: getters["foodCooldown"],
+					onFinish: () => {
+						//TODO maybe re-eat here
+						// dispatch("playerMob/addHealth", 1, { root: true });
+					}
+				});
+		},
 	}
 };
 

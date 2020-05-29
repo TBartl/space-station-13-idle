@@ -18,6 +18,9 @@ export function createCoroutineModule() {
 			},
 			percent(state) {
 				return state.progress / state.duration;
+			},
+			isActive(state) {
+				return state.currentTimeout;
 			}
 		},
 		actions: {
