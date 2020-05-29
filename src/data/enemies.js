@@ -22,6 +22,10 @@ export default {
 			{
 				chance: .2,
 				item: "toolbox"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -36,7 +40,19 @@ export default {
 			evasion: 16,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
 	},
 	mouse: {
 		name: "Mouse",
@@ -49,11 +65,23 @@ export default {
 			evasion: -1,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
 	},
 	lostscientist: {
 		name: "Lost Scientist",
-		icon: require("@/assets/art/combat/enemies/mouse.png"),
+		icon: require("@/assets/art/combat/enemies/science.png"),
 		stats: {
 			maxHealth: 40,
 			attackSpeed: 1.6,
@@ -73,6 +101,10 @@ export default {
 			{
 				chance: .2,
 				item: "armCardboard"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -98,6 +130,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -123,6 +159,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -148,12 +188,16 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
 	hopcurity: {
 		name: "Self Declared Head of GUNS",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/hoGUN.png"),
 		stats: {
 			maxHealth: 80,
 			attackSpeed: 1.7,
@@ -173,6 +217,10 @@ export default {
 			{
 				chance: .2,
 				item: "pill10"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -198,12 +246,16 @@ export default {
 			{
 				chance: .2,
 				item: "baseball"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
 	braindead: {
 		name: "Braindead Assistant",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/bdassist.png"),
 		stats: {
 			maxHealth: 100,
 			attackSpeed: 2.2,
@@ -212,11 +264,23 @@ export default {
 			evasion: 22,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
 	},
 	traitor: {
 		name: "Unprepared Traitor",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/tot.png"),
 		stats: {
 			maxHealth: 110,
 			attackSpeed: 2.5,
@@ -236,6 +300,10 @@ export default {
 			{
 				chance: .02,
 				item: "armSyndiSuit"
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -261,6 +329,10 @@ export default {
 			{
 				chance: .2,
 				item: "armFiresuit"
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -280,12 +352,16 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [20, 40],
 				}
 			},
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -311,6 +387,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -336,6 +416,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -361,6 +445,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -386,6 +474,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -411,6 +503,10 @@ export default {
 			{
 				chance: .2,
 				item: "pill20"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -436,6 +532,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -461,6 +561,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -486,6 +590,10 @@ export default {
 			{
 				chance: .8,
 				item: "spear"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -511,6 +619,10 @@ export default {
 			{
 				chance: .2,
 				item: "armVest"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -549,6 +661,10 @@ export default {
 			{
 				chance: .01,
 				item: "pill50"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -574,6 +690,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -599,6 +719,10 @@ export default {
 			{
 				chance: .01,
 				item: "sabre"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -624,6 +748,10 @@ export default {
 			{
 				chance: .2,
 				item: "armRiotSuit"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -649,6 +777,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -674,6 +806,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -699,6 +835,10 @@ export default {
 			{
 				chance: .2,
 				item: "pill30"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -724,6 +864,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -749,6 +893,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -774,6 +922,10 @@ export default {
 			{
 				chance: .2,
 				item: "fireaxe"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -799,6 +951,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -824,6 +980,10 @@ export default {
 			{
 				chance: .8,
 				item: "iron"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
@@ -874,6 +1034,10 @@ export default {
 			{
 				chance: .2,
 				item: "pill40"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},
