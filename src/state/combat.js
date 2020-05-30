@@ -145,7 +145,13 @@ const combat = {
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		},
-
+		tryAutoEat({ dispatch, getters, rootGetters }) {
+			let hasAutoEat = rootGetters["upgrades/get"]("autoeat");
+			if (!hasAutoEat) return;
+			let isOnCooldown = getters["foodCoroutine/isActive"];
+			if (isOnCooldown) return;
+			dispatch("eat");
+		},
 		eat({ state, rootState, getters, rootGetters, dispatch }) {
 			var food = rootState["inventory"].equipment.food;
 			if (!food.itemId) return;
@@ -165,8 +171,7 @@ const combat = {
 				{
 					duration: getters["foodCooldown"],
 					onFinish: () => {
-						//TODO maybe re-eat here
-						// dispatch("playerMob/addHealth", 1, { root: true });
+						dispatch("tryAutoEat");
 					}
 				});
 		},

@@ -91,6 +91,7 @@ export default {
 <style>
 .purchase-icon {
   width: 64px;
+	min-width: 64px;
 }
 .name {
   font-size: 18px;

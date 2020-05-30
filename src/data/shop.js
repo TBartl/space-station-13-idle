@@ -14,6 +14,12 @@ export const SECTIONS = [
 		]
 	},
 	{
+		name: "Combat Unlocks",
+		purchases: [
+			"autoeat"
+		]
+	},
+	{
 		name: "Clothes Vendo-matic",
 		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology"]
 	},
@@ -143,6 +149,21 @@ const CAPES = {
 			money: 1000000
 		}
 	},
+}
+
+const COMBAT_UPGRADES = {
+	autoeat: {
+		name: "Unlock Auto-Eat",
+		description: "Allows food to automatically be consumed when missing more health than the food's heal amount.",
+		icon: require('@/assets/art/combat/upgrades/autoeat.png'),
+		requiredItems: {
+			money: 10000
+		},
+		upgrade: "autoeat",
+		requiredUpgrades: {
+			autoeat: 0
+		}
+	}
 }
 
 const MINING_UPGRADES = {
@@ -353,7 +374,8 @@ export const PURCHASES = {
 	...CAPES,
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
-	...XENOBIO_UPGRADES
+	...XENOBIO_UPGRADES,
+	...COMBAT_UPGRADES
 
 
 }

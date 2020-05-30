@@ -128,21 +128,28 @@ export function createMobModule(mobType) {
 			_getHit({ state, commit, getters, dispatch }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-				if (state.health != 0) return;
-
-				// Handle death
-				if (state.mobType == "player") {
-					commit("_setHealth", getters.stats.maxHealth / 2);
-					dispatch("cancelAllActions", {}, { root: true });
-					this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
+				if (state.health <= 0) {
+					// Handle death
+					if (state.mobType == "player") {
+						commit("_setHealth", getters.stats.maxHealth / 2);
+						dispatch("cancelAllActions", {}, { root: true });
+						this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
+					} else {
+						dispatch("combat/pauseCombat", {}, { root: true });
+						dispatch("combat/dropEnemyLoot", {}, { root: true })
+					}
 				} else {
-					dispatch("combat/pauseCombat", {}, { root: true });
-					dispatch("combat/dropEnemyLoot", {}, { root: true })
+					if (state.mobType == "player") {
+						dispatch("combat/tryAutoEat", {}, { root: true });
+					}
 				}
 			},
 			// Add health, like from healing
 			addHealth({ getters, commit }, health) {
 				commit("_setHealth", Math.min(getters.health + health, getters.stats.maxHealth))
+			},
+			clampHealth({ getters, commit }) {
+				commit("_setHealth", Math.min(getters.health, getters.stats.maxHealth));
 			}
 		}
 	}
