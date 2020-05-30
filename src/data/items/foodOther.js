@@ -5,6 +5,12 @@ export default {
 		icon: require("@/assets/art/combat/items/dead_mouse.png"),
 		healAmount: 15
 	},
+	foot: {
+		name: "Human Foot",
+		sellPrice: -5,
+		icon: require("@/assets/art/cooking/meatFoot.png"),
+		healAmount: 10
+	},
 	spaghetti: {
 		name: "Spaghetti",
 		sellPrice: 100,
