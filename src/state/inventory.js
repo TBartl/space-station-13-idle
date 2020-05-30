@@ -170,6 +170,7 @@ const inventory = {
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
 			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
+			dispatch("playerMob/clampHealth", {}, { root: true })
 		},
 		purchase({ commit }, purchase) {
 			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
