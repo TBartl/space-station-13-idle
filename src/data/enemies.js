@@ -47,6 +47,9 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
+			},	{
+				chance: .02,
+				item: "jumpsuitExplorer"
 			},
 			{
 				chance: 1,
@@ -65,19 +68,9 @@ export default {
 			evasion: -1,
 			protection: 1
 		},
-		itemTables: [
-			{
-				chance: 1,
-				items: {
-					id: "money",
-					count: [20, 40]
-				}
-			},
-			{
-				chance: 1,
-				item: "foodMeatZ"
-			}
-		]
+			items: {
+				id: "mouseCarcass",
+		}
 	},
 	lostscientist: {
 		name: "Lost Scientist",
@@ -99,8 +92,8 @@ export default {
 				}
 			},
 			{
-				chance: .2,
-				item: "armCardboard"
+				chance: .02,
+				item: "jumpsuitScience"
 			},
 			{
 				chance: 1,
@@ -128,8 +121,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .02,
+				item: "jumpsuitTinkering"
 			},
 			{
 				chance: 1,
@@ -271,8 +264,10 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
+			},{
+				chance: .02,
+				item: "jumpsuitSecurity"
+			},{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -356,8 +351,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .02,
+				item: "Engineering Jumpsuit"
 			},
 			{
 				chance: 1,
@@ -499,8 +494,7 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
+			},{
 				chance: .2,
 				item: "pill20"
 			},
@@ -530,8 +524,44 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'potato',
+						weight: 1
+					},{
+						id: 'tomato',
+						weight: 1
+					},{
+						id: 'flowersun',
+						weight: 1
+					},{
+						id: 'mushroom',
+						weight: 1
+					},{
+						id: 'pepper',
+						weight: 1
+					},{
+						id: 'potatobattery',
+						weight: 1
+					},{
+						id: 'tomatoblue',
+						weight: 1
+					},{
+						id: 'flowermoon',
+						weight: 1
+					},{
+						id: 'mushroomred',
+						weight: 1
+					},{
+						id: 'pepperred',
+						weight: 1
+					}
+				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitBotany"
 			},
 			{
 				chance: 1,
@@ -559,8 +589,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -588,8 +631,26 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "spear"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'foot',
+						weight: 1
+					},{
+						id: 'foodMeatH',
+						weight: 1
+					},{
+						id: 'foodMeatA',
+						weight: 1
+					},{
+						id: 'foodMeatZ',
+						weight: 1
+					}
+				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitCooking"
 			},
 			{
 				chance: 1,
@@ -617,8 +678,8 @@ export default {
 				}
 			},
 			{
-				chance: .2,
-				item: "armVest"
+				chance: .02,
+				item: "jumpsuitChemistry"
 			},
 			{
 				chance: 1,
@@ -637,7 +698,23 @@ export default {
 			evasion: 30,
 			protection: 1
 		},
-		item: "mouseCarcass"
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [20, 40]
+				}
+			},
+			{
+				chance: .02,
+				item: "Paramedic Jumpsuit"
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
 	},
 	hulk: {
 		name: "The Next Step In Human Evolution",
@@ -717,8 +794,8 @@ export default {
 				}
 			},
 			{
-				chance: .01,
-				item: "sabre"
+				chance: .02,
+				item: "jumpsuitFabrication"
 			},
 			{
 				chance: 1,
@@ -804,8 +881,8 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: .02,
+				item: "jumpsuitGraytide"
 			},
 			{
 				chance: 1,
@@ -989,7 +1066,7 @@ export default {
 	},
 	turrets: {
 		name: "Defense Turret",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/turret.png"),
 		stats: {
 			maxHealth: 360,
 			attackSpeed: 2.4,

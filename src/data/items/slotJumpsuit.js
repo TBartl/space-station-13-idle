@@ -60,7 +60,7 @@ export default {
 		}
 	},
 	jumpsuitGraytide: {
-		name: "Paramedic Jumpsuit",
+		name: "Assistant Jumpsuit",
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_grey.png"),
@@ -153,7 +153,7 @@ export default {
 			chemistry: 20
 		}
 	},
-	jumpsuitSecuirty: {
+	jumpsuitSecurity: {
 		name: "Security Officer Jumpsuit",
 		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
