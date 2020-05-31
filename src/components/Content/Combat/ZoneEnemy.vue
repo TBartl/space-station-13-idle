@@ -11,6 +11,18 @@
         </div>
       </div>
     </div>
+    <div v-if="validhuntingCount" class="validhunting-info">
+      <div>
+        <span class="mr-1 validhunting-desc">Remaining Kills:</span>
+        <span>{{validhuntingCount}}</span>
+      </div>
+      <div>
+        <span class="mr-1 validhunting-desc">Reward:</span>
+        <span>{{validhuntingCount}}</span>
+				<img :src="validhuntingIcon">
+        <span>xp</span>
+      </div>
+    </div>
     <div class="d-flex flex-column mr-2">
       <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
       <b-popover :target="id" triggers="click blur" placement="top" delay="0">
@@ -27,9 +39,10 @@ import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
 import { getBasedStats } from "@/utils/combatUtils";
+import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
 export default {
   components: { RobustnessBadge, ItemChance },
-  props: ["enemyId"],
+  props: ["enemyId", "validhuntingCount"],
   computed: {
     id() {
       return this._uid.toString();
@@ -39,6 +52,9 @@ export default {
     },
     basedStats() {
       return getBasedStats(this.enemy.stats);
+    },
+    validhuntingIcon() {
+      return VALIDHUNTING_JOB.icon;
     }
   },
   methods: {
@@ -67,5 +83,11 @@ img {
 }
 .robustness {
   font-size: 12px;
+}
+.validhunting-info img {
+	width: 32px;
+}
+.validhunting-desc {
+	color: rgb(158, 158, 158);
 }
 </style>
