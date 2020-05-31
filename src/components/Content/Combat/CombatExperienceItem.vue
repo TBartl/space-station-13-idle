@@ -4,7 +4,7 @@
       <img :src="icon" />
     </td>
     <td>{{level}}/{{maxLevel}}</td>
-    <td>{{xp}}/{{nextLevelXP}}</td>
+    <td class="xp">{{xp | cleanNum}}/{{nextLevelXP | cleanNum}}</td>
     <td width="99%">
       <progress-bar style="border-radius: 0 !important" :progress="progress" />
     </td>
@@ -48,9 +48,12 @@ export default {
 <style scoped>
 td {
   padding: 0.2rem 1.2rem 0.2rem 0.3rem !important;
-	vertical-align: middle !important;
+  vertical-align: middle !important;
 }
 td:last-child {
-	padding-right: 0 !important;
+  padding-right: 0 !important;
+}
+.xp {
+	min-width: 130px;
 }
 </style>
