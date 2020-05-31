@@ -125,7 +125,7 @@ export function createMobModule(mobType) {
 				}
 
 			},
-			_getHit({ state, commit, getters, dispatch }, damage) {
+			_getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
 				if (state.health <= 0) {
@@ -135,6 +135,7 @@ export function createMobModule(mobType) {
 						dispatch("cancelAllActions", {}, { root: true });
 						this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
 					} else {
+						dispatch("validhunting/mobKilled", rootGetters["combat/targetEnemy"], { root: true })
 						dispatch("combat/pauseCombat", {}, { root: true });
 						dispatch("combat/dropEnemyLoot", {}, { root: true })
 					}

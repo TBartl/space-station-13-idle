@@ -1,12 +1,10 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
-    <h5>Validhunting Targets</h5>
+    <h5>Validhunting Target</h5>
     <div class="enemies w-100 mt-2">
       <zone-enemy
-        v-for="(target, index) in targets"
-        :key="index"
-        :enemyId="target.enemyId"
-        :validhuntingCount="target.count"
+        :enemyId="targetEnemyId"
+				:showValidhunting="true"
       />
     </div>
   </div>
@@ -17,9 +15,9 @@ import ZoneEnemy from "@/components/Content/Combat/ZoneEnemy";
 export default {
   components: { ZoneEnemy },
   computed: {
-    targets() {
-      return this.$store.getters["validhunting/targets"];
-    }
+    targetEnemyId() {
+      return this.$store.getters["validhunting/targetEnemyId"];
+    },
   }
 };
 </script>

@@ -1,5 +1,3 @@
-export const ITEMS = {
-}
 
 export const JOB = {
 	id: "validhunting",
