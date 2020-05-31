@@ -48,10 +48,20 @@ export function calcRobustness(stats, mobType) {
 	robustness += stats.evasion / 3;
 
 	// Health should matter, but only a little
-	robustness += stats.maxHealth / 25;
+	robustness += stats.maxHealth / 100;
 
 	// Protection is a survivability multiplier
 	robustness *= 1 + (stats.protection / 100);
 
 	return Math.round(robustness);
+}
+
+export function getRobustnessCssClass(playerRobustness, targetRobustness) {
+	let diff = targetRobustness - playerRobustness;
+	if (diff >= 14) return "danger-bubble";
+	if (diff >= 7) return "orange-bubble";
+	if (diff <= -14) return "secondary-bubble"
+	if (diff <= -7) return "success-bubble"
+	return "warning-bubble";
+
 }

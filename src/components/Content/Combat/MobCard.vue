@@ -38,6 +38,11 @@
         <span>{{+(hitChance*100).toFixed(1)}}%</span>
       </div>
       <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
+      <div v-if="isValidhuntingTarget" class="mt-1 d-flex flex-row align-items-center">
+        <img :src="validhuntingIcon" />
+        <span class="mr-1 remaining-kills-desc">Remaining Kills:</span>
+        <span>{{validhuntingCount}}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -51,6 +56,7 @@ import ProgressBar from "@/components/ProgressBar";
 import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
+import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
 
 export default {
   components: {
@@ -128,6 +134,18 @@ export default {
         icons.unshift(playerBaseIcon);
       }
       return icons;
+    },
+    isValidhuntingTarget() {
+      return (
+        this.mobType == "enemy" &&
+        this.targetEnemy == this.$store.getters["validhunting/targetEnemyId"]
+      );
+    },
+    validhuntingCount() {
+      return this.$store.getters["validhunting/targetCount"];
+    },
+    validhuntingIcon() {
+      return VALIDHUNTING_JOB.icon;
     }
   }
 };
@@ -177,5 +195,8 @@ export default {
 }
 .stat img {
   width: 32px;
+}
+.remaining-kills-desc {
+  color: gray;
 }
 </style>

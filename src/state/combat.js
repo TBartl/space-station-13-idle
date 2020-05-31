@@ -150,6 +150,11 @@ const combat = {
 			if (!hasAutoEat) return;
 			let isOnCooldown = getters["foodCoroutine/isActive"];
 			if (isOnCooldown) return;
+
+			var food = rootGetters["inventory/equipment"].food;
+			if (!food.itemId) return;
+
+			if (rootGetters["playerMob/health"] + ITEMS[food.itemId].healAmount > rootGetters["playerMob/stats"].maxHealth) return;
 			dispatch("eat");
 		},
 		eat({ state, rootState, getters, rootGetters, dispatch }) {

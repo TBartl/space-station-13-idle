@@ -8,10 +8,10 @@
     <div class="content-container">
       <div class="row" v-if="!inCombat">
         <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
-          <zone :zone="zone" class="mb-3"/>
+          <zone :zone="zone" class="mb-3" />
         </div>
       </div>
-      <div class="row" >
+      <div class="row">
         <div class="col-12 mb-3" v-if="inCombat">
           <run-away />
         </div>
@@ -21,8 +21,11 @@
         <div class="col-12 col-lg-4 mb-3">
           <combat-player-panel />
         </div>
-        <div class="col-6 col-lg-2 mb-3" >
+        <div class="col-6 col-lg-2 mb-3">
           <mob-card mobType="player" />
+        </div>
+        <div class="col-12 col-lg-6" v-if="!inCombat">
+          <validhunting />
         </div>
         <div class="col-6 col-lg-2 mb-3" v-if="inCombat">
           <mob-card mobType="enemy" />
@@ -45,6 +48,7 @@ import CombatExperience from "@/components/Content/Combat/CombatExperience";
 import CombatPlayerPanel from "@/components/Content/Combat/CombatPlayerPanel";
 import MobCard from "@/components/Content/Combat/MobCard";
 import Loot from "@/components/Content/Combat/Loot";
+import Validhunting from "@/components/Content/Combat/Validhunting";
 export default {
   extends: ContentAbstract,
   components: {
@@ -53,16 +57,17 @@ export default {
     CombatExperience,
     CombatPlayerPanel,
     MobCard,
-    Loot
+    Loot,
+    Validhunting
   },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
     zones() {
       return ZONES;
-		},
-		inCombat() {
-			return this.targetEnemy != null;
-		}
+    },
+    inCombat() {
+      return this.targetEnemy != null;
+    }
   }
 };
 </script>
