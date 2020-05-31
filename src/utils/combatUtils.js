@@ -55,3 +55,13 @@ export function calcRobustness(stats, mobType) {
 
 	return Math.round(robustness);
 }
+
+export function getRobustnessCssClass(playerRobustness, targetRobustness) {
+	let diff = targetRobustness - playerRobustness;
+	if (diff >= 14) return "danger-bubble";
+	if (diff >= 7) return "orange-bubble";
+	if (diff <= -14) return "secondary-bubble"
+	if (diff <= -7) return "success-bubble"
+	return "warning-bubble";
+
+}

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span :id="id" class="robustness danger-bubble">ROBUSTNESS: {{robustness}}</span>
+    <span :id="id" class="robustness" :class="[robustnessClass]">ROBUSTNESS: {{robustness}}</span>
     <b-popover :target="id" triggers="hover" placement="top" delay="0">
       <stats-panel :stats="getBasedStats" />
     </b-popover>
@@ -9,7 +9,11 @@
 
 <script>
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
-import { getBasedStats, calcRobustness } from "@/utils/combatUtils";
+import {
+  getBasedStats,
+  calcRobustness,
+  getRobustnessCssClass
+} from "@/utils/combatUtils";
 export default {
   components: { StatsPanel },
   props: ["stats", "mobType"],
@@ -22,6 +26,12 @@ export default {
     },
     robustness() {
       return calcRobustness(this.stats, this.mobType);
+    },
+    robustnessClass() {
+      return getRobustnessCssClass(
+        calcRobustness(this.$store.getters["playerMob/stats"], "player"),
+        calcRobustness(this.getBasedStats, "enemy")
+      );
     }
   }
 };
