@@ -18,7 +18,7 @@
       </div>
       <div>
         <span class="mr-1 validhunting-desc">Reward:</span>
-        <span>{{validhuntingXP}}</span>
+        <span>{{validhuntingXP | cleanNum}}</span>
         <img :src="validhuntingIcon" />
         <span>XP</span>
       </div>

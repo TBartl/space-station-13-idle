@@ -3,7 +3,7 @@
     <p>Task complete!</p>
     <div>
       <span class="mr-1 validhunting-desc">Collect</span>
-      <span>+{{validhuntingXP}}</span>
+      <span>+{{validhuntingXP | cleanNum}}</span>
       <img :src="validhuntingIcon" />
       <span>XP</span>
     </div>
