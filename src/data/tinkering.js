@@ -51,7 +51,7 @@ export const ACTIONS = {
 	},
 	tinkerMeleeb5: {
 		time: 2,
-		item: "meleeB95",
+		item: "meleeB5",
 		icon: require("@/assets/art/combat/items/melee_b5.png"),
 		xp: 20,
 		requiredLevel: 26,

@@ -16,12 +16,25 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [0, 10]
 				}
 			},
 			{
-				chance: .2,
-				item: "toolbox"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'junk',
+						weight: 10
+					},
+					{
+						id: 'spacejunk',
+						weight: 9
+					},
+					{
+						id: 'meleeB3',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -30,7 +43,7 @@ export default {
 		]
 	},
 	miner: {
-		name: "Overgeared Miner",
+		name: "Prelaunch Miner",
 		icon: require("@/assets/art/combat/enemies/miner.png"),
 		stats: {
 			maxHealth: 20,
@@ -45,13 +58,25 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [5, 10]
 				}
-			},	{
-				chance: .02,
-				item: "jumpsuitExplorer"
-			},
-			{
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gunE1',
+						weight: 20
+					},
+					{
+						id: 'iron',
+						weight: 19
+					},
+					{
+						id: "jumpsuitExplorer",
+						weight: 1
+					}
+				]
+			},{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -88,14 +113,26 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [5, 20]
 				}
 			},
 			{
-				chance: .02,
-				item: "jumpsuitScience"
-			},
-			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'plasma',
+						weight: 1
+					},
+					{
+						id: 'power',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitScience',
+						weight: 1
+					}
+				]
+			},{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -117,12 +154,25 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [10, 20]
 				}
 			},
 			{
-				chance: .02,
-				item: "jumpsuitTinkering"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'glass',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitTinkering',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -146,7 +196,7 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [10, 30]
 				}
 			},
 			{
@@ -175,12 +225,24 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [15, 30]
 				}
-			},
-			{
-				chance: .8,
-				item: "iron"
+			},{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'armb1',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -204,14 +266,25 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [15, 40]
 				}
-			},
-			{
-				chance: .2,
-				item: "pill10"
-			},
-			{
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
+			},			{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -235,10 +308,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .2,
-				item: "baseball"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -264,9 +349,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},{
-				chance: .02,
-				item: "jumpsuitSecurity"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitSecurity',
+						weight: 1
+					}
+				]
 			},{
 				chance: 1,
 				item: "foodMeatZ"
@@ -291,10 +389,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .02,
-				item: "armSyndiSuit"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'armSyndiSuit',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -320,10 +430,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .2,
-				item: "armFiresuit"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'armB2',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'armFiresuit',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -349,10 +471,22 @@ export default {
 					id: "money",
 					count: [20, 40],
 				}
-			},
-			{
-				chance: .02,
-				item: "Engineering Jumpsuit"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'Engineering Jumpsuit',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -362,7 +496,7 @@ export default {
 	},
 	badengineer: {
 		name: "Fusion Engineer",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/fusion.png"),
 		stats: {
 			maxHealth: 140,
 			attackSpeed: 3.0,
@@ -380,8 +514,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'glass',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'faceMeson',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -409,8 +556,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'slimeRed',
+						weight: 1
+					},
+					{
+						id: 'power',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -438,8 +598,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'bananamime',
+						weight: 1
+					},
+					{
+						id: 'spacejunk',
+						weight: 1
+					},
+					{
+						id: 'faceMime',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -467,8 +640,17 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.05,
+				itemTable: [
+					{
+						id: 'banana',
+						weight: 49
+					},
+					{
+						id: 'honk',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -494,9 +676,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},{
-				chance: .2,
-				item: "pill20"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'banana',
+						weight: 1
+					},
+					{
+						id: 'bananium',
+						weight: 1
+					},
+					{
+						id: 'faceClown',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -505,8 +700,8 @@ export default {
 		]
 	},
 	goodchef: {
-		name: "Iron Chef",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		name: "Botanist",
+		icon: require("@/assets/art/combat/enemies/botanist.png"),
 		stats: {
 			maxHealth: 190,
 			attackSpeed: 1.6,
@@ -676,10 +871,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .02,
-				item: "jumpsuitChemistry"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'ammoB2',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitChemistry',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -705,10 +912,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .02,
-				item: "Paramedic Jumpsuit"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'Paramedic Jumpsuit',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -718,7 +937,7 @@ export default {
 	},
 	hulk: {
 		name: "The Next Step In Human Evolution",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/hulk.png"),
 		stats: {
 			maxHealth: 240,
 			attackSpeed: 1.7,
@@ -736,8 +955,21 @@ export default {
 				}
 			},
 			{
-				chance: .01,
-				item: "pill50"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -765,8 +997,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -792,10 +1037,22 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
-			},
-			{
-				chance: .02,
-				item: "jumpsuitFabrication"
+			},			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitFabrication',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -805,7 +1062,7 @@ export default {
 	},
 	mech: {
 		name: "Mech Building Roboticist",
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/combat/enemies/mechbuild.png"),
 		stats: {
 			maxHealth: 270,
 			attackSpeed: 2.1,
@@ -821,6 +1078,23 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
+			},
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: .2,
@@ -852,8 +1126,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'armB4',
+						weight: 1
+					},
+					{
+						id: 'armB4',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -881,8 +1168,21 @@ export default {
 				}
 			},
 			{
-				chance: .02,
-				item: "jumpsuitGraytide"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'jumpsuitGraytide',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -910,8 +1210,21 @@ export default {
 				}
 			},
 			{
-				chance: .2,
-				item: "pill30"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -939,8 +1252,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -968,8 +1294,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -995,6 +1334,23 @@ export default {
 					id: "money",
 					count: [20, 40]
 				}
+			},
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'ammoB4',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: .2,
@@ -1026,8 +1382,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'armB6',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -1055,8 +1424,21 @@ export default {
 				}
 			},
 			{
-				chance: .8,
-				item: "iron"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
@@ -1084,7 +1466,24 @@ export default {
 				}
 			},
 			{
-				chance: .8,
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'ammoE4',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
+			},
+			{
+				chance: 1,
 				item: "diamond"
 			}
 		]
@@ -1105,16 +1504,29 @@ export default {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [20, 40]
+					count: [20, 0]
 				}
 			},
 			{
-				chance: .2,
-				item: "pill40"
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "bluespace"
 			}
 		]
 	},
