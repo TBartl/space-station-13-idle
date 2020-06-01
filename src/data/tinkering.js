@@ -1,12 +1,32 @@
 export const ACTIONS = {
-	tinkerCuffs: {
+	tinkerRecycleJ: {
 		time: 10,
-		item: "cuffs",
+		item: "burnjunk",
 		icon: require("@/assets/art/tinkering/cuff.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
-			junk: 1
+			junk: 2
+		}
+	},
+	tinkerRecycleS: {
+		time: 10,
+		item: "burnjunk",
+		icon: require("@/assets/art/tinkering/cuff.png"),
+		xp: 10,
+		requiredLevel: 1,
+		requiredItems: {
+			spacejunk: 2
+		}
+	},
+	tinkerRecycleA: {
+		time: 10,
+		item: "burnjunk",
+		icon: require("@/assets/art/tinkering/cuff.png"),
+		xp: 10,
+		requiredLevel: 1,
+		requiredItems: {
+			armorjunk: 2
 		}
 	},
 	tinkerMeleeb1: {
