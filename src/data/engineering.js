@@ -10,16 +10,130 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 1
 	},
-	engDebug: {
-		time: 1,
-		name: "DEBUG REMOVE THIS",
+	engOil: {
+		time: 5,
+		name: "Oil Barrel",
 		items: {
 			id: "power",
-			count: 100
+			count: 10
+		},
+		icon: require("@/assets/art/engineering/burning_anim.gif"),
+		xp: 50,
+		requiredLevel: 5,
+		requiredItems: {
+			oil: 8
+		}
+	},
+	engTreadmill: {
+		time: 1,
+		name: "Treadmill",
+		items: {
+			id: "power",
+			count: 2
+		},
+		icon: require("@/assets/art/engineering/treadmill.png"),
+		xp: 10,
+		requiredLevel: 10,
+	},
+		engPotato: {
+		time: 1,
+		name: "Potato Battery",
+		items: {
+			id: "power",
+			count: 3
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
-		xp: 5,
-		requiredLevel: 1
+		xp: 15,
+		requiredLevel: 15,
+		requiredItems: {
+			PotatoBatt: 8
+		}
+		
+	},
+	engGen: {
+		time: 1,
+		name: "Portable Generator",
+		items: {
+			id: "power",
+			count: 4
+		},
+		icon: require("@/assets/art/engineering/generator_anim.gif"),
+		xp: 20,
+		requiredLevel: 20,
+		requiredItems: {
+			power: 5
+		}
+	},
+	engSlime: {
+		time: 1,
+		name: "Charged Slime",
+		items: {
+			id: "power",
+			count: 5
+		},
+		icon: require("@/assets/art/engineering/bicycle.png"),
+		xp: 25,
+		requiredLevel: 25,
+		requiredItems: {
+			slimeYellow: 1
+		}
+	},
+	engIncinerator: {
+		time: 1,
+		name: "Incinerator",
+		items: {
+			id: "power",
+			count: 6
+		},
+		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
+		xp: 30,
+		requiredLevel: 30,
+		requiredItems: {
+			burnjunk: 1
+		}
+	},
+	engPowerBottom: {
+		time: 1,
+		name: "Power Bottom",
+		items: {
+			id: "power",
+			count: 7
+		},
+		icon: require("@/assets/art/engineering/powerbottom.png"),
+		xp: 35,
+		requiredLevel: 35,
+		requiredItems: {
+			lube: 8
+		}
+	},
+	engSMES: {
+		time: 1,
+		title:"Prepare For Sale",
+		name: "Stored Power",
+		items: {
+			id: "money",
+			count: 50
+		},
+		icon: require("@/assets/art/engineering/smes_anim.gif"),
+		xp: 40,
+		requiredLevel: 40,
+		requiredItems: {
+			power: 10
+		}
+	},
+	engSingularity: {
+		time: 600,
+		name: "Gravitational Singularity",
+		items: {
+			id: "power",
+			count: 50000
+		},
+		icon: require("@/assets/art/engineering/big.gif"),
+		xp: -50000,
+		requiredLevel: 50,
+		requiredItems: {
+			power: 500
+		}
 	},
 	engMeleesmall: {
 		time: 1,
