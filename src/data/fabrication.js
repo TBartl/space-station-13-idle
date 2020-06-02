@@ -189,7 +189,7 @@ const MECHS = {
 	},
 }
 
-const AMMO = {
+const ENERGY_AMMO = {
 	fabricateEammo1: {
 		time: .1,
 		item: "ammoE1",
@@ -220,6 +220,9 @@ const AMMO = {
 			plasma: 1
 		}
 	},
+}
+
+const BALLISTIC_AMMO = {
 	fabricateBammo1: {
 		time: .1,
 		item: "ammoB1",
@@ -252,7 +255,7 @@ const AMMO = {
 	},
 }
 
-const GUNS = {
+const ENERGY_GUNS = {
 	fabricateEgun1: {
 		time: 8,
 		item: "gunE1",
@@ -293,6 +296,8 @@ const GUNS = {
 			bluespace: 5
 		}
 	},
+}
+const BALLISTIC_GUNS = {
 	fabricateBgun1: {
 		time: 8,
 		item: "gunB1",
@@ -335,13 +340,17 @@ const GUNS = {
 	},
 }
 
-Object.values(GUNS).forEach(action => action.fabType = "guns");
-Object.values(AMMO).forEach(action => action.fabType = "ammo");
+Object.values(BALLISTIC_AMMO).forEach(action => action.fabType = "ballistic ammo");
+Object.values(ENERGY_AMMO).forEach(action => action.fabType = "energy ammo");
+Object.values(BALLISTIC_GUNS).forEach(action => action.fabType = "ballistic guns");
+Object.values(ENERGY_GUNS).forEach(action => action.fabType = "energy guns");
 Object.values(MECHS).forEach(action => action.fabType = "mechs");
 
 export const ACTIONS = {
-	...AMMO,
-	...GUNS,
+	...BALLISTIC_AMMO,
+	...ENERGY_AMMO,
+	...BALLISTIC_GUNS,
+	...ENERGY_GUNS,
 	...MECHS
 }
 
