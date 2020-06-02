@@ -11,6 +11,23 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
+
+			let upgradeCount = rootGetters["upgrades/get"]("fabricationBins");
+			let potion = rootGetters["potions/get"]("fabrication");
+			let potionItemId = potion ? potion.itemId : null;
+
+			let upgradeReduction = 1 - upgradeCount * .20;
+
+			for (let action of Object.values(actions)) {
+				for (let itemId of Object.keys(action.requiredItems)) {
+					if (itemId == "power") {
+						// TODO: Add potion reduction
+					} else {
+						action.requiredItems[itemId] = Math.max(1, Math.round(action.requiredItems[itemId] * upgradeReduction));
+					}
+				}
+			}
+
 			return actions;
 		}
 	}
