@@ -146,7 +146,7 @@ export const ACTIONS = {
 	},
 	growOrange3d: {
 		time: 1.5,
-		item: "Orange3d",
+		item: "orange3d",
 		icon: require("@/assets/art/botany/TrayOrange.gif"),
 		xp: 5,
 		requiredLevel: 50,
