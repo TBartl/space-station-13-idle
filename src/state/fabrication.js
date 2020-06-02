@@ -16,14 +16,15 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potion = rootGetters["potions/get"]("fabrication");
 			let potionItemId = potion ? potion.itemId : null;
 
-			let upgradeReduction = 1 - upgradeCount * .20;
+			let potionPowerReduction = potionItemId == "bluespaceAcid" ? .6 : 1;
+			let upgradeOreReduction = 1 - upgradeCount * .20;
 
 			for (let action of Object.values(actions)) {
 				for (let itemId of Object.keys(action.requiredItems)) {
 					if (itemId == "power") {
-						// TODO: Add potion reduction
+						action.requiredItems[itemId] = Math.max(1, Math.round(action.requiredItems[itemId] * potionPowerReduction));
 					} else {
-						action.requiredItems[itemId] = Math.max(1, Math.round(action.requiredItems[itemId] * upgradeReduction));
+						action.requiredItems[itemId] = Math.max(1, Math.round(action.requiredItems[itemId] * upgradeOreReduction));
 					}
 				}
 			}
