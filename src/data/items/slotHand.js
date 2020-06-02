@@ -248,6 +248,90 @@ export default {
 			power: 10,
 		}
 	},
+	meleeB1: {
+		name: "Rolling Pin",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_b1.png"),
+		overlay: require("@/assets/art/combat/items/melee_b1_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeE1: {
+		name: "Welding Tool",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_e1.png"),
+		overlay: require("@/assets/art/combat/items/melee_e1_overlay_anim.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeE2: {
+		name: "Handheld Welder",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_e2.png"),
+		overlay: require("@/assets/art/combat/items/melee_e2_overlay_anim.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeE3: {
+		name: "Energy Dagger",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_e3_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e3_anim_overlay.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeE4: {
+		name: "Energy Sword",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_e4_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e4_overlay_anim.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
+	meleeE5: {
+		name: "Dual Energy Sword",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_e5_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e5_overlay.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 5,
+			evasion: -5,
+			precision: 5,
+			attackSpeed: 2,
+			power: 10,
+		}
+	},
 	mechWeaponClaw: {
 		name: "Mech Claw",
 		sellPrice: 0,
