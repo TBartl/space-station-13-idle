@@ -44,6 +44,14 @@ const POTIONS = {
 		potionJob: "xenobiology",
 		potionCharges: 5
 	},
+	bluespaceAcid: {
+		name: "Bluespace Acid",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/beakerbluespace.gif"),
+		description: "Fabrication actions cost 30% reduced power.",
+		potionJob: "fabrication",
+		potionCharges: 5
+	},
 	lube: {
 		name: "SpaceLube",
 		sellPrice: 5,
