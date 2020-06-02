@@ -346,13 +346,17 @@ Object.values(BALLISTIC_GUNS).forEach(action => action.fabType = "ballistic guns
 Object.values(ENERGY_GUNS).forEach(action => action.fabType = "energy guns");
 Object.values(MECHS).forEach(action => action.fabType = "mechs");
 
-export const ACTIONS = {
+const ACTIONS = {
 	...BALLISTIC_AMMO,
 	...ENERGY_AMMO,
 	...BALLISTIC_GUNS,
 	...ENERGY_GUNS,
 	...MECHS
 }
+for (let action of Object.values(ACTIONS)) {
+	action.requiredItems['power'] = action.requiredLevel;
+}
+export { ACTIONS };
 
 export const JOB = {
 	id: "fabrication",
