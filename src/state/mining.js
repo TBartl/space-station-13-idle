@@ -13,13 +13,23 @@ const potionDropTable = [
 			{
 				id: "foodMeatZ",
 				count: 1,
-				weight: 99
+				weight: 33
+			},
+			{
+				id: "slimeMining",
+				count: 1,
+				weight: 33
+			},
+			{
+				id: "oil",
+				count: 1,
+				weight: 33
 			},
 			{
 				id: "jumpsuitExplorer",
 				count: 1,
 				weight: 1
-			}
+			},
 		]
 	}
 ]
