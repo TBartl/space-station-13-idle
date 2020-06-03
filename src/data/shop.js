@@ -11,7 +11,8 @@ export const SECTIONS = [
 		purchases: [
 			"upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5",
 			"upgradeEngineering1", "upgradeEngineering2", "upgradeEngineering3", "upgradeEngineering4", "upgradeEngineering5",
-			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3"
+			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3",
+			"upgradeBotany1", "upgradeBotany2"
 		]
 	},
 	{
