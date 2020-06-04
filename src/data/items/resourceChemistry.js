@@ -112,6 +112,14 @@ const POTIONS = {
 		potionJob: "shitposting",
 		potionCharges: 5
 	},
+	unstableMutagen: {
+		name: "Unstable Mutagen",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/unstableMutagen.png"),
+		description: "Botany actions have a 30% chance to also grow a plant of a higher tier.",
+		potionJob: "botany",
+		potionCharges: 5
+	},
 	lube: {
 		name: "SpaceLube",
 		sellPrice: 5,

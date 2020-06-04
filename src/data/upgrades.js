@@ -263,8 +263,40 @@ const FABRICATION_UPGRADES = {
 		requiredUpgrades: {
 			fabricationBins: 2
 		}
-	},
+	}
+}
 
+const BOTANY_UPGRADES = {
+	upgradeBotany1: {
+		name: "Add Second Botany Tray",
+		description: "Whenever you grow a plant, also grow the plant to the left as well",
+		icon: require('@/assets/art/botany/upgrade1.png'),
+		requiredItems: {
+			money: 25000
+		},
+		requiredLevels: {
+			botany: 20
+		},
+		upgrade: "botanyTrays",
+		requiredUpgrades: {
+			botanyTrays: 0
+		}
+	},
+	upgradeBotany2: {
+		name: "Add Third Botany Tray",
+		description: "Whenever you grow a plant, also grow the plant to the left and right as well",
+		icon: require('@/assets/art/botany/upgrade1.png'),
+		requiredItems: {
+			money: 2000000
+		},
+		requiredLevels: {
+			botany: 40
+		},
+		upgrade: "botanyTrays",
+		requiredUpgrades: {
+			botanyTrays: 1
+		}
+	}
 }
 
 export default {
@@ -272,5 +304,6 @@ export default {
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
 	...XENOBIO_UPGRADES,
+	...BOTANY_UPGRADES,
 	...COMBAT_UPGRADES
 }
