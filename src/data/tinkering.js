@@ -33,7 +33,7 @@ export const ACTIONS = {
 		time: 2,
 		item: "meleeB1",
 		icon: require("@/assets/art/combat/items/melee_b1.png"),
-		xp: 20,
+		xp: 2,
 		requiredLevel: 2,
 		requiredItems: {
 			junk: 1
@@ -43,7 +43,7 @@ export const ACTIONS = {
 		time: 2,
 		item: "meleeB2",
 		icon: require("@/assets/art/combat/items/melee_b2.png"),
-		xp: 20,
+		xp: 8,
 		requiredLevel: 8,
 		requiredItems: {
 			junk: 1

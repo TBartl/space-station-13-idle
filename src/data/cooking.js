@@ -1,6 +1,6 @@
 export const ACTIONS = {
 	cookPasta: {
-		time: 1,
+		time: 3,
 		name: "Pasta",
 		item: "foodPasta1",
 		icon: require("@/assets/art/cooking/pasta1.png"),
@@ -11,7 +11,7 @@ export const ACTIONS = {
 		}
 	},
 	cookPasta2: {
-		time: 1,
+		time: 3,
 		name: "Copy Pasta",
 		item: "foodPasta2",
 		icon: require("@/assets/art/cooking/pasta2_anim.gif"),
@@ -23,7 +23,7 @@ export const ACTIONS = {
 		}
 	},
 	cookPasta3: {
-		time: 1,
+		time: 3,
 		name: "Triple Pasta",
 		item: "foodPasta3",
 		icon: require("@/assets/art/cooking/pasta3.png"),
@@ -35,7 +35,7 @@ export const ACTIONS = {
 		}
 	},
 	cookPasta4: {
-		time: 1,
+		time: 3,
 		name: "Pasta Tower",
 		item: "foodPasta4",
 		icon: require("@/assets/art/cooking/pasta4.png"),
@@ -47,7 +47,7 @@ export const ACTIONS = {
 		}
 	},
 	cookPasta5: {
-		time: 1,
+		time: 3,
 		name: "InSPIRED Pasta",
 		item: "foodPasta5",
 		icon: require("@/assets/art/cooking/pasta5.png"),
@@ -59,7 +59,7 @@ export const ACTIONS = {
 		}
 	},
 	cookPasta6: {
-		time: 1,
+		time: 3,
 		name: "Babel Pasta",
 		item: "foodPasta5",
 		icon: require("@/assets/art/cooking/pasta6.png"),
@@ -71,11 +71,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPer1: {
-		time: 1,
+		time: 3,
 		name: "Hot Potato Stew",
 		item: "foodPer1",
 		icon: require("@/assets/art/cooking/stew1.png"),
-		xp: 5,
+		xp: 1,
 		requiredLevel: 1,
 		requiredItems: {
 			pepper: 1,
@@ -83,11 +83,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPow1: {
-		time: 1,
+		time: 3,
 		name: "Donkpocket",
 		item: "foodPow1",
 		icon: require("@/assets/art/cooking/donk1.png"),
-		xp: 5,
+		xp: 2,
 		requiredLevel: 3,
 		requiredItems: {
 			tomato: 1,
@@ -95,11 +95,11 @@ export const ACTIONS = {
 		}
 	},
 	cookEva1: {
-		time: 1,
+		time: 3,
 		name: "Cream Pie",
 		item: "foodEva1",
 		icon: require("@/assets/art/cooking/pie1.png"),
-		xp: 5,
+		xp: 2,
 		requiredLevel: 5,
 		requiredItems: {
 			banana: 1,
@@ -107,11 +107,11 @@ export const ACTIONS = {
 		}
 	},
 	cookHuman1: {
-		time: 1,
+		time: 3,
 		name: "Spicy Burger",
 		item: "foodHuman1",
 		icon: require("@/assets/art/cooking/burger1.png"),
-		xp: 5,
+		xp: 3,
 		requiredLevel: 8,
 		requiredItems: {
 			foodMeatH: 1,
@@ -119,11 +119,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAnimal1: {
-		time: 1,
+		time: 3,
 		name: "Pizza",
 		item: "foodAnimal1",
 		icon: require("@/assets/art/cooking/animal1.png"),
-		xp: 5,
+		xp: 4,
 		requiredLevel: 10,
 		requiredItems: {
 			foodMeatA: 1,
@@ -131,7 +131,7 @@ export const ACTIONS = {
 		}
 	},
 	cookAlien1: {
-		time: 1,
+		time: 3,
 		name: "Fresh 'Sishi'",
 		item: "foodAlien1",
 		icon: require("@/assets/art/cooking/Alien1.png"),
@@ -143,11 +143,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPer2: {
-		time: 1,
+		time: 3,
 		name: "Tingle Soup",
 		item: "foodPer2",
 		icon: require("@/assets/art/cooking/stew2.png"),
-		xp: 5,
+		xp: 6,
 		requiredLevel: 15,
 		requiredItems: {
 			potatobattery: 1,
@@ -155,11 +155,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPow2: {
-		time: 1,
+		time: 3,
 		name: "Berrypocket",
 		item: "foodPow2",
 		icon: require("@/assets/art/cooking/donk2.png"),
-		xp: 5,
+		xp: 7,
 		requiredLevel: 17,
 		requiredItems: {
 			tomatoblue: 1,
@@ -167,11 +167,11 @@ export const ACTIONS = {
 		}
 	},
 	cookEva2: {
-		time: 1,
+		time: 3,
 		name: "Moonpie",
 		item: "foodEva2",
 		icon: require("@/assets/art/cooking/pie2.png"),
-		xp: 5,
+		xp: 8,
 		requiredLevel: 19,
 		requiredItems: {
 			bananamime: 1,
@@ -179,11 +179,11 @@ export const ACTIONS = {
 		}
 	},
 	cookHuman2: {
-		time: 1,
+		time: 3,
 		name: "Slippery Burger",
 		item: "foodHuman2",
 		icon: require("@/assets/art/cooking/burger2.png"),
-		xp: 5,
+		xp: 9,
 		requiredLevel: 22,
 		requiredItems: {
 			foodMeatH: 1,
@@ -191,11 +191,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAnimal2: {
-		time: 1,
+		time: 3,
 		name: "Moon Pizza",
 		item: "foodAnimal2",
 		icon: require("@/assets/art/cooking/animal2.png"),
-		xp: 5,
+		xp: 10,
 		requiredLevel: 24,
 		requiredItems: {
 			foodMeatA: 1,
@@ -203,11 +203,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAlien2: {
-		time: 1,
+		time: 3,
 		name: "Finger Food",
 		item: "foodAlien2",
 		icon: require("@/assets/art/cooking/Alien2.png"),
-		xp: 5,
+		xp: 11,
 		requiredLevel: 26,
 		requiredItems: {
 			foodMeatZ: 1,
@@ -215,11 +215,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPer3: {
-		time: 1,
+		time: 3,
 		name: "Dad's Stew",
 		item: "foodPer3",
 		icon: require("@/assets/art/cooking/stew3.png"),
-		xp: 5,
+		xp: 12,
 		requiredLevel: 29,
 		requiredItems: {
 			pepperghost: 1,
@@ -227,11 +227,11 @@ export const ACTIONS = {
 		}
 	},
 	cookPow3: {
-		time: 1,
+		time: 3,
 		name: "Dankpocket",
 		item: "foodPow3",
 		icon: require("@/assets/art/cooking/donk3.png"),
-		xp: 5,
+		xp: 13,
 		requiredLevel: 31,
 		requiredItems: {
 			tomatobluespace: 1,
@@ -239,11 +239,11 @@ export const ACTIONS = {
 		}
 	},
 	cookEva3: {
-		time: 1,
+		time: 3,
 		name: "Senpai",
 		item: "foodEva3",
 		icon: require("@/assets/art/cooking/pie3.png"),
-		xp: 5,
+		xp: 14,
 		requiredLevel: 33,
 		requiredItems: {
 			bananablue: 1,
@@ -251,11 +251,11 @@ export const ACTIONS = {
 		}
 	},
 	cookHuman3: {
-		time: 1,
+		time: 3,
 		name: "Blue Burger",
 		item: "foodHuman3",
 		icon: require("@/assets/art/cooking/burger3.png"),
-		xp: 5,
+		xp: 15,
 		requiredLevel: 36,
 		requiredItems: {
 			foodMeatH: 1,
@@ -263,11 +263,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAnimal3: {
-		time: 1,
+		time: 3,
 		name: "Bluespace Pizza",
 		item: "foodAnimal3",
 		icon: require("@/assets/art/cooking/animal3.png"),
-		xp: 5,
+		xp: 16,
 		requiredLevel: 38,
 		requiredItems: {
 			foodMeatA: 1,
@@ -275,11 +275,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAlien3: {
-		time: 1,
+		time: 3,
 		name: "Fush n Chips",
 		item: "foodAlien3",
 		icon: require("@/assets/art/cooking/Alien3.png"),
-		xp: 5,
+		xp: 17,
 		requiredLevel: 40,
 		requiredItems: {
 			foodMeatZ: 1,
@@ -287,11 +287,11 @@ export const ACTIONS = {
 		}
 	},
 	cookHuman4: {
-		time: 1,
+		time: 3,
 		name: "Ghost Burger",
 		item: "foodHuman4",
 		icon: require("@/assets/art/cooking/burger4_anim.gif"),
-		xp: 5,
+		xp: 18,
 		requiredLevel: 43,
 		requiredItems: {
 			foodMeatH: 1,
@@ -299,11 +299,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAnimal4: {
-		time: 1,
+		time: 3,
 		name: "Nova Pizza",
 		item: "foodAnimal4",
 		icon: require("@/assets/art/cooking/animal4.png"),
-		xp: 5,
+		xp: 19,
 		requiredLevel: 45,
 		requiredItems: {
 			foodMeatA: 1,
@@ -311,11 +311,11 @@ export const ACTIONS = {
 		}
 	},
 	cookAlien4: {
-		time: 1,
+		time: 3,
 		name: "Fried Friend",
 		item: "foodAlien4",
 		icon: require("@/assets/art/cooking/Alien4.png"),
-		xp: 5,
+		xp: 20,
 		requiredLevel: 47,
 		requiredItems: {
 			foodMeatZ: 1,

@@ -109,7 +109,7 @@ export default {
 		}
 	},
 	meleeB7: {
-		name: "Toolbox",
+		name: "Jackhammer",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b7.png"),
 		overlay: require("@/assets/art/combat/items/melee_b7_overlay.png"),
@@ -158,8 +158,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -172,8 +172,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -186,8 +186,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -200,8 +200,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -214,8 +214,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -228,8 +228,8 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
@@ -242,24 +242,80 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
+			evasion: 5,
+			precision: -5,
 			attackSpeed: 2,
 			power: 10,
 		}
 	},
-	meleeB1: {
-		name: "Rolling Pin",
+	meleeT1: {
+		name: "Toolbox",
 		sellPrice: 30,
-		icon: require("@/assets/art/combat/items/melee_b1.png"),
-		overlay: require("@/assets/art/combat/items/melee_b1_overlay.png"),
+		icon: require("@/assets/art/combat/items/melee_t1.png"),
+		overlay: require("@/assets/art/combat/items/melee_t1_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 5,
-			evasion: -5,
-			precision: 5,
-			attackSpeed: 2,
+			maxHealth: 10,
+			evasion: 10,
+			precision: 10,
+			attackSpeed: 3,
 			power: 10,
+		}
+	},
+	meleeT2: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_t2.png"),
+		overlay: require("@/assets/art/combat/items/melee_t2_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 20,
+			evasion: 20,
+			precision: 20,
+			attackSpeed: 3,
+			power: 20,
+		}
+	},
+	meleeT4: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_t3.png"),
+		overlay: require("@/assets/art/combat/items/melee_t3_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 25,
+			evasion: 25,
+			precision: 25,
+			attackSpeed: 3,
+			power: 25,
+		}
+	},
+	meleeT5: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_t5.png"),
+		overlay: require("@/assets/art/combat/items/melee_t5_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 30,
+			evasion: 30,
+			precision: 30,
+			attackSpeed: 3,
+			power: 30,
+		}
+	},
+	meleeT6: {
+		name: "Toolbox",
+		sellPrice: 30,
+		icon: require("@/assets/art/combat/items/melee_t6_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_t6_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 35,
+			evasion: 35,
+			precision: 35,
+			attackSpeed: 3,
+			power: 35,
 		}
 	},
 	meleeE1: {

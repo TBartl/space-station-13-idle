@@ -1,13 +1,13 @@
 export const ACTIONS = {
 	engBike: {
-		time: 1,
+		time: 5,
 		name: "Stationary Bicycle",
 		items: {
 			id: "power",
 			count: 1
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
-		xp: 5,
+		xp: 1,
 		requiredLevel: 1
 	},
 	engOil: {
@@ -18,14 +18,14 @@ export const ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/burning_anim.gif"),
-		xp: 50,
+		xp: 3,
 		requiredLevel: 5,
 		requiredItems: {
-			oil: 8
+			oil: 1
 		}
 	},
 	engTreadmill: {
-		time: 1,
+		time: 5,
 		name: "Treadmill",
 		items: {
 			id: "power",
@@ -36,7 +36,7 @@ export const ACTIONS = {
 		requiredLevel: 10,
 	},
 		engPotato: {
-		time: 1,
+		time: 5,
 		name: "Potato Battery",
 		items: {
 			id: "power",
@@ -51,7 +51,7 @@ export const ACTIONS = {
 		
 	},
 	engGen: {
-		time: 1,
+		time: 5,
 		name: "Portable Generator",
 		items: {
 			id: "power",
@@ -65,7 +65,7 @@ export const ACTIONS = {
 		}
 	},
 	engSlime: {
-		time: 1,
+		time: 5,
 		name: "Charged Slime",
 		items: {
 			id: "power",
@@ -79,7 +79,7 @@ export const ACTIONS = {
 		}
 	},
 	engIncinerator: {
-		time: 1,
+		time: 5,
 		name: "Incinerator",
 		items: {
 			id: "power",
@@ -93,21 +93,21 @@ export const ACTIONS = {
 		}
 	},
 	engPowerBottom: {
-		time: 1,
+		time: 5,
 		name: "Power Bottom",
 		items: {
 			id: "power",
 			count: 7
 		},
 		icon: require("@/assets/art/engineering/powerbottom.png"),
-		xp: 35,
+		xp: 18,
 		requiredLevel: 35,
 		requiredItems: {
 			lube: 8
 		}
 	},
 	engSMES: {
-		time: 1,
+		time: 5,
 		title:"Prepare For Sale",
 		name: "Stored Power",
 		items: {
@@ -115,7 +115,7 @@ export const ACTIONS = {
 			count: 50
 		},
 		icon: require("@/assets/art/engineering/smes_anim.gif"),
-		xp: 40,
+		xp: 20,
 		requiredLevel: 40,
 		requiredItems: {
 			power: 10
