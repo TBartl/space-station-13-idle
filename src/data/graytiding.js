@@ -1,55 +1,10 @@
 export const ACTIONS = {
-	graytideMaint: {
-		name: "DEBUG E",
-		icon: require("@/assets/art/debug/E.png"),
-		time: 1,
-		xp: 10,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},
-					{
-						id: 'spacejunk',
-						weight: 3
-					},
-					{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
-			},
-			{
-				chance: 0.1,
-				items: {
-					id: 'silver',
-					count: [0, 2]
-				}
-			},
-			{
-				chance: 0.01,
-				itemTable: [
-					{
-						id: 'gold',
-						weight: 3
-					},
-					{
-						id: 'limbNinja',
-						weight: 1
-					}
-				]
-			}
-		]
-	},
+//at 25 xp per action gives approximately 4000 total junk to hit 50.
 	graytideMining: {
 		name: "Mining",
 		icon: require("@/assets/art/graytiding/Mining.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -75,14 +30,14 @@ export const ACTIONS = {
 				{
 					id: "iron",
 					count: [1, 3],
-					weight: 60
+					weight: 300
 				}, {
 					id: "silver",
 					count: 2,
-					weight: 29
+					weight: 100
 				}, {
 					id: "gold",
-					weight: 10
+					weight: 99
 				}, {
 					id: "limbMagBoots",
 					weight: 1
@@ -94,8 +49,8 @@ export const ACTIONS = {
 	graytideMeat: {
 		name: "Medical",
 		icon: require("@/assets/art/graytiding/Medical.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -119,15 +74,15 @@ export const ACTIONS = {
 				{
 					id: "foodMeatH",
 					count: [0, 2],
-					weight: 33
+					weight: 165
 					}, {
 					id: "foodMeatZ",
 					count: [0, 2],
-					weight: 33
+					weight: 165
 					}, {
 					id: "foodMeatA",
 					count: [0, 2],
-					weight: 33
+					weight: 165
 					}, {
 					id: "limbClownShoes",
 					weight: 1
@@ -139,8 +94,8 @@ export const ACTIONS = {
 	graytideSecurity: {
 		name: "Security",
 		icon: require("@/assets/art/graytiding/Security.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 				{
@@ -166,31 +121,31 @@ export const ACTIONS = {
 						{
 							id: "ammoE1",
 							count: [1, 3],
-							weight: 60
+							weight: 119
 						}, {
 							id: "ammoE2",
 							count: 2,
-							weight: 20
+							weight: 40
 						}, {
 							id: "ammoE3",
-							weight: 10
+							weight: 20
 						}, {
 							id: "ammoE4",
-							weight: 5
+							weight: 10
 						}, {
 							id: "ammoB1",
 							count: [1, 3],
-							weight: 60
+							weight: 120
 						}, {
 							id: "ammoB2",
 							count: 2,
-							weight: 20
+							weight: 40
 						}, {
 							id: "ammoB3",
-							weight: 10
+							weight: 20
 						}, {
 							id: "ammoB4",
-							weight: 5
+							weight: 10
 						}, {
 							id: "limbJackboots",
 							weight: 1
@@ -202,8 +157,8 @@ export const ACTIONS = {
 	graytideScience: {
 		name: "Research",
 		icon: require("@/assets/art/graytiding/Science.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -226,25 +181,25 @@ export const ACTIONS = {
 				itemTable: [
 				{
 					id: "slimeGrey",
-					weight: 51
+					weight: 255
 					}, {
 					id: "slimeOrange",
-					weight: 10
+					weight: 50
 					}, {
 					id: "slimePurple",
-					weight: 10
+					weight: 50
 					}, {
 					id: "slimeBlue",
-					weight: 10
+					weight: 50
 					}, {
 					id: "slimeYellow",
-					weight: 6
+					weight: 30
 					}, {
 					id: "slimeDarkPurple",
-					weight: 6
+					weight: 30
 					}, {
 					id: "slimeDarkBlue",
-					weight: 6
+					weight: 30
 					}, {
 					id: "limbAdvancedMagboots",
 					weight: 1
@@ -256,8 +211,8 @@ export const ACTIONS = {
 	graytideSeeds: {
 		name: "Botany",
 		icon: require("@/assets/art/graytiding/Botany.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -281,7 +236,7 @@ export const ACTIONS = {
 				{
 					id: "plantSeed",
 					count: [0, 2],
-					weight: 99
+					weight: 499
 					}, {
 					id: "limbBlack",
 					weight: 1
@@ -293,8 +248,8 @@ export const ACTIONS = {
 	graytideBridge: {
 		name: "Captains Quarters",
 		icon: require("@/assets/art/graytiding/Command.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -319,22 +274,22 @@ export const ACTIONS = {
 				itemTable: [
 				{
 					id: "foodPasta1",
-					weight: 40
+					weight: 200
 				}, {
 					id: "foodPasta2",
-					weight: 20
+					weight: 100
 				}, {
 					id: "foodPasta3",
-					weight: 15
+					weight: 75
 				}, {
 					id: "foodPasta4",
-					weight: 11
+					weight: 55
 				}, {
 					id: "foodPasta5",
-					weight: 8
+					weight: 40
 				}, {
 					id: "foodPasta6",
-					weight: 5
+					weight: 24
 				}, {
 					id: "limbCapt",
 					weight: 1
@@ -346,8 +301,8 @@ export const ACTIONS = {
 	graytidePower: {
 		name: "Engineering",
 		icon: require("@/assets/art/graytiding/Engineering.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -371,7 +326,7 @@ export const ACTIONS = {
 				{
 					id: "power",
 					count: [0, 25],
-					weight: 99
+					weight: 499
 					}, {
 					id: "limbInsuls",
 					weight: 1
@@ -383,8 +338,8 @@ export const ACTIONS = {
 	graytideSpace: {
 		name: "Space",
 		icon: require("@/assets/art/graytiding/space_anim.gif"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -403,7 +358,7 @@ export const ACTIONS = {
 				]
 			},
 			{
-				chance: .01,
+				chance: .002,
 					item: "limbNinja",
 					weight: 1
 			}
@@ -412,8 +367,8 @@ export const ACTIONS = {
 	graytideDouble: {
 		name: "Rage Cage",
 		icon: require("@/assets/art/graytiding/Rage.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -432,7 +387,7 @@ export const ACTIONS = {
 				]
 			},
 			{
-				chance: .01,
+				chance: .002,
 					item: "limbBoxing",
 					weight: 1
 			}
@@ -441,8 +396,8 @@ export const ACTIONS = {
 	graytideVault: {
 		name: "Vault",
 		icon: require("@/assets/art/graytiding/Vault.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 			{
@@ -464,7 +419,7 @@ export const ACTIONS = {
 				]
 			},
 			{
-				chance: .01,
+				chance: .002,
 					item: "limbMagkrava",
 					weight: 1
 			}
@@ -473,8 +428,8 @@ export const ACTIONS = {
 	graytideBULK: {
 		name: "Security",
 		icon: require("@/assets/art/graytiding/Security.png"),
-		time: 2.5,
-		xp: 10,
+		time: 6,
+		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
 				{
@@ -559,7 +514,7 @@ export const ACTIONS = {
 		name: "DEBUG C",
 		icon: require("@/assets/art/debug/C.png"),
 		time: 1,
-		xp: 10,
+		xp: 1,
 		requiredLevel: 1,
 		items: {
 			id: "iron",
@@ -570,7 +525,7 @@ export const ACTIONS = {
 		name: "DEBUG D",
 		icon: require("@/assets/art/debug/D.png"),
 		time: 1,
-		xp: 10,
+		xp: 1,
 		requiredLevel: 1,
 		itemTable: [
 			{

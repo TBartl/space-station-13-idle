@@ -31,7 +31,7 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'meleeB3',
+						id: 'meleeT1',
 						weight: 1
 					}
 				]
@@ -280,7 +280,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'meleeT2',
 						weight: 1
 					}
 				]
@@ -320,7 +320,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'meleeT3',
 						weight: 1
 					}
 				]
@@ -649,6 +649,10 @@ export default {
 					{
 						id: 'honk',
 						weight: 1
+					},
+					{
+						id: 'meleeT4',
+						weight: 1
 					}
 				]
 			},
@@ -966,7 +970,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'meleeT5',
 						weight: 1
 					}
 				]
@@ -1091,7 +1095,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'meleeT6',
 						weight: 1
 					}
 				]
