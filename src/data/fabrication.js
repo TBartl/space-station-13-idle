@@ -191,7 +191,7 @@ const MECHS = {
 
 const ENERGY_AMMO = {
 	fabricateEammo1: {
-		time: .1,
+		time: .5,
 		item: "ammoE1",
 		icon: require("@/assets/art/combat/items/ammo_e1.png"),
 		xp: 1,
@@ -201,7 +201,7 @@ const ENERGY_AMMO = {
 		}
 	},
 	fabricateEammo2: {
-		time: .1,
+		time: .5,
 		item: "ammoE2",
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
 		xp: 2,
@@ -211,7 +211,7 @@ const ENERGY_AMMO = {
 		}
 	},
 	fabricateEammo3: {
-		time: .1,
+		time: .5,
 		item: "ammoE3",
 		icon: require("@/assets/art/combat/items/ammo_e3.png"),
 		xp: 3,
@@ -224,7 +224,7 @@ const ENERGY_AMMO = {
 
 const BALLISTIC_AMMO = {
 	fabricateBammo1: {
-		time: .1,
+		time: .5,
 		item: "ammoB1",
 		icon: require("@/assets/art/combat/items/ammo_b1.png"),
 		xp: 1,
@@ -234,7 +234,7 @@ const BALLISTIC_AMMO = {
 		}
 	},
 	fabricateBammo2: {
-		time: .1,
+		time: .5,
 		item: "ammoB2",
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
 		xp: 2,
@@ -244,7 +244,7 @@ const BALLISTIC_AMMO = {
 		}
 	},
 	fabricateBammo3: {
-		time: .1,
+		time: .5,
 		item: "ammoB3",
 		icon: require("@/assets/art/combat/items/ammo_b3.png"),
 		xp: 3,

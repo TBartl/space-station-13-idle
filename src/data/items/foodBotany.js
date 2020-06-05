@@ -6,7 +6,7 @@ export default {
 	},
 	potato: {
 		name: "Potato",
-		sellPrice: 1,
+		sellPrice: 5,
 		icon: require("@/assets/art/botany/PlantPotato.png"),
 		healAmount: 5,
 		stats: {
@@ -18,7 +18,7 @@ export default {
 	},
 	tomato: {
 		name: "Tomato",
-		sellPrice: 2,
+		sellPrice: 5,
 		icon: require("@/assets/art/botany/PlantTomato.png"),
 		healAmount: 5,
 		stats: {
@@ -30,7 +30,7 @@ export default {
 	},
 	banana: {
 		name: "Banana",
-		sellPrice: 5,
+		sellPrice: 14,
 		icon: require("@/assets/art/botany/PlantBanana.png"),
 		healAmount: 5,
 		stats: {
@@ -42,7 +42,7 @@ export default {
 	},
 	flowersun: {
 		name: "Sunflower",
-		sellPrice: 8,
+		sellPrice: 14,
 		icon: require("@/assets/art/botany/PlantFlowersun.png"),
 		healAmount: 5,
 		stats: {
@@ -54,7 +54,7 @@ export default {
 	},
 	mushroom: {
 		name: "Glowshroom",
-		sellPrice: 10,
+		sellPrice: 25,
 		icon: require("@/assets/art/botany/PlantShroomglow.png"),
 		healAmount: 5,
 		stats: {
@@ -66,7 +66,7 @@ export default {
 	},
 	pepper: {
 		name: "Hot Pepper",
-		sellPrice: 10,
+		sellPrice: 25,
 		icon: require("@/assets/art/botany/PlantPepperhot.png"),
 		healAmount: 5,
 		stats: {
@@ -78,7 +78,7 @@ export default {
 	},
 	potatobattery: {
 		name: "Potato Battery",
-		sellPrice: 12,
+		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
 		healAmount: 10,
 		stats: {
@@ -90,7 +90,7 @@ export default {
 	},
 	tomatoblue: {
 		name: "Blue Tomato",
-		sellPrice: 23,
+		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantTomatoblue.png"),
 		healAmount: 10,
 		stats: {
@@ -102,7 +102,7 @@ export default {
 	},
 	bananamime: {
 		name: "...",
-		sellPrice: 27,
+		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantBananamime.png"),
 		healAmount: 10,
 		stats: {
@@ -114,7 +114,7 @@ export default {
 	},
 	flowermoon: {
 		name: "Moonflower",
-		sellPrice: 30,
+		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantFlowermoon.png"),
 		healAmount: 10,
 		stats: {
@@ -126,7 +126,7 @@ export default {
 	},
 	mushroomred: {
 		name: "Glowcap",
-		sellPrice: 10,
+		sellPrice: 52,
 		icon: require("@/assets/art/botany/PlantShroomred.png"),
 		healAmount: 10,
 		stats: {
@@ -138,7 +138,7 @@ export default {
 	},
 	peppercold: {
 		name: "Ice Pepper",
-		sellPrice: 44,
+		sellPrice: 52,
 		icon: require("@/assets/art/botany/PlantPeppercold.png"),
 		healAmount: 10,
 		stats: {
@@ -150,7 +150,7 @@ export default {
 	},
 	orange: {
 		name: "Orange",
-		sellPrice: 12,
+		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantOrange.png"),
 		healAmount: 15,
 		stats: {
@@ -162,7 +162,7 @@ export default {
 	},
 	tomatobluespace: {
 		name: "Bluespace Tomato",
-		sellPrice: 23,
+		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif"),
 		healAmount: 15,
 		stats: {
@@ -176,7 +176,7 @@ export default {
 		name: "Blue Banana",
 		sellPrice: 27,
 		icon: require("@/assets/art/botany/PlantBananablue.png"),
-		healAmount: 15,
+		healAmount: 66,
 		stats: {
 			maxHealth: 5,
 			evasion: 10,
@@ -186,7 +186,7 @@ export default {
 	},
 	flowernova: {
 		name: "Novaflower",
-		sellPrice: 30,
+		sellPrice: 66,
 		icon: require("@/assets/art/botany/PlantFlowernova.png"),
 		healAmount: 15,
 		stats: {
@@ -198,7 +198,7 @@ export default {
 	},
 	mushroomshadow: {
 		name: "Shadowshroom",
-		sellPrice: 10,
+		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantShroomshadow.png"),
 		healAmount: 15,
 		stats: {
@@ -210,7 +210,7 @@ export default {
 	},
 	pepperghost: {
 		name: "Ghost Pepper",
-		sellPrice: 44,
+		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantPepperghost.png"),
 		healAmount: 15,
 		stats: {
@@ -222,7 +222,7 @@ export default {
 	},
 	orange3d: {
 		name: "Multidimensional Orange",
-		sellPrice: 12,
+		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantOrange3d_anim.gif"),
 		healAmount: 20,
 		stats: {
@@ -234,7 +234,7 @@ export default {
 	},
 	tomatokiller: {
 		name: "Killer Tomato",
-		sellPrice: 23,
+		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
 		healAmount: 5,
 		stats: {
