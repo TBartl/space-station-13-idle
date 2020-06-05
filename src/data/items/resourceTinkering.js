@@ -6,7 +6,7 @@ export default {
 	},
 	burnjunk: {
 		name: "Flammable Junk",
-		sellPrice: 5,
+		sellPrice: 200,
 		icon: require("@/assets/art/tinkering/burnjunk.png")
 	},
 }

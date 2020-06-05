@@ -435,7 +435,7 @@ export default {
 	},
 	gunE1: {
 		name: "Kinetic Accelerator",
-		sellPrice: 22,
+		sellPrice: 155,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_PKA.png"),
 		overlay: require("@/assets/art/combat/items/gune_PKA_overlay.png"),
@@ -452,7 +452,7 @@ export default {
 	},
 	gunE2: {
 		name: "Advanced Kinetic Accelerator",
-		sellPrice: 75,
+		sellPrice: 203,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_PKA+.png"),
 		overlay: require("@/assets/art/combat/items/gune_PKA+_overlay.png"),
@@ -469,7 +469,7 @@ export default {
 	},
 	gunE3: {
 		name: "Plasma Cutter",
-		sellPrice: 80,
+		sellPrice: 410,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_cutter.png"),
 		overlay: require("@/assets/art/combat/items/gune_cutter_overlay.png"),
@@ -486,7 +486,7 @@ export default {
 	},	
 	gunE4: {
 		name: "Laser Gun",
-		sellPrice: 180,
+		sellPrice: 765,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_laser.png"),
 		overlay: require("@/assets/art/combat/items/gune_laser_overlay.png"),
@@ -503,7 +503,7 @@ export default {
 	},
 	gunE5: {
 		name: "Tesla Rifle",
-		sellPrice: 250,
+		sellPrice: 983,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_tesla.png"),
 		overlay: require("@/assets/art/combat/items/gune_tesla_overlay.png"),
@@ -520,7 +520,7 @@ export default {
 	},
 	gunE6: {
 		name: "Energy Gun",
-		sellPrice: 210,
+		sellPrice: 1220,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_energy.png"),
 		overlay: require("@/assets/art/combat/items/gune_energy_overlay.png"),
@@ -537,7 +537,7 @@ export default {
 	},
 	gunE7: {
 		name: "Wartime Rifle",
-		sellPrice: 0,
+		sellPrice: 1453,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gune_caplaser.png"),
 		overlay: require("@/assets/art/combat/items/gune_caplaser_overlay.png"),
@@ -554,7 +554,7 @@ export default {
 	},
 	gunB1: {
 		name: "Pipe Shotgun",
-		sellPrice: 18,
+		sellPrice: 74,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot1.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot1_overlay.png"),
@@ -571,7 +571,7 @@ export default {
 	},
 	gunB2: {
 		name: "Double Barreled Shotgun",
-		sellPrice: 75,
+		sellPrice: 152,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot2.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
@@ -588,7 +588,7 @@ export default {
 	},
 	gunB3: {
 		name: "Cycling Shotgun",
-		sellPrice: 42,
+		sellPrice: 273,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot3.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
@@ -605,7 +605,7 @@ export default {
 	},	
 	gunB4: {
 		name: "Riot Shotgun",
-		sellPrice: 64,
+		sellPrice: 572,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot4.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
@@ -622,7 +622,7 @@ export default {
 	},
 	gunB5: {
 		name: "Sawed Off Shotgun",
-		sellPrice: 125,
+		sellPrice: 623,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot5.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
@@ -639,7 +639,7 @@ export default {
 	},
 	gunB6: {
 		name: "Compact Shotgun",
-		sellPrice: 86,
+		sellPrice: 783,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot6.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
@@ -656,7 +656,7 @@ export default {
 	},
 	gunB7: {
 		name: "Combat Shotgun",
-		sellPrice: 104,
+		sellPrice: 921,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/gunb_shot7.png"),
 		overlay: require("@/assets/art/combat/items/gunb_shot7_overlay.png"),

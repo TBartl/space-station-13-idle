@@ -1,43 +1,43 @@
 export default {
 	foodMeatH: {
 		name: "Human Meat",
-		sellPrice: 0,
+		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatHuman.png"),
-		healAmount: 15,
+		healAmount: 10,
 		stats: {
-			maxHealth: 5,
-			evasion: -5,
-			precision: 0,
-			power: 10,
+			maxHealth: 2,
+			evasion: -1,
+			precision: 2,
+			power: -1,
 		},
 	},
 	foodMeatZ: {
 		name: "Alien Meat",
-		sellPrice: 0,
+		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatAlien.png"),
-		healAmount: 15,
+		healAmount: 10,
 		stats: {
-			maxHealth: 5,
-			evasion: -5,
-			precision: 0,
-			power: 10,
+			maxHealth: 2,
+			evasion: 2,
+			precision: -1,
+			power: -1,
 		},
 	},
 	foodMeatA: {
 		name: "Animal Meat",
-		sellPrice: 0,
+		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatAnimal.png"),
-		healAmount: 15,
+		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: 0,
-			power: 5,
+			maxHealth: 2,
+			evasion: -1,
+			precision: -1,
+			power: 2,
 		},
 	},
 	foodPasta1: {
 		name: "Pasta",
-		sellPrice: 0,
+		sellPrice: 8,
 		icon: require("@/assets/art/cooking/pasta1.png"),
 		healAmount: 3,
 		stats: {
@@ -49,7 +49,7 @@ export default {
 	},
 	foodPasta2: {
 		name: "Double Pasta",
-		sellPrice: 0,
+		sellPrice: 45,
 		icon: require("@/assets/art/cooking/pasta2.png"),
 		healAmount: 6,
 		stats: {
@@ -61,7 +61,7 @@ export default {
 	},
 	foodPasta3: {
 		name: "Triple Pasta",
-		sellPrice: 0,
+		sellPrice: 113,
 		icon: require("@/assets/art/cooking/pasta3.png"),
 		healAmount: 9,
 		stats: {
@@ -73,7 +73,7 @@ export default {
 	},
 	foodPasta4: {
 		name: "Pasta Tower",
-		sellPrice: 0,
+		sellPrice: 211,
 		icon: require("@/assets/art/cooking/pasta4.png"),
 		healAmount: 12,
 		stats: {
@@ -85,7 +85,7 @@ export default {
 	},
 	foodPasta5: {
 		name: "InSPIREd Pasta",
-		sellPrice: 0,
+		sellPrice: 338,
 		icon: require("@/assets/art/cooking/pasta5.png"),
 		healAmount: 15,
 		stats: {
@@ -97,7 +97,7 @@ export default {
 	},
 	foodPasta6: {
 		name: "Babel Pasta",
-		sellPrice: 0,
+		sellPrice: 496,
 		icon: require("@/assets/art/cooking/pasta6.png"),
 		healAmount: 18,
 		stats: {
@@ -109,7 +109,7 @@ export default {
 	},
 	foodPer1: {
 		name: "Hot Potato Stew",
-		sellPrice: 0,
+		sellPrice: 20,
 		icon: require("@/assets/art/cooking/stew1.png"),
 		healAmount: 15,
 		stats: {
@@ -121,7 +121,7 @@ export default {
 	},
 	foodPer2: {
 		name: "Tingle Soup",
-		sellPrice: 0,
+		sellPrice: 102,
 		icon: require("@/assets/art/cooking/stew2.png"),
 		healAmount: 30,
 		stats: {
@@ -133,7 +133,7 @@ export default {
 	},
 	foodPer3: {
 		name: "Dad's Soup",
-		sellPrice: 0,
+		sellPrice: 171,
 		icon: require("@/assets/art/cooking/stew3.png"),
 		healAmount: 45,
 		stats: {
@@ -145,7 +145,7 @@ export default {
 	},
 	foodPow1: {
 		name: "Donkpocket",
-		sellPrice: 0,
+		sellPrice: 26,
 		icon: require("@/assets/art/cooking/donk1.png"),
 		healAmount: 15,
 		stats: {
@@ -157,7 +157,7 @@ export default {
 	},
 	foodPow2: {
 		name: "Berrypocket",
-		sellPrice: 0,
+		sellPrice: 108,
 		icon: require("@/assets/art/cooking/donk2.png"),
 		healAmount: 30,
 		stats: {
@@ -169,7 +169,7 @@ export default {
 	},
 	foodPow3: {
 		name: "Dankpocket",
-		sellPrice: 0,
+		sellPrice: 177,
 		icon: require("@/assets/art/cooking/donk3.png"),
 		healAmount: 45,
 		stats: {
@@ -181,7 +181,7 @@ export default {
 	},
 	foodEva1: {
 		name: "Creampie",
-		sellPrice: 0,
+		sellPrice: 31,
 		icon: require("@/assets/art/cooking/pie1.png"),
 		healAmount: 15,
 		stats: {
@@ -193,7 +193,7 @@ export default {
 	},
 	foodEva2: {
 		name: "Moonpie",
-		sellPrice: 0,
+		sellPrice: 115,
 		icon: require("@/assets/art/cooking/pie2.png"),
 		healAmount: 30,
 		stats: {
@@ -205,7 +205,7 @@ export default {
 	},
 	foodEva3: {
 		name: "Senpai",
-		sellPrice: 0,
+		sellPrice: 183,
 		icon: require("@/assets/art/cooking/pie3.png"),
 		healAmount: 45,
 		stats: {
@@ -217,7 +217,7 @@ export default {
 	},
 	foodHuman1: {
 		name: "Spicy Burger",
-		sellPrice: 0,
+		sellPrice: 48,
 		icon: require("@/assets/art/cooking/burger1.png"),
 		healAmount: 0,
 		stats: {
@@ -229,7 +229,7 @@ export default {
 	},
 	foodHuman2: {
 		name: "Slippery Burger",
-		sellPrice: 0,
+		sellPrice: 122,
 		icon: require("@/assets/art/cooking/burger2.png"),
 		healAmount: 20,
 		stats: {
@@ -241,7 +241,7 @@ export default {
 	},
 	foodHuman3: {
 		name: "Blue Burger",
-		sellPrice: 0,
+		sellPrice: 160,
 		icon: require("@/assets/art/cooking/burger3.png"),
 		healAmount: 30,
 		stats: {
@@ -253,7 +253,7 @@ export default {
 	},
 	foodHuman4: {
 		name: "Ghost Burger",
-		sellPrice: 0,
+		sellPrice: 185,
 		icon: require("@/assets/art/cooking/burger4_anim.gif"),
 		healAmount: 30,
 		stats: {
@@ -265,7 +265,7 @@ export default {
 	},
 	foodAnimal1: {
 		name: "Pizza",
-		sellPrice: 0,
+		sellPrice: 63,
 		icon: require("@/assets/art/cooking/animal1.png"),
 		healAmount: 10,
 		stats: {
@@ -277,7 +277,7 @@ export default {
 	},
 	foodAnimal2: {
 		name: "Moon Pizza",
-		sellPrice: 0,
+		sellPrice: 111,
 		icon: require("@/assets/art/cooking/animal2.png"),
 		healAmount: 20,
 		stats: {
@@ -289,7 +289,7 @@ export default {
 	},
 	foodAnimal3: {
 		name: "Bluespace Pizza",
-		sellPrice: 0,
+		sellPrice: 162,
 		icon: require("@/assets/art/cooking/animal3.png"),
 		healAmount: 30,
 		stats: {
@@ -301,7 +301,7 @@ export default {
 	},
 	foodAnimal4: {
 		name: "Nova Pizza",
-		sellPrice: 0,
+		sellPrice: 187,
 		icon: require("@/assets/art/cooking/animal4.png"),
 		healAmount: 30,
 		stats: {
@@ -313,7 +313,7 @@ export default {
 	},
 	foodAlien1: {
 		name: "Fesh 'Shishi'",
-		sellPrice: 0,
+		sellPrice: 69,
 		icon: require("@/assets/art/cooking/Alien1.png"),
 		healAmount: 10,
 		stats: {
@@ -325,7 +325,7 @@ export default {
 	},
 	foodAlien2: {
 		name: "Finger Food",
-		sellPrice: 0,
+		sellPrice: 122,
 		icon: require("@/assets/art/cooking/Alien2.png"),
 		healAmount: 20,
 		stats: {
@@ -337,7 +337,7 @@ export default {
 	},
 	foodAlien3: {
 		name: "Fush n Chips",
-		sellPrice: 0,
+		sellPrice: 168,
 		icon: require("@/assets/art/cooking/Alien3.png"),
 		healAmount: 30,
 		stats: {
@@ -349,7 +349,7 @@ export default {
 	},
 	foodAlien4: {
 		name: "Fried Friend",
-		sellPrice: 0,
+		sellPrice: 197,
 		icon: require("@/assets/art/cooking/Alien4.png"),
 		healAmount: 30,
 		stats: {

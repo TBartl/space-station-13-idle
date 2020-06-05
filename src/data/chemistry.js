@@ -2,7 +2,7 @@ const BASES = {
 	synthOxygen: {
 		item: "oxygen",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -11,7 +11,7 @@ const BASES = {
 	synthOil: {
 		item: "oil",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -20,7 +20,7 @@ const BASES = {
 	synthWater: {
 		item: "water",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -29,7 +29,7 @@ const BASES = {
 	synthSacid: {
 		item: "sacid",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -38,7 +38,7 @@ const BASES = {
 	synthMercury: {
 		item: "mercury",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -47,7 +47,7 @@ const BASES = {
 	synthLithium: {
 		item: "lithium",
 		time: 1,
-		xp: 1,
+		xp: .1,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 1
@@ -59,7 +59,7 @@ const POTIONS = {
 	synthFaunaPerfume: {
 		item: "potionMine",
 		time: 2,
-		xp: 20,
+		xp: 1,
 		requiredLevel: 5,
 		requiredItems: {
 			oil: 2,
@@ -70,7 +70,7 @@ const POTIONS = {
 	synthPotionEngi: {
 		item: "potionEngi",
 		time: 2,
-		xp: 20,
+		xp: 2,
 		requiredLevel: 10,
 		requiredItems: {
 			oil: 2,
@@ -81,7 +81,7 @@ const POTIONS = {
 	synthPotionFabrication: {
 		item: "potionEngi",
 		time: 2,
-		xp: 20,
+		xp: 3,
 		requiredLevel: 15,
 		requiredItems: {
 			oil: 2,
@@ -92,7 +92,7 @@ const POTIONS = {
 	synthPotionTide: {
 		item: "potionEngi",
 		time: 2,
-		xp: 20,
+		xp: 4,
 		requiredLevel: 20,
 		requiredItems: {
 			oil: 2,
@@ -103,7 +103,7 @@ const POTIONS = {
 	synthPotionTinker: {
 		item: "potionTinker",
 		time: 2,
-		xp: 20,
+		xp: 5,
 		requiredLevel: 25,
 		requiredItems: {
 			oil: 2,
@@ -114,7 +114,7 @@ const POTIONS = {
 	synthPotionBotany: {
 		item: "potionBotany",
 		time: 2,
-		xp: 20,
+		xp: 6,
 		requiredLevel: 30,
 		requiredItems: {
 			oil: 2,
@@ -125,7 +125,7 @@ const POTIONS = {
 	synthPotionCook: {
 		item: "potionCooking",
 		time: 2,
-		xp: 20,
+		xp: 7,
 		requiredLevel: 35,
 		requiredItems: {
 			oil: 2,
@@ -136,7 +136,7 @@ const POTIONS = {
 	synthPotionXeno: {
 		item: "potionXeno",
 		time: 2,
-		xp: 20,
+		xp: 8,
 		requiredLevel: 40,
 		requiredItems: {
 			oil: 2,
@@ -147,7 +147,7 @@ const POTIONS = {
 	synthPotionChem: {
 		item: "potionChem",
 		time: 2,
-		xp: 20,
+		xp: 9,
 		requiredLevel: 45,
 		requiredItems: {
 			oil: 2,
@@ -158,7 +158,7 @@ const POTIONS = {
 	synthPotionShit: {
 		item: "potionShit",
 		time: 2,
-		xp: 20,
+		xp: 10,
 		requiredLevel: 50,
 		requiredItems: {
 			lube: 2,
@@ -172,7 +172,7 @@ const POTIONS = {
 		xp: 5,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 100
+			power: 10
 		}
 	}
 }

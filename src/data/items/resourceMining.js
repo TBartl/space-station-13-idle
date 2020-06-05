@@ -1,52 +1,52 @@
 export default {
 	iron: {
 		name: "Iron",
-		sellPrice: 1,
+		sellPrice: 2,
 		icon: require("@/assets/art/mining/SheetIron.png")
 	},
 	glass: {
 		name: "Glass",
-		sellPrice: 2,
+		sellPrice: 10,
 		icon: require("@/assets/art/mining/SheetGlass.png")
 	},
 	silver: {
 		name: "Silver",
-		sellPrice: 5,
+		sellPrice: 25,
 		icon: require("@/assets/art/mining/SheetSilver.png")
 	},
 	gold: {
 		name: "Gold",
-		sellPrice: 8,
+		sellPrice: 45,
 		icon: require("@/assets/art/mining/SheetGold.png")
 	},
 	titanium: {
 		name: "Titanium",
-		sellPrice: 10,
+		sellPrice: 70,
 		icon: require("@/assets/art/mining/SheetTitanium.png")
 	},
 	uranium: {
 		name: "Uranium",
-		sellPrice: 12,
+		sellPrice: 100,
 		icon: require("@/assets/art/mining/SheetUranium.png")
 	},
 	plasma: {
 		name: "Plasma",
-		sellPrice: 23,
+		sellPrice: 135,
 		icon: require("@/assets/art/mining/SheetPlasma.png")
 	},
 	diamond: {
 		name: "Diamond",
-		sellPrice: 27,
+		sellPrice: 175,
 		icon: require("@/assets/art/mining/SheetDiamond.png")
 	},
 	bluespace: {
 		name: "Bluespace Crystal",
-		sellPrice: 30,
+		sellPrice: 220,
 		icon: require("@/assets/art/mining/SheetBluespace.png")
 	},
 	bananium: {
 		name: "Bananium",
-		sellPrice: 44,
+		sellPrice: 325,
 		healAmount: 69,
 		icon: require("@/assets/art/mining/SheetBanana.png")
 	},
