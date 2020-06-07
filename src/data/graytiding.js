@@ -394,12 +394,13 @@ const ACTIONS = {
 	},
 }
 
-for (let action of Object.values(ACTIONS)) {
+Object.values(ACTIONS).forEach((action, index) => {
+	action.requiredLevel = 1 + index * 2
 	action.failure = {
 		chance: .5,
-		damage: 10
+		damage: 10 + index * 2
 	}
-}
+});
 
 export { ACTIONS }
 
