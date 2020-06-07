@@ -68,9 +68,9 @@ export default {
 		stats: {
 			maxHealth: 5,
 		},
-		description: "+20% greytiding XP",
+		description: "+20% graytiding XP",
 		xpBonuses: {
-			greytiding: 20
+			graytiding: 20
 		}
 	},
 	jumpsuitTinkering: {

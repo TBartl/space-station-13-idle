@@ -142,7 +142,7 @@ const XENOBIO_UPGRADES = {
 }
 const ENGINEERING_UPGRADES = {
 	upgradeEngineering1: {
-		name: "Upgrade Cable Management",
+		name: "Improve Cable Management",
 		description: "Increases engineering XP by 15%",
 		icon: require('@/assets/art/engineering/upgrade1.png'),
 		requiredItems: {
@@ -157,7 +157,7 @@ const ENGINEERING_UPGRADES = {
 		}
 	},
 	upgradeEngineering2: {
-		name: "Upgrade Cable Management",
+		name: "Improve Cable Management",
 		description: "Increases engineering XP by 15%, to +30%",
 		icon: require('@/assets/art/engineering/upgrade1.png'),
 		requiredItems: {
@@ -172,7 +172,7 @@ const ENGINEERING_UPGRADES = {
 		}
 	},
 	upgradeEngineering3: {
-		name: "Upgrade Cable Management",
+		name: "Improve Cable Management",
 		description: "Increases engineering XP by 15%, to +45%",
 		icon: require('@/assets/art/engineering/upgrade1.png'),
 		requiredItems: {
@@ -187,7 +187,7 @@ const ENGINEERING_UPGRADES = {
 		}
 	},
 	upgradeEngineering4: {
-		name: "Upgrade Cable Management",
+		name: "Improve Cable Management",
 		description: "Increases engineering XP by 15%, to +60%",
 		icon: require('@/assets/art/engineering/upgrade1.png'),
 		requiredItems: {
@@ -202,7 +202,7 @@ const ENGINEERING_UPGRADES = {
 		}
 	},
 	upgradeEngineering5: {
-		name: "Upgrade Cable Management",
+		name: "Improve Cable Management",
 		description: "Increases engineering XP by 15%, to +75%",
 		icon: require('@/assets/art/engineering/upgrade1.png'),
 		requiredItems: {
@@ -299,11 +299,90 @@ const BOTANY_UPGRADES = {
 	}
 }
 
+const GRAYTIDING_UPGRADES = {
+	upgradeGraytiding1: {
+		name: "Buy Hacking Tools",
+		description: "Reduces graytiding failure rate by 10%",
+		icon: require('@/assets/art/graytiding/upgrade1.png'),
+		requiredItems: {
+			money: 10000
+		},
+		requiredLevels: {
+			graytiding: 10
+		},
+		upgrade: "graytidingHacking",
+		requiredUpgrades: {
+			graytidingHacking: 0
+		}
+	},
+	upgradeGraytiding2: {
+		name: "Buy Hacking Tools",
+		description: "Reduces graytiding failure rate by an additional 10%, to -20%",
+		icon: require('@/assets/art/graytiding/upgrade1.png'),
+		requiredItems: {
+			money: 75000
+		},
+		requiredLevels: {
+			graytiding: 20
+		},
+		upgrade: "graytidingHacking",
+		requiredUpgrades: {
+			graytidingHacking: 1
+		}
+	},
+	upgradeGraytiding3: {
+		name: "Buy Hacking Tools",
+		description: "Reduces graytiding failure rate by an additional 10%, to -30%",
+		icon: require('@/assets/art/graytiding/upgrade1.png'),
+		requiredItems: {
+			money: 250000
+		},
+		requiredLevels: {
+			graytiding: 30
+		},
+		upgrade: "graytidingHacking",
+		requiredUpgrades: {
+			graytidingHacking: 2
+		}
+	},
+	upgradeGraytiding4: {
+		name: "Buy Hacking Tools",
+		description: "Reduces graytiding failure rate by an additional 10%, to -40%",
+		icon: require('@/assets/art/graytiding/upgrade1.png'),
+		requiredItems: {
+			money: 800000
+		},
+		requiredLevels: {
+			graytiding: 40
+		},
+		upgrade: "graytidingHacking",
+		requiredUpgrades: {
+			graytidingHacking: 3
+		}
+	},
+	upgradeGraytiding5: {
+		name: "Buy Hacking Tools",
+		description: "Reduces graytiding failure rate by an additional 10%, to -50%",
+		icon: require('@/assets/art/graytiding/upgrade1.png'),
+		requiredItems: {
+			money: 2000000
+		},
+		requiredLevels: {
+			graytiding: 50
+		},
+		upgrade: "graytidingHacking",
+		requiredUpgrades: {
+			graytidingHacking: 4
+		}
+	}
+}
+
 export default {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
 	...XENOBIO_UPGRADES,
 	...BOTANY_UPGRADES,
+	...GRAYTIDING_UPGRADES,
 	...COMBAT_UPGRADES
 }
