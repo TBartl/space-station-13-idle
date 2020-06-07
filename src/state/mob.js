@@ -1,5 +1,6 @@
 import { clone } from "lodash";
 
+import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
 import { createCoroutineModule } from "./coroutine";
@@ -127,6 +128,7 @@ export function createMobModule(mobType) {
 			},
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
+				EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${damage} HP` })
 
 				if (state.health <= 0) {
 					// Handle death

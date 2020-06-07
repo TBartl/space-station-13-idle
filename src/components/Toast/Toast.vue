@@ -1,6 +1,6 @@
 <template>
   <div class="custom-toast d-flex">
-    <div class="toast-content">
+    <div class="toast-content d-flex flex-column align-items-center">
       <toast-content v-for="(content, index) in toast.contents" :key="index" :content="content" />
     </div>
   </div>
