@@ -29,9 +29,8 @@ export default {
     };
   },
   mounted() {
-    EventBus.$on("itemCountChanged", ({ itemId, count }) => {
-      if (count <= 0) return;
-      this.addToastContent({ itemId, count });
+    EventBus.$on("toast", (toast) => {
+      this.addToastContent(toast);
     });
   },
   methods: {

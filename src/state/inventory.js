@@ -138,7 +138,9 @@ const inventory = {
 			} else {
 				state.bank[itemId] += count;
 			}
-			EventBus.$emit("itemCountChanged", { itemId, count });
+			if (count > 0) {
+				EventBus.$emit("toast", { icon: ITEMS[itemId].icon, text: "+" + count });
+			}
 		},
 		setEquipment(state, { slot, itemId, count }) {
 			state.equipment[slot].itemId = itemId;
