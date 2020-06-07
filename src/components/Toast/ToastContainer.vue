@@ -24,26 +24,35 @@ export default {
   },
   data() {
     return {
-      activeToasts: []
+      activeToasts: [],
+      pendingToast: null
     };
   },
   mounted() {
     EventBus.$on("itemCountChanged", ({ itemId, count }) => {
       if (count <= 0) return;
-      let toast = {
-        contents: [{ itemId, count }],
-        id: uniqueId()
-      };
-      this.addToast(toast);
+      this.addToastContent({ itemId, count });
     });
   },
   methods: {
-    addToast(toast) {
-      this.activeToasts.push(toast);
-      setTimeout(() => {
-        let toastIndex = this.activeToasts.indexOf(toast);
-        this.activeToasts.splice(toastIndex, 1);
-      }, TOAST_LENGTH);
+    addToastContent(toastContent) {
+      if (this.pendingToast) {
+        this.pendingToast.contents.push(toastContent);
+      } else {
+        var toast = {
+          contents: [toastContent],
+          id: uniqueId()
+        };
+        this.pendingToast = toast;
+        setTimeout(() => {
+          this.activeToasts.push(toast);
+          delete this.pendingToast;
+          setTimeout(() => {
+            let toastIndex = this.activeToasts.indexOf(toast);
+            this.activeToasts.splice(toastIndex, 1);
+          });
+        }, 100);
+      }
     },
     beforeEnter: function(el) {
       el.style.opacity = 0;
