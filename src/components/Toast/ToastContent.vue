@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="d-flex flex-row align-items-center">
-      <img class="mr-1 my-1" :src="content.icon" />
+      <img v-if="content.icon" class="mr-1 my-1" :src="content.icon" />
       <span>{{content.text}}</span>
     </div>
   </div>

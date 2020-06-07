@@ -118,14 +118,14 @@ export function createMobModule(mobType) {
 				if (Math.random() <= getters.hitChance) {
 					let damage = Math.random() * getters.maxHit;
 					let noOverkillDamage = Math.min(rootGetters[inverseMobType + "Mob/health"], damage);
-					dispatch(inverseMobType + "Mob/_getHit", damage, { root: true });
+					dispatch(inverseMobType + "Mob/getHit", damage, { root: true });
 					if (state.mobType == "player") {
 						dispatch("combat/addXP", noOverkillDamage, { root: true });
 					}
 				}
 
 			},
-			_getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
+			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
 				if (state.health <= 0) {

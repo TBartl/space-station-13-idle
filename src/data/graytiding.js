@@ -13,8 +13,7 @@ const randomJunkTable = [
 	},
 ];
 
-
-export const ACTIONS = {
+const ACTIONS = {
 	//at 25 xp per action gives approximately 4000 total junk to hit 50.
 	graytideMining: {
 		name: "Mining",
@@ -394,6 +393,15 @@ export const ACTIONS = {
 		]
 	},
 }
+
+for (let action of Object.values(ACTIONS)) {
+	action.failure = {
+		chance: .5,
+		damage: 10
+	}
+}
+
+export { ACTIONS }
 
 export const JOB = {
 	id: "graytiding",

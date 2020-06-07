@@ -23,6 +23,7 @@ export default {
   z-index: 1000;
   left: 0;
   right: 0;
+  pointer-events: none;
   text-align: center;
 }
 img {
