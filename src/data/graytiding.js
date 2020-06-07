@@ -1,5 +1,21 @@
+const randomJunkTable = [
+	{
+		id: 'junk',
+		weight: 3
+	},
+	{
+		id: 'spacejunk',
+		weight: 3
+	},
+	{
+		id: 'armorjunk',
+		weight: 3
+	},
+];
+
+
 export const ACTIONS = {
-//at 25 xp per action gives approximately 4000 total junk to hit 50.
+	//at 25 xp per action gives approximately 4000 total junk to hit 50.
 	graytideMining: {
 		name: "Mining",
 		icon: require("@/assets/art/graytiding/Mining.png"),
@@ -9,39 +25,26 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},
-					{
-						id: 'spacejunk',
-						weight: 3
-					},
-					{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "iron",
-					count: [1, 3],
-					weight: 300
-				}, {
-					id: "silver",
-					count: 2,
-					weight: 100
-				}, {
-					id: "gold",
-					weight: 99
-				}, {
-					id: "limbMagBoots",
-					weight: 1
-				}
+					{
+						id: "iron",
+						count: [1, 3],
+						weight: 300
+					}, {
+						id: "silver",
+						count: 2,
+						weight: 100
+					}, {
+						id: "gold",
+						weight: 99
+					}, {
+						id: "limbMagBoots",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -55,38 +58,27 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "foodMeatH",
-					count: [0, 2],
-					weight: 165
+					{
+						id: "foodMeatH",
+						count: [0, 2],
+						weight: 165
 					}, {
-					id: "foodMeatZ",
-					count: [0, 2],
-					weight: 165
+						id: "foodMeatZ",
+						count: [0, 2],
+						weight: 165
 					}, {
-					id: "foodMeatA",
-					count: [0, 2],
-					weight: 165
+						id: "foodMeatA",
+						count: [0, 2],
+						weight: 165
 					}, {
-					id: "limbClownShoes",
-					weight: 1
-				}
+						id: "limbClownShoes",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -98,60 +90,47 @@ export const ACTIONS = {
 		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
-				{
-					chance: 1,
-					itemTable: [
-						{
-							id: 'junk',
-							weight: 3
-						},
-						{
-							id: 'spacejunk',
-							weight: 3
-						},
-						{
-							id: 'armorjunk',
-							weight: 3
-						},
-					]
-				},
-				{
-					chance: 1,
-					itemTable: [
-						{
-							id: "ammoE1",
-							count: [1, 3],
-							weight: 119
-						}, {
-							id: "ammoE2",
-							count: 2,
-							weight: 40
-						}, {
-							id: "ammoE3",
-							weight: 20
-						}, {
-							id: "ammoE4",
-							weight: 10
-						}, {
-							id: "ammoB1",
-							count: [1, 3],
-							weight: 120
-						}, {
-							id: "ammoB2",
-							count: 2,
-							weight: 40
-						}, {
-							id: "ammoB3",
-							weight: 20
-						}, {
-							id: "ammoB4",
-							weight: 10
-						}, {
-							id: "limbJackboots",
-							weight: 1
-						},
-					]
-				}
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "ammoE1",
+						count: [1, 3],
+						weight: 119
+					}, {
+						id: "ammoE2",
+						count: 2,
+						weight: 40
+					}, {
+						id: "ammoE3",
+						weight: 20
+					}, {
+						id: "ammoE4",
+						weight: 10
+					}, {
+						id: "ammoB1",
+						count: [1, 3],
+						weight: 120
+					}, {
+						id: "ammoB2",
+						count: 2,
+						weight: 40
+					}, {
+						id: "ammoB3",
+						weight: 20
+					}, {
+						id: "ammoB4",
+						weight: 10
+					}, {
+						id: "limbJackboots",
+						weight: 1
+					},
+				]
+			}
 		]
 	},
 	graytideScience: {
@@ -163,47 +142,36 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "slimeGrey",
-					weight: 255
+					{
+						id: "slimeGrey",
+						weight: 255
 					}, {
-					id: "slimeOrange",
-					weight: 50
+						id: "slimeOrange",
+						weight: 50
 					}, {
-					id: "slimePurple",
-					weight: 50
+						id: "slimePurple",
+						weight: 50
 					}, {
-					id: "slimeBlue",
-					weight: 50
+						id: "slimeBlue",
+						weight: 50
 					}, {
-					id: "slimeYellow",
-					weight: 30
+						id: "slimeYellow",
+						weight: 30
 					}, {
-					id: "slimeDarkPurple",
-					weight: 30
+						id: "slimeDarkPurple",
+						weight: 30
 					}, {
-					id: "slimeDarkBlue",
-					weight: 30
+						id: "slimeDarkBlue",
+						weight: 30
 					}, {
-					id: "limbAdvancedMagboots",
-					weight: 1
-				}
+						id: "limbAdvancedMagboots",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -217,30 +185,19 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "plantSeed",
-					count: [0, 2],
-					weight: 499
+					{
+						id: "plantSeed",
+						count: [0, 2],
+						weight: 499
 					}, {
-					id: "limbBlack",
-					weight: 1
-				}
+						id: "limbBlack",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -254,46 +211,33 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},
-					{
-						id: 'spacejunk',
-						weight: 3
-					},
-					{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "foodPasta1",
-					weight: 200
-				}, {
-					id: "foodPasta2",
-					weight: 100
-				}, {
-					id: "foodPasta3",
-					weight: 75
-				}, {
-					id: "foodPasta4",
-					weight: 55
-				}, {
-					id: "foodPasta5",
-					weight: 40
-				}, {
-					id: "foodPasta6",
-					weight: 24
-				}, {
-					id: "limbCapt",
-					weight: 1
-				}
+					{
+						id: "foodPasta1",
+						weight: 200
+					}, {
+						id: "foodPasta2",
+						weight: 100
+					}, {
+						id: "foodPasta3",
+						weight: 75
+					}, {
+						id: "foodPasta4",
+						weight: 55
+					}, {
+						id: "foodPasta5",
+						weight: 40
+					}, {
+						id: "foodPasta6",
+						weight: 24
+					}, {
+						id: "limbCapt",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -307,30 +251,19 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: 1,
 				itemTable: [
-				{
-					id: "power",
-					count: [0, 25],
-					weight: 499
+					{
+						id: "power",
+						count: [0, 25],
+						weight: 499
 					}, {
-					id: "limbInsuls",
-					weight: 1
-				}
+						id: "limbInsuls",
+						weight: 1
+					}
 				]
 			}
 		]
@@ -344,23 +277,12 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 1,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: .002,
-					item: "limbNinja",
-					weight: 1
+				item: "limbNinja",
+				weight: 1
 			}
 		]
 	},
@@ -373,23 +295,12 @@ export const ACTIONS = {
 		itemTables: [
 			{
 				chance: 2,
-				itemTable: [
-					{
-						id: 'junk',
-						weight: 3
-					},{
-						id: 'spacejunk',
-						weight: 3
-					},{
-						id: 'armorjunk',
-						weight: 3
-					},
-				]
+				itemTable: randomJunkTable
 			},
 			{
 				chance: .002,
-					item: "limbBoxing",
-					weight: 1
+				item: "limbBoxing",
+				weight: 1
 			}
 		]
 	},
@@ -407,11 +318,11 @@ export const ACTIONS = {
 						id: 'junk',
 						count: [0, 100],
 						weight: 10
-					},{
+					}, {
 						id: 'spacejunk',
 						count: [0, 100],
 						weight: 10
-					},{
+					}, {
 						id: 'armorjunk',
 						count: [0, 100],
 						weight: 10
@@ -420,8 +331,8 @@ export const ACTIONS = {
 			},
 			{
 				chance: .002,
-					item: "limbMagkrava",
-					weight: 1
+				item: "limbMagkrava",
+				weight: 1
 			}
 		]
 	},
@@ -432,156 +343,52 @@ export const ACTIONS = {
 		xp: 25,
 		requiredLevel: 1,
 		itemTables: [
-				{
-					chance: 1,
-					itemTable: [
-						{
-							id: 'junk',
-							weight: 3
-						},
-						{
-							id: 'spacejunk',
-							weight: 3
-						},
-						{
-							id: 'armorjunk',
-							weight: 3
-						},
-					]
-				},
-				{
-					chance: 1,
-					itemTable: [
-						{
-							id: "limbInsuls",
-							count: [1, 3],
-							weight: 50
-						}, {
-							id: "limbBoxing",
-							count: 2,
-							weight: 50
-						}, {
-							id: "limbMagkrava",
-							weight: 50
-						}, {
-							id: "limbCapt",
-							weight: 50
-						}, {
-							id: "limbNinja",
-							count: [1, 3],
-							weight: 50
-						}, {
-							id: "limbBlack",
-							count: 2,
-							weight: 50
-						}, {
-							id: "limbMagBoots",
-							weight: 50
-						}, {
-							id: "limbClownShoes",
-							weight: 50
-						}, {
-							id: "limbJackboots",
-							weight: 50
-						}, {
-							id: "limbAdvancedMagboots",
-							weight: 50
-						},
-					]
-				}
-		]
-	},
-	graytideDebugA: {
-		name: "DEBUG A",
-		icon: require("@/assets/art/debug/A.png"),
-		time: 1,
-		xp: 10,
-		requiredLevel: 1,
-		item: "iron"
-	},
-	graytideDebugB: {
-		name: "DEBUG B",
-		icon: require("@/assets/art/debug/B.png"),
-		time: 1,
-		xp: 10,
-		requiredLevel: 1,
-		items: {
-			id: "iron",
-			count: 2
-		}
-	},
-	graytideDebugC: {
-		name: "DEBUG C",
-		icon: require("@/assets/art/debug/C.png"),
-		time: 1,
-		xp: 1,
-		requiredLevel: 1,
-		items: {
-			id: "iron",
-			count: [0, 3]
-		}
-	},
-	graytideDebugD: {
-		name: "DEBUG D",
-		icon: require("@/assets/art/debug/D.png"),
-		time: 1,
-		xp: 1,
-		requiredLevel: 1,
-		itemTable: [
-			{
-				id: "iron",
-				count: [1, 3],
-				weight: 600
-			}, {
-				id: "silver",
-				count: 2,
-				weight: 200
-			}, {
-				id: "gold",
-				weight: 100
-			}, {
-				id: "titanium",
-				weight: 1
-			},
-			{
-				id: null,
-				weight: 99
-			}
-		]
-	},
-	graytideDebugE: {
-		name: "DEBUG E",
-		icon: require("@/assets/art/debug/E.png"),
-		time: 1,
-		xp: 10,
-		requiredLevel: 1,
-		itemTables: [
 			{
 				chance: 1,
-				item: 'iron'
+				itemTable: randomJunkTable
 			},
 			{
-				chance: 0.1,
-				items: {
-					id: 'silver',
-					count: [0, 2]
-				}
-			},
-			{
-				chance: 0.01,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 3
+						id: "limbInsuls",
+						count: [1, 3],
+						weight: 50
+					}, {
+						id: "limbBoxing",
+						count: 2,
+						weight: 50
+					}, {
+						id: "limbMagkrava",
+						weight: 50
+					}, {
+						id: "limbCapt",
+						weight: 50
+					}, {
+						id: "limbNinja",
+						count: [1, 3],
+						weight: 50
+					}, {
+						id: "limbBlack",
+						count: 2,
+						weight: 50
+					}, {
+						id: "limbMagBoots",
+						weight: 50
+					}, {
+						id: "limbClownShoes",
+						weight: 50
+					}, {
+						id: "limbJackboots",
+						weight: 50
+					}, {
+						id: "limbAdvancedMagboots",
+						weight: 50
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			}
 		]
-	}
+	},
 }
 
 export const JOB = {
