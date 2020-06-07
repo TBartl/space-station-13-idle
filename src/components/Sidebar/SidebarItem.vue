@@ -49,7 +49,7 @@ img {
   width: 32px;
   margin-right: 8px;
   border-radius: 14px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 </style>
