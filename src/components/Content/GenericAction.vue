@@ -8,13 +8,13 @@
       <p class="action-title">{{actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time | stat}} SECONDS</p>
-      <img :id="'action-icon-'+id" :src="icon" alt class="mt-2 mb-2" />
+      <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
         <item-chance :data="action" />
       </b-popover>
       <div
         v-if="action.requiredItems"
-        class="requirements d-flex flex-column align-items-center mb-2"
+        class="requirements d-flex flex-column align-items-center mt-2"
       >
         <span v-if="!hasItems" class="danger-bubble color-weight text-light">MISSING ITEMS</span>
         <item-requirement
@@ -24,7 +24,11 @@
           :count="entry[1]"
         />
       </div>
-      <progress-bar :progress="currentPercent" v-if="hasItems" />
+      <p
+        class="failure text-center"
+        v-if="action.failure"
+      >{{action.failure.chance*100}}% chance to fail and lose {{action.failure.damage}} health</p>
+      <progress-bar class="mt-2" :progress="currentPercent" v-if="hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
@@ -37,7 +41,7 @@
 <script>
 import ITEMS from "@/data/items";
 import ProgressBar from "@/components/ProgressBar";
-import ItemChance from '@/components/ItemTable/ItemChance';
+import ItemChance from "@/components/ItemTable/ItemChance";
 import ItemRequirement from "@/components/ItemRequirement";
 import { mapGetters, mapActions, mapState } from "vuex";
 export default {
@@ -53,7 +57,7 @@ export default {
         return getters[this.jobId + "/currentActionId"];
       },
       currentPercent(state, getters) {
-      if (this.currentActionId != this.actionId) return 0;
+        if (this.currentActionId != this.actionId) return 0;
         return getters[this.jobId + "/actionCoroutine/percent"];
       },
       level(state, getters) {
@@ -76,12 +80,12 @@ export default {
       if (this.action.name) return this.action.name;
       if (this.action.item) return this.item.name;
       return "BAD NAME";
-		},
-		icon() {
-			if (this.action.icon) return this.action.icon;
-			if (this.action.item) return this.item.icon;
-			return null;
-		}
+    },
+    icon() {
+      if (this.action.icon) return this.action.icon;
+      if (this.action.item) return this.item.icon;
+      return null;
+    }
   },
   methods: {
     tryStartAction(actionId) {
@@ -115,6 +119,11 @@ export default {
 }
 
 .danger-bubble {
+  font-size: 14px;
+}
+.failure {
+  color: rgb(221, 99, 28);
+  max-width: 130px;
   font-size: 14px;
 }
 </style>
