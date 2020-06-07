@@ -59,9 +59,9 @@ const POTIONS = {
 	potionTide: {
 		name: "Thermite",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
-		description: "Damage from failed greytiding actions is avoided.",
-		potionJob: "greytiding",
+		icon: require("@/assets/art/chemistry/thermite.png"),
+		description: "Reduces graytiding failure chance by 15%.",
+		potionJob: "graytiding",
 		potionCharges: 5
 	},
 	potionTinker: {

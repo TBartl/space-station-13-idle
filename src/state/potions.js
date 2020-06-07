@@ -21,7 +21,7 @@ const upgrades = {
 			let currentPotion = state.potions[item.potionJob];
 			// Minor optimization; don't set the whole object or anything just looking for the itemid will need to recompute
 			if (currentPotion && currentPotion.itemId == itemId) {
-				currentPotion.count = item.potionCharges
+				currentPotion.charges = item.potionCharges
 			}
 			else {
 				Vue.set(state.potions, item.potionJob, {
@@ -48,8 +48,10 @@ const upgrades = {
 			if (state.potions[jobId].charges <= 0) {
 				let itemId = state.potions[jobId].itemId;
 				if (rootGetters["inventory/bank"][itemId]) {
+					console.log("Set");
 					dispatch("set", state.potions[jobId].itemId);
 				} else {
+					console.log("Remove");
 					commit("remove", jobId);
 				}
 			}

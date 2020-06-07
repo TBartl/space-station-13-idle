@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ToastContainer from '@/components/ToastContainer'
+import ToastContainer from '@/components/Toast/ToastContainer'
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 export default {

@@ -3,10 +3,32 @@
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
       <div class="row">
-        <div class="col-12 mb-4">
+        <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
-        <div class="col-6 col-md-4 col-lg-3 col-xl-2" v-for="[actionId, action] in viewableActions" :key="actionId">
+        <div class="col-md-4 col-lg-3 col-xl-2">
+          <potion-header :jobId="jobId" />
+        </div>
+      </div>
+      <div class="row food my-2">
+        <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-5">
+          <div class="content-block">
+            <progress-bar
+              class="mb-2 black-background"
+              :progress="health / maxHealth"
+              :text="`${Math.round(health)}/${maxHealth}`"
+              :customClass="'bg-danger'"
+            />
+            <food-panel />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-6 col-md-4 col-lg-3 col-xl-2"
+          v-for="[actionId, action] in viewableActions"
+          :key="actionId"
+        >
           <generic-action
             :jobId="jobId"
             :actionName="'GRAYTIDE'"
@@ -25,10 +47,19 @@ import { JOB } from "@/data/graytiding";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import GenericAction from "@/components/Content/GenericAction";
+import PotionHeader from "@/components/Content/PotionHeader";
+import ProgressBar from "@/components/ProgressBar";
+import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader },
+  components: {
+    GenericAction,
+    ExperienceHeader,
+    PotionHeader,
+    ProgressBar,
+    FoodPanel
+  },
   computed: {
     jobId() {
       return "graytiding";
@@ -42,11 +73,20 @@ export default {
       return JOB;
     },
     viewableActions() {
-			return this.$store.getters[this.jobId + "/filteredActionEntries"];
+      return this.$store.getters[this.jobId + "/filteredActionEntries"];
+    },
+    health() {
+      return this.$store.getters["playerMob/health"];
+    },
+    maxHealth() {
+      return this.$store.getters["playerMob/stats"].maxHealth;
     }
   }
 };
 </script>
 
 <style scoped>
+.black-background {
+  background-color: rgb(61, 61, 61) !important;
+}
 </style>

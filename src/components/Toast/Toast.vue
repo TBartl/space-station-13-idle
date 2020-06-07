@@ -1,30 +1,17 @@
-// TODO: Update this to take a generic component
-
 <template>
   <div class="custom-toast d-flex">
-    <div class="toast-content">
-      <div class="d-flex flex-row align-items-center">
-        <img :src="item.icon" alt />
-        <span>{{count}}</span>
-      </div>
+    <div class="toast-content d-flex flex-column align-items-center">
+      <toast-content v-for="(content, index) in toast.contents" :key="index" :content="content" />
     </div>
   </div>
 </template>
 
 
 <script>
-import ITEMS from "@/data/items";
+import ToastContent from "@/components/Toast/ToastContent";
 export default {
-  props: ["args"],
-  computed: {
-    item() {
-      return ITEMS[this.args.itemId];
-    },
-    count() {
-      var count = this.args.count;
-      return (count < 0 ? "" : "+") + count;
-    }
-  }
+  components: { ToastContent },
+  props: ["toast"]
 };
 </script>
 
@@ -36,8 +23,15 @@ export default {
   z-index: 1000;
   left: 0;
   right: 0;
+  pointer-events: none;
   text-align: center;
 }
+img {
+  width: 32px;
+}
+</style>
+
+<style scoped>
 .toast-content {
   font-size: 32x;
   margin: auto;
@@ -46,8 +40,5 @@ export default {
   border-radius: 8px;
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.5rem;
-}
-img {
-  width: 32px;
 }
 </style>

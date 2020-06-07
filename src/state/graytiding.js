@@ -11,6 +11,17 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
+
+			let upgradeCount = rootGetters["upgrades/get"]("graytidingHacking");
+			let potion = rootGetters["potions/get"]("graytiding");
+			let potionItemId = potion ? potion.itemId : null;
+
+			for (let action of Object.values(actions)) {
+				action.failure.chance -= .1 * upgradeCount;
+				if (potionItemId == "potionTide") {
+					action.failure.chance -= .15;
+				}
+			}
 			return actions;
 		}
 	}

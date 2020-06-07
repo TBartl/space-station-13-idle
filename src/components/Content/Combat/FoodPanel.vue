@@ -10,7 +10,7 @@
         <span v-else>No food</span>
       </button>
 
-      <item-popover v-if="food" :target="id" placement="top" :itemId="foodId" />
+      <item-popover v-if="food" :target="id" placement="left" :itemId="foodId" />
       <button
         id="food-dropdown-button"
         type="button"

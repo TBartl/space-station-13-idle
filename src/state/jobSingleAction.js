@@ -1,6 +1,7 @@
 // Requires the store to implement getters.completeActions and actions.finishAction(actionId)
 
 import ITEMS from "@/data/items";
+import { EventBus } from "@/utils/eventBus.js";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { createCoroutineModule } from "./coroutine";
 
@@ -101,6 +102,17 @@ export default {
 		finishAction({ commit, getters, dispatch }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.completeActions[actionId];
+
+			if (action.failure) {
+				if (Math.random() < action.failure.chance) {
+					// At least try again
+					EventBus.$emit("toast", { text: "Apprehended!" });
+					dispatch("_startCoroutine", { actionId, action })
+					dispatch("playerMob/getHit", action.failure.damage, { root: true });
+					return;
+				}
+			}
+
 			let yieldedItems = acquireItemFrom(action);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
 				commit("inventory/changeItemCount", { itemId, count }, { root: true });
