@@ -77,10 +77,22 @@ const combat = {
 			}, { root: true });
 			commit("removeLootItem", index);
 		},
-		lootAll({ state, dispatch }) {
-			while (state.drops.length) {
-				dispatch("lootItem", 0);
-			}
+		lootAll({ state, commit }) {
+			var allLoot = {}; // itemId: count
+			state.drops.forEach(drop => {
+				if (allLoot[drop.itemId]) {
+					allLoot[drop.itemId] += drop.count;;
+				} else {
+					allLoot[drop.itemId] = drop.count;
+				}
+			});
+			Vue.set(state, "drops", []);
+			Object.entries(allLoot).forEach(lootEntry => {
+				commit("inventory/changeItemCount", {
+					itemId: lootEntry[0],
+					count: lootEntry[1]
+				}, { root: true });
+			});
 		},
 		dropEnemyLoot({ state, commit }) {
 			let enemy = ENEMIES[state.targetEnemy];
