@@ -294,7 +294,11 @@ export const ACTIONS = {
 		requiredLevel: 1,
 		itemTables: [
 			{
-				chance: 2,
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
 				itemTable: randomJunkTable
 			},
 			{
