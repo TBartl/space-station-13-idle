@@ -62,8 +62,8 @@ const POTIONS = {
 		xp: 1,
 		requiredLevel: 5,
 		requiredItems: {
-			oil: 2,
 			oxygen: 1,
+			oil: 2,
 			iron: 1
 		}
 	},
@@ -73,9 +73,10 @@ const POTIONS = {
 		xp: 2,
 		requiredLevel: 10,
 		requiredItems: {
-			oil: 2,
-			oxygen: 1,
-			iron: 1
+			water: 1,
+			sacid: 1,
+			lithium: 1,
+			power: 10
 		}
 	},
 	synthPotionFabrication: {
@@ -84,8 +85,8 @@ const POTIONS = {
 		xp: 3,
 		requiredLevel: 15,
 		requiredItems: {
-			oil: 2,
-			oxygen: 1,
+			oil: 1,
+			lithium: 2,
 			iron: 1
 		}
 	},
@@ -95,8 +96,9 @@ const POTIONS = {
 		xp: 4,
 		requiredLevel: 20,
 		requiredItems: {
-			oil: 2,
-			oxygen: 1,
+			oil: 1,
+			water: 1,
+			lithium: 1,
 			iron: 1
 		}
 	},
@@ -106,8 +108,12 @@ const POTIONS = {
 		xp: 5,
 		requiredLevel: 25,
 		requiredItems: {
-			oil: 2,
 			oxygen: 1,
+			oil: 2,
+			water: 1,
+			sacid: 1,
+			mercury: 1,
+			lithium: 1,
 			iron: 1
 		}
 	},
@@ -117,9 +123,9 @@ const POTIONS = {
 		xp: 6,
 		requiredLevel: 30,
 		requiredItems: {
-			oil: 2,
-			oxygen: 1,
-			iron: 1
+			sacid: 1,
+			mercury: 2,
+			seed: 1
 		}
 	},
 	synthPotionCook: {
@@ -128,9 +134,9 @@ const POTIONS = {
 		xp: 7,
 		requiredLevel: 35,
 		requiredItems: {
-			oil: 2,
 			oxygen: 1,
-			iron: 1
+			mercury: 2,
+			pasta: 1
 		}
 	},
 	synthPotionXeno: {
@@ -139,8 +145,9 @@ const POTIONS = {
 		xp: 8,
 		requiredLevel: 40,
 		requiredItems: {
-			oil: 2,
 			oxygen: 1,
+			oil: 1,
+			mercury: 1,
 			iron: 1
 		}
 	},
@@ -150,9 +157,12 @@ const POTIONS = {
 		xp: 9,
 		requiredLevel: 45,
 		requiredItems: {
+			oxygen: 2,
 			oil: 2,
-			oxygen: 1,
-			iron: 1
+			water: 2,
+			sacid: 2,
+			mercury: 2,
+			lithium: 2,
 		}
 	},
 	synthPotionShit: {
@@ -161,9 +171,10 @@ const POTIONS = {
 		xp: 10,
 		requiredLevel: 50,
 		requiredItems: {
-			lube: 2,
-			oxygen: 1,
-			iron: 1
+			water: 2,
+			lithium: 1,
+			iron: 1,
+			peanut:1
 		}
 	},
 	synthLube: {
