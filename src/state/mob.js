@@ -128,7 +128,11 @@ export function createMobModule(mobType) {
 			},
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
-				EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${damage} HP` })
+
+				
+				if (state.mobType == "player") {
+					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
+				}
 
 				if (state.health <= 0) {
 					// Handle death
