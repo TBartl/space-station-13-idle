@@ -66,7 +66,7 @@ export default {
 	},
 	ammoE1: {
 		name: "Disabling Cell",
-		sellPrice: 3,
+		sellPrice: 1,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_e1.png"),
 		ammoType: "energized",
@@ -76,7 +76,7 @@ export default {
 	},
 	ammoE2: {
 		name: "Stunning Cell",
-		sellPrice: 9,
+		sellPrice: 18,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
 		ammoType: "energized",
@@ -86,7 +86,7 @@ export default {
 	},
 	ammoE3: {
 		name: "Lethal Cell",
-		sellPrice: 22,
+		sellPrice: 34,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_e3.png"),
 		ammoType: "energized",
@@ -96,7 +96,7 @@ export default {
 	},
 	ammoE4: {
 		name: "Disintegration Cell",
-		sellPrice: 75,
+		sellPrice: 52,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_e4.png"),
 		ammoType: "energized",
@@ -106,7 +106,7 @@ export default {
 	},
 	ammoB1: {
 		name: "Beanbag Shell",
-		sellPrice: 2,
+		sellPrice: 4,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_b1.png"),
 		ammoType: "ballistic",
@@ -117,7 +117,7 @@ export default {
 	},
 	ammoB2: {
 		name: "Birdshot Shell",
-		sellPrice: 8,
+		sellPrice: 21,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
 		ammoType: "ballistic",
@@ -128,7 +128,7 @@ export default {
 	},
 	ammoB3: {
 		name: "Buckshot Shell",
-		sellPrice: 16,
+		sellPrice: 43,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_b3.png"),
 		ammoType: "ballistic",
@@ -139,7 +139,7 @@ export default {
 	},
 	ammoB4: {
 		name: "Breaching Shell",
-		sellPrice: 52,
+		sellPrice: 65,
 		equipmentSlot: "pocket",
 		icon: require("@/assets/art/combat/items/ammo_b4_anim.gif"),
 		ammoType: "ballistic",

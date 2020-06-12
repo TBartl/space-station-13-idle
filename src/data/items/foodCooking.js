@@ -42,9 +42,9 @@ export default {
 		healAmount: 3,
 		stats: {
 			maxHealth: -3,
-			evasion: 1,
-			precision: 1,
-			power: 1,
+			evasion: 0,
+			precision: 0,
+			power: 0,
 		},
 	},
 	foodPasta2: {
@@ -54,9 +54,9 @@ export default {
 		healAmount: 6,
 		stats: {
 			maxHealth: -6,
-			evasion: 2,
-			precision: 2,
-			power: 2,
+			evasion: 1,
+			precision: 1,
+			power: 1,
 		},
 	},
 	foodPasta3: {
@@ -66,9 +66,9 @@ export default {
 		healAmount: 9,
 		stats: {
 			maxHealth: -9,
-			evasion: 3,
-			precision: 3,
-			power: 3,
+			evasion: 2,
+			precision: 2,
+			power: 2,
 		},
 	},
 	foodPasta4: {
@@ -78,9 +78,9 @@ export default {
 		healAmount: 12,
 		stats: {
 			maxHealth: -12,
-			evasion: 4,
-			precision: 4,
-			power: 4,
+			evasion: 3,
+			precision: 3,
+			power: 3,
 		},
 	},
 	foodPasta5: {
@@ -90,9 +90,9 @@ export default {
 		healAmount: 15,
 		stats: {
 			maxHealth: -15,
-			evasion: 5,
-			precision: 5,
-			power: 5,
+			evasion: 4,
+			precision: 4,
+			power: 4,
 		},
 	},
 	foodPasta6: {
@@ -102,9 +102,9 @@ export default {
 		healAmount: 18,
 		stats: {
 			maxHealth: -18,
-			evasion: 6,
-			precision: 6,
-			power: 6,
+			evasion: 5,
+			precision: 5,
+			power: 5,
 		},
 	},
 	foodPer1: {

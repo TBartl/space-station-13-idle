@@ -1,9 +1,9 @@
 const MECHS = {
 	fabricateRipley: {
-		time: 60,
+		time: 780,
 		item: "ripley",
 		icon: require("@/assets/art/fabrication/mechripley.png"),
-		xp: 420,
+		xp: 546,
 		requiredLevel: 7,
 		requiredItems: {
 			iron: 100,
@@ -12,10 +12,10 @@ const MECHS = {
 		}
 	},
 	fabricateRipleymk2: {
-		time: 60,
+		time: 780,
 		item: "ripleymk2",
 		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
-		xp: 660,
+		xp: 858,
 		requiredLevel: 11,
 		requiredItems: {
 			iron: 90,
@@ -24,10 +24,10 @@ const MECHS = {
 		}
 	},
 	fabricateOdysseus: {
-		time: 60,
+		time: 780,
 		item: "odysseus",
 		icon: require("@/assets/art/fabrication/mechodysseus.png"),
-		xp: 900,
+		xp: 1170,
 		requiredLevel: 15,
 		requiredItems: {
 			iron: 5,
@@ -36,10 +36,10 @@ const MECHS = {
 			gold: 50
 		}
 	}, fabricateFirefighter: {
-		time: 60,
+		time: 780,
 		item: "firefighter",
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
-		xp: 1140,
+		xp: 1482,
 		requiredLevel: 19,
 		requiredItems: {
 			silver: 25,
@@ -49,10 +49,10 @@ const MECHS = {
 		}
 	},
 	fabricateClarke: {
-		time: 60,
+		time: 780,
 		item: "clarke",
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
-		xp: 1320,
+		xp: 1716,
 		requiredLevel: 22,
 		requiredItems: {
 			silver: 10,
@@ -62,10 +62,10 @@ const MECHS = {
 		}
 	},
 	fabricateDurand: {
-		time: 60,
+		time: 780,
 		item: "durand",
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
-		xp: 1500,
+		xp: 1950,
 		requiredLevel: 25,
 		requiredItems: {
 			silver: 5,
@@ -75,10 +75,10 @@ const MECHS = {
 		}
 	},
 	fabricateMarauder: {
-		time: 60,
+		time: 780,
 		item: "marauder",
 		icon: require("@/assets/art/fabrication/mechmarauder.png"),
-		xp: 1680,
+		xp: 2184,
 		requiredLevel: 28,
 		requiredItems: {
 			gold: 65,
@@ -88,10 +88,10 @@ const MECHS = {
 		}
 	},
 	fabricateGygax: {
-		time: 60,
+		time: 780,
 		item: "gygax",
 		icon: require("@/assets/art/fabrication/mechgygax.png"),
-		xp: 1920,
+		xp: 2496,
 		requiredLevel: 32,
 		requiredItems: {
 			gold: 25,
@@ -101,10 +101,10 @@ const MECHS = {
 		}
 	},
 	fabricateMauler: {
-		time: 60,
+		time: 780,
 		item: "mauler",
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
-		xp: 2100,
+		xp: 2730,
 		requiredLevel: 35,
 		requiredItems: {
 			titanium: 25,
@@ -114,10 +114,10 @@ const MECHS = {
 		}
 	},
 	fabricateDeathripley: {
-		time: 60,
+		time: 780,
 		item: "deathripley",
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
-		xp: 2280,
+		xp: 2964,
 		requiredLevel: 38,
 		requiredItems: {
 			uranium: 90,
@@ -127,10 +127,10 @@ const MECHS = {
 		}
 	},
 	fabricateDarkgygax: {
-		time: 60,
+		time: 780,
 		item: "darkgygax",
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
-		xp: 2460,
+		xp: 3196,
 		requiredLevel: 41,
 		requiredItems: {
 			uranium: 90,
@@ -140,10 +140,10 @@ const MECHS = {
 		}
 	},
 	fabricateReticence: {
-		time: 60,
+		time: 780,
 		item: "reticence",
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
-		xp: 2640,
+		xp: 3432,
 		requiredLevel: 44,
 		requiredItems: {
 			plasma: 50,
@@ -153,10 +153,10 @@ const MECHS = {
 		}
 	},
 	fabricateseraph: {
-		time: 60,
+		time: 780,
 		item: "seraph",
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
-		xp: 2820,
+		xp: 3666,
 		requiredLevel: 47,
 		requiredItems: {
 			plasma: 80,
@@ -165,7 +165,7 @@ const MECHS = {
 		}
 	},
 	fabricateHONK: {
-		time: 60,
+		time: 780,
 		item: "honk",
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
 		xp: -3000,
@@ -184,38 +184,74 @@ const MECHS = {
 		xp: 3900,
 		requiredLevel: 50,
 		requiredItems: {
-			iron: 1
+			uranium: 10,
+			plasma: 60,
+			diamond: 50,
+			bluespace: 75
 		}
 	},
 }
 
 const ENERGY_AMMO = {
 	fabricateEammo1: {
-		time: .5,
-		item: "ammoE1",
+		time: 4,
+		name: "Disabling Cell",
 		icon: require("@/assets/art/combat/items/ammo_e1.png"),
-		xp: 1,
+		xp: 5,
 		requiredLevel: 1,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoE1",
+					count: [8],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			iron: 1
 		}
 	},
 	fabricateEammo2: {
-		time: .5,
-		item: "ammoE2",
+		time: 4,
+		name: "Stunning Cell",
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
-		xp: 2,
+		xp: 10,
 		requiredLevel: 20,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoE2",
+					count: [8],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			gold: 1
 		}
 	},
 	fabricateEammo3: {
-		time: .5,
-		item: "ammoE3",
+		time: 4,
+		name: "Lethal Cell",
 		icon: require("@/assets/art/combat/items/ammo_e3.png"),
-		xp: 3,
+		xp: 15,
 		requiredLevel: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoE3",
+					count: [8],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			plasma: 1
 		}
@@ -224,31 +260,64 @@ const ENERGY_AMMO = {
 
 const BALLISTIC_AMMO = {
 	fabricateBammo1: {
-		time: .5,
-		item: "ammoB1",
+		time: 4,
+		name: "Beanbag Shell",
 		icon: require("@/assets/art/combat/items/ammo_b1.png"),
-		xp: 1,
+		xp: 6,
 		requiredLevel: 5,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoB1",
+					count: [8],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			glass: 1
 		}
 	},
 	fabricateBammo2: {
-		time: .5,
-		item: "ammoB2",
+		time: 4,
+		name: "Birdshot Shell",
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
-		xp: 2,
+		xp: 11,
 		requiredLevel: 21,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoB2",
+					count: [8],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			titanium: 1
 		}
 	},
 	fabricateBammo3: {
-		time: .5,
-		item: "ammoB3",
+		time: 4,
+		name: "Buckshot Shell",
 		icon: require("@/assets/art/combat/items/ammo_b3.png"),
-		xp: 3,
+		xp: 17,
 		requiredLevel: 34,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+					id: "ammoB3",
+					count: [1, 3],
+					}
+				]
+			},
+		],
 		requiredItems: {
 			diamond: 1
 		}
@@ -257,40 +326,40 @@ const BALLISTIC_AMMO = {
 
 const ENERGY_GUNS = {
 	fabricateEgun1: {
-		time: 8,
+		time: 20,
 		item: "gunE1",
 		icon: require("@/assets/art/combat/items/gune_PKA.png"),
-		xp: 8,
+		xp: 25,
 		requiredLevel: 10,
 		requiredItems: {
 			silver: 5
 		}
 	},
 	fabricateEgun3: {
-		time: 8,
+		time: 20,
 		item: "gunE3",
 		icon: require("@/assets/art/combat/items/gune_cutter.png"),
-		xp: 16,
+		xp: 50,
 		requiredLevel: 20,
 		requiredItems: {
 			titanium: 5
 		}
 	},
 	fabricateEgun4: {
-		time: 8,
+		time: 20,
 		item: "gunE4",
 		icon: require("@/assets/art/combat/items/gune_laser.png"),
-		xp: 24,
+		xp: 75,
 		requiredLevel: 30,
 		requiredItems: {
 			plasma: 5
 		}
 	},
 	fabricateEgun6: {
-		time: 8,
+		time: 20,
 		item: "gunE6",
 		icon: require("@/assets/art/combat/items/gune_energy.png"),
-		xp: 32,
+		xp: 100,
 		requiredLevel: 40,
 		requiredItems: {
 			bluespace: 5
@@ -299,40 +368,40 @@ const ENERGY_GUNS = {
 }
 const BALLISTIC_GUNS = {
 	fabricateBgun1: {
-		time: 8,
+		time: 20,
 		item: "gunB1",
 		icon: require("@/assets/art/combat/items/gunb_shot1.png"),
-		xp: 7,
+		xp: 20,
 		requiredLevel: 8,
 		requiredItems: {
 			glass: 5
 		}
 	},
 	fabricateBgun3: {
-		time: 8,
+		time: 20,
 		item: "gunB3",
 		icon: require("@/assets/art/combat/items/gunb_shot3.png"),
-		xp: 14,
+		xp: 40,
 		requiredLevel: 16,
 		requiredItems: {
 			gold: 5
 		}
 	},
 	fabricateBgun4: {
-		time: 8,
+		time: 20,
 		item: "gunB4",
 		icon: require("@/assets/art/combat/items/gunb_shot4.png"),
-		xp: 21,
+		xp: 60,
 		requiredLevel: 24,
 		requiredItems: {
 			uranium: 5
 		}
 	},
 	fabricateBgun6: {
-		time: 8,
+		time: 20,
 		item: "gunB6",
 		icon: require("@/assets/art/combat/items/gunb_shot6.png"),
-		xp: 28,
+		xp: 90,
 		requiredLevel: 36,
 		requiredItems: {
 			diamond: 5
