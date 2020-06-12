@@ -6,9 +6,6 @@ export const ACTIONS = {
 		icon: require("@/assets/art/cooking/pasta1.png"),
 		xp: 5,
 		requiredLevel: 1,
-		requiredItems: {
-			potato: 1
-		}
 	},
 	cookPasta2: {
 		time: 3,
