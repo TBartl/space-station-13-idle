@@ -17,6 +17,12 @@ export const SECTIONS = [
 		]
 	},
 	{
+		name: "Job Unlocks",
+		purchases: [
+			"unlockCooking", "unlockXenobiology", "unlockShitposting"
+		]
+	},
+	{
 		name: "Combat Unlocks",
 		purchases: [
 			"autoeat"
@@ -91,6 +97,45 @@ const SEEDS = {
 	}
 }
 
+const JOB_UNLOCKS = {
+	unlockCooking: {
+		name: "Unlock Cooking",
+		description: "Allows you to turn meat and produce into quality foods",
+		icon: require('@/assets/art/cooking/icon.png'),
+		requiredItems: {
+			money: 1
+		},
+		upgrade: "cookingUnlocked",
+		requiredUpgrades: {
+			cookingUnlocked: 0
+		}
+	},
+	unlockXenobiology: {
+		name: "Unlock Xenobiology",
+		description: "Allows you to raise slimes that can fight alongside you",
+		icon: require('@/assets/art/xenobio/icon.gif'),
+		requiredItems: {
+			money: 1
+		},
+		upgrade: "xenobiologyUnlocked",
+		requiredUpgrades: {
+			xenobiologyUnlocked: 0
+		}
+	},
+	unlockShitposting: {
+		name: "Unlock ???",
+		description: "???",
+		icon: require('@/assets/art/sidebar/mystery.png'),
+		requiredItems: {
+			money: 9999999
+		},
+		upgrade: "shitpostingUnlocked",
+		requiredUpgrades: {
+			shitpostingUnlocked: 0
+		}
+	}
+}
+
 const CAPES = {
 	capeMining: {
 		item: "capeMining",
@@ -157,6 +202,7 @@ const CAPES = {
 export const PURCHASES = {
 	...SEEDS,
 	...CAPES,
+	...JOB_UNLOCKS,
 	...UPGRADES
 
 }

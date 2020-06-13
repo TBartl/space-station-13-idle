@@ -1,36 +1,44 @@
 <template>
   <div
     class="item d-flex align-items-center justify-content-between"
+    :class="{'locked': locked}"
     @click="setVisibleSidebarItem(id)"
   >
     <div class="d-flex align-items-center">
       <img :src="icon" alt />
-      <span class="d-none d-md-block" :style="textStyle">{{text}}</span>
+      <span class="d-none d-md-block" :style="textStyle">{{locked ? "LOCKED" : text}}</span>
     </div>
-    <div >
-      <slot />
+    <div>
+      <slot v-if="!locked" />
+      <div v-else class="mr-1">🔒</div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 export default {
-  props: ["text", "icon", "id", "textColor"],
+  props: ["text", "icon", "id", "textColor", "locked"],
   computed: {
     ...mapGetters(["visibleSidebarItem"]),
     textStyle() {
+      if (this.locked) {
+        return { color: "#9a4b4b" };
+      }
       if (this.id == this.visibleSidebarItem) {
         return { color: "rgba(255, 255, 255, 0.931)" };
-			}
-			if (this.text) {
+      }
+      if (this.text) {
         return { color: this.textColor };
-			}
-			return "";
+      }
+      return "";
     }
   },
   methods: {
-    ...mapMutations(["setVisibleSidebarItem"])
+		setVisibleSidebarItem() {
+			if (this.locked) return;
+			this.$store.commit("setVisibleSidebarItem", this.id);
+		}
   }
 };
 </script>
@@ -41,7 +49,7 @@ export default {
   color: rgba(255, 255, 255, 0.5);
   padding: 0.3rem 1rem;
 }
-.item:hover {
+.item:not(.locked):hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
 }

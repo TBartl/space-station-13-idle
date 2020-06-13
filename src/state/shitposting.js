@@ -12,6 +12,9 @@ const shitposting = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
 			return actions;
+		},
+		locked(state, getters, rootState, rootGetters) {
+			return !rootGetters["upgrades/get"]("shitpostingUnlocked");
 		}
 	}
 });
