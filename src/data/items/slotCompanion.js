@@ -158,12 +158,12 @@ Object.values(SLIMES).forEach((slime, index) => {
 	}
 	else if (mod == 1) {
 		slime.stats = {
-			command: (slime.tier - 1) * 4
+			evasion: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 2) {
 		slime.stats = {
-			precision: (slime.tier - 1) * 4
+			command: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 3) {
