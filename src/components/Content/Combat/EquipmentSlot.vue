@@ -6,7 +6,7 @@
         <img v-if="equippedIcon" :src="equippedIcon" />
         <span
           v-if="equipped.count > 1"
-          class="ammo-count danger-bubble"
+          class="ammo-count primary-bubble"
         >{{equipped.count |cleanNum}}</span>
       </div>
     </button>

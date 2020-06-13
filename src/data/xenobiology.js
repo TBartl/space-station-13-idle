@@ -272,5 +272,5 @@ export const JOB = {
 	id: "xenobiology",
 	name: "Xenobiology",
 	icon: require("@/assets/art/xenobio/icon.gif"),
-	color: "#95857a"
+	color: "rgb(158, 76, 196)"
 }
