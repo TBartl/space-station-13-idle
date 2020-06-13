@@ -4,6 +4,7 @@
     <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
     <div v-if="mobType == 'player'" class="body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
+			<img v-if="companion" :src="companion.icon" alt="" class="companion-overlay">
     </div>
     <img v-else class="body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
@@ -134,7 +135,13 @@ export default {
         icons.unshift(playerBaseIcon);
       }
       return icons;
-    },
+		},
+		companion() {
+			if (this.mobType != "player") return null;
+			let companionItemId = this.$store.getters["inventory/equipment"].companion.itemId;
+			if (!companionItemId) return null;
+			return ITEMS[companionItemId];
+		},
     isValidhuntingTarget() {
       return (
         this.mobType == "enemy" &&
@@ -198,5 +205,11 @@ export default {
 }
 .remaining-kills-desc {
   color: gray;
+}
+.companion-overlay {
+	width: 50%;
+	height: 50%;
+	top: 58%;
+	left:55%;
 }
 </style>
