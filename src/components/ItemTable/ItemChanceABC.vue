@@ -1,7 +1,8 @@
 <template>
   <div v-if="valid" class="d-flex flex-row align-items-center">
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
-    <img :src="item.icon" class="mr-1" />
+    <img :src="item.icon" :id="id" class="mr-1" />
+    <item-popover :itemId="itemId" :target="id" />
     <span>{{countText}}&nbsp;</span>
     <span>{{item.name}}</span>
   </div>
@@ -9,17 +10,25 @@
 
 <script>
 import ITEMS from "@/data/items";
+import ItemPopover from "@/components/ItemPopover";
 export default {
   props: ["chance", "data"],
+  components: { ItemPopover },
   computed: {
+    id() {
+      return this._uid.toString();
+    },
     valid() {
       if (this.data.item) return true;
       // ID can be null
       return this.data.items.id;
     },
+    itemId() {
+      if (this.data.item) return this.data.item;
+      return this.data.items.id;
+    },
     item() {
-      if (this.data.item) return ITEMS[this.data.item];
-      return ITEMS[this.data.items.id];
+      return ITEMS[this.itemId];
     },
     countText() {
       // A
@@ -35,8 +44,8 @@ export default {
       return 1;
     },
     cleanedChance() {
-			let chance = (this.chance * 100).toFixed(2);
-			if (chance.length <= 4) chance = "  " + chance;
+      let chance = (this.chance * 100).toFixed(2);
+      if (chance.length <= 4) chance = "  " + chance;
       return chance + "%";
     }
   }
