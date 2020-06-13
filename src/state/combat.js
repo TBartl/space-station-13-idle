@@ -98,6 +98,7 @@ const combat = {
 			let enemy = ENEMIES[state.targetEnemy];
 			let yieldedItems = acquireItemFrom(enemy);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				if (count == 0) continue;
 				commit("addLootItem", { itemId, count });
 			}
 		},
