@@ -1,8 +1,8 @@
-export default {
+const SLIMES = {
 	slimeGrey: {
 		name: "Grey Slime",
 		sellPrice: 3,
-		icon: require("@/assets/art/xenobio/SlimeGrey.gif")
+		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 	},
 	slimeOrange: {
 		name: "Orange Slime",
@@ -110,3 +110,8 @@ export default {
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif")
 	},
 }
+for (let slime of Object.values(SLIMES)) {
+	slime.equipmentSlot = "companion";
+}
+
+export default SLIMES;

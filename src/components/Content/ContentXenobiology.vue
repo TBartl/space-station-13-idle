@@ -65,7 +65,7 @@ export default {
       for (let t = 0; t < highestTier; t++) tiers.push([]);
 
       for (let entry of entries) {
-        let tier = entry[1].tier;
+				let tier = entry[1].tier;
         tiers[tier - 1].push(entry);
       }
 

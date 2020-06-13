@@ -7,14 +7,6 @@ export const ACTIONS = {
 		requiredLevel: 1,
 		tier: 1
 	},
-	splitGrey40: {
-	 	time: 1,
- 		item: "slimeGrey",
- 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
- 		xp: -5,
-		requiredLevel: 40,
-		tier: 0
-	},
 	splitOrange: {
 		time: 5,
 		item: "slimeOrange",

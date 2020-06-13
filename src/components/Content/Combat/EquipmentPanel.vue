@@ -45,6 +45,11 @@
         :icon="require('@/assets/art/combat/equipment/pocket.png')"
         :restrictedIcon="require('@/assets/art/combat/equipment/pocket-red.png')"
       />
+      <equipment-slot
+        equipmentSlot="companion"
+        :icon="require('@/assets/art/combat/equipment/companion.png')"
+        :restrictedIcon="require('@/assets/art/combat/equipment/companion-red.png')"
+      />
     </div>
   </div>
 </template>
