@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-3">
+  <div class="mb-3" v-if="filteredPurchases.length">
     <div
       class="content-block content-block-top clickable"
       :class="{expanded: expanded}"
