@@ -22,13 +22,13 @@
 
 <script>
 export default {
-  props: ["stats"],
+  props: ["stats", "showAll"],
   computed: {
     id() {
       return this._uid.toString();
     },
     statDetails() {
-      return [
+      let details = [
         {
           id: "maxHealth",
           icon: require("@/assets/art/combat/health.gif"),
@@ -71,9 +71,11 @@ export default {
           name: "Protection",
           description: "Reduces damage taken"
         }
-      ]
-        .filter(detail => this.stats[detail.id])
-        .reverse(); //flex-wrap-reverse'ing
+      ];
+      if (!this.showAll)
+        details = details.filter(detail => this.stats[detail.id]);
+      details = details.reverse(); //flex-wrap-reverse'ing
+      return details;
     }
   }
 };
