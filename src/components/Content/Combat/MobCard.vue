@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div v-if="mobType == 'player'" class="w-100">
+    <div v-if="mobType == 'player' && companion" class="w-100">
       <div class="stat" :id="`${mobType}-stat-flee-chance`">
         <img :src="require('@/assets/art/combat/command.png')" />
         <span class="stat-desc">Flee Chance:</span>

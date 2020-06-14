@@ -82,6 +82,7 @@ export function createMobModule(mobType) {
 			},
 			baseFleeChance(state, getters, rootState, rootGetters) {
 				var companionItemId = rootGetters["inventory/equipment"].companion.itemId;
+				if (!companionItemId) return 0;
 				return ITEMS[companionItemId].fleeChance / 100;
 			},
 			commandRatio() {
@@ -180,10 +181,10 @@ export function createMobModule(mobType) {
 				if (Math.random() > rootGetters["playerMob/fleeChance"]) return;
 				companion.count -= 1;
 
+				EventBus.$emit("toast", { icon: ITEMS[companion.itemId].icon, text: `Your companion has fled!` });
 				if (companion.count == 0) {
 					companion.itemId = null;
 				}
-				EventBus.$emit("toast", { icon: ITEMS[companion.itemId].icon, text: `Your companion has fled!` });
 			},
 			// Add health, like from healing
 			addHealth({ getters, commit }, health) {
