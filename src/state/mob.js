@@ -132,7 +132,7 @@ export function createMobModule(mobType) {
 					pocket.count -= 1;
 					if (pocket.count == 0) {
 						pocket.itemId = null;
-						EventBus.$emit("toast", { text: `Out of ammo!` })
+						EventBus.$emit("toast", { text: `Out of ammo!` });
 					}
 				}
 			},
