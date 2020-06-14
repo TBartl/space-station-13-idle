@@ -62,14 +62,14 @@ export default {
         {
           id: "protection",
           icon: require("@/assets/art/combat/armor-burn.png"),
-          name: "Protection",
-          description: "Reduces damage taken"
+          name: "Burn Protection",
+          description: "Reduces damage taken from burn attacks"
         },
         {
           id: "protection",
           icon: require("@/assets/art/combat/armor-brute.png"),
-          name: "Protection",
-          description: "Reduces damage taken"
+          name: "Brute Protection",
+          description: "Reduces damage taken from brute attacks"
         }
       ];
       if (!this.showAll)
