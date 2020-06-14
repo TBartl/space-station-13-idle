@@ -72,7 +72,7 @@ export default {
           description: "Reduces damage taken"
         }
       ]
-        .filter(detail => this.stats[detail.id] != undefined)
+        .filter(detail => this.stats[detail.id])
         .reverse(); //flex-wrap-reverse'ing
     }
   }
