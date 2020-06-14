@@ -126,11 +126,20 @@ export function createMobModule(mobType) {
 					}
 				}
 
+				// Use ammo
+				if (state.mobType == "player" && rootGetters["combat/isRanged"]) {
+					var pocket = rootGetters["inventory/equipment"].pocket;
+					pocket.count -= 1;
+					if (pocket.count == 0) {
+						pocket.itemId = null;
+						EventBus.$emit("toast", { text: `Out of ammo!` })
+					}
+				}
 			},
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-				
+
 				if (state.mobType == "player") {
 					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
 				}
