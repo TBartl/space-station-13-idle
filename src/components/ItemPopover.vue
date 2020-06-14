@@ -26,7 +26,7 @@
       >Restriction: {{restriction.toUpperCase()}}</span>
       <span class="description mt-1" v-if="item.description">{{item.description}}</span>
       <span class="potion-charges mt-1" v-if="item.potionCharges">Charges: {{item.potionCharges}}</span>
-			<span class="description mt-1" v-if="item.fleeChance">{{item.fleeChance}}% base chance to flee when you're hit</span>
+			<span class="description mt-1" v-if="item.fleeChance">{{item.fleeChance}}% base chance to flee whenever you get hit</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>

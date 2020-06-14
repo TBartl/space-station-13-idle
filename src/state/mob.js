@@ -79,6 +79,19 @@ export function createMobModule(mobType) {
 			},
 			hitChance(state, getters) {
 				return getZPercent(getters.hitDiff / getters.hitSigma);
+			},
+			baseFleeChance(state, getters, rootState, rootGetters) {
+				var companionItemId = rootGetters["inventory/equipment"].companion.itemId;
+				return ITEMS[companionItemId].fleeChance / 100;
+			},
+			commandRatio() {
+				return .01;
+			},
+			commandReduction(state, getters) {
+				return getters.stats.command * getters["commandRatio"];
+			},
+			fleeChance(state, getters) {
+				return Math.max(getters["baseFleeChance"] - getters["commandReduction"], 0);
 			}
 		},
 		mutations: {

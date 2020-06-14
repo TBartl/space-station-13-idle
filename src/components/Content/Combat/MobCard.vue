@@ -4,7 +4,7 @@
     <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
     <div v-if="mobType == 'player'" class="body-icon overlay-div mb-2">
       <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
-			<img v-if="companion" :src="companion.icon" alt="" class="companion-overlay">
+      <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
     </div>
     <img v-else class="body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
@@ -45,6 +45,15 @@
         <span>{{validhuntingCount}}</span>
       </div>
     </div>
+
+    <div v-if="mobType == 'player'" class="w-100">
+      <div class="stat" :id="`${mobType}-stat-flee-chance`">
+        <img :src="require('@/assets/art/combat/command.png')" />
+        <span class="stat-desc">Flee Chance:</span>
+        <span>{{+(fleeChance*100).toFixed(1)}}%</span>
+      </div>
+      <stat-explain-flee-chance :target="`${mobType}-stat-flee-chance`" :mobType="mobType" />
+    </div>
   </div>
 </template>
 
@@ -56,6 +65,7 @@ import RobustnessBadge from "@/components/Content/Combat/RobustnessBadge";
 import ProgressBar from "@/components/ProgressBar";
 import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
+import StatExplainFleeChance from "@/components/Content/Combat/StatExplainFleeChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
 
@@ -64,7 +74,8 @@ export default {
     RobustnessBadge,
     ProgressBar,
     StatExplainMaxHit,
-    StatExplainHitChance
+    StatExplainHitChance,
+    StatExplainFleeChance
   },
   props: ["mobType"],
   computed: {
@@ -99,6 +110,9 @@ export default {
     },
     hitChance() {
       return this.$store.getters[this.mobType + "Mob/hitChance"];
+    },
+    fleeChance() {
+      return this.$store.getters[this.mobType + "Mob/fleeChance"];
     },
     healthPercent() {
       return this.health / this.stats.maxHealth;
@@ -135,13 +149,14 @@ export default {
         icons.unshift(playerBaseIcon);
       }
       return icons;
-		},
-		companion() {
-			if (this.mobType != "player") return null;
-			let companionItemId = this.$store.getters["inventory/equipment"].companion.itemId;
-			if (!companionItemId) return null;
-			return ITEMS[companionItemId];
-		},
+    },
+    companion() {
+      if (this.mobType != "player") return null;
+      let companionItemId = this.$store.getters["inventory/equipment"].companion
+        .itemId;
+      if (!companionItemId) return null;
+      return ITEMS[companionItemId];
+    },
     isValidhuntingTarget() {
       return (
         this.mobType == "enemy" &&
@@ -207,9 +222,9 @@ export default {
   color: gray;
 }
 .companion-overlay {
-	width: 50%;
-	height: 50%;
-	top: 58%;
-	left:55%;
+  width: 50%;
+  height: 50%;
+  top: 58%;
+  left: 55%;
 }
 </style>
