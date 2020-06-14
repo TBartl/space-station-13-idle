@@ -10,7 +10,7 @@ export default [
 		enemies: ["mouse","lostscientist", "cargoTech"]
 	},
 	{
-		name: "Head of Personal Line",
+		name: "Head of Personnel Line",
 		icon: require("@/assets/art/combat/zones/hopline.png"),
 		enemies: ["Ian", "paperworkhop", "hopcurity"]
 	},

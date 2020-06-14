@@ -210,7 +210,7 @@ export default {
 		]
 	},
 	paperworkhop: {
-		name: "Head Of Personal",
+		name: "Head Of Personnel",
 		icon: require("@/assets/art/combat/enemies/goodhop.png"),
 		stats: {
 			maxHealth: 70,
