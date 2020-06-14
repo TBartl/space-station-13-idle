@@ -291,7 +291,7 @@ export default {
 		]
 	},
 	catgirl: {
-		name: "Catgirl",
+		name: "Catboy",
 		icon: require("@/assets/art/combat/enemies/catgirl.png"),
 		stats: {
 			maxHealth: 90,
@@ -414,7 +414,7 @@ export default {
 	},
 	flamingatmostech: {
 		name: "Wannabe Pyromancer Atmospheric Technician",
-		icon: require("@/assets/art/combat/enemies/atmos.png"),
+		icon: require("@/assets/art/combat/enemies/atmos.gif"),
 		stats: {
 			maxHealth: 120,
 			attackSpeed: 1.5,
