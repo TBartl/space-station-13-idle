@@ -6,6 +6,7 @@ export const PLAYER_BASE_STATS = {
 	power: 0,
 	evasion: 0,
 	protection: 0,
+	command: 0,
 	moveTime: 3
 }
 

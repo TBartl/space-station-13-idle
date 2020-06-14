@@ -48,16 +48,28 @@ export default {
           description: "Increases hit chance"
         },
         {
-          id: "protection",
-          icon: require("@/assets/art/combat/armor.png"),
-          name: "Protection",
-          description: "Reduces damage taken"
+          id: "command",
+          icon: require("@/assets/art/combat/command.png"),
+          name: "Command",
+          description: "Reduces companion flee chance"
         },
         {
           id: "power",
           icon: require("@/assets/art/combat/skull.png"),
           name: "Power",
           description: "Increases damage dealt"
+        },
+        {
+          id: "protection",
+          icon: require("@/assets/art/combat/armor-burn.png"),
+          name: "Protection",
+          description: "Reduces damage taken"
+        },
+        {
+          id: "protection",
+          icon: require("@/assets/art/combat/armor-brute.png"),
+          name: "Protection",
+          description: "Reduces damage taken"
         }
       ]
         .filter(detail => this.stats[detail.id] != undefined)
@@ -74,7 +86,7 @@ export default {
 .stat-detail {
   display: inline-block;
   width: 50%;
-	min-width: 64px;
+  min-width: 64px;
   padding: 2px 4px;
   border: 1px solid rgba(135, 138, 148, 0.322);
   background-color: rgba(176, 200, 216, 0.438);

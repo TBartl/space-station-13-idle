@@ -32,6 +32,7 @@ export function createMobModule(mobType) {
 					} else {
 						fullStats.power += rootGetters["meleePower/level"];
 					}
+					fullStats.command += rootGetters["command/level"];
 					fullStats.evasion += rootGetters["evasion/level"];
 					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
