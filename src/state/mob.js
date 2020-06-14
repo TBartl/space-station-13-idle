@@ -177,7 +177,7 @@ export function createMobModule(mobType) {
 			_handleSlimeFlee({ rootGetters }) {
 				var companion = rootGetters["inventory/equipment"].companion;
 				if (!companion.count) return;
-				// TODO, also check for flee chance
+				if (Math.random() > rootGetters["playerMob/fleeChance"]) return;
 				companion.count -= 1;
 
 				if (companion.count == 0) {
