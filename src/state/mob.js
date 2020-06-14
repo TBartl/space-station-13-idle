@@ -82,6 +82,7 @@ export function createMobModule(mobType) {
 			},
 			baseFleeChance(state, getters, rootState, rootGetters) {
 				var companionItemId = rootGetters["inventory/equipment"].companion.itemId;
+				if (!companionItemId) return 0;
 				return ITEMS[companionItemId].fleeChance / 100;
 			},
 			commandRatio() {
