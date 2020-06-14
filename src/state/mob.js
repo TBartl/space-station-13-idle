@@ -139,9 +139,9 @@ export function createMobModule(mobType) {
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-
 				if (state.mobType == "player") {
 					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
+					dispatch("_handleSlimeFlee");
 				}
 
 				if (state.health <= 0) {
@@ -160,6 +160,17 @@ export function createMobModule(mobType) {
 						dispatch("combat/tryAutoEat", {}, { root: true });
 					}
 				}
+			},
+			_handleSlimeFlee({ rootGetters }) {
+				var companion = rootGetters["inventory/equipment"].companion;
+				if (!companion.count) return;
+				// TODO, also check for flee chance
+				companion.count -= 1;
+
+				if (companion.count == 0) {
+					companion.itemId = null;
+				}
+				EventBus.$emit("toast", { icon: ITEMS[companion.itemId].icon, text: `Your companion has fled!` });
 			},
 			// Add health, like from healing
 			addHealth({ getters, commit }, health) {
