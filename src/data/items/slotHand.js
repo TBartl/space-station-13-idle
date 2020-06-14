@@ -413,7 +413,7 @@ export default {
 		restrictions: ["mech"],
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 4,
+			attackSpeed: 4,
 			power: 15,
 			precision: 5
 		}
@@ -425,7 +425,7 @@ export default {
 		icon: require("@/assets/art/engineering/gunsmall.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 4,
+			attackSpeed: 4,
 			power: 15,
 			precision: 5,
 			requires: {
@@ -441,7 +441,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_PKA_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 1,
 			power: 2,
 			precision: 0,
@@ -458,7 +458,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_PKA+_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
 			precision: 0,
@@ -475,7 +475,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_cutter_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
 			precision: 1,
@@ -492,7 +492,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_laser_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 2,
 			power: 4,
 			precision: 2,
@@ -509,7 +509,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_tesla_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
 			precision: 2,
@@ -526,7 +526,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_energy_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
 			precision: 3,
@@ -543,7 +543,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gune_caplaser_overlay.png"),
 		ammoType: "energized",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 3,
 			power: 6,
 			precision: 4,
@@ -560,7 +560,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot1_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 7,
+			attackSpeed: 7,
 			evasion: 3,
 			power: 2,
 			precision: 0,
@@ -577,7 +577,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 6,
+			attackSpeed: 6,
 			evasion: 4,
 			power: 3,
 			precision: 0,
@@ -594,7 +594,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 5,
+			attackSpeed: 5,
 			evasion: 5,
 			power: 3,
 			precision: 0,
@@ -611,7 +611,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot4_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 4,
+			attackSpeed: 4,
 			evasion: 7,
 			power: 4,
 			precision: 0,
@@ -628,7 +628,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 3,
+			attackSpeed: 3,
 			evasion: 8,
 			power: 4,
 			precision: 0,
@@ -645,7 +645,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 2,
+			attackSpeed: 2,
 			evasion: 9,
 			power: 5,
 			precision: 0,
@@ -662,7 +662,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/gunb_shot7_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			weaponSpeed: 1,
+			attackSpeed: 1,
 			evasion: 10,
 			power: 5,
 			precision: 0,

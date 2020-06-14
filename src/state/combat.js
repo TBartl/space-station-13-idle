@@ -1,3 +1,4 @@
+import { EventBus } from "@/utils/eventBus.js";
 import Vue from "vue";
 import { createCoroutineModule } from "./coroutine";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
@@ -98,6 +99,7 @@ const combat = {
 			let enemy = ENEMIES[state.targetEnemy];
 			let yieldedItems = acquireItemFrom(enemy);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				if (count == 0) continue;
 				commit("addLootItem", { itemId, count });
 			}
 		},
@@ -175,11 +177,11 @@ const combat = {
 			if (rootGetters["playerMob/health"] >= rootGetters["playerMob/stats"].maxHealth) return;
 			dispatch("playerMob/addHealth", ITEMS[food.itemId].healAmount, { root: true });
 
-			if (food.count == 1) {
-				food.count = 0;
+			var food = rootState["inventory"].equipment.food;
+			food.count -= 1;
+			if (food.count == 0) {
 				food.itemId = null;
-			} else {
-				food.count -= 1;
+				EventBus.$emit("toast", { text: `Out of food!` });
 			}
 			dispatch("_startFoodCD")
 		},

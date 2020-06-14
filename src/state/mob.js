@@ -32,6 +32,7 @@ export function createMobModule(mobType) {
 					} else {
 						fullStats.power += rootGetters["meleePower/level"];
 					}
+					fullStats.command += rootGetters["command/level"];
 					fullStats.evasion += rootGetters["evasion/level"];
 					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
@@ -78,6 +79,19 @@ export function createMobModule(mobType) {
 			},
 			hitChance(state, getters) {
 				return getZPercent(getters.hitDiff / getters.hitSigma);
+			},
+			baseFleeChance(state, getters, rootState, rootGetters) {
+				var companionItemId = rootGetters["inventory/equipment"].companion.itemId;
+				return ITEMS[companionItemId].fleeChance / 100;
+			},
+			commandRatio() {
+				return .01;
+			},
+			commandReduction(state, getters) {
+				return getters.stats.command * getters["commandRatio"];
+			},
+			fleeChance(state, getters) {
+				return Math.max(getters["baseFleeChance"] - getters["commandReduction"], 0);
 			}
 		},
 		mutations: {
@@ -125,13 +139,22 @@ export function createMobModule(mobType) {
 					}
 				}
 
+				// Use ammo
+				if (state.mobType == "player" && rootGetters["combat/isRanged"]) {
+					var pocket = rootGetters["inventory/equipment"].pocket;
+					pocket.count -= 1;
+					if (pocket.count == 0) {
+						pocket.itemId = null;
+						EventBus.$emit("toast", { text: `Out of ammo!` });
+					}
+				}
 			},
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-				
 				if (state.mobType == "player") {
 					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
+					dispatch("_handleSlimeFlee");
 				}
 
 				if (state.health <= 0) {
@@ -150,6 +173,17 @@ export function createMobModule(mobType) {
 						dispatch("combat/tryAutoEat", {}, { root: true });
 					}
 				}
+			},
+			_handleSlimeFlee({ rootGetters }) {
+				var companion = rootGetters["inventory/equipment"].companion;
+				if (!companion.count) return;
+				if (Math.random() > rootGetters["playerMob/fleeChance"]) return;
+				companion.count -= 1;
+
+				if (companion.count == 0) {
+					companion.itemId = null;
+				}
+				EventBus.$emit("toast", { icon: ITEMS[companion.itemId].icon, text: `Your companion has fled!` });
 			},
 			// Add health, like from healing
 			addHealth({ getters, commit }, health) {

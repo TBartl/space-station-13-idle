@@ -6,7 +6,7 @@
     <div class="overlay-div position-relative potion-slot mr-2" :id="target">
       <img :src="require('@/assets/art/chemistry/potion.png')" />
       <img v-if="currentPotionItem" :src="currentPotionItem.icon" />
-      <span v-if="currentCount > 1" class="potion-count danger-bubble">{{currentCount |cleanNum}}</span>
+      <span v-if="currentCount > 1" class="potion-count primary-bubble">{{currentCount |cleanNum}}</span>
     </div>
     <b-popover :target="target" triggers="click blur" placement="bottom" delay="0">
       <div class="d-flex flex-column align-items-center">
@@ -17,7 +17,7 @@
           :itemId="itemId"
         />
         <button v-if="currentPotionItemId" class="btn btn-outline-danger" @click="remove">REMOVE</button>
-        <span v-if="!currentPotionItemId && validItems.length == 0">No potions available.</span>
+        <span v-if="!currentPotionItemId && validItems.length == 0">No chems available.</span>
       </div>
     </b-popover>
     <div v-if="currentPotion" class="d-flex flex-column align-items-center">

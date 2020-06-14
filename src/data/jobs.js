@@ -14,6 +14,7 @@ import { JOB as PRECISION_JOB } from "./precision";
 import { JOB as MELEE_POWER_JOB } from "./meleePower";
 import { JOB as RANGED_POWER_JOB } from "./rangedPower";
 import { JOB as EVASION_JOB } from "./evasion";
+import { JOB as COMMAND_JOB } from "./command";
 
 export const ALL_JOBS = [
 	MINING_JOB,
@@ -30,6 +31,7 @@ export const ALL_JOBS = [
 	MELEE_POWER_JOB,
 	RANGED_POWER_JOB,
 	EVASION_JOB,
+	COMMAND_JOB,
 	VALIDHUNTING_JOB
 ]
 

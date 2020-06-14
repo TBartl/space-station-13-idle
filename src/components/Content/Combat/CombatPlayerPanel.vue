@@ -11,7 +11,7 @@
           <equipment-panel />
         </div>
         <div>
-          <stats-panel :stats="stats" />
+          <stats-panel :stats="stats" :showAll="true" />
         </div>
       </div>
     </div>

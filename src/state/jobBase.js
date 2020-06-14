@@ -11,6 +11,9 @@ export default {
 		},
 		level(state) {
 			return levelFromXP(state.xp);
+		},
+		locked() {
+			return false;
 		}
 	},
 	mutations: {

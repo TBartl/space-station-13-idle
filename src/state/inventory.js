@@ -47,6 +47,10 @@ const inventory = {
 			pocket: {
 				itemId: null,
 				count: 0
+			},
+			companion: {
+				itemId: null,
+				count: 0
 			}
 		}
 	},

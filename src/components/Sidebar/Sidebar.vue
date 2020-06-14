@@ -26,6 +26,7 @@
       :icon="job.icon"
       :color="job.color"
       :textColor="getJobColor(job)"
+			:locked="checkJobLocked(job)"
     >
       <span>{{getLevelText(job)}}</span>
     </sidebar-item>
@@ -42,6 +43,7 @@
       :icon="job.icon"
       :color="job.color"
       :textColor="getJobColor(job)"
+			:locked="checkJobLocked(job)"
     >
       <span>{{getLevelText(job)}}</span>
     </sidebar-item>
@@ -109,7 +111,10 @@ export default {
       if (isGreen) {
         return "#50c22e";
       }
-    }
+		},
+		checkJobLocked(job) {
+			return this.$store.getters[job.id + "/locked"]
+		}
   }
 };
 </script>
@@ -146,10 +151,10 @@ export default {
   font-weight: bold;
 }
 
-.health-damaged{
-	color: rgb(202, 80, 80);
+.health-damaged {
+  color: rgb(202, 80, 80);
 }
 .health-full {
-	color: green;
+  color: green;
 }
 </style>
