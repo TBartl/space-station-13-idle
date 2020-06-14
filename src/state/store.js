@@ -15,6 +15,7 @@ import botany from "./botany";
 import cooking from "./cooking";
 import graytiding from "./graytiding";
 import tinkering from "./tinkering";
+import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
 import precision from "./precision";
@@ -37,6 +38,7 @@ const modules = {
 	cooking,
 	graytiding,
 	tinkering,
+	command,
 	validhunting,
 	shitposting,
 	precision,

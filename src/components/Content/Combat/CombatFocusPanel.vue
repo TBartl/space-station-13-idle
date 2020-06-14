@@ -1,10 +1,10 @@
 <template>
-  <div class="d-flex flex-row justify-content-center">
+  <div class="d-flex flex-xl-row flex-column align-items-center justify-content-center">
     <div v-for="focus in focuses" :key="focus.id">
       <button
         :id="id+focus.id"
         type="button"
-        class="btn mx-1"
+        class="btn mx-1 mb-1"
         :class="[currentFocus == focus.id ? 'btn-primary' : 'btn-secondary']"
         @click="$store.commit('combat/setFocus',focus.id)"
       >
@@ -31,8 +31,7 @@ export default {
       return this.$store.getters["combat/focus"];
     },
     focuses() {
-
-      return [
+      let focuses = [
         {
           name: "Precision",
           id: "precision",
@@ -55,6 +54,16 @@ export default {
           icon: require("@/assets/art/combat/black_shoes.png")
         }
       ];
+      if (this.$store.getters["upgrades/get"]("xenobiologyUnlocked")) {
+        focuses.push({
+          name: "Command",
+          id: "command",
+          bonus: "+5 command bonus",
+          description: "Damage dealt is gained as command XP",
+          icon: require("@/assets/art/combat/command.png")
+        });
+      }
+      return focuses;
     }
   }
 };
@@ -62,9 +71,9 @@ export default {
 
 <style scoped>
 .focus-text {
-	max-width: 180px;
+  max-width: 180px;
 }
 .focus-bonus {
-	font-weight: bold;
+  font-weight: bold;
 }
 </style>
