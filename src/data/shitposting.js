@@ -10,6 +10,17 @@ export const ACTIONS = {
 			power: 100
 		}
 	},
+	postDeadchat: {
+		time: 1,
+		name: "Deadchat Rant",
+		item: "salt",
+		icon: require("@/assets/art/shitposting/ghost.png"),
+		xp: 0,
+		requiredLevel: 10,
+		requiredItems: {
+			power: 100
+		}
+	},
 }
 
 export const JOB = {

@@ -121,6 +121,20 @@ export const ACTIONS = {
 			power: 10
 		}
 	},
+	engUnholy: {
+		time: 5,
+		name: "Unholy ",
+		items: {
+			id: "power",
+			count: 9
+		},
+		icon: require("@/assets/art/engineering/eng_shitpost.png"),
+		xp: 18,
+		requiredLevel: 42,
+		requiredItems: {
+			salt: 1
+		}
+	},
 	engSingularity: {
 		time: 600,
 		name: "Gravitational Singularity",
@@ -135,27 +149,26 @@ export const ACTIONS = {
 			power: 500
 		}
 	},
-	engMeleesmall: {
-		time: 1,
-		item: "mechWeaponClaw",
-		icon: require("@/assets/art/engineering/meleesmall.png"),
-		xp: 5,
-		requiredLevel: 2
-	},
-	engMeleebig: {
-		time: 1,
-		item: "mechWeaponDrill",
-		icon: require("@/assets/art/engineering/meleebig.png"),
-		xp: 5,
-		requiredLevel: 3
-	},
-	engGunsmall: {
-		time: 1,
-		item: "mechGunRifle",
-		icon: require("@/assets/art/engineering/gunsmall.png"),
-		xp: 5,
-		requiredLevel: 4
-	},
+	// engMeleesmall: {
+	// 	time: 1,
+	// 	item: "mechWeaponClaw",
+	// 	icon: require("@/assets/art/engineering/meleesmall.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 2
+	// },
+	// engMeleebig: {
+	// 	time: 1,
+	// 	item: "mechWeaponDrill",
+	// 	icon: require("@/assets/art/engineering/meleebig.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 3
+	// },
+	// engGunsmall: {
+	// 	time: 1,
+	// 	item: "mechGunRifle",
+	// 	icon: require("@/assets/art/engineering/gunsmall.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 4
 	// These ammos will all probably be removed from here, but this one is causing issues
 	// engAmmosmall: {
 	// 	time: 1,
@@ -164,27 +177,27 @@ export const ACTIONS = {
 	// 	xp: 5,
 	// 	requiredLevel: 5
 	// },
-	engGunbig: {
-		time: 1,
-		item: "mechGunCanno",
-		icon: require("@/assets/art/engineering/gunbig.png"),
-		xp: 5,
-		requiredLevel: 6
-	},
-	engAmmobig: {
-		time: 1,
-		item: "cannonAmmo",
-		icon: require("@/assets/art/engineering/ammobig.png"),
-		xp: 5,
-		requiredLevel: 7
-	},
-	engGunenergy: {
-		time: 1,
-		item: "mechGunEnergyRifle",
-		icon: require("@/assets/art/engineering/gunenergy.png"),
-		xp: 5,
-		requiredLevel: 8
-	},
+	// engGunbig: {
+	// 	time: 1,
+	// 	item: "mechGunCanno",
+	// 	icon: require("@/assets/art/engineering/gunbig.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 6
+	// },
+	// engAmmobig: {
+	// 	time: 1,
+	// 	item: "cannonAmmo",
+	// 	icon: require("@/assets/art/engineering/ammobig.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 7
+	// },
+	// engGunenergy: {
+	// 	time: 1,
+	// 	item: "mechGunEnergyRifle",
+	// 	icon: require("@/assets/art/engineering/gunenergy.png"),
+	// 	xp: 5,
+	// 	requiredLevel: 8
+	// },
 }
 
 export const JOB = {

@@ -201,7 +201,7 @@ export default {
 			},
 			{
 				chance: .8,
-				item: "iron"
+				item: "gold"
 			},
 			{
 				chance: 1,
@@ -312,7 +312,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'faceSec',
 						weight: 1
 					},
 					{
@@ -320,7 +320,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'meleeT3',
+						id: 'meleeC3',
 						weight: 1
 					}
 				]
@@ -353,7 +353,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'faceWrestle',
 						weight: 1
 					},
 					{
@@ -397,7 +397,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'faceSyndicate',
 						weight: 1
 					},
 					{
@@ -438,11 +438,11 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'faceTiki',
 						weight: 1
 					},
 					{
-						id: 'armFiresuit',
+						id: 'gold',
 						weight: 1
 					}
 				]
@@ -483,7 +483,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'Engineering Jumpsuit',
+						id: 'jumpsuitEngineering',
 						weight: 1
 					}
 				]
@@ -791,11 +791,11 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'foodPasta2',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'faceFox',
 						weight: 1
 					},
 					{
@@ -879,7 +879,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'faceMedhud',
 						weight: 1
 					},
 					{
@@ -920,15 +920,15 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'foot',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'junk',
 						weight: 1
 					},
 					{
-						id: 'Paramedic Jumpsuit',
+						id: 'jumpsuitMedical',
 						weight: 1
 					}
 				]
@@ -962,7 +962,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'faceScience',
 						weight: 1
 					},
 					{
@@ -1137,7 +1137,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'armB4',
+						id: 'faceSecglasses',
 						weight: 1
 					},
 					{
@@ -1175,7 +1175,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'faceGas',
 						weight: 1
 					},
 					{
@@ -1534,117 +1534,117 @@ export default {
 			}
 		]
 	},
-	debugA: {
-		name: "Debug A",
-		icon: require("@/assets/art/debug/A.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 2,
-			precision: -20,
-			power: -1,
-			evasion: -20,
-			protection: 30
-		},
-		item: "iron"
-	},
-	debugB: {
-		name: "Debug B",
-		icon: require("@/assets/art/debug/B.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 2,
-			precision: -10,
-			power: -1,
-			evasion: -10,
-		},
-		items: {
-			id: "iron",
-			count: 2
-		}
-	},
-	debugC: {
-		name: "Debug C",
-		icon: require("@/assets/art/debug/C.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 2,
-			precision: 0,
-			power: -1,
-			evasion: 0,
-		},
-		items: {
-			id: "iron",
-			count: [0, 3]
-		}
-	},
-	debugD: {
-		name: "Debug D",
-		icon: require("@/assets/art/debug/D.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 2,
-			precision: 10,
-			power: -1,
-			evasion: 10,
-		},
-		itemTable: [
-			{
-				id: "iron",
-				count: [1, 3],
-				weight: 600
-			}, {
-				id: "silver",
-				count: 2,
-				weight: 200
-			}, {
-				id: "gold",
-				weight: 100
-			}, {
-				id: "titanium",
-				weight: 1
-			},
-			{
-				id: null,
-				weight: 99
-			}
-		]
-	},
-	debugE: {
-		name: "Debug E",
-		icon: require("@/assets/art/debug/E.png"),
-		stats: {
-			maxHealth: 20,
-			attackSpeed: 2,
-			precision: 20,
-			power: -1,
-			evasion: 20,
-		},
-		itemTables: [
-			{
-				chance: 1,
-				item: 'iron'
-			},
-			{
-				chance: 0.1,
-				items: {
-					id: 'silver',
-					count: [0, 2]
-				}
-			},
-			{
-				chance: 0.01,
-				itemTable: [
-					{
-						id: 'gold',
-						weight: 3
-					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
-				]
-			}
-		]
-	}
+	// debugA: {
+	// 	name: "Debug A",
+	// 	icon: require("@/assets/art/debug/A.png"),
+	// 	stats: {
+	// 		maxHealth: 20,
+	// 		attackSpeed: 2,
+	// 		precision: -20,
+	// 		power: -1,
+	// 		evasion: -20,
+	// 		protection: 30
+	// 	},
+	// 	item: "iron"
+	// },
+	// debugB: {
+	// 	name: "Debug B",
+	// 	icon: require("@/assets/art/debug/B.png"),
+	// 	stats: {
+	// 		maxHealth: 20,
+	// 		attackSpeed: 2,
+	// 		precision: -10,
+	// 		power: -1,
+	// 		evasion: -10,
+	// 	},
+	// 	items: {
+	// 		id: "iron",
+	// 		count: 2
+	// 	}
+	// },
+	// debugC: {
+	// 	name: "Debug C",
+	// 	icon: require("@/assets/art/debug/C.png"),
+	// 	stats: {
+	// 		maxHealth: 20,
+	// 		attackSpeed: 2,
+	// 		precision: 0,
+	// 		power: -1,
+	// 		evasion: 0,
+	// 	},
+	// 	items: {
+	// 		id: "iron",
+	// 		count: [0, 3]
+	// 	}
+	// },
+	// debugD: {
+	// 	name: "Debug D",
+	// 	icon: require("@/assets/art/debug/D.png"),
+	// 	stats: {
+	// 		maxHealth: 20,
+	// 		attackSpeed: 2,
+	// 		precision: 10,
+	// 		power: -1,
+	// 		evasion: 10,
+	// 	},
+	// 	itemTable: [
+	// 		{
+	// 			id: "iron",
+	// 			count: [1, 3],
+	// 			weight: 600
+	// 		}, {
+	// 			id: "silver",
+	// 			count: 2,
+	// 			weight: 200
+	// 		}, {
+	// 			id: "gold",
+	// 			weight: 100
+	// 		}, {
+	// 			id: "titanium",
+	// 			weight: 1
+	// 		},
+	// 		{
+	// 			id: null,
+	// 			weight: 99
+	// 		}
+	// 	]
+	// },
+	// debugE: {
+	// 	name: "Debug E",
+	// 	icon: require("@/assets/art/debug/E.png"),
+	// 	stats: {
+	// 		maxHealth: 20,
+	// 		attackSpeed: 2,
+	// 		precision: 20,
+	// 		power: -1,
+	// 		evasion: 20,
+	// 	},
+	// 	itemTables: [
+	// 		{
+	// 			chance: 1,
+	// 			item: 'iron'
+	// 		},
+	// 		{
+	// 			chance: 0.1,
+	// 			items: {
+	// 				id: 'silver',
+	// 				count: [0, 2]
+	// 			}
+	// 		},
+	// 		{
+	// 			chance: 0.01,
+	// 			itemTable: [
+	// 				{
+	// 					id: 'gold',
+	// 					weight: 3
+	// 				},
+	// 				{
+	// 					id: 'titanium',
+	// 					weight: 1
+	// 				}
+	// 			]
+	// 		}
+	// 	]
+	// }
 }
 
