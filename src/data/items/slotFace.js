@@ -84,7 +84,7 @@ export default {
 			evasion: 3,
 		}
 	},
-	faceWestle: {
+	faceWrestle: {
 		name: "Wrestling Mask",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/face_wrestle.png"),
