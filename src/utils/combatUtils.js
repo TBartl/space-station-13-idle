@@ -64,5 +64,19 @@ export function getRobustnessCssClass(playerRobustness, targetRobustness) {
 	if (diff <= -14) return "secondary-bubble"
 	if (diff <= -7) return "success-bubble"
 	return "warning-bubble";
+}
 
+export function fixProtection(stats) {
+	if (stats.protection) {
+		if (stats.bruteProtection == undefined)
+			stats.bruteProtection = 0;
+		stats.bruteProtection += stats.protection;
+
+		if (stats.burnProtection == undefined)
+			stats.burnProtection = 0;
+		stats.burnProtection += stats.protection;
+
+		delete stats.protection;
+	}
+	return stats;
 }

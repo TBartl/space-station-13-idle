@@ -8,7 +8,7 @@
     >
       <div class="w-100 d-flex flex-row align-items-center">
         <img :src="detail.icon" class="mr-1" />
-        <span>{{stats[detail.id]}}{{detail.id == "protection" ? "%" : ""}}</span>
+        <span>{{fixedStats[detail.id]}}{{detail.id.includes("Protection") ? "%" : ""}}</span>
       </div>
       <b-popover :target="id+'-'+detail.id" triggers="hover" placement="top" delay="0">
         <div class="d-flex flex-column align-items-center">
@@ -21,11 +21,18 @@
 </template>
 
 <script>
+import { clone } from "lodash";
+import { fixProtection } from "@/utils/combatUtils";
+
 export default {
   props: ["stats", "showAll"],
   computed: {
     id() {
       return this._uid.toString();
+    },
+    fixedStats() {
+      let fixedStats = clone(this.stats);
+      return fixProtection(fixedStats);
     },
     statDetails() {
       let details = [
@@ -60,20 +67,25 @@ export default {
           description: "Increases damage dealt"
         },
         {
-          id: "protection",
+          id: "burnProtection",
           icon: require("@/assets/art/combat/armor-burn.png"),
           name: "Burn Protection",
           description: "Reduces damage taken from burn attacks"
         },
         {
-          id: "protection",
+          id: "bruteProtection",
           icon: require("@/assets/art/combat/armor-brute.png"),
           name: "Brute Protection",
           description: "Reduces damage taken from brute attacks"
         }
       ];
-      if (!this.showAll)
-        details = details.filter(detail => this.stats[detail.id]);
+      if (!this.showAll) {
+        details = details.filter(detail => {
+          if (this.fixedStats[detail.id] == undefined) return false;
+          if (this.fixedStats[detail.id] == 0) return false;
+          return true;
+        });
+      }
       details = details.reverse(); //flex-wrap-reverse'ing
       return details;
     }

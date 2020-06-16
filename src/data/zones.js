@@ -7,7 +7,7 @@ export default [
 	{
 		name: "Maintenance",
 		icon: require("@/assets/art/combat/zones/maint.png"),
-		enemies: ["mouse","lostscientist", "cargoTech"]
+		enemies: ["mouse", "lostscientist", "cargoTech"]
 	},
 	{
 		name: "Head of Personnel Line",
@@ -60,9 +60,9 @@ export default [
 		icon: require("@/assets/art/combat/zones/core.png"),
 		enemies: ["securitybot", "turrets", "AI"]
 	},
-	{
-		name: "Debug Land",
-		icon: require("@/assets/art/debug/banner.png"),
-		enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
-	}
+	// {
+	// 	name: "Debug Land",
+	// 	icon: require("@/assets/art/debug/banner.png"),
+	// 	enemies: ["debugA", "debugB", "debugC", "debugD", "debugE"]
+	// }
 ]
