@@ -5,13 +5,13 @@
 		<br>
     <p>power: {{stats.power | stat}}</p>
     <p>atkSpeed: {{stats.attackSpeed | stat}}</p>
-    <p v-if="targetProtection">protection: {{targetProtection}}%</p>
+    <p v-if="targetProtection">targetProtection: {{targetProtection}}%</p>
     <br />
     <p>dps = BASE_DPS + POWER_RATIO * power</p>
     <p class="pl-3">= {{baseDps | stat}} + {{powerRatio | stat}} * {{stats.power | stat}}</p>
     <p class="pl-3">= {{dps | stat}}</p>
     <br />
-    <p>maxHit = dps * atkSpeed{{targetProtection ? " * (1-protection)" : ""}}</p>
+    <p>maxHit = dps * atkSpeed{{targetProtection ? " * (1-targetProtection)" : ""}}</p>
     <p class="pl-3">= {{dps | stat}} * {{stats.attackSpeed | stat}}{{targetProtection ? " * (100%-"+targetProtection+"%)" : ""}}</p>
     <p class="pl-3">= {{maxHit | stat}}</p>
   </b-popover>
@@ -31,7 +31,7 @@ export default {
       return this.$store.getters[this.mobType + "Mob/powerRatio"];
     },
     targetProtection() {
-      return this.$store.getters[this.mobType + "Mob/targetStats"].protection;
+      return this.$store.getters[this.mobType + "Mob/targetProtection"];
     },
     dps() {
       return this.$store.getters[this.mobType + "Mob/dps"];

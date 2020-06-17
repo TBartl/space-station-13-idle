@@ -5,7 +5,12 @@
       :class="[customClass]"
       :style="`width: ${progress*100}%;`"
     >
-      <span v-if="text" class="progress-text">{{text}}</span>
+      <div
+        v-if="text"
+        class="progress-text d-flex flex-row align-items-center justify-content-center"
+      >
+        <span>{{text}}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -31,15 +36,15 @@ export default {
 
 <style scoped>
 .progress {
-	position: relative;
+  position: relative;
 }
 .progress-bar {
   transition: none !important;
 }
 .progress-text {
-	font-size: 14px;
-	padding: .2rem;
-	width: 100%;
-	position: absolute;
+  font-size: 14px;
+  padding: 0.2rem;
+  width: 100%;
+  position: absolute;
 }
 </style>

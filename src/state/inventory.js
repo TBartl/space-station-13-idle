@@ -12,15 +12,16 @@ const inventory = {
 			"money": 100
 		},
 		equipment: {
+			// Order here matters, later items will be displayed on top
 			food: {
 				itemId: null,
 				count: 0
 			},
-			hand: {
+			chest: {
 				itemId: null,
 				count: 0
 			},
-			chest: {
+			hand: {
 				itemId: null,
 				count: 0
 			},

@@ -6,7 +6,7 @@ import ENEMIES from "@/data/enemies";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
 
-import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats } from "@/utils/combatUtils";
+import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats, fixProtection } from "@/utils/combatUtils";
 import { getZPercent } from "@/utils/mathUtils";
 
 export function createMobModule(mobType) {
@@ -24,8 +24,9 @@ export function createMobModule(mobType) {
 				return state.health;
 			},
 			stats(state, getters, rootState, rootGetters) {
+				let fullStats;
 				if (state.mobType == "player") {
-					let fullStats = clone(PLAYER_BASE_STATS);
+					fullStats = clone(PLAYER_BASE_STATS);
 					fullStats.precision += rootGetters["precision/level"];
 					if (rootGetters["combat/isRanged"]) {
 						fullStats.power += rootGetters["rangedPower/level"];
@@ -44,11 +45,12 @@ export function createMobModule(mobType) {
 						if (restricted) return;
 						combineStats(fullStats, item.stats)
 					});
-					return fullStats;
 				}
 				else if (state.mobType == "enemy") {
-					return Object.assign({}, ENEMY_BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
+					fullStats = Object.assign({}, ENEMY_BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
 				}
+				fixProtection(fullStats);
+				return fullStats;
 			},
 			targetStats(state, getters, rootState, rootGetters) {
 				if (state.mobType == "player") {
@@ -67,8 +69,13 @@ export function createMobModule(mobType) {
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
 			},
+			targetProtection(state, getters, rootState, rootGetters) {
+				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
+				var damageType = getters.stats.damageType;
+				return rootGetters[inverseMobType + "Mob/stats"][damageType + "Protection"];
+			},
 			maxHit(state, getters) {
-				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetStats.protection / 100);
+				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetProtection / 100);
 				return hit;
 			},
 			hitSigma() {
