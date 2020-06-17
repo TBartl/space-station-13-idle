@@ -106,7 +106,8 @@ export default {
 			precision: 8,
 			power: 17,
 			evasion: 13,
-			protection: 1
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{

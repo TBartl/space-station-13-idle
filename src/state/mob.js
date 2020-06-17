@@ -69,8 +69,13 @@ export function createMobModule(mobType) {
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
 			},
+			targetProtection(state, getters, rootState, rootGetters) {
+				var inverseMobType = state.mobType == "enemy" ? "player" : "enemy";
+				var damageType = getters.stats.damageType;
+				return rootGetters[inverseMobType + "Mob/stats"][damageType + "Protection"];
+			},
 			maxHit(state, getters) {
-				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetStats.protection / 100);
+				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetProtection / 100);
 				return hit;
 			},
 			hitSigma() {

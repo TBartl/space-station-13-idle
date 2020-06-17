@@ -330,6 +330,7 @@ export default {
 			precision: 5,
 			attackSpeed: 2,
 			power: 10,
+			damageType: "burn"
 		}
 	},
 	meleeE2: {
@@ -344,6 +345,7 @@ export default {
 			precision: 5,
 			attackSpeed: 2,
 			power: 10,
+			damageType: "burn"
 		}
 	},
 	meleeE3: {
@@ -358,6 +360,7 @@ export default {
 			precision: 5,
 			attackSpeed: 2,
 			power: 10,
+			damageType: "burn"
 		}
 	},
 	meleeE4: {
@@ -372,6 +375,7 @@ export default {
 			precision: 5,
 			attackSpeed: 2,
 			power: 10,
+			damageType: "burn"
 		}
 	},
 	meleeE5: {
@@ -386,6 +390,7 @@ export default {
 			precision: 5,
 			attackSpeed: 2,
 			power: 10,
+			damageType: "burn"
 		}
 	},
 	mechWeaponClaw: {
@@ -427,10 +432,10 @@ export default {
 		stats: {
 			attackSpeed: 4,
 			power: 15,
-			precision: 5,
-			requires: {
-				rangedPower: 1
-			}
+			precision: 5
+		},
+		requires: {
+			rangedPower: 1
 		}
 	},
 	gunE1: {
@@ -444,10 +449,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 2,
-			precision: 0,
-			requires: {
-				rangedPower: 1
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 1
 		}
 	},
 	gunE2: {
@@ -461,10 +466,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
-			precision: 0,
-			requires: {
-				rangedPower: 15
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 15
 		}
 	},
 	gunE3: {
@@ -478,10 +483,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
-			precision: 1,
-			requires: {
-				rangedPower: 20
-			}
+			precision: 1
+		},
+		requires: {
+			rangedPower: 20
 		}
 	},	
 	gunE4: {
@@ -495,10 +500,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 4,
-			precision: 2,
-			requires: {
-				rangedPower: 30
-			}
+			precision: 2
+		},
+		requires: {
+			rangedPower: 30
 		}
 	},
 	gunE5: {
@@ -512,10 +517,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
-			precision: 2,
-			requires: {
-				rangedPower: 35
-			}
+			precision: 2
+		},
+		requires: {
+			rangedPower: 35
 		}
 	},
 	gunE6: {
@@ -529,10 +534,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
-			precision: 3,
-			requires: {
-				rangedPower: 40
-			}
+			precision: 3
+		},
+		requires: {
+			rangedPower: 40
 		}
 	},
 	gunE7: {
@@ -546,10 +551,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 3,
 			power: 6,
-			precision: 4,
-			requires: {
-				rangedPower: 50
-			}
+			precision: 4
+		},
+		requires: {
+			rangedPower: 50
 		}
 	},
 	gunB1: {
@@ -563,10 +568,10 @@ export default {
 			attackSpeed: 7,
 			evasion: 3,
 			power: 2,
-			precision: 0,
-			requires: {
-				rangedPower: 1
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 1
 		}
 	},
 	gunB2: {
@@ -580,10 +585,10 @@ export default {
 			attackSpeed: 6,
 			evasion: 4,
 			power: 3,
-			precision: 0,
-			requires: {
-				rangedPower: 20
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 20
 		}
 	},
 	gunB3: {
@@ -597,10 +602,10 @@ export default {
 			attackSpeed: 5,
 			evasion: 5,
 			power: 3,
-			precision: 0,
-			requires: {
-				rangedPower: 25
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 25
 		}
 	},	
 	gunB4: {
@@ -614,10 +619,10 @@ export default {
 			attackSpeed: 4,
 			evasion: 7,
 			power: 4,
-			precision: 0,
-			requires: {
-				rangedPower: 35
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 35
 		}
 	},
 	gunB5: {
@@ -631,10 +636,10 @@ export default {
 			attackSpeed: 3,
 			evasion: 8,
 			power: 4,
-			precision: 0,
-			requires: {
-				rangedPower: 40
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 40
 		}
 	},
 	gunB6: {
@@ -648,10 +653,10 @@ export default {
 			attackSpeed: 2,
 			evasion: 9,
 			power: 5,
-			precision: 0,
-			requires: {
-				rangedPower: 45
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 45
 		}
 	},
 	gunB7: {
@@ -665,10 +670,10 @@ export default {
 			attackSpeed: 1,
 			evasion: 10,
 			power: 5,
-			precision: 0,
-			requires: {
-				rangedPower: 50
-			}
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
 		}
 	},
 	mechGunEnergyRifle: {

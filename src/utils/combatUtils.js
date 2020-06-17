@@ -7,7 +7,10 @@ export const PLAYER_BASE_STATS = {
 	evasion: 0,
 	protection: 0,
 	command: 0,
-	moveTime: 3
+	moveTime: 3,
+	bruteProtection: 0,
+	burnProtection: 0,
+	damageType: "brute"
 }
 
 export const ENEMY_BASE_STATS = {
@@ -17,13 +20,16 @@ export const ENEMY_BASE_STATS = {
 	power: 1,
 	evasion: 1,
 	protection: 0,
-	moveTime: 3
+	moveTime: 3,
+	bruteProtection: 0,
+	burnProtection: 0,
+	damageType: "brute"
 }
 
 // This adds to a, so it should only be used on a fresh object
 export function combineStats(a, b) {
 	for (let [statId, value] of Object.entries(b)) {
-		if (statId == "attackSpeed") {
+		if (statId == "attackSpeed" || statId == "damageType") {
 			a[statId] = value;
 		} else {
 			a[statId] += value;
@@ -35,7 +41,9 @@ export function combineStats(a, b) {
 
 // The stats, based off of the base stats
 export function getBasedStats(stats, mobType) {
-	return Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+	let newStats = Object.assign({}, mobType == "player" ? PLAYER_BASE_STATS : ENEMY_BASE_STATS, stats);
+	fixProtection(newStats);
+	return newStats;
 }
 
 export function calcRobustness(stats, mobType) {
@@ -52,7 +60,7 @@ export function calcRobustness(stats, mobType) {
 	robustness += stats.maxHealth / 100;
 
 	// Protection is a survivability multiplier
-	robustness *= 1 + (stats.protection / 100);
+	robustness *= 1 + Math.min(stats.burnProtection, stats.bruteProtection) / 100;
 
 	return Math.round(robustness);
 }

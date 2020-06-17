@@ -31,6 +31,7 @@
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Max Hit:</span>
         <span>{{Math.round(maxHit)}}</span>
+				<img class="ml-1 damage-type" :src="damageTypeImage" />
       </div>
       <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
       <div class="stat" :id="`${mobType}-stat-hit-chance`">
@@ -68,6 +69,9 @@ import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChan
 import StatExplainFleeChance from "@/components/Content/Combat/StatExplainFleeChance";
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
+
+const BRUTE_ICON = require("@/assets/art/combat/brute-damage.png");
+const BURN_ICON = require("@/assets/art/combat/burn-damage.png");
 
 export default {
   components: {
@@ -168,6 +172,9 @@ export default {
     },
     validhuntingIcon() {
       return VALIDHUNTING_JOB.icon;
+    },
+    damageTypeImage() {
+      return this.stats.damageType == "brute" ? BRUTE_ICON : BURN_ICON;
     }
   }
 };
@@ -226,5 +233,8 @@ export default {
   height: 50%;
   top: 58%;
   left: 55%;
+}
+.damage-type {
+	width: 15px !important;
 }
 </style>
