@@ -133,7 +133,7 @@ export default {
 			evasion: -30,
 			precision: 30,
 			attackSpeed: 2,
-			power: 600,
+			power: 60,
 		}
 	},
 	meleeB9: {
