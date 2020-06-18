@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const ACTIONS_RECYCLING = {
 	tinkerRecycleJ: {
 		time: 10,
 		item: "burnjunk",
@@ -29,6 +29,9 @@ export const ACTIONS = {
 			armorjunk: 2
 		}
 	},
+}
+
+const ACTIONS_BLUNT_WEAPONS = {
 	tinkerMeleeb1: {
 		time: 2,
 		item: "meleeB1",
@@ -119,6 +122,10 @@ export const ACTIONS = {
 			junk: 1
 		}
 	},
+}
+
+
+const ACTIONS_SHARP_WEAPONS = {
 	tinkerMeleec1: {
 		time: 2,
 		item: "meleeC1",
@@ -189,6 +196,10 @@ export const ACTIONS = {
 			junk: 1
 		}
 	},
+}
+
+const ACTIONS_ARMOR = {
+
 	tinkerArmB1: {
 		time: 2,
 		item: "armB1",
@@ -239,6 +250,9 @@ export const ACTIONS = {
 			armorjunk: 1
 		}
 	},
+}
+
+export const ACTIONS_SPACE_SUITS = {
 	tinkerArmS1: {
 		time: 2,
 		item: "armS1",
@@ -289,6 +303,20 @@ export const ACTIONS = {
 			spacejunk: 1
 		}
 	},
+}
+
+Object.values(ACTIONS_RECYCLING).forEach(action => action.type = "recycling");
+Object.values(ACTIONS_BLUNT_WEAPONS).forEach(action => action.type = "blunt weapons");
+Object.values(ACTIONS_SHARP_WEAPONS).forEach(action => action.type = "sharp weapons");
+Object.values(ACTIONS_ARMOR).forEach(action => action.type = "armor");
+Object.values(ACTIONS_SPACE_SUITS).forEach(action => action.type = "space suits");
+
+export const ACTIONS = {
+	...ACTIONS_RECYCLING,
+	...ACTIONS_BLUNT_WEAPONS,
+	...ACTIONS_SHARP_WEAPONS,
+	...ACTIONS_ARMOR,
+	...ACTIONS_SPACE_SUITS
 }
 
 export const JOB = {
