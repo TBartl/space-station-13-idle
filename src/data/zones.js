@@ -2,7 +2,7 @@ export default [
 	{
 		name: "Arrival Lounge",
 		icon: require("@/assets/art/combat/zones/departures.png"),
-		enemies: ["chaplain", "miner"]
+		enemies: ["janitor","chaplain", "miner"]
 	},
 	{
 		name: "Maintenance",
