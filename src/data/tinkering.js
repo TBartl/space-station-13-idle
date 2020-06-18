@@ -198,7 +198,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 }
 
-const ACTIONS_BRUTE_ARMOR = {
+const ACTIONS_ARMOR = {
 
 	tinkerArmB1: {
 		time: 2,
@@ -252,7 +252,7 @@ const ACTIONS_BRUTE_ARMOR = {
 	},
 }
 
-export const ACTIONS_BURN_ARMOR = {
+export const ACTIONS_SPACE_SUITS = {
 	tinkerArmS1: {
 		time: 2,
 		item: "armS1",
@@ -308,15 +308,15 @@ export const ACTIONS_BURN_ARMOR = {
 Object.values(ACTIONS_RECYCLING).forEach(action => action.type = "recycling");
 Object.values(ACTIONS_BLUNT_WEAPONS).forEach(action => action.type = "blunt weapons");
 Object.values(ACTIONS_SHARP_WEAPONS).forEach(action => action.type = "sharp weapons");
-Object.values(ACTIONS_BRUTE_ARMOR).forEach(action => action.type = "brute armor");
-Object.values(ACTIONS_BURN_ARMOR).forEach(action => action.type = "burn armor");
+Object.values(ACTIONS_ARMOR).forEach(action => action.type = "armor");
+Object.values(ACTIONS_SPACE_SUITS).forEach(action => action.type = "space suits");
 
 export const ACTIONS = {
 	...ACTIONS_RECYCLING,
 	...ACTIONS_BLUNT_WEAPONS,
 	...ACTIONS_SHARP_WEAPONS,
-	...ACTIONS_BRUTE_ARMOR,
-	...ACTIONS_BURN_ARMOR
+	...ACTIONS_ARMOR,
+	...ACTIONS_SPACE_SUITS
 }
 
 export const JOB = {
