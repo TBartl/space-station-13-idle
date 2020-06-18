@@ -221,25 +221,57 @@ export default {
 		name: "R.I.P.L.E.Y. MK2",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechripleymkii.png")
+		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	odysseus: {
 		name: "Odysseus",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechodysseus.png")
+		icon: require("@/assets/art/fabrication/mechodysseus.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	firefighter: {
 		name: "R.I.P.L.E.Y. MK3",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechfirefighter.png")
+		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	clarke: {
 		name: "Clarke",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechclarke_anim.gif")
+		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	durand: {
 		name: "Durand",
@@ -247,60 +279,139 @@ export default {
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
 		overlay: require("@/assets/art/fabrication/mechdurand.png"),
-		overlayHidePlayer: true
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	marauder: {
 		name: "Marauder",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechmarauder.png")
+		icon: require("@/assets/art/fabrication/mechmarauder.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	gygax: {
 		name: "Gygax",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechgygax.png")
+		icon: require("@/assets/art/fabrication/mechgygax.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	mauler: {
 		name: "Mauler",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechmauler_anim.gif")
+		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	deathripley: {
 		name: "R.I.P.L.E.Y. MK13",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechdeathripley.png")
+		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	darkgygax: {
 		name: "Assault Gygax",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechdarkgygax.png")
+		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	reticence: {
 		name: ".........",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechreticence.png")
+		icon: require("@/assets/art/fabrication/mechreticence.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	seraph: {
 		name: "Seraph",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechseraph.png")
+		icon: require("@/assets/art/fabrication/mechseraph.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	honk: {
 		name: "H.O.N.K.",
 		sellPrice: 1000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechhonk.png")
+		icon: require("@/assets/art/fabrication/mechhonk.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	},
 	phazon: {
 		name: "Phazon",
 		sellPrice: 100000,
 		equipmentSlot: "chest",
-		icon: require("@/assets/art/fabrication/mechphazon.png")
+		icon: require("@/assets/art/fabrication/mechphazon.png"),
+		overlayHidePlayer: true,
+		stats: {
+			maxHealth: 150,
+			evasion: -15,
+			defense: 30,
+			power: 10
+		},
+		liftsRestrictions: ["mech"]
 	}
 }

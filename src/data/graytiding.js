@@ -339,59 +339,59 @@ const ACTIONS = {
 			}
 		]
 	},
-	graytideBULK: {
-		name: "Security",
-		icon: require("@/assets/art/graytiding/Security.png"),
-		time: 6,
-		xp: 25,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: randomJunkTable
-			},
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "limbInsuls",
-						count: [1, 3],
-						weight: 50
-					}, {
-						id: "limbBoxing",
-						count: 2,
-						weight: 50
-					}, {
-						id: "limbMagkrava",
-						weight: 50
-					}, {
-						id: "limbCapt",
-						weight: 50
-					}, {
-						id: "limbNinja",
-						count: [1, 3],
-						weight: 50
-					}, {
-						id: "limbBlack",
-						count: 2,
-						weight: 50
-					}, {
-						id: "limbMagBoots",
-						weight: 50
-					}, {
-						id: "limbClownShoes",
-						weight: 50
-					}, {
-						id: "limbJackboots",
-						weight: 50
-					}, {
-						id: "limbAdvancedMagboots",
-						weight: 50
-					},
-				]
-			}
-		]
-	},
+	// graytideBULK: {
+	// 	name: "Security",
+	// 	icon: require("@/assets/art/graytiding/Security.png"),
+	// 	time: 6,
+	// 	xp: 25,
+	// 	requiredLevel: 1,
+	// 	itemTables: [
+	// 		{
+	// 			chance: 1,
+	// 			itemTable: randomJunkTable
+	// 		},
+	// 		{
+	// 			chance: 1,
+	// 			itemTable: [
+	// 				{
+	// 					id: "limbInsuls",
+	// 					count: [1, 3],
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbBoxing",
+	// 					count: 2,
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbMagkrava",
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbCapt",
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbNinja",
+	// 					count: [1, 3],
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbBlack",
+	// 					count: 2,
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbMagBoots",
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbClownShoes",
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbJackboots",
+	// 					weight: 50
+	// 				}, {
+	// 					id: "limbAdvancedMagboots",
+	// 					weight: 50
+	// 				},
+	// 			]
+	// 		}
+	// 	]
+	// },
 }
 
 Object.values(ACTIONS).forEach((action, index) => {

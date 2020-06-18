@@ -205,7 +205,7 @@ const ENERGY_AMMO = {
 				itemTable: [
 					{
 						id: "ammoE1",
-						count: [8],
+						count: 8,
 					}
 				]
 			},
@@ -226,7 +226,7 @@ const ENERGY_AMMO = {
 				itemTable: [
 					{
 						id: "ammoE2",
-						count: [8],
+						count: 8,
 					}
 				]
 			},
@@ -247,7 +247,7 @@ const ENERGY_AMMO = {
 				itemTable: [
 					{
 						id: "ammoE3",
-						count: [8],
+						count: 8,
 					}
 				]
 			},
@@ -271,7 +271,7 @@ const BALLISTIC_AMMO = {
 				itemTable: [
 					{
 						id: "ammoB1",
-						count: 8,
+						count: 8
 					}
 				]
 			},
@@ -292,7 +292,7 @@ const BALLISTIC_AMMO = {
 				itemTable: [
 					{
 						id: "ammoB2",
-						count: 8,
+						count: 8
 					}
 				]
 			},
@@ -313,7 +313,7 @@ const BALLISTIC_AMMO = {
 				itemTable: [
 					{
 						id: "ammoB3",
-						count: [1, 3],
+						count: 8
 					}
 				]
 			},

@@ -46,7 +46,7 @@ export const ACTIONS = {
 		xp: 15,
 		requiredLevel: 15,
 		requiredItems: {
-			PotatoBatt: 8
+			potatobattery: 8
 		}
 		
 	},
@@ -55,7 +55,7 @@ export const ACTIONS = {
 		name: "Portable Generator",
 		items: {
 			id: "power",
-			count: 4
+			count: 9
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
 		xp: 20,

@@ -1,5 +1,49 @@
 
 export default {
+	janitor: {
+		name: "Janitor",
+		icon: require("@/assets/art/combat/enemies/janitor.png"),
+		stats: {
+			maxHealth: 10,
+			attackSpeed: 1.6,
+			precision: 3,
+			power: 12,
+			evasion: 10,
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [0, 10]
+				}
+			},
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'junk',
+						weight: 10
+					},
+					{
+						id: 'spacejunk',
+						weight: 9
+					},
+					{
+						id: 'armorjunk',
+						weight: 3
+					}
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
+	},
 	chaplain: {
 		name: "Chaplain",
 		icon: require("@/assets/art/combat/enemies/chaplain.png"),
@@ -9,7 +53,9 @@ export default {
 			precision: 6,
 			power: 9,
 			evasion: 16,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -51,7 +97,9 @@ export default {
 			precision: 5,
 			power: 6,
 			evasion: 16,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -91,7 +139,9 @@ export default {
 			precision: -1,
 			power: -1,
 			evasion: -1,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 			items: {
 				id: "mouseCarcass",
@@ -148,7 +198,9 @@ export default {
 			precision: 6,
 			power: 13,
 			evasion: 10,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -190,7 +242,9 @@ export default {
 			precision: 10,
 			power: 21,
 			evasion: 23,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -219,7 +273,9 @@ export default {
 			precision: 20,
 			power: 24,
 			evasion: 22,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -260,7 +316,9 @@ export default {
 			precision: 29,
 			power: 19,
 			evasion: 36,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -300,7 +358,9 @@ export default {
 			precision: 20,
 			power: 35,
 			evasion: 15,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -341,7 +401,9 @@ export default {
 			precision: 37,
 			power: 28,
 			evasion: 22,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -381,7 +443,9 @@ export default {
 			precision: 27,
 			power: 22,
 			evasion: 33,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -422,7 +486,9 @@ export default {
 			precision: 36,
 			power: 36,
 			evasion: 32,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 90
 		},
 		itemTables: [
 			{
@@ -463,7 +529,10 @@ export default {
 			precision: 41,
 			power: 44,
 			evasion: 25,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
+
 		},
 		itemTables: [
 			{
@@ -504,7 +573,9 @@ export default {
 			precision: 47,
 			power: 42,
 			evasion: 38,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -546,7 +617,9 @@ export default {
 			precision: 10,
 			power: 37,
 			evasion: 28,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			bruteProtection: 90
 		},
 		itemTables: [
 			{
@@ -588,7 +661,9 @@ export default {
 			precision: 34,
 			power: 45,
 			evasion: 25,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -630,7 +705,9 @@ export default {
 			precision: 37,
 			power: 44,
 			evasion: 40,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -672,7 +749,9 @@ export default {
 			precision: 57,
 			power: 40,
 			evasion: 26,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -713,7 +792,9 @@ export default {
 			precision: 41,
 			power: 61,
 			evasion: 67,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -778,7 +859,9 @@ export default {
 			precision: 49,
 			power: 49,
 			evasion: 44,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -820,7 +903,9 @@ export default {
 			precision: 41,
 			power: 59,
 			evasion: 42,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -867,7 +952,9 @@ export default {
 			precision: 47,
 			power: 66,
 			evasion: 57,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -908,7 +995,9 @@ export default {
 			precision: 50,
 			power: 48,
 			evasion: 30,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -949,7 +1038,9 @@ export default {
 			precision: 250,
 			power: 78,
 			evasion: 68,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -991,7 +1082,9 @@ export default {
 			precision: 71,
 			power: 78,
 			evasion: 75,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -1033,7 +1126,9 @@ export default {
 			precision: 63,
 			power: 60,
 			evasion: 80,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -1074,7 +1169,9 @@ export default {
 			precision: 26,
 			power: 35,
 			evasion: 20,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -1120,7 +1217,10 @@ export default {
 			precision: 20,
 			power: 500,
 			evasion: -10,
-			protection: 10
+			protection: 10,
+			damageType: "brute",
+			burnProtection: 20,
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -1162,7 +1262,10 @@ export default {
 			precision: 55,
 			power: 59,
 			evasion: 73,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 5,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1204,7 +1307,10 @@ export default {
 			precision: 70,
 			power: 78,
 			evasion: 67,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 10,
+			bruteProtection: 10
 		},
 		itemTables: [
 			{
@@ -1246,7 +1352,10 @@ export default {
 			precision: 86,
 			power: 91,
 			evasion: 95,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1288,7 +1397,10 @@ export default {
 			precision: 75,
 			power: 71,
 			evasion: 73,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1330,7 +1442,10 @@ export default {
 			precision: 85,
 			power: 94,
 			evasion: 63,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1376,7 +1491,10 @@ export default {
 			precision: 84,
 			power: 87,
 			evasion: 81,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1418,7 +1536,10 @@ export default {
 			precision: 104,
 			power: 80,
 			evasion: 72,
-			protection: 1
+			protection: 1,
+			damageType: "brute",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1460,7 +1581,10 @@ export default {
 			precision: 93,
 			power: 73,
 			evasion: 52,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
@@ -1502,7 +1626,10 @@ export default {
 			precision: 94,
 			power: 74,
 			evasion: 69,
-			protection: 1
+			protection: 1,
+			damageType: "burn",
+			burnProtection: 0,
+			bruteProtection: 5
 		},
 		itemTables: [
 			{
