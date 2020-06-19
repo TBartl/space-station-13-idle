@@ -8,7 +8,7 @@ export default {
 		stats: {
 			maxHealth: 10,
 			evasion: 6,
-			protection: 20,
+			protection: -20,
 			precision: 2,
 			power: 2,
 		},

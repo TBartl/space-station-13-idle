@@ -53,7 +53,7 @@ export default [
 	{
 		name: "Science",
 		icon: require("@/assets/art/combat/zones/robotics.png"),
-		enemies: ["minibot", "techpriest", "mech"]
+		enemies: ["minibot", "techpriest", "mech", "ayyyyy"]
 	},
 	{
 		name: "AI Core",
