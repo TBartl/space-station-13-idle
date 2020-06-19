@@ -5,7 +5,7 @@
     @click="tryStartAction(actionId)"
   >
     <div v-if="!locked" class="d-flex flex-column align-items-center">
-      <p class="action-title">{{actionName}}</p>
+      <p class="action-title">{{_actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time | stat}} SECONDS</p>
       <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
@@ -75,6 +75,10 @@ export default {
     },
     hasItems() {
       return this.hasActionRequiredItems(this.actionId);
+    },
+    _actionName() {
+      if (this.action.actionName) return this.action.actionName;
+      return this.actionName;
     },
     actionTitle() {
       if (this.action.name) return this.action.name;
