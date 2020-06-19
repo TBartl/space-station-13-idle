@@ -75,7 +75,7 @@ const POTIONS = {
 	potionBotany: {
 		name: "Unstable Mutagen",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/plantbgone.png"),
 		description: "Plants have a chance to grow an additional plant of that family.",
 		potionJob: "botany",
 		potionCharges: 5

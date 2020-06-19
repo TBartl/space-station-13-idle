@@ -125,7 +125,7 @@ const POTIONS = {
 		requiredItems: {
 			sacid: 1,
 			mercury: 2,
-			seed: 1
+			plantSeed: 1
 		}
 	},
 	synthPotionCooking: {
@@ -136,7 +136,7 @@ const POTIONS = {
 		requiredItems: {
 			oxygen: 1,
 			mercury: 2,
-			pasta: 1
+			foodPasta1: 1
 		}
 	},
 	synthPotionXenobiology: {
