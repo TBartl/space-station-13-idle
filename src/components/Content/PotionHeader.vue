@@ -3,11 +3,18 @@
     class="potion-header content-block d-flex flex-row align-items-center justify-content-center"
   >
     <span class="chem-title mr-2">CHEM:</span>
-    <div class="overlay-div position-relative potion-slot mr-2" :id="target">
+    <div class="overlay-div position-relative potion-slot mr-2" :id="target" tabindex="0">
       <img :src="require('@/assets/art/chemistry/potion.png')" />
       <img v-if="currentPotionItem" :src="currentPotionItem.icon" />
+
       <span v-if="currentCount > 1" class="potion-count primary-bubble">{{currentCount |cleanNum}}</span>
     </div>
+    <item-popover
+      v-if="currentPotionItemId"
+      :itemId="currentPotionItemId"
+      :target="target"
+      placement="left"
+    />
     <b-popover :target="target" triggers="click blur" placement="bottom" delay="0">
       <div class="d-flex flex-column align-items-center">
         <potion-header-item
@@ -30,9 +37,10 @@
 <script>
 import ITEMS from "@/data/items";
 import PotionHeaderItem from "@/components/Content/PotionHeaderItem";
+import ItemPopover from "@/components/ItemPopover";
 export default {
   props: ["jobId"],
-  components: { PotionHeaderItem },
+  components: { PotionHeaderItem, ItemPopover },
   computed: {
     id() {
       return this._uid.toString();
@@ -65,12 +73,12 @@ export default {
       return count ? count : 0;
     },
     charges() {
-			if (!this.currentPotion) return 0;
-			return this.currentPotion.charges;
+      if (!this.currentPotion) return 0;
+      return this.currentPotion.charges;
     },
     maxCharges() {
-			if (!this.currentPotion) return 0;
-			return ITEMS[this.currentPotion.itemId].potionCharges;
+      if (!this.currentPotion) return 0;
+      return ITEMS[this.currentPotion.itemId].potionCharges;
     }
   },
   methods: {
@@ -89,7 +97,7 @@ export default {
   position: absolute;
   bottom: -8px;
   right: -6px;
-	font-size: 10px;
+  font-size: 10px;
 }
 .potion-slot:hover {
   cursor: pointer;
@@ -105,6 +113,6 @@ export default {
   font-size: 11px;
 }
 .charge-number {
-	margin-top: -.5rem;
+  margin-top: -0.5rem;
 }
 </style>
