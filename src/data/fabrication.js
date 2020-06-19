@@ -199,17 +199,11 @@ const ENERGY_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_e1.png"),
 		xp: 5,
 		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoE1",
-						count: 8,
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoE1",
+			count: 8,
+		},
 		requiredItems: {
 			iron: 1
 		}
@@ -220,17 +214,11 @@ const ENERGY_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
 		xp: 10,
 		requiredLevel: 20,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoE2",
-						count: 8,
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoE2",
+			count: 8,
+		},
 		requiredItems: {
 			gold: 1
 		}
@@ -241,17 +229,11 @@ const ENERGY_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_e3.png"),
 		xp: 15,
 		requiredLevel: 30,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoE3",
-						count: 8,
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoE3",
+			count: 8,
+		},
 		requiredItems: {
 			plasma: 1
 		}
@@ -265,17 +247,11 @@ const BALLISTIC_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_b1.png"),
 		xp: 6,
 		requiredLevel: 5,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoB1",
-						count: 8
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoB1",
+			count: 8,
+		},
 		requiredItems: {
 			glass: 1
 		}
@@ -286,17 +262,11 @@ const BALLISTIC_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
 		xp: 11,
 		requiredLevel: 21,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoB2",
-						count: 8
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoB2",
+			count: 8,
+		},
 		requiredItems: {
 			titanium: 1
 		}
@@ -307,17 +277,11 @@ const BALLISTIC_AMMO = {
 		icon: require("@/assets/art/combat/items/ammo_b3.png"),
 		xp: 17,
 		requiredLevel: 34,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "ammoB3",
-						count: 8
-					}
-				]
-			},
-		],
+		items:
+		{
+			id: "ammoB3",
+			count: 8,
+		},
 		requiredItems: {
 			diamond: 1
 		}
