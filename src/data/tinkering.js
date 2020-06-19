@@ -2,7 +2,7 @@ const ACTIONS_RECYCLING = {
 	tinkerRecycleJ: {
 		time: 10,
 		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
@@ -12,7 +12,7 @@ const ACTIONS_RECYCLING = {
 	tinkerRecycleS: {
 		time: 10,
 		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
@@ -22,7 +22,7 @@ const ACTIONS_RECYCLING = {
 	tinkerRecycleA: {
 		time: 10,
 		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
