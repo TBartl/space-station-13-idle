@@ -21,6 +21,7 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (potionItemId == "potionEngineering") {
 					let originalItems = action.items;
 					if (!originalItems) continue;
+					if (originalItems.id != "power") continue;
 					delete action.items;
 					// action.name = ITEMS[originalItem].name
 
