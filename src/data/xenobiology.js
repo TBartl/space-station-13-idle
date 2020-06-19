@@ -1,7 +1,7 @@
 export const ACTIONS = {
-	splitGrey: {
+	splitGray: {
 		time: 5,
-		item: "slimeGrey",
+		item: "slimeGray",
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		xp: 5,
 		requiredLevel: 1,
@@ -14,7 +14,7 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 4,
 		requiredItems: {
-			slimeGrey: 1
+			slimeGray: 1
 		},
 		tier: 2
 	},
@@ -25,7 +25,7 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 5,
 		requiredItems: {
-			slimeGrey: 1
+			slimeGray: 1
 		},
 		tier: 2
 	},
@@ -36,7 +36,7 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 6,
 		requiredItems: {
-			slimeGrey: 1
+			slimeGray: 1
 		},
 		tier: 2
 	},
@@ -47,7 +47,7 @@ export const ACTIONS = {
 		xp: 5,
 		requiredLevel: 7,
 		requiredItems: {
-			slimeGrey: 1
+			slimeGray: 1
 		},
 		tier: 2
 	},
@@ -218,7 +218,7 @@ export const ACTIONS = {
 	},
 	splitAddy: {
 		time: 5,
-		item: "slimeGrey",
+		item: "slimeGray",
 		icon: require("@/assets/art/xenobio/SlimeAddy.gif"),
 		xp: 25,
 		requiredLevel: 47,
@@ -234,7 +234,7 @@ export const ACTIONS = {
 		xp: -200,
 		requiredLevel: 50,
 		requiredItems: {
-			slimeGrey: 1,
+			slimeGray: 1,
 			slimeOrange: 1,
 			slimePurple: 1,
 			slimeBlue: 1,

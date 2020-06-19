@@ -16,7 +16,7 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potion = rootGetters["potions/get"]("fabrication");
 			let potionItemId = potion ? potion.itemId : null;
 
-			let potionPowerReduction = potionItemId == "bluespaceAcid" ? .6 : 1;
+			let potionPowerReduction = potionItemId == "potionFabrication" ? .6 : 1;
 			let upgradeOreReduction = 1 - upgradeCount * .20;
 
 			for (let action of Object.values(actions)) {

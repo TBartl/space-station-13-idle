@@ -1,6 +1,6 @@
 const SLIMES = {
-	slimeGrey: {
-		name: "Grey Slime",
+	slimeGray: {
+		name: "Gray Slime",
 		sellPrice: 3,
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		tier: 1,

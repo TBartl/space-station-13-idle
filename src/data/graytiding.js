@@ -147,7 +147,7 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "slimeGrey",
+						id: "slimeGray",
 						weight: 255
 					}, {
 						id: "slimeOrange",

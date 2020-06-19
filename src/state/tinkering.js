@@ -4,6 +4,9 @@ import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/tinkering"
 
+
+const ALL_JUNKS = ["junk", "spacejunk", "armorjunk", "burnjunk"];
+
 const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
 		jobId() {
@@ -11,6 +14,16 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
+
+			
+			let potion = rootGetters["potions/get"]("mining");
+			let potionItemId = potion ? potion.itemId : null;
+
+			
+			if (potionItemId == "potionTinkering") {
+				// TODO:
+			}
+
 			return actions;
 		}
 	}

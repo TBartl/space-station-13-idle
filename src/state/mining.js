@@ -49,7 +49,7 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				action.time *= (1 - 0.1 * upgradeCount);
 
-				if (potionItemId == "faunaPerfume") {
+				if (potionItemId == "potionMining") {
 					let originalItem = action.item;
 					delete action.item;
 					action.name = ITEMS[originalItem].name

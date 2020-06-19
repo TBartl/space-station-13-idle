@@ -18,7 +18,7 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let action of Object.values(actions)) {
 				action.failure.chance -= .1 * upgradeCount;
-				if (potionItemId == "potionTide") {
+				if (potionItemId == "potionGraytiding") {
 					action.failure.chance -= .15;
 				}
 			}
