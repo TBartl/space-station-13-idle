@@ -9,7 +9,7 @@ export function xpFromLevel(l) {
 
 export function levelFromXP(xp) {
 	var level = 1;
-	while (xpFromLevel(level + 1) < xp) {
+	while (xpFromLevel(level + 1) <= xp) {
 		level++;
 	}
 	return level;
