@@ -29,7 +29,7 @@ export const ACTIONS = {
 		name: "Treadmill",
 		items: {
 			id: "power",
-			count: 2
+			count: 3
 		},
 		icon: require("@/assets/art/engineering/treadmill.png"),
 		xp: 10,
@@ -40,7 +40,7 @@ export const ACTIONS = {
 		name: "Potato Battery",
 		items: {
 			id: "power",
-			count: 3
+			count: 4
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
 		xp: 15,
@@ -55,7 +55,7 @@ export const ACTIONS = {
 		name: "Portable Generator",
 		items: {
 			id: "power",
-			count: 9
+			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
 		xp: 20,
@@ -69,7 +69,7 @@ export const ACTIONS = {
 		name: "Charged Slime",
 		items: {
 			id: "power",
-			count: 5
+			count: 6
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
 		xp: 25,
@@ -83,7 +83,7 @@ export const ACTIONS = {
 		name: "Incinerator",
 		items: {
 			id: "power",
-			count: 6
+			count: 7
 		},
 		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
 		xp: 30,
@@ -97,7 +97,7 @@ export const ACTIONS = {
 		name: "Power Bottom",
 		items: {
 			id: "power",
-			count: 7
+			count: 12
 		},
 		icon: require("@/assets/art/engineering/powerbottom.png"),
 		xp: 18,

@@ -10,7 +10,7 @@ export default {
 			precision: 0,
 			power: 1,
 			evasion: 2,
-			protection: 1,
+			bruteProtection: 2,
 		},
 		requires: {
 			evasion: 1
@@ -27,7 +27,8 @@ export default {
 			precision: 1,
 			power: 2,
 			evasion: 4,
-			protection: 2,
+			bruteProtection: 2,
+			burnProtection: 2
 		},
 		requires: {
 			evasion: 10
@@ -44,7 +45,7 @@ export default {
 			precision: 2,
 			power: 4,
 			evasion: 8,
-			protection: 4,
+			bruteProtection: 6,
 		},
 		requires: {
 			evasion: 20
@@ -61,7 +62,7 @@ export default {
 			precision: 3,
 			power: 6,
 			evasion: 12,
-			protection: 6,
+			bruteProtection: 8,
 		},
 		requires: {
 			evasion: 30
@@ -78,7 +79,7 @@ export default {
 			precision: 4,
 			power: 8,
 			evasion: 16,
-			protection: 8,
+			bruteProtection: 10,
 		},
 		requires: {
 			evasion: 40
@@ -95,7 +96,7 @@ export default {
 			precision: 5,
 			power: 10,
 			evasion: 20,
-			protection: 10,
+			bruteProtection: 12,
 		},
 		requires: {
 			evasion: 50
@@ -112,7 +113,7 @@ export default {
 			precision: 1,
 			power: 1,
 			evasion: 0,
-			protection: 2,
+			burnProtection: 4
 		},
 		requires: {
 			evasion: 1
@@ -129,7 +130,7 @@ export default {
 			precision: 2,
 			power: 2,
 			evasion: 1,
-			protection: 4,
+			burnProtection: 7
 		},
 		requires: {
 			evasion: 10
@@ -146,7 +147,7 @@ export default {
 			precision: 4,
 			power: 4,
 			evasion: 2,
-			protection: 8,
+			burnProtection: 10
 		},
 		requires: {
 			evasion: 20
@@ -163,7 +164,7 @@ export default {
 			precision: 6,
 			power: 6,
 			evasion: 3,
-			protection: 12,
+			burnProtection: 13
 		},
 		requires: {
 			evasion: 30
@@ -180,7 +181,7 @@ export default {
 			precision: 8,
 			power: 8,
 			evasion: 4,
-			protection: 16,
+			burnProtection: 16
 		},
 		requires: {
 			evasion: 40
@@ -197,7 +198,7 @@ export default {
 			precision: 10,
 			power: 10,
 			evasion: 5,
-			protection: 20,
+			burnProtection: 19
 		},
 		requires: {
 			evasion: 50,

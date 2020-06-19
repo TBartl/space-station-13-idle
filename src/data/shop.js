@@ -30,7 +30,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology"]
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology", "hatCrate"]
 	},
 ]
 
@@ -195,6 +195,13 @@ const CAPES = {
 		},
 		requiredItems: {
 			money: 1000000
+		}
+	},
+	hatCrate: {
+		item: "hatCrate",
+		description: "No Key Required. Hats can not be refunded for scrap.",
+		requiredItems: {
+			money: 10000
 		}
 	},
 }
