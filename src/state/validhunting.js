@@ -57,7 +57,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 			commit("setNewEnemy", pickedEnemy[0]);
 
 			let pickedEnemyRobustness = calcRobustness(pickedEnemy[1].stats, "enemy");
-			let xpReward = Math.round(Math.max(pickedEnemyRobustness, 3) * count * 20);
+			let xpReward = Math.round(Math.max(pickedEnemyRobustness, 3) * count * 5);
 			commit("setNewXpReward", xpReward);
 
 		}
