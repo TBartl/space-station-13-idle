@@ -152,82 +152,29 @@ const BOTANY_UPGRADES = {
 	}
 }
 
-const GRAYTIDING_UPGRADES = {
-	upgradeGraytiding1: {
+export const GRAYTIDING_UPGRADE_PERCENT = .1;
+const GRAYTIDING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by 10%",
+		description: `Reduces graytiding failure rate ${GRAYTIDING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			graytiding: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { graytiding: (i + 1) * 10 },
 		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 0
-		}
-	},
-	upgradeGraytiding2: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -20%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			graytiding: 20
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 1
-		}
-	},
-	upgradeGraytiding3: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -30%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			graytiding: 30
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 2
-		}
-	},
-	upgradeGraytiding4: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -40%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			graytiding: 40
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 3
-		}
-	},
-	upgradeGraytiding5: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -50%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			graytiding: 50
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 4
-		}
+		requiredUpgrades: { graytidingHacking: i }
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	GRAYTIDING_UPGRADES[`upgradeGraytiding${i + 1}`] = upgrade;
 }
 
 const CHEMISTRY_UPGRADES = {

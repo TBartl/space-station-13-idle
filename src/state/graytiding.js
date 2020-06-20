@@ -3,6 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/graytiding"
+import { GRAYTIDING_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
@@ -17,7 +18,7 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				action.failure.chance -= .1 * upgradeCount;
+				action.failure.chance -= GRAYTIDING_UPGRADE_PERCENT * upgradeCount;
 				if (potionItemId == "potionGraytiding") {
 					action.failure.chance -= .15;
 				}
