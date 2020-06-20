@@ -116,7 +116,7 @@ for (let i = 0; i < 5; i++) {
 	if (i == 3) upgrade.requiredItems.money = 800000
 	if (i == 4) upgrade.requiredItems.money = 2000000
 
-	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
+	FABRICATION_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
 const BOTANY_UPGRADES = {
@@ -199,16 +199,42 @@ for (let i = 0; i < 5; i++) {
 	if (i == 3) upgrade.requiredItems.money = 800000
 	if (i == 4) upgrade.requiredItems.money = 2000000
 
-	GRAYTIDING_UPGRADES[`upgradeChemistry${i + 1}`] = upgrade;
+	CHEMISTRY_UPGRADES[`upgradeChemistry${i + 1}`] = upgrade;
+}
+
+export const COOKING_UPGRADE_PERCENT = .15;
+const COOKING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Advanced Fry Cooking",
+		description: `Increases the chance you cook a premium quality item by ${COOKING_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/cooking/upgrade1.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { cooking: (i + 1) * 10 },
+		upgrade: "fryCooking",
+		requiredUpgrades: { fryCooking: i }
+	}
+
+	if (i != 0) {
+		upgrade.description += `, to ${(COOKING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }
 
 export default {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
-	...XENOBIO_UPGRADES,
-	...BOTANY_UPGRADES,
 	...GRAYTIDING_UPGRADES,
-	...COMBAT_UPGRADES,
-	...CHEMISTRY_UPGRADES
+	...BOTANY_UPGRADES,
+	...COOKING_UPGRADES,
+	...XENOBIO_UPGRADES,
+	...CHEMISTRY_UPGRADES,
+	...COMBAT_UPGRADES
 }
