@@ -31,6 +31,12 @@ const BASES = {
 	}
 }
 
+export const FABRICATION_POTION_PERCENT = .3;
+export const GRAYTIDING_POTION_PERCENT = .15;
+export const TINKERING_POTION_PERCENT = .15;
+export const BOTANY_POTION_PERCENT = .3;
+export const COOKING_POTION_PERCENT = .25;
+
 const POTIONS = {
 	potionMining: {
 		name: "Fauna Perfume",
@@ -52,7 +58,7 @@ const POTIONS = {
 		name: "Bluespace Acid",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/beakerbluespace.gif"),
-		description: "Fabrication actions cost 30% reduced power.",
+		description: `Fabrication actions cost ${FABRICATION_POTION_PERCENT * 100}% reduced power.`,
 		potionJob: "fabrication",
 		potionCharges: 5
 	},
@@ -60,7 +66,7 @@ const POTIONS = {
 		name: "Thermite",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/thermite.png"),
-		description: "Reduces graytiding failure chance by 15%.",
+		description: `Reduces graytiding failure chance by ${GRAYTIDING_POTION_PERCENT * 100}%.`,
 		potionJob: "graytiding",
 		potionCharges: 5
 	},
@@ -68,7 +74,7 @@ const POTIONS = {
 		name: "Super Glue",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/superglue.png"),
-		description: "25% chance to obtain one of the kinds of junk not used in a tinkering action.",
+		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
 		potionCharges: 5
 	},
@@ -76,7 +82,7 @@ const POTIONS = {
 		name: "Unstable Mutagen",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/plantbgone.png"),
-		description: "Plants have a chance to grow an additional plant of that family.",
+		description: `Plants have a ${BOTANY_POTION_PERCENT * 100} chance to grow an additional plant of that family.`,
 		potionJob: "botany",
 		potionCharges: 5
 	},
@@ -84,7 +90,7 @@ const POTIONS = {
 		name: "Monosodium Glutamate",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/ketchup.png"),
-		description: "Cooking has a chance to yield a an extra serving.",
+		description: `Cooking has a ${COOKING_POTION_PERCENT * 100} chance to yield a an extra serving.`,
 		potionJob: "cooking",
 		potionCharges: 5
 	},
@@ -92,7 +98,7 @@ const POTIONS = {
 		name: "Splitting Agent",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/splittingagent.gif"),
-		description: "Xenobiology actions will give a slime of a lower tier.",
+		description: "Xenobiology actions will also give a slime of a lower tier.",
 		potionJob: "xenobiology",
 		potionCharges: 5
 	},
@@ -100,7 +106,7 @@ const POTIONS = {
 		name: "Volatile Catalyst",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/volatile.png"),
-		description: "Basic Chemicals have a chance to require no time to synthesis.",
+		description: "Removes the level requirement from chemistry actions.",
 		potionJob: "chemistry",
 		potionCharges: 5
 	},
@@ -113,13 +119,13 @@ const POTIONS = {
 		potionCharges: 5
 	},
 	lube: {
-		name: "SpaceLube",
+		name: "Space Lube",
 		sellPrice: 5,
 		icon: require("@/assets/art/chemistry/lube.png")
 	}
 }
 
-export default {
+export const RESOURCE_CHEMISTRY = {
 	...BASES,
 	...POTIONS
 }

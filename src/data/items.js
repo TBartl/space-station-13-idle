@@ -1,7 +1,7 @@
 import FOOD_BOTANY from "./items/foodBotany";
 import FOOD_COOKING from "./items/foodCooking";
 import FOOD_OTHER from "./items/foodOther";
-import RESOURCE_CHEMISTRY from "./items/resourceChemistry";
+import { RESOURCE_CHEMISTRY } from "./items/resourceChemistry";
 import RESOURCE_ENGINEERING from "./items/resourceEngineering";
 import RESOURCE_GRAYTIDING from "./items/resourceGraytiding";
 import RESOURCE_TINKERING from "./items/resourceTinkering";

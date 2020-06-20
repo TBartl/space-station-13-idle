@@ -3,7 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/tinkering"
-
+import { TINKERING_POTION_PERCENT } from '@/data/items/resourceChemistry';
 
 const ALL_JUNKS = ["junk", "spaceJunk", "armorJunk", "burnJunk"];
 
@@ -30,7 +30,7 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							item: originalItem
 						},
 						{
-							chance: .25,
+							chance: TINKERING_POTION_PERCENT,
 							itemTable: []
 						}
 					]
