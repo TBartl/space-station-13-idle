@@ -90,16 +90,18 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionEngineering: {
-		item: "potionEngineering",
+	synthPotionChem: {
+		item: "potionChemistry",
 		time: 2,
 		xp: 4,
 		requiredLevel: 20,
 		requiredItems: {
-			oil: 1,
-			water: 1,
-			lithium: 1,
-			iron: 1
+			oxygen: 2,
+			oil: 2,
+			water: 2,
+			sacid: 2,
+			mercury: 2,
+			lithium: 2,
 		}
 	},
 	synthPotionTinkering: {
@@ -151,18 +153,16 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionChem: {
-		item: "potionChemistry",
+	synthPotionEngineering: {
+		item: "potionEngineering",
 		time: 2,
 		xp: 9,
 		requiredLevel: 45,
 		requiredItems: {
-			oxygen: 2,
-			oil: 2,
-			water: 2,
-			sacid: 2,
-			mercury: 2,
-			lithium: 2,
+			oil: 1,
+			water: 1,
+			lithium: 1,
+			iron: 1
 		}
 	},
 	synthPotionShitposting: {
