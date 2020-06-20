@@ -68,7 +68,7 @@ const POTIONS = {
 		name: "Super Glue",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/superglue.png"),
-		description: "Chance to obtain one of the kinds of junk not used in a tinkering action.",
+		description: "25% chance to obtain one of the kinds of junk not used in a tinkering action.",
 		potionJob: "tinkering",
 		potionCharges: 5
 	},

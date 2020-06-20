@@ -29,11 +29,11 @@ export default {
 						weight: 10
 					},
 					{
-						id: 'spacejunk',
+						id: 'spaceJunk',
 						weight: 9
 					},
 					{
-						id: 'armorjunk',
+						id: 'armorJunk',
 						weight: 3
 					}
 				]
@@ -73,7 +73,7 @@ export default {
 						weight: 10
 					},
 					{
-						id: 'spacejunk',
+						id: 'spaceJunk',
 						weight: 9
 					},
 					{
@@ -681,7 +681,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'spacejunk',
+						id: 'spaceJunk',
 						weight: 1
 					},
 					{

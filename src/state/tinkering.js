@@ -5,7 +5,7 @@ import jobSingleAction from '@/state/jobSingleAction';
 import { ACTIONS } from "@/data/tinkering"
 
 
-const ALL_JUNKS = ["junk", "spacejunk", "armorjunk", "burnjunk"];
+const ALL_JUNKS = ["junk", "spaceJunk", "armorJunk", "burnJunk"];
 
 const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {

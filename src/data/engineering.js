@@ -89,7 +89,7 @@ export const ACTIONS = {
 		xp: 30,
 		requiredLevel: 30,
 		requiredItems: {
-			burnjunk: 1
+			burnJunk: 1
 		}
 	},
 	engPowerBottom: {
