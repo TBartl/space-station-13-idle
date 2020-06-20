@@ -13,7 +13,8 @@ export const SECTIONS = [
 			"upgradeEngineering1", "upgradeEngineering2", "upgradeEngineering3", "upgradeEngineering4", "upgradeEngineering5",
 			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3",
 			"upgradeBotany1", "upgradeBotany2",
-			"upgradeGraytiding1", "upgradeGraytiding2", "upgradeGraytiding3", "upgradeGraytiding4", "upgradeGraytiding5"
+			"upgradeGraytiding1", "upgradeGraytiding2", "upgradeGraytiding3", "upgradeGraytiding4", "upgradeGraytiding5",
+			"upgradeChemistry1", "upgradeChemistry2", "upgradeChemistry3", "upgradeChemistry4", "upgradeChemistry5"
 		]
 	},
 	{

@@ -83,15 +83,15 @@ const POTIONS = {
 	potionCooking: {
 		name: "Monosodium Glutamate",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/ketchup.png"),
 		description: "Cooking has a chance to yield a an extra serving.",
 		potionJob: "cooking",
 		potionCharges: 5
 	},
 	potionXenobiology: {
-		name: "Regenerative Jelly", // TODO: Maybe get a better name- N: Is this better?
+		name: "Splitting Agent",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/splittingagent.gif"),
 		description: "Xenobiology actions will give a slime of a lower tier.",
 		potionJob: "xenobiology",
 		potionCharges: 5
@@ -99,7 +99,7 @@ const POTIONS = {
 	potionChemistry: {
 		name: "Volatile Catalyst",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/volatile.png"),
 		description: "Basic Chemicals have a chance to require no time to synthesis.",
 		potionJob: "chemistry",
 		potionCharges: 5
@@ -107,7 +107,7 @@ const POTIONS = {
 	potionShitposting: {
 		name: "Brain Juice",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/brainjuice.png"),
 		description: "You can now actually gain XP in this job.",
 		potionJob: "shitposting",
 		potionCharges: 5

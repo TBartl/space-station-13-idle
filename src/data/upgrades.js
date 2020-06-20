@@ -377,6 +377,85 @@ const GRAYTIDING_UPGRADES = {
 	}
 }
 
+const CHEMISTRY_UPGRADES = {
+	upgradeChemistry1: {
+		name: "Upgrade Chem Dispenser",
+		description: "Reduces the time it takes to synthesize bases by 15%",
+		icon: require('@/assets/art/chemistry/upgrade1.png'),
+		requiredItems: {
+			money: 10000
+		},
+		requiredLevels: {
+			chemistry: 10
+		},
+		upgrade: "chemDispenser",
+		requiredUpgrades: {
+			chemDispenser: 0
+		}
+	},
+	upgradeChemistry2: {
+		name: "Upgrade Chem Dispenser",
+		description: "Reduces the time it takes to synthesize bases by 15%, to -30%",
+		icon: require('@/assets/art/chemistry/upgrade1.png'),
+		requiredItems: {
+			money: 75000
+		},
+		requiredLevels: {
+			chemistry: 20
+		},
+		upgrade: "chemDispenser",
+		requiredUpgrades: {
+			chemDispenser: 1
+		}
+	},
+	upgradeChemistry3: {
+		name: "Upgrade Chem Dispenser",
+		description: "Reduces the time it takes to synthesize bases by 15%, to -45%",
+		icon: require('@/assets/art/chemistry/upgrade1.png'),
+		requiredItems: {
+			money: 250000
+		},
+		requiredLevels: {
+			chemistry: 30
+		},
+		upgrade: "chemDispenser",
+		requiredUpgrades: {
+			chemDispenser: 2
+		}
+	},
+	upgradeChemistry4: {
+		name: "Upgrade Chem Dispenser",
+		description: "Reduces the time it takes to synthesize bases by 15%, to -60%",
+		icon: require('@/assets/art/chemistry/upgrade1.png'),
+		requiredItems: {
+			money: 800000
+		},
+		requiredLevels: {
+			chemistry: 40
+		},
+		upgrade: "chemDispenser",
+		requiredUpgrades: {
+			chemDispenser: 3
+		}
+	},
+	upgradeChemistry5: {
+		name: "Upgrade Chem Dispenser",
+		description: "Reduces the time it takes to synthesize bases by 15%, to -85%",
+		icon: require('@/assets/art/chemistry/upgrade1.png'),
+		requiredItems: {
+			money: 2000000
+		},
+		requiredLevels: {
+			chemistry: 50
+		},
+		upgrade: "chemDispenser",
+		requiredUpgrades: {
+			chemDispenser: 4
+		}
+	}
+}
+
+
 export default {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
@@ -384,5 +463,6 @@ export default {
 	...XENOBIO_UPGRADES,
 	...BOTANY_UPGRADES,
 	...GRAYTIDING_UPGRADES,
-	...COMBAT_UPGRADES
+	...COMBAT_UPGRADES,
+	...CHEMISTRY_UPGRADES
 }

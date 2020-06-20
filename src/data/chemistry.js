@@ -177,6 +177,9 @@ const POTIONS = {
 			peanut: 1
 		}
 	},
+}
+
+const MISC = {
 	synthLube: {
 		time: 3,
 		item: "lube",
@@ -188,9 +191,14 @@ const POTIONS = {
 	}
 }
 
+Object.values(BASES).forEach(action => action.type = "bases");
+Object.values(POTIONS).forEach(action => action.type = "chems");
+Object.values(MISC).forEach(action => action.type = "misc");
+
 export const ACTIONS = {
 	...BASES,
-	...POTIONS
+	...POTIONS,
+	...MISC
 }
 
 export const JOB = {
