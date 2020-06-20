@@ -90,7 +90,7 @@ const POTIONS = {
 		name: "Monosodium Glutamate",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/ketchup.png"),
-		description: `Cooking has a ${COOKING_POTION_PERCENT * 100} chance to yield a an extra serving.`,
+		description: `Cooking has an additional ${COOKING_POTION_PERCENT * 100}% chance to yield a quality item.`,
 		potionJob: "cooking",
 		potionCharges: 5
 	},
