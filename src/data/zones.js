@@ -27,7 +27,7 @@ export default [
 	{
 		name: "Showroom",
 		icon: require("@/assets/art/combat/zones/showroom.png"),
-		enemies: ["mime", "badclown", "goodclown"]
+		enemies: ["mime", "badclown","bee", "goodclown"]
 	},
 	{
 		name: "Kitchen",
