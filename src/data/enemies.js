@@ -40,7 +40,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -84,7 +84,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -143,9 +143,18 @@ export default {
 			damageType: "brute",
 			burnProtection: 20
 		},
-			items: {
-				id: "mouseCarcass",
-		}
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "mouseCarcass",
+				}
+			},	
+			{
+				chance: 1,
+				item: "foodMeatA"
+			}
+		]
 	},
 	lostscientist: {
 		name: "Lost Scientist",
@@ -229,7 +238,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -260,7 +269,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatA"
 			}
 		]
 	},
@@ -303,7 +312,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -345,7 +354,7 @@ export default {
 				]
 			},			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -648,7 +657,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatA"
 			}
 		]
 	},
@@ -692,7 +701,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -740,6 +749,41 @@ export default {
 			}
 		]
 	},
+	bee: {
+		name: "Bee",
+		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
+		stats: {
+			maxHealth: 50,
+			attackSpeed: .5,
+			precision: 25,
+			power: 10,
+			evasion: 76,
+			damageType: "brute",
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'gold',
+						weight: 1
+					},
+					{
+						id: 'titanium',
+						weight: 1
+					}
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatA"
+			}
+		]
+	},
 	goodclown: {
 		name: "Actually Funny Clown",
 		icon: require("@/assets/art/combat/enemies/goodclown.png"),
@@ -779,7 +823,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -890,7 +934,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatA"
 			}
 		]
 	},
@@ -939,7 +983,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -982,7 +1026,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1069,7 +1113,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1114,7 +1158,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "titanium"
 			}
 		]
 	},
@@ -1159,7 +1203,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1204,7 +1248,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1249,7 +1293,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1294,7 +1338,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatA"
 			}
 		]
 	},
@@ -1343,7 +1387,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -1432,7 +1476,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "uranium"
 			}
 		]
 	},
@@ -1475,7 +1519,20 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				itemTable: [
+					{
+						id: 'foodMeatH',
+						weight: 1
+					},
+					{
+						id: 'iron',
+						weight: 1
+					},
+					{
+						id: 'bluespace',
+						weight: 1
+					}
+				]
 			}
 		]
 	},
@@ -1523,7 +1580,16 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				itemTable: [
+					{
+						id: 'foodMeatZ',
+						weight: 1
+					},
+					{
+						id: 'Plasma',
+						weight: 1
+					}
+				]
 			}
 		]
 	},
@@ -1612,7 +1678,20 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				itemTable: [
+					{
+						id: 'diamond',
+						weight: 14
+					},
+					{
+						id: 'armorjunk',
+						weight: 5
+					},
+					{
+						id: 'bluespace',
+						weight: 1
+					}
+				]
 			}
 		]
 	},
@@ -1657,7 +1736,20 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "diamond"
+				itemTable: [
+					{
+						id: 'plasma',
+						weight: 14
+					},
+					{
+						id: 'junk',
+						weight: 5
+					},
+					{
+						id: 'uranium',
+						weight: 1
+					}
+				]
 			}
 		]
 	},
@@ -1669,11 +1761,11 @@ export default {
 			attackSpeed: 1.9,
 			precision: 94,
 			power: 74,
-			evasion: 69,
+			evasion: 10,
 			protection: 1,
 			damageType: "burn",
-			burnProtection: 0,
-			bruteProtection: 5
+			burnProtection: 50,
+			bruteProtection: 60
 		},
 		itemTables: [
 			{
@@ -1702,7 +1794,20 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "bluespace"
+				itemTable: [
+					{
+						id: 'uranium',
+						weight: 14
+					},
+					{
+						id: 'spacejunk',
+						weight: 5
+					},
+					{
+						id: 'bananium',
+						weight: 1
+					}
+				]
 			}
 		]
 	},
