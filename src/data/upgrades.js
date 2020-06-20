@@ -93,52 +93,30 @@ for (let i = 0; i < 5; i++) {
 	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
-const FABRICATION_UPGRADES = {
-	upgradeFabrication1: {
+export const FABRICATION_UPGRADE_PERCENT = .2;
+const FABRICATION_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by 20%",
+		description: `Reduces fabrication ore costs by ${FABRICATION_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			fabrication: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { fabrication: (i + 1) * 10 },
 		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 0
-		}
-	},
-	upgradeFabrication2: {
-		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by an additional 20%, to 40%",
-		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 500000
-		},
-		requiredLevels: {
-			fabrication: 25
-		},
-		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 1
-		}
-	},
-	upgradeFabrication3: {
-		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by an additional 20%, to 60%",
-		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 1500000
-		},
-		requiredLevels: {
-			fabrication: 40
-		},
-		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 2
-		}
+		requiredUpgrades: { fabricationBins: i }
+
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
 const BOTANY_UPGRADES = {
