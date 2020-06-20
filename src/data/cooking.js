@@ -69,7 +69,7 @@ const PASTA_ACTIONS = {
 	},
 }
 
-const PERCISION_ACTIONS = {
+const PRECISION_ACTIONS = {
 	cookPer1: {
 		time: 3,
 		name: "Hot Potato Stew",
@@ -339,8 +339,18 @@ const ALIEN_ACTIONS = {
 	},
 }
 
+
+Object.values(PASTA_ACTIONS).forEach(action => action.type = "PASTA");
+Object.values(PRECISION_ACTIONS).forEach(action => action.type = "STEWS");
+Object.values(POWER_ACTIONS).forEach(action => action.type = "POCKETS");
+Object.values(EVASION_ACTIONS).forEach(action => action.type = "PIES");
+Object.values(ANIMAL_ACTIONS).forEach(action => action.type = "PIZZA");
+Object.values(HUMAN_ACTIONS).forEach(action => action.type = "BURGERS");
+Object.values(ALIEN_ACTIONS).forEach(action => action.type = `EXOTIC`);
+
 export const ACTIONS = {
-	...PERCISION_ACTIONS,
+	...PASTA_ACTIONS,
+	...PRECISION_ACTIONS,
 	...POWER_ACTIONS,
 	...EVASION_ACTIONS,
 	...ANIMAL_ACTIONS,
