@@ -1,14 +1,10 @@
 import { MAX_LEVEL } from "@/data/experience";
-import UPGRADES from "@/data/upgrades";
+import { COMBAT_UPGRADES, JOB_UPGRADES } from "@/data/upgrades";
 
 export const SECTIONS = [
 	{
 		name: "MegaSeed Servitor",
 		purchases: ['seed10', 'seed100', 'seed500', 'seed2000', 'seed5000']
-	},
-	{
-		name: "Upgrade Terminal",
-		purchases: Object.keys(UPGRADES)
 	},
 	{
 		name: "Job Unlocks",
@@ -17,10 +13,12 @@ export const SECTIONS = [
 		]
 	},
 	{
-		name: "Combat Unlocks",
-		purchases: [
-			"autoeat"
-		]
+		name: "Job Upgrades",
+		purchases: Object.keys(JOB_UPGRADES)
+	},
+	{
+		name: "Combat Upgrades",
+		purchases: Object.keys(COMBAT_UPGRADES)
 	},
 	{
 		name: "Clothes Vendo-matic",
@@ -204,6 +202,7 @@ export const PURCHASES = {
 	...SEEDS,
 	...CAPES,
 	...JOB_UNLOCKS,
-	...UPGRADES
+	...COMBAT_UPGRADES,
+	...JOB_UPGRADES
 
 }
