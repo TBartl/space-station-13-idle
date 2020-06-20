@@ -3,6 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/chemistry"
+import { CHEMISTRY_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
@@ -18,7 +19,7 @@ const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let action of Object.values(actions)) {
 				if (action.type == "bases") {
-					action.time *= (1 - 0.15 * upgradeCount);
+					action.time *= (1 - CHEMISTRY_UPGRADE_PERCENT * upgradeCount);
 				}
 
 				if (potionItemId == "potionChemistry") {

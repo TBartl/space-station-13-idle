@@ -177,84 +177,30 @@ for (let i = 0; i < 5; i++) {
 	GRAYTIDING_UPGRADES[`upgradeGraytiding${i + 1}`] = upgrade;
 }
 
-const CHEMISTRY_UPGRADES = {
-	upgradeChemistry1: {
+export const CHEMISTRY_UPGRADE_PERCENT = .15;
+const CHEMISTRY_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%",
+		description: `Reduces the time it takes to synthesize bases by  ${CHEMISTRY_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			chemistry: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { chemistry: (i + 1) * 10 },
 		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 0
-		}
-	},
-	upgradeChemistry2: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -30%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			chemistry: 20
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 1
-		}
-	},
-	upgradeChemistry3: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -45%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			chemistry: 30
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 2
-		}
-	},
-	upgradeChemistry4: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -60%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			chemistry: 40
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 3
-		}
-	},
-	upgradeChemistry5: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -85%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			chemistry: 50
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 4
-		}
+		requiredUpgrades: { chemDispenser: i }
 	}
-}
 
+	if (i != 0) {
+		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	GRAYTIDING_UPGRADES[`upgradeChemistry${i + 1}`] = upgrade;
+}
 
 export default {
 	...MINING_UPGRADES,
