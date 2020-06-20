@@ -15,7 +15,8 @@ export default {
       let xpDiff = xpFromLevel(MAX_LEVEL);
       ALL_JOBS.forEach(job => {
         this.$store.commit(job.id + "/addXP", xpDiff);
-      });
+			});
+      this.$emit("close");
     }
   }
 };
