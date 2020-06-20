@@ -127,8 +127,18 @@ export default {
 
 			dispatch("potions/useCharge", getters["jobId"], { root: true });
 
-			// Start it again automatically
-			dispatch("_startCoroutine", { actionId, action })
+			// Start it again automatically if we can
+			// The action may have been updated (like if the user ran out of potion charges)
+			action = getters.completeActions[actionId];
+			let canContinue = true;
+			if (!getters.hasActionRequiredItems(actionId)) canContinue = false;
+			if (getters.level < action.requiredLevel) canContinue = false;
+			if (canContinue) {
+
+				dispatch("_startCoroutine", { actionId, action })
+			} else {
+				commit("_setAction", null);
+			}
 		},
 		_resume({ state, dispatch }) {
 			if (state.currentActionId && !state.currentProgressTimeout) {
