@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const PASTA_ACTIONS = {
 	cookPasta: {
 		time: 3,
 		name: "Pasta",
@@ -67,6 +67,9 @@ export const ACTIONS = {
 			foodPasta5: 1
 		}
 	},
+}
+
+const PERCISION_ACTIONS = {
 	cookPer1: {
 		time: 3,
 		name: "Hot Potato Stew",
@@ -76,66 +79,6 @@ export const ACTIONS = {
 		requiredLevel: 1,
 		requiredItems: {
 			pepper: 1,
-			potato: 1
-		}
-	},
-	cookPow1: {
-		time: 3,
-		name: "Donkpocket",
-		item: "foodPow1",
-		icon: require("@/assets/art/cooking/donk1.png"),
-		xp: 2,
-		requiredLevel: 3,
-		requiredItems: {
-			tomato: 1,
-			mushroom: 1
-		}
-	},
-	cookEva1: {
-		time: 3,
-		name: "Cream Pie",
-		item: "foodEva1",
-		icon: require("@/assets/art/cooking/pie1.png"),
-		xp: 2,
-		requiredLevel: 5,
-		requiredItems: {
-			banana: 1,
-			flowersun: 1
-		}
-	},
-	cookHuman1: {
-		time: 3,
-		name: "Spicy Burger",
-		item: "foodHuman1",
-		icon: require("@/assets/art/cooking/burger1.png"),
-		xp: 3,
-		requiredLevel: 8,
-		requiredItems: {
-			foodMeatH: 1,
-			banana: 1
-		}
-	},
-	cookAnimal1: {
-		time: 3,
-		name: "Pizza",
-		item: "foodAnimal1",
-		icon: require("@/assets/art/cooking/animal1.png"),
-		xp: 4,
-		requiredLevel: 10,
-		requiredItems: {
-			foodMeatA: 1,
-			tomato: 1
-		}
-	},
-	cookAlien1: {
-		time: 3,
-		name: "Fresh 'Sishi'",
-		item: "foodAlien1",
-		icon: require("@/assets/art/cooking/Alien1.png"),
-		xp: 5,
-		requiredLevel: 12,
-		requiredItems: {
-			foodMeatZ: 1,
 			potato: 1
 		}
 	},
@@ -151,66 +94,7 @@ export const ACTIONS = {
 			peppercold: 1
 		}
 	},
-	cookPow2: {
-		time: 3,
-		name: "Berrypocket",
-		item: "foodPow2",
-		icon: require("@/assets/art/cooking/donk2.png"),
-		xp: 7,
-		requiredLevel: 17,
-		requiredItems: {
-			tomatoblue: 1,
-			mushroomred: 1
-		}
-	},
-	cookEva2: {
-		time: 3,
-		name: "Moonpie",
-		item: "foodEva2",
-		icon: require("@/assets/art/cooking/pie2.png"),
-		xp: 8,
-		requiredLevel: 19,
-		requiredItems: {
-			bananamime: 1,
-			flowermoon: 1
-		}
-	},
-	cookHuman2: {
-		time: 3,
-		name: "Slippery Burger",
-		item: "foodHuman2",
-		icon: require("@/assets/art/cooking/burger2.png"),
-		xp: 9,
-		requiredLevel: 22,
-		requiredItems: {
-			foodMeatH: 1,
-			peppercold: 1
-		}
-	},
-	cookAnimal2: {
-		time: 3,
-		name: "Moon Pizza",
-		item: "foodAnimal2",
-		icon: require("@/assets/art/cooking/animal2.png"),
-		xp: 10,
-		requiredLevel: 24,
-		requiredItems: {
-			foodMeatA: 1,
-			flowermoon: 1
-		}
-	},
-	cookAlien2: {
-		time: 3,
-		name: "Finger Food",
-		item: "foodAlien2",
-		icon: require("@/assets/art/cooking/Alien2.png"),
-		xp: 11,
-		requiredLevel: 26,
-		requiredItems: {
-			foodMeatZ: 1,
-			mushroomred: 1
-		}
-	},
+
 	cookPer3: {
 		time: 3,
 		name: "Dad's Stew",
@@ -221,6 +105,33 @@ export const ACTIONS = {
 		requiredItems: {
 			pepperghost: 1,
 			orange: 1
+		}
+	},
+}
+
+const POWER_ACTIONS = {
+	cookPow1: {
+		time: 3,
+		name: "Donkpocket",
+		item: "foodPow1",
+		icon: require("@/assets/art/cooking/donk1.png"),
+		xp: 2,
+		requiredLevel: 3,
+		requiredItems: {
+			tomato: 1,
+			mushroom: 1
+		}
+	},
+	cookPow2: {
+		time: 3,
+		name: "Berrypocket",
+		item: "foodPow2",
+		icon: require("@/assets/art/cooking/donk2.png"),
+		xp: 7,
+		requiredLevel: 17,
+		requiredItems: {
+			tomatoblue: 1,
+			mushroomred: 1
 		}
 	},
 	cookPow3: {
@@ -235,6 +146,32 @@ export const ACTIONS = {
 			mushroomshadow: 1
 		}
 	},
+}
+const EVASION_ACTIONS = {
+	cookEva1: {
+		time: 3,
+		name: "Cream Pie",
+		item: "foodEva1",
+		icon: require("@/assets/art/cooking/pie1.png"),
+		xp: 2,
+		requiredLevel: 5,
+		requiredItems: {
+			banana: 1,
+			flowersun: 1
+		}
+	},
+	cookEva2: {
+		time: 3,
+		name: "Moonpie",
+		item: "foodEva2",
+		icon: require("@/assets/art/cooking/pie2.png"),
+		xp: 8,
+		requiredLevel: 19,
+		requiredItems: {
+			bananamime: 1,
+			flowermoon: 1
+		}
+	},
 	cookEva3: {
 		time: 3,
 		name: "Senpai",
@@ -245,6 +182,33 @@ export const ACTIONS = {
 		requiredItems: {
 			bananablue: 1,
 			flowernova: 1
+		}
+	},
+}
+
+const HUMAN_ACTIONS = {
+	cookHuman1: {
+		time: 3,
+		name: "Spicy Burger",
+		item: "foodHuman1",
+		icon: require("@/assets/art/cooking/burger1.png"),
+		xp: 3,
+		requiredLevel: 8,
+		requiredItems: {
+			foodMeatH: 1,
+			banana: 1
+		}
+	},
+	cookHuman2: {
+		time: 3,
+		name: "Slippery Burger",
+		item: "foodHuman2",
+		icon: require("@/assets/art/cooking/burger2.png"),
+		xp: 9,
+		requiredLevel: 22,
+		requiredItems: {
+			foodMeatH: 1,
+			peppercold: 1
 		}
 	},
 	cookHuman3: {
@@ -259,30 +223,6 @@ export const ACTIONS = {
 			bananablue: 1
 		}
 	},
-	cookAnimal3: {
-		time: 3,
-		name: "Bluespace Pizza",
-		item: "foodAnimal3",
-		icon: require("@/assets/art/cooking/animal3.png"),
-		xp: 16,
-		requiredLevel: 38,
-		requiredItems: {
-			foodMeatA: 1,
-			tomatobluespace: 1
-		}
-	},
-	cookAlien3: {
-		time: 3,
-		name: "Fush n Chips",
-		item: "foodAlien3",
-		icon: require("@/assets/art/cooking/Alien3.png"),
-		xp: 17,
-		requiredLevel: 40,
-		requiredItems: {
-			foodMeatZ: 1,
-			orange: 1
-		}
-	},
 	cookHuman4: {
 		time: 3,
 		name: "Ghost Burger",
@@ -293,6 +233,45 @@ export const ACTIONS = {
 		requiredItems: {
 			foodMeatH: 1,
 			pepperghost: 1
+		}
+	},
+}
+
+const ANIMAL_ACTIONS = {
+	cookAnimal1: {
+		time: 3,
+		name: "Pizza",
+		item: "foodAnimal1",
+		icon: require("@/assets/art/cooking/animal1.png"),
+		xp: 4,
+		requiredLevel: 10,
+		requiredItems: {
+			foodMeatA: 1,
+			tomato: 1
+		}
+	},
+	cookAnimal2: {
+		time: 3,
+		name: "Moon Pizza",
+		item: "foodAnimal2",
+		icon: require("@/assets/art/cooking/animal2.png"),
+		xp: 10,
+		requiredLevel: 24,
+		requiredItems: {
+			foodMeatA: 1,
+			flowermoon: 1
+		}
+	},
+	cookAnimal3: {
+		time: 3,
+		name: "Bluespace Pizza",
+		item: "foodAnimal3",
+		icon: require("@/assets/art/cooking/animal3.png"),
+		xp: 16,
+		requiredLevel: 38,
+		requiredItems: {
+			foodMeatA: 1,
+			tomatobluespace: 1
 		}
 	},
 	cookAnimal4: {
@@ -307,6 +286,45 @@ export const ACTIONS = {
 			flowernova: 1
 		}
 	},
+}
+
+const ALIEN_ACTIONS = {
+	cookAlien1: {
+		time: 3,
+		name: "Fresh 'Sishi'",
+		item: "foodAlien1",
+		icon: require("@/assets/art/cooking/Alien1.png"),
+		xp: 5,
+		requiredLevel: 12,
+		requiredItems: {
+			foodMeatZ: 1,
+			potato: 1
+		}
+	},
+	cookAlien2: {
+		time: 3,
+		name: "Finger Food",
+		item: "foodAlien2",
+		icon: require("@/assets/art/cooking/Alien2.png"),
+		xp: 11,
+		requiredLevel: 26,
+		requiredItems: {
+			foodMeatZ: 1,
+			mushroomred: 1
+		}
+	},
+	cookAlien3: {
+		time: 3,
+		name: "Fush n Chips",
+		item: "foodAlien3",
+		icon: require("@/assets/art/cooking/Alien3.png"),
+		xp: 17,
+		requiredLevel: 40,
+		requiredItems: {
+			foodMeatZ: 1,
+			orange: 1
+		}
+	},
 	cookAlien4: {
 		time: 3,
 		name: "Fried Friend",
@@ -319,6 +337,15 @@ export const ACTIONS = {
 			mushroomshadow: 1
 		}
 	},
+}
+
+export const ACTIONS = {
+	...PERCISION_ACTIONS,
+	...POWER_ACTIONS,
+	...EVASION_ACTIONS,
+	...ANIMAL_ACTIONS,
+	...HUMAN_ACTIONS,
+	...ALIEN_ACTIONS
 }
 
 export const JOB = {
