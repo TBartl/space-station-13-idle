@@ -373,11 +373,11 @@ const BALLISTIC_GUNS = {
 	},
 }
 
-Object.values(BALLISTIC_AMMO).forEach(action => action.fabType = "ballistic ammo");
-Object.values(ENERGY_AMMO).forEach(action => action.fabType = "energy ammo");
-Object.values(BALLISTIC_GUNS).forEach(action => action.fabType = "ballistic guns");
-Object.values(ENERGY_GUNS).forEach(action => action.fabType = "energy guns");
-Object.values(MECHS).forEach(action => action.fabType = "mechs");
+Object.values(BALLISTIC_AMMO).forEach(action => action.type = "ballistic ammo");
+Object.values(ENERGY_AMMO).forEach(action => action.type = "energy ammo");
+Object.values(BALLISTIC_GUNS).forEach(action => action.type = "ballistic guns");
+Object.values(ENERGY_GUNS).forEach(action => action.type = "energy guns");
+Object.values(MECHS).forEach(action => action.type = "mechs");
 
 const ACTIONS = {
 	...BALLISTIC_AMMO,
