@@ -41,53 +41,32 @@ for (let i = 0; i < 5; i++) {
 	MINING_UPGRADES[`upgradeMining${i + 1}`] = upgrade;
 }
 
-const XENOBIO_UPGRADES = {
-	upgradeXenobio1: {
+
+const XENOBIO_UPGRADES = {}
+for (let i = 0; i < 3; i++) {
+	let upgrade = {
 		name: "Upgrade Xenobiology Pens",
-		description: "x2 tier 1 slime yield.",
+		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			xenobiology: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { mining: (i + 1) * 10 },
 		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 0
-		}
-	},
-	upgradeXenobio2: {
-		name: "Upgrade Xenobiology Pens",
-		description: "x4 tier 1 slime yield, x2 tier 2 slime yield.",
-		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 500000
-		},
-		requiredLevels: {
-			xenobiology: 25
-		},
-		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 1
-		}
-	},
-	upgradeXenobio3: {
-		name: "Upgrade Xenobiology Pens",
-		description: "x8 tier 1 slime yield, x4 tier 2 slime yield, x2 tier 3 slime yield.",
-		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 1500000
-		},
-		requiredLevels: {
-			xenobiology: 40
-		},
-		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 2
-		}
+		requiredUpgrades: { xenobiologyPens: i }
+
 	}
+	for (let j = 0; j <= i; j++) {
+		if (j > 0) upgrade.description += ", ";
+		upgrade.description += `x${2 ** (i - j + 1)} tier ${j + 1} slime yield`
+	}
+
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 500000
+	if (i == 2) upgrade.requiredItems.money = 1500000
+
+
+	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
 }
+
 const ENGINEERING_UPGRADES = {
 	upgradeEngineering1: {
 		name: "Improve Cable Management",
