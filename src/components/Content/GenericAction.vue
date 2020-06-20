@@ -83,6 +83,8 @@ export default {
     actionTitle() {
       if (this.action.name) return this.action.name;
       if (this.action.item) return this.item.name;
+      if (this.action.itemTables)
+        return ITEMS[this.action.itemTables[0].item].name;
       return "BAD NAME";
     },
     icon() {
