@@ -5,6 +5,7 @@ import jobSingleAction from '@/state/jobSingleAction';
 import ITEMS from "@/data/items";
 
 import { ACTIONS } from "@/data/mining"
+import { MINING_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const potionDropTable = [
 	{
@@ -47,7 +48,7 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				action.time *= (1 - 0.1 * upgradeCount);
+				action.time *= (1 - MINING_UPGRADE_PERCENT / 2 * upgradeCount);
 
 				if (potionItemId == "potionMining") {
 					let originalItem = action.item;

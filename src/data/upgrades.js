@@ -15,82 +15,30 @@ const COMBAT_UPGRADES = {
 	}
 }
 
-const MINING_UPGRADES = {
-	upgradeMining1: {
+export const MINING_UPGRADE_PERCENT = .2;
+const MINING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by +20%",
+		description: `Increases mining speed by +${MINING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			mining: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { mining: (i + 1) * 10 },
 		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 0
-		}
-	},
-	upgradeMining2: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by +20%, to +40%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			mining: 20
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 1
-		}
-	},
-	upgradeMining3: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +60%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			mining: 30
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 2
-		}
-	},
-	upgradeMining4: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +80%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			mining: 40
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 3
-		}
-	},
-	upgradeMining5: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +100%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			mining: 50
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 4
-		}
+		requiredUpgrades: { miningTools: i }
+
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to ${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	MINING_UPGRADES[`upgradeMining${i + 1}`] = upgrade;
 }
 
 const XENOBIO_UPGRADES = {
