@@ -15,7 +15,7 @@ Vue.use(VModal, { dynamic: true })
 Vue.config.productionTip = false
 
 Vue.filter('cleanNum', function (value) {
-	if (!value) return "";
+	if (value == undefined) return "";
 	var suffix = "";
 	if (value.length >= 10000000) {
 		value = Math.round(value / 1000000);

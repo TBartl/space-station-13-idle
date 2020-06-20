@@ -8,14 +8,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Upgrade Terminal",
-		purchases: [
-			"upgradeMining1", "upgradeMining2", "upgradeMining3", "upgradeMining4", "upgradeMining5",
-			"upgradeEngineering1", "upgradeEngineering2", "upgradeEngineering3", "upgradeEngineering4", "upgradeEngineering5",
-			"upgradeXenobio1", "upgradeXenobio2", "upgradeXenobio3",
-			"upgradeBotany1", "upgradeBotany2",
-			"upgradeGraytiding1", "upgradeGraytiding2", "upgradeGraytiding3", "upgradeGraytiding4", "upgradeGraytiding5",
-			"upgradeChemistry1", "upgradeChemistry2", "upgradeChemistry3", "upgradeChemistry4", "upgradeChemistry5"
-		]
+		purchases: Object.keys(UPGRADES)
 	},
 	{
 		name: "Job Unlocks",

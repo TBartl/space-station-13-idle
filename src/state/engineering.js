@@ -3,6 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/engineering"
+import { ENGINEERING_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
@@ -16,7 +17,7 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				action.xp = Math.round(action.xp * (1 + upgradeCount * .15));
+				action.xp = Math.round(action.xp * (1 + upgradeCount * ENGINEERING_UPGRADE_PERCENT));
 
 				if (potionItemId == "potionEngineering") {
 					let originalItems = action.items;

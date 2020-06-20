@@ -3,6 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/botany"
+import { BOTANY_POTION_PERCENT } from '@/data/items/resourceChemistry';
 
 function mergeAction(action, into) {
 	into.xp += action.xp;
@@ -15,7 +16,7 @@ function mergeAction(action, into) {
 
 function mergeActionMutated(action, into) {
 	let clonedTable = cloneDeep(action.itemTables[0]);
-	clonedTable.chance = .3;
+	clonedTable.chance = BOTANY_POTION_PERCENT;
 	into.itemTables.push(clonedTable);
 }
 

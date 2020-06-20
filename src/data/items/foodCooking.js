@@ -1,4 +1,6 @@
-export default {
+import { cloneDeep, clone } from 'lodash';
+
+let FOOD = {
 	foodMeatH: {
 		name: "Human Meat",
 		sellPrice: 10,
@@ -360,3 +362,21 @@ export default {
 		},
 	},
 }
+
+let premiumFoodEntries = Object.entries(FOOD).map(entry => {
+	let originalId = entry[0];
+	let originalItem = entry[1];
+
+	let newFood = cloneDeep(originalItem);
+	newFood.name = "Quality " + newFood.name;
+	newFood.healAmount = Math.round(newFood.healAmount * 1.3);
+	newFood.sellPrice *= 2;
+	for (let statId of Object.keys(newFood.stats)) {
+		newFood.stats[statId] = Math.round(newFood.stats[statId] * 1.5);
+	}
+	return ["q_" + originalId, newFood];
+});
+
+FOOD = Object.assign(FOOD, Object.fromEntries(premiumFoodEntries));
+
+export default FOOD;

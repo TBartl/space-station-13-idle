@@ -29,6 +29,7 @@
             <button type="button" class="btn btn-primary my-1" @click="openItemSpawner">Open Item Spawner</button>
             <button type="button" class="btn btn-primary my-1 d-block" @click="openLevelAllJobs">Max All Jobs</button>
             <button type="button" class="btn btn-primary my-1 d-block" @click="openSkillLeveler">Level Individual Jobs</button>
+            <button type="button" class="btn btn-primary my-1 d-block" @click="getSomeCash">Get $1,000,000</button>
           </div>
         </div>
       </div>
@@ -59,7 +60,10 @@ export default {
     },
     openSkillLeveler() {
       this.$modal.show(ModalSkillLeveler, {}, { height: "auto", width: "320px" });
-    }
+		},
+		getSomeCash() {
+      this.$store.commit("inventory/changeItemCount", { itemId: 'money', count: 1000000 });
+		}
   }
 };
 </script>

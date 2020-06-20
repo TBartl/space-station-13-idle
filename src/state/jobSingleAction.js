@@ -52,14 +52,24 @@ export default {
 			let actions = getters["completeActions"];
 			let entries = Object.entries(actions);
 
+			let highestLevels = {} // type: highestLevel
+
 			let currentLevel = getters["level"];
-			let nextHighestLevel = Number.MAX_VALUE;
 			for (let [actionId, action] of entries) {
 				if (action.requiredLevel > currentLevel) {
-					nextHighestLevel = Math.min(nextHighestLevel, action.requiredLevel);
+					// Attempt to update the highest locked level
+					if (highestLevels[action.type]) {
+						highestLevels[action.type] = Math.min(highestLevels[action.type], action.requiredLevel);
+					} else {
+						highestLevels[action.type] = action.requiredLevel;
+					}
 				}
 			}
-			entries = entries.filter(entry => entry[1].requiredLevel <= nextHighestLevel);
+			entries = entries.filter(entry => {
+				if (!highestLevels[entry[1].type]) return true;
+				return entry[1].requiredLevel <= highestLevels[entry[1].type]
+			});
+
 			return entries;
 
 		}

@@ -37,7 +37,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB } from "@/data/fabrication";
+import { JOB } from "@/data/chemistry";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";

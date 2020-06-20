@@ -15,255 +15,108 @@ const COMBAT_UPGRADES = {
 	}
 }
 
-const MINING_UPGRADES = {
-	upgradeMining1: {
+export const MINING_UPGRADE_PERCENT = .2;
+const MINING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by +20%",
+		description: `Increases mining speed by +${MINING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			mining: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { mining: (i + 1) * 10 },
 		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 0
-		}
-	},
-	upgradeMining2: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by +20%, to +40%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			mining: 20
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 1
-		}
-	},
-	upgradeMining3: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +60%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			mining: 30
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 2
-		}
-	},
-	upgradeMining4: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +80%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			mining: 40
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 3
-		}
-	},
-	upgradeMining5: {
-		name: "Upgrade Mining Tools",
-		description: "Increases mining speed by an additional +20%, to +100%",
-		icon: require('@/assets/art/mining/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			mining: 50
-		},
-		upgrade: "miningTools",
-		requiredUpgrades: {
-			miningTools: 4
-		}
+		requiredUpgrades: { miningTools: i }
+
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to +${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	MINING_UPGRADES[`upgradeMining${i + 1}`] = upgrade;
 }
 
-const XENOBIO_UPGRADES = {
-	upgradeXenobio1: {
+
+const XENOBIO_UPGRADES = {}
+for (let i = 0; i < 3; i++) {
+	let upgrade = {
 		name: "Upgrade Xenobiology Pens",
-		description: "x2 tier 1 slime yield.",
+		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			xenobiology: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { xenobiology: (i + 1) * 10 },
 		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 0
-		}
-	},
-	upgradeXenobio2: {
-		name: "Upgrade Xenobiology Pens",
-		description: "x4 tier 1 slime yield, x2 tier 2 slime yield.",
-		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 500000
-		},
-		requiredLevels: {
-			xenobiology: 25
-		},
-		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 1
-		}
-	},
-	upgradeXenobio3: {
-		name: "Upgrade Xenobiology Pens",
-		description: "x8 tier 1 slime yield, x4 tier 2 slime yield, x2 tier 3 slime yield.",
-		icon: require('@/assets/art/xenobio/upgrade1.png'),
-		requiredItems: {
-			money: 1500000
-		},
-		requiredLevels: {
-			xenobiology: 40
-		},
-		upgrade: "xenobiologyPens",
-		requiredUpgrades: {
-			xenobiologyPens: 2
-		}
+		requiredUpgrades: { xenobiologyPens: i }
+
 	}
-}
-const ENGINEERING_UPGRADES = {
-	upgradeEngineering1: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			engineering: 10
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 0
-		}
-	},
-	upgradeEngineering2: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +30%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			engineering: 20
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 1
-		}
-	},
-	upgradeEngineering3: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +45%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			engineering: 30
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 2
-		}
-	},
-	upgradeEngineering4: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +60%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			engineering: 40
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 3
-		}
-	},
-	upgradeEngineering5: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +75%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			engineering: 50
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 4
-		}
+	for (let j = 0; j <= i; j++) {
+		if (j > 0) upgrade.description += ", ";
+		upgrade.description += `x${2 ** (i - j + 1)} tier ${j + 1} slime yield`
 	}
+
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 500000
+	if (i == 2) upgrade.requiredItems.money = 1500000
+
+
+	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
 }
 
-const FABRICATION_UPGRADES = {
-	upgradeFabrication1: {
-		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by 20%",
-		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			fabrication: 10
-		},
-		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 0
-		}
-	},
-	upgradeFabrication2: {
-		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by an additional 20%, to 40%",
-		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 500000
-		},
-		requiredLevels: {
-			fabrication: 25
-		},
-		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 1
-		}
-	},
-	upgradeFabrication3: {
-		name: "Upgrade Matter Bins",
-		description: "Reduces fabrication ore costs by an additional 20%, to 60%",
-		icon: require('@/assets/art/fabrication/upgrade1.png'),
-		requiredItems: {
-			money: 1500000
-		},
-		requiredLevels: {
-			fabrication: 40
-		},
-		upgrade: "fabricationBins",
-		requiredUpgrades: {
-			fabricationBins: 2
-		}
+export const ENGINEERING_UPGRADE_PERCENT = .15;
+const ENGINEERING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Improve Cable Management",
+		description: `Increases engineering XP by +${ENGINEERING_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/engineering/upgrade1.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { engineering: (i + 1) * 10 },
+		upgrade: "cableManagement",
+		requiredUpgrades: { cableManagement: i }
+
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to +${(ENGINEERING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
+}
+
+export const FABRICATION_UPGRADE_PERCENT = .2;
+const FABRICATION_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Matter Bins",
+		description: `Reduces fabrication ore costs by ${FABRICATION_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/fabrication/upgrade1.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { fabrication: (i + 1) * 10 },
+		upgrade: "fabricationBins",
+		requiredUpgrades: { fabricationBins: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	FABRICATION_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
 const BOTANY_UPGRADES = {
@@ -299,170 +152,89 @@ const BOTANY_UPGRADES = {
 	}
 }
 
-const GRAYTIDING_UPGRADES = {
-	upgradeGraytiding1: {
+export const GRAYTIDING_UPGRADE_PERCENT = .1;
+const GRAYTIDING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by 10%",
+		description: `Reduces graytiding failure rate ${GRAYTIDING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			graytiding: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { graytiding: (i + 1) * 10 },
 		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 0
-		}
-	},
-	upgradeGraytiding2: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -20%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			graytiding: 20
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 1
-		}
-	},
-	upgradeGraytiding3: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -30%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			graytiding: 30
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 2
-		}
-	},
-	upgradeGraytiding4: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -40%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			graytiding: 40
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 3
-		}
-	},
-	upgradeGraytiding5: {
-		name: "Buy Hacking Tools",
-		description: "Reduces graytiding failure rate by an additional 10%, to -50%",
-		icon: require('@/assets/art/graytiding/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			graytiding: 50
-		},
-		upgrade: "graytidingHacking",
-		requiredUpgrades: {
-			graytidingHacking: 4
-		}
+		requiredUpgrades: { graytidingHacking: i }
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	GRAYTIDING_UPGRADES[`upgradeGraytiding${i + 1}`] = upgrade;
 }
 
-const CHEMISTRY_UPGRADES = {
-	upgradeChemistry1: {
+export const CHEMISTRY_UPGRADE_PERCENT = .15;
+const CHEMISTRY_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%",
+		description: `Reduces the time it takes to synthesize bases by  ${CHEMISTRY_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			chemistry: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { chemistry: (i + 1) * 10 },
 		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 0
-		}
-	},
-	upgradeChemistry2: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -30%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			chemistry: 20
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 1
-		}
-	},
-	upgradeChemistry3: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -45%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			chemistry: 30
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 2
-		}
-	},
-	upgradeChemistry4: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -60%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			chemistry: 40
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 3
-		}
-	},
-	upgradeChemistry5: {
-		name: "Upgrade Chem Dispenser",
-		description: "Reduces the time it takes to synthesize bases by 15%, to -85%",
-		icon: require('@/assets/art/chemistry/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			chemistry: 50
-		},
-		upgrade: "chemDispenser",
-		requiredUpgrades: {
-			chemDispenser: 4
-		}
+		requiredUpgrades: { chemDispenser: i }
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	CHEMISTRY_UPGRADES[`upgradeChemistry${i + 1}`] = upgrade;
 }
 
+export const COOKING_UPGRADE_PERCENT = .15;
+const COOKING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Advanced Fry Cooking",
+		description: `Increases the chance you cook a premium quality item by ${COOKING_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/cooking/upgrade1.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { cooking: (i + 1) * 10 },
+		upgrade: "fryCooking",
+		requiredUpgrades: { fryCooking: i }
+	}
+
+	if (i != 0) {
+		upgrade.description += `, to ${(COOKING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
+}
 
 export default {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
-	...XENOBIO_UPGRADES,
-	...BOTANY_UPGRADES,
 	...GRAYTIDING_UPGRADES,
-	...COMBAT_UPGRADES,
-	...CHEMISTRY_UPGRADES
+	...BOTANY_UPGRADES,
+	...COOKING_UPGRADES,
+	...XENOBIO_UPGRADES,
+	...CHEMISTRY_UPGRADES,
+	...COMBAT_UPGRADES
 }

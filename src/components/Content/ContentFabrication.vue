@@ -63,9 +63,9 @@ export default {
 
       let toReturn = {}; // type: [entries]
       for (let entry of entries) {
-        let fabType = entry[1].fabType;
-        if (!toReturn[fabType]) toReturn[fabType] = [entry];
-        else toReturn[fabType].push(entry);
+        let type = entry[1].type;
+        if (!toReturn[type]) toReturn[type] = [entry];
+        else toReturn[type].push(entry);
       }
 
       return toReturn;
