@@ -20,6 +20,10 @@ const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (action.type == "bases") {
 					action.time *= (1 - 0.15 * upgradeCount);
 				}
+
+				if (potionItemId == "potionChemistry") {
+					action.requiredLevel = 1;
+				}
 			}
 
 			return actions;
