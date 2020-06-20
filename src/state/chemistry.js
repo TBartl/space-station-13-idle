@@ -11,6 +11,17 @@ const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
+
+			let upgradeCount = rootGetters["upgrades/get"]("chemDispenser");
+			let potion = rootGetters["potions/get"]("chemistry");
+			let potionItemId = potion ? potion.itemId : null;
+
+			for (let action of Object.values(actions)) {
+				if (action.type == "bases") {
+					action.time *= (1 - 0.15 * upgradeCount);
+				}
+			}
+
 			return actions;
 		}
 	}
