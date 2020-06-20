@@ -30,7 +30,7 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to ${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description += `, to +${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
@@ -49,7 +49,7 @@ for (let i = 0; i < 3; i++) {
 		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
 		requiredItems: {}, // Filled out below
-		requiredLevels: { mining: (i + 1) * 10 },
+		requiredLevels: { xenobiology: (i + 1) * 10 },
 		upgrade: "xenobiologyPens",
 		requiredUpgrades: { xenobiologyPens: i }
 
@@ -67,82 +67,30 @@ for (let i = 0; i < 3; i++) {
 	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
 }
 
-const ENGINEERING_UPGRADES = {
-	upgradeEngineering1: {
+export const ENGINEERING_UPGRADE_PERCENT = .15;
+const ENGINEERING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
 		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%",
+		description: `Increases engineering XP by +${ENGINEERING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 10000
-		},
-		requiredLevels: {
-			engineering: 10
-		},
+		requiredItems: {}, // Filled out below
+		requiredLevels: { engineering: (i + 1) * 10 },
 		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 0
-		}
-	},
-	upgradeEngineering2: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +30%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 75000
-		},
-		requiredLevels: {
-			engineering: 20
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 1
-		}
-	},
-	upgradeEngineering3: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +45%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 250000
-		},
-		requiredLevels: {
-			engineering: 30
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 2
-		}
-	},
-	upgradeEngineering4: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +60%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 800000
-		},
-		requiredLevels: {
-			engineering: 40
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 3
-		}
-	},
-	upgradeEngineering5: {
-		name: "Improve Cable Management",
-		description: "Increases engineering XP by 15%, to +75%",
-		icon: require('@/assets/art/engineering/upgrade1.png'),
-		requiredItems: {
-			money: 2000000
-		},
-		requiredLevels: {
-			engineering: 50
-		},
-		upgrade: "cableManagement",
-		requiredUpgrades: {
-			cableManagement: 4
-		}
+		requiredUpgrades: { cableManagement: i }
+
 	}
+
+	if (i != 0) {
+		upgrade.description += `, to +${(ENGINEERING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+	}
+	if (i == 0) upgrade.requiredItems.money = 10000
+	if (i == 1) upgrade.requiredItems.money = 75000
+	if (i == 2) upgrade.requiredItems.money = 250000
+	if (i == 3) upgrade.requiredItems.money = 800000
+	if (i == 4) upgrade.requiredItems.money = 2000000
+
+	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
 const FABRICATION_UPGRADES = {
