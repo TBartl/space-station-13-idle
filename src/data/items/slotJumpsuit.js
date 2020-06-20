@@ -1,5 +1,5 @@
 export default {
-	jumpsuitGrey: {
+	jumpsuitGray: {
 		name: "Assistants Jumpsuit",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/jumpsuit_grey.png"),

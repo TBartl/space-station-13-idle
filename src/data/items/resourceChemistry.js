@@ -32,7 +32,7 @@ const BASES = {
 }
 
 const POTIONS = {
-	potionMine: {
+	potionMining: {
 		name: "Fauna Perfume",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/faunaPerfume.png"),
@@ -40,7 +40,7 @@ const POTIONS = {
 		potionJob: "mining",
 		potionCharges: 5
 	},
-	potionEngi: {
+	potionEngineering: {
 		name: "Energy Drink",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
@@ -56,7 +56,7 @@ const POTIONS = {
 		potionJob: "fabrication",
 		potionCharges: 5
 	},
-	potionTide: {
+	potionGraytiding: {
 		name: "Thermite",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/thermite.png"),
@@ -64,18 +64,18 @@ const POTIONS = {
 		potionJob: "graytiding",
 		potionCharges: 5
 	},
-	potionTinker: {
+	potionTinkering: {
 		name: "Super Glue",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
-		description: "Mining has a chance to yield a special bonus item.",
+		icon: require("@/assets/art/chemistry/superglue.png"),
+		description: "25% chance to obtain one of the kinds of junk not used in a tinkering action.",
 		potionJob: "tinkering",
 		potionCharges: 5
 	},
 	potionBotany: {
 		name: "Unstable Mutagen",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/placeholderChem.png"),
+		icon: require("@/assets/art/chemistry/plantbgone.png"),
 		description: "Plants have a chance to grow an additional plant of that family.",
 		potionJob: "botany",
 		potionCharges: 5
@@ -88,7 +88,7 @@ const POTIONS = {
 		potionJob: "cooking",
 		potionCharges: 5
 	},
-	potionXeno: {
+	potionXenobiology: {
 		name: "Regenerative Jelly", // TODO: Maybe get a better name- N: Is this better?
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/placeholderChem.png"),
@@ -96,7 +96,7 @@ const POTIONS = {
 		potionJob: "xenobiology",
 		potionCharges: 5
 	},
-	potionChem: {
+	potionChemistry: {
 		name: "Volatile Catalyst",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/placeholderChem.png"),
@@ -104,20 +104,12 @@ const POTIONS = {
 		potionJob: "chemistry",
 		potionCharges: 5
 	},
-	potionShit: {
+	potionShitposting: {
 		name: "Brain Juice",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/placeholderChem.png"),
 		description: "You can now actually gain XP in this job.",
 		potionJob: "shitposting",
-		potionCharges: 5
-	},
-	unstableMutagen: {
-		name: "Unstable Mutagen",
-		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/unstableMutagen.png"),
-		description: "Botany actions have a 30% chance to also grow a plant of a higher tier.",
-		potionJob: "botany",
 		potionCharges: 5
 	},
 	lube: {

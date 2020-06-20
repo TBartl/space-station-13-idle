@@ -35,20 +35,20 @@ export const ACTIONS = {
 		xp: 10,
 		requiredLevel: 10,
 	},
-		engPotato: {
+	engPotato: {
 		time: 5,
 		name: "Potato Battery",
 		items: {
 			id: "power",
 			count: 4
 		},
-		icon: require("@/assets/art/engineering/bicycle.png"),
+		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
 		xp: 15,
 		requiredLevel: 15,
 		requiredItems: {
 			potatobattery: 8
 		}
-		
+
 	},
 	engGen: {
 		time: 5,
@@ -71,7 +71,7 @@ export const ACTIONS = {
 			id: "power",
 			count: 6
 		},
-		icon: require("@/assets/art/engineering/bicycle.png"),
+		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
 		xp: 25,
 		requiredLevel: 25,
 		requiredItems: {
@@ -89,7 +89,7 @@ export const ACTIONS = {
 		xp: 30,
 		requiredLevel: 30,
 		requiredItems: {
-			burnjunk: 1
+			burnJunk: 1
 		}
 	},
 	engPowerBottom: {
@@ -108,7 +108,7 @@ export const ACTIONS = {
 	},
 	engSMES: {
 		time: 5,
-		title:"Prepare For Sale",
+		title: "Prepare For Sale",
 		name: "Stored Power",
 		items: {
 			id: "money",

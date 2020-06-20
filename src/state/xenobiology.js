@@ -28,7 +28,7 @@ const xenobio = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					count: 2 ** (Math.max(0, upgradeCount - tier + 1))
 				}
 
-				if (potionItemId == "splittingAgent" && tier > 1) {
+				if (potionItemId == "potionXenobiology" && tier > 1) {
 					let itemTable = Object.values(ACTIONS)
 						.filter(action => action.tier <= tier - 1)
 						.map(action => {

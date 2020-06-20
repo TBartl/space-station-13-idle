@@ -4,7 +4,7 @@ export default {
 		sellPrice: 10,
 		icon: require("@/assets/art/tinkering/cuff.png")
 	},
-	burnjunk: {
+	burnJunk: {
 		name: "Flammable Junk",
 		sellPrice: 200,
 		icon: require("@/assets/art/tinkering/burnjunk.png")

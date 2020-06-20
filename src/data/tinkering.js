@@ -1,8 +1,9 @@
 const ACTIONS_RECYCLING = {
 	tinkerRecycleJ: {
 		time: 10,
-		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		actionName: "RECYCLE INTO",
+		item: "burnJunk",
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
@@ -11,22 +12,24 @@ const ACTIONS_RECYCLING = {
 	},
 	tinkerRecycleS: {
 		time: 10,
-		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		item: "burnJunk",
+		actionName: "RECYCLE INTO",
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
-			spacejunk: 2
+			spaceJunk: 2
 		}
 	},
 	tinkerRecycleA: {
 		time: 10,
-		item: "burnjunk",
-		icon: require("@/assets/art/tinkering/cuff.png"),
+		item: "burnJunk",
+		actionName: "RECYCLE INTO",
+		icon: require("@/assets/art/tinkering/burnjunk.png"),
 		xp: 10,
 		requiredLevel: 1,
 		requiredItems: {
-			armorjunk: 2
+			armorJunk: 2
 		}
 	},
 }
@@ -207,7 +210,7 @@ const ACTIONS_ARMOR = {
 		xp: 20,
 		requiredLevel: 4,
 		requiredItems: {
-			armorjunk: 1
+			armorJunk: 1
 		}
 	},
 	tinkerArmB2: {
@@ -217,7 +220,7 @@ const ACTIONS_ARMOR = {
 		xp: 20,
 		requiredLevel: 15,
 		requiredItems: {
-			armorjunk: 1
+			armorJunk: 1
 		}
 	},
 	tinkerArmB3: {
@@ -227,7 +230,7 @@ const ACTIONS_ARMOR = {
 		xp: 20,
 		requiredLevel: 26,
 		requiredItems: {
-			armorjunk: 1
+			armorJunk: 1
 		}
 	},
 	tinkerArmB4: {
@@ -237,7 +240,7 @@ const ACTIONS_ARMOR = {
 		xp: 20,
 		requiredLevel: 37,
 		requiredItems: {
-			armorjunk: 1
+			armorJunk: 1
 		}
 	},
 	tinkerArmB5: {
@@ -247,7 +250,7 @@ const ACTIONS_ARMOR = {
 		xp: 20,
 		requiredLevel: 48,
 		requiredItems: {
-			armorjunk: 1
+			armorJunk: 1
 		}
 	},
 }
@@ -260,7 +263,7 @@ export const ACTIONS_SPACE_SUITS = {
 		xp: 20,
 		requiredLevel: 3,
 		requiredItems: {
-			spacejunk: 1
+			spaceJunk: 1
 		}
 	},
 	tinkerArmS2: {
@@ -270,7 +273,7 @@ export const ACTIONS_SPACE_SUITS = {
 		xp: 20,
 		requiredLevel: 14,
 		requiredItems: {
-			spacejunk: 1
+			spaceJunk: 1
 		}
 	},
 	tinkerArmS3: {
@@ -280,7 +283,7 @@ export const ACTIONS_SPACE_SUITS = {
 		xp: 20,
 		requiredLevel: 25,
 		requiredItems: {
-			spacejunk: 1
+			spaceJunk: 1
 		}
 	},
 	tinkerArmS4: {
@@ -290,7 +293,7 @@ export const ACTIONS_SPACE_SUITS = {
 		xp: 20,
 		requiredLevel: 36,
 		requiredItems: {
-			spacejunk: 1
+			spaceJunk: 1
 		}
 	},
 	tinkerArmS5: {
@@ -300,7 +303,7 @@ export const ACTIONS_SPACE_SUITS = {
 		xp: 20,
 		requiredLevel: 47,
 		requiredItems: {
-			spacejunk: 1
+			spaceJunk: 1
 		}
 	},
 }

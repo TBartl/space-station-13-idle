@@ -27,7 +27,8 @@
 							<p>It's sad that you don't know the difference.</p>
             </div>
             <button type="button" class="btn btn-primary my-1" @click="openItemSpawner">Open Item Spawner</button>
-            <button type="button" class="btn btn-primary my-1 d-block" @click="openSkillLeveler">Open Job Leveler</button>
+            <button type="button" class="btn btn-primary my-1 d-block" @click="openLevelAllJobs">Max All Jobs</button>
+            <button type="button" class="btn btn-primary my-1 d-block" @click="openSkillLeveler">Level Individual Jobs</button>
           </div>
         </div>
       </div>
@@ -39,6 +40,7 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ModalResetData from "@/components/Modals/ModalResetData";
 import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
+import ModalLevelAllJobs from '@/components/Modals/ModalLevelAllJobs'
 import ModalSkillLeveler from "@/components/Modals/ModalSkillLeveler";
 export default {
   extends: ContentAbstract,
@@ -51,6 +53,9 @@ export default {
     },
     openItemSpawner() {
       this.$modal.show(ModalItemSpawner, {}, { height: "600px", width: "980px" });
+    },
+    openLevelAllJobs() {
+      this.$modal.show(ModalLevelAllJobs, {}, { height: "auto", width: "320px" });
     },
     openSkillLeveler() {
       this.$modal.show(ModalSkillLeveler, {}, { height: "auto", width: "320px" });

@@ -45,7 +45,7 @@ const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				})
 
 
-				if (potionItemId == "unstableMutagen") {
+				if (potionItemId == "potionBotany") {
 					actionEntries.forEach((action, i) => {
 						if (i + 6 < actionEntries.length) {
 							mergeActionMutated(actionEntries[i + 6], action);

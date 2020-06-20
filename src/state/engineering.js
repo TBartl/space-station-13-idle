@@ -18,9 +18,10 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				action.xp = Math.round(action.xp * (1 + upgradeCount * .15));
 
-				if (potionItemId == "energyDrink") {
+				if (potionItemId == "potionEngineering") {
 					let originalItems = action.items;
 					if (!originalItems) continue;
+					if (originalItems.id != "power") continue;
 					delete action.items;
 					// action.name = ITEMS[originalItem].name
 

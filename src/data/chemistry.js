@@ -56,8 +56,8 @@ const BASES = {
 }
 
 const POTIONS = {
-	synthFaunaPerfume: {
-		item: "potionMine",
+	synthPotionMining: {
+		item: "potionMining",
 		time: 2,
 		xp: 1,
 		requiredLevel: 5,
@@ -67,8 +67,8 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionEngi: {
-		item: "potionEngi",
+	synthPotionEngineering: {
+		item: "potionEngineering",
 		time: 2,
 		xp: 2,
 		requiredLevel: 10,
@@ -80,7 +80,7 @@ const POTIONS = {
 		}
 	},
 	synthPotionFabrication: {
-		item: "potionEngi",
+		item: "potionFabrication",
 		time: 2,
 		xp: 3,
 		requiredLevel: 15,
@@ -90,8 +90,8 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionTide: {
-		item: "potionEngi",
+	synthPotionEngineering: {
+		item: "potionEngineering",
 		time: 2,
 		xp: 4,
 		requiredLevel: 20,
@@ -102,8 +102,8 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionTinker: {
-		item: "potionTinker",
+	synthPotionTinkering: {
+		item: "potionTinkering",
 		time: 2,
 		xp: 5,
 		requiredLevel: 25,
@@ -125,10 +125,10 @@ const POTIONS = {
 		requiredItems: {
 			sacid: 1,
 			mercury: 2,
-			seed: 1
+			plantSeed: 1
 		}
 	},
-	synthPotionCook: {
+	synthPotionCooking: {
 		item: "potionCooking",
 		time: 2,
 		xp: 7,
@@ -136,11 +136,11 @@ const POTIONS = {
 		requiredItems: {
 			oxygen: 1,
 			mercury: 2,
-			pasta: 1
+			foodPasta1: 1
 		}
 	},
-	synthPotionXeno: {
-		item: "potionXeno",
+	synthPotionXenobiology: {
+		item: "potionXenobiology",
 		time: 2,
 		xp: 8,
 		requiredLevel: 40,
@@ -152,7 +152,7 @@ const POTIONS = {
 		}
 	},
 	synthPotionChem: {
-		item: "potionChem",
+		item: "potionChemistry",
 		time: 2,
 		xp: 9,
 		requiredLevel: 45,
@@ -165,8 +165,8 @@ const POTIONS = {
 			lithium: 2,
 		}
 	},
-	synthPotionShit: {
-		item: "potionShit",
+	synthPotionShitposting: {
+		item: "potionShitposting",
 		time: 2,
 		xp: 10,
 		requiredLevel: 50,
@@ -174,7 +174,7 @@ const POTIONS = {
 			water: 2,
 			lithium: 1,
 			iron: 1,
-			peanut:1
+			peanut: 1
 		}
 	},
 	synthLube: {
