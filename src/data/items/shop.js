@@ -3,7 +3,7 @@ export default {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
 	},
-	hatcrate: {
+	hatCrate: {
 		name: "Hat Crate",
 		icon: require("@/assets/art/shop/items/hatcrate.png")
 	}
