@@ -21,9 +21,13 @@ export const SECTIONS = [
 		purchases: Object.keys(COMBAT_UPGRADES)
 	},
 	{
-		name: "Clothes Vendo-matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology", "hatCrate"]
+		name: "Gamble-O-Tron",
+		purchases: ["hatCrate"]
 	},
+	{
+		name: "Clothes Vendo-matic",
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology"]
+	}
 ]
 
 const SEEDS = {
@@ -188,21 +192,26 @@ const CAPES = {
 		requiredItems: {
 			money: 1000000
 		}
-	},
+	}
+}
+
+const HATS = {
 	hatCrate: {
 		item: "hatCrate",
-		description: "No Key Required. Hats can not be refunded for scrap.",
+		description: "No Key Required. Hats can not be refunded for scrap. Collect all 7!",
 		requiredItems: {
 			money: 10000
 		}
 	},
 }
 
+
 export const PURCHASES = {
 	...SEEDS,
 	...CAPES,
 	...JOB_UNLOCKS,
 	...COMBAT_UPGRADES,
-	...JOB_UPGRADES
+	...JOB_UPGRADES,
+	...HATS
 
 }
