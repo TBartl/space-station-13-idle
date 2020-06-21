@@ -10,7 +10,7 @@
           <slot :name="current" />
           <div
             v-if="options"
-            class="d-flex flex-row align-items-center justify-content-center mt-1"
+            class="d-flex flex-row align-items-center justify-content-center mt-1 flex-wrap"
           >
             <button
               v-for="(option, index) in filteredOptions"
