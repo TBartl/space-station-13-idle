@@ -49,17 +49,25 @@ const validhunting = merge(cloneDeep(jobBase), {
 			let count = minCount + Math.round(Math.random() * maxAddedCount);
 			commit("setNewCount", count);
 
-			let highestLevel = 3 + getters.level * 2;
-			let filteredEnemies = Object.entries(ENEMIES).filter(pair => {
-				return calcRobustness(pair[1].stats, "enemy") <= highestLevel;
-			});
-			var pickedEnemy = filteredEnemies[Math.floor(Math.random() * filteredEnemies.length)];
+			let levelCenter = getters.level * 2;
+			let range = 10;
+			let pickedEnemy = null;
+			while (!pickedEnemy) {
+				let filteredEnemies = Object.entries(ENEMIES).filter(pair => {
+					let robustness = calcRobustness(pair[1].stats, "enemy");
+					return robustness > levelCenter - range && robustness < levelCenter + range;
+				});
+				if (filteredEnemies.length < 5) { // we should have a few options
+					range += 5;
+				} else {
+					pickedEnemy = filteredEnemies[Math.floor(Math.random() * filteredEnemies.length)];
+				}
+			}
 			commit("setNewEnemy", pickedEnemy[0]);
 
 			let pickedEnemyRobustness = calcRobustness(pickedEnemy[1].stats, "enemy");
 			let xpReward = Math.round(Math.max(pickedEnemyRobustness, 3) * count * 5);
 			commit("setNewXpReward", xpReward);
-
 		}
 	}
 });
