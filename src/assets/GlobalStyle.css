@@ -179,3 +179,8 @@ img {
 	margin-left: -.3rem;
 	margin-right: -.3rem;
 }
+
+/* I've lost control of my life */
+.shitposting {
+	font-family: "Comic Sans MS", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}

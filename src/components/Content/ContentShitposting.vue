@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shitposting">
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
       <div class="row mb-2">
