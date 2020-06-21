@@ -13,6 +13,7 @@
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
         >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
+        <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
           <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />
@@ -36,6 +37,7 @@ import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
 import ItemPopover from "@/components/ItemPopover";
+import { acquireItemFrom } from "@/utils/itemChanceUtils";
 export default {
   props: ["itemId"],
   components: { InventorySell, ItemPopover },
@@ -55,6 +57,30 @@ export default {
     canEquip() {
       if (!this.$store.getters["inventory/canEquip"](this.itemId)) return false;
       return true;
+    },
+    canOpen() {
+      return (
+        this.item.item ||
+        this.item.items ||
+        this.item.itemTable ||
+        this.item.itemTables
+      );
+    }
+  },
+  methods: {
+    open() {
+      if (!this.canOpen) return;
+
+      let yieldedItems = acquireItemFrom(this.item);
+      for (let [itemId, count] of Object.entries(yieldedItems)) {
+        if (count == 0) continue;
+        this.$store.commit("inventory/changeItemCount", { itemId, count });
+      }
+
+      this.$store.commit("inventory/changeItemCount", {
+        itemId: this.itemId,
+        count: -1
+      });
     }
   }
 };

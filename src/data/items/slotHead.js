@@ -1,6 +1,6 @@
 export default {
 	headCake: {
-		name: "Cakehat",
+		name: "Cake Hat",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head_cakehat.png"),
 		equipmentSlot: "head",
@@ -17,7 +17,7 @@ export default {
 		}
 	},
 	headH1: {
-		name: "Hardhat",
+		name: "Hard Hat",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head_h1.png"),
 		equipmentSlot: "head",
