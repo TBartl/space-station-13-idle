@@ -25,7 +25,7 @@ img {
   image-rendering: pixelated;
 }
 .content-container {
-	margin: 15px 4px 4px 4px;
+	margin: 15px 0px 4px 0px;
 	
 	/* container-fluid */
 	padding-right: 15px;
@@ -161,4 +161,21 @@ img {
 }
 .inventory-item img {
   width: 64px;
+}
+
+.mx--0,
+.mx--1,
+.mx--2 {
+	margin-top: -8px;
+	margin-bottom: -4px;
+}
+
+.mx--1 {
+	margin-left: -.15rem;
+	margin-right: -.15rem;
+}
+
+.mx--2{
+	margin-left: -.3rem;
+	margin-right: -.3rem;
 }

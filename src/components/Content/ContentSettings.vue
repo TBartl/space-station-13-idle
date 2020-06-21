@@ -11,7 +11,16 @@
           <div class="content-block">
             <h5>SETTINGS</h5>
             <hr />
-            <button type="button" class="btn btn-primary" @click="resetClicked">Reset Data</button>
+            <button
+              type="button"
+              class="btn btn-primary my-1 d-block"
+              @click="resetInfoClicked"
+            >Reset Dismissed Tutorials</button>
+            <button
+              type="button"
+              class="btn btn-danger my-1 d-block"
+              @click="resetDataClicked"
+            >Reset ALL Data</button>
           </div>
         </div>
         <div class="col-12 mt-3">
@@ -28,7 +37,7 @@
             </div>
             <button
               type="button"
-              class="btn btn-primary my-1"
+              class="btn btn-primary my-1 d-block"
               @click="openItemSpawner"
             >Open Item Spawner</button>
             <button
@@ -59,6 +68,7 @@
 </template>
 
 <script>
+import { EventBus } from "@/utils/eventBus.js";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ModalResetData from "@/components/Modals/ModalResetData";
 import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
@@ -74,7 +84,11 @@ export default {
   components: { ModalResetData, ModalItemSpawner, ModalSkillLeveler },
   computed: {},
   methods: {
-    resetClicked() {
+    resetInfoClicked() {
+      this.$store.commit("info/resetAll");
+      EventBus.$emit("toast", { text: "Tutorials reset!" });
+    },
+    resetDataClicked() {
       this.$modal.show(ModalResetData, {}, { height: "auto", width: "320px" });
     },
     openItemSpawner() {
@@ -106,6 +120,7 @@ export default {
     },
     completeCurrentValidhuntingTask() {
       this.$store.dispatch("validhunting/completeTask", true);
+      EventBus.$emit("toast", { text: "Task Complete!" });
 
       // In case I ever want to simulate this again:
       // let table = [
