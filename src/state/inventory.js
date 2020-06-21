@@ -17,11 +17,11 @@ const inventory = {
 				itemId: null,
 				count: 0
 			},
-			chest: {
+			jumpsuit: {
 				itemId: null,
 				count: 0
 			},
-			jumpsuit: {
+			chest: {
 				itemId: null,
 				count: 0
 			},
