@@ -2,14 +2,66 @@
   <div>
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
-      <div class="row mb-4">
+      <div class="row mb-2">
         <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-					<potion-header :jobId="jobId" />
-				</div>
+          <potion-header :jobId="jobId" />
+        </div>
       </div>
+      <job-info
+        :icon="require('@/assets/art/jobinfo/mining.png')"
+        title="Lathius Talram the Shaft Miner says..."
+        :options="[
+					{name: 'Back'},
+					{icon: require('@/assets/art/mining/SheetIron.png'), name: 'Metal?'}
+				]"
+      >
+        <template slot="Back">
+          <span>
+            No time to chat. Have to get down there and mine some
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/mining/SheetIron.png')"
+            />
+            <b>Metal</b>.
+          </span>
+        </template>
+        <template slot="Metal?">
+          <span>What, you're still here?</span>
+          <span class="mt-1">
+            Yeah,
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
+            <b>Metal</b>. What else would we mine for?
+          </span>
+          <span class="mt-1">What's it used for? Boy, you sure do ask a lot of questions.</span>
+          <span class="mt-1">
+            I think those purple-shirts down at
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/fabrication/icon.png')"
+            />
+            <b>Fabrication</b> might turn it into weapons or something.
+          </span>
+          <span class="mt-1">
+            Or maybe they just sell it straight for
+            <img
+              class="mx--0 mr-1"
+              :src="require('@/assets/art/misc/coin.png')"
+            />
+            <b>Money</b>.
+          </span>
+          <span class="mt-1">
+            Don't really know. And as long as my tools are getting
+            <img
+              class="mx--0 mr-1"
+              :src="require('@/assets/art/mining/upgrade1.png')"
+            />
+            <b>Upgraded</b>, I don't really care.
+          </span>
+        </template>
+      </job-info>
       <div class="row">
         <div
           class="col-6 col-md-4 col-lg-3 col-xl-2"
@@ -36,9 +88,10 @@ import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
+import JobInfo from "@/components/Content/JobInfo";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader },
+  components: { GenericAction, ExperienceHeader, PotionHeader, JobInfo },
   computed: {
     jobId() {
       return "mining";
@@ -52,11 +105,14 @@ export default {
       return JOB;
     },
     viewableActions() {
-			return this.$store.getters[this.jobId + "/filteredActionEntries"];
+      return this.$store.getters[this.jobId + "/filteredActionEntries"];
     }
   }
 };
 </script>
 
 <style scoped>
+img {
+  width: 32px;
+}
 </style>
