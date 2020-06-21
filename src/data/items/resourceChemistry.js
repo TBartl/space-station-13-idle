@@ -114,7 +114,7 @@ const POTIONS = {
 		name: "Brain Juice",
 		sellPrice: 3,
 		icon: require("@/assets/art/chemistry/brainjuice.png"),
-		description: "You can now actually gain XP in this job.",
+		description: "Allows you to gain additional XP when completing ??? actions",
 		potionJob: "shitposting",
 		potionCharges: 5
 	},

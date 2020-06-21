@@ -5,6 +5,7 @@ export const ACTIONS = {
 		item: "peanut",
 		icon: require("@/assets/art/shitposting/brain.png"),
 		xp: 0,
+		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
 			power: 100
@@ -16,6 +17,7 @@ export const ACTIONS = {
 		item: "salt",
 		icon: require("@/assets/art/shitposting/ghost.png"),
 		xp: 0,
+		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
 			power: 100
