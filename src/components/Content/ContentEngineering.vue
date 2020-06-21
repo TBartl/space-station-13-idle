@@ -12,24 +12,65 @@
       </div>
 
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="engineering"
+        :icon="require('@/assets/art/jobinfo/engineering.png')"
+        title="Kyle Spier-Swenson the Station Engineer says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Generating Power?', icon: require('@/assets/art/engineering/power.png'), iconClass:'mx--0'},
+					{name: 'Uses For Power?', icon: require('@/assets/art/engineering/power.png'), iconClass:'mx--0'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
-          <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
-          </span>
+          <span>...</span>
+          <span>...</span>
+          <span>Hmm? Oh no I wasn't sleeping, I was just... resting my eyes.</span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Generating Power?">
+          <span>
+            You want to know how to make
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/engineering/power.png')"
+            />
+            <b>Power</b>?
+          </span>
+          <span>
+            A trained, 130 IQ STEM major engineer like myself can make power from just about anything:
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/chemistry/chemOil.png')"
+            />
+            <b>Chemicals</b>,
+            <img class="mx--0" :src="require('@/assets/art/tinkering/burnjunk.png')" />
+            <b>Junk</b>,
+            <img class="mx--2" :src="require('@/assets/art/botany/PlantPotatobattery.png')" />
+            <b>Plants</b>, you name it.
+          </span>
+          <span>For a smooth-brain like yourself? Maybe the stationary bicycle is more your speed.</span>
+        </template>
+        <template slot="Uses For Power?">
+          <span>
+            Are you dense? We're on a space station and you don't even know what
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/engineering/power.png')"
+            />
+            <b>Power</b> can do?
+          </span>
+          <span>
+            Outside of keeping all of our vital systems running, I guess the "scientists" down in
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/fabrication/icon.png')"
+            />
+            <b>Fabrication</b> use it for their toys, and the
+            <img
+              class="mx--1"
+              :src="require('@/assets/art/chemistry/icon.png')"
+            />
+            <b>Chemists</b> use it to synthesize their drugs.
+          </span>
         </template>
       </job-info>
 
