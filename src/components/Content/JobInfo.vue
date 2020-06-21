@@ -6,8 +6,10 @@
           <img class="avatar" :src="icon" />
         </div>
         <div class="d-flex flex-column justify-content-center w-100">
-          <p class="info-title mb-1">{{title}}</p>
-          <slot :name="current" />
+          <p class="info-title">{{title}}</p>
+          <div class="slot w-100 d-flex flex-column">
+            <slot :name="current" />
+          </div>
           <div
             v-if="options"
             class="d-flex flex-row align-items-center justify-content-center mt-1 flex-wrap"
@@ -18,7 +20,12 @@
               class="btn btn-outline-primary mt-1 mx-1"
               @click="current=option.name"
             >
-              <img v-if="option.icon" :src="option.icon" class="option-icon" :class="option.iconClass" />
+              <img
+                v-if="option.icon"
+                :src="option.icon"
+                class="option-icon"
+                :class="option.iconClass"
+              />
               <span>{{option.name}}</span>
             </button>
           </div>
@@ -71,10 +78,13 @@ export default {
 .dismiss {
   color: gray;
   font-size: 12px;
-  margin-bottom: -32px;
+  margin-bottom: -12px;
   cursor: pointer;
 }
 .option-icon {
-	width: 32px;
+  width: 32px;
+}
+.slot span {
+	margin-top: .5rem;
 }
 </style>

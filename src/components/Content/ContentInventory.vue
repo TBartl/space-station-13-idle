@@ -18,17 +18,17 @@
       >
         <template slot="Back">
           <span>I... I can hear you out there. You... you're not a cop, right?</span>
-          <span
-            class="mt-1"
-          >That's a relief. Can you do me a favor and uh... don't mention me to anyone else. OK?</span>
+          <span>That's a relief. Can you do me a favor and uh... don't mention me to anyone else. OK?</span>
         </template>
         <template slot="Inventory?">
           <span>There's a lot of valuables out on the station.</span>
-          <span
-            class="mt-1"
-          >If you don't keep your stuff safe, someone might just snatch it up and hide themselves in a locker before you can track them down.</span>
-          <span class="mt-1">If you want more space, the guys down at
-            <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+          <span>If you don't keep your stuff safe, someone might just snatch it up and hide themselves in a locker before you can track them down.</span>
+          <span>
+            If you want more space, the guys down at
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/sidebar/cargo.png')"
+            />
             <b>Cargo</b> might be able to help you out.
           </span>
         </template>

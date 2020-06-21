@@ -31,13 +31,13 @@
         </template>
         <template slot="Metal?">
           <span>What, you're still here?</span>
-          <span class="mt-1">
+          <span>
             Yeah,
             <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
             <b>Metal</b>. Not much else to mine.
           </span>
-          <span class="mt-1">What's it used for? You sure do ask a lot of questions.</span>
-          <span class="mt-1">
+          <span>What's it used for? You sure do ask a lot of questions.</span>
+          <span>
             I think those purple-shirts down at
             <img
               class="mx--0"
@@ -45,7 +45,7 @@
             />
             <b>Fabrication</b> might turn it into weapons or something.
           </span>
-          <span class="mt-1">
+          <span>
             Or maybe they just sell it straight for
             <img
               class="mx--0 mr-1"
@@ -53,7 +53,7 @@
             />
             <b>Money</b>.
           </span>
-          <span class="mt-1">
+          <span>
             Don't really know. And as long as my tools are getting
             <img
               class="mx--0 mr-1"
