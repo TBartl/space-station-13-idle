@@ -99,7 +99,7 @@ const JOB_UNLOCKS = {
 		description: "Allows you to turn meat and produce into quality foods",
 		icon: require('@/assets/art/cooking/icon.png'),
 		requiredItems: {
-			money: 1
+			money: 10000
 		},
 		upgrade: "cookingUnlocked",
 		requiredUpgrades: {
@@ -111,7 +111,7 @@ const JOB_UNLOCKS = {
 		description: "Allows you to raise slimes that can fight alongside you",
 		icon: require('@/assets/art/xenobio/icon.gif'),
 		requiredItems: {
-			money: 1
+			money: 100000
 		},
 		upgrade: "xenobiologyUnlocked",
 		requiredUpgrades: {
