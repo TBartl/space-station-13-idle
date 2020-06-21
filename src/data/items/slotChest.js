@@ -209,7 +209,7 @@ export default {
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		overlay: require("@/assets/art/fabrication/mechripley.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -223,7 +223,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -237,7 +237,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechodysseus.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -251,7 +251,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -265,7 +265,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -280,7 +280,7 @@ export default {
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
 		overlay: require("@/assets/art/fabrication/mechdurand.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -294,7 +294,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechmarauder.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -308,7 +308,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechgygax.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -322,7 +322,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -336,7 +336,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -350,7 +350,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -364,7 +364,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -378,7 +378,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -392,7 +392,7 @@ export default {
 		sellPrice: 1000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
@@ -406,7 +406,7 @@ export default {
 		sellPrice: 100000,
 		equipmentSlot: "chest",
 		icon: require("@/assets/art/fabrication/mechphazon.png"),
-		overlayHidePlayer: true,
+		overlayAppearInBack: true,
 		stats: {
 			maxHealth: 150,
 			evasion: -15,
