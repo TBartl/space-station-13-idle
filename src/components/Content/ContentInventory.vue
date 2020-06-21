@@ -8,24 +8,29 @@
 
     <div class="content-container">
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="inventory"
+        :icon="require('@/assets/art/jobinfo/inventory.png')"
+        title="????? the Guy In The Locker Next To Yours says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Inventory?', icon: require('@/assets/art/sidebar/backpack.png'), iconClass:'mx--1'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
-          <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
-          </span>
+          <span>I... I can hear you out there. You... you're not a cop, right?</span>
+          <span
+            class="mt-1"
+          >That's a relief. Can you do me a favor and uh... don't mention me to anyone else. OK?</span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Inventory?">
+          <span>There's a lot of valuables out on the station.</span>
+          <span
+            class="mt-1"
+          >If you don't keep your stuff safe, someone might just snatch it up and hide themselves in a locker before you can track them down.</span>
+          <span class="mt-1">If you want more space, the guys down at
+            <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+            <b>Cargo</b> might be able to help you out.
+          </span>
         </template>
       </job-info>
 
