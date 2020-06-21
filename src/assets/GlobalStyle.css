@@ -126,6 +126,9 @@ img {
 	height: 32px;
 	position: relative;
 }
+.overlay-div * {
+	z-index: 1;
+}
 .overlay-div img {
 	position: absolute;
 	top: 0;

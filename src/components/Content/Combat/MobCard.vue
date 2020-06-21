@@ -3,7 +3,12 @@
     <span class="text-uppercase text-center">{{name}}</span>
     <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
     <div v-if="mobType == 'player'" class="body-icon overlay-div mb-2">
-      <img v-for="(icon, index) in playerOverlayIcons" :key="index" :src="icon" />
+      <img
+        v-for="(overlay, index) in playerOverlayIcons"
+        :key="index"
+        :src="overlay.icon"
+        :class="{'appear-in-back': overlay.appearInBack}"
+      />
       <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
     </div>
     <img v-else class="body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
@@ -31,7 +36,7 @@
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Max Hit:</span>
         <span>{{Math.round(maxHit)}}</span>
-				<img class="ml-1 damage-type" :src="damageTypeImage" />
+        <img class="ml-1 damage-type" :src="damageTypeImage" />
       </div>
       <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
       <div class="stat" :id="`${mobType}-stat-hit-chance`">
@@ -135,22 +140,18 @@ export default {
       return this.$store.getters["playerMob/stats"].moveTime;
     },
     playerOverlayIcons() {
-      let icons = [];
-      let hidePlayer = false;
+      let icons = [{ icon: playerBaseIcon }];
       let equipment = this.$store.getters["inventory/equipment"];
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
         if (!itemId) continue;
         let item = ITEMS[itemId];
         if (this.$store.getters["inventory/checkRestricted"](itemId)) continue;
         if (item.overlay) {
-          icons.push(item.overlay);
+          icons.push({
+            icon: item.overlay,
+            appearInBack: item.overlayAppearInBack
+          });
         }
-        if (item.overlayHidePlayer) {
-          hidePlayer = true;
-        }
-      }
-      if (!hidePlayer) {
-        icons.unshift(playerBaseIcon);
       }
       return icons;
     },
@@ -235,6 +236,10 @@ export default {
   left: 55%;
 }
 .damage-type {
-	width: 15px !important;
+  width: 15px !important;
+}
+.appear-in-back {
+	z-index: 0;
+	filter: blur(3px);
 }
 </style>
