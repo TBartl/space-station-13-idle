@@ -18,7 +18,7 @@
               class="btn btn-outline-primary mt-1 mx-1"
               @click="current=option.name"
             >
-              <img v-if="option.icon" :src="option.icon" class="mx--2" />
+              <img v-if="option.icon" :src="option.icon" class="option-icon" :class="option.iconClass" />
               <span>{{option.name}}</span>
             </button>
           </div>
@@ -73,5 +73,8 @@ export default {
   font-size: 12px;
   margin-bottom: -32px;
   cursor: pointer;
+}
+.option-icon {
+	width: 32px;
 }
 </style>

@@ -16,7 +16,7 @@
         title="Lathius Talram the Shaft Miner says..."
         :options="[
 					{name: 'Back'},
-					{icon: require('@/assets/art/mining/SheetIron.png'), name: 'Metal?'}
+					{name: 'Metal?', icon: require('@/assets/art/mining/SheetIron.png'), iconClass:'mx--2'}
 				]"
       >
         <template slot="Back">
