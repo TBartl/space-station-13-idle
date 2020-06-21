@@ -22,7 +22,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["hatCrate"]
+		purchases: ["hatCrate",	"knifeCrate", "lavaCrate", "supplyCrate", "syndieCrate"]
 	},
 	{
 		name: "Clothes Vendo-matic",
@@ -195,12 +195,40 @@ const CAPES = {
 	}
 }
 
-const HATS = {
+const CRATES = {
 	hatCrate: {
 		item: "hatCrate",
 		description: "No Key Required. Hats can not be refunded for scrap. Collect all 7!",
 		requiredItems: {
 			money: 10000
+		}
+	},
+	knifeCrate: {
+		item: "knifeCrate",
+		description: "Running with knives might not always make you faster, but you'll look cool and edgy.",
+		requiredItems: {
+			money: 1000
+		}
+	},
+	lavaCrate: {
+		item: "lavaCrate",
+		description: "Handcrafted materials and relics aquired from the local planetary natives. ",
+		requiredItems: {
+			money: 5000
+		}
+	},
+	supplyCrate: {
+		item: "supplyCrate",
+		description: "Nanotrasen can get send the supplies YOU need directly to your location with this state of the art drop pod.",
+		requiredItems: {
+			money: 20000
+		}
+	},
+	syndieCrate: {
+		item: "syndieCrate",
+		description: "Syndicate forces have hijacked the droppod system to help you be the murder you always knew you could be.",
+		requiredItems: {
+			telecrystal: 20,
 		}
 	},
 }
@@ -212,6 +240,6 @@ export const PURCHASES = {
 	...JOB_UNLOCKS,
 	...COMBAT_UPGRADES,
 	...JOB_UPGRADES,
-	...HATS
+	...CRATES
 
 }
