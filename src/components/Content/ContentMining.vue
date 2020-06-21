@@ -34,9 +34,9 @@
           <span class="mt-1">
             Yeah,
             <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Metal</b>. Not much else to mine for.
+            <b>Metal</b>. Not much else to mine.
           </span>
-          <span class="mt-1">What's it used for? Boy, you sure do ask a lot of questions.</span>
+          <span class="mt-1">What's it used for? You sure do ask a lot of questions.</span>
           <span class="mt-1">
             I think those purple-shirts down at
             <img
