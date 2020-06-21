@@ -361,8 +361,7 @@ Object.values(MECHS).forEach(mech => {
 	// mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
-
-
+	mech.stats.moveTime = 3;
 });
 
 export default {
