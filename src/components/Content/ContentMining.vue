@@ -89,10 +89,9 @@ import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
-import JobInfo from "@/components/Content/JobInfo";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader, JobInfo },
+  components: { GenericAction, ExperienceHeader, PotionHeader },
   computed: {
     jobId() {
       return "mining";

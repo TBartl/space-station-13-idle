@@ -6,6 +6,28 @@
       color="#3ac5ff"
     />
     <div class="content-container">
+      <job-info
+        infoId="REPLACEME"
+        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
+        title="REPLACEME the REPLACEME says..."
+        :options="[
+					{name: 'Back'},
+					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+				]"
+      >
+        <template slot="Back">
+          <span>REPLACEME</span>
+          <span>
+            Example
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
+            <b>Weighted</b>.
+          </span>
+        </template>
+        <template slot="REPLACEME">
+          <span>REPLACEME</span>
+        </template>
+      </job-info>
+
       <div class="row">
         <div class="col-12">
           <div class="content-block">
@@ -16,7 +38,7 @@
               class="btn"
               v-for="speed in speeds"
               :key="speed"
-							:class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
+              :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
               @click="setChronoSpeed(speed)"
             >{{speed}}x</button>
             <h6 class="mt-2">This feature is WIP; so right now everything is free!</h6>

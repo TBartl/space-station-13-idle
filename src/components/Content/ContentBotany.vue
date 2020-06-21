@@ -10,6 +10,29 @@
           <potion-header :jobId="jobId" />
         </div>
       </div>
+
+      <job-info
+        infoId="REPLACEME"
+        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
+        title="REPLACEME the REPLACEME says..."
+        :options="[
+					{name: 'Back'},
+					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+				]"
+      >
+        <template slot="Back">
+          <span>REPLACEME</span>
+          <span>
+            Example
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
+            <b>Weighted</b>.
+          </span>
+        </template>
+        <template slot="REPLACEME">
+          <span>REPLACEME</span>
+        </template>
+      </job-info>
+
       <div class="tier row" v-for="(tierEntries, tier) in viewableTieredActions" :key="tier">
         <div class="col-12">
           <span class="tier-text">TIER {{tier+1}}</span>
@@ -67,7 +90,7 @@ export default {
       for (let entry of entries) {
         let tier = entry[1].tier;
         tiers[tier - 1].push(entry);
-			}
+      }
 
       return tiers;
     }

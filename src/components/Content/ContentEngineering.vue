@@ -7,11 +7,38 @@
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
         <div class="col-md-4 col-lg-3 col-xl-2">
-					<potion-header :jobId="jobId" />
-				</div>
+          <potion-header :jobId="jobId" />
+        </div>
       </div>
-			<div class="row">
-        <div class="col-6 col-md-4 col-lg-3 col-xl-2" v-for="[actionId, action] in viewableActions" :key="actionId">
+
+      <job-info
+        infoId="REPLACEME"
+        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
+        title="REPLACEME the REPLACEME says..."
+        :options="[
+					{name: 'Back'},
+					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+				]"
+      >
+        <template slot="Back">
+          <span>REPLACEME</span>
+          <span>
+            Example
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
+            <b>Weighted</b>.
+          </span>
+        </template>
+        <template slot="REPLACEME">
+          <span>REPLACEME</span>
+        </template>
+      </job-info>
+
+      <div class="row">
+        <div
+          class="col-6 col-md-4 col-lg-3 col-xl-2"
+          v-for="[actionId, action] in viewableActions"
+          :key="actionId"
+        >
           <generic-action
             :jobId="jobId"
             :actionName="'ELECTRIFY'"
@@ -48,7 +75,7 @@ export default {
       return JOB;
     },
     viewableActions() {
-			return this.$store.getters[this.jobId + "/filteredActionEntries"];
+      return this.$store.getters[this.jobId + "/filteredActionEntries"];
     }
   }
 };

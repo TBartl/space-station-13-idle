@@ -49,10 +49,9 @@ import { mapGetters } from "vuex";
 import ITEMS from "@/data/items";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import InventoryItem from "@/components/Content/Inventory/InventoryItem";
-import JobInfo from "@/components/Content/JobInfo";
 export default {
   extends: ContentAbstract,
-  components: { InventoryItem, JobInfo },
+  components: { InventoryItem },
   computed: {
     bankItemIds() {
       return Object.keys(this.$store.getters["inventory/bank"]).filter(
