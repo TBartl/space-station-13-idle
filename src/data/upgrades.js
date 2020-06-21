@@ -1,6 +1,6 @@
 
 
-const COMBAT_UPGRADES = {
+export const COMBAT_UPGRADES = {
 	autoeat: {
 		name: "Unlock Auto-Eat",
 		description: "Allows food to automatically be consumed when missing more health than the food's heal amount.",
@@ -227,7 +227,7 @@ for (let i = 0; i < 5; i++) {
 	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }
 
-export default {
+export const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
@@ -235,6 +235,5 @@ export default {
 	...BOTANY_UPGRADES,
 	...COOKING_UPGRADES,
 	...XENOBIO_UPGRADES,
-	...CHEMISTRY_UPGRADES,
-	...COMBAT_UPGRADES
+	...CHEMISTRY_UPGRADES
 }
