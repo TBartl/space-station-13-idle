@@ -64,6 +64,10 @@ import ModalResetData from "@/components/Modals/ModalResetData";
 import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
 import ModalLevelAllJobs from "@/components/Modals/ModalLevelAllJobs";
 import ModalSkillLeveler from "@/components/Modals/ModalSkillLeveler";
+
+import ENEMIES from "@/data/enemies";
+import { calcRobustness } from "@/utils/combatUtils";
+
 export default {
   extends: ContentAbstract,
   // eslint-disable-next-line
@@ -102,6 +106,30 @@ export default {
     },
     completeCurrentValidhuntingTask() {
       this.$store.dispatch("validhunting/completeTask", true);
+
+      // In case I ever want to simulate this again:
+      // let table = [
+      //   ["Player Level", "Target", "Target Robust", "Count", "XP Reward"]
+      // ];
+      // let totalKills = 0;
+      // let pushTable = () => {
+      //   let enemy = ENEMIES[this.$store.getters["validhunting/targetEnemyId"]];
+      //   table.push([
+      //     this.$store.getters["validhunting/level"],
+      //     enemy.name,
+      //     calcRobustness(enemy.stats, "enemy"),
+      //     this.$store.getters["validhunting/targetCount"],
+      //     this.$store.getters["validhunting/xpReward"].toLocaleString()
+      //   ]);
+      // };
+      // while (this.$store.getters["validhunting/level"] < 50) {
+      //   pushTable();
+      //   totalKills += this.$store.getters["validhunting/targetCount"];
+      //   this.$store.dispatch("validhunting/completeTask", true);
+      // }
+      // pushTable();
+      // console.table(table);
+      // console.log("Final kill count:", totalKills);
     }
   }
 };
