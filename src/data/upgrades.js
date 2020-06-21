@@ -1,3 +1,4 @@
+import { MAX_LEVEL } from "@/data/experience";
 
 
 export const COMBAT_UPGRADES = {
@@ -152,15 +153,15 @@ const BOTANY_UPGRADES = {
 	}
 }
 
-export const GRAYTIDING_UPGRADE_PERCENT = .1;
+export const GRAYTIDING_UPGRADE_PERCENT = .05;
 const GRAYTIDING_UPGRADES = {}
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 10; i++) {
 	let upgrade = {
 		name: "Buy Hacking Tools",
 		description: `Reduces graytiding failure rate ${GRAYTIDING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/graytiding/upgrade1.png'),
 		requiredItems: {}, // Filled out below
-		requiredLevels: { graytiding: (i + 1) * 10 },
+		requiredLevels: { graytiding: (i + 1) * 5 },
 		upgrade: "graytidingHacking",
 		requiredUpgrades: { graytidingHacking: i }
 	}
@@ -168,11 +169,16 @@ for (let i = 0; i < 5; i++) {
 	if (i != 0) {
 		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	if (i == 0) upgrade.requiredItems.money = 3000
+	if (i == 1) upgrade.requiredItems.money = 7000
+	if (i == 2) upgrade.requiredItems.money = 25000
+	if (i == 3) upgrade.requiredItems.money = 50000
+	if (i == 4) upgrade.requiredItems.money = 100000
+	if (i == 5) upgrade.requiredItems.money = 250000
+	if (i == 6) upgrade.requiredItems.money = 350000
+	if (i == 7) upgrade.requiredItems.money = 600000
+	if (i == 8) upgrade.requiredItems.money = 800000
+	if (i == 9) upgrade.requiredItems.money = 1200000
 
 	GRAYTIDING_UPGRADES[`upgradeGraytiding${i + 1}`] = upgrade;
 }
@@ -227,7 +233,7 @@ for (let i = 0; i < 5; i++) {
 	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }
 
-export const JOB_UPGRADES = {
+const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
@@ -237,3 +243,15 @@ export const JOB_UPGRADES = {
 	...XENOBIO_UPGRADES,
 	...CHEMISTRY_UPGRADES
 }
+
+// Add a required validhunting level
+const VALIDHUNTING_MIN = 10;
+Object.values(JOB_UPGRADES).forEach(upgrade => {
+	let requiredLevel = Math.max(...Object.values(upgrade.requiredLevels)); // Highest required level
+
+	if (requiredLevel <= VALIDHUNTING_MIN) return;
+	let p = (requiredLevel - VALIDHUNTING_MIN) / (MAX_LEVEL - VALIDHUNTING_MIN);
+	upgrade.requiredLevels['validhunting'] = Math.round(p * MAX_LEVEL);
+});
+
+export { JOB_UPGRADES };
