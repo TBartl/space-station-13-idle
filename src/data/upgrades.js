@@ -1,3 +1,4 @@
+import { MAX_LEVEL } from "@/data/experience";
 
 
 export const COMBAT_UPGRADES = {
@@ -227,7 +228,7 @@ for (let i = 0; i < 5; i++) {
 	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }
 
-export const JOB_UPGRADES = {
+const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
@@ -237,3 +238,15 @@ export const JOB_UPGRADES = {
 	...XENOBIO_UPGRADES,
 	...CHEMISTRY_UPGRADES
 }
+
+// Add a required validhunting level
+const VALIDHUNTING_MIN = 10;
+Object.values(JOB_UPGRADES).forEach(upgrade => {
+	let requiredLevel = Math.max(...Object.values(upgrade.requiredLevels)); // Highest required level
+
+	if (requiredLevel <= VALIDHUNTING_MIN) return;
+	let p = (requiredLevel - VALIDHUNTING_MIN) / (MAX_LEVEL - VALIDHUNTING_MIN);
+	upgrade.requiredLevels['validhunting'] = Math.round(p * MAX_LEVEL);
+});
+
+export { JOB_UPGRADES };
