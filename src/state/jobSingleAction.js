@@ -125,6 +125,7 @@ export default {
 
 			let yieldedItems = acquireItemFrom(action);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				if (!count) continue;
 				commit("inventory/changeItemCount", { itemId, count }, { root: true });
 			}
 			commit("addXP", action.xp);
