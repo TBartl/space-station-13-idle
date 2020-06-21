@@ -40,8 +40,8 @@ const validhunting = merge(cloneDeep(jobBase), {
 				commit("lowerCount");
 			}
 		},
-		completeTask({ state, commit, getters }) {
-			if (state.count > 0) return;
+		completeTask({ state, commit, getters }, cheat) {
+			if (!cheat && state.count > 0) return;
 			commit("addXP", state.xpReward);
 			// Get a new task
 			let minCount = 10;
