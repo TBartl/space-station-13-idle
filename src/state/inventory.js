@@ -122,7 +122,7 @@ const inventory = {
 			return (purchase) => {
 				if (purchase.requiredItems) {
 					for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
-						if (state.bank[itemId] < count) return false;
+						if (!state.bank[itemId] || state.bank[itemId] < count) return false;
 					}
 				}
 				if (purchase.requiredLevels) {
