@@ -218,7 +218,7 @@ export const ACTIONS = {
 	},
 	splitAddy: {
 		time: 5,
-		item: "slimeGray",
+		item: "slimeAddy",
 		icon: require("@/assets/art/xenobio/SlimeAddy.gif"),
 		xp: 25,
 		requiredLevel: 47,

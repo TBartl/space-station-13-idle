@@ -133,7 +133,7 @@ const SLIMES = {
 		sellPrice: 500,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
 		tier: 7,
-		stat: {
+		stats: {
 			precision: 10,
 			power: 10,
 			protection: 10,
@@ -149,29 +149,56 @@ Object.values(SLIMES).forEach((slime, index) => {
 	// Some slimes have custom stats set
 	if (slime.stats) return;
 
-	let mod = (index - 1) % 4;
+	let mod = (index - 1) % 8;
 
 	if (mod == 0) {
 		slime.stats = {
-			power: (slime.tier - 1) * 4
+			maxHealth: (slime.tier) * 10,
+			burnProtection: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 1) {
 		slime.stats = {
-			evasion: (slime.tier - 1) * 4
+			maxHealth: (slime.tier) * 5,
+			moveTime: -1,
 		}
 	}
 	else if (mod == 2) {
 		slime.stats = {
-			command: (slime.tier - 1) * 4
+			maxHealth: (slime.tier) * 15,
+			moveTime: 1,
 		}
 	}
 	else if (mod == 3) {
 		slime.stats = {
-			protection: (slime.tier - 1) * 4
+			maxHealth: (slime.tier) * 15,
+			bruteProtection: (slime.tier - 1) * 4
 		}
 	}
-
+	else if (mod == 4) {
+		slime.stats = {
+			maxHealth: (slime.tier) * 10,
+			damageType: "burn"
+		}
+	}
+	else if (mod == 5) {
+		slime.stats = {
+			maxHealth: (slime.tier) * 10,
+			attackSpeed: 2 - (slime.tier / 10)
+		}
+	}
+	else if (mod == 6) {
+		slime.stats = {
+			maxHealth: (slime.tier) * 10,
+			attackSpeed: 3 + (slime.tier / 10)
+		}
+	}
+	else if (mod == 7) {
+		slime.stats = {
+			maxHealth: (slime.tier) * 10,
+			damageType: "brute"
+		}
+	}
 
 });
 export default SLIMES;
