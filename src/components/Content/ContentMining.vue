@@ -11,6 +11,7 @@
         </div>
       </div>
       <job-info
+        infoId="mining"
         :icon="require('@/assets/art/jobinfo/mining.png')"
         title="Lathius Talram the Shaft Miner says..."
         :options="[

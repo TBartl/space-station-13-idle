@@ -1,5 +1,5 @@
 <template>
-  <div class="row my-2">
+  <div v-if="!dismissed" class="row my-2">
     <div class="col-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
       <div class="content-block d-flex flex-column flex-md-row">
         <div class="d-flex flex-row flex-md-column justify-content-center">
@@ -22,6 +22,10 @@
               <span>{{option.name}}</span>
             </button>
           </div>
+
+          <div class="d-flex flex-column align-items-end w-100">
+            <span class="dismiss" @click="dismiss">DISMISS</span>
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +34,7 @@
 
 <script>
 export default {
-  props: ["icon", "title", "options"],
+  props: ["infoId", "icon", "title", "options"],
   data() {
     return {
       current: this.options[0].name
@@ -39,6 +43,14 @@ export default {
   computed: {
     filteredOptions() {
       return this.options.filter(option => option.name != this.current);
+    },
+    dismissed() {
+      return this.$store.getters["info/dismissed"](this.infoId);
+    }
+  },
+  methods: {
+    dismiss() {
+      this.$store.commit("info/dismiss", this.infoId);
     }
   }
 };
@@ -55,5 +67,11 @@ export default {
 }
 .info-title {
   font-weight: bold;
+}
+.dismiss {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: -32px;
+  cursor: pointer;
 }
 </style>

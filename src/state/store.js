@@ -26,6 +26,7 @@ import combat from './combat';
 import inventory from './inventory';
 import upgrades from './upgrades';
 import potions from './potions';
+import info from './info';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -49,6 +50,7 @@ const modules = {
 	inventory,
 	upgrades,
 	potions,
+	info,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
