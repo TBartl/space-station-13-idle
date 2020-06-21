@@ -45,7 +45,7 @@
           <span>With your generous contributions, we could get these departments back up and running at full capacity.</span>
         </template>
         <template slot="Job Upgrades?">
-          <span>For the right price, I might be able to get you the equipment you need to do your job more efficiently</span>
+          <span>For the right price, I might be able to get you equipment to do your job more efficiently</span>
           <span>I can't just sell this to anyone though. You'll need to demonstrate that you're experienced in that job first.</span>
           <span>
             In fact, for the fancier equipment I'll also need you to prove your
