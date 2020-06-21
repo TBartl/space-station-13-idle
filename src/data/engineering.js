@@ -35,18 +35,18 @@ export const ACTIONS = {
 		xp: 10,
 		requiredLevel: 10,
 	},
-	engPotato: {
+	engIncinerator: {
 		time: 5,
-		name: "Potato Battery",
+		name: "Incinerator",
 		items: {
 			id: "power",
 			count: 4
 		},
-		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
+		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
 		xp: 15,
 		requiredLevel: 15,
 		requiredItems: {
-			potatobattery: 8
+			burnJunk: 1
 		}
 
 	},
@@ -64,32 +64,32 @@ export const ACTIONS = {
 			power: 5
 		}
 	},
+	engPotato: {
+		time: 5,
+		name: "Potato Battery",
+		items: {
+			id: "power",
+			count: 6
+		},
+		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
+		xp: 25,
+		requiredLevel: 25,
+		requiredItems: {
+			potatobattery: 8
+		}
+	},
 	engSlime: {
 		time: 5,
 		name: "Charged Slime",
 		items: {
 			id: "power",
-			count: 6
-		},
-		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
-		xp: 25,
-		requiredLevel: 25,
-		requiredItems: {
-			slimeYellow: 1
-		}
-	},
-	engIncinerator: {
-		time: 5,
-		name: "Incinerator",
-		items: {
-			id: "power",
 			count: 7
 		},
-		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
+		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
 		xp: 30,
 		requiredLevel: 30,
 		requiredItems: {
-			burnJunk: 1
+			slimeYellow: 1
 		}
 	},
 	engPowerBottom: {
