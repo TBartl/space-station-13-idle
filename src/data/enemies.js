@@ -468,14 +468,14 @@ export default {
 				itemTable: [
 					{
 						id: 'gold',
-						weight: 1
+						weight: 5
 					},
 					{
 						id: 'faceSyndicate',
-						weight: 1
+						weight: 4
 					},
 					{
-						id: 'armSyndiSuit',
+						id: 'telecrystal',
 						weight: 1
 					}
 				]
@@ -518,7 +518,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'wire',
 						weight: 1
 					}
 				]
@@ -554,7 +554,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'wire',
 						weight: 1
 					},
 					{
@@ -1233,7 +1233,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'wire',
 						weight: 1
 					},
 					{
@@ -1461,7 +1461,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'wire',
 						weight: 1
 					},
 					{
@@ -1561,11 +1561,11 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'ripley',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'wire',
 						weight: 1
 					},
 					{
