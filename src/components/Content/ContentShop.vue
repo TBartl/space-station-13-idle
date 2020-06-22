@@ -59,7 +59,7 @@
 
         <template slot="Capes?">
           <span>
-            Once demonstrated your mastery, I'll be able to order you a
+            Once you've demonstrated your mastery, I'll be able to order you a
             <img
               class="mx--2"
               :src="require('@/assets/art/combat/items/capcloak.png')"

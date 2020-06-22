@@ -115,7 +115,7 @@
               class="mx--0"
               :src="require('@/assets/art/combat/items/gune_energy.png')"
             />
-            <b>gun</b>, or else your gun won't work.
+            <b>gun</b>, or your gun won't work.
           </span>
         </template>
         <template slot="Mechs?">
