@@ -8,8 +8,8 @@
     <div class="content-container">
       <job-info
         infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        :icon="require('@/assets/art/jobinfo/combat.png')"
+        title="Fred Best the Head of Security says..."
         :options="[
 					{name: 'Back'},
 					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
