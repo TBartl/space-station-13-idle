@@ -32,7 +32,7 @@ export const ACTIONS = {
 			count: 3
 		},
 		icon: require("@/assets/art/engineering/treadmill.png"),
-		xp: 10,
+		xp: 5,
 		requiredLevel: 10,
 	},
 	engIncinerator: {
@@ -43,7 +43,7 @@ export const ACTIONS = {
 			count: 4
 		},
 		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
-		xp: 15,
+		xp: 8,
 		requiredLevel: 15,
 		requiredItems: {
 			burnJunk: 1
@@ -58,7 +58,7 @@ export const ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
-		xp: 20,
+		xp: 10,
 		requiredLevel: 20,
 		requiredItems: {
 			power: 5
@@ -72,7 +72,7 @@ export const ACTIONS = {
 			count: 6
 		},
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
-		xp: 25,
+		xp: 13,
 		requiredLevel: 25,
 		requiredItems: {
 			potatobattery: 8
@@ -86,24 +86,24 @@ export const ACTIONS = {
 			count: 7
 		},
 		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
-		xp: 30,
+		xp: 15,
 		requiredLevel: 30,
 		requiredItems: {
 			slimeYellow: 1
 		}
 	},
-	engPowerBottom: {
+	engSolars: {
 		time: 5,
-		name: "Power Bottom",
+		name: "Solars",
 		items: {
 			id: "power",
-			count: 12
+			count: 8
 		},
-		icon: require("@/assets/art/engineering/powerbottom.png"),
+		icon: require("@/assets/art/engineering/solars.png"),
 		xp: 18,
 		requiredLevel: 35,
 		requiredItems: {
-			lube: 8
+			wire: 1
 		}
 	},
 	engSMES: {
@@ -123,7 +123,7 @@ export const ACTIONS = {
 	},
 	engUnholy: {
 		time: 5,
-		name: "Unholy ",
+		name: "Unholy Matter",
 		items: {
 			id: "power",
 			count: 9
@@ -133,6 +133,20 @@ export const ACTIONS = {
 		requiredLevel: 42,
 		requiredItems: {
 			salt: 1
+		}
+	},
+	engBattery: {
+		time: 5,
+		name: "Battery Array",
+		items: {
+			id: "power",
+			count: 10
+		},
+		icon: require("@/assets/art/engineering/battery.png"),
+		xp: 18,
+		requiredLevel: 42,
+		requiredItems: {
+			ammoE3: 1
 		}
 	},
 	engSingularity: {

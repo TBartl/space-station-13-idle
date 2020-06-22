@@ -141,6 +141,40 @@ const SLIMES = {
 			maxHealth: 100
 		}
 	},
+	slimeMouse: {
+		name: "Rainbow Slime",
+		sellPrice: 500,
+		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
+		tier: 7,
+		stats: {
+			precision: 10,
+			power: 10,
+			protection: 10,
+			evasion: 10,
+			maxHealth: 100
+		}
+	},
+	slimeMouse: {
+		name: "Pet Mouse",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/mouse.png"),
+		tier: 7,
+		stats: {
+			evasion: 10,
+			maxHealth: 50
+		}
+
+	},
+	slimeMining: {
+		name: "Mine Bot",
+		sellPrice: 5000,
+		icon: require("@/assets/art/xenobio/SlimeMining.png"),
+		tier: 7,
+		stats: {
+			protection: 10,
+			maxHealth: 100
+		}
+	},
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";

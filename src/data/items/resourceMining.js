@@ -50,9 +50,4 @@ export default {
 		healAmount: 69,
 		icon: require("@/assets/art/mining/SheetBanana.png")
 	},
-	slimeMining: {
-		name: "Mining Bot",
-		sellPrice: 100,
-		icon: require("@/assets/art/mining/SlimeMining.png")
-	},
 }
