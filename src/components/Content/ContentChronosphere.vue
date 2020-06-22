@@ -7,9 +7,9 @@
     />
     <div class="content-container">
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="chronosphere"
+        :icon="require('@/assets/art/jobinfo/chronosphere.png')"
+        title="Kor Phaeron the Chrono Legionnaire says..."
         :options="[
 					{name: 'Back'},
 					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}

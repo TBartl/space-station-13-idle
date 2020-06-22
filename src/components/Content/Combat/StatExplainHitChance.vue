@@ -14,7 +14,7 @@
     <p>HIT_CHANCE = zTest(SIGMA)</p>
     <p class="pl-3">= zTest({{hitDiff | stat}} / {{hitSigma | stat}})</p>
     <p class="pl-3">= {{(hitChance*100).toFixed(1)}}%</p>
-		<img class="w-100" :src="curve" alt="">
+		<img class="w-100 curve" :src="curve" alt="">
   </b-popover>
 </template>
 
@@ -64,4 +64,9 @@ export default {
 </script>
 
 <style scoped>
+/* Set the size ahead of time so we don't get screwed by the loading+modal wombo combo */
+.curve{
+	width: 256px;
+	height: 137px;
+}
 </style>

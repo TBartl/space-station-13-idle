@@ -12,20 +12,41 @@
       </div>
 
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="tinkering"
+        :icon="require('@/assets/art/jobinfo/tinkering.png')"
+        title="Hits-The-Wizard the Ashwalker hisses..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Junk?', icon: require('@/assets/art/graytiding/junk.png'), iconClass:'mx--0'},
+					{name: 'Recycling?', icon: require('@/assets/art/tinkering/burnjunk.png'), iconClass:'mx--0'},
+					{name: 'Weaponsss?', icon: require('@/assets/art/combat/items/melee_c4.png'), iconClass:'mx--1'},
+					{name: 'Armor?', icon: require('@/assets/art/combat/items/arm_b2.png'), iconClass:'mx--1'},
+					{name: 'Upgrade?', icon: require('@/assets/art/tinkering/upgrade1.png'), iconClass:'mx--1'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
           <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
+            You nanotrasssen dogsss think you're ssso advanced with all your fancy
+            <img
+              class="mx--1"
+              :src="require('@/assets/art/fabrication/icon.png')"
+            />
+            <b>ssscience</b>.
+          </span>
+          <span>
+            But usss ashwalkersss can craft
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/melee_c4.png')"
+            />
+            <b>weaponsss</b> and
+            <img class="mx--2" :src="require('@/assets/art/combat/items/arm_b2.png')" />
+            <b>armor</b> jussst asss robussst using only the
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/graytiding/junk.png')"
+            />
+            <b>natural resssourcesss</b> of thisss ssstation.
           </span>
         </template>
         <template slot="REPLACEME">

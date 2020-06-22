@@ -12,9 +12,9 @@
       </div>
 
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="botany"
+        :icon="require('@/assets/art/jobinfo/botany.png')"
+        title="Reed Glover the Botanist says..."
         :options="[
 					{name: 'Back'},
 					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}

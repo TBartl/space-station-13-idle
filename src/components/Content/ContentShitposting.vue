@@ -12,9 +12,9 @@
       </div>
 
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="shitposting"
+        :icon="require('@/assets/art/jobinfo/shitposting.png')"
+        title="Iamgoofball the Shit Poster says..."
         :options="[
 					{name: 'Back'},
 					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
