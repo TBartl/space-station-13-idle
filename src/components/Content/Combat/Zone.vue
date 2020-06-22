@@ -71,7 +71,8 @@ export default {
   font-size: 24px;
 }
 img {
-  width: 150px;
+	width: 150px;
+	height: 90px;
 }
 .zone-difficulty {
   font-size: 13px;
