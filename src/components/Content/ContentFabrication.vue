@@ -12,24 +12,137 @@
       </div>
 
       <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/REPLACEME.png')"
-        title="REPLACEME the REPLACEME says..."
+        infoId="fabrication"
+        :icon="require('@/assets/art/jobinfo/fabrication.png')"
+        title="Flameo Hotman the Roboticist says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Resources?', icon: require('@/assets/art/engineering/power.png'), iconClass:'mx--0'},
+					{name: 'Guns?', icon: require('@/assets/art/combat/items/gune_energy.png'), iconClass:'mx--0'},
+					{name: 'Ammo?', icon: require('@/assets/art/combat/items/ammo_b1.png'), iconClass:'mx--2'},
+					{name: 'Mechs?', icon: require('@/assets/art/fabrication/mechripley.png'), iconClass:'mx--0'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
+          <span>Listen man, I'm going to be upfront with you; I don't actually know how any of this stuff works.</span>
+          <span>I just press some buttons and let the fabricator do its thing.</span>
+        </template>
+        <template slot="Resources?">
           <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
+            You'll need to feed these printers both
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/mining/SheetIron.png')"
+            />
+            <b>Metal</b> and
+            <img class="mx--0" :src="require('@/assets/art/engineering/power.png')" />
+            <b>Power</b> before they'll go brrrrr.
+          </span>
+          <span>
+            Assuming they're still alive, you can probably get the
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/mining/SheetIron.png')"
+            />
+            <b>Metal</b> from our
+            <img class="mx--0" :src="require('@/assets/art/mining/icon.png')" />
+            <b>Miners</b>
+          </span>
+          <span>
+            As for the
+            <img class="mx--0" :src="require('@/assets/art/engineering/power.png')" />
+            <b>Power</b>, you'll need to make sure the
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/engineering/icon.png')"
+            />
+            <b>Engineers</b> are doing their job.
           </span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Guns?">
+          <span>
+            Unlike the
+            <img class="mx--2" :src="require('@/assets/art/combat/items/melee_b2.png')" />
+            <b>primitive weapons</b> you'll get from
+            <img class="mx--2" :src="require('@/assets/art/tinkering/icon.png')" />
+            <b>Tinkering</b>, the
+            <img class="mx--0" :src="require('@/assets/art/combat/items/gune_energy.png')" />
+            <b>guns</b> you can fabricate here will be far more
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/precision.png')"
+            />
+            <b>precise</b>, and can dish out both
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/brute-damage.png')"
+            />
+            <b>brute</b> and
+            <img class="mx--0" :src="require('@/assets/art/combat/burn-damage.png')" />
+            <b>burn</b> damage.
+          </span>
+          <span>
+            The downside is that they take
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/ammo_b1.png')"
+            />
+            <b>ammo</b> to use. Thankfully you can fabricate more of it here.
+          </span>
+        </template>
+        <template slot="Ammo?">
+          <span>
+            Every shot you take with a
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/items/gune_energy.png')"
+            />
+            <b>gun</b> will use up some of your
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/ammo_b1.png')"
+            />
+            <b>ammo</b>.
+          </span>
+          <span>
+            Make sure you're matching the right type of
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/ammo_b1.png')"
+            />
+            <b>ammo</b> with the type of
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/items/gune_energy.png')"
+            />
+            <b>gun</b>, or else your gun won't work.
+          </span>
+        </template>
+        <template slot="Mechs?">
+          <span>
+            Unlike the
+            <img class="mx--2" :src="require('@/assets/art/combat/items/arm_b3.png')" />
+            <b>crude armor</b> you'll get from
+            <img class="mx--2" :src="require('@/assets/art/tinkering/icon.png')" />
+            <b>Tinkering</b>, the
+            <img class="mx--0" :src="require('@/assets/art/fabrication/mechripley.png')" />
+            <b>mechs</b> you'll make here will be far more durable and powerful all around.
+          </span>
+          <span>
+            That said, you'll find that these
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/fabrication/mechripley.png')"
+            />
+            <b>mechs</b> won't be as quick to manuever, so you'll find yourself
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/black_shoes.png')"
+            />
+            <b>evading</b> and
+            <img class="mx--0" :src="require('@/assets/art/combat/evasion.png')" />
+            <b>moving</b> a lot slower while piloting one.
+          </span>
         </template>
       </job-info>
 

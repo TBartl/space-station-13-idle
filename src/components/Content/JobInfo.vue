@@ -87,4 +87,7 @@ export default {
 .slot span {
 	margin-top: .5rem;
 }
+.slot span img {
+	width: 32px;
+}
 </style>
