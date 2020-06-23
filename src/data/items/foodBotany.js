@@ -231,5 +231,5 @@ export default {
 			precision: 5,
 			power: 5,
 		},
-	},
+	}
 }

@@ -22,5 +22,5 @@ export default {
 		sellPrice: 50,
 		icon: require('@/assets/art/mining/cactus.png'),
 		healAmount: 25
-	},
+	}
 }
