@@ -231,17 +231,5 @@ export default {
 			precision: 5,
 			power: 5,
 		},
-	},
-	tomatokiller: {
-		name: "Killer Tomato",
-		sellPrice: 83,
-		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
-		healAmount: 5,
-		stats: {
-			maxHealth: -10,
-			evasion: 10,
-			precision: 10,
-			power: 10,
-		},
 	}
 }

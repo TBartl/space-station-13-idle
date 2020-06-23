@@ -113,15 +113,15 @@ export default {
 				itemTable: [
 					{
 						id: 'gunE1',
-						weight: 20
+						weight: 1
 					},
 					{
 						id: 'iron',
 						weight: 19
 					},
 					{
-						id: "jumpsuitExplorer",
-						weight: 1
+						id: "ammoE1",
+						weight: 10
 					}
 				]
 			},{
@@ -227,7 +227,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'silver',
 						weight: 1
 					},
 					{
