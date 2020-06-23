@@ -31,7 +31,8 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to +${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
@@ -83,7 +84,8 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to +${(ENGINEERING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(ENGINEERING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
@@ -109,7 +111,8 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
@@ -158,7 +161,7 @@ const GRAYTIDING_UPGRADES = {}
 for (let i = 0; i < 10; i++) {
 	let upgrade = {
 		name: "Buy Hacking Tools",
-		description: `Reduces graytiding failure rate ${GRAYTIDING_UPGRADE_PERCENT * 100}%`, // Expanded below
+		description: `Reduces graytiding failure rate by ${GRAYTIDING_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/graytiding/upgrade1.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { graytiding: (i + 1) * 5 },
@@ -167,7 +170,8 @@ for (let i = 0; i < 10; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 3000
 	if (i == 1) upgrade.requiredItems.money = 7000
@@ -197,7 +201,8 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
@@ -222,7 +227,8 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, to ${(COOKING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}%`;
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to ${(COOKING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	if (i == 0) upgrade.requiredItems.money = 10000
 	if (i == 1) upgrade.requiredItems.money = 75000
