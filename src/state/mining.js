@@ -14,17 +14,27 @@ const potionDropTable = [
 			{
 				id: "foodMeatZ",
 				count: 1,
-				weight: 33
-			},
-			{
-				id: "slimeMining",
-				count: 1,
-				weight: 33
+				weight: 35
 			},
 			{
 				id: "oil",
 				count: 1,
-				weight: 33
+				weight: 25
+			},
+			{
+				id: "cactus",
+				count: 1,
+				weight: 20
+			},
+			{
+				id: "slimeMining",
+				count: 1,
+				weight: 15
+			},
+			{
+				id: "exoticparts",
+				count: 4,
+				weight: 10
 			},
 			{
 				id: "jumpsuitExplorer",

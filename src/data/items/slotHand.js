@@ -1,29 +1,4 @@
-export default {
-	crowbar: {
-		name: "Crowbar",
-		sellPrice: 1,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/fabrication/crowbar.png"),
-		overlay: require("@/assets/art/fabrication/crowbar_overlay.png"),
-	},
-	sord: {
-		name: "SORD",
-		sellPrice: 420,
-		icon: require("@/assets/art/combat/items/sord.png"),
-		overlay: require("@/assets/art/combat/items/sord_overlay.png"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: -20,
-			evasion: -30,
-			precision: -40,
-			attackSpeed: .5,
-			power: 80,
-		},
-		requires: {
-			precision: 3,
-			meleePower: 2
-		}
-	},
+const MBRUTE = {
 	meleeB1: {
 		name: "Rolling Pin",
 		sellPrice: 30,
@@ -35,7 +10,7 @@ export default {
 			precision: 3,
 			power: 6,
 			evasion: -3,
-			attackspeed: 2,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 1
@@ -49,10 +24,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 7,
-			precision: 7,
-			power: 14,
-			evasion: -7,
-			attackspeed: 2,
+			precision: 4,
+			power: 9,
+			evasion: -3,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 10
@@ -66,10 +41,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 11,
-			precision: 11,
-			power: 22,
-			evasion: -11,
-			attackspeed: 2,
+			precision: 7,
+			power: 14,
+			evasion: -7,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 20
@@ -83,10 +58,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 15,
-			precision: 15,
-			power: 30,
-			evasion: -15,
-			attackspeed: 2,
+			precision: 9,
+			power: 17,
+			evasion: -9,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 25
@@ -100,10 +75,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 19,
-			precision: 19,
-			power: 38,
-			evasion: -19,
-			attackspeed: 2,
+			precision: 11,
+			power: 20,
+			evasion: -11,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 30
@@ -117,10 +92,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 23,
-			precision: 23,
-			power: 46,
-			evasion: -23,
-			attackspeed: 2,
+			precision: 12,
+			power: 25,
+			evasion: -12,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 35
@@ -134,10 +109,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 27,
-			precision: 27,
-			power: 54,
-			evasion: -27,
-			attackspeed: 2,
+			precision: 14,
+			power: 28,
+			evasion: -14,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 40
@@ -151,10 +126,10 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 31,
-			precision: 31,
-			power: 62,
-			evasion: -31,
-			attackspeed: 2,
+			precision: 16,
+			power: 32,
+			evasion: -16,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 45
@@ -168,15 +143,18 @@ export default {
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 35,
-			precision: 35,
-			power: 70,
-			evasion: -35,
-			attackspeed: 2,
+			precision: 18,
+			power: 35,
+			evasion: -18,
+			attackspeed: 2.2,
 		},
 		requires: {
 			meleePower: 50
 		}
-	},
+	}
+}
+
+const MCUT = {
 	meleeC1: {
 		name: "Kitchen Fork",
 		sellPrice: 30,
@@ -295,7 +273,10 @@ export default {
 		requires: {
 			precision: 50
 		}
-	},
+	}
+}
+
+const MTOOLBOX = {
 	meleeT1: {
 		name: "Toolbox",
 		sellPrice: 30,
@@ -310,8 +291,8 @@ export default {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 1,
-			meleePower: 1
+			precision: 3,
+			meleePower: 3
 		},
 	},
 	meleeT2: {
@@ -328,8 +309,8 @@ export default {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 10,
-			meleePower: 10
+			precision: 11,
+			meleePower: 11
 		}
 	},
 	meleeT3: {
@@ -346,8 +327,8 @@ export default {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 20,
-			meleePower: 20
+			precision: 22,
+			meleePower: 22
 		}
 	},
 	meleeT4: {
@@ -364,8 +345,8 @@ export default {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 30,
-			meleePower: 30
+			precision: 33,
+			meleePower: 33
 		}
 	},
 	meleeT5: {
@@ -382,8 +363,8 @@ export default {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 40,
-			meleePower: 40
+			precision: 44,
+			meleePower: 44
 		}
 	},
 	meleeT6: {
@@ -403,7 +384,10 @@ export default {
 			precision: 50,
 			meleePower: 50
 		}
-	},
+	}
+}
+
+const MENERGY = {
 	meleeE1: {
 		name: "Welding Tool",
 		sellPrice: 30,
@@ -419,8 +403,7 @@ export default {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 3,
-			meleePower: 2
+			precision: 8
 		}
 	},
 	meleeE2: {
@@ -438,8 +421,7 @@ export default {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 3,
-			meleePower: 2
+			precision: 18
 		}
 	},
 	meleeE3: {
@@ -457,8 +439,7 @@ export default {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 3,
-			meleePower: 2
+			precision: 28
 		}
 	},
 	meleeE4: {
@@ -476,8 +457,7 @@ export default {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 3,
-			meleePower: 2
+			precision: 38
 		}
 	},
 	meleeE5: {
@@ -495,21 +475,12 @@ export default {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 3,
-			meleePower: 2
+			precision: 48
 		}
-	},
-	mechWeaponClaw: {
-		name: "Mech Claw",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/meleesmall.png"),
-		restrictions: ["mech"],
-		stats: {
-			power: 10,
-			attackSpeed: 4
-		}
-	},
+	}
+}
+
+const GENERGY = {
 	gunE1: {
 		name: "Kinetic Accelerator",
 		sellPrice: 325,
@@ -628,7 +599,10 @@ export default {
 		requires: {
 			rangedPower: 50
 		}
-	},
+	}
+}
+
+const GBULLET = {
 	gunB1: {
 		name: "Pipe Shotgun",
 		sellPrice: 210,
@@ -747,45 +721,127 @@ export default {
 		requires: {
 			rangedPower: 50
 		}
-	},
-	mechGunEnergyRifle: {
-		name: "Mech Energy Rifle",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunenergy.png")
-	},
-	mechWeaponDrill: {
-		name: "Mech Drill",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/meleebig.png")
-	},
-	mechGunRifle: {
-		name: "Mounted Rifle",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunsmall.png"),
-		restrictions: ["mech"],
-		ammoType: "ballistic",
-		stats: {
-			attackSpeed: 4,
-			power: 15,
-			precision: 5
-		}
-	},
-	mechGunRifle: {
-		name: "Mounted Rifle",
-		sellPrice: 0,
-		equipmentSlot: "hand",
-		icon: require("@/assets/art/engineering/gunsmall.png"),
-		ammoType: "energized",
-		stats: {
-			attackSpeed: 4,
-			power: 15,
-			precision: 5
-		},
-		requires: {
-			rangedPower: 1
-		}
-	},
+	}
+}
+// 	mechGunEnergyRifle: {
+// 		name: "Mech Energy Rifle",
+// 		sellPrice: 0,
+// 		equipmentSlot: "hand",
+// 		icon: require("@/assets/art/engineering/gunenergy.png")
+// 	},
+// 	mechWeaponDrill: {
+// 		name: "Mech Drill",
+// 		sellPrice: 0,
+// 		equipmentSlot: "hand",
+// 		icon: require("@/assets/art/engineering/meleebig.png")
+// 	},
+// 	mechGunRifle: {
+// 		name: "Mounted Rifle",
+// 		sellPrice: 0,
+// 		equipmentSlot: "hand",
+// 		icon: require("@/assets/art/engineering/gunsmall.png"),
+// 		restrictions: ["mech"],
+// 		ammoType: "ballistic",
+// 		stats: {
+// 			attackSpeed: 4,
+// 			power: 15,
+// 			precision: 5
+// 		}
+// 	},
+// 	mechGunRifle: {
+// 		name: "Mounted Rifle",
+// 		sellPrice: 0,
+// 		equipmentSlot: "hand",
+// 		icon: require("@/assets/art/engineering/gunsmall.png"),
+// 		ammoType: "energized",
+// 		stats: {
+// 			attackSpeed: 4,
+// 			power: 15,
+// 			precision: 5
+// 		},
+// 		requires: {
+// 			rangedPower: 1
+// 		}
+// 	},
+// 	mechWeaponClaw: {
+// 		name: "Mech Claw",
+// 		sellPrice: 0,
+// 		equipmentSlot: "hand",
+// 		icon: require("@/assets/art/engineering/meleesmall.png"),
+// 		restrictions: ["mech"],
+// 		stats: {
+// 			power: 10,
+// 			attackSpeed: 4
+// 		}
+// 	},
+// },
+
+// Health is 1, The remaining stats are a total of .7 (35 points at 50) Energy gets a boost due to it's bonus being good for the level
+
+Object.values(MBRUTE).forEach(mbrute => {
+	mbrute.equipmentSlot = "hand";
+	mbrute.sellPrice = Math.ceil(mbrute.requires.meleePower * 2 + 150);
+	mbrute.stats.maxHealth = mbrute.requires.meleePower * 1;
+	mbrute.stats.precision = Math.ceil(mbrute.requires.meleePower * .35);
+	mbrute.stats.power = Math.round(mbrute.requires.meleePower * .6);
+	mbrute.stats.evasion = Math.trunc(mbrute.requires.meleePower * -.25);
+	mbrute.stats.attackspeed = 2.2;
+});
+
+Object.values(MCUT).forEach(mcut => {
+	mcut.equipmentSlot = "hand";
+	mcut.sellPrice = Math.ceil(mcut.requires.precision * 2 + 150);
+	mcut.stats.maxHealth = mcut.requires.precision * 1;
+	mcut.stats.precision = Math.ceil(mcut.requires.precision * .30);
+	mcut.stats.power = Math.round(mcut.requires.precision * .45);
+	mcut.stats.evasion = Math.trunc(mcut.requires.precision * -.05);
+	mcut.stats.attackspeed = 2.5;
+});
+
+Object.values(MTOOLBOX).forEach(mtoolbox => {
+	mtoolbox.equipmentSlot = "hand";
+	mtoolbox.sellPrice = Math.ceil((mtoolbox.requires.meleePower + 10) * 12.25 - 75 );
+	mtoolbox.stats.maxHealth = mtoolbox.requires.meleePower * 1;
+	mtoolbox.stats.precision = Math.ceil(mtoolbox.requires.meleePower * .35);
+	mtoolbox.stats.power = Math.round(mtoolbox.requires.meleePower * .5);
+	mtoolbox.stats.evasion = Math.trunc(mtoolbox.requires.meleePower * -.1);
+	mtoolbox.stats.command = Math.ceil(mtoolbox.requires.meleePower * -.1);
+	mtoolbox.stats.attackspeed = 2.7;
+});
+
+Object.values(MENERGY).forEach(menergy => {
+	menergy.equipmentSlot = "hand";
+	menergy.sellPrice = Math.ceil((menergy.requires.precision+2) * (menergy.requires.precision+2) - menergy.requires.precision+2);
+	menergy.stats.maxHealth = (menergy.requires.precision + 2) * 1;
+	menergy.stats.precision = Math.ceil((menergy.requires.precision + 2) * .4);
+	menergy.stats.power = Math.round((menergy.requires.precision + 2) * .45);
+	menergy.stats.evasion = Math.trunc((menergy.requires.precision + 2) * -.15);
+	menergy.stats.command = Math.ceil(menergy.requires.precision * -.1);
+	menergy.stats.attackspeed = 2.2;
+});
+
+Object.values(GENERGY).forEach(genergy => {
+	// genergy.equipmentSlot = "hand";
+	// genergy.stats.maxHealth = genergy.requires.meleePower * 1;
+	// genergy.stats.precision = Math.ceil(genergy.requires.meleePower * .35);
+	// genergy.stats.power = Math.round(genergy.requires.meleePower * .7);
+	// genergy.stats.evasion = Math.trunc(genergy.requires.meleePower * -.35);
+	// genergy.stats.attackspeed = 2.2;
+});
+
+Object.values(GBULLET).forEach(gbullet => {
+	// gbullet.equipmentSlot = "hand";
+	// gbullet.stats.maxHealth = gbullet.requires.meleePower * 1;
+	// gbullet.stats.precision = Math.ceil(gbullet.requires.meleePower * .35);
+	// gbullet.stats.power = Math.round(gbullet.requires.meleePower * .7);
+	// gbullet.stats.evasion = Math.trunc(gbullet.requires.meleePower * -.35);
+});
+
+export default {
+	...MBRUTE,
+	...MCUT,
+	...MTOOLBOX,
+	...MENERGY,
+	...GENERGY,
+	...GBULLET
 }
