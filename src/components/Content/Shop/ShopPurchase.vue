@@ -8,7 +8,7 @@
     <div class="d-flex flex-column">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>
-      <div class="requires d-flex flex-row align-items-center">
+      <div class="requires d-flex flex-row align-items-center flex-wrap">
         <span class="requires mr-1">Requires:</span>
         <div
           v-for="(pair, index) in Object.entries(requiredLevels)"
