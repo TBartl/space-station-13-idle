@@ -157,7 +157,7 @@ export default {
 .health-full {
   color: green;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .items-header {
     padding-left: 0.5rem;
   }
