@@ -17,4 +17,10 @@ export default {
 		icon: require('@/assets/art/shop/items/spaghetti.png'),
 		healAmount: 30
 	},
+	cactus: {
+		name: "Exotic Cactus",
+		sellPrice: 50,
+		icon: require('@/assets/art/mining/cactus.png'),
+		healAmount: 25
+	},
 }

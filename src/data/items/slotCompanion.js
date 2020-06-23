@@ -175,6 +175,19 @@ const SLIMES = {
 			maxHealth: 100
 		}
 	},
+	slimetomatokiller: {
+		name: "Killer Tomato",
+		sellPrice: 83,
+		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
+		tier:7,
+		stats: {
+			maxHealth: 20,
+			evasion: 10,
+			precision: 10,
+			power: 10,
+			command: -10
+		},
+	}
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";
