@@ -1,7 +1,7 @@
 <template>
   <div class="experience-header">
     <div
-      class="experience-block d-flex align-items-center justify-content-around bg-white p-2"
+      class="experience-block d-flex flex-column flex-sm-row align-items-center justify-content-around bg-white p-2"
       :style="{'border-color': color}"
     >
       <div class="d-flex align-items-center">
