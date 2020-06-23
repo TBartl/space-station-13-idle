@@ -57,11 +57,11 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_captain_overlay.png"),
 		stats: {
-			maxHealth: 14,
+			maxHealth: 10,
 			precision: 0,
 			power: 0,
 			evasion: 0,
-			protection: -2,
+			protection: 2,
 		},
 		requires: {
 			evasion: 15,
@@ -74,11 +74,11 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/glove_ninja_overlay.png"),
 		stats: {
-			maxHealth: 14,
+			maxHealth: 30,
 			precision: 0,
 			power: 0,
 			evasion: 0,
-			protection: -2,
+			protection: -4,
 		},
 		requires: {
 			evasion: 15,

@@ -188,166 +188,77 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		overlay: require("@/assets/art/fabrication/mechripley.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	odysseus: {
 		name: "Odysseus",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechodysseus.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	firefighter: {
 		name: "R.I.P.L.E.Y. MK3",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	clarke: {
 		name: "Clarke",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	durand: {
 		name: "Durand",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	marauder: {
 		name: "Marauder",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmarauder.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	gygax: {
 		name: "Gygax",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechgygax.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	mauler: {
 		name: "Mauler",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	deathripley: {
 		name: "R.I.P.L.E.Y. MK13",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	darkgygax: {
 		name: "Assault Gygax",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	reticence: {
 		name: ".........",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	seraph: {
 		name: "Seraph",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	honk: {
 		name: "H.O.N.K.",
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
 	},
 	phazon: {
 		name: "Phazon",
 		sellPrice: 100000,
 		icon: require("@/assets/art/fabrication/mechphazon.png"),
-		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
-		}
+
 	}
 }
 
@@ -362,6 +273,12 @@ Object.values(MECHS).forEach(mech => {
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
 	mech.stats.moveTime = 3;
+	mech.sellPrice = Math.ceil((mtoolbox.requires.meleePower + 10) * 12.25 - 75 );
+	mech.stats.maxHealth = mtoolbox.requires.meleePower * 1;
+	mech.stats.precision = Math.ceil(mtoolbox.requires.meleePower * .35);
+	mech.stats.power = Math.round(mtoolbox.requires.meleePower * .5);
+	mech.stats.evasion = Math.trunc(mtoolbox.requires.meleePower * -.1);
+	mech.stats.command = Math.ceil(mtoolbox.requires.meleePower * -.1);
 });
 
 export default {
