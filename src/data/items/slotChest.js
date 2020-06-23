@@ -362,6 +362,12 @@ Object.values(MECHS).forEach(mech => {
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
 	mech.stats.moveTime = 3;
+	// mech.sellPrice = Math.ceil((mech.requires.meleePower + 10) * 12.25 - 75 );
+	// mech.stats.maxHealth = mech.requires.meleePower * 1;
+	// mech.stats.precision = Math.ceil(mech.requires.meleePower * .35);
+	// mech.stats.power = Math.round(mech.requires.meleePower * .5);
+	// mech.stats.evasion = Math.trunc(mech.requires.meleePower * -.1);
+	// mech.stats.command = Math.ceil(mech.requires.meleePower * -.1);
 });
 
 export default {
