@@ -1,14 +1,9 @@
-const ARMOR = {
+const BRUTEARMOR = {
 	armB1: {
 		name: "Cardborg Disguise",
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b1.png"), overlay: require("@/assets/art/combat/items/arm_b1_overlay.png"),
 		stats: {
-			maxHealth: 2,
-			precision: 0,
-			power: 1,
-			evasion: 2,
-			bruteProtection: 2,
 		},
 		requires: {
 			evasion: 1
@@ -19,11 +14,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b2.png"), overlay: require("@/assets/art/combat/items/arm_b2_overlay.png"),
 		stats: {
-			maxHealth: 6,
-			precision: 1,
-			power: 2,
-			evasion: 4,
-			bruteProtection: 2,
 			burnProtection: 2
 		},
 		requires: {
@@ -35,11 +25,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b3.png"), overlay: require("@/assets/art/combat/items/arm_b3_overlay.png"),
 		stats: {
-			maxHealth: 12,
-			precision: 2,
-			power: 4,
-			evasion: 8,
-			bruteProtection: 6,
 		},
 		requires: {
 			evasion: 20
@@ -50,11 +35,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b4.png"), overlay: require("@/assets/art/combat/items/arm_b4_overlay.png"),
 		stats: {
-			maxHealth: 18,
-			precision: 3,
-			power: 6,
-			evasion: 12,
-			bruteProtection: 8,
 		},
 		requires: {
 			evasion: 30
@@ -65,11 +45,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b5.png"), overlay: require("@/assets/art/combat/items/arm_b5_overlay.png"),
 		stats: {
-			maxHealth: 24,
-			precision: 4,
-			power: 8,
-			evasion: 16,
-			bruteProtection: 10,
 		},
 		requires: {
 			evasion: 40
@@ -80,26 +55,18 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_b6.png"), overlay: require("@/assets/art/combat/items/arm_b6_overlay.png"),
 		stats: {
-			maxHealth: 30,
-			precision: 5,
-			power: 10,
-			evasion: 20,
-			bruteProtection: 12,
 		},
 		requires: {
 			evasion: 50
 		}
-	},
+	}
+}
+const BURNARMOR = {
 	armS1: {
 		name: "EVA Suit",
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_s1.png"), overlay: require("@/assets/art/combat/items/arm_s1_overlay.png"),
 		stats: {
-			maxHealth: 1,
-			precision: 1,
-			power: 1,
-			evasion: 0,
-			burnProtection: 4
 		},
 		requires: {
 			evasion: 1
@@ -110,11 +77,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_s2.png"), overlay: require("@/assets/art/combat/items/arm_s2_overlay.png"),
 		stats: {
-			maxHealth: 4,
-			precision: 2,
-			power: 2,
-			evasion: 1,
-			burnProtection: 7
 		},
 		requires: {
 			evasion: 10
@@ -125,11 +87,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_s3.png"), overlay: require("@/assets/art/combat/items/arm_s3_overlay.png"),
 		stats: {
-			maxHealth: 8,
-			precision: 4,
-			power: 4,
-			evasion: 2,
-			burnProtection: 10
 		},
 		requires: {
 			evasion: 20
@@ -140,11 +97,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_s4.png"), overlay: require("@/assets/art/combat/items/arm_s4_overlay.png"),
 		stats: {
-			maxHealth: 12,
-			precision: 6,
-			power: 6,
-			evasion: 3,
-			burnProtection: 13
 		},
 		requires: {
 			evasion: 30
@@ -155,11 +107,6 @@ const ARMOR = {
 		sellPrice: 600,
 		icon: require("@/assets/art/combat/items/arm_s5.png"), overlay: require("@/assets/art/combat/items/arm_s5_overlay.png"),
 		stats: {
-			maxHealth: 16,
-			precision: 8,
-			power: 8,
-			evasion: 4,
-			burnProtection: 16
 		},
 		requires: {
 			evasion: 40
@@ -170,11 +117,6 @@ const ARMOR = {
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/arm_syndi.png"), overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
 		stats: {
-			maxHealth: 20,
-			precision: 10,
-			power: 10,
-			evasion: 5,
-			burnProtection: 19
 		},
 		requires: {
 			evasion: 50,
@@ -189,10 +131,9 @@ const MECHS = {
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		overlay: require("@/assets/art/fabrication/mechripley.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 7
 		}
 	},
 	ripleymk2: {
@@ -200,10 +141,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 11
 		}
 	},
 	odysseus: {
@@ -211,10 +151,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechodysseus.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 15
 		}
 	},
 	firefighter: {
@@ -222,10 +161,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 19
 		}
 	},
 	clarke: {
@@ -233,10 +171,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 22
 		}
 	},
 	durand: {
@@ -244,10 +181,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 25
 		}
 	},
 	marauder: {
@@ -255,10 +191,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmarauder.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 28
 		}
 	},
 	gygax: {
@@ -266,10 +201,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechgygax.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 32
 		}
 	},
 	mauler: {
@@ -277,10 +211,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 35
 		}
 	},
 	deathripley: {
@@ -288,10 +221,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 38
 		}
 	},
 	darkgygax: {
@@ -299,10 +231,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 41
 		}
 	},
 	reticence: {
@@ -310,10 +241,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 44
 		}
 	},
 	seraph: {
@@ -321,10 +251,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 47
 		}
 	},
 	honk: {
@@ -332,10 +261,9 @@ const MECHS = {
 		sellPrice: 1000,
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 50
 		}
 	},
 	phazon: {
@@ -343,17 +271,31 @@ const MECHS = {
 		sellPrice: 100000,
 		icon: require("@/assets/art/fabrication/mechphazon.png"),
 		stats: {
-			maxHealth: 150,
-			evasion: -15,
-			defense: 30,
-			power: 10
+		},
+		requires: {
+			fabrication: 50
 		}
 	}
 }
 
-Object.values(ARMOR).forEach(armor => {
-	armor.equipmentSlot = "chest";
+Object.values(BRUTEARMOR).forEach(brutearmor => {
+	brutearmor.equipmentSlot = "chest";
+	let bruteConstant = Math.max(10, brutearmor.requires.evasion);
 
+	brutearmor.stats.maxHealth = Math.trunc(bruteConstant * 1.5);
+	brutearmor.stats.power = Math.ceil(bruteConstant * .05);
+	brutearmor.stats.evasion = Math.ceil(bruteConstant * 0.45);
+	brutearmor.stats.bruteProtection = Math.round(bruteConstant * .2) + 2;
+});
+
+Object.values(BURNARMOR).forEach(burnarmor => {
+	burnarmor.equipmentSlot = "chest";
+	let burnConstant = Math.max(5, burnarmor.requires.evasion);
+
+	burnarmor.stats.maxHealth = Math.trunc(burnConstant * 1.5);
+	burnarmor.stats.precision = Math.ceil(burnConstant * .05);
+	burnarmor.stats.evasion = Math.ceil(burnConstant * 0.4);
+	burnarmor.stats.burnProtection = Math.round(burnConstant * .3) + 3;
 });
 
 Object.values(MECHS).forEach(mech => {
@@ -361,16 +303,19 @@ Object.values(MECHS).forEach(mech => {
 	// mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
+	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 2);
 	mech.stats.moveTime = 3;
-	// mech.sellPrice = Math.ceil((mech.requires.meleePower + 10) * 12.25 - 75 );
-	// mech.stats.maxHealth = mech.requires.meleePower * 1;
-	// mech.stats.precision = Math.ceil(mech.requires.meleePower * .35);
-	// mech.stats.power = Math.round(mech.requires.meleePower * .5);
-	// mech.stats.evasion = Math.trunc(mech.requires.meleePower * -.1);
-	// mech.stats.command = Math.ceil(mech.requires.meleePower * -.1);
+	// mech.sellPrice = Math.ceil((mech.requires.fabrication + 10) * 12.25 - 75 );
+	mech.stats.maxHealth = mech.requires.fabrication * 3;
+	mech.stats.precision = Math.ceil(mech.requires.fabrication * .2);
+	mech.stats.power = Math.ceil(mech.requires.fabrication * .2);
+	mech.stats.evasion = Math.trunc(mech.requires.fabrication * .1);
+	mech.stats.protection = Math.trunc(mech.requires.fabrication * .15);
+	mech.stats.bruteProtection = Math.trunc(mech.requires.fabrication * .2);
 });
 
 export default {
-	...ARMOR,
+	...BRUTEARMOR,
+	...BURNARMOR,
 	...MECHS
 }
