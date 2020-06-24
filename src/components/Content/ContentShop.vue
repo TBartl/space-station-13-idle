@@ -12,7 +12,7 @@
 					{name: 'New Jobs?', icon: require('@/assets/art/cooking/icon.png'), iconClass:'mx--1'},
 					{name: 'Job Upgrades?', icon: require('@/assets/art/mining/upgrade1.png'), iconClass:'mx--1'},
 					{name: 'Gambling?', icon: require('@/assets/art/shop/items/hatcrate.png'), iconClass:'mx--1'},
-					{name: 'Capes?', icon: require('@/assets/art/combat/items/capcloak.png'), iconClass:'mx--1'},
+					{name: 'Capes?', icon: require('@/assets/art/combat/items/cloak/capcloak.png'), iconClass:'mx--1'},
 					{name: 'Resistance?', icon: require('@/assets/art/jobinfo/cargo_banner.png'), iconClass:'mx--1'}
 				]"
       >
@@ -62,7 +62,7 @@
             Once you've demonstrated your mastery, I'll be able to order you a
             <img
               class="mx--2"
-              :src="require('@/assets/art/combat/items/capcloak.png')"
+              :src="require('@/assets/art/combat/items/cloak/capcloak.png')"
             />
             <b>Cape</b> for a given job.
           </span>
@@ -70,7 +70,7 @@
             I've heard rumors that these
             <img
               class="mx--2"
-              :src="require('@/assets/art/combat/items/capcloak.png')"
+              :src="require('@/assets/art/combat/items/cloak/capcloak.png')"
             />
             <b>Capes</b> will work as an extra
             <img
