@@ -2,7 +2,7 @@
   <div v-if="valid" class="d-flex flex-row align-items-center">
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
     <img :src="item.icon" :id="id" class="mr-1" />
-    <item-popover :itemId="itemId" :target="id" />
+    <item-popover :itemId="itemId" :target="id" placement="right"/>
     <span>{{countText}}&nbsp;</span>
     <span>{{item.name}}</span>
   </div>
