@@ -8,7 +8,7 @@
         class="requirement p-1 mt-1 rounded d-flex flex-row align-items-center"
         :class="requirement.class"
         v-for="(requirement, index) in requirements"
-        :key="index"
+        :key="'req'+index"
       >
         <span>Requires:</span>
         <img class="mx-1" :src="requirement.icon" alt />
@@ -16,12 +16,12 @@
       </div>
       <span
         v-for="(allow, index) in allows"
-        :key="index"
+        :key="'allow'+index"
         class="success-bubble mt-1"
       >Allows: {{allow.toUpperCase()}}</span>
       <span
         v-for="(restriction, index) in restrictions"
-        :key="index"
+        :key="'restriction'+index"
         class="warning-bubble mt-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
       <span class="description mt-1" v-if="item.description">{{item.description}}</span>
