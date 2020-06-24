@@ -1,20 +1,13 @@
 export default {
-	jumpsuitGray: {
-		name: "Assistants Jumpsuit",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/jumpsuit_grey.png"),
+	jumpsuitMedical: {
+		name: "Paramedic Jumpsuit",
+		sellPrice: 300,
 		equipmentSlot: "jumpsuit",
-		overlay: require("@/assets/art/combat/items/jumpsuit_grey.png"),
+		icon: require("@/assets/art/combat/items/jumpsuit_medical.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay.png"),
 		stats: {
-			maxHealth: 5,
-			evasion: 30,
-			protection: 20,
-			precision: 10,
-			power: 10,
+			maxHealth: 20
 		},
-		requires: {
-			evasion: 3,
-		}
 	},
 	jumpsuitExplorer: {
 		name: "Explorer's Jumpsuit",
@@ -24,7 +17,8 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_mining_overlay.png"),
 		stats: {
 			maxHealth: 5,
-			evasion: 2
+			power: 5,
+			evasion: 3
 		},
 		description: "+20% mining XP",
 		xpBonuses: {
@@ -39,6 +33,8 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_engi_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			precision: 5,
+			evasion: 3
 		},
 		description: "+20% engineering XP",
 		xpBonuses: {
@@ -53,6 +49,8 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_robotics_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			precision: 5,
+			evasion: 3
 		},
 		description: "+20% fabrication XP",
 		xpBonuses: {
@@ -67,6 +65,8 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_grey_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			power: 5,
+			evasion: 3
 		},
 		description: "+20% graytiding XP",
 		xpBonuses: {
@@ -81,21 +81,13 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_janitor_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			precision: 5,
+			evasion: 3
 		},
 		description: "+20% tinkering XP",
 		xpBonuses: {
 			jumpsuitTinkering: 20
 		}
-	},
-	jumpsuitMedical: {
-		name: "Paramedic Jumpsuit",
-		sellPrice: 300,
-		equipmentSlot: "jumpsuit",
-		icon: require("@/assets/art/combat/items/jumpsuit_medical.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay.png"),
-		stats: {
-			maxHealth: 10,
-		},
 	},
 	jumpsuitBotany: {
 		name: "Botanist Jumpsuit",
@@ -105,6 +97,8 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_botany_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			power: 5,
+			evasion: 3
 		},
 		description: "+20% botany XP",
 		xpBonuses: {
@@ -119,10 +113,28 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_chef_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			precision: 5,
+			evasion: 3
 		},
 		description: "+20% cooking XP",
 		xpBonuses: {
 			cooking: 20
+		}
+	},
+	jumpsuitChemistry: {
+		name: "Chemistry Jumpsuit",
+		sellPrice: 300,
+		equipmentSlot: "jumpsuit",
+		icon: require("@/assets/art/combat/items/jumpsuit_chemistry.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_chemistry_overlay.png"),
+		stats: {
+			maxHealth: 10,
+			power: 5,
+			evasion: 3
+		},
+		description: "+20% chemistry XP",
+		xpBonuses: {
+			chemistry: 20
 		}
 	},
 	jumpsuitScience: {
@@ -133,24 +145,12 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_science_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			evasion: 3,
+			command:5
 		},
 		description: "+20% xenobiology XP",
 		xpBonuses: {
 			xenobiology: 20
-		}
-	},
-	jumpsuitChemistry: {
-		name: "Chemistry Jumpsuit",
-		sellPrice: 300,
-		equipmentSlot: "jumpsuit",
-		icon: require("@/assets/art/combat/items/jumpsuit_chemistry.png"),
-		overlay: require("@/assets/art/combat/items/jumpsuit_chemistry_overlay.png"),
-		stats: {
-			maxHealth: 5,
-		},
-		description: "+20% chemistry XP",
-		xpBonuses: {
-			chemistry: 20
 		}
 	},
 	jumpsuitSecurity: {
@@ -161,6 +161,9 @@ export default {
 		overlay: require("@/assets/art/combat/items/jumpsuit_valid_overlay.png"),
 		stats: {
 			maxHealth: 5,
+			precision: 2,
+			power: 2,
+			evasion: 3
 		},
 		description: "+20% validhunting XP",
 		xpBonuses: {

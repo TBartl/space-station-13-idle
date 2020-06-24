@@ -79,7 +79,7 @@ export function createMobModule(mobType) {
 				return hit;
 			},
 			hitSigma() {
-				return 20;
+				return 40;
 			},
 			hitDiff(state, getters) {
 				return getters.stats.precision - getters.targetStats.evasion;
