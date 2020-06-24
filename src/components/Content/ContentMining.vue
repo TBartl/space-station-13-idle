@@ -53,7 +53,10 @@
           </span>
           <span>
             Of course, you're probably going to want to build some experience up before you go after some of the
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetGold.png')" />
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/mining/SheetGold.png')"
+            />
             <img class="mx--1" :src="require('@/assets/art/mining/SheetUranium.png')" />
             <img class="mx--1" :src="require('@/assets/art/mining/SheetDiamond.png')" />
             <b>fancier stuff</b>
@@ -78,15 +81,15 @@
           <span>
             Or maybe they just sell it straight for
             <img
-              class="mx--0 mr-1"
-              :src="require('@/assets/art/misc/coin.png')"
+              class="mx--2"
+              :src="require('@/assets/art/misc/coin-padded.png')"
             />
             <b>Money</b>.
           </span>
           <span>
             Don't really know. And as long as my tools are getting
             <img
-              class="mx--0 mr-1"
+              class="mx--0"
               :src="require('@/assets/art/mining/upgrade1.png')"
             />
             <b>Upgraded</b>, I don't really care.
