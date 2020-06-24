@@ -120,7 +120,7 @@ for (let i = 0; i < 5; i++) {
 	if (i == 3) upgrade.requiredItems.money = 800000
 	if (i == 4) upgrade.requiredItems.money = 2000000
 
-	FABRICATION_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
+	FABRICATION_UPGRADES[`upgradeFabrication${i + 1}`] = upgrade;
 }
 
 const BOTANY_UPGRADES = {

@@ -43,13 +43,13 @@
         <div class="col-12 col-lg-4 mb-3">
           <combat-player-panel />
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-12 col-sm-6 col-lg-2 mb-3">
           <mob-card mobType="player" />
         </div>
         <div class="col-12 col-lg-6" v-if="!inCombat">
           <validhunting />
         </div>
-        <div class="col-6 col-lg-2 mb-3" v-if="inCombat">
+        <div class="col-12 col-sm-6 col-lg-2 mb-3" v-if="inCombat">
           <mob-card mobType="enemy" />
         </div>
         <div class="col-12 col-lg-4" v-if="inCombat">

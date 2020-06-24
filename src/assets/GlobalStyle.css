@@ -8,6 +8,13 @@ body {
 	font-weight: 600;
 }
 
+
+@media (max-width: 576px) {
+	body {
+		font-size: 0.8rem;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #646a6e;
 	margin-bottom: 0;
@@ -161,6 +168,18 @@ img {
 }
 .inventory-item img {
   width: 64px;
+}
+
+
+@media (max-width: 576px) {
+	.inventory-item {
+		width: 42px;
+		margin: 0.25rem;
+	}
+	
+	.inventory-item img {
+		width: 32px;
+	}
 }
 
 .mx--0,

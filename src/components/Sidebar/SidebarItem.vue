@@ -35,10 +35,10 @@ export default {
     }
   },
   methods: {
-		setVisibleSidebarItem() {
-			if (this.locked) return;
-			this.$store.commit("setVisibleSidebarItem", this.id);
-		}
+    setVisibleSidebarItem() {
+      if (this.locked) return;
+      this.$store.commit("setVisibleSidebarItem", this.id);
+    }
   }
 };
 </script>
@@ -49,6 +49,13 @@ export default {
   color: rgba(255, 255, 255, 0.5);
   padding: 0.3rem 1rem;
 }
+
+@media (max-width: 576px) {
+  .item {
+    padding-left: 0.5rem;
+  }
+}
+
 .item:not(.locked):hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);

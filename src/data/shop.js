@@ -111,7 +111,7 @@ const JOB_UNLOCKS = {
 		description: "Allows you to raise slimes that can fight alongside you",
 		icon: require('@/assets/art/xenobio/icon.gif'),
 		requiredItems: {
-			money: 100000
+			money: 25000
 		},
 		upgrade: "xenobiologyUnlocked",
 		requiredUpgrades: {

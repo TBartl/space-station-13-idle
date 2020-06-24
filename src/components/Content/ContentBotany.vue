@@ -17,19 +17,93 @@
         title="Reed Glover the Botanist says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Seeds?', icon: require('@/assets/art/botany/seed.png'), iconClass:'mx--2'},
+					{name: 'Plants?', icon: require('@/assets/art/botany/PlantPepperhot.png'), iconClass:'mx--2'},
+					{name: 'Stats?', icon: require('@/assets/art/combat/precision.png'), iconClass:'mx--0'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
           <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
+            Before I became a
+            <img class="mx--0" :src="require('@/assets/art/botany/icon.png')" />
+            <b>Botanist</b>, I had a crippling addiction to space weed.
+          </span>
+          <span>
+            Now, I also get to grow cool
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/botany/PlantPepperhot.png')"
+            />
+            <b>Plants</b>.
           </span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Seeds?">
+          <span>
+            Thanks to science, you can grow any type of
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/botany/PlantPepperhot.png')"
+            />
+            <b>Plant</b> from just a single type of Seed.
+          </span>
+          <span>
+            Head down to
+            <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+            <b>Cargo</b> and you can order some, assuming you have the
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/misc/coin-padded.png')"
+            />
+            <b>Cash</b>.
+          </span>
+        </template>
+        <template slot="Plants?">
+          <span>
+            Most of the
+            <img class="mx--2" :src="require('@/assets/art/botany/PlantPepperhot.png')" />
+            <b>Plants</b> you'll grow here can be eaten to restore your
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/health.gif')"
+            />
+            <b>Health</b>.
+          </span>
+          <span>
+            While I prefer my produce
+            <i>au naturel</i>, you can also
+            <img class="mx--2" :src="require('@/assets/art/cooking/icon.png')" />
+            <b>Cook</b> it to bring out even more flavor.
+          </span>
+        </template>
+        <template slot="Stats?">
+          <span>They say you are what you eat.</span>
+          <span>
+            Depending on the
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/botany/PlantPepperhot.png')"
+            />
+            <b>Food</b> you're using, you'll find that some of your
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/precision.png')"
+            />
+            <img class="mx--1" :src="require('@/assets/art/combat/skull.png')" />
+            <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
+            <b>Combat Stats</b> will be improved or lowered.
+          </span>
+          <span>
+            These
+            <img class="mx--0" :src="require('@/assets/art/combat/precision.png')" />
+            <img class="mx--1" :src="require('@/assets/art/combat/skull.png')" />
+            <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
+            <b>Stat</b> changes will be applied just by having the
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/botany/PlantPepperhot.png')"
+            />
+            <b>Food</b> equipped, even if you aren't eating it. Crazy, huh?
+          </span>
         </template>
       </job-info>
 

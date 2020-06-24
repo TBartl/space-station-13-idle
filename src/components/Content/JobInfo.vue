@@ -15,9 +15,10 @@
             class="d-flex flex-row align-items-center justify-content-center mt-1 flex-wrap"
           >
             <button
-              v-for="(option, index) in filteredOptions"
-              :key="index"
-              class="btn btn-outline-primary mt-1 mx-1"
+              v-for="option in filteredOptions"
+              :key="option.name"
+              class="btn mt-1 mx-1"
+							:class="option.name == current ? 'btn-primary' : 'btn-outline-primary'"
               @click="current=option.name"
             >
               <img
@@ -49,7 +50,10 @@ export default {
   },
   computed: {
     filteredOptions() {
-      return this.options.filter(option => option.name != this.current);
+      return this.options.filter(option => {
+        if (option.name == this.current && option.name == "Back") return false;
+        return true;
+      });
     },
     dismissed() {
       return this.$store.getters["info/dismissed"](this.infoId);
@@ -85,9 +89,9 @@ export default {
   width: 32px;
 }
 .slot span {
-	margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .slot span img {
-	width: 32px;
+  width: 32px;
 }
 </style>

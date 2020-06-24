@@ -34,7 +34,7 @@
               class="mx--2"
               :src="require('@/assets/art/mining/SheetIron.png')"
             />
-            <b>Metal</b> and
+            <b>Ore</b> and
             <img class="mx--0" :src="require('@/assets/art/engineering/power.png')" />
             <b>Power</b> before they'll go brrrrr.
           </span>
@@ -44,7 +44,7 @@
               class="mx--2"
               :src="require('@/assets/art/mining/SheetIron.png')"
             />
-            <b>Metal</b> from our
+            <b>Ore</b> from our
             <img class="mx--0" :src="require('@/assets/art/mining/icon.png')" />
             <b>Miners</b>
           </span>
