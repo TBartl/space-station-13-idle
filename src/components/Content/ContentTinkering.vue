@@ -49,8 +49,114 @@
             <b>natural resssourcesss</b> of thisss ssstation.
           </span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Junk?">
+          <span>
+            <img class="mx--0" :src="require('@/assets/art/graytiding/junk.png')" />
+            <b>"Junk"</b>? Bah, you humansss are all too narrow minded.
+          </span>
+          <span>
+            In the handsss of a ssskilled craftssslizard like myssself, thisss
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/graytiding/junk.png')"
+            />
+            <b>"Junk"</b> can be made into all sssorts of
+            <img
+              class="mx--1"
+              :src="require('@/assets/art/combat/items/melee_c4.png')"
+            />
+            <img class="mx--2" :src="require('@/assets/art/combat/items/arm_b2.png')" />
+            <b>Ussseful Ssstuff</b>.
+          </span>
+          <span>
+            The bigger challenge isss getting my handsss on it. For sssomeone like myssself, Nanatrosssan isssn't exactly giving their
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/graytiding/junk.png')"
+            />
+            <b>"Junk"</b> away. That'sss where a bit of
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/graytiding/icon.png')"
+            />
+            <b>Graytiding</b> can help.
+          </span>
+        </template>
+        <template slot="Recycling?">
+          <span>
+            Outssside of crafting, sometimesss I jussst like to ssset this
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/tinkering/burnjunk.png')"
+            />
+            <b>Ssstuff</b> ablaze.
+          </span>
+          <span>
+            It remindsss me of my homeland, but I guesss the fire could also be usssed to generate
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/engineering/power.png')"
+            />
+            <b>Power</b> in the handsss of a ssskilled
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/engineering/icon.png')"
+            />
+            <b>Engineer</b>.
+          </span>
+        </template>
+        <template slot="Weaponsss?">
+          <span>
+            The only reliable
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/melee_c4.png')"
+            />
+            <b>Weapon</b> issss the one you craft yourself.
+          </span>
+          <span>
+            Why wassste time making ammo for a
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/items/gune_energy.png')"
+            />
+            <b>gun</b> when a good ssspear can do the job?
+          </span>
+        </template>
+        <template slot="Armor?">
+          <span>
+            Only cowardsss fight from within a
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/fabrication/mechripley.png')"
+            />
+            <b>Mech</b>.
+          </span>
+          <span>
+            The
+            <img class="mx--2" :src="require('@/assets/art/combat/items/arm_b3.png')" />
+            <b>Armor</b> you make here will let you
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/black_shoes.png')"
+            />
+            <b>Dodge</b> a lot more effectively. It alssso won't ssslow you down as you
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/evasion.png')"
+            />
+            <b>Move</b> from prey to prey.
+          </span>
+        </template>
+        <template slot="Upgrade?">
+          <span>
+            An
+            <img class="mx--0" :src="require('@/assets/art/tinkering/upgrade1.png')" />
+            <b>Upgrade</b> from
+            <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+            <b>Cargo</b>? Bah, who needsss that.
+          </span>
+          <span>Tinkering is the bessst job, upgrade or not.</span>
         </template>
       </job-info>
 
