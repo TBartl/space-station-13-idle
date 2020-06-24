@@ -837,7 +837,8 @@ Object.values(GBULLET).forEach(gbullet => {
 	// gbullet.stats.evasion = Math.trunc(gbullet.requires.meleePower * -.35);
 });
 
-export default {
+
+const WEAPONS = {
 	...MBRUTE,
 	...MCUT,
 	...MTOOLBOX,
@@ -845,3 +846,11 @@ export default {
 	...GENERGY,
 	...GBULLET
 }
+
+Object.values(WEAPONS).forEach(weapon => {
+	// Do this to show "BRUTE" on all the weapon item popovers that are otherwise defaulting
+	if (!weapon.stats.damageType) weapon.stats.damageType = "brute";
+})
+
+console.log(WEAPONS);
+export default WEAPONS;
