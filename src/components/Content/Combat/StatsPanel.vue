@@ -20,17 +20,17 @@
         :value="fixedStats.command"
       />
       <stat-panel-item
-        name="Burn Protection"
-        description="Reduces damage taken from burn attacks"
-        :icon="require('@/assets/art/combat/armor-burn.png')"
-        :value="fixedStats.burnProtection"
-				:showPercent="true"
-      />
-      <stat-panel-item
         name="Brute Protection"
         description="Reduces damage taken from brute attacks"
         :icon="require('@/assets/art/combat/armor-brute.png')"
         :value="fixedStats.bruteProtection"
+				:showPercent="true"
+      />
+      <stat-panel-item
+        name="Burn Protection"
+        description="Reduces damage taken from burn attacks"
+        :icon="require('@/assets/art/combat/armor-burn.png')"
+        :value="fixedStats.burnProtection"
 				:showPercent="true"
       />
       <stat-panel-item
