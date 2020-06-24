@@ -45,7 +45,7 @@
           <span>With your generous contributions, we could get these departments back up and running at full capacity.</span>
         </template>
         <template slot="Job Upgrades?">
-          <span>For the right price, I might be able to get you equipment to do your job more efficiently</span>
+          <span>For the right price, I might be able to get you equipped to do your job more efficiently</span>
           <span>I can't just sell this to anyone though. You'll need to demonstrate that you're experienced in that job first.</span>
           <span>
             In fact, for the fancier equipment I'll also need you to prove your
@@ -89,9 +89,8 @@
               class="mx--0"
               :src="require('@/assets/art/shop/items/hatcrate.png')"
             />
-            <b>Hat Crate</b> at some point.
+            <b>Hat Crate</b> at some point; it's the only place you'll find any hats!
           </span>
-          <span>This is the only place you'll find any hats!</span>
         </template>
         <template slot="Resistance?">
           <span>You don't know about the resistance?</span>
