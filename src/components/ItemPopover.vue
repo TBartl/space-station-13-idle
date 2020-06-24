@@ -34,6 +34,10 @@
         class="description mt-1"
         v-if="item.stats && item.stats.moveTime != undefined"
       >{{item.stats.moveTime > 0 ? `+${item.stats.moveTime}` : item.stats.moveTime}} move time</span>
+      <span
+        class="description mt-1"
+        v-if="item.stats && item.stats.attackSpeed != undefined"
+      >Attack Speed: {{item.stats.attackSpeed}}s</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>
