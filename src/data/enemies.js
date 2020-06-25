@@ -152,7 +152,16 @@ export default {
 			},	
 			{
 				chance: 1,
-				item: "foodMeatA"
+				itemTable: [
+					{
+					id: "foodMeatA",
+					weight: 98
+					},
+					{
+					id: "slimeMouse",
+					weight: 2
+					},
+				]
 			}
 		]
 	},
@@ -269,7 +278,16 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatA"
+				itemTable: [
+					{
+					id: "foodMeatA",
+					weight: 98
+					},
+					{
+					id: "slimeDog",
+					weight: 2
+					},
+				]
 			}
 		]
 	},
@@ -780,7 +798,16 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatA"
+				itemTable: [
+					{
+					id: "foodMeatA",
+					weight: 3
+					},
+					{
+					id: "slimeBee",
+					weight: 1
+					},
+				]
 			}
 		]
 	},
@@ -933,8 +960,17 @@ export default {
 				]
 			},
 			{
-				chance: 1,
-				item: "foodMeatA"
+			chance: 1,
+			itemTable: [
+				{
+				id: "foodMeatA",
+				weight: 98
+				},
+				{
+				id: "slimeGoat",
+				weight: 2
+				},
+			]
 			}
 		]
 	},

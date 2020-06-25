@@ -163,7 +163,39 @@ const SLIMES = {
 			evasion: 10,
 			maxHealth: 50
 		}
-
+	},
+	slimeDog: {
+		name: "Pet Corgi",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/Ian.png"),
+		tier: 7,
+		stats: {
+			precision: 10,
+			maxHealth: 50
+		}
+	},
+	slimeGoat: {
+		name: "Pet Goat",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/pete.png"),
+		tier: 7,
+		stats: {
+			power: 10,
+			maxHealth: 50
+		}
+	},
+	slimeBee: {
+		name: "Pet Bee",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
+		tier: 10,
+		stats: {
+			protection: 1,
+			precision: 1,
+			evasion: 1,
+			power: 1,
+			maxHealth: 50
+		}
 	},
 	slimeMining: {
 		name: "Mine Bot",
