@@ -10,7 +10,11 @@ export function createCoroutineModule() {
 		state: {
 			progress: 0,
 			duration: 0,
-			currentTimeout: 0
+			currentTimeout: 0,
+
+			// After a timeout, we will probably have overshot the time needed
+			// So let's apply this to the next timeout
+			bonusTime: 0
 		},
 		getters: {
 			progress(state) {
@@ -30,8 +34,18 @@ export function createCoroutineModule() {
 					return;
 				}
 				dispatch("cancel");
-				state.duration = duration;
-				dispatch("_progress", { onFinish });
+
+				// On fast enough chronoboosts, we may just be able to skip progressing this action
+				if (state.bonusTime >= duration) {
+					state.bonusTime -= duration;
+					onFinish();
+				} else {
+					state.progress = state.bonusTime;
+					state.bonusTime = 0;
+					state.duration = duration;
+					dispatch("_progress", { onFinish });
+				}
+
 			},
 			cancel({ state }) {
 				clearTimeout(state.currentTimeout);
@@ -42,9 +56,12 @@ export function createCoroutineModule() {
 				var from = new Date().getTime();
 				state.currentTimeout = setTimeout(() => {
 					var to = new Date().getTime();
-					state.progress += (to - from) / 1000 * rootGetters.chronoSpeed;
+					var elapsed = (to - from) / 1000;
+					state.progress += elapsed * rootGetters.chronoSpeed;
 
 					if (state.progress >= state.duration) {
+						state.bonusTime = state.progress - state.duration;
+
 						state.progress = 0;
 						state.currentTimeout = 0;
 						onFinish();
