@@ -179,7 +179,7 @@ const SLIMES = {
 		name: "Killer Tomato",
 		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
-		tier:7,
+		tier: 7,
 		stats: {
 			maxHealth: 20,
 			evasion: 10,
@@ -223,24 +223,28 @@ Object.values(SLIMES).forEach((slime, index) => {
 		}
 	}
 	else if (mod == 4) {
+		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
 			damageType: "burn"
 		}
 	}
 	else if (mod == 5) {
+		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
 			attackSpeed: 2 - (slime.tier / 10)
 		}
 	}
 	else if (mod == 6) {
+		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
 			attackSpeed: 3 + (slime.tier / 10)
 		}
 	}
 	else if (mod == 7) {
+		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
 			damageType: "brute"

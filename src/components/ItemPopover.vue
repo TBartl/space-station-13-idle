@@ -8,7 +8,7 @@
         class="requirement p-1 mt-1 rounded d-flex flex-row align-items-center"
         :class="requirement.class"
         v-for="(requirement, index) in requirements"
-        :key="index"
+        :key="'req'+index"
       >
         <span>Requires:</span>
         <img class="mx-1" :src="requirement.icon" alt />
@@ -16,24 +16,28 @@
       </div>
       <span
         v-for="(allow, index) in allows"
-        :key="index"
+        :key="'allow'+index"
         class="success-bubble mt-1"
       >Allows: {{allow.toUpperCase()}}</span>
       <span
         v-for="(restriction, index) in restrictions"
-        :key="index"
+        :key="'restriction'+index"
         class="warning-bubble mt-1"
       >Restriction: {{restriction.toUpperCase()}}</span>
       <span class="description mt-1" v-if="item.description">{{item.description}}</span>
       <span class="potion-charges mt-1" v-if="item.potionCharges">Charges: {{item.potionCharges}}</span>
       <span
         class="description mt-1"
-        v-if="item.fleeChance"
-      >{{item.fleeChance}}% base chance to flee whenever you get hit</span>
-      <span
-        class="description mt-1"
         v-if="item.stats && item.stats.moveTime != undefined"
       >{{item.stats.moveTime > 0 ? `+${item.stats.moveTime}` : item.stats.moveTime}} move time</span>
+      <span
+        class="description mt-1"
+        v-if="item.stats && item.stats.attackSpeed != undefined"
+      >Attack Speed: {{item.stats.attackSpeed}}s</span>
+      <span
+        class="description mt-1"
+        v-if="item.fleeChance"
+      >{{item.fleeChance}}% base chance to flee whenever you get hit</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
     </div>

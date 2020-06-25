@@ -117,7 +117,7 @@ export default {
 			power: 0,
 		},
 		requires: {
-			Cooking: MAX_LEVEL
+			cooking: MAX_LEVEL
 		}
 	},
 	capeXenobiology: {
