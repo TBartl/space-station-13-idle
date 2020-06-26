@@ -1,3 +1,5 @@
+import { MAX_LEVEL } from "@/data/experience";
+
 const BASES = {
 	synthOxygen: {
 		item: "oxygen",
@@ -59,8 +61,6 @@ const POTIONS = {
 	synthPotionMining: {
 		item: "potionMining",
 		time: 2,
-		xp: 1,
-		requiredLevel: 5,
 		requiredItems: {
 			oxygen: 1,
 			oil: 2,
@@ -70,8 +70,6 @@ const POTIONS = {
 	synthPotionEngineering: {
 		item: "potionEngineering",
 		time: 2,
-		xp: 2,
-		requiredLevel: 10,
 		requiredItems: {
 			water: 1,
 			sacid: 1,
@@ -82,8 +80,6 @@ const POTIONS = {
 	synthPotionChem: {
 		item: "potionChemistry",
 		time: 2,
-		xp: 3,
-		requiredLevel: 15,
 		requiredItems: {
 			oxygen: 2,
 			oil: 2,
@@ -96,8 +92,6 @@ const POTIONS = {
 	synthPotionFabrication: {
 		item: "potionFabrication",
 		time: 2,
-		xp: 4,
-		requiredLevel: 20,
 		requiredItems: {
 			oil: 1,
 			lithium: 2,
@@ -107,8 +101,6 @@ const POTIONS = {
 	synthPotionTinkering: {
 		item: "potionTinkering",
 		time: 2,
-		xp: 5,
-		requiredLevel: 25,
 		requiredItems: {
 			oxygen: 1,
 			oil: 2,
@@ -122,8 +114,6 @@ const POTIONS = {
 	synthPotionBotany: {
 		item: "potionBotany",
 		time: 2,
-		xp: 6,
-		requiredLevel: 30,
 		requiredItems: {
 			sacid: 1,
 			mercury: 2,
@@ -133,8 +123,6 @@ const POTIONS = {
 	synthPotionCooking: {
 		item: "potionCooking",
 		time: 2,
-		xp: 7,
-		requiredLevel: 35,
 		requiredItems: {
 			oxygen: 1,
 			mercury: 2,
@@ -144,8 +132,6 @@ const POTIONS = {
 	synthPotionXenobiology: {
 		item: "potionXenobiology",
 		time: 2,
-		xp: 8,
-		requiredLevel: 40,
 		requiredItems: {
 			oxygen: 1,
 			oil: 1,
@@ -156,8 +142,6 @@ const POTIONS = {
 	synthPotionGraytiding: {
 		item: "potionGraytiding",
 		time: 2,
-		xp: 9,
-		requiredLevel: 45,
 		requiredItems: {
 			oxygen: 1,
 			oil: 1,
@@ -168,8 +152,6 @@ const POTIONS = {
 	synthPotionShitposting: {
 		item: "potionShitposting",
 		time: 2,
-		xp: 10,
-		requiredLevel: 50,
 		requiredItems: {
 			water: 2,
 			lithium: 1,
@@ -179,8 +161,16 @@ const POTIONS = {
 	},
 }
 
+const MIN_LEVEL = 1;
 Object.values(BASES).forEach(action => action.type = "bases");
-Object.values(POTIONS).forEach(action => action.type = "chems");
+Object.values(POTIONS).forEach((action, index) => {
+	action.type = "chems";
+
+	let level = Math.round(MIN_LEVEL + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL));
+
+	action.requiredLevel = level;
+	action.xp = Math.max(.35, level / 5);
+});
 
 export const ACTIONS = {
 	...BASES,
