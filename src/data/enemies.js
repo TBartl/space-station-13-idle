@@ -1,4 +1,3 @@
-
 export default {
 	janitor: {
 		name: "Janitor",
@@ -9,7 +8,6 @@ export default {
 			precision: 3,
 			power: 12,
 			evasion: 10,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -35,6 +33,11 @@ export default {
 					{
 						id: 'armorJunk',
 						weight: 3
+					},
+					{
+						id: 'ticket1',
+						count: [0,1],
+						weight: 1
 					}
 				]
 			},
@@ -53,7 +56,6 @@ export default {
 			precision: 6,
 			power: 9,
 			evasion: 16,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -97,7 +99,6 @@ export default {
 			precision: 5,
 			power: 6,
 			evasion: 16,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -139,7 +140,6 @@ export default {
 			precision: -1,
 			power: -1,
 			evasion: -1,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -216,7 +216,6 @@ export default {
 			precision: 6,
 			power: 13,
 			evasion: 10,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -242,6 +241,11 @@ export default {
 					{
 						id: 'jumpsuitTinkering',
 						weight: 1
+					},
+					{
+						id: 'ticket1',
+						count: [0,2],
+						weight: 1
 					}
 				]
 			},
@@ -260,7 +264,6 @@ export default {
 			precision: 10,
 			power: 21,
 			evasion: 23,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -271,10 +274,6 @@ export default {
 					id: "money",
 					count: [10, 30]
 				}
-			},
-			{
-				chance: .8,
-				item: "gold"
 			},
 			{
 				chance: 1,
@@ -300,7 +299,6 @@ export default {
 			precision: 20,
 			power: 24,
 			evasion: 22,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -315,15 +313,16 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'armb1',
+						id: 'armB1',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'meleeT2',
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'ticket1',
+						count: [1,2],
 						weight: 1
 					}
 				]
@@ -343,7 +342,6 @@ export default {
 			precision: 29,
 			power: 19,
 			evasion: 36,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -358,15 +356,15 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'ammoB1',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'gunB2',
 						weight: 1
 					},
 					{
-						id: 'meleeT2',
+						id: 'ammoB2',
 						weight: 1
 					}
 				]
@@ -385,7 +383,6 @@ export default {
 			precision: 20,
 			power: 35,
 			evasion: 15,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -404,7 +401,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'foodEva1',
 						weight: 1
 					},
 					{
@@ -428,7 +425,6 @@ export default {
 			precision: 37,
 			power: 28,
 			evasion: 22,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -447,11 +443,16 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'ammoE2',
 						weight: 1
 					},
 					{
 						id: 'jumpsuitSecurity',
+						weight: 1
+					},
+					{
+						id: 'ticket1',
+						count: [1,3],
 						weight: 1
 					}
 				]
@@ -470,7 +471,6 @@ export default {
 			precision: 27,
 			power: 22,
 			evasion: 33,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -482,11 +482,11 @@ export default {
 					count: [20, 40]
 				}
 			},			{
-				chance: 0.5,
+				chance: 0.75,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 5
+						id: 'lithium',
+						weight: 15
 					},
 					{
 						id: 'faceSyndicate',
@@ -513,7 +513,6 @@ export default {
 			precision: 36,
 			power: 36,
 			evasion: 32,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 90
 		},
@@ -556,7 +555,6 @@ export default {
 			precision: 41,
 			power: 44,
 			evasion: 25,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 
@@ -576,11 +574,16 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'meleeT3',
 						weight: 1
 					},
 					{
 						id: 'jumpsuitEngineering',
+						weight: 1
+					},
+					{
+						id: 'ticket2',
+						count: [0,1],
 						weight: 1
 					}
 				]
@@ -600,7 +603,6 @@ export default {
 			precision: 47,
 			power: 42,
 			evasion: 38,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -616,11 +618,11 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'glass',
+						id: 'uranium',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'foodPasta1',
 						weight: 1
 					},
 					{
@@ -644,7 +646,6 @@ export default {
 			precision: 10,
 			power: 37,
 			evasion: 28,
-			protection: 1,
 			damageType: "brute",
 			bruteProtection: 90
 		},
@@ -688,7 +689,6 @@ export default {
 			precision: 34,
 			power: 45,
 			evasion: 25,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -732,7 +732,6 @@ export default {
 			precision: 37,
 			power: 44,
 			evasion: 40,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -780,21 +779,10 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'gold',
-						weight: 1
-					},
-					{
-						id: 'gold',
-						weight: 1
-					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
-				]
+				chance: 1,
+				items: {
+					id: "oxygen",
+				}
 			},
 			{
 				chance: 1,
@@ -820,7 +808,6 @@ export default {
 			precision: 57,
 			power: 40,
 			evasion: 26,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -836,7 +823,7 @@ export default {
 				itemTable: [
 					{
 						id: 'banana',
-						weight: 1
+						weight: 10
 					},
 					{
 						id: 'bananium',
@@ -845,6 +832,11 @@ export default {
 					{
 						id: 'faceClown',
 						weight: 1
+					},
+					{
+						id: 'ticket2',
+						count: [0,2],
+						weight: 3
 					}
 				]
 			},
@@ -863,7 +855,6 @@ export default {
 			precision: 41,
 			power: 61,
 			evasion: 67,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -930,7 +921,6 @@ export default {
 			precision: 49,
 			power: 49,
 			evasion: 44,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -954,7 +944,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'slimeSilver',
 						weight: 1
 					}
 				]
@@ -983,7 +973,6 @@ export default {
 			precision: 41,
 			power: 59,
 			evasion: 42,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -1000,15 +989,20 @@ export default {
 				itemTable: [
 					{
 						id: 'foot',
-						weight: 1
+						weight: 2
 					},{
 						id: 'foodMeatH',
-						weight: 1
+						weight: 2
 					},{
 						id: 'foodMeatA',
-						weight: 1
+						weight: 2
 					},{
 						id: 'foodMeatZ',
+						weight: 2
+					},
+					{
+						id: 'ticket2',
+						count: [1,2],
 						weight: 1
 					}
 				]
@@ -1032,7 +1026,6 @@ export default {
 			precision: 47,
 			power: 66,
 			evasion: 57,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -1051,7 +1044,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'ammoB2',
+						id: 'ammoB3',
 						weight: 1
 					},
 					{
@@ -1075,7 +1068,6 @@ export default {
 			precision: 50,
 			power: 48,
 			evasion: 30,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -1118,7 +1110,6 @@ export default {
 			precision: 250,
 			power: 78,
 			evasion: 68,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -1138,11 +1129,12 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'meleeT5',
 						weight: 1
 					},
 					{
-						id: 'meleeT5',
+						id: 'ticket2',
+						count: [1,3],
 						weight: 1
 					}
 				]
@@ -1162,7 +1154,6 @@ export default {
 			precision: 20,
 			power: 500,
 			evasion: -10,
-			protection: 10,
 			damageType: "brute",
 			burnProtection: 20,
 			bruteProtection: 20
@@ -1187,7 +1178,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'ammoE3',
 						weight: 1
 					}
 				]
@@ -1207,7 +1198,6 @@ export default {
 			precision: 55,
 			power: 59,
 			evasion: 73,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 5,
 			bruteProtection: 5
@@ -1252,10 +1242,9 @@ export default {
 			precision: 70,
 			power: 78,
 			evasion: 67,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 10,
-			bruteProtection: 10
+			bruteProtection: 15
 		},
 		itemTables: [
 			{
@@ -1273,7 +1262,8 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'ticket3',
+						count: [0,1],
 						weight: 1
 					},
 					{
@@ -1297,9 +1287,8 @@ export default {
 			precision: 86,
 			power: 91,
 			evasion: 95,
-			protection: 1,
 			damageType: "brute",
-			burnProtection: 0,
+			burnProtection: 10,
 			bruteProtection: 5
 		},
 		itemTables: [
@@ -1314,7 +1303,8 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
+						id: 'ticket3',
+						count: [0,2],
 						weight: 1
 					},
 					{
@@ -1342,9 +1332,8 @@ export default {
 			precision: 75,
 			power: 71,
 			evasion: 73,
-			protection: 1,
 			damageType: "brute",
-			burnProtection: 0,
+			burnProtection: 20,
 			bruteProtection: 5
 		},
 		itemTables: [
@@ -1387,9 +1376,8 @@ export default {
 			precision: 85,
 			power: 94,
 			evasion: 63,
-			protection: 1,
 			damageType: "brute",
-			burnProtection: 0,
+			burnProtection: 20,
 			bruteProtection: 5
 		},
 		itemTables: [
@@ -1427,19 +1415,18 @@ export default {
 			}
 		]
 	},
-	cultist: {
-		name: "Cultist",
-		icon: require("@/assets/art/combat/enemies/cultist.png"),
+	gorilla: {
+		name: "Gorilla",
+		icon: require("@/assets/art/combat/enemies/gorilla.png"),
 		stats: {
 			maxHealth: 340,
 			attackSpeed: 1.5,
 			precision: 84,
 			power: 87,
 			evasion: 81,
-			protection: 1,
-			damageType: "burn",
-			burnProtection: 0,
-			bruteProtection: 5
+			damageType: "brute",
+			burnProtection: 5,
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -1453,22 +1440,22 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'armB6',
+						id: 'bananaBlue',
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'mushroomred',
 						weight: 1
 					},
 					{
-						id: 'titanium',
+						id: 'plantSeed',
 						weight: 1
 					}
 				]
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatA"
 			}
 		]
 	},
@@ -1481,7 +1468,6 @@ export default {
 			precision: 71,
 			power: 78,
 			evasion: 75,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -1525,7 +1511,6 @@ export default {
 			precision: 63,
 			power: 60,
 			evasion: 80,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -1581,7 +1566,6 @@ export default {
 			precision: 26,
 			power: 35,
 			evasion: 20,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -1612,7 +1596,7 @@ export default {
 			},
 			{
 				chance: .2,
-				item: "armRiotSuit"
+				item: "armB6"
 			},
 			{
 				chance: 1,
@@ -1638,7 +1622,6 @@ export default {
 			precision: 103,
 			power: 54,
 			evasion: 110,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -1658,7 +1641,8 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'ticket3',
+						count: [1,2],
 						weight: 1
 					},
 					{
@@ -1682,7 +1666,6 @@ export default {
 			precision: 104,
 			power: 80,
 			evasion: 72,
-			protection: 1,
 			damageType: "brute",
 			burnProtection: 0,
 			bruteProtection: 5
@@ -1703,7 +1686,8 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'gold',
+						id: 'ticket3',
+						count: [1,3],
 						weight: 1
 					},
 					{
@@ -1720,7 +1704,7 @@ export default {
 						weight: 14
 					},
 					{
-						id: 'armorjunk',
+						id: 'armorJunk',
 						weight: 5
 					},
 					{
@@ -1740,7 +1724,6 @@ export default {
 			precision: 93,
 			power: 73,
 			evasion: 52,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 0,
 			bruteProtection: 5
@@ -1798,7 +1781,6 @@ export default {
 			precision: 94,
 			power: 74,
 			evasion: 10,
-			protection: 1,
 			damageType: "burn",
 			burnProtection: 50,
 			bruteProtection: 60
