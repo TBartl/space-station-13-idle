@@ -6,13 +6,8 @@
     </div>
     <div class="player-block">
       <p class="player-block-header">EQUIPMENT</p>
-      <div class="d-flex flex-column flex-xl-row align-items-center">
-        <div class="mb-2 mb-xl-0 mr-xl-3">
-          <equipment-panel />
-        </div>
-        <div>
-          <stats-panel :stats="stats" :showAll="true" />
-        </div>
+      <div class="d-flex flex-column align-items-center">
+        <equipment-panel />
       </div>
     </div>
     <div class="player-block">
@@ -25,10 +20,10 @@
 <script>
 import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import EquipmentPanel from "@/components/Content/Combat/EquipmentPanel";
-import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import CombatFocusPanel from "@/components/Content/Combat/CombatFocusPanel";
 export default {
-  components: { FoodPanel, EquipmentPanel, StatsPanel, CombatFocusPanel },
+  components: { FoodPanel, EquipmentPanel, CombatFocusPanel },
+
   computed: {
     stats() {
       return this.$store.getters["playerMob/stats"];
