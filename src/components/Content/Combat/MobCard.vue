@@ -1,8 +1,8 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
     <span class="text-uppercase text-center">{{name}}</span>
-    <robustness-badge class="mb-1" :stats="stats" :mobType="mobType" />
-    <div v-if="mobType == 'player'" class="body-icon overlay-div mb-2">
+    <robustness-badge :stats="stats" :mobType="mobType" />
+    <div v-if="mobType == 'player'" class="body-icon overlay-div mt-2">
       <img
         v-for="(overlay, index) in playerOverlayIcons"
         :key="index"
@@ -11,27 +11,29 @@
       />
       <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
     </div>
-    <img v-else class="body-icon mb-2" :src="icon" :class="{'rotate-90': health==0}" />
+    <img v-else class="body-icon mt-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
-      class="mb-2 black-background"
+      class="mt-2 black-background"
       :progress="healthPercent"
       :text="health != 0 ? `${Math.round(health)}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
       v-if="!targetEnemy || !moveProgress"
-      class="mb-2 black-background"
+      class="mt-1 black-background"
       :progress="swingProgress"
       :text="`Attack Speed: ${stats.attackSpeed.toFixed(1)}s`"
     />
     <progress-bar
       v-if="!targetEnemy || (moveProgress && mobType == 'player')"
-      class="mb-2 black-background"
+      class="mt-2 black-background"
       :progress="moveProgress"
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
-    <div v-if="targetEnemy" class="w-100">
+
+    <div v-if="!targetEnemy || (moveProgress && mobType == 'enemy')" class="fake-bar mt-2"></div>
+    <div v-if="targetEnemy" class="w-100 mt-2">
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Max Hit:</span>
@@ -45,11 +47,6 @@
         <span>{{+(hitChance*100).toFixed(1)}}%</span>
       </div>
       <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
-      <div v-if="isValidhuntingTarget" class="mt-1 d-flex flex-row align-items-center">
-        <img :src="validhuntingIcon" />
-        <span class="mr-1 remaining-kills-desc">Remaining Kills:</span>
-        <span>{{validhuntingCount}}</span>
-      </div>
     </div>
 
     <div v-if="mobType == 'player' && companion" class="w-100">
@@ -59,6 +56,14 @@
         <span>{{+(fleeChance*100).toFixed(1)}}%</span>
       </div>
       <stat-explain-flee-chance :target="`${mobType}-stat-flee-chance`" :mobType="mobType" />
+    </div>
+
+    <stats-panel class="mt-2" :stats="stats" :showAll="true" />
+
+    <div v-if="isValidhuntingTarget" class="mt-1 d-flex flex-row align-items-center">
+      <img :src="validhuntingIcon" />
+      <span class="mr-1 remaining-kills-desc">Remaining Kills:</span>
+      <span>{{validhuntingCount}}</span>
     </div>
   </div>
 </template>
@@ -72,6 +77,8 @@ import ProgressBar from "@/components/ProgressBar";
 import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 import StatExplainFleeChance from "@/components/Content/Combat/StatExplainFleeChance";
+import StatsPanel from "@/components/Content/Combat/StatsPanel";
+
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
 
@@ -84,7 +91,8 @@ export default {
     ProgressBar,
     StatExplainMaxHit,
     StatExplainHitChance,
-    StatExplainFleeChance
+    StatExplainFleeChance,
+    StatsPanel
   },
   props: ["mobType"],
   computed: {
@@ -239,7 +247,11 @@ export default {
   width: 15px !important;
 }
 .appear-in-back {
-	z-index: 0;
-	filter: blur(3px);
+  z-index: 0;
+  filter: blur(3px);
+}
+
+.fake-bar {
+  height: 26px;
 }
 </style>

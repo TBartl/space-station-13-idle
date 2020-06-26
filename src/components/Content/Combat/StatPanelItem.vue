@@ -1,6 +1,6 @@
 <template>
   <div class="stat-detail" :class="valueClass" :id="id">
-    <div class="w-100 d-flex flex-row align-items-center">
+    <div class="w-100 d-flex flex-row align-items-center justify-content-center">
       <img :src="icon" class="mr-1" />
       <span>{{value ? value : 0}}{{showPercent ? "%" : ""}}</span>
     </div>

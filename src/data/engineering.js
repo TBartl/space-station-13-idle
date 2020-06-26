@@ -4,7 +4,7 @@ export const ACTIONS = {
 		name: "Stationary Bicycle",
 		items: {
 			id: "power",
-			count: 1
+			count: 2
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
 		xp: 1,
