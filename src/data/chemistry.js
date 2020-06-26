@@ -67,14 +67,14 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionEngineering: {
-		item: "potionEngineering",
+	synthPotionGraytiding: {
+		item: "potionGraytiding",
 		time: 2,
 		requiredItems: {
-			water: 1,
-			sacid: 1,
-			lithium: 1,
-			power: 1
+			oxygen: 1,
+			oil: 1,
+			mercury: 1,
+			junk: 1
 		}
 	},
 	synthPotionChem: {
@@ -89,13 +89,23 @@ const POTIONS = {
 			lithium: 2,
 		}
 	},
-	synthPotionFabrication: {
-		item: "potionFabrication",
+	synthPotionBotany: {
+		item: "potionBotany",
 		time: 2,
 		requiredItems: {
-			oil: 1,
-			lithium: 2,
-			iron: 1
+			sacid: 1,
+			mercury: 2,
+			plantSeed: 1
+		}
+	},
+	synthPotionEngineering: {
+		item: "potionEngineering",
+		time: 2,
+		requiredItems: {
+			water: 1,
+			sacid: 1,
+			lithium: 1,
+			power: 1
 		}
 	},
 	synthPotionTinkering: {
@@ -111,13 +121,14 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionBotany: {
-		item: "potionBotany",
+	synthPotionXenobiology: {
+		item: "potionXenobiology",
 		time: 2,
 		requiredItems: {
-			sacid: 1,
-			mercury: 2,
-			plantSeed: 1
+			oxygen: 1,
+			oil: 1,
+			mercury: 1,
+			iron: 1
 		}
 	},
 	synthPotionCooking: {
@@ -129,24 +140,13 @@ const POTIONS = {
 			foodPasta1: 1
 		}
 	},
-	synthPotionXenobiology: {
-		item: "potionXenobiology",
+	synthPotionFabrication: {
+		item: "potionFabrication",
 		time: 2,
 		requiredItems: {
-			oxygen: 1,
 			oil: 1,
-			mercury: 1,
+			lithium: 2,
 			iron: 1
-		}
-	},
-	synthPotionGraytiding: {
-		item: "potionGraytiding",
-		time: 2,
-		requiredItems: {
-			oxygen: 1,
-			oil: 1,
-			mercury: 1,
-			junk: 1
 		}
 	},
 	synthPotionShitposting: {
