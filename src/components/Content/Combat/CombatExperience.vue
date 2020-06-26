@@ -38,7 +38,7 @@ export default {
   components: { CombatExperienceItem },
   data() {
     return {
-      expanded: true
+      expanded: false
     };
   },
   computed: {

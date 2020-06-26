@@ -27,12 +27,6 @@
           <span>REPLACEME</span>
         </template>
       </job-info>
-
-      <div class="row" v-if="!inCombat">
-        <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
-          <zone :zone="zone" class="mb-3" />
-        </div>
-      </div>
       <div class="row">
         <div class="col-12 mb-3" v-if="inCombat">
           <run-away />
@@ -54,6 +48,11 @@
         </div>
         <div class="col-12 col-lg-4" v-if="inCombat">
           <loot />
+        </div>
+      </div>
+      <div class="row" v-if="!inCombat">
+        <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
+          <zone :zone="zone" class="mb-3" />
         </div>
       </div>
     </div>
