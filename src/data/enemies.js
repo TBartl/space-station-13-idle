@@ -1,3 +1,5 @@
+import { calcRobustness } from "@/utils/combatUtils";
+
 import aiCore from "./enemies/aiCore.js";
 import arrivalLounge from "./enemies/arrivalLounge.js";
 import bridge from "./enemies/bridge.js";
@@ -25,5 +27,20 @@ const ENEMIES = {
 	...showroom,
 	...virology
 }
+
+Object.values(ENEMIES).forEach(enemy => {
+	let robustness = calcRobustness(enemy.stats, "enemy");
+
+	// Don't allow negative robustness for the purpose of calculations (I'm lookin' at you mouse)
+	robustness = Math.max(1, robustness);
+
+	enemy.itemTables.unshift({
+		chance: 1,
+		items: {
+			id: "money",
+			count: [0, robustness * 3]
+		}
+	});
+});
 
 export default ENEMIES;
