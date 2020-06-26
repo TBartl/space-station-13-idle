@@ -76,25 +76,14 @@ const POTIONS = {
 			water: 1,
 			sacid: 1,
 			lithium: 1,
-			power: 10
-		}
-	},
-	synthPotionFabrication: {
-		item: "potionFabrication",
-		time: 2,
-		xp: 3,
-		requiredLevel: 15,
-		requiredItems: {
-			oil: 1,
-			lithium: 2,
-			iron: 1
+			power: 1
 		}
 	},
 	synthPotionChem: {
 		item: "potionChemistry",
 		time: 2,
-		xp: 4,
-		requiredLevel: 20,
+		xp: 3,
+		requiredLevel: 15,
 		requiredItems: {
 			oxygen: 2,
 			oil: 2,
@@ -102,6 +91,17 @@ const POTIONS = {
 			sacid: 2,
 			mercury: 2,
 			lithium: 2,
+		}
+	},
+	synthPotionFabrication: {
+		item: "potionFabrication",
+		time: 2,
+		xp: 4,
+		requiredLevel: 20,
+		requiredItems: {
+			oil: 1,
+			lithium: 2,
+			iron: 1
 		}
 	},
 	synthPotionTinkering: {
@@ -153,16 +153,16 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionEngineering: {
-		item: "potionEngineering",
+	synthPotionGraytiding: {
+		item: "potionGraytiding",
 		time: 2,
 		xp: 9,
 		requiredLevel: 45,
 		requiredItems: {
+			oxygen: 1,
 			oil: 1,
-			water: 1,
-			lithium: 1,
-			iron: 1
+			mercury: 1,
+			junk: 1
 		}
 	},
 	synthPotionShitposting: {
@@ -179,26 +179,12 @@ const POTIONS = {
 	},
 }
 
-const MISC = {
-	synthLube: {
-		time: 3,
-		item: "lube",
-		xp: 5,
-		requiredLevel: 1,
-		requiredItems: {
-			power: 10
-		}
-	}
-}
-
 Object.values(BASES).forEach(action => action.type = "bases");
 Object.values(POTIONS).forEach(action => action.type = "chems");
-Object.values(MISC).forEach(action => action.type = "misc");
 
 export const ACTIONS = {
 	...BASES,
-	...POTIONS,
-	...MISC
+	...POTIONS
 }
 
 export const JOB = {

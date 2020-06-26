@@ -15,7 +15,7 @@ const BASES = {
 		icon: require("@/assets/art/chemistry/chemWater.png")
 	},
 	sacid: {
-		name: "Sulpheric Acid",
+		name: "Sulphuric Acid",
 		sellPrice: -2,
 		icon: require("@/assets/art/chemistry/chemAcid.png")
 	},
@@ -117,11 +117,6 @@ const POTIONS = {
 		description: "Allows you to gain additional XP when completing ??? actions",
 		potionJob: "shitposting",
 		potionCharges: 5
-	},
-	lube: {
-		name: "Space Lube",
-		sellPrice: 5,
-		icon: require("@/assets/art/chemistry/lube.png")
 	}
 }
 
