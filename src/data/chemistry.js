@@ -1,3 +1,5 @@
+import { MAX_LEVEL } from "@/data/experience";
+
 const BASES = {
 	synthOxygen: {
 		item: "oxygen",
@@ -59,42 +61,25 @@ const POTIONS = {
 	synthPotionMining: {
 		item: "potionMining",
 		time: 2,
-		xp: 1,
-		requiredLevel: 5,
 		requiredItems: {
 			oxygen: 1,
 			oil: 2,
 			iron: 1
 		}
 	},
-	synthPotionEngineering: {
-		item: "potionEngineering",
+	synthPotionGraytiding: {
+		item: "potionGraytiding",
 		time: 2,
-		xp: 2,
-		requiredLevel: 10,
 		requiredItems: {
-			water: 1,
-			sacid: 1,
-			lithium: 1,
-			power: 10
-		}
-	},
-	synthPotionFabrication: {
-		item: "potionFabrication",
-		time: 2,
-		xp: 3,
-		requiredLevel: 15,
-		requiredItems: {
+			oxygen: 1,
 			oil: 1,
-			lithium: 2,
-			iron: 1
+			mercury: 1,
+			junk: 1
 		}
 	},
 	synthPotionChem: {
 		item: "potionChemistry",
 		time: 2,
-		xp: 4,
-		requiredLevel: 20,
 		requiredItems: {
 			oxygen: 2,
 			oil: 2,
@@ -104,11 +89,28 @@ const POTIONS = {
 			lithium: 2,
 		}
 	},
+	synthPotionBotany: {
+		item: "potionBotany",
+		time: 2,
+		requiredItems: {
+			sacid: 1,
+			mercury: 2,
+			plantSeed: 1
+		}
+	},
+	synthPotionEngineering: {
+		item: "potionEngineering",
+		time: 2,
+		requiredItems: {
+			water: 1,
+			sacid: 1,
+			lithium: 1,
+			power: 1
+		}
+	},
 	synthPotionTinkering: {
 		item: "potionTinkering",
 		time: 2,
-		xp: 5,
-		requiredLevel: 25,
 		requiredItems: {
 			oxygen: 1,
 			oil: 2,
@@ -119,33 +121,9 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionBotany: {
-		item: "potionBotany",
-		time: 2,
-		xp: 6,
-		requiredLevel: 30,
-		requiredItems: {
-			sacid: 1,
-			mercury: 2,
-			plantSeed: 1
-		}
-	},
-	synthPotionCooking: {
-		item: "potionCooking",
-		time: 2,
-		xp: 7,
-		requiredLevel: 35,
-		requiredItems: {
-			oxygen: 1,
-			mercury: 2,
-			foodPasta1: 1
-		}
-	},
 	synthPotionXenobiology: {
 		item: "potionXenobiology",
 		time: 2,
-		xp: 8,
-		requiredLevel: 40,
 		requiredItems: {
 			oxygen: 1,
 			oil: 1,
@@ -153,23 +131,27 @@ const POTIONS = {
 			iron: 1
 		}
 	},
-	synthPotionEngineering: {
-		item: "potionEngineering",
+	synthPotionCooking: {
+		item: "potionCooking",
 		time: 2,
-		xp: 9,
-		requiredLevel: 45,
+		requiredItems: {
+			oxygen: 1,
+			mercury: 2,
+			foodPasta1: 1
+		}
+	},
+	synthPotionFabrication: {
+		item: "potionFabrication",
+		time: 2,
 		requiredItems: {
 			oil: 1,
-			water: 1,
-			lithium: 1,
+			lithium: 2,
 			iron: 1
 		}
 	},
 	synthPotionShitposting: {
 		item: "potionShitposting",
 		time: 2,
-		xp: 10,
-		requiredLevel: 50,
 		requiredItems: {
 			water: 2,
 			lithium: 1,
@@ -179,26 +161,20 @@ const POTIONS = {
 	},
 }
 
-const MISC = {
-	synthLube: {
-		time: 3,
-		item: "lube",
-		xp: 5,
-		requiredLevel: 1,
-		requiredItems: {
-			power: 10
-		}
-	}
-}
-
+const MIN_LEVEL = 1;
 Object.values(BASES).forEach(action => action.type = "bases");
-Object.values(POTIONS).forEach(action => action.type = "chems");
-Object.values(MISC).forEach(action => action.type = "misc");
+Object.values(POTIONS).forEach((action, index) => {
+	action.type = "chems";
+
+	let level = Math.round(MIN_LEVEL + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL));
+
+	action.requiredLevel = level;
+	action.xp = Math.max(.35, level / 5);
+});
 
 export const ACTIONS = {
 	...BASES,
-	...POTIONS,
-	...MISC
+	...POTIONS
 }
 
 export const JOB = {

@@ -16,7 +16,7 @@
         v-if="action.requiredItems"
         class="requirements d-flex flex-column align-items-center mt-2"
       >
-        <span v-if="!hasItems" class="danger-bubble color-weight text-light">MISSING ITEMS</span>
+        <span v-if="!hasItems" class="danger-bubble color-weight text-light text-center">MISSING ITEMS</span>
         <item-requirement
           v-for="(entry, index) in Object.entries(action.requiredItems)"
           :key="index"

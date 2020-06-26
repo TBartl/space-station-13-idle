@@ -1,4 +1,4 @@
-import { cloneDeep, clone } from 'lodash';
+import { cloneDeep } from 'lodash';
 
 let FOOD = {
 	foodMeatH: {
