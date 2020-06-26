@@ -48,7 +48,7 @@ export default [
 	{
 		name: "Virology",
 		icon: require("@/assets/art/combat/zones/viro.png"),
-		enemies: ["afkviro", "monkey", "movingviro", "cultist"]
+		enemies: ["afkviro", "monkey", "movingviro", "gorilla"]
 	},
 	{
 		name: "Science",

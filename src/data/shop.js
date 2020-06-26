@@ -26,7 +26,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeBotany", "capeXenobiology"]
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeXenobiology", "capeChemistry", "capeShitposting"]
 	}
 ]
 
@@ -173,9 +173,19 @@ const CAPES = {
 			money: 1000000
 		}
 	},
+	capeTinkering: {
+		item: "capeTinkering",
+		description: "Requires max Tinkering to wear.",
+		requiredLevels: {
+			tinkering: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
 	capeBotany: {
 		item: "capeBotany",
-		description: "Requires max botany to wear.",
+		description: "Requires max Botany to wear.",
 		requiredLevels: {
 			botany: MAX_LEVEL
 		},
@@ -183,11 +193,41 @@ const CAPES = {
 			money: 1000000
 		}
 	},
+	capeCooking: {
+		item: "capeCooking",
+		description: "Requires max Cooking to wear.",
+		requiredLevels: {
+			cooking: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
 	capeXenobiology: {
 		item: "capeXenobiology",
-		description: "Requires max xenobiology to wear.",
+		description: "Requires max Xenobiology to wear.",
 		requiredLevels: {
 			xenobiology: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeChemistry: {
+		item: "capeChemistry",
+		description: "Requires max Chemistry to wear.",
+		requiredLevels: {
+			cooking: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeShitposting: {
+		item: "capeShitposting",
+		description: "Requires max Shitposting to wear.",
+		requiredLevels: {
+			cooking: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000
