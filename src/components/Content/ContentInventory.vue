@@ -33,13 +33,23 @@
           </span>
         </template>
       </job-info>
-
       <div class="row">
         <div class="col-12">
-          <button
-            class="btn btn-primary run-away d-flex flex-row align-items-center"
-            @click="quickSort"
-          >Quick Sort Bank</button>
+          <div class="content-block d-flex flex-row justify-content-around">
+            <div class="d-flex flex-row align-items-center">
+              <span class="mr-1">Space Used:</span>
+              <span class="primary-bubble">{{bankItemIds.length}}/69xd</span>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span class="mr-1">Bank Value:</span>
+              <span class="primary-bubble">{{ bankValue | cleanNum}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <button class="btn btn-primary" @click="quickSort">Sort Bank</button>
         </div>
         <div class="col-12 items d-flex flex-row flex-wrap">
           <inventory-item v-for="itemId in bankItemIds" :key="itemId" :itemId="itemId" />
@@ -62,6 +72,15 @@ export default {
       return Object.keys(this.$store.getters["inventory/bank"]).filter(
         itemId => itemId != "money"
       );
+    },
+    bankValue() {
+      let total = 0;
+      this.bankItemIds.forEach(bankItemId => {
+        total +=
+          ITEMS[bankItemId].sellPrice *
+          this.$store.getters["inventory/bank"][bankItemId];
+      });
+      return total;
     }
   },
   methods: {
@@ -75,5 +94,8 @@ export default {
 <style scoped>
 .items {
   margin: 0 -0.5rem;
+}
+.slots {
+  color: white;
 }
 </style>
