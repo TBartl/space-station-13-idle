@@ -170,7 +170,19 @@ export function createMobModule(mobType) {
 					if (state.mobType == "player") {
 						commit("_setHealth", getters.stats.maxHealth / 2);
 						dispatch("cancelAllActions", {}, { root: true });
-						this._vm.$modal.show(ModalDeath, {}, { height: "auto", width: "320px" });
+
+						// Lose a random, equipped item
+						let equipment = rootGetters["inventory/equipment"];
+						let filledEquipment = Object.keys(equipment).filter(slot => {
+							return equipment[slot].itemId;
+						});
+						let lostItemId = null;
+						if (filledEquipment.length) {
+							let slotToLose = filledEquipment[Math.floor(Math.random() * filledEquipment.length)];
+							lostItemId = equipment[slotToLose].itemId;
+							commit("inventory/setEquipment", { slot: slotToLose, itemId: null, count: 0 }, { root: true });
+						}
+						this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 					} else {
 						dispatch("validhunting/mobKilled", rootGetters["combat/targetEnemy"], { root: true })
 						dispatch("combat/pauseCombat", {}, { root: true });

@@ -852,5 +852,4 @@ Object.values(WEAPONS).forEach(weapon => {
 	if (!weapon.stats.damageType) weapon.stats.damageType = "brute";
 })
 
-console.log(WEAPONS);
 export default WEAPONS;
