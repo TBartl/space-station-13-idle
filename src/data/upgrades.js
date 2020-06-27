@@ -1,20 +1,31 @@
 import { MAX_LEVEL } from "@/data/experience";
-
+import ITEMS from "@/data/items";
 
 export const BASE_INVENTORY_SIZE = 10;
 
+const TOTAL_ITEM_COUNT = Object.keys(ITEMS).length;
 let inventoryUpgradeImage = require('@/assets/art/shop/inventoryUpgrade.png');
-export const INVENTORY_UPGRADES = {
-	upgradeInventory: {
+
+const INVENTORY_UPGRADES = {}
+
+for (let i = 0; i < TOTAL_ITEM_COUNT - BASE_INVENTORY_SIZE; i++) {
+
+	let upgrade = {
 		name: "Expand Inventory Size",
-		description: `Increases the number of items you can hold from 10 to 11.`,
+		description: `Increases the number of items you can hold from ${BASE_INVENTORY_SIZE + i} to ${BASE_INVENTORY_SIZE + i + 1}.`,
 		icon: inventoryUpgradeImage,
 		requiredItems: {
 			money: 10000
 		},
-		upgrade: "inventorySize"
-	},
+		upgrade: "inventorySize",
+		requiredUpgrades: {
+			inventorySize: i
+		},
+	}
+	INVENTORY_UPGRADES["upgradeInventory" + i] = upgrade;
 }
+
+export { INVENTORY_UPGRADES };
 
 export const COMBAT_UPGRADES = {
 	autoeat: {
