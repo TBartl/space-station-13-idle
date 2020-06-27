@@ -59,7 +59,14 @@ const combat = {
 		removeLootItem(state, index) {
 			state.drops.splice(index, 1);
 		},
-		addLootItem(state, { itemId, count }) {
+		addLootItem(state, { itemId, count, stack }) {
+			if (stack) {
+				let existingDrop = state.drops.find(drop => drop.itemId == itemId);
+				if (existingDrop) {
+					existingDrop.count += count;
+					return;
+				}
+			}
 			state.drops.push({ itemId, count });
 		},
 		clearLoot(state) {
@@ -106,7 +113,9 @@ const combat = {
 					dropsFull = true;
 					continue;
 				}
-				commit("addLootItem", { itemId, count });
+				let stack = false;
+				if (itemId == "money") stack = true;
+				commit("addLootItem", { itemId, count, stack });
 			}
 
 			if (dropsFull) {
