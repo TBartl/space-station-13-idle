@@ -50,7 +50,7 @@ export default {
   padding: 0.3rem 1rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .item {
     padding-left: 0.5rem;
   }
