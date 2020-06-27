@@ -31,6 +31,11 @@
             />
             <b>Cargo</b> might be able to help you out.
           </span>
+          <span>
+            Otherwise, you can just
+            <img class="mx--2" :src="require('@/assets/art/misc/coin-padded.png')" />
+            <b>Sell</b> off some of the items you no longer care about.
+          </span>
         </template>
       </job-info>
       <div class="row">
