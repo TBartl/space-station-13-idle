@@ -38,7 +38,7 @@
           <div class="content-block d-flex flex-row justify-content-around">
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Space Used:</span>
-              <span class="primary-bubble">{{bankItemIds.length}}/69xd</span>
+              <span class="primary-bubble">{{bankItemIds.length}}/{{bankSlots}}</span>
             </div>
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Bank Value:</span>
@@ -69,9 +69,7 @@ export default {
   components: { InventoryItem },
   computed: {
     bankItemIds() {
-      return Object.keys(this.$store.getters["inventory/bank"]).filter(
-        itemId => itemId != "money"
-      );
+      return this.$store.getters["inventory/bankItemIds"];
     },
     bankValue() {
       let total = 0;
@@ -81,6 +79,9 @@ export default {
           this.$store.getters["inventory/bank"][bankItemId];
       });
       return total;
+    },
+    bankSlots() {
+      return this.$store.getters["inventory/bankSlots"];
     }
   },
   methods: {
