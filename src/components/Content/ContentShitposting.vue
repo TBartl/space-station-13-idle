@@ -17,19 +17,26 @@
         title="Iamgoofball the Shit Poster says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: 'Shitposting?', icon: require('@/assets/art/shitposting/icon.png'), iconClass:'mx--1'},
+					{name: 'OK?'},
+					{name: '...'},
+					{name: 'I\'m leaving now'},
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
-          <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
-          </span>
+          <span>REPLACEME #1</span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="Shitposting?">
+          <span>REPLACEME #2</span>
+        </template>
+        <template slot="OK?">
+          <span>REPLACEME #3</span>
+        </template>
+        <template slot="...">
+          <span>REPLACEME #4</span>
+        </template>
+        <template slot="I'm leaving now">
+          <span>REPLACEME #5</span>
         </template>
       </job-info>
 
