@@ -12,6 +12,54 @@ export const COMBAT_UPGRADES = {
 		upgrade: "autoeat",
 		requiredUpgrades: {
 			autoeat: 0
+		},
+		requiredLevels: {
+			validhunting: 10
+		}
+	},
+	lootDrops1: {
+		name: "Extended Looting Tier I",
+		description: "Increases the number of loot drop slots from 16 to 32.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 30000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 0
+		},
+		requiredLevels: {
+			validhunting: 15
+		}
+	},
+	lootDrops2: {
+		name: "Extended Looting Tier II",
+		description: "Increases the number of loot drop slots from 32 to 64.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 75000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 1
+		},
+		requiredLevels: {
+			validhunting: 20
+		}
+	},
+	lootDrops3: {
+		name: "Extended Looting Tier III",
+		description: "Allows loot to stacks with items of the same type.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 150000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 2
+		},
+		requiredLevels: {
+			validhunting: 25
 		}
 	}
 }
