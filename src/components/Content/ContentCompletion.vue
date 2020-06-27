@@ -21,7 +21,18 @@
             class="content-block content-block-bottom d-flex flex-row flex-wrap"
           >
             <div v-for="(entry, index) in Object.entries(items)" :key="index">
-              <img class="item" :src="entry[1].icon" alt />
+              <img class="item" :src="entry[1].icon" :id="id + '-item-' + index" />
+              <b-popover
+                :target="id + '-item-' + index"
+                triggers="hover"
+                placement="top"
+                delay="0"
+              >
+                <div class="d-flex flex-column align-items-center">
+                  <h6>{{entry[1].name}}</h6>
+                  <span>Found: 420</span>
+                </div>
+              </b-popover>
             </div>
           </div>
         </div>
@@ -39,7 +50,18 @@
             class="content-block content-block-bottom d-flex flex-row flex-wrap"
           >
             <div v-for="(entry, index) in Object.entries(enemies)" :key="index">
-              <img class="enemy" :src="entry[1].icon" alt />
+              <img class="enemy" :src="entry[1].icon" :id="id + '-enemy-' + index" />
+              <b-popover
+                :target="id + '-enemy-' + index"
+                triggers="hover"
+                placement="top"
+                delay="0"
+              >
+                <div class="d-flex flex-column align-items-center">
+                  <h6>{{entry[1].name}}</h6>
+                  <span>Killed: 420</span>
+                </div>
+              </b-popover>
             </div>
           </div>
         </div>
@@ -65,6 +87,9 @@ export default {
     };
   },
   computed: {
+    id() {
+      return this._uid.toString();
+    },
     items() {
       return ITEMS;
     },
