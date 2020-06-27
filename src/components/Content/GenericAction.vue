@@ -27,7 +27,7 @@
       <p
         class="failure text-center"
         v-if="action.failure"
-      >{{action.failure.chance*100}}% chance to fail and lose {{action.failure.damage}} health</p>
+      >{{action.failure.chance*100 | cleanNum}}% chance to fail and lose {{action.failure.damage}} health</p>
       <progress-bar class="mt-2" :progress="currentPercent" v-if="hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
