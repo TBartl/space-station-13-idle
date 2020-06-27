@@ -63,23 +63,23 @@
           <span>
             Unlike the
             <img class="mx--2" :src="require('@/assets/art/combat/items/melee_b2.png')" />
-            <b>primitive weapons</b> you'll get from
+            <b>Primitive Weapons</b> you'll get from
             <img class="mx--2" :src="require('@/assets/art/tinkering/icon.png')" />
             <b>Tinkering</b>, the
             <img class="mx--0" :src="require('@/assets/art/combat/items/gune_energy.png')" />
-            <b>guns</b> you can fabricate here will be far more
+            <b>Guns</b> you can fabricate here will be far more
             <img
               class="mx--0"
               :src="require('@/assets/art/combat/precision.png')"
             />
-            <b>precise</b>, and can dish out both
+            <b>Precise</b>, and can dish out both
             <img
               class="mx--0"
               :src="require('@/assets/art/combat/brute-damage.png')"
             />
-            <b>brute</b> and
+            <b>Brute</b> and
             <img class="mx--0" :src="require('@/assets/art/combat/burn-damage.png')" />
-            <b>burn</b> damage.
+            <b>Burn</b> damage.
           </span>
           <span>
             The downside is that they take

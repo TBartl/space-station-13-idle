@@ -12,19 +12,37 @@
         title="Kor Phaeron the Chrono Legionnaire says..."
         :options="[
 					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
+					{name: '???'}
 				]"
       >
         <template slot="Back">
-          <span>REPLACEME</span>
-          <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
-          </span>
+          <span>Listen, I don't know to break this to you but...</span>
+          <span>I have reasons to believe we may be trapped inside a simulation.</span>
         </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
+        <template slot="???">
+          <span>When the simulation is closed, time will continue outside our reality in the "real world".</span>
+          <span>We can tap into this lost time, get back to where we should be.</span>
+          <span>While using lost time, everything in our simulation will run at an accelerated rate.</span>
+          <span>
+            And I mean everything:
+            <img class="mx--0" :src="require('@/assets/art/mining/icon.png')" />
+            <b>Job Actions</b> will complete faster, you and your
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/combat/enemies/mouse.png')"
+            />
+            <b>Enemies</b> will hit each other faster.
+          </span>
+          <span>
+            Heck, your
+            <img class="mx--0" :src="require('@/assets/art/combat/health.gif')" />
+            <b>Health</b> will even regenerate faster. I bet you didn't even know
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/health.gif')"
+            />
+            <b>Health</b> regen was a mechanic, did you?
+          </span>
         </template>
       </job-info>
 
@@ -41,7 +59,8 @@
               :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
               @click="setChronoSpeed(speed)"
             >{{speed}}x</button>
-            <h6 class="mt-2">This feature is WIP; so right now everything is free!</h6>
+            <h6 class="mt-2">This feature is WIP; so right now you have infinite lost time to spend.</h6>
+            <h6 class="mt-2">Thanks for testing the game!</h6>
           </div>
         </div>
       </div>
