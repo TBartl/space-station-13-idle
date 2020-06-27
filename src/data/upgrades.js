@@ -8,14 +8,18 @@ let inventoryUpgradeImage = require('@/assets/art/shop/inventoryUpgrade.png');
 
 const INVENTORY_UPGRADES = {}
 
+// "Wouldn't it make more sense to just have one upgrade, with a dynamic description and stuff?"
+// Yeah probably, but this is easier
 for (let i = 0; i < TOTAL_ITEM_COUNT - BASE_INVENTORY_SIZE; i++) {
+	let money = 2654570 * 50 * (i + 2) / (142015 ** (163 / (122 + i)));
+	money = Math.min(2000000, Math.round(money));
 
 	let upgrade = {
 		name: "Expand Inventory Size",
 		description: `Increases the number of items you can hold from ${BASE_INVENTORY_SIZE + i} to ${BASE_INVENTORY_SIZE + i + 1}.`,
 		icon: inventoryUpgradeImage,
 		requiredItems: {
-			money: 10000
+			money: money
 		},
 		upgrade: "inventorySize",
 		requiredUpgrades: {
