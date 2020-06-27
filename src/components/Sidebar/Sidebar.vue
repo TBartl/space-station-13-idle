@@ -51,7 +51,6 @@
     </sidebar-item>
 
     <p class="items-header">Other</p>
-    <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
     <sidebar-item
       id="chronosphere"
       text="Chronosphere"
@@ -60,6 +59,12 @@
     >
       <span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
     </sidebar-item>
+    <sidebar-item
+      id="completion"
+      text="Completion"
+      :icon="require('@/assets/art/sidebar/trophy.png')"
+    />
+    <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
   </div>
 </template>
 
