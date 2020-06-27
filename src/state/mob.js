@@ -47,7 +47,9 @@ export function createMobModule(mobType) {
 					});
 				}
 				else if (state.mobType == "enemy") {
-					fullStats = Object.assign({}, ENEMY_BASE_STATS, ENEMIES[rootGetters["combat/targetEnemy"]].stats);
+					let targetEnemy = rootGetters["combat/targetEnemy"];
+					if (!targetEnemy) return ENEMY_BASE_STATS;
+					fullStats = Object.assign({}, ENEMY_BASE_STATS, ENEMIES[targetEnemy].stats);
 				}
 				fixProtection(fullStats);
 				return fullStats;
