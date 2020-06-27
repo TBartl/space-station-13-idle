@@ -4,6 +4,7 @@ import ITEMS from "@/data/items";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { BASE_INVENTORY_SIZE } from '@/data/upgrades'
 
 const inventory = {
 	namespaced: true,
@@ -59,8 +60,8 @@ const inventory = {
 		bank(state) {
 			return state.bank;
 		},
-		bankSlots() {
-			return 6;
+		bankSlots(state, getters, rootState, rootGetters) {
+			return BASE_INVENTORY_SIZE + rootGetters["upgrades/get"]("inventorySize");
 		},
 		bankItemIds(state) {
 			return Object.keys(state.bank).filter(

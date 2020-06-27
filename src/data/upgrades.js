@@ -1,6 +1,21 @@
 import { MAX_LEVEL } from "@/data/experience";
 
 
+export const BASE_INVENTORY_SIZE = 10;
+
+let inventoryUpgradeImage = require('@/assets/art/shop/inventoryUpgrade.png');
+export const INVENTORY_UPGRADES = {
+	upgradeInventory: {
+		name: "Expand Inventory Size",
+		description: `Increases the number of items you can hold from 10 to 11.`,
+		icon: inventoryUpgradeImage,
+		requiredItems: {
+			money: 10000
+		},
+		upgrade: "inventorySize"
+	},
+}
+
 export const COMBAT_UPGRADES = {
 	autoeat: {
 		name: "Unlock Auto-Eat",

@@ -1,7 +1,11 @@
 import { MAX_LEVEL } from "@/data/experience";
-import { COMBAT_UPGRADES, JOB_UPGRADES } from "@/data/upgrades";
+import { INVENTORY_UPGRADES, COMBAT_UPGRADES, JOB_UPGRADES } from "@/data/upgrades";
 
 export const SECTIONS = [
+	{
+		name: "Inventory Expansion",
+		purchases: Object.keys(INVENTORY_UPGRADES)
+	},
 	{
 		name: "MegaSeed Servitor",
 		purchases: ['seed10', 'seed100', 'seed500', 'seed2000', 'seed5000']
@@ -275,6 +279,7 @@ const CRATES = {
 
 
 export const PURCHASES = {
+	...INVENTORY_UPGRADES,
 	...SEEDS,
 	...CAPES,
 	...JOB_UNLOCKS,
