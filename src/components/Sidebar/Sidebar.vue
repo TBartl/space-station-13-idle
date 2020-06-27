@@ -15,7 +15,9 @@
       id="inventory"
       text="Inventory"
       :icon="require('@/assets/art/sidebar/backpack.png')"
-    />
+    >
+      <span>{{bankItemIds.length}}/{{bankSlots}}</span>
+    </sidebar-item>
 
     <p class="items-header">Jobs</p>
     <sidebar-item
@@ -94,6 +96,12 @@ export default {
       return this.playerHealth == this.playerMaxHealth
         ? "health-full"
         : "health-damaged";
+    },
+    bankItemIds() {
+      return this.$store.getters["inventory/bankItemIds"];
+    },
+    bankSlots() {
+      return this.$store.getters["inventory/bankSlots"];
     }
   },
   methods: {
