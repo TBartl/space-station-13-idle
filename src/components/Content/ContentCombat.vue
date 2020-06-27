@@ -6,27 +6,7 @@
       color="rgb(175, 99, 99)"
     />
     <div class="content-container">
-      <job-info
-        infoId="REPLACEME"
-        :icon="require('@/assets/art/jobinfo/combat.png')"
-        title="Fred Best the Head of Security says..."
-        :options="[
-					{name: 'Back'},
-					{name: 'REPLACEME', icon: require('@/assets/art/debug/A.png'), iconClass:'mx--1'}
-				]"
-      >
-        <template slot="Back">
-          <span>REPLACEME</span>
-          <span>
-            Example
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
-            <b>Weighted</b>.
-          </span>
-        </template>
-        <template slot="REPLACEME">
-          <span>REPLACEME</span>
-        </template>
-      </job-info>
+      <content-combat-job-info />
       <div class="row">
         <div class="col-12 mb-3" v-if="inCombat">
           <run-away />
@@ -70,6 +50,7 @@ import CombatPlayerPanel from "@/components/Content/Combat/CombatPlayerPanel";
 import MobCard from "@/components/Content/Combat/MobCard";
 import Loot from "@/components/Content/Combat/Loot";
 import Validhunting from "@/components/Content/Combat/Validhunting";
+import ContentCombatJobInfo from "@/components/Content/ContentCombatJobInfo";
 export default {
   extends: ContentAbstract,
   components: {
@@ -79,7 +60,8 @@ export default {
     CombatPlayerPanel,
     MobCard,
     Loot,
-    Validhunting
+    Validhunting,
+    ContentCombatJobInfo
   },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
