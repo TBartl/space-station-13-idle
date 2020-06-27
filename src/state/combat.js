@@ -95,12 +95,22 @@ const combat = {
 				}, { root: true });
 			});
 		},
-		dropEnemyLoot({ state, commit }) {
+		dropEnemyLoot({ state, commit, getters }) {
 			let enemy = ENEMIES[state.targetEnemy];
 			let yieldedItems = acquireItemFrom(enemy);
+
+			let dropsFull = false;
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
 				if (count == 0) continue;
+				if (state.drops.length >= getters["maxDrops"]) {
+					dropsFull = true;
+					continue;
+				}
 				commit("addLootItem", { itemId, count });
+			}
+
+			if (dropsFull) {
+				EventBus.$emit("toast", { text: `Too much loot! Drop lost.` });
 			}
 		},
 		cancelActions({ state, commit, dispatch }) {
