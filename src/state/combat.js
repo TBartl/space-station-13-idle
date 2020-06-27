@@ -30,7 +30,7 @@ const combat = {
 			return baseRegenTime * ratio;
 		},
 		baseFoodCooldown() {
-			return 2;
+			return 10;
 		},
 		foodCooldown(state, getters) {
 			return getters["baseFoodCooldown"];
