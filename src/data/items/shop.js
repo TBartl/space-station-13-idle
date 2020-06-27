@@ -18,33 +18,65 @@ export default {
 		icon: require("@/assets/art/shop/items/hatcrate.png"),
 		itemTable: [
 			{
-				id: 'headCake',
-				weight: 1
-			},
-			{
 				id: 'headH1',
-				weight: 1
+				weight: 5
 			},
 			{
 				id: 'headH2',
-				weight: 1
+				weight: 5
+			},
+			{
+				id: 'headH3',
+				weight: 5
+			},
+			{
+				id: 'headH4',
+				weight: 5
+			},
+			{
+				id: 'headH5',
+				weight: 5
 			},
 			{
 				id: 'headRadio1',
-				weight: 1
+				weight: 14
 			},
 			{
 				id: 'headRadio2',
-				weight: 1
+				weight: 14
 			},
 			{
 				id: 'headRadio3',
-				weight: 1
+				weight: 14
 			},
 			{
 				id: 'headRadio4',
+				weight: 14
+			},
+			{
+				id: 'headRadio5',
+				weight: 14
+			},
+			{
+				id: 'headR1',
 				weight: 1
-			}
+			},
+			{
+				id: 'headR2',
+				weight: 1
+			},
+			{
+				id: 'headR3',
+				weight: 1
+			},
+			{
+				id: 'headR4',
+				weight: 1
+			},
+			{
+				id: 'headR5',
+				weight: 1
+			},
 		]
 	},
 	knifeCrate: {
