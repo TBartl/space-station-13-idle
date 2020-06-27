@@ -115,9 +115,9 @@ export default {
 	headH3: {
 		name: "Ushanka",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/head/head_h2.png"),
+		icon: require("@/assets/art/combat/items/head/head_h3.png"),
 		equipmentSlot: "head",
-		overlay: require("@/assets/art/combat/items/head/head_h2_overlay.png"),
+		overlay: require("@/assets/art/combat/items/head/head_h3_overlay.png"),
 		stats: {
 			maxHealth: 8,
 			evasion: 4,
@@ -131,9 +131,9 @@ export default {
 	headH4: {
 		name: "Security Beret",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/head/head_h2.png"),
+		icon: require("@/assets/art/combat/items/head/head_h4.png"),
 		equipmentSlot: "head",
-		overlay: require("@/assets/art/combat/items/head/head_h2_overlay.png"),
+		overlay: require("@/assets/art/combat/items/head/head_h4_overlay.png"),
 		stats: {
 			maxHealth: 0,
 			evasion: 6,
