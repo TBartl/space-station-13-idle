@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-		<toast-container />
+    <toast-container />
     <div class="mega-container">
-      <sidebar class="side-bar"/>
+      <sidebar class="side-bar" />
       <content-wrapper />
     </div>
     <modals-container />
@@ -10,15 +10,24 @@
 </template>
 
 <script>
-import ToastContainer from '@/components/Toast/ToastContainer'
+import ToastContainer from "@/components/Toast/ToastContainer";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
+import ModalWelcome from "@/components/Modals/ModalWelcome";
+import { mapGetters } from "vuex";
 export default {
   name: "App",
   components: {
-		ToastContainer,
+    ToastContainer,
     Sidebar,
     ContentWrapper
+  },
+  computed: {
+    ...mapGetters(["welcomeMessageSeen"])
+  },
+  mounted() {
+    if (this.welcomeMessageSeen) return;
+    this.$modal.show(ModalWelcome, {}, { height: "auto", width: "360px" });
   }
 };
 </script>
@@ -42,8 +51,8 @@ body {
   align-items: stretch;
 }
 .mega-container * {
-	height: 100%;
-	overflow-y: auto;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -52,16 +61,16 @@ body {
 
 /* Track */
 .sidebar::-webkit-scrollbar-track {
-  background: #2C343F; 
+  background: #2c343f;
 }
- 
+
 /* Handle */
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgba(109, 109, 109, 0.5); 
+  background: rgba(109, 109, 109, 0.5);
 }
 
 /* Handle on hover */
 .sidebar::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 </style>

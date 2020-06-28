@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { cloneDeep, mergeWith, isArray } from 'lodash';
+import { cloneDeep } from 'lodash';
 
 Vue.use(Vuex)
 
@@ -81,7 +81,8 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	chronoSpeed: 1
+	chronoSpeed: 1,
+	welcomeMessageSeen: false
 }
 
 let initialState = cloneDeep(state);
@@ -102,6 +103,9 @@ const store = new Vuex.Store({
 		},
 		chronoSpeed(state) {
 			return state.chronoSpeed;
+		},
+		welcomeMessageSeen(state) {
+			return state.welcomeMessageSeen;
 		}
 	},
 	mutations: {
@@ -113,6 +117,9 @@ const store = new Vuex.Store({
 		},
 		setChronoSpeed(state, speed) {
 			state.chronoSpeed = speed;
+		},
+		setWelcomeMessageSeen(state){
+			state.welcomeMessageSeen = true;
 		}
 	},
 	actions: {
