@@ -18,7 +18,7 @@
         v-for="(allow, index) in allows"
         :key="'allow'+index"
         class="success-bubble mt-1"
-      >Allows: {{allow.toUpperCase()}}</span>
+      >Enables: {{allow.toUpperCase()}}</span>
       <span
         v-for="(restriction, index) in restrictions"
         :key="'restriction'+index"
