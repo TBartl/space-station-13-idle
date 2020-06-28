@@ -35,7 +35,7 @@
       />
       <stat-panel-item
         name="Precision"
-        description="Increases damage dealth"
+        description="Increases chance to hit"
         :icon="require('@/assets/art/combat/precision.png')"
         :value="fixedStats.precision"
       />
