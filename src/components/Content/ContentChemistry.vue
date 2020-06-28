@@ -20,7 +20,7 @@
 					{name: 'Power?', icon: require('@/assets/art/engineering/power.png'), iconClass:'mx--0'},
 					{name: 'Bases?', icon: require('@/assets/art/chemistry/chemOil.png'), iconClass:'mx--1'},
 					{name: 'CHEMs?', icon: require('@/assets/art/chemistry/faunaPerfume.png'), iconClass:'mx--1'},
-					{name: 'Combat?', icon: require('@/assets/art/combat/precision.png'), iconClass:'mx--0'},
+					{name: 'Pills?', icon: require('@/assets/art/combat/items/pill1.png'), iconClass:'mx--0'},
 				]"
       >
         <template slot="Back">
@@ -99,20 +99,33 @@
             <b>CHEMs</b> near the top section of each job.
           </span>
         </template>
-        <template slot="Combat?">
+        <template slot="Pills?">
+          <span>Keep your voice down.</span>
           <span>
-            All these specialized
-            <img class="mx--2" :src="require('@/assets/art/chemistry/faunaPerfume.png')" />
-            <b>CHEMs</b> and you
-            <i>also</i> want something for
+            With the proper
+            <img class="mx--2" :src="require('@/assets/art/chemistry/icon.png')" />
+            <b>Chemistry</b> knowledge, I guess
+            <i>theoretically</i> you could make some
             <img
-              class="mx--0"
-              :src="require('@/assets/art/combat/precision.png')"
+              class="mx--2"
+              :src="require('@/assets/art/combat/items/pill1.png')"
             />
-            <b>Combat?</b>
+            <b>Pills</b> here.
           </span>
-          <span>Man, the technology just isn't there for that.</span>
-          <span>I mean uhh... that sounds dangerous and I don't want to get involved with anything like that.</span>
+          <span>
+            And,
+            <i>hypothetically</i>, those
+            <img class="mx--2" :src="require('@/assets/art/combat/items/pill1.png')" />
+            <b>Pills</b> could boost your
+            <img class="mx--0" :src="require('@/assets/art/combat/precision.png')" />
+            <img class="mx--1" :src="require('@/assets/art/combat/skull.png')" />
+            <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
+            <b>Stats</b> while using a
+            <img class="mx--2" :src="require('@/assets/art/combat/items/melee_c4.png')" />
+            <b>Melee Weapon</b>.
+          </span>
+          <span>You didn't hear any of this from me though.</span>
+          <span></span>
         </template>
       </job-info>
 
