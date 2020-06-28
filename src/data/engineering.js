@@ -75,7 +75,7 @@ export const ACTIONS = {
 		xp: 13,
 		requiredLevel: 25,
 		requiredItems: {
-			potatobattery: 8
+			potatoBattery: 8
 		}
 	},
 	engSlime: {

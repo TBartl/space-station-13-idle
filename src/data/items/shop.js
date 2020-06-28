@@ -8,7 +8,7 @@ export default {
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/telecrystal.png")
 	},
-	exoticparts: {
+	exoticParts: {
 		name: "Exotic Remains",
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/exotic.png")

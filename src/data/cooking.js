@@ -90,7 +90,7 @@ const PRECISION_ACTIONS = {
 		xp: 6,
 		requiredLevel: 15,
 		requiredItems: {
-			potatobattery: 1,
+			potatoBattery: 1,
 			peppercold: 1
 		}
 	},
@@ -130,7 +130,7 @@ const POWER_ACTIONS = {
 		xp: 7,
 		requiredLevel: 17,
 		requiredItems: {
-			tomatoblue: 1,
+			tomatoBlue: 1,
 			mushroomred: 1
 		}
 	},
@@ -142,7 +142,7 @@ const POWER_ACTIONS = {
 		xp: 13,
 		requiredLevel: 31,
 		requiredItems: {
-			tomatobluespace: 1,
+			tomatoBluespace: 1,
 			mushroomshadow: 1
 		}
 	},
@@ -157,7 +157,7 @@ const EVASION_ACTIONS = {
 		requiredLevel: 5,
 		requiredItems: {
 			banana: 1,
-			flowersun: 1
+			flowerSun: 1
 		}
 	},
 	cookEva2: {
@@ -271,7 +271,7 @@ const ANIMAL_ACTIONS = {
 		requiredLevel: 38,
 		requiredItems: {
 			foodMeatA: 1,
-			tomatobluespace: 1
+			tomatoBluespace: 1
 		}
 	},
 	cookAnimal4: {

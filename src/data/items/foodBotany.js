@@ -40,7 +40,7 @@ export default {
 			power: 0,
 		},
 	},
-	flowersun: {
+	flowerSun: {
 		name: "Sunflower",
 		sellPrice: 14,
 		icon: require("@/assets/art/botany/PlantFlowersun.png"),
@@ -76,7 +76,7 @@ export default {
 			power: 5,
 		},
 	},
-	potatobattery: {
+	potatoBattery: {
 		name: "Potato Battery",
 		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
@@ -88,7 +88,7 @@ export default {
 			power: 10,
 		},
 	},
-	tomatoblue: {
+	tomatoBlue: {
 		name: "Blue Tomato",
 		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantTomatoblue.png"),
@@ -160,7 +160,7 @@ export default {
 			power: 10,
 		},
 	},
-	tomatobluespace: {
+	tomatoBluespace: {
 		name: "Bluespace Tomato",
 		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif"),

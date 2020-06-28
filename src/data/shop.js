@@ -259,7 +259,7 @@ const CRATES = {
 		item: "lavaCrate",
 		description: "Handcrafted materials and relics aquired from the local planetary natives. ",
 		requiredItems: {
-			exoticparts: 20
+			exoticParts: 20
 		}
 	},
 	supplyCrate: {

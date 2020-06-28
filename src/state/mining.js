@@ -32,7 +32,7 @@ const potionDropTable = [
 				weight: 15
 			},
 			{
-				id: "exoticparts",
+				id: "exoticParts",
 				count: 4,
 				weight: 10
 			},

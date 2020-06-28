@@ -22,7 +22,7 @@ export default {
 						id: 'tomato',
 						weight: 1
 					}, {
-						id: 'flowersun',
+						id: 'flowerSun',
 						weight: 1
 					}, {
 						id: 'mushroom',
@@ -31,10 +31,10 @@ export default {
 						id: 'pepper',
 						weight: 1
 					}, {
-						id: 'potatobattery',
+						id: 'potatoBattery',
 						weight: 1
 					}, {
-						id: 'tomatoblue',
+						id: 'tomatoBlue',
 						weight: 1
 					}, {
 						id: 'flowermoon',

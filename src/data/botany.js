@@ -22,7 +22,7 @@ const ACTIONS = {
 	},
 	growFlowersun: {
 		time: 20,
-		item: "flowersun",
+		item: "flowerSun",
 		icon: require("@/assets/art/botany/TrayFlowersun.gif"),
 		requiredItems: { plantSeed: 1 }
 	},
@@ -40,13 +40,13 @@ const ACTIONS = {
 	},
 	growPotatobattery: {
 		time: 20,
-		item: "potatobattery",
+		item: "potatoBattery",
 		icon: require("@/assets/art/botany/TrayPotato.gif"),
 		requiredItems: { plantSeed: 2 }
 	},
 	growTomatoblue: {
 		time: 20,
-		item: "tomatoblue",
+		item: "tomatoBlue",
 		icon: require("@/assets/art/botany/TrayTomatoblue.gif"),
 		requiredItems: { plantSeed: 2 }
 	},
@@ -82,7 +82,7 @@ const ACTIONS = {
 	},
 	growTomatobluespace: {
 		time: 20,
-		item: "tomatobluespace",
+		item: "tomatoBluespace",
 		icon: require("@/assets/art/botany/TrayTomatobluespace.gif"),
 		requiredItems: { plantSeed: 3 }
 	},
