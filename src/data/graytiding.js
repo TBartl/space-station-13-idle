@@ -397,8 +397,8 @@ const ACTIONS = {
 Object.values(ACTIONS).forEach((action, index) => {
 	action.requiredLevel = 1 + index * 2
 	action.failure = {
-		chance: .65,
-		damage: Math.floor(10 + index * 1.5)
+		chance: .75,
+		damage: Math.floor(5 + index * 1.5)
 	}
 });
 

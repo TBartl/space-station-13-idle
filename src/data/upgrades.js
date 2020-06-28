@@ -234,7 +234,7 @@ const BOTANY_UPGRADES = {
 	}
 }
 
-export const GRAYTIDING_UPGRADE_PERCENT = .05;
+export const GRAYTIDING_UPGRADE_PERCENT = .06;
 const GRAYTIDING_UPGRADES = {}
 for (let i = 0; i < 10; i++) {
 	let upgrade = {
