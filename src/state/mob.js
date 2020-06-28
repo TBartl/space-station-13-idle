@@ -63,10 +63,10 @@ export function createMobModule(mobType) {
 				return null
 			},
 			baseDps() {
-				return 2
+				return 3
 			},
 			powerRatio() {
-				return .5;
+				return .35;
 			},
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
