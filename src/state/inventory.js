@@ -145,7 +145,15 @@ const inventory = {
 	},
 	mutations: {
 		changeItemCount(state, { itemId, count }) {
-			if (!state.bank[itemId]) { // Not in the bank
+			let item = ITEMS[itemId];
+
+			// Check if we can just stack this with what's equipped
+			let equipmentSlot = getEquipmentSlot(itemId);
+			if (count > 0 && getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
+				state.equipment[equipmentSlot].count += count;
+			}
+
+			else if (!state.bank[itemId]) { // Not in the bank
 
 				// Is using this.getters here supported?
 				// Hell no, but I've used this as a mutation for too long to go and update it to an action now
@@ -162,7 +170,7 @@ const inventory = {
 			}
 			this.commit("completion/trackItem", { itemId, count })
 			if (count > 0) {
-				EventBus.$emit("toast", { icon: ITEMS[itemId].icon, text: "+" + count });
+				EventBus.$emit("toast", { icon: item.icon, text: "+" + count });
 			}
 		},
 		setEquipment(state, { slot, itemId, count }) {
