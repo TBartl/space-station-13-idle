@@ -52,19 +52,19 @@ const ACTIONS = {
 	},
 	growBananamime: {
 		time: 20,
-		item: "bananamime",
+		item: "bananaMime",
 		icon: require("@/assets/art/botany/TrayBananamime.gif"),
 		requiredItems: { plantSeed: 2 }
 	},
 	growFlowermoon: {
 		time: 20,
-		item: "flowermoon",
+		item: "flowerMoon",
 		icon: require("@/assets/art/botany/TrayFlowermoon.gif"),
 		requiredItems: { plantSeed: 2 }
 	},
 	growMushroomred: {
 		time: 20,
-		item: "mushroomred",
+		item: "mushroomRed",
 		icon: require("@/assets/art/botany/TrayShroomred.gif"),
 		requiredItems: { plantSeed: 2 }
 	},
@@ -88,25 +88,25 @@ const ACTIONS = {
 	},
 	growBananablue: {
 		time: 20,
-		item: "bananablue",
+		item: "bananaBlue",
 		icon: require("@/assets/art/botany/TrayBananablue.gif"),
 		requiredItems: { plantSeed: 3 }
 	},
 	growFlowernova: {
 		time: 20,
-		item: "flowernova",
+		item: "flowerNova",
 		icon: require("@/assets/art/botany/TrayFlowernova.gif"),
 		requiredItems: { plantSeed: 3 }
 	},
 	growMushroomshadow: {
 		time: 20,
-		item: "mushroomshadow",
+		item: "mushroomShadow",
 		icon: require("@/assets/art/botany/TrayShroomshadow.gif"),
 		requiredItems: { plantSeed: 3 }
 	},
 	growPepperghost: {
 		time: 20,
-		item: "pepperghost",
+		item: "pepperGhost",
 		icon: require("@/assets/art/botany/TrayPepperghost.gif"),
 		requiredItems: { plantSeed: 3 }
 	},

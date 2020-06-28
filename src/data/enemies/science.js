@@ -109,14 +109,14 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'meleeT6',
+						id: 'meleeToolbox6',
 						weight: 1
 					}
 				]
 			},
 			{
 				chance: .2,
-				item: "armB6"
+				item: "armorBrute6"
 			},
 			{
 				chance: 1,

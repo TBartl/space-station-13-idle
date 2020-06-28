@@ -45,11 +45,11 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'armB1',
+						id: 'armorBrute1',
 						weight: 1
 					},
 					{
-						id: 'meleeT2',
+						id: 'meleeToolbox2',
 						weight: 1
 					},
 					{
@@ -82,15 +82,15 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'ammoB1',
+						id: 'ammoBallistic1',
 						weight: 1
 					},
 					{
-						id: 'gunB2',
+						id: 'gunBallistic2',
 						weight: 1
 					},
 					{
-						id: 'ammoB2',
+						id: 'ammoBallistic2',
 						weight: 1
 					}
 				]

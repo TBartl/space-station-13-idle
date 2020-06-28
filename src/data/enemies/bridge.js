@@ -17,15 +17,15 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'armB4',
+						id: 'armorBrute4',
 						weight: 1
 					},
 					{
-						id: 'faceSecglasses',
+						id: 'faceSecGlassess',
 						weight: 1
 					},
 					{
-						id: 'ammoE3',
+						id: 'ammoEnergy3',
 						weight: 1
 					}
 				]

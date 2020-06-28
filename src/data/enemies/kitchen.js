@@ -37,10 +37,10 @@ export default {
 						id: 'tomatoBlue',
 						weight: 1
 					}, {
-						id: 'flowermoon',
+						id: 'flowerMoon',
 						weight: 1
 					}, {
-						id: 'mushroomred',
+						id: 'mushroomRed',
 						weight: 1
 					}, {
 						id: 'pepperred',

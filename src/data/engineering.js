@@ -146,7 +146,7 @@ export const ACTIONS = {
 		xp: 18,
 		requiredLevel: 42,
 		requiredItems: {
-			ammoE3: 1
+			ammoEnergy3: 1
 		}
 	},
 	engSingularity: {

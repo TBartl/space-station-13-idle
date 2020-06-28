@@ -16,7 +16,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'bananamime',
+						id: 'bananaMime',
 						weight: 1
 					},
 					{
@@ -60,7 +60,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'meleeT4',
+						id: 'meleeToolbox4',
 						weight: 1
 					}
 				]

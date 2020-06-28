@@ -100,7 +100,7 @@ export default {
 			power: -5,
 		},
 	},
-	bananamime: {
+	bananaMime: {
 		name: "...",
 		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantBananamime.png"),
@@ -112,7 +112,7 @@ export default {
 			power: 0,
 		},
 	},
-	flowermoon: {
+	flowerMoon: {
 		name: "Moonflower",
 		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantFlowermoon.png"),
@@ -124,7 +124,7 @@ export default {
 			power: -5,
 		},
 	},
-	mushroomred: {
+	mushroomRed: {
 		name: "Glowcap",
 		sellPrice: 52,
 		icon: require("@/assets/art/botany/PlantShroomred.png"),
@@ -172,7 +172,7 @@ export default {
 			power: -5,
 		},
 	},
-	bananablue: {
+	bananaBlue: {
 		name: "Blue Banana",
 		sellPrice: 27,
 		icon: require("@/assets/art/botany/PlantBananablue.png"),
@@ -184,7 +184,7 @@ export default {
 			power: 0,
 		},
 	},
-	flowernova: {
+	flowerNova: {
 		name: "Novaflower",
 		sellPrice: 66,
 		icon: require("@/assets/art/botany/PlantFlowernova.png"),
@@ -196,7 +196,7 @@ export default {
 			power: -5,
 		},
 	},
-	mushroomshadow: {
+	mushroomShadow: {
 		name: "Shadowshroom",
 		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantShroomshadow.png"),
@@ -208,7 +208,7 @@ export default {
 			power: 0,
 		},
 	},
-	pepperghost: {
+	pepperGhost: {
 		name: "Ghost Pepper",
 		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantPepperghost.png"),

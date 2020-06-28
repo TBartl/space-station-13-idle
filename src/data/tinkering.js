@@ -37,7 +37,7 @@ const ACTIONS_RECYCLING = {
 const ACTIONS_BLUNT_WEAPONS = {
 	tinkerMeleeb1: {
 		time: 2,
-		item: "meleeB1",
+		item: "meleeBlunt1",
 		icon: require("@/assets/art/combat/items/melee_b1.png"),
 		xp: 2,
 		requiredLevel: 2,
@@ -47,7 +47,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb2: {
 		time: 2,
-		item: "meleeB2",
+		item: "meleeBlunt2",
 		icon: require("@/assets/art/combat/items/melee_b2.png"),
 		xp: 8,
 		requiredLevel: 8,
@@ -57,7 +57,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb3: {
 		time: 2,
-		item: "meleeB3",
+		item: "meleeBlunt3",
 		icon: require("@/assets/art/combat/items/melee_b3.png"),
 		xp: 20,
 		requiredLevel: 14,
@@ -67,7 +67,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb4: {
 		time: 2,
-		item: "meleeB4",
+		item: "meleeBlunt4",
 		icon: require("@/assets/art/combat/items/melee_b4.png"),
 		xp: 20,
 		requiredLevel: 20,
@@ -77,7 +77,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb5: {
 		time: 2,
-		item: "meleeB5",
+		item: "meleeBlunt5",
 		icon: require("@/assets/art/combat/items/melee_b5.png"),
 		xp: 20,
 		requiredLevel: 26,
@@ -87,7 +87,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb6: {
 		time: 2,
-		item: "meleeB6",
+		item: "meleeBlunt6",
 		icon: require("@/assets/art/combat/items/melee_b6.png"),
 		xp: 20,
 		requiredLevel: 32,
@@ -97,7 +97,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb7: {
 		time: 2,
-		item: "meleeB7",
+		item: "meleeBlunt7",
 		icon: require("@/assets/art/combat/items/melee_b7.png"),
 		xp: 20,
 		requiredLevel: 38,
@@ -107,7 +107,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb8: {
 		time: 2,
-		item: "meleeB8",
+		item: "meleeBlunt8",
 		icon: require("@/assets/art/combat/items/melee_b8.png"),
 		xp: 20,
 		requiredLevel: 44,
@@ -117,7 +117,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 	},
 	tinkerMeleeb9: {
 		time: 2,
-		item: "meleeB9",
+		item: "meleeBlunt9",
 		icon: require("@/assets/art/combat/items/melee_b9.png"),
 		xp: 20,
 		requiredLevel: 50,
@@ -131,7 +131,7 @@ const ACTIONS_BLUNT_WEAPONS = {
 const ACTIONS_SHARP_WEAPONS = {
 	tinkerMeleec1: {
 		time: 2,
-		item: "meleeC1",
+		item: "meleeSharp1",
 		icon: require("@/assets/art/combat/items/melee_c1.png"),
 		xp: 20,
 		requiredLevel: 5,
@@ -141,7 +141,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec2: {
 		time: 2,
-		item: "meleeC2",
+		item: "meleeSharp2",
 		icon: require("@/assets/art/combat/items/melee_c2.png"),
 		xp: 20,
 		requiredLevel: 10,
@@ -151,7 +151,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec3: {
 		time: 2,
-		item: "meleeC3",
+		item: "meleeSharp3",
 		icon: require("@/assets/art/combat/items/melee_c3.png"),
 		xp: 20,
 		requiredLevel: 16,
@@ -161,7 +161,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec4: {
 		time: 2,
-		item: "meleeC4",
+		item: "meleeSharp4",
 		icon: require("@/assets/art/combat/items/melee_c4.png"),
 		xp: 20,
 		requiredLevel: 21,
@@ -171,7 +171,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec5: {
 		time: 2,
-		item: "meleeC5",
+		item: "meleeSharp5",
 		icon: require("@/assets/art/combat/items/melee_c5.png"),
 		xp: 20,
 		requiredLevel: 27,
@@ -181,7 +181,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec6: {
 		time: 2,
-		item: "meleeC6",
+		item: "meleeSharp6",
 		icon: require("@/assets/art/combat/items/melee_c6.png"),
 		xp: 20,
 		requiredLevel: 32,
@@ -191,7 +191,7 @@ const ACTIONS_SHARP_WEAPONS = {
 	},
 	tinkerMeleec7: {
 		time: 2,
-		item: "meleeC7",
+		item: "meleeSharp7",
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
 		xp: 20,
 		requiredLevel: 38,
@@ -205,7 +205,7 @@ const ACTIONS_ARMOR = {
 
 	tinkerArmB1: {
 		time: 2,
-		item: "armB1",
+		item: "armorBrute1",
 		icon: require("@/assets/art/combat/items/arm_b1.png"),
 		xp: 20,
 		requiredLevel: 4,
@@ -215,7 +215,7 @@ const ACTIONS_ARMOR = {
 	},
 	tinkerArmB2: {
 		time: 2,
-		item: "armB2",
+		item: "armorBrute2",
 		icon: require("@/assets/art/combat/items/arm_b2.png"),
 		xp: 20,
 		requiredLevel: 15,
@@ -225,7 +225,7 @@ const ACTIONS_ARMOR = {
 	},
 	tinkerArmB3: {
 		time: 2,
-		item: "armB3",
+		item: "armorBrute3",
 		icon: require("@/assets/art/combat/items/arm_b3.png"),
 		xp: 20,
 		requiredLevel: 26,
@@ -235,7 +235,7 @@ const ACTIONS_ARMOR = {
 	},
 	tinkerArmB4: {
 		time: 2,
-		item: "armB4",
+		item: "armorBrute4",
 		icon: require("@/assets/art/combat/items/arm_b4.png"),
 		xp: 20,
 		requiredLevel: 37,
@@ -245,7 +245,7 @@ const ACTIONS_ARMOR = {
 	},
 	tinkerArmB5: {
 		time: 2,
-		item: "armB5",
+		item: "armorBrute5",
 		icon: require("@/assets/art/combat/items/arm_b5.png"),
 		xp: 20,
 		requiredLevel: 48,
@@ -258,7 +258,7 @@ const ACTIONS_ARMOR = {
 export const ACTIONS_SPACE_SUITS = {
 	tinkerArmS1: {
 		time: 2,
-		item: "armS1",
+		item: "armorBurn1",
 		icon: require("@/assets/art/combat/items/arm_s1.png"),
 		xp: 20,
 		requiredLevel: 3,
@@ -268,7 +268,7 @@ export const ACTIONS_SPACE_SUITS = {
 	},
 	tinkerArmS2: {
 		time: 2,
-		item: "armS2",
+		item: "armorBurn2",
 		icon: require("@/assets/art/combat/items/arm_s2.png"),
 		xp: 20,
 		requiredLevel: 14,
@@ -278,7 +278,7 @@ export const ACTIONS_SPACE_SUITS = {
 	},
 	tinkerArmS3: {
 		time: 2,
-		item: "armS3",
+		item: "armorBurn3",
 		icon: require("@/assets/art/combat/items/arm_s3.png"),
 		xp: 20,
 		requiredLevel: 25,
@@ -288,7 +288,7 @@ export const ACTIONS_SPACE_SUITS = {
 	},
 	tinkerArmS4: {
 		time: 2,
-		item: "armS4",
+		item: "armorBurn4",
 		icon: require("@/assets/art/combat/items/arm_s4.png"),
 		xp: 20,
 		requiredLevel: 36,
@@ -298,7 +298,7 @@ export const ACTIONS_SPACE_SUITS = {
 	},
 	tinkerArmS5: {
 		time: 2,
-		item: "armS5",
+		item: "armorBurn5",
 		icon: require("@/assets/art/combat/items/arm_s5.png"),
 		xp: 20,
 		requiredLevel: 47,

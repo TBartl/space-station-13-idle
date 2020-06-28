@@ -20,11 +20,11 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'foodEva1',
+						id: 'foodEvasion1',
 						weight: 1
 					},
 					{
-						id: 'meleeC3',
+						id: 'meleeSharp3',
 						weight: 1
 					}
 				]
@@ -56,7 +56,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'ammoE2',
+						id: 'ammoEnergy2',
 						weight: 1
 					},
 					{
