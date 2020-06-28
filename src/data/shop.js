@@ -230,9 +230,9 @@ const CAPES = {
 	},
 	capeShitposting: {
 		item: "capeShitposting",
-		description: "Requires max Shitposting to wear.",
+		description: "Only the truely elite can handle this.",
 		requiredLevels: {
-			cooking: MAX_LEVEL
+			shitposting: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000
