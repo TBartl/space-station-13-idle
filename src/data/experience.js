@@ -4,6 +4,7 @@ const BOTTOM = (1 - 2 ** (-1 / 7)) / 75;
 
 // The following is taken from runescape, but heavily modified to make the early 1-5 leveling experience slightly smoother
 export function xpFromLevel(l) {
+	if (l <= 1) return 0;
 	// This realistically doesn't affect anything, so let's get rid of it
 	// let start = (1 / 8) * l * (l - 1);
 
