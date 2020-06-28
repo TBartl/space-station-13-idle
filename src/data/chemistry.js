@@ -159,33 +159,56 @@ const POTIONS = {
 			peanut: 1
 		}
 	},
-},
+}
 
 const PILLS = {
 	synthPillMeth: {
 		item: "pillMeth",
-		sellPrice: 1,
-		icon: require("@/assets/art/chemistry/chemOxygen.png")
+		sellPrice: 50,
+		icon: require("@/assets/art/combat/items/pill1.png"),
+		requiredItems: {
+			oxygen: 1,
+			water: 1,
+			sacid: 1
+		}
 	},
 	synthPillSpacedrugs: {
 		item: "pillSpacedrugs",
-		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/chemOil.png")
+		sellPrice: 40,
+		icon: require("@/assets/art/combat/items/pill2.png"),
+		requiredItems: {
+			water: 1,
+			mercury: 1,
+			lithium: 1,
+		}
 	},
 	sythnPillPumpup: {
 		item: "pillPumpup",
-		sellPrice: 2,
-		icon: require("@/assets/art/chemistry/chemWater.png")
+		sellPrice: 25,
+		icon: require("@/assets/art/combat/items/pill3.png"),
+		requiredItems: {
+			oxygen: 1,
+			oil: 1,
+			sacid: 1,
+		}
 	},
 	sythnPillKrokodil: {
 		item: "pillKrokodil",
-		sellPrice: -2,
-		icon: require("@/assets/art/chemistry/chemAcid.png")
+		sellPrice: 10,
+		icon: require("@/assets/art/combat/items/pill4.png"),
+		requiredItems: {
+			sacid: 3
+
+		}
 	},
 	sythnPillSpacelube: {
 		item: "pillSpacelube",
-		sellPrice: -1,
-		icon: require("@/assets/art/chemistry/chemMercury.png")
+		sellPrice: 20,
+		icon: require("@/assets/art/chemistry/lube.png"),
+		requiredItems: {
+			oil: 2,
+			water: 1,
+		}
 	},
 }
 
@@ -195,6 +218,14 @@ Object.values(POTIONS).forEach((action, index) => {
 	action.type = "chems";
 
 	let level = Math.round(MIN_LEVEL + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL));
+
+	action.requiredLevel = level;
+	action.xp = Math.max(.35, level / 5);
+});
+Object.values(PILLS).forEach((action, index) => {
+	action.type = "pills";
+
+	let level = Math.round(MIN_LEVEL + 20 + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL + 20));
 
 	action.requiredLevel = level;
 	action.xp = Math.max(.35, level / 5);

@@ -124,28 +124,64 @@ const PILLS = {
 	pillMeth: {
 		name: "Methamphetamine",
 		sellPrice: 1,
-		icon: require("@/assets/art/chemistry/chemOxygen.png")
+		icon: require("@/assets/art/combat/items/pill1.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -10,
+			evasion: 0,
+			precision: 5,
+			power: 0,
+		}
 	},
 	pillSpacedrugs: {
 		name: "Crank",
 		sellPrice: 3,
-		icon: require("@/assets/art/chemistry/chemOil.png")
+		icon: require("@/assets/art/combat/items/pill2.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -10,
+			evasion: 0,
+			precision: 0,
+			power: 5,
+		}
 	},
 	pillPumpup: {
 		name: "Pump-Up",
 		sellPrice: 2,
-		icon: require("@/assets/art/chemistry/chemWater.png")
+		icon: require("@/assets/art/combat/items/pill3.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -25,
+			evasion: 5,
+			precision: -5,
+			power: 5,
+		}
 	},
 	pillKrokodil: {
 		name: "Krokodil",
 		sellPrice: -2,
-		icon: require("@/assets/art/chemistry/chemAcid.png")
+		icon: require("@/assets/art/combat/items/pill4.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -50,
+			evasion: -5,
+			precision: 5,
+			power: 5,
+		}
 	},
 	pillSpacelube: {
-		name: "Mercury",
+		name: "Space Lube",
 		sellPrice: -1,
-		icon: require("@/assets/art/chemistry/chemMercury.png")
-	},
+		icon: require("@/assets/art/combat/items/pill5.png"),
+		description: "It may taste like cherry, but you don't eat this one.",
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 5,
+			precision: 0,
+			power: 0,
+		}
+	}
 }
 
 export const RESOURCE_CHEMISTRY = {
