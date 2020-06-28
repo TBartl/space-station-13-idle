@@ -531,7 +531,7 @@ const GENERGY = {
 		requires: {
 			rangedPower: 20
 		}
-	},	
+	},
 	gunEnergy4: {
 		name: "Laser Gun",
 		sellPrice: 1275,
@@ -653,7 +653,7 @@ const GBULLET = {
 		requires: {
 			rangedPower: 25
 		}
-	},	
+	},
 	gunBallistic4: {
 		name: "Riot Shotgun",
 		sellPrice: 980,
@@ -800,7 +800,7 @@ Object.values(MCUT).forEach(mcut => {
 
 Object.values(MTOOLBOX).forEach(mtoolbox => {
 	mtoolbox.equipmentSlot = "hand";
-	mtoolbox.sellPrice = Math.ceil((mtoolbox.requires.meleePower + 10) * 12.25 - 75 );
+	mtoolbox.sellPrice = Math.ceil((mtoolbox.requires.meleePower + 10) * 12.25 - 75);
 	mtoolbox.stats.maxHealth = mtoolbox.requires.meleePower * 1;
 	mtoolbox.stats.precision = Math.ceil(mtoolbox.requires.meleePower * .35);
 	mtoolbox.stats.power = Math.round(mtoolbox.requires.meleePower * .5);
@@ -811,7 +811,7 @@ Object.values(MTOOLBOX).forEach(mtoolbox => {
 
 Object.values(MENERGY).forEach(menergy => {
 	menergy.equipmentSlot = "hand";
-	menergy.sellPrice = Math.ceil((menergy.requires.precision+2) * (menergy.requires.precision+2) - menergy.requires.precision+2);
+	menergy.sellPrice = Math.ceil((menergy.requires.precision + 2) * (menergy.requires.precision + 2) - menergy.requires.precision + 2);
 	menergy.stats.maxHealth = (menergy.requires.precision + 2) * 1;
 	menergy.stats.precision = Math.ceil((menergy.requires.precision + 2) * .4);
 	menergy.stats.power = Math.round((menergy.requires.precision + 2) * .45);
@@ -850,6 +850,7 @@ const WEAPONS = {
 Object.values(WEAPONS).forEach(weapon => {
 	// Do this to show "BRUTE" on all the weapon item popovers that are otherwise defaulting
 	if (!weapon.stats.damageType) weapon.stats.damageType = "brute";
+	if (!weapon.stats.attackSpeed) weapon.stats.attackSpeed = 3;
 })
 
 export default WEAPONS;
