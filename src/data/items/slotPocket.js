@@ -48,7 +48,7 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 5,
-			precision: 50
+			precision: 25
 		}
 	},
 	ammoB2: {
@@ -59,7 +59,7 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 13,
-			precision: 50
+			precision: 30
 		}
 	},
 	ammoB3: {
@@ -70,7 +70,7 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 20,
-			precision: 50
+			precision: 35
 		}
 	},
 	ammoB4: {
@@ -81,19 +81,19 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 25,
-			precision: 50
+			precision: 40
 		}
 	},
-	mechGunCanno: {
-		name: "Mounted Cannon",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/gunbig.png")
-	},
-	cannonAmmo: {
-		name: "Cannon Ammo",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammobig.png")
-	},
+	// mechGunCanno: {
+	// 	name: "Mounted Cannon",
+	// 	sellPrice: 0,
+	// 	equipmentSlot: "pocket",
+	// 	icon: require("@/assets/art/engineering/gunbig.png")
+	// },
+	// cannonAmmo: {
+	// 	name: "Cannon Ammo",
+	// 	sellPrice: 0,
+	// 	equipmentSlot: "pocket",
+	// 	icon: require("@/assets/art/engineering/ammobig.png")
+	// },
 }
