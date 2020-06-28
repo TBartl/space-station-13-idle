@@ -73,7 +73,7 @@ const PRECISION_ACTIONS = {
 	cookPer1: {
 		time: 3,
 		name: "Hot Potato Stew",
-		item: "foodPer1",
+		item: "foodPrecision1",
 		icon: require("@/assets/art/cooking/stew1.png"),
 		xp: 1,
 		requiredLevel: 1,
@@ -85,12 +85,12 @@ const PRECISION_ACTIONS = {
 	cookPer2: {
 		time: 3,
 		name: "Tingle Soup",
-		item: "foodPer2",
+		item: "foodPrecision2",
 		icon: require("@/assets/art/cooking/stew2.png"),
 		xp: 6,
 		requiredLevel: 15,
 		requiredItems: {
-			potatobattery: 1,
+			potatoBattery: 1,
 			peppercold: 1
 		}
 	},
@@ -98,12 +98,12 @@ const PRECISION_ACTIONS = {
 	cookPer3: {
 		time: 3,
 		name: "Dad's Stew",
-		item: "foodPer3",
+		item: "foodPrecision3",
 		icon: require("@/assets/art/cooking/stew3.png"),
 		xp: 12,
 		requiredLevel: 29,
 		requiredItems: {
-			pepperghost: 1,
+			pepperGhost: 1,
 			orange: 1
 		}
 	},
@@ -113,7 +113,7 @@ const POWER_ACTIONS = {
 	cookPow1: {
 		time: 3,
 		name: "Donkpocket",
-		item: "foodPow1",
+		item: "foodPower1",
 		icon: require("@/assets/art/cooking/donk1.png"),
 		xp: 2,
 		requiredLevel: 3,
@@ -125,25 +125,25 @@ const POWER_ACTIONS = {
 	cookPow2: {
 		time: 3,
 		name: "Berrypocket",
-		item: "foodPow2",
+		item: "foodPower2",
 		icon: require("@/assets/art/cooking/donk2.png"),
 		xp: 7,
 		requiredLevel: 17,
 		requiredItems: {
-			tomatoblue: 1,
-			mushroomred: 1
+			tomatoBlue: 1,
+			mushroomRed: 1
 		}
 	},
 	cookPow3: {
 		time: 3,
 		name: "Dankpocket",
-		item: "foodPow3",
+		item: "foodPower3",
 		icon: require("@/assets/art/cooking/donk3.png"),
 		xp: 13,
 		requiredLevel: 31,
 		requiredItems: {
-			tomatobluespace: 1,
-			mushroomshadow: 1
+			tomatoBluespace: 1,
+			mushroomShadow: 1
 		}
 	},
 }
@@ -151,37 +151,37 @@ const EVASION_ACTIONS = {
 	cookEva1: {
 		time: 3,
 		name: "Cream Pie",
-		item: "foodEva1",
+		item: "foodEvasion1",
 		icon: require("@/assets/art/cooking/pie1.png"),
 		xp: 2,
 		requiredLevel: 5,
 		requiredItems: {
 			banana: 1,
-			flowersun: 1
+			flowerSun: 1
 		}
 	},
 	cookEva2: {
 		time: 3,
 		name: "Moonpie",
-		item: "foodEva2",
+		item: "foodEvasion2",
 		icon: require("@/assets/art/cooking/pie2.png"),
 		xp: 8,
 		requiredLevel: 19,
 		requiredItems: {
-			bananamime: 1,
-			flowermoon: 1
+			bananaMime: 1,
+			flowerMoon: 1
 		}
 	},
 	cookEva3: {
 		time: 3,
 		name: "Senpai",
-		item: "foodEva3",
+		item: "foodEvasion3",
 		icon: require("@/assets/art/cooking/pie3.png"),
 		xp: 14,
 		requiredLevel: 33,
 		requiredItems: {
-			bananablue: 1,
-			flowernova: 1
+			bananaBlue: 1,
+			flowerNova: 1
 		}
 	},
 }
@@ -220,7 +220,7 @@ const HUMAN_ACTIONS = {
 		requiredLevel: 36,
 		requiredItems: {
 			foodMeatH: 1,
-			bananablue: 1
+			bananaBlue: 1
 		}
 	},
 	cookHuman4: {
@@ -232,7 +232,7 @@ const HUMAN_ACTIONS = {
 		requiredLevel: 43,
 		requiredItems: {
 			foodMeatH: 1,
-			pepperghost: 1
+			pepperGhost: 1
 		}
 	},
 }
@@ -259,7 +259,7 @@ const ANIMAL_ACTIONS = {
 		requiredLevel: 24,
 		requiredItems: {
 			foodMeatA: 1,
-			flowermoon: 1
+			flowerMoon: 1
 		}
 	},
 	cookAnimal3: {
@@ -271,7 +271,7 @@ const ANIMAL_ACTIONS = {
 		requiredLevel: 38,
 		requiredItems: {
 			foodMeatA: 1,
-			tomatobluespace: 1
+			tomatoBluespace: 1
 		}
 	},
 	cookAnimal4: {
@@ -283,7 +283,7 @@ const ANIMAL_ACTIONS = {
 		requiredLevel: 45,
 		requiredItems: {
 			foodMeatA: 1,
-			flowernova: 1
+			flowerNova: 1
 		}
 	},
 }
@@ -310,7 +310,7 @@ const ALIEN_ACTIONS = {
 		requiredLevel: 26,
 		requiredItems: {
 			foodMeatZ: 1,
-			mushroomred: 1
+			mushroomRed: 1
 		}
 	},
 	cookAlien3: {
@@ -334,7 +334,7 @@ const ALIEN_ACTIONS = {
 		requiredLevel: 47,
 		requiredItems: {
 			foodMeatZ: 1,
-			mushroomshadow: 1
+			mushroomShadow: 1
 		}
 	},
 }

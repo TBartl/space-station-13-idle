@@ -63,10 +63,10 @@ export function createMobModule(mobType) {
 				return null
 			},
 			baseDps() {
-				return 2
+				return 3
 			},
 			powerRatio() {
-				return .5;
+				return .35;
 			},
 			dps(state, getters) {
 				return getters.baseDps + getters.powerRatio * getters.stats.power;
@@ -150,8 +150,8 @@ export function createMobModule(mobType) {
 				}
 
 				// Use ammo
-				if (state.mobType == "player" && rootGetters["combat/isRanged"]) {
-					var pocket = rootGetters["inventory/equipment"].pocket;
+				var pocket = rootGetters["inventory/equipment"].pocket;
+				if (state.mobType == "player" && pocket.itemId && !rootGetters["inventory/checkRestricted"](pocket.itemId)) {
 					pocket.count -= 1;
 					if (pocket.count == 0) {
 						pocket.itemId = null;

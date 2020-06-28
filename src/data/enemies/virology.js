@@ -92,7 +92,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'ammoB4',
+						id: 'ammoBallistic4',
 						weight: 1
 					},
 					{
@@ -137,7 +137,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'mushroomred',
+						id: 'mushroomRed',
 						weight: 1
 					},
 					{

@@ -27,12 +27,12 @@ const potionDropTable = [
 				weight: 20
 			},
 			{
-				id: "slimeMining",
+				id: "companionMining",
 				count: 1,
 				weight: 15
 			},
 			{
-				id: "exoticparts",
+				id: "exoticParts",
 				count: 4,
 				weight: 10
 			},

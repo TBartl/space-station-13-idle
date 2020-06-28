@@ -1,5 +1,5 @@
 export default {
-	headRadio1: {
+	headCommon1: {
 		name: "Radio Headset",
 		sellPrice: 500,
 		icon: require("@/assets/art/combat/items/head/headset_1.png"),
@@ -15,7 +15,7 @@ export default {
 			evasion: 15,
 		}
 	},	
-	headRadio2: {
+	headCommon2: {
 		name: "Ear Protection Headset",
 		sellPrice: 500,
 		icon: require("@/assets/art/combat/items/head/headset_2.png"),
@@ -31,7 +31,7 @@ export default {
 			evasion: 15,
 		}
 	},
-	headRadio3: {
+	headCommon3: {
 		name: "Health Sensor Headset",
 		sellPrice: 500,
 		icon: require("@/assets/art/combat/items/head/headset_3.png"),
@@ -47,7 +47,7 @@ export default {
 			evasion: 15,
 		}
 	},
-	headRadio4: {
+	headCommon4: {
 		name: "Long Ranged Headset",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/headset_4.png"),
@@ -63,7 +63,7 @@ export default {
 			evasion: 15,
 		}
 	},
-	headRadio5: {
+	headCommon5: {
 		name: "High Volume Headset",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/headset_5.png"),
@@ -80,7 +80,7 @@ export default {
 			evasion: 15,
 		}
 	},
-	headH1: {
+	headRare1: {
 		name: "Hard Hat",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h1.png"),
@@ -96,8 +96,8 @@ export default {
 			evasion: 25,
 		}
 	},
-	headH2: {
-		name: "Cakehat",
+	headRare2: {
+		name: "Cake Hat",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h2.png"),
 		equipmentSlot: "head",
@@ -112,7 +112,7 @@ export default {
 			evasion: 25,
 		}
 	},
-	headH3: {
+	headRare3: {
 		name: "Ushanka",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h3.png"),
@@ -128,7 +128,7 @@ export default {
 			evasion: 25,
 		}
 	},
-	headH4: {
+	headRare4: {
 		name: "Security Beret",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h4.png"),
@@ -144,7 +144,7 @@ export default {
 			evasion: 25,
 		}
 	},
-	headH5: {
+	headRare5: {
 		name: "Captain's Hat",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h5.png"),
@@ -161,7 +161,7 @@ export default {
 			evasion: 25,
 		}
 	},
-	headR1: {
+	headEpic1: {
 		name: "Wizard Hat",
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r1.png"),
@@ -177,7 +177,7 @@ export default {
 			evasion: 35,
 		}
 	},
-	headR2: {
+	headEpic2: {
 		name: "Abductor Interface",
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r2.png"),
@@ -193,7 +193,7 @@ export default {
 			evasion: 35,
 		}
 	},
-	headR3: {
+	headEpic3: {
 		name: "Plasma Environmental Helm",
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r3.png"),
@@ -209,7 +209,7 @@ export default {
 			evasion: 35,
 		}
 	},
-	headR4: {
+	headEpic4: {
 		name: "Carp Helmet",
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r4.png"),
@@ -225,7 +225,7 @@ export default {
 			evasion: 35,
 		}
 	},
-	headR5: {
+	headEpic5: {
 		name: "The Liberator",
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r5.png"),

@@ -115,7 +115,7 @@ const MECHS = {
 	},
 	fabricateDeathripley: {
 		time: 780,
-		item: "deathripley",
+		item: "deathRipley",
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
 		xp: 2964,
 		requiredLevel: 38,
@@ -128,7 +128,7 @@ const MECHS = {
 	},
 	fabricateDarkgygax: {
 		time: 780,
-		item: "darkgygax",
+		item: "darkGygax",
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
 		xp: 3196,
 		requiredLevel: 41,
@@ -201,7 +201,7 @@ const ENERGY_AMMO = {
 		requiredLevel: 1,
 		items:
 		{
-			id: "ammoE1",
+			id: "ammoEnergy1",
 			count: 8,
 		},
 		requiredItems: {
@@ -216,7 +216,7 @@ const ENERGY_AMMO = {
 		requiredLevel: 20,
 		items:
 		{
-			id: "ammoE2",
+			id: "ammoEnergy2",
 			count: 8,
 		},
 		requiredItems: {
@@ -231,7 +231,7 @@ const ENERGY_AMMO = {
 		requiredLevel: 30,
 		items:
 		{
-			id: "ammoE3",
+			id: "ammoEnergy3",
 			count: 8,
 		},
 		requiredItems: {
@@ -249,7 +249,7 @@ const BALLISTIC_AMMO = {
 		requiredLevel: 5,
 		items:
 		{
-			id: "ammoB1",
+			id: "ammoBallistic1",
 			count: 8,
 		},
 		requiredItems: {
@@ -264,7 +264,7 @@ const BALLISTIC_AMMO = {
 		requiredLevel: 21,
 		items:
 		{
-			id: "ammoB2",
+			id: "ammoBallistic2",
 			count: 8,
 		},
 		requiredItems: {
@@ -279,7 +279,7 @@ const BALLISTIC_AMMO = {
 		requiredLevel: 34,
 		items:
 		{
-			id: "ammoB3",
+			id: "ammoBallistic3",
 			count: 8,
 		},
 		requiredItems: {
@@ -291,7 +291,7 @@ const BALLISTIC_AMMO = {
 const ENERGY_GUNS = {
 	fabricateEgun1: {
 		time: 20,
-		item: "gunE1",
+		item: "gunEnergy1",
 		icon: require("@/assets/art/combat/items/gune_PKA.png"),
 		xp: 25,
 		requiredLevel: 10,
@@ -301,7 +301,7 @@ const ENERGY_GUNS = {
 	},
 	fabricateEgun3: {
 		time: 20,
-		item: "gunE3",
+		item: "gunEnergy3",
 		icon: require("@/assets/art/combat/items/gune_cutter.png"),
 		xp: 50,
 		requiredLevel: 20,
@@ -311,7 +311,7 @@ const ENERGY_GUNS = {
 	},
 	fabricateEgun4: {
 		time: 20,
-		item: "gunE4",
+		item: "gunEnergy4",
 		icon: require("@/assets/art/combat/items/gune_laser.png"),
 		xp: 75,
 		requiredLevel: 30,
@@ -321,7 +321,7 @@ const ENERGY_GUNS = {
 	},
 	fabricateEgun6: {
 		time: 20,
-		item: "gunE6",
+		item: "gunEnergy6",
 		icon: require("@/assets/art/combat/items/gune_energy.png"),
 		xp: 100,
 		requiredLevel: 40,
@@ -333,7 +333,7 @@ const ENERGY_GUNS = {
 const BALLISTIC_GUNS = {
 	fabricateBgun1: {
 		time: 20,
-		item: "gunB1",
+		item: "gunBallistic1",
 		icon: require("@/assets/art/combat/items/gunb_shot1.png"),
 		xp: 20,
 		requiredLevel: 8,
@@ -343,7 +343,7 @@ const BALLISTIC_GUNS = {
 	},
 	fabricateBgun3: {
 		time: 20,
-		item: "gunB3",
+		item: "gunBallistic3",
 		icon: require("@/assets/art/combat/items/gunb_shot3.png"),
 		xp: 40,
 		requiredLevel: 16,
@@ -353,7 +353,7 @@ const BALLISTIC_GUNS = {
 	},
 	fabricateBgun4: {
 		time: 20,
-		item: "gunB4",
+		item: "gunBallistic4",
 		icon: require("@/assets/art/combat/items/gunb_shot4.png"),
 		xp: 60,
 		requiredLevel: 24,
@@ -363,7 +363,7 @@ const BALLISTIC_GUNS = {
 	},
 	fabricateBgun6: {
 		time: 20,
-		item: "gunB6",
+		item: "gunBallistic6",
 		icon: require("@/assets/art/combat/items/gunb_shot6.png"),
 		xp: 90,
 		requiredLevel: 36,

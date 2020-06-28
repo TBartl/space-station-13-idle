@@ -68,7 +68,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'ammoE4',
+						id: 'ammoEnergy4',
 						weight: 1
 					},
 					{

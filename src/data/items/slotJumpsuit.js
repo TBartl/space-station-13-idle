@@ -8,6 +8,9 @@ export default {
 		stats: {
 			maxHealth: 20
 		},
+		requires: {
+			evasion: 5
+		}
 	},
 	jumpsuitExplorer: {
 		name: "Explorer's Jumpsuit",
@@ -20,9 +23,12 @@ export default {
 			power: 5,
 			evasion: 3
 		},
-		description: "+20% mining XP",
+		description: "+20% Mining XP",
 		xpBonuses: {
 			mining: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitEngineering: {
@@ -36,9 +42,12 @@ export default {
 			precision: 5,
 			evasion: 3
 		},
-		description: "+20% engineering XP",
+		description: "+20% Engineering XP",
 		xpBonuses: {
 			engineering: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitFabrication: {
@@ -52,9 +61,12 @@ export default {
 			precision: 5,
 			evasion: 3
 		},
-		description: "+20% fabrication XP",
+		description: "+20% Fabrication XP",
 		xpBonuses: {
 			fabrication: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitGraytide: {
@@ -68,9 +80,12 @@ export default {
 			power: 5,
 			evasion: 3
 		},
-		description: "+20% graytiding XP",
+		description: "+20% Graytiding XP",
 		xpBonuses: {
 			graytiding: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitTinkering: {
@@ -84,9 +99,12 @@ export default {
 			precision: 5,
 			evasion: 3
 		},
-		description: "+20% tinkering XP",
+		description: "+20% Tinkering XP",
 		xpBonuses: {
-			jumpsuitTinkering: 20
+			tinkering: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitBotany: {
@@ -100,9 +118,12 @@ export default {
 			power: 5,
 			evasion: 3
 		},
-		description: "+20% botany XP",
+		description: "+20% Botany XP",
 		xpBonuses: {
 			botany: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitCooking: {
@@ -116,9 +137,12 @@ export default {
 			precision: 5,
 			evasion: 3
 		},
-		description: "+20% cooking XP",
+		description: "+20% Cooking XP",
 		xpBonuses: {
 			cooking: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitChemistry: {
@@ -132,9 +156,12 @@ export default {
 			power: 5,
 			evasion: 3
 		},
-		description: "+20% chemistry XP",
+		description: "+20% Chemistry XP",
 		xpBonuses: {
 			chemistry: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitScience: {
@@ -148,9 +175,12 @@ export default {
 			evasion: 3,
 			command:5
 		},
-		description: "+20% xenobiology XP",
+		description: "+20% Xenobiology XP",
 		xpBonuses: {
 			xenobiology: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 	jumpsuitSecurity: {
@@ -165,9 +195,12 @@ export default {
 			power: 2,
 			evasion: 3
 		},
-		description: "+20% validhunting XP",
+		description: "+20% Validhunting XP",
 		xpBonuses: {
 			validhunting: 20
+		},
+		requires: {
+			evasion: 5
 		}
 	},
 }

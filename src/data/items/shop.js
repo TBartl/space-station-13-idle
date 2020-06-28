@@ -8,7 +8,7 @@ export default {
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/telecrystal.png")
 	},
-	exoticparts: {
+	exoticParts: {
 		name: "Exotic Remains",
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/exotic.png")
@@ -18,63 +18,63 @@ export default {
 		icon: require("@/assets/art/shop/items/hatcrate.png"),
 		itemTable: [
 			{
-				id: 'headH1',
+				id: 'headRare1',
 				weight: 5
 			},
 			{
-				id: 'headH2',
+				id: 'headRare2',
 				weight: 5
 			},
 			{
-				id: 'headH3',
+				id: 'headRare3',
 				weight: 5
 			},
 			{
-				id: 'headH4',
+				id: 'headRare4',
 				weight: 5
 			},
 			{
-				id: 'headH5',
+				id: 'headRare5',
 				weight: 5
 			},
 			{
-				id: 'headRadio1',
+				id: 'headCommon1',
 				weight: 14
 			},
 			{
-				id: 'headRadio2',
+				id: 'headCommon2',
 				weight: 14
 			},
 			{
-				id: 'headRadio3',
+				id: 'headCommon3',
 				weight: 14
 			},
 			{
-				id: 'headRadio4',
+				id: 'headCommon4',
 				weight: 14
 			},
 			{
-				id: 'headRadio5',
+				id: 'headCommon5',
 				weight: 14
 			},
 			{
-				id: 'headR1',
+				id: 'headEpic1',
 				weight: 1
 			},
 			{
-				id: 'headR2',
+				id: 'headEpic2',
 				weight: 1
 			},
 			{
-				id: 'headR3',
+				id: 'headEpic3',
 				weight: 1
 			},
 			{
-				id: 'headR4',
+				id: 'headEpic4',
 				weight: 1
 			},
 			{
-				id: 'headR5',
+				id: 'headEpic5',
 				weight: 1
 			},
 		]
@@ -84,31 +84,31 @@ export default {
 		icon: require("@/assets/art/shop/items/weaponcrate.png"),
 		itemTable: [
 			{
-				id: 'meleeC2',
+				id: 'meleeSharp2',
 				weight: 10
 			},
 			{
-				id: 'meleeC3',
+				id: 'meleeSharp3',
 				weight: 9
 			},
 			{
-				id: 'meleeC4',
+				id: 'meleeSharp4',
 				weight: 8
 			},
 			{
-				id: 'meleeC6',
+				id: 'meleeSharp6',
 				weight: 3
 			},
 			{
-				id: 'meleeC7',
+				id: 'meleeSharp7',
 				weight: 1
 			},
 			{
-				id: 'meleeE3',
+				id: 'meleeBurn3',
 				weight: 1
 			},
 			{
-				id: 'ammoE2',
+				id: 'ammoEnergy2',
 				count: 20,
 				weight: 10
 			},
@@ -124,7 +124,7 @@ export default {
 				weight: 5
 			},
 			{
-				id: 'meleeC5',
+				id: 'meleeSharp5',
 				weight: 4
 			},
 			{
@@ -140,11 +140,11 @@ export default {
 				weight: 1
 			},
 			{
-				id: 'armB3',
+				id: 'armorBrute3',
 				weight: 4
 			},
 			{
-				id: 'ammoB2',
+				id: 'ammoBallistic2',
 				count: 20,
 				weight: 8
 			},
@@ -153,7 +153,7 @@ export default {
 				weight: 3
 			},
 			{
-				id: 'meleeE2',
+				id: 'meleeBurn2',
 				weight: 1
 			},
 		]
@@ -173,22 +173,22 @@ export default {
 				weight: 2
 			},
 			{
-				id: 'foodPer1',
+				id: 'foodPrecision1',
 				count: 3,
 				weight: 4
 			},
 			{
-				id: 'foodEva1',
+				id: 'foodEvasion1',
 				count: 3,
 				weight: 4
 			},
 			{
-				id: 'foodPow1',
+				id: 'foodPower1',
 				count: 3,
 				weight: 4
 			},
 			{
-				id: 'meleeE1',
+				id: 'meleeBurn1',
 				count: 3,
 				weight: 1
 			},
@@ -199,11 +199,11 @@ export default {
 		icon: require("@/assets/art/shop/items/syndiedroppod.png"),
 		itemTable: [
 			{
-				id: 'armSyndiSuit',
+				id: 'armorBurn6',
 				weight: 1
 			},
 			{
-				id: 'darkgygax',
+				id: 'darkGygax',
 				weight: 1
 			},
 			{
@@ -211,21 +211,21 @@ export default {
 				weight: 2
 			},
 			{
-				id: 'ammoB4',
+				id: 'ammoBallistic4',
 				count: 50,
 				weight: 4
 			},
 			{
-				id: 'ammoE4',
+				id: 'ammoEnergy4',
 				count: 50,
 				weight: 4
 			},
 			{
-				id: 'meleeE4',
+				id: 'meleeBurn4',
 				weight: 2
 			},
 			{
-				id: 'meleeE5',
+				id: 'meleeBurn5',
 				weight: 1
 			}
 		]

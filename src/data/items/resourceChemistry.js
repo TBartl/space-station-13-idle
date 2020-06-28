@@ -123,7 +123,7 @@ const POTIONS = {
 const PILLS = {
 	pillMeth: {
 		name: "Methamphetamine",
-		sellPrice: 1,
+		sellPrice: 20,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -135,7 +135,7 @@ const PILLS = {
 	},
 	pillSpacedrugs: {
 		name: "Crank",
-		sellPrice: 3,
+		sellPrice: 25,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -147,7 +147,7 @@ const PILLS = {
 	},
 	pillPumpup: {
 		name: "Pump-Up",
-		sellPrice: 2,
+		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/pill3.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -159,7 +159,7 @@ const PILLS = {
 	},
 	pillKrokodil: {
 		name: "Krokodil",
-		sellPrice: -2,
+		sellPrice: 35,
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -171,7 +171,7 @@ const PILLS = {
 	},
 	pillSpacelube: {
 		name: "Space Lube",
-		sellPrice: -1,
+		sellPrice: 1,
 		icon: require("@/assets/art/combat/items/pill5.png"),
 		description: "It may taste like cherry, but you don't eat this one.",
 		equipmentSlot: "pocket",

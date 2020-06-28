@@ -16,11 +16,11 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'faceMedhud',
+						id: 'faceMedHud',
 						weight: 1
 					},
 					{
-						id: 'ammoB3',
+						id: 'ammoBallistic3',
 						weight: 1
 					},
 					{
@@ -92,7 +92,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'meleeT5',
+						id: 'meleeToolbox5',
 						weight: 1
 					},
 					{

@@ -1,6 +1,6 @@
 export default {
 //Ammo is in this file, melee combat pills are in the chemistry file.
-	ammoE1: {
+	ammoEnergy1: {
 		name: "Disabling Cell",
 		sellPrice: 1,
 		equipmentSlot: "pocket",
@@ -10,7 +10,7 @@ export default {
 			power: 7,
 		}
 	},
-	ammoE2: {
+	ammoEnergy2: {
 		name: "Stunning Cell",
 		sellPrice: 18,
 		equipmentSlot: "pocket",
@@ -20,7 +20,7 @@ export default {
 			power: 18,
 		}
 	},
-	ammoE3: {
+	ammoEnergy3: {
 		name: "Lethal Cell",
 		sellPrice: 34,
 		equipmentSlot: "pocket",
@@ -30,7 +30,7 @@ export default {
 			power: 28,
 		}
 	},
-	ammoE4: {
+	ammoEnergy4: {
 		name: "Disintegration Cell",
 		sellPrice: 52,
 		equipmentSlot: "pocket",
@@ -40,7 +40,7 @@ export default {
 			power: 35,
 		}
 	},
-	ammoB1: {
+	ammoBallistic1: {
 		name: "Beanbag Shell",
 		sellPrice: 4,
 		equipmentSlot: "pocket",
@@ -48,10 +48,10 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 5,
-			precision: 50
+			precision: 25
 		}
 	},
-	ammoB2: {
+	ammoBallistic2: {
 		name: "Birdshot Shell",
 		sellPrice: 21,
 		equipmentSlot: "pocket",
@@ -59,10 +59,10 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 13,
-			precision: 50
+			precision: 30
 		}
 	},
-	ammoB3: {
+	ammoBallistic3: {
 		name: "Buckshot Shell",
 		sellPrice: 43,
 		equipmentSlot: "pocket",
@@ -70,10 +70,10 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 20,
-			precision: 50
+			precision: 35
 		}
 	},
-	ammoB4: {
+	ammoBallistic4: {
 		name: "Breaching Shell",
 		sellPrice: 65,
 		equipmentSlot: "pocket",
@@ -81,19 +81,19 @@ export default {
 		ammoType: "ballistic",
 		stats: {
 			power: 25,
-			precision: 50
+			precision: 40
 		}
 	},
-	mechGunCanno: {
-		name: "Mounted Cannon",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/gunbig.png")
-	},
-	cannonAmmo: {
-		name: "Cannon Ammo",
-		sellPrice: 0,
-		equipmentSlot: "pocket",
-		icon: require("@/assets/art/engineering/ammobig.png")
-	},
+	// mechGunCanno: {
+	// 	name: "Mounted Cannon",
+	// 	sellPrice: 0,
+	// 	equipmentSlot: "pocket",
+	// 	icon: require("@/assets/art/engineering/gunbig.png")
+	// },
+	// cannonAmmo: {
+	// 	name: "Cannon Ammo",
+	// 	sellPrice: 0,
+	// 	equipmentSlot: "pocket",
+	// 	icon: require("@/assets/art/engineering/ammobig.png")
+	// },
 }

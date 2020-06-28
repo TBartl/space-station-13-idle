@@ -51,7 +51,7 @@ export default {
     validItems() {
       return Object.keys(this.$store.getters["inventory/bank"]).filter(
         itemId =>
-          ITEMS[itemId].potionJob && ITEMS[itemId].potionJob == this.jobId
+          ITEMS[itemId] && ITEMS[itemId].potionJob && ITEMS[itemId].potionJob == this.jobId
       );
     },
     currentPotion() {

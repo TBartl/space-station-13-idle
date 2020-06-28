@@ -65,7 +65,7 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'meleeT1',
+						id: 'meleeToolbox1',
 						weight: 1
 					}
 				]
@@ -93,7 +93,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gunE1',
+						id: 'gunEnergy1',
 						weight: 1
 					},
 					{
@@ -101,7 +101,7 @@ export default {
 						weight: 19
 					},
 					{
-						id: "ammoE1",
+						id: "ammoEnergy1",
 						weight: 10
 					}
 				]

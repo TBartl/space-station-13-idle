@@ -97,35 +97,35 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "ammoE1",
+						id: "ammoEnergy1",
 						count: [1, 3],
 						weight: 119
 					}, {
-						id: "ammoE2",
+						id: "ammoEnergy2",
 						count: 2,
 						weight: 40
 					}, {
-						id: "ammoE3",
+						id: "ammoEnergy3",
 						weight: 20
 					}, {
-						id: "ammoE4",
+						id: "ammoEnergy4",
 						weight: 10
 					}, {
-						id: "ammoB1",
+						id: "ammoBallistic1",
 						count: [1, 3],
 						weight: 120
 					}, {
-						id: "ammoB2",
+						id: "ammoBallistic2",
 						count: 2,
 						weight: 40
 					}, {
-						id: "ammoB3",
+						id: "ammoBallistic3",
 						weight: 20
 					}, {
-						id: "ammoB4",
+						id: "ammoBallistic4",
 						weight: 10
 					}, {
-						id: "limbJackboots",
+						id: "limbJackBoots",
 						weight: 1
 					},
 				]
@@ -382,7 +382,7 @@ const ACTIONS = {
 	// 					id: "limbClownShoes",
 	// 					weight: 50
 	// 				}, {
-	// 					id: "limbJackboots",
+	// 					id: "limbJackBoots",
 	// 					weight: 50
 	// 				}, {
 	// 					id: "limbAdvancedMagboots",
@@ -397,8 +397,8 @@ const ACTIONS = {
 Object.values(ACTIONS).forEach((action, index) => {
 	action.requiredLevel = 1 + index * 2
 	action.failure = {
-		chance: .65,
-		damage: Math.floor(10 + index * 1.5)
+		chance: .75,
+		damage: Math.floor(5 + index * 1.5)
 	}
 });
 

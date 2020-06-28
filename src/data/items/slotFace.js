@@ -16,7 +16,7 @@ export default {
 			evasion: 10,
 		}
 	},
-	faceMedhud: {
+	faceMedHud: {
 		name: "Health HUD Glasses",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/face_healthhud.png"),
@@ -33,7 +33,7 @@ export default {
 			evasion: 10,
 		}
 	},
-	faceSecglasses: {
+	faceSecGlassess: {
 		name: "SecurityHUD Sunglasses",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/face_secglass.png"),

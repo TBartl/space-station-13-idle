@@ -1,5 +1,5 @@
 const MBRUTE = {
-	meleeB1: {
+	meleeBlunt1: {
 		name: "Rolling Pin",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b1.png"),
@@ -16,7 +16,7 @@ const MBRUTE = {
 			meleePower: 1
 		}
 	},
-	meleeB2: {
+	meleeBlunt2: {
 		name: "Baseball Bat",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b2.png"),
@@ -33,7 +33,7 @@ const MBRUTE = {
 			meleePower: 10
 		}
 	},
-	meleeB3: {
+	meleeBlunt3: {
 		name: "Null Rod",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b3.png"),
@@ -50,7 +50,7 @@ const MBRUTE = {
 			meleePower: 20
 		}
 	},
-	meleeB4: {
+	meleeBlunt4: {
 		name: "Truncheon",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b4.png"),
@@ -67,7 +67,7 @@ const MBRUTE = {
 			meleePower: 25
 		}
 	},
-	meleeB5: {
+	meleeBlunt5: {
 		name: "Air Tank",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b5.png"),
@@ -84,7 +84,7 @@ const MBRUTE = {
 			meleePower: 30
 		}
 	},
-	meleeB6: {
+	meleeBlunt6: {
 		name: "Fire Extinquisher",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b6.png"),
@@ -101,7 +101,7 @@ const MBRUTE = {
 			meleePower: 35
 		}
 	},
-	meleeB7: {
+	meleeBlunt7: {
 		name: "Jackhammer",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b7.png"),
@@ -118,7 +118,7 @@ const MBRUTE = {
 			meleePower: 40
 		}
 	},
-	meleeB8: {
+	meleeBlunt8: {
 		name: "Chain Of Command",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b8.png"),
@@ -135,7 +135,7 @@ const MBRUTE = {
 			meleePower: 45
 		}
 	},
-	meleeB9: {
+	meleeBlunt9: {
 		name: "Stun Baton",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_b9.png"),
@@ -155,7 +155,7 @@ const MBRUTE = {
 }
 
 const MCUT = {
-	meleeC1: {
+	meleeSharp1: {
 		name: "Kitchen Fork",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c1.png"),
@@ -172,7 +172,7 @@ const MCUT = {
 			precision: 5
 		}
 	},
-	meleeC2: {
+	meleeSharp2: {
 		name: "Kitchen Knife",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c2.png"),
@@ -189,7 +189,7 @@ const MCUT = {
 			precision: 10
 		}
 	},
-	meleeC3: {
+	meleeSharp3: {
 		name: "Butcher Cleaver",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c3.png"),
@@ -206,7 +206,7 @@ const MCUT = {
 			precision: 15
 		}
 	},
-	meleeC4: {
+	meleeSharp4: {
 		name: "Spear",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c4.png"),
@@ -223,7 +223,7 @@ const MCUT = {
 			precision: 25
 		}
 	},
-	meleeC5: {
+	meleeSharp5: {
 		name: "Fire Axe",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c5.png"),
@@ -240,7 +240,7 @@ const MCUT = {
 			precision: 30
 		}
 	},
-	meleeC6: {
+	meleeSharp6: {
 		name: "Chainsaw",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c6.png"),
@@ -257,7 +257,7 @@ const MCUT = {
 			precision: 40
 		}
 	},
-	meleeC7: {
+	meleeSharp7: {
 		name: "Officer Sabre",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
@@ -277,7 +277,7 @@ const MCUT = {
 }
 
 const MTOOLBOX = {
-	meleeT1: {
+	meleeToolbox1: {
 		name: "Toolbox",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_t1.png"),
@@ -295,7 +295,7 @@ const MTOOLBOX = {
 			meleePower: 3
 		},
 	},
-	meleeT2: {
+	meleeToolbox2: {
 		name: "Toolbox",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_t2.png"),
@@ -313,7 +313,7 @@ const MTOOLBOX = {
 			meleePower: 11
 		}
 	},
-	meleeT3: {
+	meleeToolbox3: {
 		name: "Toolbox",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_t3.png"),
@@ -331,7 +331,7 @@ const MTOOLBOX = {
 			meleePower: 22
 		}
 	},
-	meleeT4: {
+	meleeToolbox4: {
 		name: "Toolbox",
 		sellPrice: 21,
 		icon: require("@/assets/art/combat/items/melee_t4.png"),
@@ -349,7 +349,7 @@ const MTOOLBOX = {
 			meleePower: 33
 		}
 	},
-	meleeT5: {
+	meleeToolbox5: {
 		name: "Toolbox",
 		sellPrice: 28,
 		icon: require("@/assets/art/combat/items/melee_t5.png"),
@@ -367,7 +367,7 @@ const MTOOLBOX = {
 			meleePower: 44
 		}
 	},
-	meleeT6: {
+	meleeToolbox6: {
 		name: "Toolbox",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_t6_anim.gif"),
@@ -388,7 +388,7 @@ const MTOOLBOX = {
 }
 
 const MENERGY = {
-	meleeE1: {
+	meleeBurn1: {
 		name: "Welding Tool",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_e1.png"),
@@ -406,7 +406,7 @@ const MENERGY = {
 			precision: 8
 		}
 	},
-	meleeE2: {
+	meleeBurn2: {
 		name: "Handheld Welder",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_e2.png"),
@@ -424,7 +424,7 @@ const MENERGY = {
 			precision: 18
 		}
 	},
-	meleeE3: {
+	meleeBurn3: {
 		name: "Energy Dagger",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_e3_anim.gif"),
@@ -442,7 +442,7 @@ const MENERGY = {
 			precision: 28
 		}
 	},
-	meleeE4: {
+	meleeBurn4: {
 		name: "Energy Sword",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_e4_anim.gif"),
@@ -460,7 +460,7 @@ const MENERGY = {
 			precision: 38
 		}
 	},
-	meleeE5: {
+	meleeBurn5: {
 		name: "Dual Energy Sword",
 		sellPrice: 30,
 		icon: require("@/assets/art/combat/items/melee_e5_anim.gif"),
@@ -481,7 +481,7 @@ const MENERGY = {
 }
 
 const GENERGY = {
-	gunE1: {
+	gunEnergy1: {
 		name: "Kinetic Accelerator",
 		sellPrice: 325,
 		equipmentSlot: "hand",
@@ -498,7 +498,7 @@ const GENERGY = {
 			rangedPower: 1
 		}
 	},
-	gunE2: {
+	gunEnergy2: {
 		name: "Advanced Kinetic Accelerator",
 		sellPrice: 400,
 		equipmentSlot: "hand",
@@ -515,7 +515,7 @@ const GENERGY = {
 			rangedPower: 15
 		}
 	},
-	gunE3: {
+	gunEnergy3: {
 		name: "Plasma Cutter",
 		sellPrice: 750,
 		equipmentSlot: "hand",
@@ -532,7 +532,7 @@ const GENERGY = {
 			rangedPower: 20
 		}
 	},	
-	gunE4: {
+	gunEnergy4: {
 		name: "Laser Gun",
 		sellPrice: 1275,
 		equipmentSlot: "hand",
@@ -549,7 +549,7 @@ const GENERGY = {
 			rangedPower: 30
 		}
 	},
-	gunE5: {
+	gunEnergy5: {
 		name: "Tesla Rifle",
 		sellPrice: 1550,
 		equipmentSlot: "hand",
@@ -566,7 +566,7 @@ const GENERGY = {
 			rangedPower: 35
 		}
 	},
-	gunE6: {
+	gunEnergy6: {
 		name: "Energy Gun",
 		sellPrice: 1900,
 		equipmentSlot: "hand",
@@ -583,7 +583,7 @@ const GENERGY = {
 			rangedPower: 40
 		}
 	},
-	gunE7: {
+	gunEnergy7: {
 		name: "Wartime Rifle",
 		sellPrice: 2250,
 		equipmentSlot: "hand",
@@ -603,7 +603,7 @@ const GENERGY = {
 }
 
 const GBULLET = {
-	gunB1: {
+	gunBallistic1: {
 		name: "Pipe Shotgun",
 		sellPrice: 210,
 		equipmentSlot: "hand",
@@ -620,7 +620,7 @@ const GBULLET = {
 			rangedPower: 1
 		}
 	},
-	gunB2: {
+	gunBallistic2: {
 		name: "Double Barreled Shotgun",
 		sellPrice: 360,
 		equipmentSlot: "hand",
@@ -637,7 +637,7 @@ const GBULLET = {
 			rangedPower: 20
 		}
 	},
-	gunB3: {
+	gunBallistic3: {
 		name: "Cycling Shotgun",
 		sellPrice: 545,
 		equipmentSlot: "hand",
@@ -654,7 +654,7 @@ const GBULLET = {
 			rangedPower: 25
 		}
 	},	
-	gunB4: {
+	gunBallistic4: {
 		name: "Riot Shotgun",
 		sellPrice: 980,
 		equipmentSlot: "hand",
@@ -671,7 +671,7 @@ const GBULLET = {
 			rangedPower: 35
 		}
 	},
-	gunB5: {
+	gunBallistic5: {
 		name: "Sawed Off Shotgun",
 		sellPrice: 1140,
 		equipmentSlot: "hand",
@@ -688,7 +688,7 @@ const GBULLET = {
 			rangedPower: 40
 		}
 	},
-	gunB6: {
+	gunBallistic6: {
 		name: "Compact Shotgun",
 		sellPrice: 1395,
 		equipmentSlot: "hand",
@@ -705,7 +705,7 @@ const GBULLET = {
 			rangedPower: 45
 		}
 	},
-	gunB7: {
+	gunBallistic7: {
 		name: "Combat Shotgun",
 		sellPrice: 1520,
 		equipmentSlot: "hand",

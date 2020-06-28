@@ -109,7 +109,7 @@ let FOOD = {
 			power: 5,
 		},
 	},
-	foodPer1: {
+	foodPrecision1: {
 		name: "Hot Potato Stew",
 		sellPrice: 20,
 		icon: require("@/assets/art/cooking/stew1.png"),
@@ -121,7 +121,7 @@ let FOOD = {
 			power: -5,
 		},
 	},
-	foodPer2: {
+	foodPrecision2: {
 		name: "Tingle Soup",
 		sellPrice: 102,
 		icon: require("@/assets/art/cooking/stew2.png"),
@@ -133,7 +133,7 @@ let FOOD = {
 			power: -5,
 		},
 	},
-	foodPer3: {
+	foodPrecision3: {
 		name: "Dad's Soup",
 		sellPrice: 171,
 		icon: require("@/assets/art/cooking/stew3.png"),
@@ -145,7 +145,7 @@ let FOOD = {
 			power: -5,
 		},
 	},
-	foodPow1: {
+	foodPower1: {
 		name: "Donkpocket",
 		sellPrice: 26,
 		icon: require("@/assets/art/cooking/donk1.png"),
@@ -157,7 +157,7 @@ let FOOD = {
 			power: 10,
 		},
 	},
-	foodPow2: {
+	foodPower2: {
 		name: "Berrypocket",
 		sellPrice: 108,
 		icon: require("@/assets/art/cooking/donk2.png"),
@@ -169,7 +169,7 @@ let FOOD = {
 			power: 20,
 		},
 	},
-	foodPow3: {
+	foodPower3: {
 		name: "Dankpocket",
 		sellPrice: 177,
 		icon: require("@/assets/art/cooking/donk3.png"),
@@ -181,7 +181,7 @@ let FOOD = {
 			power: 20,
 		},
 	},
-	foodEva1: {
+	foodEvasion1: {
 		name: "Creampie",
 		sellPrice: 31,
 		icon: require("@/assets/art/cooking/pie1.png"),
@@ -193,7 +193,7 @@ let FOOD = {
 			power: -5,
 		},
 	},
-	foodEva2: {
+	foodEvasion2: {
 		name: "Moonpie",
 		sellPrice: 115,
 		icon: require("@/assets/art/cooking/pie2.png"),
@@ -205,7 +205,7 @@ let FOOD = {
 			power: -5,
 		},
 	},
-	foodEva3: {
+	foodEvasion3: {
 		name: "Senpai",
 		sellPrice: 183,
 		icon: require("@/assets/art/cooking/pie3.png"),

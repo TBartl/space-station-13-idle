@@ -4,10 +4,10 @@
     :class="{'locked': locked || !hasItems}"
     @click="tryStartAction(actionId)"
   >
-    <div v-if="!locked" class="d-flex flex-column align-items-center">
+    <div v-if="!visualLocked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{_actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
-      <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time | stat}} SECONDS</p>
+      <p class="action-time mt-1 text-center">{{action.xp | stat}} XP / {{action.time | stat}} SECONDS</p>
       <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
         <item-chance :data="action" />
@@ -24,11 +24,12 @@
           :count="entry[1]"
         />
       </div>
+      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
       <p
         class="failure text-center"
         v-if="action.failure"
       >{{action.failure.chance*100 | cleanNum}}% chance to fail and lose {{action.failure.damage}} health</p>
-      <progress-bar class="mt-2" :progress="currentPercent" v-if="hasItems" />
+      <progress-bar class="mt-2" :progress="currentPercent" v-if="!locked && hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
@@ -70,7 +71,11 @@ export default {
     item() {
       return ITEMS[this.action.item];
     },
-    locked() {
+    visualLocked() {
+			if (this.$store.getters["cheats/showAllActions"]) return false;
+      return this.visualLocked;
+		},
+		locked() {
       return this.level < this.action.requiredLevel;
     },
     hasItems() {
@@ -82,7 +87,8 @@ export default {
     },
     actionTitle() {
       if (this.action.name) return this.action.name;
-      if (this.action.item) return this.item.name;
+			if (this.action.item) return this.item.name;
+			if (this.action.items) return ITEMS[this.action.items.id].name;
       if (this.action.itemTables)
         return ITEMS[this.action.itemTables[0].item].name;
       return "BAD NAME";

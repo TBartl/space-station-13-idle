@@ -33,7 +33,10 @@
           </span>
           <span>
             Otherwise, you can just
-            <img class="mx--2" :src="require('@/assets/art/misc/coin-padded.png')" />
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/misc/coin-padded.png')"
+            />
             <b>Sell</b> off some of the items you no longer care about.
           </span>
         </template>
@@ -79,6 +82,7 @@ export default {
     bankValue() {
       let total = 0;
       this.bankItemIds.forEach(bankItemId => {
+        if (!ITEMS[bankItemId]) console.log("BAD ITEM:", bankItemId);
         total +=
           ITEMS[bankItemId].sellPrice *
           this.$store.getters["inventory/bank"][bankItemId];
