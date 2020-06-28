@@ -411,6 +411,14 @@ export default {
   animation: MoveUpDown 3s ease-in-out infinite;
 }
 
+@media (max-width: 1900px) {
+  .legion {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    animation: MoveUpDownSmaller 3s ease-in-out infinite;
+  }
+}
+
 @keyframes MoveUpDown {
   0%,
   100% {
@@ -418,6 +426,15 @@ export default {
   }
   50% {
     transform: scale(2) translate(0px, -4px);
+  }
+}
+@keyframes MoveUpDownSmaller {
+  0%,
+  100% {
+    transform: scale(1) translate(0px, 2px);
+  }
+  50% {
+    transform: scale(1) translate(0px, -2px);
   }
 }
 
