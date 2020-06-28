@@ -178,7 +178,7 @@ const combat = {
 		addXP({ commit, getters, rootGetters }, damage) {
 			let skill = getters.focus;
 			if (skill == "power") {
-				skill = getters.isRanged ? "meleePower" : "rangedPower";
+				skill = getters.isRanged ? "rangedPower" : "meleePower";
 			}
 			commit(skill + "/addXP", damage, { root: true });
 		},
