@@ -166,6 +166,7 @@ const PILLS = {
 		item: "pillMeth",
 		sellPrice: 50,
 		icon: require("@/assets/art/combat/items/pill1.png"),
+		time: 2,
 		requiredItems: {
 			oxygen: 1,
 			water: 1,
@@ -176,6 +177,7 @@ const PILLS = {
 		item: "pillSpacedrugs",
 		sellPrice: 40,
 		icon: require("@/assets/art/combat/items/pill2.png"),
+		time: 2,
 		requiredItems: {
 			water: 1,
 			mercury: 1,
@@ -186,6 +188,7 @@ const PILLS = {
 		item: "pillPumpup",
 		sellPrice: 25,
 		icon: require("@/assets/art/combat/items/pill3.png"),
+		time: 2,
 		requiredItems: {
 			oxygen: 1,
 			oil: 1,
@@ -196,15 +199,19 @@ const PILLS = {
 		item: "pillKrokodil",
 		sellPrice: 10,
 		icon: require("@/assets/art/combat/items/pill4.png"),
+		time: 2,
 		requiredItems: {
 			sacid: 3
 
 		}
 	},
 	sythnPillSpacelube: {
-		item: "pillSpacelube",
+		items: {
+			id: "pillSpacelube"
+		},
 		sellPrice: 20,
 		icon: require("@/assets/art/chemistry/lube.png"),
+		time: 2,
 		requiredItems: {
 			oil: 2,
 			water: 1,
@@ -225,7 +232,9 @@ Object.values(POTIONS).forEach((action, index) => {
 Object.values(PILLS).forEach((action, index) => {
 	action.type = "pills";
 
-	let level = Math.round(MIN_LEVEL + 20 + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL + 20));
+	let minLevel = 20;
+
+	let level = Math.round(minLevel + index / (Object.values(PILLS).length - 1) * (MAX_LEVEL - minLevel));
 
 	action.requiredLevel = level;
 	action.xp = Math.max(.35, level / 5);
