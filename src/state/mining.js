@@ -27,7 +27,7 @@ const potionDropTable = [
 				weight: 20
 			},
 			{
-				id: "slimeMining",
+				id: "companionMining",
 				count: 1,
 				weight: 15
 			},

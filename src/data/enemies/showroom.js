@@ -97,7 +97,7 @@ export default {
 						weight: 3
 					},
 					{
-						id: "slimeBee",
+						id: "companionBee",
 						weight: 1
 					},
 				]

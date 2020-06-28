@@ -26,7 +26,7 @@ export default {
 						weight: 98
 					},
 					{
-						id: "slimeMouse",
+						id: "companionMouse",
 						weight: 2
 					},
 				]

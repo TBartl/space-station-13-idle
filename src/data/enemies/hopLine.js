@@ -21,7 +21,7 @@ export default {
 						weight: 98
 					},
 					{
-						id: "slimeDog",
+						id: "companionDog",
 						weight: 2
 					},
 				]

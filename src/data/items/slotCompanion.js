@@ -141,20 +141,7 @@ const SLIMES = {
 			maxHealth: 100
 		}
 	},
-	slimeMouse: {
-		name: "Rainbow Slime",
-		sellPrice: 500,
-		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
-		tier: 7,
-		stats: {
-			precision: 10,
-			power: 10,
-			protection: 10,
-			evasion: 10,
-			maxHealth: 100
-		}
-	},
-	slimeMouse: {
+	companionMouse: {
 		name: "Pet Mouse",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
@@ -164,7 +151,7 @@ const SLIMES = {
 			maxHealth: 50
 		}
 	},
-	slimeDog: {
+	companionDog: {
 		name: "Pet Corgi",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/Ian.png"),
@@ -174,7 +161,7 @@ const SLIMES = {
 			maxHealth: 50
 		}
 	},
-	slimeGoat: {
+	companionGoat: {
 		name: "Pet Goat",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/pete.png"),
@@ -184,7 +171,7 @@ const SLIMES = {
 			maxHealth: 50
 		}
 	},
-	slimeBee: {
+	companionBee: {
 		name: "Pet Bee",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
@@ -197,17 +184,17 @@ const SLIMES = {
 			maxHealth: 50
 		}
 	},
-	slimeMining: {
+	companionMining: {
 		name: "Mine Bot",
 		sellPrice: 5000,
-		icon: require("@/assets/art/xenobio/SlimeMining.png"),
+		icon: require("@/assets/art/xenobio/companionMining.png"),
 		tier: 7,
 		stats: {
 			protection: 10,
 			maxHealth: 100
 		}
 	},
-	slimetomatokiller: {
+	companionKillerTomato: {
 		name: "Killer Tomato",
 		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png"),

@@ -96,7 +96,7 @@ export default {
 						weight: 98
 					},
 					{
-						id: "slimeGoat",
+						id: "companionGoat",
 						weight: 2
 					},
 				]

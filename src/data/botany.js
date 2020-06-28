@@ -155,7 +155,7 @@ const ACTIONS = {
 	},
 	growTomatokiller: {
 		time: 20,
-		item: "slimetomatokiller",
+		item: "companionKillerTomato",
 		icon: require("@/assets/art/botany/TrayTomatokiller.gif"),
 		xp: 5,
 		requiredLevel: 50,
