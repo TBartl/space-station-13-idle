@@ -8,6 +8,7 @@
         title="Brick Carr the Quartermaster says..."
         :options="[
 					{name: 'Back'},
+					{name: 'Inventory?', icon: require('@/assets/art/sidebar/backpack.png'), iconClass:'mx--1'},
 					{name: 'Seeds?', icon: require('@/assets/art/botany/seed.png'), iconClass:'mx--1'},
 					{name: 'New Jobs?', icon: require('@/assets/art/cooking/icon.png'), iconClass:'mx--1'},
 					{name: 'Job Upgrades?', icon: require('@/assets/art/mining/upgrade1.png'), iconClass:'mx--1'},
@@ -19,6 +20,14 @@
         <template slot="Back">
           <span>Welcome to Cargonia!</span>
           <span>Are you here to order something, or to join the resistance?</span>
+        </template>
+        <template slot="Inventory?">
+          <span>
+            Running low on
+            <img class="mx--2" :src="require('@/assets/art/sidebar/backpack.png')" />
+            <b>Inventory Space</b>?
+          </span>
+          <span>I can sell you more, but with the storage on this station being so limited I'll have to charge you more for each extra slot.</span>
         </template>
         <template slot="Seeds?">
           <span>

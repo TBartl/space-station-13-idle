@@ -21,6 +21,7 @@ import ContentFabrication from "./ContentFabrication";
 import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
+import ContentCompletion from "./ContentCompletion";
 
 export default {
   name: "ContentWrapper",
@@ -39,7 +40,8 @@ export default {
     ContentCooking,
 		ContentCombat,
 		ContentSettings,
-		ContentChronosphere
+		ContentChronosphere,
+		ContentCompletion
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"])

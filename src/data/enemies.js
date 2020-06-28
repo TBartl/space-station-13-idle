@@ -14,18 +14,18 @@ import showroom from "./enemies/showroom.js";
 import virology from "./enemies/virology.js";
 
 const ENEMIES = {
-	...aiCore,
 	...arrivalLounge,
-	...bridge,
+	...maintenance,
+	...hopLine,
 	...dorms4,
 	...engineering,
-	...hopLine,
-	...kitchen,
-	...maintenance,
-	...medical,
-	...science,
 	...showroom,
-	...virology
+	...kitchen,
+	...medical,
+	...bridge,
+	...virology,
+	...science,
+	...aiCore,
 }
 
 Object.values(ENEMIES).forEach(enemy => {

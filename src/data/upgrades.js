@@ -1,5 +1,35 @@
 import { MAX_LEVEL } from "@/data/experience";
+import ITEMS from "@/data/items";
 
+export const BASE_INVENTORY_SIZE = 10;
+
+const TOTAL_ITEM_COUNT = Object.keys(ITEMS).length;
+let inventoryUpgradeImage = require('@/assets/art/shop/inventoryUpgrade.png');
+
+const INVENTORY_UPGRADES = {}
+
+// "Wouldn't it make more sense to just have one upgrade, with a dynamic description and stuff?"
+// Yeah probably, but this is easier
+for (let i = 0; i < TOTAL_ITEM_COUNT - BASE_INVENTORY_SIZE; i++) {
+	let money = 2654570 * 50 * (i + 2) / (142015 ** (163 / (122 + i)));
+	money = Math.min(2000000, Math.round(money));
+
+	let upgrade = {
+		name: "Expand Inventory Size",
+		description: `Increases the number of items you can hold from ${BASE_INVENTORY_SIZE + i} to ${BASE_INVENTORY_SIZE + i + 1}.`,
+		icon: inventoryUpgradeImage,
+		requiredItems: {
+			money: money
+		},
+		upgrade: "inventorySize",
+		requiredUpgrades: {
+			inventorySize: i
+		},
+	}
+	INVENTORY_UPGRADES["upgradeInventory" + i] = upgrade;
+}
+
+export { INVENTORY_UPGRADES };
 
 export const COMBAT_UPGRADES = {
 	autoeat: {
@@ -12,6 +42,54 @@ export const COMBAT_UPGRADES = {
 		upgrade: "autoeat",
 		requiredUpgrades: {
 			autoeat: 0
+		},
+		requiredLevels: {
+			validhunting: 10
+		}
+	},
+	lootDrops1: {
+		name: "Extended Looting Tier I",
+		description: "Increases the number of loot drop slots from 16 to 32.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 30000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 0
+		},
+		requiredLevels: {
+			validhunting: 15
+		}
+	},
+	lootDrops2: {
+		name: "Extended Looting Tier II",
+		description: "Increases the number of loot drop slots from 32 to 64.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 75000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 1
+		},
+		requiredLevels: {
+			validhunting: 20
+		}
+	},
+	lootDrops3: {
+		name: "Extended Looting Tier III",
+		description: "Allows loot to stacks with items of the same type.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 150000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 2
+		},
+		requiredLevels: {
+			validhunting: 25
 		}
 	}
 }

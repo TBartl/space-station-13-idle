@@ -31,7 +31,7 @@
         />
         <b>Massive Eldritch Abomination</b>.
       </span>
-      <span>As long as you can keep hitting your enemy, they'll go sideways eventually.</span>
+      <span>As long as you keep hitting your enemy, they'll go sideways eventually.</span>
     </template>
     <template slot="Equipment?">
       <span>Most battles are determined before the fight actually begins.</span>

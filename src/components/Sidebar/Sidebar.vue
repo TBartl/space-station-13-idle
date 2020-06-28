@@ -15,7 +15,9 @@
       id="inventory"
       text="Inventory"
       :icon="require('@/assets/art/sidebar/backpack.png')"
-    />
+    >
+      <span>{{bankItemIds.length}}/{{bankSlots}}</span>
+    </sidebar-item>
 
     <p class="items-header">Jobs</p>
     <sidebar-item
@@ -49,7 +51,6 @@
     </sidebar-item>
 
     <p class="items-header">Other</p>
-    <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
     <sidebar-item
       id="chronosphere"
       text="Chronosphere"
@@ -58,6 +59,12 @@
     >
       <span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>
     </sidebar-item>
+    <sidebar-item
+      id="completion"
+      text="Completion"
+      :icon="require('@/assets/art/sidebar/trophy.png')"
+    />
+    <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
   </div>
 </template>
 
@@ -94,6 +101,12 @@ export default {
       return this.playerHealth == this.playerMaxHealth
         ? "health-full"
         : "health-damaged";
+    },
+    bankItemIds() {
+      return this.$store.getters["inventory/bankItemIds"];
+    },
+    bankSlots() {
+      return this.$store.getters["inventory/bankSlots"];
     }
   },
   methods: {
@@ -157,7 +170,7 @@ export default {
 .health-full {
   color: green;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .items-header {
     padding-left: 0.5rem;
   }

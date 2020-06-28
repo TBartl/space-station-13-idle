@@ -21,7 +21,10 @@ const combat = {
 		targetEnemy(state) {
 			return state.targetEnemy;
 		},
-		maxDrops() {
+		maxDrops(state, getters, rootState, rootGetters) {
+			let upgradeCount = rootGetters["upgrades/get"]("lootDrops")
+			if (upgradeCount >= 2) return 64;
+			if (upgradeCount >= 1) return 32;
 			return 16;
 		},
 		regenTime(state, getters, rootState, rootGetters) {
@@ -30,7 +33,7 @@ const combat = {
 			return baseRegenTime * ratio;
 		},
 		baseFoodCooldown() {
-			return 2;
+			return 10;
 		},
 		foodCooldown(state, getters) {
 			return getters["baseFoodCooldown"];
@@ -59,7 +62,14 @@ const combat = {
 		removeLootItem(state, index) {
 			state.drops.splice(index, 1);
 		},
-		addLootItem(state, { itemId, count }) {
+		addLootItem(state, { itemId, count, stack }) {
+			if (stack) {
+				let existingDrop = state.drops.find(drop => drop.itemId == itemId);
+				if (existingDrop) {
+					existingDrop.count += count;
+					return;
+				}
+			}
 			state.drops.push({ itemId, count });
 		},
 		clearLoot(state) {
@@ -95,12 +105,25 @@ const combat = {
 				}, { root: true });
 			});
 		},
-		dropEnemyLoot({ state, commit }) {
+		dropEnemyLoot({ state, commit, getters, rootGetters }) {
 			let enemy = ENEMIES[state.targetEnemy];
 			let yieldedItems = acquireItemFrom(enemy);
+
+			let dropsFull = false;
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
 				if (count == 0) continue;
-				commit("addLootItem", { itemId, count });
+				if (state.drops.length >= getters["maxDrops"]) {
+					dropsFull = true;
+					continue;
+				}
+				let stack = false;
+				if (itemId == "money") stack = true;
+				else if (rootGetters["upgrades/get"]("lootDrops") == 3) stack = true;
+				commit("addLootItem", { itemId, count, stack });
+			}
+
+			if (dropsFull) {
+				EventBus.$emit("toast", { text: `Too much loot! Drop lost.` });
 			}
 		},
 		cancelActions({ state, commit, dispatch }) {

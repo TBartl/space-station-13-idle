@@ -4,6 +4,7 @@ import ITEMS from "@/data/items";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
+import { BASE_INVENTORY_SIZE } from '@/data/upgrades'
 
 const inventory = {
 	namespaced: true,
@@ -58,6 +59,14 @@ const inventory = {
 	getters: {
 		bank(state) {
 			return state.bank;
+		},
+		bankSlots(state, getters, rootState, rootGetters) {
+			return BASE_INVENTORY_SIZE + rootGetters["upgrades/get"]("inventorySize");
+		},
+		bankItemIds(state) {
+			return Object.keys(state.bank).filter(
+				itemId => itemId != "money"
+			);
 		},
 		money(state) {
 			return state.bank.money
@@ -136,13 +145,22 @@ const inventory = {
 	},
 	mutations: {
 		changeItemCount(state, { itemId, count }) {
-			if (!state.bank[itemId]) {
+			if (!state.bank[itemId]) { // Not in the bank
+
+				// Is using this.getters here supported?
+				// Hell no, but I've used this as a mutation for too long to go and update it to an action now
+				if (this.getters["inventory/bankItemIds"].length >= this.getters["inventory/bankSlots"]) { // No space
+					EventBus.$emit("toast", { text: "Your inventory is full!" });
+					return;
+				}
+
 				Vue.set(state.bank, itemId, count)
 			} else if (state.bank[itemId] + count == 0) {
 				Vue.delete(state.bank, itemId);
 			} else {
 				state.bank[itemId] += count;
 			}
+			this.commit("completion/trackItem", { itemId, count })
 			if (count > 0) {
 				EventBus.$emit("toast", { icon: ITEMS[itemId].icon, text: "+" + count });
 			}

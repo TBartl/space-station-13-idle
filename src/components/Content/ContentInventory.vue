@@ -31,15 +31,30 @@
             />
             <b>Cargo</b> might be able to help you out.
           </span>
+          <span>
+            Otherwise, you can just
+            <img class="mx--2" :src="require('@/assets/art/misc/coin-padded.png')" />
+            <b>Sell</b> off some of the items you no longer care about.
+          </span>
         </template>
       </job-info>
-
       <div class="row">
         <div class="col-12">
-          <button
-            class="btn btn-primary run-away d-flex flex-row align-items-center"
-            @click="quickSort"
-          >Quick Sort Bank</button>
+          <div class="content-block d-flex flex-row justify-content-around">
+            <div class="d-flex flex-row align-items-center">
+              <span class="mr-1">Space Used:</span>
+              <span class="primary-bubble">{{bankItemIds.length}}/{{bankSlots}}</span>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span class="mr-1">Bank Value:</span>
+              <span class="primary-bubble">{{ bankValue | cleanNum}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <button class="btn btn-primary" @click="quickSort">Sort Bank</button>
         </div>
         <div class="col-12 items d-flex flex-row flex-wrap">
           <inventory-item v-for="itemId in bankItemIds" :key="itemId" :itemId="itemId" />
@@ -59,9 +74,19 @@ export default {
   components: { InventoryItem },
   computed: {
     bankItemIds() {
-      return Object.keys(this.$store.getters["inventory/bank"]).filter(
-        itemId => itemId != "money"
-      );
+      return this.$store.getters["inventory/bankItemIds"];
+    },
+    bankValue() {
+      let total = 0;
+      this.bankItemIds.forEach(bankItemId => {
+        total +=
+          ITEMS[bankItemId].sellPrice *
+          this.$store.getters["inventory/bank"][bankItemId];
+      });
+      return total;
+    },
+    bankSlots() {
+      return this.$store.getters["inventory/bankSlots"];
     }
   },
   methods: {
@@ -75,5 +100,8 @@ export default {
 <style scoped>
 .items {
   margin: 0 -0.5rem;
+}
+.slots {
+  color: white;
 }
 </style>

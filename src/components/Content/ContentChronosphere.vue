@@ -25,18 +25,18 @@
           <span>While using lost time, everything in our simulation will run at an accelerated rate.</span>
           <span>
             And I mean everything:
-            <img class="mx--0" :src="require('@/assets/art/mining/icon.png')" />
+            <img class="mx--1" :src="require('@/assets/art/mining/icon.png')" />
             <b>Job Actions</b> will complete faster, you and your
             <img
               class="mx--2"
               :src="require('@/assets/art/combat/enemies/mouse.png')"
             />
-            <b>Enemies</b> will hit each other faster.
+            <b>Enemies</b> will hit in smaller intervals...
           </span>
           <span>
             Heck, your
             <img class="mx--0" :src="require('@/assets/art/combat/health.gif')" />
-            <b>Health</b> will even regenerate faster. I bet you didn't even know
+            <b>Health</b> will even regenerate quicker. I bet you didn't even know
             <img
               class="mx--0"
               :src="require('@/assets/art/combat/health.gif')"
