@@ -29,7 +29,7 @@ export default {
       return getBankItemsOfSlot(
         this.$store.getters["inventory/bank"],
         this.equipmentSlot
-      ).filter(itemId => this.$store.getters["inventory/canEquip"](itemId));
+      );
     }
   },
   methods: {
@@ -41,8 +41,8 @@ export default {
 </script>
 <style scoped>
 .title {
-	font-size: 12px;
-	font-weight: bold;
-	color: rgb(152, 156, 165);
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(152, 156, 165);
 }
 </style>
