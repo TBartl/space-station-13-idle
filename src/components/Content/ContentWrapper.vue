@@ -22,6 +22,7 @@ import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
 import ContentCompletion from "./ContentCompletion";
+import ContentItemSpawner from "./ContentItemSpawner";
 
 export default {
   name: "ContentWrapper",
@@ -34,14 +35,15 @@ export default {
     ContentGraytiding,
     ContentTinkering,
     ContentShitposting,
-		ContentFabrication,
-		ContentXenobiology,
+    ContentFabrication,
+    ContentXenobiology,
     ContentBotany,
     ContentCooking,
-		ContentCombat,
-		ContentSettings,
-		ContentChronosphere,
-		ContentCompletion
+    ContentCombat,
+    ContentSettings,
+    ContentChronosphere,
+    ContentCompletion,
+    ContentItemSpawner
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"])

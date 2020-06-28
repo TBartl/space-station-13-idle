@@ -80,7 +80,6 @@
 import { EventBus } from "@/utils/eventBus.js";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ModalResetData from "@/components/Modals/ModalResetData";
-import ModalItemSpawner from "@/components/Modals/ModalItemSpawner";
 import ModalLevelAllJobs from "@/components/Modals/ModalLevelAllJobs";
 import ModalSkillLeveler from "@/components/Modals/ModalSkillLeveler";
 
@@ -89,8 +88,6 @@ import { calcRobustness } from "@/utils/combatUtils";
 
 export default {
   extends: ContentAbstract,
-  // eslint-disable-next-line
-  components: { ModalResetData, ModalItemSpawner, ModalSkillLeveler },
   computed: {
     showAllActions: {
       get() {
@@ -110,11 +107,7 @@ export default {
       this.$modal.show(ModalResetData, {}, { height: "auto", width: "320px" });
     },
     openItemSpawner() {
-      this.$modal.show(
-        ModalItemSpawner,
-        {},
-        { height: "600px", width: "980px" }
-      );
+      this.$store.commit("setVisibleSidebarItem", "item-spawner");
     },
     openLevelAllJobs() {
       this.$modal.show(
