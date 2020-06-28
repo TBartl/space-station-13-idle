@@ -241,7 +241,7 @@ Object.values(POTIONS).forEach((action, index) => {
 	let level = Math.round(MIN_LEVEL + index / (Object.values(POTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL));
 
 	action.requiredLevel = level;
-	action.xp = Math.max(.35, level / 5);
+	action.xp = Math.max(2, 5 * level / 10);
 });
 Object.values(PILLS).forEach((action, index) => {
 	action.type = "pills";
@@ -251,7 +251,7 @@ Object.values(PILLS).forEach((action, index) => {
 	let level = Math.round(minLevel + index / (Object.values(PILLS).length - 1) * (MAX_LEVEL - minLevel));
 
 	action.requiredLevel = level;
-	action.xp = Math.max(.35, level / 5);
+	action.xp = 5 * level / 10;
 });
 
 export const ACTIONS = {
