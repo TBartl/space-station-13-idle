@@ -66,6 +66,9 @@
     />
     <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
     <sidebar-item id="about" text="About" :icon="require('@/assets/art/misc/logo-square.png')" />
+    <a class href="https://discord.gg/HwbK9XQ" targe="_blank">
+      <sidebar-item text="Discord" :icon="require('@/assets/art/misc/discord.png')" />
+    </a>
   </div>
 </template>
 
@@ -175,5 +178,11 @@ export default {
   .items-header {
     padding-left: 0.5rem;
   }
+}
+
+a:hover,
+a:focus {
+  color: unset;
+  text-decoration: unset;
 }
 </style>
