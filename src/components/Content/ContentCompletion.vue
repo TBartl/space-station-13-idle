@@ -14,15 +14,24 @@
             @click="itemsExpanded = !itemsExpanded"
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
-            <span>ITEMS</span>
+            <span class="mr-1">ITEMS</span>
+            <span
+              class="primary-bubble"
+            >{{Math.floor(100 * itemsComplete / Object.keys(items).length)}}%</span>
           </div>
           <div
             v-if="itemsExpanded"
             class="content-block content-block-bottom d-flex flex-row flex-wrap"
           >
             <div v-for="(entry, index) in Object.entries(items)" :key="index">
-              <img class="item" :src="entry[1].icon" :id="id + '-item-' + index" />
+              <img
+                class="item"
+                :class="{hidden: !getItem(entry[0])}"
+                :src="entry[1].icon"
+                :id="id + '-item-' + index"
+              />
               <b-popover
+                v-if="getItem(entry[0])"
                 :target="id + '-item-' + index"
                 triggers="hover"
                 placement="top"
@@ -30,7 +39,7 @@
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
-                  <span>Found: 420</span>
+                  <span>Found: {{getItem(entry[0])}}</span>
                 </div>
               </b-popover>
             </div>
@@ -43,15 +52,24 @@
             @click="enemiesExpanded = !enemiesExpanded"
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
-            <span>ENEMIES</span>
+            <span class="mr-1">ENEMIES</span>
+            <span
+              class="primary-bubble"
+            >{{Math.floor(100 * enemiesComplete / Object.keys(enemies).length)}}%</span>
           </div>
           <div
             v-if="enemiesExpanded"
             class="content-block content-block-bottom d-flex flex-row flex-wrap"
           >
             <div v-for="(entry, index) in Object.entries(enemies)" :key="index">
-              <img class="enemy" :src="entry[1].icon" :id="id + '-enemy-' + index" />
+              <img
+                class="enemy"
+                :class="{hidden: !getEnemy(entry[0])}"
+                :src="entry[1].icon"
+                :id="id + '-enemy-' + index"
+              />
               <b-popover
+                v-if="getEnemy(entry[0])"
                 :target="id + '-enemy-' + index"
                 triggers="hover"
                 placement="top"
@@ -59,7 +77,7 @@
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
-                  <span>Killed: 420</span>
+                  <span>Killed: {{getEnemy(entry[0])}}</span>
                 </div>
               </b-popover>
             </div>
@@ -73,6 +91,7 @@
 <script>
 import { EventBus } from "@/utils/eventBus.js";
 import ContentAbstract from "@/components/Content/ContentAbstract";
+import { mapGetters } from "vuex";
 
 import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
@@ -87,6 +106,7 @@ export default {
     };
   },
   computed: {
+    ...mapGetters("completion", ["getItem", "getEnemy"]),
     id() {
       return this._uid.toString();
     },
@@ -95,6 +115,13 @@ export default {
     },
     enemies() {
       return ENEMIES;
+    },
+    itemsComplete() {
+      return Object.keys(ITEMS).filter(itemId => this.getItem(itemId)).length;
+    },
+    enemiesComplete() {
+      return Object.keys(ENEMIES).filter(enemyId => this.getEnemy(enemyId))
+        .length;
     }
   }
 };
@@ -106,7 +133,20 @@ export default {
   padding: 2px;
 }
 .enemy {
-  width: 68px;
+  width: 100px;
   padding: 2px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: 36px;
+  }
+  .enemy {
+    width: 36px;
+  }
+}
+
+.hidden {
+  filter: brightness(0.15) opacity(0.2);
 }
 </style>

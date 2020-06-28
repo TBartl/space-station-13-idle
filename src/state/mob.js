@@ -187,6 +187,7 @@ export function createMobModule(mobType) {
 						this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 					} else {
 						dispatch("validhunting/mobKilled", rootGetters["combat/targetEnemy"], { root: true })
+						commit("completion/trackEnemy", rootGetters["combat/targetEnemy"], { root: true })
 						dispatch("combat/pauseCombat", {}, { root: true });
 						dispatch("combat/dropEnemyLoot", {}, { root: true })
 					}
