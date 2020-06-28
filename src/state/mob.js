@@ -150,8 +150,8 @@ export function createMobModule(mobType) {
 				}
 
 				// Use ammo
-				if (state.mobType == "player" && rootGetters["combat/isRanged"]) {
-					var pocket = rootGetters["inventory/equipment"].pocket;
+				var pocket = rootGetters["inventory/equipment"].pocket;
+				if (state.mobType == "player" && pocket.itemId && !rootGetters["inventory/checkRestricted"](pocket.itemId)) {
 					pocket.count -= 1;
 					if (pocket.count == 0) {
 						pocket.itemId = null;
