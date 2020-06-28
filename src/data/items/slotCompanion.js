@@ -186,8 +186,8 @@ const SLIMES = {
 	},
 	companionMining: {
 		name: "Mine Bot",
-		sellPrice: 5000,
-		icon: require("@/assets/art/xenobio/companionMining.png"),
+		sellPrice: 300,
+		icon: require("@/assets/art/xenobio/CompanionMining.png"),
 		tier: 7,
 		stats: {
 			protection: 10,
