@@ -120,7 +120,36 @@ const POTIONS = {
 	}
 }
 
+const PILLS = {
+	pillMeth: {
+		name: "Methamphetamine",
+		sellPrice: 1,
+		icon: require("@/assets/art/chemistry/chemOxygen.png")
+	},
+	pillSpacedrugs: {
+		name: "Crank",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/chemOil.png")
+	},
+	pillPumpup: {
+		name: "Pump-Up",
+		sellPrice: 2,
+		icon: require("@/assets/art/chemistry/chemWater.png")
+	},
+	pillKrokodil: {
+		name: "Krokodil",
+		sellPrice: -2,
+		icon: require("@/assets/art/chemistry/chemAcid.png")
+	},
+	pillSpacelube: {
+		name: "Mercury",
+		sellPrice: -1,
+		icon: require("@/assets/art/chemistry/chemMercury.png")
+	},
+}
+
 export const RESOURCE_CHEMISTRY = {
 	...BASES,
-	...POTIONS
+	...POTIONS,
+	...PILLS
 }

@@ -159,6 +159,34 @@ const POTIONS = {
 			peanut: 1
 		}
 	},
+},
+
+const PILLS = {
+	synthPillMeth: {
+		item: "pillMeth",
+		sellPrice: 1,
+		icon: require("@/assets/art/chemistry/chemOxygen.png")
+	},
+	synthPillSpacedrugs: {
+		item: "pillSpacedrugs",
+		sellPrice: 3,
+		icon: require("@/assets/art/chemistry/chemOil.png")
+	},
+	sythnPillPumpup: {
+		item: "pillPumpup",
+		sellPrice: 2,
+		icon: require("@/assets/art/chemistry/chemWater.png")
+	},
+	sythnPillKrokodil: {
+		item: "pillKrokodil",
+		sellPrice: -2,
+		icon: require("@/assets/art/chemistry/chemAcid.png")
+	},
+	sythnPillSpacelube: {
+		item: "pillSpacelube",
+		sellPrice: -1,
+		icon: require("@/assets/art/chemistry/chemMercury.png")
+	},
 }
 
 const MIN_LEVEL = 1;
@@ -174,7 +202,8 @@ Object.values(POTIONS).forEach((action, index) => {
 
 export const ACTIONS = {
 	...BASES,
-	...POTIONS
+	...POTIONS,
+	...PILLS
 }
 
 export const JOB = {
