@@ -79,8 +79,8 @@ export default {
   },
   methods: {
     open() {
-			if (!this.canOpen) return;
-			
+      if (!this.canOpen) return;
+
       this.$store.commit("inventory/changeItemCount", {
         itemId: this.itemId,
         count: -1
