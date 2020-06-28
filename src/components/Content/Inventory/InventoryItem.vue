@@ -5,7 +5,7 @@
       <span>{{count | cleanNum}}</span>
     </button>
     <item-popover :target="id" :itemId="itemId" />
-    <b-popover :target="id" triggers="click blur" placement="bottom" delay="0">
+    <b-popover ref="popover" :target="id" triggers="click blur" placement="bottom" delay="0">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <button
@@ -13,6 +13,13 @@
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
         >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
+
+        <button
+          v-if="canEquipChem"
+          class="mt-1 btn btn-primary btn-sm"
+          @click="$store.dispatch('potions/set', itemId); $refs.popover.$emit('close');"
+        >Equip CHEM</button>
+
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
@@ -57,6 +64,9 @@ export default {
     canEquip() {
       if (!this.$store.getters["inventory/canEquip"](this.itemId)) return false;
       return true;
+    },
+    canEquipChem() {
+      return this.item.potionJob;
     },
     canOpen() {
       return (

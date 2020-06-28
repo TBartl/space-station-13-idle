@@ -50,7 +50,7 @@
               class="mx--2"
               :src="require('@/assets/art/chemistry/faunaPerfume.png')"
             />
-            <b>CHEMms</b>, you'll need to synthesize the individual
+            <b>CHEMs</b>, you'll need to synthesize the individual
             <img
               class="mx--2"
               :src="require('@/assets/art/chemistry/chemOil.png')"

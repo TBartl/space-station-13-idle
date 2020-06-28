@@ -2,7 +2,8 @@
   <div>
     <button
       :id="id"
-      class="btn btn-outline-primary d-flex flex-row align-items-center w-100"
+      class="btn d-flex flex-row align-items-center w-100"
+      :class="{'cant-equip': !canEquip, 'btn-outline-primary': canEquip, 'btn-danger': !canEquip }"
       @click="equip"
     >
       <span>({{itemCount}})</span>
@@ -28,10 +29,14 @@ export default {
     },
     itemCount() {
       return this.$store.getters["inventory/bank"][this.itemId];
+    },
+    canEquip() {
+      return this.$store.getters["inventory/canEquip"](this.itemId);
     }
   },
   methods: {
     equip() {
+      if (!this.canEquip) return;
       this.$store.dispatch("inventory/equip", this.itemId);
     }
   }
@@ -41,5 +46,8 @@ export default {
 <style scoped>
 .equipment-icon {
   width: 48px;
+}
+.cant-equip {
+  cursor: not-allowed !important;
 }
 </style>
