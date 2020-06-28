@@ -8,6 +8,9 @@
     <div class="d-flex flex-column">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>
+      <div>
+        <button v-if="canOpen" class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
+      </div>
       <div class="requires d-flex flex-row align-items-center flex-wrap">
         <span class="requires mr-1">Requires:</span>
         <div
@@ -37,6 +40,7 @@
 import ITEMS from "@/data/items";
 import { PURCHASES } from "@/data/shop";
 import ItemPopover from "@/components/ItemPopover";
+import ModalItemChance from "@/components/Modals/ModalItemChance";
 import { ALL_JOBS } from "@/data/jobs";
 export default {
   components: { ItemPopover },
@@ -77,12 +81,24 @@ export default {
     requiredLevels() {
       if (!this.purchase.requiredLevels) return {};
       return this.purchase.requiredLevels;
+    },
+    canOpen() {
+      if (!this.item) return false;
+      if (!this.item.itemTable && !this.itemTables) return false;
+      return true;
     }
   },
   methods: {
     buy() {
       if (!this.canPurchase) return;
       this.$store.dispatch("inventory/purchase", this.purchase);
+    },
+    viewOdds() {
+      this.$modal.show(
+        ModalItemChance,
+        { itemId: this.purchase.item },
+        { height: "auto", width: "420px" }
+      );
     }
   }
 };
@@ -91,7 +107,7 @@ export default {
 <style>
 .purchase-icon {
   width: 64px;
-	min-width: 64px;
+  min-width: 64px;
 }
 .name {
   font-size: 18px;
