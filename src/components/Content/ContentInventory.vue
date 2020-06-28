@@ -83,9 +83,9 @@ export default {
       let total = 0;
       this.bankItemIds.forEach(bankItemId => {
         if (!ITEMS[bankItemId]) console.log("BAD ITEM:", bankItemId);
-        total +=
-          ITEMS[bankItemId].sellPrice *
-          this.$store.getters["inventory/bank"][bankItemId];
+				let sellPrice = ITEMS[bankItemId].sellPrice;
+				if (sellPrice === undefined) return;
+        total += sellPrice * this.$store.getters["inventory/bank"][bankItemId];
       });
       return total;
     },
