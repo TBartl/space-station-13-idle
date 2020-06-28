@@ -30,6 +30,10 @@ p {
 img {
   image-rendering: pixelated;
 }
+.no-pixel {
+	image-rendering: auto !important;
+}
+
 .content-container {
 	margin: 15px 0px 4px 0px;
 	

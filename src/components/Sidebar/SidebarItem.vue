@@ -61,7 +61,9 @@ export default {
   background-color: rgba(0, 0, 0, 0.2);
 }
 img {
-  width: 32px;
+	width: 32px;
+	height: 32px;
+	object-fit: cover;
   margin-right: 8px;
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0.2);

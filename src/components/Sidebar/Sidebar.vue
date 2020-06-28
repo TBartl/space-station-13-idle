@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <div class="sidebar-title p-3 mb-2">
-      <img src="@/assets/art/misc/logo.png" alt />
+      <img class="no-pixel" src="@/assets/art/misc/logo.png" alt />
       <span class="d-none d-md-block">SS13 Idle</span>
     </div>
     <p class="items-header d-none d-md-block">{{version}}</p>
@@ -65,6 +65,7 @@
       :icon="require('@/assets/art/sidebar/trophy.png')"
     />
     <sidebar-item id="settings" text="Settings" :icon="require('@/assets/art/sidebar/gear.png')" />
+    <sidebar-item id="about" text="About" :icon="require('@/assets/art/misc/logo-square.png')" />
   </div>
 </template>
 

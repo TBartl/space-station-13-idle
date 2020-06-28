@@ -23,6 +23,7 @@ import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
 import ContentCompletion from "./ContentCompletion";
 import ContentItemSpawner from "./ContentItemSpawner";
+import ContentAbout from "@/components/Content/ContentAbout";
 
 export default {
   name: "ContentWrapper",
@@ -43,7 +44,8 @@ export default {
     ContentSettings,
     ContentChronosphere,
     ContentCompletion,
-    ContentItemSpawner
+    ContentItemSpawner,
+    ContentAbout
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"])
