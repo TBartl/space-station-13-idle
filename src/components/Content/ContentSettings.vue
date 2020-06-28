@@ -6,7 +6,6 @@
       color="rgb(231, 150, 28)"
     />
     <div class="content-container">
-
       <div class="row">
         <div class="col-12">
           <div class="content-block">
@@ -44,8 +43,17 @@
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
-              @click="openLevelAllJobs"
-            >Max All Jobs</button>
+              @click="getSomeCash"
+            >Get $1,000,000</button>
+            <div class="custom-control custom-switch">
+              <input
+                v-model="showAllActions"
+                type="checkbox"
+                class="custom-control-input"
+                id="showAllActions"
+              />
+              <label class="custom-control-label" for="showAllActions">Show All Actions</label>
+            </div>
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -54,8 +62,8 @@
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
-              @click="getSomeCash"
-            >Get $1,000,000</button>
+              @click="openLevelAllJobs"
+            >Max All Jobs</button>
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -83,7 +91,16 @@ export default {
   extends: ContentAbstract,
   // eslint-disable-next-line
   components: { ModalResetData, ModalItemSpawner, ModalSkillLeveler },
-  computed: {},
+  computed: {
+    showAllActions: {
+      get() {
+        return this.$store.getters["cheats/showAllActions"];
+      },
+      set(value) {
+        this.$store.commit("cheats/setShowAllActions", value);
+      }
+    }
+  },
   methods: {
     resetInfoClicked() {
       this.$store.commit("info/resetAll");

@@ -48,9 +48,11 @@ export default {
 			return actions;
 		},
 		// Returns entries for all actions, up to  and including the next one to unlock
-		filteredActionEntries(state, getters) {
+		filteredActionEntries(state, getters, rootState, rootGetters) {
 			let actions = getters["completeActions"];
 			let entries = Object.entries(actions);
+
+			if (rootGetters["cheats/showAllActions"]) return entries;
 
 			let highestLevels = {} // type: highestLevel
 
