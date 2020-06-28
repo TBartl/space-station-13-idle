@@ -2,6 +2,7 @@ export default {
 	sec1: {
 		name: "Corrupt Security Officer",
 		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 160,
 			attackSpeed: 2.0,
@@ -38,6 +39,7 @@ export default {
 	sec2: {
 		name: "Meddling Detective",
 		icon: require("@/assets/art/combat/enemies/boss/sec-detective.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 170,
 			attackSpeed: 2.1,
@@ -74,6 +76,7 @@ export default {
 	sec3: {
 		name: "Gulag Warden",
 		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 50,
 			attackSpeed: .5,
@@ -107,6 +110,7 @@ export default {
 	sec4: {
 		name: "Anime Inspired Head Of Security",
 		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 180,
 			attackSpeed: 2.4,

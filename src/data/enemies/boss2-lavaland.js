@@ -2,6 +2,7 @@ export default {
 	lava1: {
 		name: "Blood Drunk Miner",
 		icon: require("@/assets/art/combat/enemies/miner.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 250,
 			attackSpeed: 1.4,
@@ -38,6 +39,7 @@ export default {
 	lava2: {
 		name: "Dwarf Legion",
 		icon: require("@/assets/art/combat/enemies/boss/legion0.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 260,
 			attackSpeed: 1.7,
@@ -87,6 +89,7 @@ export default {
 	lava3: {
 		name: "Legion Spawn",
 		icon: require("@/assets/art/combat/enemies/boss/legion1.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 270,
 			attackSpeed: 2.1,
@@ -132,6 +135,7 @@ export default {
 	lava4: {
 		name: "Legion",
 		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 280,
 			attackSpeed: 2.2,

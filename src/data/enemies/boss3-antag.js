@@ -2,6 +2,7 @@ export default {
 	antag1: {
 		name: "Cultist of Nar'sie",
 		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 310,
 			attackSpeed: 3.0,
@@ -40,6 +41,7 @@ export default {
 	antag2: {
 		name: "Syndicate Nuclear Operative",
 		icon: require("@/assets/art/combat/enemies/boss/antag-op.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 320,
 			attackSpeed: 1.9,
@@ -77,6 +79,7 @@ export default {
 	antag3: {
 		name: "Cultist of Ravtar",
 		icon: require("@/assets/art/combat/enemies/boss/antag-clock.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 330,
 			attackSpeed: 1.9,
@@ -114,6 +117,7 @@ export default {
 	antag4: {
 		name: "Wizard",
 		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
+		validhuntable: false,
 		stats: {
 			maxHealth: 340,
 			attackSpeed: 1.5,
