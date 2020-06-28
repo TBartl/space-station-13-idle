@@ -60,21 +60,21 @@ export default [
 		icon: require("@/assets/art/combat/zones/core.png"),
 		enemies: ["securitybot", "turrets", "AI"]
 	},
-	{
-		name: "Brutal Security",
-		icon: require("@/assets/art/debug/banner.png"),
-		enemies: ["sec1", "sec2", "sec3","sec4"]
-	},
-	{
-		name: "Primordial Planet",
-		icon: require("@/assets/art/debug/banner.png"),
-		enemies: ["lava1", "lava2", "lava3","lava4"]
-	},
-	{
-		name: "Subversive Individuals",
-		icon: require("@/assets/art/debug/banner.png"),
-		enemies: ["antag1", "antag2", "antag3","antag4"]
-	},
+	// {
+	// 	name: "Brutal Security",
+	// 	icon: require("@/assets/art/debug/banner.png"),
+	// 	enemies: ["sec1", "sec2", "sec3","sec4"]
+	// },
+	// {
+	// 	name: "Primordial Planet",
+	// 	icon: require("@/assets/art/debug/banner.png"),
+	// 	enemies: ["lava1", "lava2", "lava3","lava4"]
+	// },
+	// {
+	// 	name: "Subversive Individuals",
+	// 	icon: require("@/assets/art/debug/banner.png"),
+	// 	enemies: ["antag1", "antag2", "antag3","antag4"]
+	// },
 	// {
 	// 	name: "Debug Land",
 	// 	icon: require("@/assets/art/debug/banner.png"),

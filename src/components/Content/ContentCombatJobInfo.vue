@@ -27,7 +27,7 @@
         <b>Tiniest Mouse</b> or a
         <img
           class="mx--0 legion"
-          :src="require('@/assets/art/combat/enemies/Bosses/legion.png')"
+          :src="require('@/assets/art/combat/enemies/boss/legion3_anim.gif')"
         />
         <b>Massive Eldritch Abomination</b>.
       </span>

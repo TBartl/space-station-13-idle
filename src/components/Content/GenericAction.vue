@@ -73,7 +73,7 @@ export default {
     },
     visualLocked() {
 			if (this.$store.getters["cheats/showAllActions"]) return false;
-      return this.visualLocked;
+      return this.locked;
 		},
 		locked() {
       return this.level < this.action.requiredLevel;

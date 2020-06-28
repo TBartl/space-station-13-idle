@@ -36,7 +36,8 @@ export default {
   },
   methods: {
     setVisibleSidebarItem() {
-      if (this.locked) return;
+			if (this.locked) return;
+			if (!this.id) return;
       this.$store.commit("setVisibleSidebarItem", this.id);
     }
   }
@@ -62,6 +63,8 @@ export default {
 }
 img {
   width: 32px;
+  height: 32px;
+  object-fit: cover;
   margin-right: 8px;
   border-radius: 14px;
   background-color: rgba(255, 255, 255, 0.2);

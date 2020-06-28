@@ -30,7 +30,7 @@ export const SECTIONS = [
 		purchases: ["hatCrate", "knifeCrate", "lavaCrate", "supplyCrate", "syndieCrate"]
 	},
 	{
-		name: "Clothes Vendo-matic",
+		name: "Clothes Vendo-Matic",
 		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeXenobiology", "capeChemistry", "capeShitposting"]
 	}
 ]

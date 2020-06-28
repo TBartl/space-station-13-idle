@@ -54,6 +54,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 			let pickedEnemy = null;
 			while (!pickedEnemy) {
 				let filteredEnemies = Object.entries(ENEMIES).filter(pair => {
+					if (pair[1].validhuntable == false) return false;
 					let robustness = calcRobustness(pair[1].stats, "enemy");
 					return robustness > levelCenter - range && robustness < levelCenter + range;
 				});
