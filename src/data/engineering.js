@@ -7,7 +7,7 @@ export const ACTIONS = {
 			count: 2
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
-		xp: 1,
+		xp: 1.8,
 		requiredLevel: 1
 	},
 	engOil: {
@@ -19,7 +19,7 @@ export const ACTIONS = {
 		},
 		icon: require("@/assets/art/engineering/burning_anim.gif"),
 		xp: 3,
-		requiredLevel: 5,
+		requiredLevel: 4,
 		requiredItems: {
 			oil: 1
 		}
