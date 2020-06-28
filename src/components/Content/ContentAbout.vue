@@ -12,7 +12,7 @@
             <h4 class="mb-2">About</h4>
             <p>
               <img class="no-pixel mx--0" :src="require('@/assets/art/misc/logo-square.png')" />
-              <b>Space Station 13 Idle</b> is a clone of
+              <b>Space Station 13 Idle</b> is a game inspired by
               <a href="https://melvoridle.com/">
                 <img class="no-pixel mx--0" :src="require('@/assets/art/misc/melvor.svg')" />
                 <b>Melvor Idle</b>
