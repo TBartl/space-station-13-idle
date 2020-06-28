@@ -7,7 +7,7 @@
     <div v-if="!locked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{_actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
-      <p class="action-time mt-1 text-center">{{action.xp}} XP / {{action.time | stat}} SECONDS</p>
+      <p class="action-time mt-1 text-center">{{action.xp | stat}} XP / {{action.time | stat}} SECONDS</p>
       <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
       <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
         <item-chance :data="action" />
