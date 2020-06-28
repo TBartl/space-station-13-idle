@@ -37,7 +37,7 @@ export default {
 	},
 	lava2: {
 		name: "Dwarf Legion",
-		icon: require("@/assets/art/combat/enemies/legion1.png"),
+		icon: require("@/assets/art/combat/enemies/boss/legion0.png"),
 		stats: {
 			maxHealth: 260,
 			attackSpeed: 1.7,
@@ -86,7 +86,7 @@ export default {
 	},
 	lava3: {
 		name: "Legion Spawn",
-		icon: require("@/assets/art/combat/enemies/legion2.png"),
+		icon: require("@/assets/art/combat/enemies/boss/legion1.png"),
 		stats: {
 			maxHealth: 270,
 			attackSpeed: 2.1,

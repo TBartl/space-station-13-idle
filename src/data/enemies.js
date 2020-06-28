@@ -13,6 +13,10 @@ import science from "./enemies/science.js";
 import showroom from "./enemies/showroom.js";
 import virology from "./enemies/virology.js";
 
+import boss1Security from '@/data/enemies/boss1-security';
+import boss2Lavaland from '@/data/enemies/boss2-lavaland';
+import boss3Antag from '@/data/enemies/boss3-antag';
+
 const ENEMIES = {
 	...arrivalLounge,
 	...maintenance,
@@ -26,6 +30,9 @@ const ENEMIES = {
 	...virology,
 	...science,
 	...aiCore,
+	...boss1Security,
+	...boss2Lavaland,
+	...boss3Antag
 }
 
 Object.values(ENEMIES).forEach(enemy => {

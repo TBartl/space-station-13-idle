@@ -73,7 +73,7 @@ export default {
 	},
 	sec3: {
 		name: "Gulag Warden",
-		icon: require("@/assets/art/combat/enemies/boss/sec-warden"),
+		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
 		stats: {
 			maxHealth: 50,
 			attackSpeed: .5,
