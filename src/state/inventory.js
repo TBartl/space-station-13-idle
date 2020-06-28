@@ -193,10 +193,13 @@ const inventory = {
 		unequip({ state, commit }, itemId) {
 			let slot = getEquipmentSlot(itemId);
 			let equippedItemId = state.equipment[slot].itemId;
-			if (equippedItemId) {
-				commit("changeItemCount", { itemId: equippedItemId, count: state.equipment[slot].count });
-			}
+
+			let count = state.equipment[slot].count;
 			commit("setEquipment", { slot, itemId: null, count: 0 });
+
+			if (equippedItemId) {
+				commit("changeItemCount", { itemId: equippedItemId, count });
+			}
 		},
 		equip({ state, commit, dispatch }, itemId) {
 			dispatch("unequip", itemId);
