@@ -15,7 +15,7 @@
     <progress-bar
       class="mt-2 black-background"
       :progress="healthPercent"
-      :text="health != 0 ? `${Math.round(health)}/${stats.maxHealth}` : 'Dead'"
+      :text="health != 0 ? `${Math.ceil(health)}/${stats.maxHealth}` : 'Dead'"
       :customClass="'bg-danger'"
     />
     <progress-bar
