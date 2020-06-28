@@ -40,7 +40,6 @@
       >{{item.fleeChance}}% base chance to flee whenever you get hit</span>
       <stats-panel class="mt-1" v-if="item.stats" :stats="item.stats" />
       <inventory-price-display v-if="item.sellPrice" class="mt-1" :price="item.sellPrice" />
-			<item-chance class="mt-1" v-if="canOpen" :data="item" />
     </div>
   </b-popover>
 </template>
@@ -48,14 +47,13 @@
 <script>
 import ITEMS from "@/data/items";
 import InventoryPriceDisplay from "@/components/Content/Inventory/InventoryPriceDisplay";
-import ItemChance from "@/components/ItemTable/ItemChance";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import { ALL_JOBS } from "@/data/jobs";
 import { getEquipmentSlot } from "@/utils/equipmentUtils";
 
 export default {
   props: ["itemId", "target", "placement"],
-  components: { StatsPanel, InventoryPriceDisplay, ItemChance },
+  components: { StatsPanel, InventoryPriceDisplay },
   computed: {
     item() {
       return ITEMS[this.itemId];
@@ -100,15 +98,7 @@ export default {
         restrictions = restrictions.concat(this.item.ammoType);
       }
       return restrictions;
-		},
-		canOpen() {
-      return (
-        this.item.item ||
-        this.item.items ||
-        this.item.itemTable ||
-        this.item.itemTables
-      );
-    }
+		}
   }
 };
 </script>
