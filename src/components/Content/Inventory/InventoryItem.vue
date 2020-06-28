@@ -19,8 +19,8 @@
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('potions/set', itemId); $refs.popover.$emit('close');"
         >Equip CHEM</button>
-
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
+        <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="viewOdds">View Odds</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
           <inventory-sell :itemId="itemId" :count="10" :totalCount="count" />
@@ -44,7 +44,9 @@ import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
 import ItemPopover from "@/components/ItemPopover";
+import ModalItemChance from "@/components/Modals/ModalItemChance";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
+
 export default {
   props: ["itemId"],
   components: { InventorySell, ItemPopover },
@@ -91,6 +93,13 @@ export default {
         if (count == 0) continue;
         this.$store.commit("inventory/changeItemCount", { itemId, count });
       }
+    },
+    viewOdds() {
+      this.$modal.show(
+        ModalItemChance,
+        { itemId: this.itemId },
+        { height: "auto", width: "420px" }
+      );
     }
   }
 };

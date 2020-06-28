@@ -84,6 +84,11 @@ export default {
 		icon: require("@/assets/art/shop/items/weaponcrate.png"),
 		itemTable: [
 			{
+				id: 'ammoEnergy2',
+				count: 20,
+				weight: 10
+			},
+			{
 				id: 'meleeSharp2',
 				weight: 10
 			},
@@ -106,12 +111,7 @@ export default {
 			{
 				id: 'meleeBurn3',
 				weight: 1
-			},
-			{
-				id: 'ammoEnergy2',
-				count: 20,
-				weight: 10
-			},
+			}
 		]
 	},
 	lavaCrate: {
