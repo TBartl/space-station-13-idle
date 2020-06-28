@@ -3,7 +3,7 @@ import Vue from 'vue'
 const cheats = {
 	namespaced: true,
 	state: {
-		showAllActions: true
+		showAllActions: false
 	},
 	getters: {
 		showAllActions(state) {
