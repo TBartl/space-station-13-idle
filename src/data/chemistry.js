@@ -161,9 +161,13 @@ const POTIONS = {
 	},
 }
 
+const PILL_COUNT = 20;
 const PILLS = {
 	synthPillMeth: {
-		item: "pillMeth",
+		items: {
+			id: "pillMeth",
+			count: PILL_COUNT
+		},
 		sellPrice: 50,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		time: 2,
@@ -174,7 +178,10 @@ const PILLS = {
 		}
 	},
 	synthPillSpacedrugs: {
-		item: "pillSpacedrugs",
+		items: {
+			id: "pillSpacedrugs",
+			count: PILL_COUNT
+		},
 		sellPrice: 40,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		time: 2,
@@ -185,7 +192,10 @@ const PILLS = {
 		}
 	},
 	sythnPillPumpup: {
-		item: "pillPumpup",
+		items: {
+			id: "pillPumpup",
+			count: PILL_COUNT
+		},
 		sellPrice: 25,
 		icon: require("@/assets/art/combat/items/pill3.png"),
 		time: 2,
@@ -196,7 +206,10 @@ const PILLS = {
 		}
 	},
 	sythnPillKrokodil: {
-		item: "pillKrokodil",
+		items: {
+			id: "pillKrokodil",
+			count: PILL_COUNT
+		},
 		sellPrice: 10,
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		time: 2,
@@ -207,7 +220,8 @@ const PILLS = {
 	},
 	sythnPillSpacelube: {
 		items: {
-			id: "pillSpacelube"
+			id: "pillSpacelube",
+			count: PILL_COUNT
 		},
 		sellPrice: 20,
 		icon: require("@/assets/art/chemistry/lube.png"),
