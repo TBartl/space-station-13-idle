@@ -81,16 +81,16 @@ export default {
     open() {
       if (!this.canOpen) return;
 
+      this.$store.commit("inventory/changeItemCount", {
+        itemId: this.itemId,
+        count: -1
+      });
+
       let yieldedItems = acquireItemFrom(this.item);
       for (let [itemId, count] of Object.entries(yieldedItems)) {
         if (count == 0) continue;
         this.$store.commit("inventory/changeItemCount", { itemId, count });
       }
-
-      this.$store.commit("inventory/changeItemCount", {
-        itemId: this.itemId,
-        count: -1
-      });
     }
   }
 };
