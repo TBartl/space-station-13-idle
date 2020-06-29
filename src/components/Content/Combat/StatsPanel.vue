@@ -98,6 +98,7 @@ export default {
 <style scoped>
 .stats-panel {
   max-width: 160px;
+	min-width: 130px;
 }
 .attack-type-image {
   min-width: 15px;
