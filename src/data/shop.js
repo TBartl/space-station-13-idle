@@ -140,7 +140,7 @@ const JOB_UNLOCKS = {
 const CAPES = {
 	capeMining: {
 		item: "capeMining",
-		description: "Requires max fabrication to wear.",
+		description: "Requires max Fabrication to wear.",
 		requiredLevels: {
 			mining: MAX_LEVEL
 		},
@@ -150,7 +150,7 @@ const CAPES = {
 	},
 	capeEngineering: {
 		item: "capeEngineering",
-		description: "Requires max engineering to wear.",
+		description: "Requires max Engineering to wear.",
 		requiredLevels: {
 			engineering: MAX_LEVEL
 		},
@@ -160,7 +160,7 @@ const CAPES = {
 	},
 	capeFabrication: {
 		item: "capeFabrication",
-		description: "Requires max mining to wear.",
+		description: "Requires max Fabrication to wear.",
 		requiredLevels: {
 			fabrication: MAX_LEVEL
 		},
@@ -230,7 +230,7 @@ const CAPES = {
 	},
 	capeShitposting: {
 		item: "capeShitposting",
-		description: "Only the truely elite can handle this.",
+		description: "Only the truly elite can handle this.",
 		requiredLevels: {
 			shitposting: MAX_LEVEL
 		},
