@@ -23,7 +23,11 @@ const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				}
 
 				if (potionItemId == "potionChemistry") {
-					action.requiredLevel = 1;
+					if (getters["level"] < action.requiredLevel) {
+						action.requiredLevel = 1;
+					} else {
+						action.preservePotion = true;
+					}
 				}
 			}
 
