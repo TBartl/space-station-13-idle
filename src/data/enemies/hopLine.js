@@ -6,9 +6,9 @@ export default {
 		stats: {
 			maxHealth: 60,
 			attackSpeed: 2.1,
-			precision: 10,
+			precision: 15,
 			power: 21,
-			evasion: 23,
+			evasion: 18,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -42,20 +42,20 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 0.15,
 				itemTable: [
-					{
-						id: 'armorBrute1',
-						weight: 1
-					},
-					{
-						id: 'meleeToolbox2',
-						weight: 1
-					},
 					{
 						id: 'ticket1',
 						count: [1, 2],
 						weight: 1
+					},
+					{
+						id: 'armorBrute1',
+						weight: .3
+					},
+					{
+						id: 'meleeToolbox2',
+						weight: .1
 					}
 				]
 			},
@@ -71,28 +71,34 @@ export default {
 		stats: {
 			maxHealth: 80,
 			attackSpeed: 1.7,
-			precision: 29,
+			precision: 39,
 			power: 19,
-			evasion: 36,
+			evasion: 26,
 			damageType: "burn",
 			burnProtection: 20
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 1,
 				itemTable: [
 					{
 						id: 'ammoBallistic1',
-						weight: 1
+						count: [1,20],
+						weight: 50
+					},
+					{
+						id: 'ammoBallistic2',
+						count: [1,12],
+						weight: 25
+					},
+					{
+						id: 'gunBallistic1',
+						weight: 5
 					},
 					{
 						id: 'gunBallistic2',
 						weight: 1
 					},
-					{
-						id: 'ammoBallistic2',
-						weight: 1
-					}
 				]
 			}, {
 				chance: 1,
