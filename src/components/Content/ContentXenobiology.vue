@@ -197,11 +197,6 @@ export default {
     jobId() {
       return "xenobiology";
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },

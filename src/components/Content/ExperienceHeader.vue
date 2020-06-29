@@ -27,10 +27,10 @@ export default {
   computed: {
     ...mapState({
       xp(state, getters) {
-        return getters[this.jobId + "/xp"];
+        return getters[this.jobId + "/virtualXp"];
       },
       level(state, getters) {
-        return getters[this.jobId + "/level"];
+        return getters[this.jobId + "/visualLevel"];
       },
       maxLevel() {
         return MAX_LEVEL;
@@ -39,10 +39,20 @@ export default {
         return xpFromLevel(this.level);
       },
       nextLevelXP() {
-        return xpFromLevel(this.level + 1);
+        let level = this.level + 1;
+        if (!this.$store.getters["settings/showVirtualLevels"])
+          level = Math.min(level, MAX_LEVEL);
+        return xpFromLevel(level);
       },
       progress() {
-        return (this.xp - this.thisLevelXP) / (this.nextLevelXP - this.thisLevelXP);
+        if (
+          !this.$store.getters["settings/showVirtualLevels"] &&
+          this.level == MAX_LEVEL
+        )
+          return 1;
+        return (
+          (this.xp - this.thisLevelXP) / (this.nextLevelXP - this.thisLevelXP)
+        );
       }
     })
   }

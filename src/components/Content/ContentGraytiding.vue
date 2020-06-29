@@ -181,11 +181,6 @@ export default {
     jobId() {
       return "graytiding";
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },

@@ -153,11 +153,6 @@ export default {
     jobId() {
       return JOB.id;
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },
