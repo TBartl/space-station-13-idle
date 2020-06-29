@@ -16,7 +16,7 @@
 				]"
       >
         <template slot="Back">
-          <span>Listen, I don't know to break this to you but...</span>
+          <span>Listen, I don't know how to break this to you but...</span>
           <span>I have reasons to believe we may be trapped inside a simulation.</span>
         </template>
         <template slot="???">
