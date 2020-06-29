@@ -138,7 +138,9 @@ export default {
 				}
 			}
 
-			dispatch("potions/useCharge", getters["jobId"], { root: true });
+			if (!action.preservePotion) {
+				dispatch("potions/useCharge", getters["jobId"], { root: true });
+			}
 
 			// Start it again automatically if we can
 			// The action may have been updated (like if the user ran out of potion charges)

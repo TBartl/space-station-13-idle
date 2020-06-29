@@ -4,7 +4,7 @@
       <img :src="icon" />
     </td>
     <td>{{level}}/{{maxLevel}}</td>
-    <td class="xp">{{xp | cleanNum}}/{{nextLevelXP | cleanNum}}</td>
+    <td class="xp">{{Math.round(xp) | cleanNum}}/{{nextLevelXP | cleanNum}}</td>
     <td width="99%">
       <progress-bar style="border-radius: 0 !important" :progress="progress" />
     </td>
@@ -21,10 +21,10 @@ export default {
   computed: {
     ...mapState({
       xp(state, getters) {
-        return Math.floor(getters[this.jobId + "/xp"]);
+        return getters[this.jobId + "/virtualXp"];
       },
       level(state, getters) {
-        return getters[this.jobId + "/level"];
+        return getters[this.jobId + "/visualLevel"];
       },
       maxLevel() {
         return MAX_LEVEL;
@@ -33,9 +33,17 @@ export default {
         return xpFromLevel(this.level);
       },
       nextLevelXP() {
-        return xpFromLevel(this.level + 1);
+        let level = this.level + 1;
+        if (!this.$store.getters["settings/showVirtualLevels"])
+          level = Math.min(level, MAX_LEVEL);
+        return xpFromLevel(level);
       },
       progress() {
+        if (
+          !this.$store.getters["settings/showVirtualLevels"] &&
+          this.level == MAX_LEVEL
+        )
+          return 1;
         return (
           (this.xp - this.thisLevelXP) / (this.nextLevelXP - this.thisLevelXP)
         );
@@ -54,6 +62,6 @@ td:last-child {
   padding-right: 0 !important;
 }
 .xp {
-	min-width: 130px;
+  min-width: 130px;
 }
 </style>

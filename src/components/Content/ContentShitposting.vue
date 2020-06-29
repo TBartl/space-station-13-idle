@@ -89,11 +89,6 @@ export default {
     jobId() {
       return "shitposting";
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },

@@ -115,7 +115,7 @@ export default {
   },
   methods: {
     getLevelText(job) {
-      return `${this.$store.getters[job.id + "/level"]}/50`;
+      return `${this.$store.getters[job.id + "/visualLevel"]}/50`;
     },
     getJobColor(job) {
       var isGreen = false;

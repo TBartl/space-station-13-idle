@@ -143,11 +143,6 @@ export default {
     jobId() {
       return "botany";
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },

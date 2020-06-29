@@ -221,7 +221,7 @@ let FOOD = {
 		name: "Spicy Burger",
 		sellPrice: 48,
 		icon: require("@/assets/art/cooking/burger1.png"),
-		healAmount: 0,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,

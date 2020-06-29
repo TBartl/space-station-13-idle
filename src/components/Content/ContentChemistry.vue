@@ -169,11 +169,6 @@ export default {
     jobId() {
       return "chemistry";
     },
-    ...mapState({
-      level(state, getters) {
-        return getters[this.jobId + "/level"];
-      }
-    }),
     job() {
       return JOB;
     },

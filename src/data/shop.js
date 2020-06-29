@@ -222,7 +222,7 @@ const CAPES = {
 		item: "capeChemistry",
 		description: "Requires max Chemistry to wear.",
 		requiredLevels: {
-			cooking: MAX_LEVEL
+			chemistry: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000

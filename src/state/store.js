@@ -29,6 +29,7 @@ import potions from './potions';
 import info from './info';
 import completion from './completion';
 import cheats from './cheats'
+import settings from '@/state/settings';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -55,6 +56,7 @@ const modules = {
 	info,
 	completion,
 	cheats,
+	settings,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
@@ -118,7 +120,7 @@ const store = new Vuex.Store({
 		setChronoSpeed(state, speed) {
 			state.chronoSpeed = speed;
 		},
-		setWelcomeMessageSeen(state){
+		setWelcomeMessageSeen(state) {
 			state.welcomeMessageSeen = true;
 		}
 	},
