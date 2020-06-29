@@ -5,6 +5,7 @@ import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
 import { createCoroutineModule } from "./coroutine";
 import ModalDeath from "@/components/Modals/ModalDeath";
+import { MAX_LEVEL } from "@/data/experience";
 
 import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats, fixProtection } from "@/utils/combatUtils";
 import { getZPercent } from "@/utils/mathUtils";
@@ -27,14 +28,14 @@ export function createMobModule(mobType) {
 				let fullStats;
 				if (state.mobType == "player") {
 					fullStats = clone(PLAYER_BASE_STATS);
-					fullStats.precision += rootGetters["precision/level"];
+					fullStats.precision += Math.min(MAX_LEVEL, rootGetters["precision/level"]);
 					if (rootGetters["combat/isRanged"]) {
-						fullStats.power += rootGetters["rangedPower/level"];
+						fullStats.power += Math.min(MAX_LEVEL, rootGetters["rangedPower/level"]);
 					} else {
-						fullStats.power += rootGetters["meleePower/level"];
+						fullStats.power += Math.min(MAX_LEVEL, rootGetters["meleePower/level"]);
 					}
-					fullStats.command += rootGetters["command/level"];
-					fullStats.evasion += rootGetters["evasion/level"];
+					fullStats.command += Math.min(MAX_LEVEL, rootGetters["command/level"]);
+					fullStats.evasion += Math.min(MAX_LEVEL, rootGetters["evasion/level"]);
 					fullStats[rootGetters["combat/focus"]] += 5;
 					Object.values(rootGetters["inventory/equipment"]).forEach(equipment => {
 						if (!equipment.itemId) return;
