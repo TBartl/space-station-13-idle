@@ -16,6 +16,18 @@
               class="btn btn-primary my-1 d-block"
               @click="resetInfoClicked"
             >Reset Dismissed Tutorials</button>
+            <div class="custom-control custom-switch">
+              <input
+                v-model="showVirtualLevels"
+                type="checkbox"
+                class="custom-control-input"
+                id="showVirtualLevels"
+              />
+              <label
+                class="custom-control-label"
+                for="showVirtualLevels"
+              >Show Virtual Levels Beyond {{maxLevel}}</label>
+            </div>
             <button
               type="button"
               class="btn btn-danger my-1 d-block"
@@ -83,6 +95,7 @@ import ModalResetData from "@/components/Modals/ModalResetData";
 import ModalLevelAllJobs from "@/components/Modals/ModalLevelAllJobs";
 import ModalSkillLeveler from "@/components/Modals/ModalSkillLeveler";
 import ModalEnableCheats from "@/components/Modals/ModalEnableCheats";
+import { MAX_LEVEL } from "@/data/experience";
 
 import ENEMIES from "@/data/enemies";
 import { calcRobustness } from "@/utils/combatUtils";
@@ -98,8 +111,19 @@ export default {
         this.$store.commit("cheats/setShowAllActions", value);
       }
     },
+    showVirtualLevels: {
+      get() {
+        return this.$store.getters["settings/showVirtualLevels"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowVirtualLevels", value);
+      }
+    },
     cheatsEnabled() {
       return this.$store.getters["cheats/cheatsEnabled"];
+    },
+    maxLevel() {
+      return MAX_LEVEL;
     }
   },
   methods: {
