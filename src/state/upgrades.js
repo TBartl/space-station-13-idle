@@ -10,12 +10,26 @@ const upgrades = {
 		}
 	},
 	getters: {
-		get(state) {
+		getNoEquipment(state) {
 			return (upgradeId) => {
 				let upgradeCount = state.upgrades[upgradeId];
 				return upgradeCount ? upgradeCount : 0
 			}
-		}
+		},
+		get(state, getters, rootState, rootGetters) {
+			return (upgradeId) => {
+				let upgradeCount = getters["getNoEquipment"](upgradeId);
+
+				let equipment = rootGetters["inventory/equipment"];
+				Object.values(equipment).forEach(equip => {
+					let itemId = equip.itemId;
+					if (!itemId) return;
+
+					if (ITEMS[itemId].providesUpgrade == upgradeId) upgradeCount += 1;
+				});
+				return upgradeCount;
+			}
+		},
 	},
 	mutations: {
 		set(state, upgradeId) {
