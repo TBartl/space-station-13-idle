@@ -16,7 +16,9 @@ export default {
 		},
 		requires: {
 			mining: MAX_LEVEL
-		}
+		},
+		description: "+1 Mining Upgrade",
+		providesUpgrade: "miningTools"
 	},
 	capeEngineering: {
 		name: "Engineering Mastery Cloak",
@@ -33,7 +35,9 @@ export default {
 		},
 		requires: {
 			engineering: MAX_LEVEL
-		}
+		},
+		description: "+1 Engineering Upgrade",
+		providesUpgrade: "cableManagement"
 	},
 	capeFabrication: {
 		name: "Fabrication Mastery Cloak",
@@ -50,7 +54,9 @@ export default {
 		},
 		requires: {
 			fabrication: MAX_LEVEL
-		}
+		},
+		description: "+1 Fabrication Upgrade",
+		providesUpgrade: "fabricationBins"
 	},
 	capeGraytiding: {
 		name: "Master of the Tides Cloak",
@@ -67,7 +73,9 @@ export default {
 		},
 		requires: {
 			graytiding: MAX_LEVEL
-		}
+		},
+		description: "+1 Graytiding Upgrade",
+		providesUpgrade: "graytidingHacking"
 	},
 	capeTinkering: {
 		name: "Tinkering Mastery Cloak",
@@ -118,7 +126,9 @@ export default {
 		},
 		requires: {
 			cooking: MAX_LEVEL
-		}
+		},
+		description: "+1 Cooking Upgrade",
+		providesUpgrade: "fryCooking"
 	},
 	capeXenobiology: {
 		name: "Xenobiology Mastery Cloak",
@@ -136,7 +146,9 @@ export default {
 		},
 		requires: {
 			xenobiology: MAX_LEVEL
-		}
+		},
+		description: "+1 Xenobiology Upgrade",
+		providesUpgrade: "xenobiologyPens"
 	},
 	capeChemistry: {
 		name: "Chemistry Mastery Cloak",
@@ -154,7 +166,9 @@ export default {
 		},
 		requires: {
 			chemistry: MAX_LEVEL
-		}
+		},
+		description: "+1 Chemistry Upgrade",
+		providesUpgrade: "chemDispenser"
 	},
 	capeShitposting: {
 		name: "Cloak of the True Master",
@@ -172,6 +186,6 @@ export default {
 		},
 		requires: {
 			shitposting: MAX_LEVEL
-		}
+		},
 	}
 }
