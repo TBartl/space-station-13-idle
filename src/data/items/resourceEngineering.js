@@ -6,7 +6,7 @@ export default {
 	},
 	wire: {
 		name: "Wire",
-		sellPrice: 45,
+		sellPrice: 2,
 		icon: require("@/assets/art/engineering/wire.png")
 	},
 }

@@ -3,7 +3,7 @@ export default {
 		name: "Mouse",
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
 		stats: {
-			maxHealth: 30,
+			maxHealth: 20,
 			attackSpeed: 2.5,
 			precision: -1,
 			power: -1,
@@ -22,8 +22,13 @@ export default {
 				chance: 1,
 				itemTable: [
 					{
+						id: "wire",
+						weight: 150,
+						count: [1, 20]
+					},
+					{
 						id: "foodMeatA",
-						weight: 98
+						weight: 48
 					},
 					{
 						id: "companionMouse",
@@ -37,11 +42,11 @@ export default {
 		name: "Lost Scientist",
 		icon: require("@/assets/art/combat/enemies/science.png"),
 		stats: {
-			maxHealth: 40,
+			maxHealth: 45,
 			attackSpeed: 1.6,
-			precision: 8,
-			power: 17,
-			evasion: 13,
+			precision: 9,
+			power: 16,
+			evasion: 9,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -51,11 +56,18 @@ export default {
 				itemTable: [
 					{
 						id: 'plasma',
-						weight: 1
+						weight: 10,
+						count: [1, 4]
 					},
 					{
 						id: 'power',
-						weight: 1
+						weight: 10,
+						count: [1, 5]
+					},
+					{
+						id: 'potionFabrication',
+						weight: 5,
+						count: [1, 3]
 					},
 					{
 						id: 'jumpsuitScience',
@@ -72,13 +84,13 @@ export default {
 		name: "Cargo Technician",
 		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
 		stats: {
-			maxHealth: 50,
+			maxHealth: 60,
 			attackSpeed: 1.1,
-			precision: 6,
-			power: 13,
-			evasion: 10,
+			precision: 8,
+			power: 15,
+			evasion: 19,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -86,20 +98,22 @@ export default {
 				itemTable: [
 					{
 						id: 'glass',
-						weight: 1
+						weight: 1,
+						count: [1, 8]
 					},
 					{
 						id: 'silver',
-						weight: 1
-					},
-					{
-						id: 'jumpsuitTinkering',
-						weight: 1
+						weight: 1,
+						count: [1, 5]
 					},
 					{
 						id: 'ticket1',
 						count: [0, 2],
 						weight: 1
+					},
+					{
+						id: 'jumpsuitTinkering',
+						weight: .5
 					}
 				]
 			},
