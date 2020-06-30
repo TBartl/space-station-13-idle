@@ -173,6 +173,7 @@ export default {
       //   ["Player Level", "Target", "Target Robust", "Count", "XP Reward"]
       // ];
       // let totalKills = 0;
+      // let totalDamage = 0;
       // let pushTable = () => {
       //   let enemy = ENEMIES[this.$store.getters["validhunting/targetEnemyId"]];
       //   table.push([
@@ -182,6 +183,7 @@ export default {
       //     this.$store.getters["validhunting/targetCount"],
       //     this.$store.getters["validhunting/xpReward"].toLocaleString()
       //   ]);
+      //   totalDamage += enemy.stats.maxHealth * this.$store.getters["validhunting/targetCount"];
       // };
       // while (this.$store.getters["validhunting/level"] < 50) {
       //   pushTable();
@@ -190,6 +192,7 @@ export default {
       // }
       // pushTable();
       // console.table(table);
+      // console.log("Total damage:", totalDamage);
       // console.log("Final kill count:", totalKills);
     }
   }

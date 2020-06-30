@@ -7,7 +7,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 	state: {
 		enemyId: 'mouse',
 		count: 10,
-		xpReward: 250
+		xpReward: 80
 	},
 	getters: {
 		targetEnemyId(state) {
@@ -45,16 +45,17 @@ const validhunting = merge(cloneDeep(jobBase), {
 			commit("addXP", state.xpReward);
 			// Get a new task
 			let minCount = 10;
-			let maxAddedCount = minCount + getters.level * 4;
+			let maxAddedCount = minCount + getters.level * 2;
 			let count = minCount + Math.round(Math.random() * maxAddedCount);
 			commit("setNewCount", count);
 
-			let levelCenter = getters.level * 2;
+			let levelCenter = getters.level * 1.9;
 			let range = 10;
 			let pickedEnemy = null;
 			while (!pickedEnemy) {
 				let filteredEnemies = Object.entries(ENEMIES).filter(pair => {
-					if (pair[1].validhuntable == false) return false;
+					if (pair[1].validhuntable === false) return false;
+					if (pair[0] == state.enemyId) return false; // Can't get the same enemy twice
 					let robustness = calcRobustness(pair[1].stats, "enemy");
 					return robustness > levelCenter - range && robustness < levelCenter + range;
 				});
@@ -67,7 +68,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 			commit("setNewEnemy", pickedEnemy[0]);
 
 			let pickedEnemyRobustness = calcRobustness(pickedEnemy[1].stats, "enemy");
-			let xpReward = Math.round(Math.max(pickedEnemyRobustness, 3) * count * .6);
+			let xpReward = Math.round(Math.max(pickedEnemyRobustness, 3) * count * .9);
 			commit("setNewXpReward", xpReward);
 		}
 	}
