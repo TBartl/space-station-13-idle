@@ -51,16 +51,27 @@
           <div class="content-block">
             <h5>Chronosphere</h5>
             <hr />
-            <button
-              type="button"
-              class="btn"
-              v-for="speed in speeds"
-              :key="speed"
-              :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
-              @click="setChronoSpeed(speed)"
-            >{{speed}}x</button>
-            <h6 class="mt-2">This feature is WIP; so right now you have infinite lost time to spend.</h6>
-            <h6 class="mt-2">Thanks for testing the game!</h6>
+            <div class="d-flex flex-column align-items-center">
+              <h6 class="mb-2">Desired Speed:</h6>
+              <div>
+                <button
+                  type="button"
+                  class="btn"
+                  v-for="speed in speeds"
+                  :key="speed"
+                  :class="[desiredChronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
+                  @click="setDesiredChronoSpeed(speed)"
+                >{{speed}}x</button>
+              </div>
+              <h6 class="mt-3 mb-2">Time Bank:</h6>
+              <progress-bar
+                class="mt-1 black-background chrono-bar"
+                :progress="barPercent"
+                :text="remainingTimeText"
+                :customClass="active ? 'progress-bar-animated' : ''"
+              />
+              <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
+            </div>
           </div>
         </div>
       </div>
@@ -70,23 +81,67 @@
 
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
-import { mapGetters, mapMutations } from "vuex";
+import ProgressBar from "@/components/ProgressBar";
+
 export default {
   extends: ContentAbstract,
+  components: { ProgressBar },
   computed: {
-    ...mapGetters(["chronoSpeed"]),
     speeds() {
-      return [0.01, 1, 2, 5, 10, 25, 100, 250, 500, 1000];
+      if (this.$store.getters["cheats/extraChronoOptions"]) {
+        return [1, 1.5, 2, 2.5, 3, 5, 10, 25, 100, 250, 500, 1000];
+      }
+      return [1, 1.5, 2, 2.5, 3];
+    },
+    chronoSpeed() {
+      return this.$store.getters["chrono/speed"];
+    },
+    desiredChronoSpeed() {
+      return this.$store.getters["chrono/desiredSpeed"];
+    },
+    remainingTimeText() {
+      if (this.infinite) return "INFINTE (cheater)";
+      return this.$store.getters["chrono/remainingTimeText"] + " remaining";
+    },
+    barPercent() {
+      if (this.infinite) return 1;
+      return (
+        this.$store.getters["chrono/remainingTime"] /
+        this.$store.getters["chrono/maxDuration"]
+      );
+    },
+    maxHours() {
+      return this.$store.getters["chrono/maxHours"];
+    },
+    active() {
+      return this.$store.getters["chrono/active"];
+    },
+    infinite() {
+      return this.$store.getters["cheats/infiniteChrono"];
     }
   },
   methods: {
-    ...mapMutations(["setChronoSpeed"])
+    setDesiredChronoSpeed(val) {
+      this.$store.commit("chrono/setDesiredSpeed", val);
+    }
   }
 };
 </script>
 
 <style scoped>
 .btn {
-  margin-right: 0.5rem;
+  margin: 0.25rem;
+}
+
+.chrono-bar {
+  max-width: 800px;
+}
+
+.black-background {
+  background-color: rgb(61, 61, 61) !important;
+}
+.max {
+  font-size: 12px;
+  color: gray;
 }
 </style>

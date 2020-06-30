@@ -12,10 +12,8 @@ import { mapMutations } from "vuex";
 
 export default {
   methods: {
-    ...mapMutations(["setWelcomeMessageSeen"]),
     confirmationClicked() {
       this.$emit("close");
-      this.setWelcomeMessageSeen();
     }
   }
 };

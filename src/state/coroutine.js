@@ -57,7 +57,7 @@ export function createCoroutineModule() {
 				state.currentTimeout = setTimeout(() => {
 					var to = new Date().getTime();
 					var elapsed = (to - from) / 1000;
-					state.progress += elapsed * rootGetters.chronoSpeed;
+					state.progress += elapsed * rootGetters["chrono/speed"];
 
 					if (state.progress >= state.duration) {
 						state.bonusTime = state.progress - state.duration;

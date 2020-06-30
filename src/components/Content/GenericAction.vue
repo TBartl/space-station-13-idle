@@ -49,7 +49,6 @@ export default {
   components: { ProgressBar, ItemChance, ItemRequirement },
   props: ["jobId", "actionName", "action", "actionId"],
   computed: {
-    ...mapGetters(["chronoSpeed"]),
     ...mapState({
       id() {
         return this._uid.toString();
@@ -97,7 +96,7 @@ export default {
       if (this.action.icon) return this.action.icon;
       if (this.action.item) return this.item.icon;
       return null;
-    }
+		}
   },
   methods: {
     tryStartAction(actionId) {

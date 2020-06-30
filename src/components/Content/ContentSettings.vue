@@ -65,6 +65,27 @@
                 />
                 <label class="custom-control-label" for="showAllActions">Show All Actions</label>
               </div>
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="infiniteChrono"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="infiniteChrono"
+                />
+                <label class="custom-control-label" for="infiniteChrono">Infinite Chronosphere Time</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="extraChronoOptions"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="extraChronoOptions"
+                />
+                <label
+                  class="custom-control-label"
+                  for="extraChronoOptions"
+                >Extra Chronosphere Options</label>
+              </div>
               <button
                 type="button"
                 class="btn btn-primary my-1 d-block"
@@ -109,6 +130,22 @@ export default {
       },
       set(value) {
         this.$store.commit("cheats/setShowAllActions", value);
+      }
+    },
+    infiniteChrono: {
+      get() {
+        return this.$store.getters["cheats/infiniteChrono"];
+      },
+      set(value) {
+        this.$store.commit("cheats/setInfiniteChrono", value);
+      }
+    },
+    extraChronoOptions: {
+      get() {
+        return this.$store.getters["cheats/extraChronoOptions"];
+      },
+      set(value) {
+        this.$store.commit("cheats/setExtraChronoOptions", value);
       }
     },
     showVirtualLevels: {
@@ -173,6 +210,7 @@ export default {
       //   ["Player Level", "Target", "Target Robust", "Count", "XP Reward"]
       // ];
       // let totalKills = 0;
+      // let totalDamage = 0;
       // let pushTable = () => {
       //   let enemy = ENEMIES[this.$store.getters["validhunting/targetEnemyId"]];
       //   table.push([
@@ -182,6 +220,7 @@ export default {
       //     this.$store.getters["validhunting/targetCount"],
       //     this.$store.getters["validhunting/xpReward"].toLocaleString()
       //   ]);
+      //   totalDamage += enemy.stats.maxHealth * this.$store.getters["validhunting/targetCount"];
       // };
       // while (this.$store.getters["validhunting/level"] < 50) {
       //   pushTable();
@@ -190,6 +229,7 @@ export default {
       // }
       // pushTable();
       // console.table(table);
+      // console.log("Total damage:", totalDamage);
       // console.log("Final kill count:", totalKills);
     }
   }

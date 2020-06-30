@@ -30,6 +30,7 @@ import info from './info';
 import completion from './completion';
 import cheats from './cheats'
 import settings from '@/state/settings';
+import chrono from '@/state/chrono';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -57,6 +58,7 @@ const modules = {
 	completion,
 	cheats,
 	settings,
+	chrono,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
@@ -77,13 +79,14 @@ const vuexLocal = new VuexPersistence({
 				delete reduced[moduleName][subModuleName];
 			}
 		}
+		delete reduced.chrono.currentTimeout;
+		reduced.chrono.lastLogoutTime = new Date().getTime();
 		return reduced;
 	}
 })
 
 const state = {
 	visibleSidebarItem: "mining",
-	chronoSpeed: 1,
 	welcomeMessageSeen: false
 }
 
@@ -103,9 +106,6 @@ const store = new Vuex.Store({
 		visibleSidebarItem(state) {
 			return state.visibleSidebarItem;
 		},
-		chronoSpeed(state) {
-			return state.chronoSpeed;
-		},
 		welcomeMessageSeen(state) {
 			return state.welcomeMessageSeen;
 		}
@@ -116,9 +116,6 @@ const store = new Vuex.Store({
 		},
 		_resetState(state) {
 			Object.assign(state, cloneDeep(initialState));
-		},
-		setChronoSpeed(state, speed) {
-			state.chronoSpeed = speed;
 		},
 		setWelcomeMessageSeen(state) {
 			state.welcomeMessageSeen = true;
@@ -152,7 +149,5 @@ const store = new Vuex.Store({
 	},
 	plugins: [vuexLocal.plugin]
 });
-
-store.dispatch("_resume");
 
 export default store;
