@@ -7,7 +7,7 @@ export const ACTIONS = {
 			count: 2
 		},
 		icon: require("@/assets/art/engineering/bicycle.png"),
-		xp: 1.8,
+		xp: 1.3,
 		requiredLevel: 1
 	},
 	engOil: {
@@ -15,10 +15,10 @@ export const ACTIONS = {
 		name: "Oil Barrel",
 		items: {
 			id: "power",
-			count: 10
+			count: 3
 		},
 		icon: require("@/assets/art/engineering/burning_anim.gif"),
-		xp: 3,
+		xp: 2,
 		requiredLevel: 4,
 		requiredItems: {
 			oil: 1
@@ -29,26 +29,25 @@ export const ACTIONS = {
 		name: "Treadmill",
 		items: {
 			id: "power",
-			count: 3
+			count: 4
 		},
 		icon: require("@/assets/art/engineering/treadmill.png"),
-		xp: 5,
-		requiredLevel: 10,
+		xp: 3.5,
+		requiredLevel: 7,
 	},
 	engIncinerator: {
 		time: 5,
 		name: "Incinerator",
 		items: {
 			id: "power",
-			count: 4
+			count: 10
 		},
 		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
-		xp: 8,
-		requiredLevel: 15,
+		xp: 10,
+		requiredLevel: 10,
 		requiredItems: {
 			burnJunk: 1
 		}
-
 	},
 	engGen: {
 		time: 5,
@@ -58,10 +57,24 @@ export const ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
-		xp: 10,
-		requiredLevel: 20,
+		xp: 7,
+		requiredLevel: 14,
 		requiredItems: {
-			power: 5
+			power: 4
+		}
+	},	
+	engSlime: {
+		time: 5,
+		name: "Charged Slime",
+		items: {
+			id: "power",
+			count: 10
+		},
+		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
+		xp: 8.5,
+		requiredLevel: 17,
+		requiredItems: {
+			slimeYellow: 1
 		}
 	},
 	engPotato: {
@@ -69,27 +82,13 @@ export const ACTIONS = {
 		name: "Potato Battery",
 		items: {
 			id: "power",
-			count: 6
+			count: 10
 		},
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
-		xp: 13,
-		requiredLevel: 25,
+		xp: 10,
+		requiredLevel: 20,
 		requiredItems: {
 			potatoBattery: 8
-		}
-	},
-	engSlime: {
-		time: 5,
-		name: "Charged Slime",
-		items: {
-			id: "power",
-			count: 7
-		},
-		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
-		xp: 15,
-		requiredLevel: 30,
-		requiredItems: {
-			slimeYellow: 1
 		}
 	},
 	engSolars: {
@@ -97,13 +96,27 @@ export const ACTIONS = {
 		name: "Solars",
 		items: {
 			id: "power",
-			count: 8
+			count: 10
 		},
 		icon: require("@/assets/art/engineering/solars.png"),
-		xp: 18,
-		requiredLevel: 35,
+		xp: 11.5,
+		requiredLevel: 23,
 		requiredItems: {
 			wire: 1
+		}
+	},
+	engBee: {
+		time: 5,
+		name: "Plan Bee",
+		items: {
+			id: "power",
+			count: 16
+		},
+		icon: require("@/assets/art/engineering/beepower.png"),
+		xp: 13.5,
+		requiredLevel: 27,
+		requiredItems: {
+			companionBee: 1
 		}
 	},
 	engSMES: {
@@ -115,24 +128,10 @@ export const ACTIONS = {
 			count: 50
 		},
 		icon: require("@/assets/art/engineering/smes_anim.gif"),
-		xp: 20,
-		requiredLevel: 40,
+		xp: 15,
+		requiredLevel: 30,
 		requiredItems: {
 			power: 10
-		}
-	},
-	engUnholy: {
-		time: 5,
-		name: "Unholy Matter",
-		items: {
-			id: "power",
-			count: 9
-		},
-		icon: require("@/assets/art/engineering/eng_shitpost.png"),
-		xp: 18,
-		requiredLevel: 42,
-		requiredItems: {
-			salt: 1
 		}
 	},
 	engBattery: {
@@ -140,13 +139,69 @@ export const ACTIONS = {
 		name: "Battery Array",
 		items: {
 			id: "power",
-			count: 10
+			count: 15
 		},
 		icon: require("@/assets/art/engineering/battery.png"),
-		xp: 18,
-		requiredLevel: 42,
+		xp: 16.5,
+		requiredLevel: 33,
 		requiredItems: {
 			ammoEnergy3: 1
+		}
+	},
+	engSlimeoil: {
+		time: 5,
+		name: "American Military Slime",
+		items: {
+			id: "power",
+			count: 19
+		},
+		icon: require("@/assets/art/xenobio/SlimeOil.gif"),
+		xp: 18,
+		requiredLevel: 36,
+		requiredItems: {
+			slimeOil: 1
+		}
+	},
+	engUnholy: {
+		time: 5,
+		name: "Unholy Matter",
+		items: {
+			id: "power",
+			count: 74
+		},
+		icon: require("@/assets/art/engineering/eng_shitpost.png"),
+		xp: 20,
+		requiredLevel: 40,
+		requiredItems: {
+			salt: 1
+		}
+	},
+	engOrange: {
+		time: 5,
+		name: "Super Compressed Matter",
+		items: {
+			id: "power",
+			count: 17
+		},
+		icon: require("@/assets/art/engineering/supermatter_anim.gif"),
+		xp: 21.5,
+		requiredLevel: 43,
+		requiredItems: {
+			orange3d: 8
+		}
+	},
+	engBananaore: {
+		time: 5,
+		name: "Advanced Capacitors Plating",
+		items: {
+			id: "power",
+			count: 17
+		},
+		icon: require("@/assets/art/engineering/banana.png"),
+		xp: 23,
+		requiredLevel: 46,
+		requiredItems: {
+			bananium: 1
 		}
 	},
 	engSingularity: {
@@ -154,7 +209,7 @@ export const ACTIONS = {
 		name: "Gravitational Singularity",
 		items: {
 			id: "power",
-			count: 50000
+			count: 1337
 		},
 		icon: require("@/assets/art/engineering/big.gif"),
 		xp: -50000,

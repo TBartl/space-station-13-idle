@@ -127,7 +127,7 @@ const BURNARMOR = {
 const MECHS = {
 	ripley: {
 		name: "R.I.P.L.E.Y.",
-		sellPrice: 1000,
+		sellPrice: 6060,
 		icon: require("@/assets/art/fabrication/mechripley.png"),
 		overlay: require("@/assets/art/fabrication/mechripley.png"),
 		stats: {
@@ -138,7 +138,7 @@ const MECHS = {
 	},
 	ripleymk2: {
 		name: "R.I.P.L.E.Y. MK2",
-		sellPrice: 1000,
+		sellPrice: 9415,
 		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
 		stats: {
 		},
@@ -148,7 +148,7 @@ const MECHS = {
 	},
 	odysseus: {
 		name: "Odysseus",
-		sellPrice: 1000,
+		sellPrice: 15458,
 		icon: require("@/assets/art/fabrication/mechodysseus.png"),
 		stats: {
 		},
@@ -158,7 +158,7 @@ const MECHS = {
 	},
 	firefighter: {
 		name: "R.I.P.L.E.Y. MK3",
-		sellPrice: 1000,
+		sellPrice: 18845,
 		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
 		stats: {
 		},
@@ -168,7 +168,7 @@ const MECHS = {
 	},
 	clarke: {
 		name: "Clarke",
-		sellPrice: 1000,
+		sellPrice: 24035,
 		icon: require("@/assets/art/fabrication/mechclarke_anim.gif"),
 		stats: {
 		},
@@ -178,7 +178,7 @@ const MECHS = {
 	},
 	durand: {
 		name: "Durand",
-		sellPrice: 1000,
+		sellPrice: 27875,
 		icon: require("@/assets/art/fabrication/mechdurand.png"),
 		stats: {
 		},
@@ -188,7 +188,7 @@ const MECHS = {
 	},
 	marauder: {
 		name: "Marauder",
-		sellPrice: 1000,
+		sellPrice: 31440,
 		icon: require("@/assets/art/fabrication/mechmarauder.png"),
 		stats: {
 		},
@@ -198,7 +198,7 @@ const MECHS = {
 	},
 	gygax: {
 		name: "Gygax",
-		sellPrice: 1000,
+		sellPrice: 37960,
 		icon: require("@/assets/art/fabrication/mechgygax.png"),
 		stats: {
 		},
@@ -208,7 +208,7 @@ const MECHS = {
 	},
 	mauler: {
 		name: "Mauler",
-		sellPrice: 1000,
+		sellPrice: 45675,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		stats: {
 		},
@@ -218,7 +218,7 @@ const MECHS = {
 	},
 	deathRipley: {
 		name: "R.I.P.L.E.Y. MK13",
-		sellPrice: 1000,
+		sellPrice: 47465,
 		icon: require("@/assets/art/fabrication/mechdeathripley.png"),
 		stats: {
 		},
@@ -238,7 +238,7 @@ const MECHS = {
 	},
 	reticence: {
 		name: ".........",
-		sellPrice: 1000,
+		sellPrice: 23880,
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
 		stats: {
 		},
@@ -248,7 +248,7 @@ const MECHS = {
 	},
 	seraph: {
 		name: "Seraph",
-		sellPrice: 1000,
+		sellPrice: 56945,
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
 		stats: {
 		},
@@ -258,9 +258,18 @@ const MECHS = {
 	},
 	honk: {
 		name: "H.O.N.K.",
-		sellPrice: 1000,
+		sellPrice: 83250,
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
 		stats: {
+			moveTime: 3,
+			maxHealth : 250,
+			precision : 15,
+			power: -10,
+			evasion: 15,
+			burnProtection: 16,
+			bruteProtection: 6,
+
+
 		},
 		requires: {
 			fabrication: 50
@@ -268,7 +277,7 @@ const MECHS = {
 	},
 	phazon: {
 		name: "Phazon",
-		sellPrice: 100000,
+		sellPrice: 73350,
 		icon: require("@/assets/art/fabrication/mechphazon.png"),
 		stats: {
 		},
@@ -304,8 +313,8 @@ Object.values(MECHS).forEach(mech => {
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
 	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 2);
+	if (Object.values(mech.stats).length > 0) return;
 	mech.stats.moveTime = 3;
-	// mech.sellPrice = Math.ceil((mech.requires.fabrication + 10) * 12.25 - 75 );
 	mech.stats.maxHealth = mech.requires.fabrication * 3;
 	mech.stats.precision = Math.ceil(mech.requires.fabrication * .2);
 	mech.stats.power = Math.ceil(mech.requires.fabrication * .2);
