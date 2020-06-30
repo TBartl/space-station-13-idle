@@ -14,7 +14,8 @@ import ToastContainer from "@/components/Toast/ToastContainer";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 import ModalWelcome from "@/components/Modals/ModalWelcome";
-import { mapGetters } from "vuex";
+import ModalWelcomeBack from "@/components/Modals/ModalWelcomeBack";
+import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "App",
   components: {
@@ -25,9 +26,20 @@ export default {
   computed: {
     ...mapGetters(["welcomeMessageSeen"])
   },
+  methods: {
+    ...mapMutations(["setWelcomeMessageSeen"])
+  },
   mounted() {
-    if (this.welcomeMessageSeen) return;
-    this.$modal.show(ModalWelcome, {}, { height: "auto", width: "360px" });
+    if (!this.welcomeMessageSeen) {
+      this.$modal.show(ModalWelcome, {}, { height: "auto", width: "360px" });
+      this.setWelcomeMessageSeen();
+    } else if (this.$store.getters["chrono/lastGain"] > 30 * 1000) {
+      this.$modal.show(
+        ModalWelcomeBack,
+        {},
+        { height: "auto", width: "400px" }
+      );
+    }
   }
 };
 </script>

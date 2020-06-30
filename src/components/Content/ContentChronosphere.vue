@@ -67,7 +67,7 @@
               <progress-bar
                 class="mt-1 black-background chrono-bar"
                 :progress="barPercent"
-                :text="remainingTimeText"
+                :text="remainingTimeText + ' remaining'"
                 :customClass="active ? 'progress-bar-animated' : ''"
               />
               <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
@@ -97,16 +97,7 @@ export default {
       return this.$store.getters["chrono/desiredSpeed"];
     },
     remainingTimeText() {
-      let duration = this.$store.getters["chrono/remainingTime"];
-      var seconds = parseInt((duration / 1000) % 60),
-        minutes = parseInt((duration / (1000 * 60)) % 60),
-        hours = parseInt((duration / (1000 * 60 * 60)) % 24);
-
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      return `${hours}:${minutes}:${seconds} remaining`;
+			return this.$store.getters["chrono/remainingTimeText"];
     },
     barPercent() {
       return (

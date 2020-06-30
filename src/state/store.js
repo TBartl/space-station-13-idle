@@ -80,6 +80,7 @@ const vuexLocal = new VuexPersistence({
 			}
 		}
 		delete reduced.chrono.currentTimeout;
+		reduced.chrono.lastLogoutTime = new Date().getTime();
 		return reduced;
 	}
 })
@@ -148,7 +149,5 @@ const store = new Vuex.Store({
 	},
 	plugins: [vuexLocal.plugin]
 });
-
-store.dispatch("_resume");
 
 export default store;

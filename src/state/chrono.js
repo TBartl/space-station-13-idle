@@ -1,12 +1,13 @@
 import Vue from 'vue'
-import { BIconArrowReturnRight } from 'bootstrap-vue';
 
 const chrono = {
 	namespaced: true,
 	state: {
 		desiredSpeed: 1,
 		remainingTime: 0,
-		currentTimeout: 0
+		currentTimeout: 0,
+		lastLogoutTime: 0,
+		lastGain: 0
 	},
 	getters: {
 		desiredSpeed(state) {
@@ -27,11 +28,31 @@ const chrono = {
 		},
 		active(state, getters) {
 			return getters["desiredSpeed"] != 1 && getters["remainingTime"] > 0;
+		},
+		remainingTimeText(state, getters) {
+			let duration = getters["remainingTime"];
+			// let date = new Date(duration)
+			// let hours = `0${}`
+			var seconds = parseInt((duration / 1000) % 60),
+				minutes = parseInt((duration / (1000 * 60)) % 60),
+				hours = parseInt((duration / (1000 * 60 * 60)) % 24);
+
+			hours = hours < 10 ? "0" + hours : hours;
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+
+			return `${hours}:${minutes}:${seconds}`;
+		},
+		lastGain(state) {
+			return state.lastGain;
 		}
 	},
 	mutations: {
 		setDesiredSpeed(state, val) {
 			state.desiredSpeed = val;
+		},
+		_updateRemainingTime(state, val) {
+			state.remainingTime = val;
 		}
 	},
 	actions: {
@@ -57,6 +78,13 @@ const chrono = {
 				}
 				dispatch("_progress", customInterval);
 			}, interval ? interval : 250);
+		},
+		updateOfflineTime({ state, getters, commit }) {
+			if (!state.lastLogoutTime) return;
+			let elapsedTime = new Date().getTime() - state.lastLogoutTime;
+			let newVal = Math.min(state.remainingTime + elapsedTime, getters["maxDuration"]);
+			state.lastGain = elapsedTime;
+			commit("_updateRemainingTime", newVal);
 		}
 	}
 }
