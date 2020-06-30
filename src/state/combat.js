@@ -53,6 +53,9 @@ const combat = {
 				}
 			}
 			return false;
+		},
+		xpRatio() {
+			return .3;
 		}
 	},
 	mutations: {
@@ -180,7 +183,8 @@ const combat = {
 			if (skill == "power") {
 				skill = getters.isRanged ? "rangedPower" : "meleePower";
 			}
-			commit(skill + "/addXP", damage, { root: true });
+			let xp = damage * getters["xpRatio"];
+			commit(skill + "/addXP", xp, { root: true });
 		},
 		tryAutoEat({ dispatch, getters, rootGetters }) {
 			let hasAutoEat = rootGetters["upgrades/get"]("autoeat");
