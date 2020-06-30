@@ -315,7 +315,7 @@ const ACTIONS = {
 		requiredLevel: 1,
 		itemTables: [
 			{
-				chance: .02,
+				chance: .03,
 				itemTable: [
 					{
 						id: 'junk',
