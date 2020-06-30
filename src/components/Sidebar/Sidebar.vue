@@ -82,7 +82,6 @@ export default {
   name: "Sidebar",
   components: { SidebarItem, InventoryPriceDisplay },
   computed: {
-    ...mapGetters(["chronoSpeed"]),
     money() {
       return this.$store.getters["inventory/money"];
     },
@@ -111,6 +110,9 @@ export default {
     },
     bankSlots() {
       return this.$store.getters["inventory/bankSlots"];
+    },
+    chronoSpeed() {
+      return this.$store.getters["chrono/speed"];
     }
   },
   methods: {

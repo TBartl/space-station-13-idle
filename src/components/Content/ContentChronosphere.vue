@@ -51,16 +51,24 @@
           <div class="content-block">
             <h5>Chronosphere</h5>
             <hr />
-            <button
-              type="button"
-              class="btn"
-              v-for="speed in speeds"
-              :key="speed"
-              :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
-              @click="setChronoSpeed(speed)"
-            >{{speed}}x</button>
-            <h6 class="mt-2">This feature is WIP; so right now you have infinite lost time to spend.</h6>
-            <h6 class="mt-2">Thanks for testing the game!</h6>
+            <div class="d-flex flex-column align-items-center">
+              <h5 class="mb-2">Target Speed</h5>
+              <div>
+                <button
+                  type="button"
+                  class="btn"
+                  v-for="speed in speeds"
+                  :key="speed"
+                  :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
+                  @click="setDesiredChronoSpeed(speed)"
+                >{{speed}}x</button>
+              </div>
+              <progress-bar
+                class="mt-1 black-background chrono-bar"
+                :progress=".5"
+                :text="`Lost Time Remaining: 1`"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -70,23 +78,39 @@
 
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
-import { mapGetters, mapMutations } from "vuex";
+import ProgressBar from "@/components/ProgressBar";
 export default {
   extends: ContentAbstract,
+  components: { ProgressBar },
   computed: {
-    ...mapGetters(["chronoSpeed"]),
     speeds() {
-      return [0.01, 1, 2, 5, 10, 25, 100, 250, 500, 1000];
+      return [1, 2, 5, 10, 25, 100, 250, 500, 1000];
+    },
+    chronoSpeed() {
+      return this.$store.getters["chrono/speed"];
+    },
+    desiredChronoSpeed() {
+      return this.$store.getters["chrono/desiredSpeed"];
     }
   },
   methods: {
-    ...mapMutations(["setChronoSpeed"])
+    setDesiredChronoSpeed(val) {
+      this.$store.commit("chrono/setDesiredSpeed", val);
+    }
   }
 };
 </script>
 
 <style scoped>
 .btn {
-  margin-right: 0.5rem;
+  margin: 0.25rem;
+}
+
+.chrono-bar {
+	max-width: 800px;
+}
+
+.black-background {
+  background-color: rgb(61, 61, 61) !important;
 }
 </style>
