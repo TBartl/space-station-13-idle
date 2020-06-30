@@ -22,6 +22,8 @@
 </template>
 
 <script>
+const meleePowerIcon = require("@/assets/art/combat/meleePower.png");
+const rangedPowerIcon = require("@/assets/art/combat/rangedPower.png");
 export default {
   computed: {
     id() {
@@ -31,26 +33,31 @@ export default {
       return this.$store.getters["combat/focus"];
     },
     focuses() {
+      let damageDealtText =
+        this.$store.getters["combat/xpRatio"] * 100 +
+        "% of damage dealt is gained as ";
+      let isRanged = this.$store.getters["combat/isRanged"];
       let focuses = [
         {
           name: "Precision",
           id: "precision",
           bonus: "+5 precision bonus",
-          description: "Damage dealt is gained as precision XP",
+          description: damageDealtText + "precision XP",
           icon: require("@/assets/art/combat/precision.png")
         },
         {
           name: "Power",
           id: "power",
           bonus: "+5 power bonus",
-          description: "Damage dealt is gained as power XP",
-          icon: require("@/assets/art/combat/skull.png")
+          description:
+            damageDealtText + (isRanged ? "ranged" : "melee") + " power XP",
+          icon: isRanged ? rangedPowerIcon : meleePowerIcon
         },
         {
           name: "Evasion",
           id: "evasion",
           bonus: "+5 evasion bonus",
-          description: "Damage dealt is gained as evasion XP",
+          description: damageDealtText + "evasion XP",
           icon: require("@/assets/art/combat/black_shoes.png")
         }
       ];
@@ -59,7 +66,7 @@ export default {
           name: "Command",
           id: "command",
           bonus: "+5 command bonus",
-          description: "Damage dealt is gained as command XP",
+          description: damageDealtText + "command XP",
           icon: require("@/assets/art/combat/command.png")
         });
       }
