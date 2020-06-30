@@ -52,14 +52,14 @@
             <h5>Chronosphere</h5>
             <hr />
             <div class="d-flex flex-column align-items-center">
-              <h6 class="mb-2">Target Speed:</h6>
+              <h6 class="mb-2">Desired Speed:</h6>
               <div>
                 <button
                   type="button"
                   class="btn"
                   v-for="speed in speeds"
                   :key="speed"
-                  :class="[chronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
+                  :class="[desiredChronoSpeed == speed ? 'btn-primary' : 'btn-secondary']"
                   @click="setDesiredChronoSpeed(speed)"
                 >{{speed}}x</button>
               </div>
@@ -68,7 +68,7 @@
                 class="mt-1 black-background chrono-bar"
                 :progress="barPercent"
                 :text="remainingTimeText"
-                :customClass="{'progress-bar-animated': active}"
+                :customClass="active ? 'progress-bar-animated' : ''"
               />
               <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
             </div>

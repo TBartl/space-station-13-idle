@@ -79,6 +79,7 @@ const vuexLocal = new VuexPersistence({
 				delete reduced[moduleName][subModuleName];
 			}
 		}
+		delete reduced.chrono.currentTimeout;
 		return reduced;
 	}
 })
