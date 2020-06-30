@@ -68,8 +68,9 @@
                 class="mt-1 black-background chrono-bar"
                 :progress="barPercent"
                 :text="remainingTimeText"
+                :customClass="{'progress-bar-animated': active}"
               />
-							<span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
+              <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
             </div>
           </div>
         </div>
@@ -106,13 +107,19 @@ export default {
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       return `${hours}:${minutes}:${seconds} remaining`;
-		},
-		barPercent() {
-			return this.$store.getters["chrono/remainingTime"] / this.$store.getters["chrono/maxDuration"];
-		},
-		maxHours() {
-			return this.$store.getters["chrono/maxHours"];
-		}
+    },
+    barPercent() {
+      return (
+        this.$store.getters["chrono/remainingTime"] /
+        this.$store.getters["chrono/maxDuration"]
+      );
+    },
+    maxHours() {
+      return this.$store.getters["chrono/maxHours"];
+    },
+    active() {
+      return this.$store.getters["chrono/active"];
+    }
   },
   methods: {
     setDesiredChronoSpeed(val) {
@@ -135,7 +142,7 @@ export default {
   background-color: rgb(61, 61, 61) !important;
 }
 .max {
-	font-size: 12px;
-	color: gray;
+  font-size: 12px;
+  color: gray;
 }
 </style>

@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { BIconArrowReturnRight } from 'bootstrap-vue';
 
 const chrono = {
 	namespaced: true,
@@ -21,6 +22,9 @@ const chrono = {
 		},
 		maxDuration(state, getters) {
 			return getters["maxHours"] * 60 * 60 * 1000;
+		},
+		active(state, getters) {
+			return getters["speed"] != 1;
 		}
 	},
 	mutations: {
