@@ -52,7 +52,7 @@
             <h5>Chronosphere</h5>
             <hr />
             <div class="d-flex flex-column align-items-center">
-              <h5 class="mb-2">Target Speed</h5>
+              <h6 class="mb-2">Target Speed:</h6>
               <div>
                 <button
                   type="button"
@@ -63,11 +63,13 @@
                   @click="setDesiredChronoSpeed(speed)"
                 >{{speed}}x</button>
               </div>
+              <h6 class="mt-3 mb-2">Time Bank:</h6>
               <progress-bar
                 class="mt-1 black-background chrono-bar"
-                :progress=".5"
-                :text="`Lost Time Remaining: 1`"
+                :progress="barPercent"
+                :text="remainingTimeText"
               />
+							<span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
             </div>
           </div>
         </div>
@@ -79,6 +81,7 @@
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ProgressBar from "@/components/ProgressBar";
+
 export default {
   extends: ContentAbstract,
   components: { ProgressBar },
@@ -91,7 +94,25 @@ export default {
     },
     desiredChronoSpeed() {
       return this.$store.getters["chrono/desiredSpeed"];
-    }
+    },
+    remainingTimeText() {
+      let duration = this.$store.getters["chrono/remainingTime"];
+      var seconds = parseInt((duration / 1000) % 60),
+        minutes = parseInt((duration / (1000 * 60)) % 60),
+        hours = parseInt((duration / (1000 * 60 * 60)) % 24);
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      return `${hours}:${minutes}:${seconds} remaining`;
+		},
+		barPercent() {
+			return this.$store.getters["chrono/remainingTime"] / this.$store.getters["chrono/maxDuration"];
+		},
+		maxHours() {
+			return this.$store.getters["chrono/maxHours"];
+		}
   },
   methods: {
     setDesiredChronoSpeed(val) {
@@ -107,10 +128,14 @@ export default {
 }
 
 .chrono-bar {
-	max-width: 800px;
+  max-width: 800px;
 }
 
 .black-background {
   background-color: rgb(61, 61, 61) !important;
+}
+.max {
+	font-size: 12px;
+	color: gray;
 }
 </style>
