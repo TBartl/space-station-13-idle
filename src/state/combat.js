@@ -28,7 +28,7 @@ const combat = {
 			return 16;
 		},
 		regenTime(state, getters, rootState, rootGetters) {
-			let baseRegenTime = 8;
+			let baseRegenTime = 5;
 			let ratio = 100 / rootGetters["playerMob/stats"].maxHealth;
 			return baseRegenTime * ratio;
 		},
