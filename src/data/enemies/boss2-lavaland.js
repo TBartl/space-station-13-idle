@@ -14,20 +14,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticparts',
-						weight: 1
+						id: 'exoticParts',
+						count: [6, 10],
+						weight: 8
 					},
 					{
-						id: 'gold',
+						id: 'exoticParts',
+						count: [11, 12],
 						weight: 1
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -51,20 +49,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.6,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticparts',
-						weight: 1
+						id: 'exoticParts',
+						count: [9, 12],
+						weight: 8
 					},
 					{
-						id: 'gold',
+						id: 'exoticParts',
+						count: [13, 14],
 						weight: 1
 					},
-					{
-						id: 'jumpsuitFabrication',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -74,14 +70,6 @@ export default {
 						id: 'foodMeatH',
 						weight: 1
 					},
-					{
-						id: 'iron',
-						weight: 1
-					},
-					{
-						id: 'bluespace',
-						weight: 1
-					}
 				]
 			}
 		]
@@ -101,20 +89,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.7,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'ripley',
-						weight: 1
+						id: 'exoticParts',
+						count: [10, 16],
+						weight: 12
 					},
 					{
-						id: 'wire',
+						id: 'exoticParts',
+						count: [17, 18],
 						weight: 1
 					},
-					{
-						id: 'meleeT6',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -124,10 +110,6 @@ export default {
 						id: 'foodMeatZ',
 						weight: 1
 					},
-					{
-						id: 'Plasma',
-						weight: 1
-					}
 				]
 			}
 		]
@@ -147,21 +129,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.8,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticparts',
-						weight: 1
+						id: 'exoticParts',
+						count: [16, 22],
+						weight: 16
 					},
 					{
-						id: 'ticket3',
-						count: [1, 2],
+						id: 'exoticParts',
+						count: [23, 24],
 						weight: 1
 					},
-					{
-						id: 'gold',
-						weight: 1
-					}
 				]
 			},
 			{

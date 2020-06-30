@@ -125,9 +125,9 @@ const POTIONS = {
 		item: "potionXenobiology",
 		time: 2,
 		requiredItems: {
-			oxygen: 1,
-			oil: 1,
-			mercury: 1,
+			oxygen: 2,
+			oil: 2,
+			mercury: 4,
 			iron: 1
 		}
 	},
@@ -135,8 +135,8 @@ const POTIONS = {
 		item: "potionCooking",
 		time: 2,
 		requiredItems: {
-			oxygen: 1,
-			mercury: 2,
+			oxygen: 3,
+			sacid: 8,
 			foodPasta1: 1
 		}
 	},
@@ -144,18 +144,17 @@ const POTIONS = {
 		item: "potionFabrication",
 		time: 2,
 		requiredItems: {
-			oil: 1,
-			lithium: 2,
-			iron: 1
+			oil: 3,
+			lithium: 4,
+			pillSpacelube: 1
 		}
 	},
 	synthPotionShitposting: {
 		item: "potionShitposting",
 		time: 2,
 		requiredItems: {
-			water: 2,
-			lithium: 1,
-			iron: 1,
+			sacid: 7,
+			mercury: 3,
 			peanut: 1
 		}
 	},

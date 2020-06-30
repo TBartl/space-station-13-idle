@@ -15,21 +15,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 1,
 				itemTable: [
 					{
 						id: 'telecrystal',
-						count: [0, 2],
-						weight: 1
+						count: [6, 10],
+						weight: 8
 					},
 					{
-						id: 'gold',
+						id: 'telecrystal',
+						count: [11, 12],
 						weight: 1
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -54,20 +51,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.6,
+				chance: 1,
 				itemTable: [
 					{
 						id: 'telecrystal',
-						weight: 1
+						count: [9, 12],
+						weight: 8
 					},
 					{
-						id: 'gold',
+						id: 'telecrystal',
+						count: [13, 14],
 						weight: 1
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -92,20 +87,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.7,
+				chance: 1,
 				itemTable: [
 					{
 						id: 'telecrystal',
-						weight: 1
+						count: [10, 16],
+						weight: 12
 					},
 					{
-						id: 'gold',
+						id: 'telecrystal',
+						count: [17, 18],
 						weight: 1
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -130,20 +123,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.8,
+				chance: 1,
 				itemTable: [
 					{
 						id: 'telecrystal',
-						weight: 1
+						count: [16, 22],
+						weight: 16
 					},
 					{
-						id: 'mushroomred',
+						id: 'telecrystal',
+						count: [23, 24],
 						weight: 1
 					},
-					{
-						id: 'plantSeed',
-						weight: 1
-					}
 				]
 			},
 			{
