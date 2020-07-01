@@ -102,12 +102,13 @@ export default {
 
 			dispatch("_startCoroutine", { actionId, action })
 		},
-		_startCoroutine({ dispatch }, { actionId, action }) {
+		_startCoroutine({ dispatch, commit, getters }, { actionId, action }) {
 			dispatch("actionCoroutine/start",
 				{
 					duration: action.time,
 					onFinish: () => {
-						dispatch("finishAction", actionId)
+						dispatch("finishAction", actionId);
+						commit("completion/trackJobTime", { jobId: getters["jobId"], time: action.time }, { root: true });
 					}
 				});
 		},

@@ -128,12 +128,14 @@ export function createMobModule(mobType) {
 				if (rootGetters["enemyMob/health"] == 0) return;
 				dispatch("_startSwing");
 			},
-			_startSwing({ getters, dispatch }) {
+			_startSwing({ getters, dispatch, state }) {
+				let duration = getters.stats.attackSpeed;
 				dispatch("swingCoroutine/start",
 					{
 						duration: getters.stats.attackSpeed,
 						onFinish: () => {
 							dispatch("finishSwing");
+							if (state.mobType == "player") dispatch("combat/trackTime", duration, { root: true });
 						}
 					});
 			},
