@@ -29,6 +29,20 @@ const RENEWABLE_ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
+		xp: 13.5,
+		requiredLevel: 14,
+		requiredItems: {
+			power: 8
+		}
+	},
+	engGen2: {
+		time: 5,
+		name: "Improved Generator",
+		items: {
+			id: "power",
+			count: 10
+		},
+		icon: require("@/assets/art/engineering/generator_anim2.gif"),
 		xp: 7,
 		requiredLevel: 14,
 		requiredItems: {
@@ -195,6 +209,21 @@ const RESOURCE_CONSUMING_ACTIONS = {
 }
 
 const ILL_ADVISED_ACTIONS = {
+	engBlackmarket: {
+		time: 5,
+		actionName: "FENCE",
+		name: "Vital Equipment",
+		items: {
+			id: "money",
+			count: [10, 100]
+		},
+		icon: require("@/assets/art/engineering/parts.png"),
+		xp: -15,
+		requiredLevel: 15,
+		requiredItems: {
+			power: 1
+		}
+	},
 	engSMES: {
 		time: 5,
 		actionName: "PREPARE FOR SALE",
@@ -208,6 +237,20 @@ const ILL_ADVISED_ACTIONS = {
 		requiredLevel: 30,
 		requiredItems: {
 			power: 10
+		}
+	},
+	engGen3: {
+		time: 5,
+		name: "THAT ONE Generator",
+		items: {
+			id: "power",
+			count: 8
+		},
+		icon: require("@/assets/art/engineering/generator_anim3.gif"),
+		xp: 21,
+		requiredLevel: 41,
+		requiredItems: {
+			power: 11
 		}
 	},
 	engSingularity: {
