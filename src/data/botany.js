@@ -126,7 +126,7 @@ const ACTIONS = {
 
 const MIN_LEVEL = 1;
 Object.values(ACTIONS).forEach((action, index) => {
-	action.tier = Math.min(action.requiredItems.plantSeed, 4);
+	action.tier = Math.min(Math.floor(action.requiredItems.plantSeed / 2), 4);
 	action.name = ITEMS[action.item].name;
 	action.items = {
 		id: action.item,
