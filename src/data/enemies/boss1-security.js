@@ -14,20 +14,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'bananamime',
-						weight: 1
+						id: 'boss1Parts',
+						count: [6, 10],
+						weight: 8
 					},
 					{
-						id: 'spaceJunk',
+						id: 'boss1Parts',
+						count: [11, 12],
 						weight: 1
 					},
-					{
-						id: 'faceMime',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -51,20 +49,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.05,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
-						weight: 49
+						id: 'boss1Parts',
+						count: [9, 12],
+						weight: 8
 					},
 					{
-						id: 'honk',
+						id: 'boss1Parts',
+						count: [13, 14],
 						weight: 1
 					},
-					{
-						id: 'meleeT4',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -88,24 +84,29 @@ export default {
 		itemTables: [
 			{
 				chance: 1,
-				items: {
-					id: "oxygen",
-				}
+				itemTable: [
+					{
+						id: 'boss1Parts',
+						count: [10, 16],
+						weight: 12
+					},
+					{
+						id: 'boss1Parts',
+						count: [17, 18],
+						weight: 1
+					},
+				]
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: "foodMeatA",
-						weight: 3
-					},
-					{
-						id: "slimeBee",
+						id: 'foodMeatZ',
 						weight: 1
 					},
 				]
 			}
-		]
+			]
 	},
 	sec4: {
 		name: "Anime Inspired Head Of Security",
@@ -122,25 +123,18 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 1,
 				itemTable: [
 					{
-						id: 'banana',
-						weight: 10
+						id: 'boss1Parts',
+						count: [16, 22],
+						weight: 16
 					},
 					{
-						id: 'bananium',
+						id: 'boss1Parts',
+						count: [23, 24],
 						weight: 1
 					},
-					{
-						id: 'faceClown',
-						weight: 1
-					},
-					{
-						id: 'ticket2',
-						count: [0, 2],
-						weight: 3
-					}
 				]
 			},
 			{

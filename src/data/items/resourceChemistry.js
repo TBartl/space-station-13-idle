@@ -40,7 +40,7 @@ export const COOKING_POTION_PERCENT = .25;
 const POTIONS = {
 	potionMining: {
 		name: "Fauna Perfume",
-		sellPrice: 3,
+		sellPrice: 9,
 		icon: require("@/assets/art/chemistry/faunaPerfume.png"),
 		description: "Mining has a chance to yield a special bonus item.",
 		potionJob: "mining",
@@ -48,7 +48,7 @@ const POTIONS = {
 	},
 	potionEngineering: {
 		name: "Energy Drink",
-		sellPrice: 3,
+		sellPrice: 55,
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
 		description: "Whenever you get energy from engineering, also get money of the same amount.",
 		potionJob: "engineering",
@@ -56,15 +56,15 @@ const POTIONS = {
 	},
 	potionFabrication: {
 		name: "Bluespace Acid",
-		sellPrice: 3,
+		sellPrice: 208,
 		icon: require("@/assets/art/chemistry/beakerbluespace.gif"),
 		description: `Fabrication actions cost ${FABRICATION_POTION_PERCENT * 100}% reduced power.`,
 		potionJob: "fabrication",
-		potionCharges: 5
+		potionCharges: 15
 	},
 	potionGraytiding: {
 		name: "Thermite",
-		sellPrice: 3,
+		sellPrice: 168,
 		icon: require("@/assets/art/chemistry/thermite.png"),
 		description: `Reduces graytiding failure chance by ${GRAYTIDING_POTION_PERCENT * 100}%.`,
 		potionJob: "graytiding",
@@ -72,7 +72,7 @@ const POTIONS = {
 	},
 	potionTinkering: {
 		name: "Super Glue",
-		sellPrice: 3,
+		sellPrice: 114,
 		icon: require("@/assets/art/chemistry/superglue.png"),
 		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
@@ -80,7 +80,7 @@ const POTIONS = {
 	},
 	potionBotany: {
 		name: "Unstable Mutagen",
-		sellPrice: 3,
+		sellPrice: 67,
 		icon: require("@/assets/art/chemistry/plantbgone.png"),
 		description: `Plants have a ${BOTANY_POTION_PERCENT * 100} chance to grow an additional plant of that family.`,
 		potionJob: "botany",
@@ -88,7 +88,7 @@ const POTIONS = {
 	},
 	potionCooking: {
 		name: "Monosodium Glutamate",
-		sellPrice: 3,
+		sellPrice: 99,
 		icon: require("@/assets/art/chemistry/ketchup.png"),
 		description: `Cooking has an additional ${COOKING_POTION_PERCENT * 100}% chance to yield a quality item.`,
 		potionJob: "cooking",
@@ -96,7 +96,7 @@ const POTIONS = {
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",
-		sellPrice: 3,
+		sellPrice: 79,
 		icon: require("@/assets/art/chemistry/splittingagent.gif"),
 		description: "Xenobiology actions will also give a slime of a lower tier.",
 		potionJob: "xenobiology",
@@ -104,7 +104,7 @@ const POTIONS = {
 	},
 	potionChemistry: {
 		name: "Volatile Catalyst",
-		sellPrice: 3,
+		sellPrice: 31,
 		icon: require("@/assets/art/chemistry/volatile.png"),
 		description: "Removes the level requirement from chemistry actions.",
 		potionJob: "chemistry",
@@ -112,7 +112,7 @@ const POTIONS = {
 	},
 	potionShitposting: {
 		name: "Brain Juice",
-		sellPrice: 3,
+		sellPrice: -37,
 		icon: require("@/assets/art/chemistry/brainjuice.png"),
 		description: "Allows you to gain additional XP when completing ??? actions",
 		potionJob: "shitposting",
@@ -123,7 +123,7 @@ const POTIONS = {
 const PILLS = {
 	pillMeth: {
 		name: "Methamphetamine",
-		sellPrice: 20,
+		sellPrice: 41,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -135,7 +135,7 @@ const PILLS = {
 	},
 	pillSpacedrugs: {
 		name: "Crank",
-		sellPrice: 25,
+		sellPrice: 58,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -147,7 +147,7 @@ const PILLS = {
 	},
 	pillPumpup: {
 		name: "Pump-Up",
-		sellPrice: 30,
+		sellPrice: 73,
 		icon: require("@/assets/art/combat/items/pill3.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -159,7 +159,7 @@ const PILLS = {
 	},
 	pillKrokodil: {
 		name: "Krokodil",
-		sellPrice: 35,
+		sellPrice: 90,
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -171,7 +171,7 @@ const PILLS = {
 	},
 	pillSpacelube: {
 		name: "Space Lube",
-		sellPrice: 1,
+		sellPrice: 105,
 		icon: require("@/assets/art/combat/items/pill5.png"),
 		description: "It may taste like cherry, but you don't eat this one.",
 		equipmentSlot: "pocket",

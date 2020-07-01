@@ -140,7 +140,7 @@ const JOB_UNLOCKS = {
 const CAPES = {
 	capeMining: {
 		item: "capeMining",
-		description: "Requires max Fabrication to wear.",
+		description: "Requires max Mining to wear.",
 		requiredLevels: {
 			mining: MAX_LEVEL
 		},

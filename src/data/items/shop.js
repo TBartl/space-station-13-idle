@@ -3,16 +3,22 @@ export default {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
 	},
-	telecrystal: {
-		name: "Telecrystal",
+	boss1Parts: {
+		name: "Shipment Logs",
 		sellPrice: 500,
-		icon: require("@/assets/art/shop/items/telecrystal.png")
+		icon: require("@/assets/art/shop/items/shipping.png")
 	},
 	exoticParts: {
 		name: "Exotic Remains",
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/exotic.png")
 	},
+	telecrystal: {
+		name: "Telecrystal",
+		sellPrice: 500,
+		icon: require("@/assets/art/shop/items/telecrystal.png")
+	},
+
 	hatCrate: {
 		name: "Hat Crate",
 		icon: require("@/assets/art/shop/items/hatcrate.png"),
