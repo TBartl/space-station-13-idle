@@ -56,6 +56,13 @@ const combat = {
 		},
 		xpRatio() {
 			return .3;
+		},
+		xpSkill(state, getters) {
+			let skill = getters.focus;
+			if (skill == "power") {
+				skill = getters.isRanged ? "rangedPower" : "meleePower";
+			}
+			return skill;
 		}
 	},
 	mutations: {
@@ -160,11 +167,13 @@ const combat = {
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
 		_startMove({ dispatch, rootGetters }) {
+			let duration = rootGetters["playerMob/stats"].moveTime;
 			dispatch("moveCoroutine/start",
 				{
-					duration: rootGetters["playerMob/stats"].moveTime,
+					duration: duration,
 					onFinish: () => {
 						dispatch("continueCombat");
+						dispatch("trackTime", duration);
 					}
 				});
 		},
@@ -179,12 +188,8 @@ const combat = {
 				});
 		},
 		addXP({ commit, getters, rootGetters }, damage) {
-			let skill = getters.focus;
-			if (skill == "power") {
-				skill = getters.isRanged ? "rangedPower" : "meleePower";
-			}
 			let xp = damage * getters["xpRatio"];
-			commit(skill + "/addXP", xp, { root: true });
+			commit(getters["xpSkill"] + "/addXP", xp, { root: true });
 		},
 		tryAutoEat({ dispatch, getters, rootGetters }) {
 			let hasAutoEat = rootGetters["upgrades/get"]("autoeat");
@@ -221,6 +226,12 @@ const combat = {
 					}
 				});
 		},
+		trackTime({ commit, getters, rootGetters }, time) {
+			commit("completion/trackJobTime", { jobId: getters["xpSkill"], time }, { root: true });
+			if (getters["targetEnemy"] == rootGetters["validhunting/targetEnemyId"] && rootGetters["validhunting/targetCount"]) {
+				commit("completion/trackJobTime", { jobId: "validhunting", time }, { root: true });
+			}
+		}
 	}
 };
 

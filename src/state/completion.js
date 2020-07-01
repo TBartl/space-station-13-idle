@@ -1,5 +1,13 @@
 import Vue from 'vue'
 
+
+import { ALL_JOBS } from "@/data/jobs";
+
+const BASE_JOB_TIME = {};
+ALL_JOBS.forEach(job => {
+	BASE_JOB_TIME[job.id] = 0;
+});
+
 const completion = {
 	namespaced: true,
 	state: {
@@ -9,6 +17,7 @@ const completion = {
 		enemies: {
 			// enemyId: count
 		},
+		jobTime: BASE_JOB_TIME
 	},
 	getters: {
 		getItem(state) {
@@ -19,6 +28,11 @@ const completion = {
 		getEnemy(state) {
 			return (enemyId) => {
 				return state.enemies[enemyId]
+			}
+		},
+		jobTime(state) {
+			return (jobId) => {
+				return state.jobTime[jobId];
 			}
 		}
 	},
@@ -37,6 +51,9 @@ const completion = {
 			} else {
 				state.enemies[enemyId] += 1;
 			}
+		},
+		trackJobTime(state, { jobId, time }) {
+			state.jobTime[jobId] += time;
 		}
 	}
 }
