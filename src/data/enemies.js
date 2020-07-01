@@ -45,7 +45,7 @@ Object.values(ENEMIES).forEach(enemy => {
 		chance: 1,
 		items: {
 			id: "money",
-			count: [0, robustness * 3]
+			count: [0, robustness * 5]
 		}
 	});
 });

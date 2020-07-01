@@ -191,7 +191,7 @@ const ACTIONS = {
 				itemTable: [
 					{
 						id: "plantSeed",
-						count: [0, 2],
+						count: [2, 5],
 						weight: 499
 					}, {
 						id: "limbBlack",
