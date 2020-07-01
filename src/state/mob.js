@@ -164,7 +164,8 @@ export function createMobModule(mobType) {
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-				if (state.mobType == "player") {
+				// Handle flee chance while in combat (not while taking damage from graytding)
+				if (state.mobType == "player" && rootGetters["combat/targetEnemy"]) {
 					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
 					dispatch("_handleSlimeFlee");
 				}
