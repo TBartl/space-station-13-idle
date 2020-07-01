@@ -46,36 +46,20 @@ const POTIONS = {
 		potionJob: "mining",
 		potionCharges: 5
 	},
-	potionEngineering: {
-		name: "Energy Drink",
-		sellPrice: 55,
-		icon: require("@/assets/art/chemistry/energy_drink.png"),
-		description: "Whenever you get energy from engineering, also get money of the same amount.",
-		potionJob: "engineering",
-		potionCharges: 5
-	},
-	potionFabrication: {
-		name: "Bluespace Acid",
-		sellPrice: 208,
-		icon: require("@/assets/art/chemistry/beakerbluespace.gif"),
-		description: `Fabrication actions cost ${FABRICATION_POTION_PERCENT * 100}% reduced power.`,
-		potionJob: "fabrication",
-		potionCharges: 15
-	},
 	potionGraytiding: {
 		name: "Thermite",
-		sellPrice: 168,
+		sellPrice: 31,
 		icon: require("@/assets/art/chemistry/thermite.png"),
 		description: `Reduces graytiding failure chance by ${GRAYTIDING_POTION_PERCENT * 100}%.`,
 		potionJob: "graytiding",
-		potionCharges: 5
+		potionCharges: 50
 	},
-	potionTinkering: {
-		name: "Super Glue",
-		sellPrice: 114,
-		icon: require("@/assets/art/chemistry/superglue.png"),
-		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
-		potionJob: "tinkering",
+	potionChemistry: {
+		name: "Volatile Catalyst",
+		sellPrice: 55,
+		icon: require("@/assets/art/chemistry/volatile.png"),
+		description: "Removes the level requirement from chemistry actions.",
+		potionJob: "chemistry",
 		potionCharges: 5
 	},
 	potionBotany: {
@@ -86,29 +70,45 @@ const POTIONS = {
 		potionJob: "botany",
 		potionCharges: 5
 	},
-	potionCooking: {
-		name: "Monosodium Glutamate",
+	potionEngineering: {
+		name: "Energy Drink",
+		sellPrice: 79,
+		icon: require("@/assets/art/chemistry/energy_drink.png"),
+		description: "Whenever you get energy from engineering, also get money of the same amount.",
+		potionJob: "engineering",
+		potionCharges: 5
+	},
+	potionTinkering: {
+		name: "Super Glue",
 		sellPrice: 99,
-		icon: require("@/assets/art/chemistry/ketchup.png"),
-		description: `Cooking has an additional ${COOKING_POTION_PERCENT * 100}% chance to yield a quality item.`,
-		potionJob: "cooking",
+		icon: require("@/assets/art/chemistry/superglue.png"),
+		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
+		potionJob: "tinkering",
 		potionCharges: 5
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",
-		sellPrice: 79,
+		sellPrice: 114,
 		icon: require("@/assets/art/chemistry/splittingagent.gif"),
 		description: "Xenobiology actions will also give a slime of a lower tier.",
 		potionJob: "xenobiology",
 		potionCharges: 5
 	},
-	potionChemistry: {
-		name: "Volatile Catalyst",
-		sellPrice: 31,
-		icon: require("@/assets/art/chemistry/volatile.png"),
-		description: "Removes the level requirement from chemistry actions.",
-		potionJob: "chemistry",
+	potionCooking: {
+		name: "Monosodium Glutamate",
+		sellPrice: 168,
+		icon: require("@/assets/art/chemistry/ketchup.png"),
+		description: `Cooking has an additional ${COOKING_POTION_PERCENT * 100}% chance to yield a quality item.`,
+		potionJob: "cooking",
 		potionCharges: 5
+	},
+	potionFabrication: {
+		name: "Bluespace Acid",
+		sellPrice: 208,
+		icon: require("@/assets/art/chemistry/beakerbluespace.gif"),
+		description: `Fabrication actions cost ${FABRICATION_POTION_PERCENT * 100}% reduced power.`,
+		potionJob: "fabrication",
+		potionCharges: 15
 	},
 	potionShitposting: {
 		name: "Brain Juice",
@@ -123,7 +123,7 @@ const POTIONS = {
 const PILLS = {
 	pillMeth: {
 		name: "Methamphetamine",
-		sellPrice: 41,
+		sellPrice: 4,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -135,7 +135,7 @@ const PILLS = {
 	},
 	pillSpacedrugs: {
 		name: "Crank",
-		sellPrice: 58,
+		sellPrice: 6,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -147,7 +147,7 @@ const PILLS = {
 	},
 	pillPumpup: {
 		name: "Pump-Up",
-		sellPrice: 73,
+		sellPrice: 7,
 		icon: require("@/assets/art/combat/items/pill3.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -159,7 +159,7 @@ const PILLS = {
 	},
 	pillKrokodil: {
 		name: "Krokodil",
-		sellPrice: 90,
+		sellPrice: 9,
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		equipmentSlot: "pocket",
 		stats: {
@@ -171,7 +171,7 @@ const PILLS = {
 	},
 	pillSpacelube: {
 		name: "Space Lube",
-		sellPrice: 105,
+		sellPrice: 10,
 		icon: require("@/assets/art/combat/items/pill5.png"),
 		description: "It may taste like cherry, but you don't eat this one.",
 		equipmentSlot: "pocket",
