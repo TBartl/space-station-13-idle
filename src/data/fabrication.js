@@ -387,7 +387,10 @@ const ACTIONS = {
 	...MECHS
 }
 for (let action of Object.values(ACTIONS)) {
-	action.requiredItems['power'] = action.requiredLevel;
+	let multiplyer = 1;
+	if (action.type == "ballistic ammo" || action.type == "energy ammo") multiplyer = .5;
+	if (action.type == "mechs") multiplyer = 10;
+	action.requiredItems['power'] = Math.max(1, Math.round(action.requiredLevel * multiplyer));
 }
 export { ACTIONS };
 
