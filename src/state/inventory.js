@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
+import ModalDeath from "@/components/Modals/ModalDeath";
 import ITEMS from "@/data/items";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
@@ -221,6 +222,19 @@ const inventory = {
 					commit("changeItemCount", { itemId, count });
 				}
 			}
+		},
+		loseEquipmentPiece({ getters, commit }) {
+			let equipment = getters["equipment"];
+			let filledEquipment = Object.keys(equipment).filter(slot => {
+				return equipment[slot].itemId;
+			});
+			let lostItemId = null;
+			if (filledEquipment.length) {
+				let slotToLose = filledEquipment[Math.floor(Math.random() * filledEquipment.length)];
+				lostItemId = equipment[slotToLose].itemId;
+				commit("setEquipment", { slot: slotToLose, itemId: null, count: 0 });
+			}
+			this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 		}
 	}
 }
