@@ -67,7 +67,7 @@
               <progress-bar
                 class="mt-1 black-background chrono-bar"
                 :progress="barPercent"
-                :text="remainingTimeText + ' remaining'"
+                :text="remainingTimeText"
                 :customClass="active ? 'progress-bar-animated' : ''"
               />
               <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
@@ -88,7 +88,10 @@ export default {
   components: { ProgressBar },
   computed: {
     speeds() {
-      return [1, 2, 5, 10, 25, 100, 250, 500, 1000];
+      if (this.$store.getters["cheats/extraChronoOptions"]) {
+        return [1, 1.5, 2, 2.5, 3, 5, 10, 25, 100, 250, 500, 1000];
+      }
+      return [1, 1.5, 2, 2.5, 3];
     },
     chronoSpeed() {
       return this.$store.getters["chrono/speed"];
@@ -97,9 +100,11 @@ export default {
       return this.$store.getters["chrono/desiredSpeed"];
     },
     remainingTimeText() {
-			return this.$store.getters["chrono/remainingTimeText"];
+      if (this.infinite) return "INFINTE (cheater)";
+      return this.$store.getters["chrono/remainingTimeText"] + " remaining";
     },
     barPercent() {
+      if (this.infinite) return 1;
       return (
         this.$store.getters["chrono/remainingTime"] /
         this.$store.getters["chrono/maxDuration"]
@@ -110,6 +115,9 @@ export default {
     },
     active() {
       return this.$store.getters["chrono/active"];
+    },
+    infinite() {
+      return this.$store.getters["cheats/infiniteChrono"];
     }
   },
   methods: {

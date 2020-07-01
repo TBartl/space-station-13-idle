@@ -26,8 +26,10 @@ const chrono = {
 		maxDuration(state, getters) {
 			return getters["maxHours"] * 60 * 60 * 1000;
 		},
-		active(state, getters) {
-			return getters["desiredSpeed"] != 1 && getters["remainingTime"] > 0;
+		active(state, getters, rootState, rootGetters) {
+			if (getters["desiredSpeed"] == 1) return false;
+
+			return getters["remainingTime"] > 0 || rootGetters["cheats/infiniteChrono"];
 		},
 		remainingTimeText(state, getters) {
 			let duration = getters["remainingTime"];
@@ -61,7 +63,7 @@ const chrono = {
 				dispatch("_progress");
 			}
 		},
-		_progress({ state, getters, dispatch }, interval) {
+		_progress({ state, getters, dispatch, rootGetters }, interval) {
 			var from = new Date().getTime();
 
 			state.currentTimeout = setTimeout(() => {
@@ -73,7 +75,10 @@ const chrono = {
 
 					let ratio = getters["desiredSpeed"] - 1;
 
-					state.remainingTime = Math.max(0, state.remainingTime - elapsed * ratio);
+					if (!rootGetters["cheats/infiniteChrono"]) {
+						state.remainingTime = Math.max(0, state.remainingTime - elapsed * ratio);
+					}
+
 					customInterval = 1000 / ratio
 				}
 				dispatch("_progress", customInterval);
