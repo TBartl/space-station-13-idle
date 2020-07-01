@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const RENEWABLE_ACTIONS = {
 	engBike: {
 		time: 5,
 		name: "Stationary Bicycle",
@@ -10,20 +10,6 @@ export const ACTIONS = {
 		xp: 1.3,
 		requiredLevel: 1
 	},
-	engOil: {
-		time: 5,
-		name: "Oil Barrel",
-		items: {
-			id: "power",
-			count: 3
-		},
-		icon: require("@/assets/art/engineering/burning_anim.gif"),
-		xp: 2,
-		requiredLevel: 4,
-		requiredItems: {
-			oil: 1
-		}
-	},
 	engTreadmill: {
 		time: 5,
 		name: "Treadmill",
@@ -34,6 +20,37 @@ export const ACTIONS = {
 		icon: require("@/assets/art/engineering/treadmill.png"),
 		xp: 3.5,
 		requiredLevel: 7,
+	},
+	engGen: {
+		time: 5,
+		name: "Portable Generator",
+		items: {
+			id: "power",
+			count: 10
+		},
+		icon: require("@/assets/art/engineering/generator_anim.gif"),
+		xp: 7,
+		requiredLevel: 14,
+		requiredItems: {
+			power: 4
+		}
+	},
+}
+
+const RESOURCE_CONSUMING_ACTIONS = {
+	engOil: {
+		time: 2.5,
+		name: "Oil Barrel",
+		items: {
+			id: "power",
+			count: 5
+		},
+		icon: require("@/assets/art/engineering/burning_anim.gif"),
+		xp: 2.2,
+		requiredLevel: 4,
+		requiredItems: {
+			oil: 1
+		}
 	},
 	engIncinerator: {
 		time: 5,
@@ -49,20 +66,6 @@ export const ACTIONS = {
 			burnJunk: 1
 		}
 	},
-	engGen: {
-		time: 5,
-		name: "Portable Generator",
-		items: {
-			id: "power",
-			count: 10
-		},
-		icon: require("@/assets/art/engineering/generator_anim.gif"),
-		xp: 7,
-		requiredLevel: 14,
-		requiredItems: {
-			power: 4
-		}
-	},	
 	engSlime: {
 		time: 5,
 		name: "Charged Slime",
@@ -117,21 +120,6 @@ export const ACTIONS = {
 		requiredLevel: 27,
 		requiredItems: {
 			companionBee: 1
-		}
-	},
-	engSMES: {
-		time: 5,
-		title: "Prepare For Sale",
-		name: "Stored Power",
-		items: {
-			id: "money",
-			count: 50
-		},
-		icon: require("@/assets/art/engineering/smes_anim.gif"),
-		xp: 15,
-		requiredLevel: 30,
-		requiredItems: {
-			power: 10
 		}
 	},
 	engBattery: {
@@ -203,9 +191,28 @@ export const ACTIONS = {
 		requiredItems: {
 			bananium: 1
 		}
+	}
+}
+
+const ILL_ADVISED_ACTIONS = {
+	engSMES: {
+		time: 5,
+		actionName: "PREPARE FOR SALE",
+		name: "Stored Power",
+		items: {
+			id: "money",
+			count: 50
+		},
+		icon: require("@/assets/art/engineering/smes_anim.gif"),
+		xp: 15,
+		requiredLevel: 30,
+		requiredItems: {
+			power: 10
+		}
 	},
 	engSingularity: {
 		time: 600,
+		actionName: "UNLEASH",
 		name: "Gravitational Singularity",
 		items: {
 			id: "power",
@@ -217,56 +224,23 @@ export const ACTIONS = {
 		requiredItems: {
 			power: 500
 		}
-	},
-	// engMeleesmall: {
-	// 	time: 1,
-	// 	item: "mechWeaponClaw",
-	// 	icon: require("@/assets/art/engineering/meleesmall.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 2
-	// },
-	// engMeleebig: {
-	// 	time: 1,
-	// 	item: "mechWeaponDrill",
-	// 	icon: require("@/assets/art/engineering/meleebig.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 3
-	// },
-	// engGunsmall: {
-	// 	time: 1,
-	// 	item: "mechGunRifle",
-	// 	icon: require("@/assets/art/engineering/gunsmall.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 4
-	// These ammos will all probably be removed from here, but this one is causing issues
-	// engAmmosmall: {
-	// 	time: 1,
-	// 	item: "rifleAmmo",
-	// 	icon: require("@/assets/art/engineering/ammosmall.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 5
-	// },
-	// engGunbig: {
-	// 	time: 1,
-	// 	item: "mechGunCanno",
-	// 	icon: require("@/assets/art/engineering/gunbig.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 6
-	// },
-	// engAmmobig: {
-	// 	time: 1,
-	// 	item: "cannonAmmo",
-	// 	icon: require("@/assets/art/engineering/ammobig.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 7
-	// },
-	// engGunenergy: {
-	// 	time: 1,
-	// 	item: "mechGunEnergyRifle",
-	// 	icon: require("@/assets/art/engineering/gunenergy.png"),
-	// 	xp: 5,
-	// 	requiredLevel: 8
-	// },
+	}
+}
+
+Object.values(RENEWABLE_ACTIONS).forEach(action => {
+	action.type = "RENEWABLE";
+});
+Object.values(RESOURCE_CONSUMING_ACTIONS).forEach(action => {
+	action.type = "RESOURCE-CONSUMING";
+});
+Object.values(ILL_ADVISED_ACTIONS).forEach(action => {
+	action.type = "ILL-ADVISED";
+});
+
+export const ACTIONS = {
+	...RENEWABLE_ACTIONS,
+	...RESOURCE_CONSUMING_ACTIONS,
+	...ILL_ADVISED_ACTIONS
 }
 
 export const JOB = {
