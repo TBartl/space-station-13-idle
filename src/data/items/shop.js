@@ -5,12 +5,12 @@ export default {
 	},
 	boss1Parts: {
 		name: "Shipment Logs",
-		sellPrice: 500,
-		icon: require("@/assets/art/shop/items/shipping.png")
+		sellPrice: 100,
+		icon: require("@/assets/art/shop/items/book.png")
 	},
 	exoticParts: {
 		name: "Exotic Remains",
-		sellPrice: 500,
+		sellPrice: 250,
 		icon: require("@/assets/art/shop/items/exotic.png")
 	},
 	telecrystal: {
