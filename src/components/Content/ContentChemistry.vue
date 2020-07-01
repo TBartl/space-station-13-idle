@@ -83,12 +83,7 @@
           <span>
             Each
             <img class="mx--2" :src="require('@/assets/art/chemistry/faunaPerfume.png')" />
-            <b>CHEM</b> you make will have a limited number of
-            <img
-              class="mx--2"
-              :src="require('@/assets/art/chemistry/faunaPerfume.png')"
-            />
-            <b>CHEM</b> before it depletes.
+            <b>CHEM</b> you make will have a limited number of charges before it depletes.
           </span>
           <span>
             You can equip
