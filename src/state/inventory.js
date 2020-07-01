@@ -225,12 +225,22 @@ const inventory = {
 		},
 		loseEquipmentPiece({ getters, commit }) {
 			let equipment = getters["equipment"];
-			let filledEquipment = Object.keys(equipment).filter(slot => {
-				return equipment[slot].itemId;
+
+			// Try to pick from non-stackable things first
+			let loseableEquipment = Object.keys(equipment).filter(slot => {
+				return equipment[slot].itemId && !getEquipmentStackable(equipment[slot].itemId);
 			});
+
+			// No luck? Well, guess you're losing something stackable
+			if (loseableEquipment.length == 0) {
+				loseableEquipment = Object.keys(equipment).filter(slot => {
+					return equipment[slot].itemId;
+				});
+			}
+
 			let lostItemId = null;
-			if (filledEquipment.length) {
-				let slotToLose = filledEquipment[Math.floor(Math.random() * filledEquipment.length)];
+			if (loseableEquipment.length) {
+				let slotToLose = loseableEquipment[Math.floor(Math.random() * loseableEquipment.length)];
 				lostItemId = equipment[slotToLose].itemId;
 				commit("setEquipment", { slot: slotToLose, itemId: null, count: 0 });
 			}
