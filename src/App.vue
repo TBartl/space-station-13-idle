@@ -46,8 +46,13 @@ export default {
 
 <style>
 body {
-  background-image: url("~@/assets/art/misc/background.png");
+  /* background-image: url("~@/assets/art/misc/background.png"); */
+  background-image: url("~@/assets/art/misc/background-alt.jpg");
+
   background-size: cover;
+	background-position: right center; 
+
+
 }
 </style>
 
