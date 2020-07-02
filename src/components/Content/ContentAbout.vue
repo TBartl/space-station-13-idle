@@ -42,50 +42,50 @@
           <div class="content-block mt-3">
             <h4 class="mb-3">Credits</h4>
             <h5>Developers</h5>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/jobinfo/fabrication.png')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/jobinfo/fabrication.png')" alt />
               <b class="mr-2">Thomas "Tabski" Bartlett:</b>
               <span>Programming</span>
             </div>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/combat/enemies/badviro.png')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/combat/enemies/badviro.png')" alt />
               <b class="mr-2">Nathan "Nabski" Bartlett:</b>
               <span>Content and Balance</span>
             </div>
             <h5 class="mt-3">Other Great People</h5>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/misc/melvor.svg')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/misc/melvor.svg')" alt />
               <b class="mr-2">Malcs (aka MrFrux):</b>
               <span>Creator of Melvor Idle, this game's original inspiration</span>
             </div>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/misc/clown.png')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/misc/clown.png')" alt />
               <b class="mr-2">The Entire Space Station 13 Community:</b>
               <span>For the creation of all the open source art used in the project</span>
             </div>
-            <div class="d-flex flex-row align-items-center">
-                <img :src="require('@/assets/art/misc/claire.png')" alt />
-                <b class="mr-2">Claire "Cemci" Marvinney:</b>
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/misc/claire.png')" alt />
+              <b class="mr-2">Claire "Cemci" Marvinney:</b>
               <span>For the lovingly handpainted background image</span>
             </div>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/combat/enemies/bee_anim.gif')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/combat/enemies/bee_anim.gif')" alt />
               <b class="mr-2">bobbahbrown:</b>
               <span>For his help organizing /tg/station data</span>
             </div>
-            <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/combat/enemies/bald_visitor.png')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/combat/enemies/bald_visitor.png')" alt />
               <b class="mr-2">"Jerry Derpington":</b>
               <span>First Playtester</span>
             </div>
-             <div class="d-flex flex-row align-items-center">
-              <img :src="require('@/assets/art/misc/clark.png')" alt />
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/misc/clark.png')" alt />
               <b class="mr-2">Gogodapogostick,</b>
-              <img :src="require('@/assets/art/misc/orange.png')" alt />
+              <img class="mx--0" :src="require('@/assets/art/misc/orange.png')" alt />
               <b class="mr-2">Citrusgender,</b>
-              <img :src="require('@/assets/art/misc/frog.png')" alt />
+              <img class="mx--0" :src="require('@/assets/art/misc/frog.png')" alt />
               <b class="mr-2">Armhulen,</b> and
-              <img :src="require('@/assets/art/misc/berry.png')" alt />
+              <img class="mx--0" :src="require('@/assets/art/misc/berry.png')" alt />
               <b class="mr-2">Sunberry:</b>
               <span>Second Round Playtesters</span>
             </div>

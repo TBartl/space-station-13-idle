@@ -12,11 +12,11 @@
 
       <item-popover v-if="food" :target="id" placement="left" :itemId="foodId" />
       <button
-        id="food-dropdown-button"
+        :id="id + 'food-dropdown-button'"
         type="button"
         class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
       ></button>
-      <equipment-dropdown target="food-dropdown-button" equipmentSlot="food" />
+      <equipment-dropdown :target="id + 'food-dropdown-button'" equipmentSlot="food" />
     </div>
 
     <progress-bar

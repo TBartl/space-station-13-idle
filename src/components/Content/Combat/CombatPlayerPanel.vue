@@ -1,14 +1,7 @@
 <template>
   <div class="content-block">
-    <div class="player-block">
+    <div class="player-block d-none d-xl-flex">
       <p class="player-block-header">FOOD</p>
-
-      <progress-bar
-        class="mb-2 d-lg-none black-background"
-        :progress="health / maxHealth"
-        :text="`${Math.ceil(health)}/${maxHealth}`"
-        :customClass="'bg-danger'"
-      />
       <food-panel />
     </div>
     <div class="player-block">
@@ -21,6 +14,10 @@
       <p class="player-block-header">COMBAT FOCUS</p>
       <combat-focus-panel />
     </div>
+    <div class="player-block d-flex d-xl-none">
+      <p class="player-block-header">FOOD</p>
+      <food-panel />
+    </div>
   </div>
 </template>
 
@@ -28,9 +25,8 @@
 import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import EquipmentPanel from "@/components/Content/Combat/EquipmentPanel";
 import CombatFocusPanel from "@/components/Content/Combat/CombatFocusPanel";
-import ProgressBar from "@/components/ProgressBar";
 export default {
-  components: { FoodPanel, EquipmentPanel, CombatFocusPanel, ProgressBar },
+  components: { FoodPanel, EquipmentPanel, CombatFocusPanel },
 
   computed: {
     stats() {

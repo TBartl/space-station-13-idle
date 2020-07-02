@@ -15,7 +15,7 @@
             <th></th>
             <th>LEVEL</th>
             <th>XP</th>
-            <th>PROGRESS</th>
+            <th class="d-none d-md-table-cell">PROGRESS</th>
           </tr>
         </thead>
         <tbody>
