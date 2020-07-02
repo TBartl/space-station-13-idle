@@ -5,9 +5,9 @@ export default {
 		stats: {
 			maxHealth: 18,
 			attackSpeed: 1.6,
-			precision: 8,
+			precision: 3,
 			power: 4,
-			evasion: 7,
+			evasion: 4,
 			damageType: "brute",
 			burnProtection: 20
 		},
@@ -55,9 +55,9 @@ export default {
 		stats: {
 			maxHealth: 20,
 			attackSpeed: 1.6,
-			precision: 6,
+			precision: 5,
 			power: 7,
-			evasion: 13,
+			evasion: 9,
 			damageType: "burn",
 			bruteProtection: 20
 		},

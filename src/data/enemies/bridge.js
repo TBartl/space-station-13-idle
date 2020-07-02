@@ -17,17 +17,18 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
+						id: 'ammoEnergy3',
+						count: 4,
+						weight: 21
+					},
+					{
 						id: 'armorBrute4',
-						weight: 1
+						weight: 4
 					},
 					{
 						id: 'faceSecGlassess',
 						weight: 1
 					},
-					{
-						id: 'ammoEnergy3',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -54,18 +55,26 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
+						id: 'pillPumpup',
+						weight: 7
+					},
+					{
+						id: 'pillCrank',
+						weight: 4
+					},
+					{
+						id: 'meleeSharp5',
+						weight: 2
+					},
+					{
 						id: 'faceGas',
 						weight: 1
 					},
-					{
-						id: 'gold',
-						weight: 1
-					},
-					{
-						id: 'jumpsuitGraytide',
-						weight: 1
-					}
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitGraytide"
 			},
 			{
 				chance: 1,
@@ -92,7 +101,13 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 1
+						count: [2, 5],
+						weight: 10
+					},
+					{
+						id: 'money',
+						count: [220, 660],
+						weight: 8
 					},
 					{
 						id: 'ticket3',
@@ -102,7 +117,7 @@ export default {
 					{
 						id: 'titanium',
 						weight: 1
-					}
+					},
 				]
 			},
 			{

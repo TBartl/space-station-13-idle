@@ -52,18 +52,19 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 1
+						id: 'wire',
+						count: [1,2],
+						weight: 7
 					},
 					{
-						id: 'gold',
-						weight: 1
+						id: 'meleeSharp3',
+						weight: 4
 					},
-					{
-						id: 'jumpsuitFabrication',
-						weight: 1
-					}
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitFabrication"
 			},
 			{
 				chance: 1,
@@ -101,22 +102,18 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'ripley',
-						weight: 1
-					},
-					{
 						id: 'wire',
-						weight: 1
+						weight: 54
 					},
 					{
 						id: 'meleeToolbox6',
-						weight: 1
-					}
+						weight: 8
+					},
+					{
+						id: 'ripley',
+						weight: 5
+					},
 				]
-			},
-			{
-				chance: .2,
-				item: "armorBrute6"
 			},
 			{
 				chance: 1,
@@ -126,7 +123,7 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'Plasma',
+						id: 'plasma',
 						weight: 1
 					}
 				]
@@ -151,17 +148,17 @@ export default {
 				itemTable: [
 					{
 						id: 'bluespace',
-						weight: 1
+						weight: 19
 					},
 					{
 						id: 'ticket3',
 						count: [1, 2],
-						weight: 1
+						weight: 3
 					},
 					{
-						id: 'gold',
-						weight: 1
-					}
+						id: "armorBrute6",
+						weight: 2
+					},
 				]
 			},
 			{
