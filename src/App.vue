@@ -2,8 +2,8 @@
   <div id="app">
     <toast-container />
     <div class="mega-container">
-      <sidebar class="side-bar" />
-      <content-wrapper />
+      <sidebar />
+      <content-wrapper class="content-wrapper" />
     </div>
     <modals-container />
   </div>
@@ -48,11 +48,8 @@ export default {
 body {
   /* background-image: url("~@/assets/art/misc/background.png"); */
   background-image: url("~@/assets/art/misc/background-alt.jpg");
-
   background-size: cover;
-	background-position: right center; 
-
-
+  background-position: right center;
 }
 </style>
 
@@ -69,25 +66,8 @@ body {
 }
 .mega-container * {
   height: 100%;
+}
+.content-wrapper {
   overflow-y: auto;
-}
-
-.sidebar::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-.sidebar::-webkit-scrollbar-track {
-  background: #2c343f;
-}
-
-/* Handle */
-.sidebar::-webkit-scrollbar-thumb {
-  background: rgba(109, 109, 109, 0.5);
-}
-
-/* Handle on hover */
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 </style>

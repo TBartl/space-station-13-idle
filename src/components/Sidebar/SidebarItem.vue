@@ -6,7 +6,7 @@
   >
     <div class="d-flex align-items-center">
       <img :src="icon" alt />
-      <span class="d-none d-md-block" :style="textStyle">{{locked ? "LOCKED" : text}}</span>
+      <span :style="textStyle">{{locked ? "LOCKED" : text}}</span>
     </div>
     <div>
       <slot v-if="!locked" />
@@ -49,12 +49,6 @@ export default {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   padding: 0.3rem 1rem;
-}
-
-@media (max-width: 768px) {
-  .item {
-    padding-left: 0.5rem;
-  }
 }
 
 .item:not(.locked):hover {
