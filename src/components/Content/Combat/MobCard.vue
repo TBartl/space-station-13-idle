@@ -2,16 +2,20 @@
   <div class="content-block d-flex flex-column align-items-center">
     <span class="text-uppercase text-center">{{name}}</span>
     <robustness-badge :stats="stats" :mobType="mobType" />
-    <div v-if="mobType == 'player'" class="body-icon overlay-div mt-2">
-      <img
-        v-for="(overlay, index) in playerOverlayIcons"
-        :key="index"
-        :src="overlay.icon"
-        :class="{'appear-in-back': overlay.appearInBack}"
-      />
-      <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
+    <div class="body-icon mt-2">
+      <div ref="body" class="img-body w-100 h-100">
+        <div v-if="mobType == 'player'" class="w-100 h-100 overlay-div">
+          <img
+            v-for="(overlay, index) in playerOverlayIcons"
+            :key="index"
+            :src="overlay.icon"
+            :class="{'appear-in-back': overlay.appearInBack}"
+          />
+          <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
+        </div>
+        <img v-else class="w-100" :src="icon" :class="{'rotate-90': health==0}" />
+      </div>
     </div>
-    <img v-else class="body-icon mt-2" :src="icon" :class="{'rotate-90': health==0}" />
     <progress-bar
       class="mt-2 black-background"
       :progress="healthPercent"
@@ -69,6 +73,9 @@
 </template>
 
 <script>
+import { EventBus } from "@/utils/eventBus.js";
+
+import Velocity from "velocity-animate";
 import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
 import { mapGetters } from "vuex";
@@ -185,24 +192,60 @@ export default {
     damageTypeImage() {
       return this.stats.damageType == "brute" ? BRUTE_ICON : BURN_ICON;
     }
+  },
+  mounted() {
+    EventBus.$on("swing", mobType => {
+      if (this.$store.getters["chrono/speed"] > 5) return;
+      if (mobType == this.mobType) {
+        if (!this.$refs.body) return;
+        let promise = Velocity(
+          this.$refs.body,
+          { translateX: this.mobType == "player" ? "70px" : "-70px" },
+          80
+        );
+        if (!promise) return;
+        promise.then(() => {
+          if (!this.$refs.body) return;
+          Velocity(this.$refs.body, { translateX: "0px" }, 80);
+        });
+      }
+    });
+
+    EventBus.$on("getHit", mobType => {
+      if (this.$store.getters["chrono/speed"] > 5) return;
+      if (mobType == this.mobType) {
+        if (!this.$refs.body) return;
+        this.$refs.body.style.filter =
+          "contrast(0) sepia(1) saturate(100) hue-rotate(0deg)";
+        setTimeout(() => {
+          if (!this.$refs.body) return;
+          this.$refs.body.style.filter = "unset";
+        }, 300);
+      }
+    });
+
+    EventBus.$on("dodge", mobType => {
+      if (this.$store.getters["chrono/speed"] > 5) return;
+      if (mobType == this.mobType) {
+        if (!this.$refs.body) return;
+        Velocity(this.$refs.body, { opacity: 0.3 }, 200).then(() => {
+          if (!this.$refs.body) return;
+          Velocity(this.$refs.body, { opacity: 1 }, 200);
+        });
+      }
+    });
   }
 };
 </script>
 
 <style scoped>
 .body-icon {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   background-color: #ececec;
   border-radius: 0.5rem;
 }
 
-@media (min-width: 1200px) {
-  .body-icon {
-    width: 128px;
-    height: 128px;
-  }
-}
 .black-background {
   background-color: rgb(61, 61, 61) !important;
 }
@@ -253,5 +296,8 @@ export default {
 
 .fake-bar {
   height: 22px;
+}
+.img-body {
+  transform: translateX(0px);
 }
 </style>
