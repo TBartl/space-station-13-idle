@@ -64,11 +64,9 @@
               <span>For the creation of all the open source art used in the project</span>
             </div>
             <div class="d-flex flex-row align-items-center">
-              <a href="https://discord.gg/HwbK9XQ">
-                <img :src="require('@/assets/art/shop/items/necrocrate.png')" alt />
-                <b class="mr-2">spessmenart:</b>
-              </a>
-              <span>For the background image provided under CC BY-NC-ND 4.0</span>
+                <img :src="require('@/assets/art/misc/claire.png')" alt />
+                <b class="mr-2">Claire "Cemci" Marvinney</b>
+              <span>For the lovingly handpainted background image</span>
             </div>
             <div class="d-flex flex-row align-items-center">
               <img :src="require('@/assets/art/combat/enemies/bee_anim.gif')" alt />
@@ -78,7 +76,18 @@
             <div class="d-flex flex-row align-items-center">
               <img :src="require('@/assets/art/combat/enemies/bald_visitor.png')" alt />
               <b class="mr-2">"Jerry Derpington":</b>
-              <span>Playtesting</span>
+              <span>First Playtester</span>
+            </div>
+             <div class="d-flex flex-row align-items-center">
+              <img :src="require('@/assets/art/misc/clark.png')" alt />
+              <b class="mr-2">"Gogodapogostick",</b>
+              <img :src="require('@/assets/art/misc/orange.png')" alt />
+              <b class="mr-2">"Citrusgender",</b>
+              <img :src="require('@/assets/art/misc/frog.png')" alt />
+              <b class="mr-2">"Armhulen",</b> and
+              <img :src="require('@/assets/art/misc/berry.png')" alt />
+              <b class="mr-2">"Sunberry":</b>
+              <span>Second Round Playtesters</span>
             </div>
           </div>
         </div>
