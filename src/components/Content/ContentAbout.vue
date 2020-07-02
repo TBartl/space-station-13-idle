@@ -65,7 +65,7 @@
             </div>
             <div class="d-flex flex-row align-items-center">
                 <img :src="require('@/assets/art/misc/claire.png')" alt />
-                <b class="mr-2">Claire "Cemci" Marvinney</b>
+                <b class="mr-2">Claire "Cemci" Marvinney:</b>
               <span>For the lovingly handpainted background image</span>
             </div>
             <div class="d-flex flex-row align-items-center">
@@ -80,13 +80,13 @@
             </div>
              <div class="d-flex flex-row align-items-center">
               <img :src="require('@/assets/art/misc/clark.png')" alt />
-              <b class="mr-2">"Gogodapogostick",</b>
+              <b class="mr-2">Gogodapogostick,</b>
               <img :src="require('@/assets/art/misc/orange.png')" alt />
-              <b class="mr-2">"Citrusgender",</b>
+              <b class="mr-2">Citrusgender,</b>
               <img :src="require('@/assets/art/misc/frog.png')" alt />
-              <b class="mr-2">"Armhulen",</b> and
+              <b class="mr-2">Armhulen,</b> and
               <img :src="require('@/assets/art/misc/berry.png')" alt />
-              <b class="mr-2">"Sunberry":</b>
+              <b class="mr-2">Sunberry:</b>
               <span>Second Round Playtesters</span>
             </div>
           </div>
