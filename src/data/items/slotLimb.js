@@ -106,7 +106,7 @@ export default {
 		name: "Magnetic Boots",
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/shoe_magboots.png"),
-		equipmentSlot: "climb",
+		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/shoe_magboots_overlay.png"),
 		stats: {
 			maxHealth: 60,
