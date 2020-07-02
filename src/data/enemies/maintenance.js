@@ -24,7 +24,7 @@ export default {
 					{
 						id: "wire",
 						weight: 150,
-						count: [1, 20]
+						count: [1, 3]
 					},
 					{
 						id: "foodMeatA",

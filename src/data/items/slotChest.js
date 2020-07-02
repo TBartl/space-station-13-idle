@@ -1,7 +1,7 @@
 const BRUTEARMOR = {
 	armorBrute1: {
 		name: "Cardborg Disguise",
-		sellPrice: 600,
+		sellPrice: 158,
 		icon: require("@/assets/art/combat/items/arm_b1.png"), overlay: require("@/assets/art/combat/items/arm_b1_overlay.png"),
 		stats: {
 		},
@@ -11,7 +11,7 @@ const BRUTEARMOR = {
 	},
 	armorBrute2: {
 		name: "Firefighting Suit",
-		sellPrice: 600,
+		sellPrice: 180,
 		icon: require("@/assets/art/combat/items/arm_b2.png"), overlay: require("@/assets/art/combat/items/arm_b2_overlay.png"),
 		stats: {
 			burnProtection: 2
@@ -22,7 +22,7 @@ const BRUTEARMOR = {
 	},
 	armorBrute3: {
 		name: "Personal Protection Vest PPV",
-		sellPrice: 600,
+		sellPrice: 202,
 		icon: require("@/assets/art/combat/items/arm_b3.png"), overlay: require("@/assets/art/combat/items/arm_b3_overlay.png"),
 		stats: {
 		},
@@ -32,7 +32,7 @@ const BRUTEARMOR = {
 	},
 	armorBrute4: {
 		name: "Reflective Protection Vest RPV",
-		sellPrice: 600,
+		sellPrice: 224,
 		icon: require("@/assets/art/combat/items/arm_b4.png"), overlay: require("@/assets/art/combat/items/arm_b4_overlay.png"),
 		stats: {
 		},
@@ -42,7 +42,7 @@ const BRUTEARMOR = {
 	},
 	armorBrute5: {
 		name: "Armored Biohazard Protection Suit",
-		sellPrice: 600,
+		sellPrice: 246,
 		icon: require("@/assets/art/combat/items/arm_b5.png"), overlay: require("@/assets/art/combat/items/arm_b5_overlay.png"),
 		stats: {
 		},
@@ -52,7 +52,7 @@ const BRUTEARMOR = {
 	},
 	armorBrute6: {
 		name: "Riot Suit",
-		sellPrice: 600,
+		sellPrice: 768,
 		icon: require("@/assets/art/combat/items/arm_b6.png"), overlay: require("@/assets/art/combat/items/arm_b6_overlay.png"),
 		stats: {
 		},
@@ -64,7 +64,7 @@ const BRUTEARMOR = {
 const BURNARMOR = {
 	armorBurn1: {
 		name: "EVA Suit",
-		sellPrice: 600,
+		sellPrice: 156,
 		icon: require("@/assets/art/combat/items/arm_s1.png"), overlay: require("@/assets/art/combat/items/arm_s1_overlay.png"),
 		stats: {
 		},
@@ -74,7 +74,7 @@ const BURNARMOR = {
 	},
 	armorBurn2: {
 		name: "Medical Rated Spacesuit",
-		sellPrice: 600,
+		sellPrice: 178,
 		icon: require("@/assets/art/combat/items/arm_s2.png"), overlay: require("@/assets/art/combat/items/arm_s2_overlay.png"),
 		stats: {
 		},
@@ -84,7 +84,7 @@ const BURNARMOR = {
 	},
 	armorBurn3: {
 		name: "Scientific Hardsuit",
-		sellPrice: 600,
+		sellPrice: 200,
 		icon: require("@/assets/art/combat/items/arm_s3.png"), overlay: require("@/assets/art/combat/items/arm_s3_overlay.png"),
 		stats: {
 		},
@@ -94,7 +94,7 @@ const BURNARMOR = {
 	},
 	armorBurn4: {
 		name: "Advanced Hardsuit",
-		sellPrice: 600,
+		sellPrice: 222,
 		icon: require("@/assets/art/combat/items/arm_s4.png"), overlay: require("@/assets/art/combat/items/arm_s4_overlay.png"),
 		stats: {
 		},
@@ -104,7 +104,7 @@ const BURNARMOR = {
 	},
 	armorBurn5: {
 		name: "Captains Hardsuit",
-		sellPrice: 600,
+		sellPrice: 244,
 		icon: require("@/assets/art/combat/items/arm_s5.png"), overlay: require("@/assets/art/combat/items/arm_s5_overlay.png"),
 		stats: {
 		},
@@ -114,7 +114,7 @@ const BURNARMOR = {
 	},
 	armorBurn6: {
 		name: "Syndicate Hardsuit",
-		sellPrice: 1200,
+		sellPrice: 766,
 		icon: require("@/assets/art/combat/items/arm_syndi.png"), overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
 		stats: {
 		},
