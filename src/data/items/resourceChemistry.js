@@ -52,7 +52,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/thermite.png"),
 		description: `Reduces graytiding failure chance by ${GRAYTIDING_POTION_PERCENT * 100}%.`,
 		potionJob: "graytiding",
-		potionCharges: 50
+		potionCharges: 25
 	},
 	potionChemistry: {
 		name: "Volatile Catalyst",
