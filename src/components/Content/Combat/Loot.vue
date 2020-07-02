@@ -2,7 +2,13 @@
   <div class="content-block">
     <div class="d-flex flex-row align-items-center justify-content-between">
       <span class="loot-title">Loot ({{drops.length}}/{{maxDrops}})</span>
-      <button class="btn btn-primary" @click="lootAll">Loot all</button>
+      <div >
+        <button type="button" id="view-enemy-loot" class="my-1 btn btn-primary mr-1">View Enemy Drops</button>
+        <b-popover target="view-enemy-loot" triggers="click blur" placement="top" delay="0">
+          <item-chance :data="enemy" />
+        </b-popover>
+        <button class="my-1 btn btn-primary" @click="lootAll">Loot all</button>
+      </div>
     </div>
     <div class="loot-grid w-100 d-flex flex-row flex-wrap">
       <loot-item
@@ -20,9 +26,10 @@
 import ENEMIES from "@/data/enemies";
 import { mapGetters } from "vuex";
 import LootItem from "@/components/Content/Combat/LootItem";
+import ItemChance from "@/components/ItemTable/ItemChance";
 
 export default {
-  components: { LootItem },
+  components: { LootItem, ItemChance },
   computed: {
     ...mapGetters("combat", ["targetEnemy", "drops", "maxDrops"]),
     enemy() {
@@ -31,7 +38,7 @@ export default {
   },
   methods: {
     lootAll() {
-			this.$store.dispatch("combat/lootAll");
+      this.$store.dispatch("combat/lootAll");
     }
   }
 };
