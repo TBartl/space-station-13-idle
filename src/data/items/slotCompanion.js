@@ -219,7 +219,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 
 	if (mod == 0) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			maxHealth: (slime.tier) * 15,
 			burnProtection: (slime.tier - 1) * 4
 		}
 	}

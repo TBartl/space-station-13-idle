@@ -5,7 +5,7 @@ let FOOD = {
 		name: "Human Meat",
 		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatHuman.png"),
-		healAmount: 10,
+		healAmount: 15,
 		stats: {
 			maxHealth: 2,
 			evasion: -1,
@@ -17,7 +17,7 @@ let FOOD = {
 		name: "Alien Meat",
 		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatAlien.png"),
-		healAmount: 10,
+		healAmount: 15,
 		stats: {
 			maxHealth: 2,
 			evasion: 2,
@@ -29,7 +29,7 @@ let FOOD = {
 		name: "Animal Meat",
 		sellPrice: 10,
 		icon: require("@/assets/art/cooking/meatAnimal.png"),
-		healAmount: 10,
+		healAmount: 15,
 		stats: {
 			maxHealth: 2,
 			evasion: -1,
@@ -41,7 +41,7 @@ let FOOD = {
 		name: "Pasta",
 		sellPrice: 8,
 		icon: require("@/assets/art/cooking/pasta1.png"),
-		healAmount: 3,
+		healAmount: 6,
 		stats: {
 			maxHealth: -3,
 			evasion: 0,
@@ -53,7 +53,7 @@ let FOOD = {
 		name: "Double Pasta",
 		sellPrice: 45,
 		icon: require("@/assets/art/cooking/pasta2.png"),
-		healAmount: 6,
+		healAmount: 12,
 		stats: {
 			maxHealth: -6,
 			evasion: 1,
@@ -65,7 +65,7 @@ let FOOD = {
 		name: "Triple Pasta",
 		sellPrice: 113,
 		icon: require("@/assets/art/cooking/pasta3.png"),
-		healAmount: 9,
+		healAmount: 18,
 		stats: {
 			maxHealth: -9,
 			evasion: 2,
@@ -77,7 +77,7 @@ let FOOD = {
 		name: "Pasta Tower",
 		sellPrice: 211,
 		icon: require("@/assets/art/cooking/pasta4.png"),
-		healAmount: 12,
+		healAmount: 24,
 		stats: {
 			maxHealth: -12,
 			evasion: 3,
@@ -89,7 +89,7 @@ let FOOD = {
 		name: "InSPIREd Pasta",
 		sellPrice: 338,
 		icon: require("@/assets/art/cooking/pasta5.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: -15,
 			evasion: 4,
@@ -101,7 +101,7 @@ let FOOD = {
 		name: "Babel Pasta",
 		sellPrice: 496,
 		icon: require("@/assets/art/cooking/pasta6.png"),
-		healAmount: 18,
+		healAmount: 36,
 		stats: {
 			maxHealth: -18,
 			evasion: 5,
@@ -113,7 +113,7 @@ let FOOD = {
 		name: "Hot Potato Stew",
 		sellPrice: 20,
 		icon: require("@/assets/art/cooking/stew1.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -125,7 +125,7 @@ let FOOD = {
 		name: "Tingle Soup",
 		sellPrice: 102,
 		icon: require("@/assets/art/cooking/stew2.png"),
-		healAmount: 30,
+		healAmount: 45,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -137,7 +137,7 @@ let FOOD = {
 		name: "Dad's Soup",
 		sellPrice: 171,
 		icon: require("@/assets/art/cooking/stew3.png"),
-		healAmount: 45,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: -5,
@@ -149,7 +149,7 @@ let FOOD = {
 		name: "Donkpocket",
 		sellPrice: 26,
 		icon: require("@/assets/art/cooking/donk1.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -161,7 +161,7 @@ let FOOD = {
 		name: "Berrypocket",
 		sellPrice: 108,
 		icon: require("@/assets/art/cooking/donk2.png"),
-		healAmount: 30,
+		healAmount: 45,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -173,7 +173,7 @@ let FOOD = {
 		name: "Dankpocket",
 		sellPrice: 177,
 		icon: require("@/assets/art/cooking/donk3.png"),
-		healAmount: 45,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: -5,
@@ -185,7 +185,7 @@ let FOOD = {
 		name: "Creampie",
 		sellPrice: 31,
 		icon: require("@/assets/art/cooking/pie1.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
 			evasion: 10,
@@ -197,7 +197,7 @@ let FOOD = {
 		name: "Moonpie",
 		sellPrice: 115,
 		icon: require("@/assets/art/cooking/pie2.png"),
-		healAmount: 30,
+		healAmount: 45,
 		stats: {
 			maxHealth: 0,
 			evasion: 20,
@@ -221,7 +221,7 @@ let FOOD = {
 		name: "Spicy Burger",
 		sellPrice: 48,
 		icon: require("@/assets/art/cooking/burger1.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -233,7 +233,7 @@ let FOOD = {
 		name: "Slippery Burger",
 		sellPrice: 122,
 		icon: require("@/assets/art/cooking/burger2.png"),
-		healAmount: 20,
+		healAmount: 40,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -245,7 +245,7 @@ let FOOD = {
 		name: "Blue Burger",
 		sellPrice: 160,
 		icon: require("@/assets/art/cooking/burger3.png"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -257,7 +257,7 @@ let FOOD = {
 		name: "Ghost Burger",
 		sellPrice: 185,
 		icon: require("@/assets/art/cooking/burger4_anim.gif"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -269,7 +269,7 @@ let FOOD = {
 		name: "Pizza",
 		sellPrice: 63,
 		icon: require("@/assets/art/cooking/animal1.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -281,7 +281,7 @@ let FOOD = {
 		name: "Moon Pizza",
 		sellPrice: 111,
 		icon: require("@/assets/art/cooking/animal2.png"),
-		healAmount: 20,
+		healAmount: 40,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -293,7 +293,7 @@ let FOOD = {
 		name: "Bluespace Pizza",
 		sellPrice: 162,
 		icon: require("@/assets/art/cooking/animal3.png"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -305,7 +305,7 @@ let FOOD = {
 		name: "Nova Pizza",
 		sellPrice: 187,
 		icon: require("@/assets/art/cooking/animal4.png"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -317,7 +317,7 @@ let FOOD = {
 		name: "Fesh 'Shishi'",
 		sellPrice: 69,
 		icon: require("@/assets/art/cooking/Alien1.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 5,
@@ -329,7 +329,7 @@ let FOOD = {
 		name: "Finger Food",
 		sellPrice: 122,
 		icon: require("@/assets/art/cooking/Alien2.png"),
-		healAmount: 20,
+		healAmount: 40,
 		stats: {
 			maxHealth: 0,
 			evasion: 10,
@@ -341,7 +341,7 @@ let FOOD = {
 		name: "Fush n Chips",
 		sellPrice: 168,
 		icon: require("@/assets/art/cooking/Alien3.png"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 5,
 			evasion: 10,
@@ -353,7 +353,7 @@ let FOOD = {
 		name: "Fried Friend",
 		sellPrice: 197,
 		icon: require("@/assets/art/cooking/Alien4.png"),
-		healAmount: 30,
+		healAmount: 50,
 		stats: {
 			maxHealth: 10,
 			evasion: 10,

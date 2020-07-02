@@ -6,7 +6,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/headset_1_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 40,
 			evasion: 3,
 			protection: 0,
 			precision: 1,
@@ -22,7 +22,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/headset_2_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 40,
 			evasion: 3,
 			protection: 1,
 			precision: 0,
@@ -38,7 +38,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/headset_3_overlay.png"),
 		stats: {
-			maxHealth: 6,
+			maxHealth: 50,
 			evasion: 3,
 			protection: 0,
 			precision: 0,
@@ -54,7 +54,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/headset_4_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 40,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -70,7 +70,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/headset_5_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 40,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -87,7 +87,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_h1_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 60,
 			evasion: 4,
 			protection: 0,
 			precision: 2,
@@ -103,7 +103,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_h2_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 60,
 			evasion: 4,
 			protection: 2,
 			precision: 0,
@@ -119,7 +119,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_h3_overlay.png"),
 		stats: {
-			maxHealth: 8,
+			maxHealth: 80,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -135,7 +135,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_h4_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 60,
 			evasion: 6,
 			protection: 0,
 			precision: 0,
@@ -151,7 +151,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_h5_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 60,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -168,7 +168,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_r1_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 90,
 			evasion: 6,
 			protection: 0,
 			precision: 2,
@@ -184,7 +184,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_r2_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 90,
 			evasion: 6,
 			protection: 2,
 			precision: 0,
@@ -200,7 +200,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_r3_overlay.png"),
 		stats: {
-			maxHealth: 8,
+			maxHealth: 110,
 			evasion: 6,
 			protection: 0,
 			precision: 0,
@@ -216,7 +216,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_r4_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 90,
 			evasion: 8,
 			protection: 0,
 			precision: 0,
@@ -232,7 +232,7 @@ export default {
 		equipmentSlot: "head",
 		overlay: require("@/assets/art/combat/items/head/head_r5_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 90,
 			evasion: 6,
 			protection: 0,
 			precision: 0,

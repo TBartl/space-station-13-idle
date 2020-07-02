@@ -6,11 +6,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_meson_overlay.png"),
 		stats: {
-			maxHealth: 2,
-			evasion: 2,
-			protection: -5,
-			precision: 2,
-			power: 2,
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
 		},
 		requires: {
 			evasion: 10,
@@ -23,10 +23,10 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_healthhud_overlay.png"),
 		stats: {
-			maxHealth: 4,
+			maxHealth: 20,
 			evasion: 0,
 			protection: 0,
-			precision: 2,
+			precision: 3,
 			power: 0,
 		},
 		requires: {
@@ -40,9 +40,9 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_secglass_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 0,
-			protection: 5,
+			protection: 3,
 			precision: 0,
 			power: 0,
 		},
@@ -57,10 +57,10 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_science_overlay.png"),
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 0,
-			protection: -5,
-			precision: 4,
+			protection: -4,
+			precision: 7,
 			power: 0,
 		},
 		requires: {
@@ -74,14 +74,14 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_tiki_overlay.png"),
 		stats: {
-			maxHealth: 2,
+			maxHealth: 30,
 			evasion: 2,
 			protection: 0,
 			precision: 0,
 			power: 2,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 30,
 		}
 	},
 	faceWrestle: {
@@ -91,14 +91,14 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_wrestle_overlay.png"),
 		stats: {
-			maxHealth: 2,
+			maxHealth: 30,
 			evasion: 2,
 			protection: 0,
 			precision: 2,
 			power: 0,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 30,
 		}
 	},
 	faceGas: {
@@ -108,14 +108,14 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_gas_overlay.png"),
 		stats: {
-			maxHealth: 2,
+			maxHealth: 30,
 			evasion: 0,
 			protection: 0,
 			precision: 2,
 			power: 2,
 		},
 		requires: {
-			evasion: 3,
+			evasion: 30,
 		}
 	},
 	faceFox: {
@@ -125,7 +125,7 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_fox_overlay.png"),
 		stats: {
-			maxHealth: 4,
+			maxHealth: 30,
 			evasion: 0,
 			protection: 0,
 			precision: 4,
@@ -142,7 +142,7 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_sec_overlay.png"),
 		stats: {
-			maxHealth: 4,
+			maxHealth: 30,
 			evasion: 0,
 			protection: 0,
 			precision: 0,
@@ -159,7 +159,7 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_syndicate_overlay_anim.gif"),
 		stats: {
-			maxHealth: 4,
+			maxHealth: 30,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -176,7 +176,7 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_mime_overlay.png"),
 		stats: {
-			maxHealth: -10,
+			maxHealth: -130,
 			evasion: 10,
 			protection: -10,
 			precision: 10,
@@ -193,7 +193,7 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_mime_overlay.png"),
 		stats: {
-			maxHealth: 15,
+			maxHealth: 170,
 			evasion: 0,
 			protection: 0,
 			precision: -10,

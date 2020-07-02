@@ -9,13 +9,7 @@ export default {
 		name: "Human Foot",
 		sellPrice: -5,
 		icon: require("@/assets/art/cooking/meatFoot.png"),
-		healAmount: 10
-	},
-	spaghetti: {
-		name: "Spaghetti",
-		sellPrice: 100,
-		icon: require('@/assets/art/shop/items/spaghetti.png'),
-		healAmount: 30
+		healAmount: 120
 	},
 	cactus: {
 		name: "Exotic Cactus",
