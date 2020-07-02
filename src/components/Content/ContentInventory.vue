@@ -102,9 +102,6 @@ export default {
 </script>
 
 <style scoped>
-.items {
-  margin: 0 -0.5rem;
-}
 .slots {
   color: white;
 }
