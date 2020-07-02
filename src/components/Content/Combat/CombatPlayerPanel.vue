@@ -25,9 +25,8 @@
 import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import EquipmentPanel from "@/components/Content/Combat/EquipmentPanel";
 import CombatFocusPanel from "@/components/Content/Combat/CombatFocusPanel";
-import ProgressBar from "@/components/ProgressBar";
 export default {
-  components: { FoodPanel, EquipmentPanel, CombatFocusPanel, ProgressBar },
+  components: { FoodPanel, EquipmentPanel, CombatFocusPanel },
 
   computed: {
     stats() {
