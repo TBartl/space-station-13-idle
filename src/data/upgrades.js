@@ -6,6 +6,45 @@ export const BASE_INVENTORY_SIZE = 10;
 const TOTAL_ITEM_COUNT = Object.keys(ITEMS).length;
 let inventoryUpgradeImage = require('@/assets/art/shop/inventoryUpgrade.png');
 
+
+function calcCost(i, total) {
+	if (total == 2) { // 20, 40
+		return [
+			30000,
+			200000][i];
+	}
+	if (total == 3) { // 15, 30, 45
+		return [
+			10000,
+			75000,
+			350000][i];
+	}
+	if (total == 5) { //10, 20, 30, 40, 50
+		return [
+			5000,
+			20000,
+			60000,
+			180000,
+			500000][i]
+	}
+	if (total == 10) { // Every 5
+		return [
+			500,
+			2250,
+			5000,
+			10000,
+			20000,
+			30000,
+			50000,
+			100000,
+			150000,
+			250000][i]
+	}
+	return -1;
+}
+
+
+
 const INVENTORY_UPGRADES = {}
 
 // "Wouldn't it make more sense to just have one upgrade, with a dynamic description and stuff?"
@@ -112,11 +151,7 @@ for (let i = 0; i < 5; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to +${(MINING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	MINING_UPGRADES[`upgradeMining${i + 1}`] = upgrade;
 }
@@ -129,7 +164,7 @@ for (let i = 0; i < 3; i++) {
 		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
 		requiredItems: {}, // Filled out below
-		requiredLevels: { xenobiology: (i + 1) * 10 },
+		requiredLevels: { xenobiology: (i + 1) * 15 },
 		upgrade: "xenobiologyPens",
 		requiredUpgrades: { xenobiologyPens: i }
 
@@ -139,9 +174,7 @@ for (let i = 0; i < 3; i++) {
 		upgrade.description += `x${2 ** (i - j + 1)} tier ${j + 1} slime yield`
 	}
 
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 500000
-	if (i == 2) upgrade.requiredItems.money = 1500000
+	upgrade.requiredItems.money = calcCost(i, 3);
 
 
 	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
@@ -165,11 +198,7 @@ for (let i = 0; i < 5; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to +${(ENGINEERING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
@@ -192,11 +221,7 @@ for (let i = 0; i < 5; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	FABRICATION_UPGRADES[`upgradeFabrication${i + 1}`] = upgrade;
 }
@@ -207,7 +232,7 @@ const BOTANY_UPGRADES = {
 		description: "Whenever you grow a plant, also grow the plant to the left as well",
 		icon: require('@/assets/art/botany/upgrade1.png'),
 		requiredItems: {
-			money: 25000
+			money: calcCost(1, 2)
 		},
 		requiredLevels: {
 			botany: 20
@@ -222,7 +247,7 @@ const BOTANY_UPGRADES = {
 		description: "Whenever you grow a plant, also grow the plant to the left and right as well",
 		icon: require('@/assets/art/botany/upgrade1.png'),
 		requiredItems: {
-			money: 2000000
+			money: calcCost(2, 2)
 		},
 		requiredLevels: {
 			botany: 40
@@ -251,16 +276,7 @@ for (let i = 0; i < 10; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 3000
-	if (i == 1) upgrade.requiredItems.money = 7000
-	if (i == 2) upgrade.requiredItems.money = 25000
-	if (i == 3) upgrade.requiredItems.money = 50000
-	if (i == 4) upgrade.requiredItems.money = 100000
-	if (i == 5) upgrade.requiredItems.money = 250000
-	if (i == 6) upgrade.requiredItems.money = 350000
-	if (i == 7) upgrade.requiredItems.money = 600000
-	if (i == 8) upgrade.requiredItems.money = 800000
-	if (i == 9) upgrade.requiredItems.money = 1200000
+	upgrade.requiredItems.money = calcCost(i, 10);
 
 	GRAYTIDING_UPGRADES[`upgradeGraytiding${i + 1}`] = upgrade;
 }
@@ -282,11 +298,7 @@ for (let i = 0; i < 5; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	CHEMISTRY_UPGRADES[`upgradeChemistry${i + 1}`] = upgrade;
 }
@@ -308,11 +320,7 @@ for (let i = 0; i < 5; i++) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
 		upgrade.description += `, to ${(COOKING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
-	if (i == 0) upgrade.requiredItems.money = 10000
-	if (i == 1) upgrade.requiredItems.money = 75000
-	if (i == 2) upgrade.requiredItems.money = 250000
-	if (i == 3) upgrade.requiredItems.money = 800000
-	if (i == 4) upgrade.requiredItems.money = 2000000
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }

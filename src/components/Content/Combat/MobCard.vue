@@ -26,13 +26,13 @@
     />
     <progress-bar
       v-if="!targetEnemy || (moveProgress && mobType == 'player')"
-      class="mt-2 black-background"
+      class="mt-1 black-background"
       :progress="moveProgress"
       :customClass="'bg-success'"
       :text="`Move Speed: ${moveTime.toFixed(1)}s`"
     />
 
-    <div v-if="!targetEnemy || (moveProgress && mobType == 'enemy')" class="fake-bar mt-2"></div>
+    <div v-if="moveProgress && mobType == 'enemy'" class="fake-bar mt-2"></div>
     <div v-if="targetEnemy" class="w-100 mt-2">
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
@@ -49,7 +49,7 @@
       <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
     </div>
 
-    <div v-if="mobType == 'player' && companion" class="w-100">
+    <div v-if="mobType == 'player' && companion" class="w-100" :class="{ 'mt-2': !targetEnemy}">
       <div class="stat" :id="`${mobType}-stat-flee-chance`">
         <img :src="require('@/assets/art/combat/command.png')" />
         <span class="stat-desc">Flee Chance:</span>
@@ -252,6 +252,6 @@ export default {
 }
 
 .fake-bar {
-  height: 26px;
+  height: 22px;
 }
 </style>

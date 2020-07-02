@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
+import ModalDeath from "@/components/Modals/ModalDeath";
 import ITEMS from "@/data/items";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
@@ -221,6 +222,29 @@ const inventory = {
 					commit("changeItemCount", { itemId, count });
 				}
 			}
+		},
+		loseEquipmentPiece({ getters, commit }) {
+			let equipment = getters["equipment"];
+
+			// Try to pick from non-stackable things first
+			let loseableEquipment = Object.keys(equipment).filter(slot => {
+				return equipment[slot].itemId && !getEquipmentStackable(equipment[slot].itemId);
+			});
+
+			// No luck? Well, guess you're losing something stackable
+			if (loseableEquipment.length == 0) {
+				loseableEquipment = Object.keys(equipment).filter(slot => {
+					return equipment[slot].itemId;
+				});
+			}
+
+			let lostItemId = null;
+			if (loseableEquipment.length) {
+				let slotToLose = loseableEquipment[Math.floor(Math.random() * loseableEquipment.length)];
+				lostItemId = equipment[slotToLose].itemId;
+				commit("setEquipment", { slot: slotToLose, itemId: null, count: 0 });
+			}
+			this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 		}
 	}
 }

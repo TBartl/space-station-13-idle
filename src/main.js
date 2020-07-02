@@ -20,7 +20,7 @@ Vue.filter('cleanNum', function (value) {
 })
 
 Vue.filter('stat', function (value) {
-	if (!value) return "";
+	if (value == undefined) return "";
 	return +value.toFixed(2);
 })
 

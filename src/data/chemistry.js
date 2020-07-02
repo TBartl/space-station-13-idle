@@ -74,7 +74,7 @@ const POTIONS = {
 			oxygen: 1,
 			oil: 1,
 			mercury: 1,
-			junk: 1
+			burnJunk: 1
 		}
 	},
 	synthPotionChem: {

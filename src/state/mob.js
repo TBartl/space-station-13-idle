@@ -4,7 +4,6 @@ import { EventBus } from "@/utils/eventBus.js";
 import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
 import { createCoroutineModule } from "./coroutine";
-import ModalDeath from "@/components/Modals/ModalDeath";
 import { MAX_LEVEL } from "@/data/experience";
 
 import { PLAYER_BASE_STATS, ENEMY_BASE_STATS, combineStats, fixProtection } from "@/utils/combatUtils";
@@ -165,7 +164,8 @@ export function createMobModule(mobType) {
 			getHit({ state, commit, getters, dispatch, rootGetters }, damage) {
 				commit("_setHealth", Math.max(state.health - damage, 0));
 
-				if (state.mobType == "player") {
+				// Handle flee chance while in combat (not while taking damage from graytding)
+				if (state.mobType == "player" && rootGetters["combat/targetEnemy"]) {
 					EventBus.$emit("toast", { icon: require("@/assets/art/combat/health.gif"), text: `-${Math.round(Math.max(damage, 1))} HP` })
 					dispatch("_handleSlimeFlee");
 				}
@@ -177,17 +177,7 @@ export function createMobModule(mobType) {
 						dispatch("cancelAllActions", {}, { root: true });
 
 						// Lose a random, equipped item
-						let equipment = rootGetters["inventory/equipment"];
-						let filledEquipment = Object.keys(equipment).filter(slot => {
-							return equipment[slot].itemId;
-						});
-						let lostItemId = null;
-						if (filledEquipment.length) {
-							let slotToLose = filledEquipment[Math.floor(Math.random() * filledEquipment.length)];
-							lostItemId = equipment[slotToLose].itemId;
-							commit("inventory/setEquipment", { slot: slotToLose, itemId: null, count: 0 }, { root: true });
-						}
-						this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
+						dispatch("inventory/loseEquipmentPiece", {}, { root: true });
 					} else {
 						dispatch("validhunting/mobKilled", rootGetters["combat/targetEnemy"], { root: true })
 						commit("completion/trackEnemy", rootGetters["combat/targetEnemy"], { root: true })

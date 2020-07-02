@@ -6,7 +6,7 @@
         <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>
-        <div class="col-md-4 col-lg-3 col-xl-2">
+        <div class="mt-2 mt-md-0 col-md-4 col-lg-3 col-xl-2">
           <potion-header :jobId="jobId" />
         </div>
       </div>
@@ -83,12 +83,7 @@
           <span>
             Each
             <img class="mx--2" :src="require('@/assets/art/chemistry/faunaPerfume.png')" />
-            <b>CHEM</b> you make will have a limited number of
-            <img
-              class="mx--2"
-              :src="require('@/assets/art/chemistry/faunaPerfume.png')"
-            />
-            <b>CHEM</b> before it depletes.
+            <b>CHEM</b> you make will have a limited number of charges before it depletes.
           </span>
           <span>
             You can equip

@@ -98,17 +98,21 @@
             class="content-block content-block-bottom d-flex flex-column align-items-center"
           >
             <h5 class="pt-2">Job Time</h5>
-            <div v-for="(job, index) in jobs" :key="index" class="bar my-1">
-              <div
-                class="bar-fill"
-                :style="{'background-color': job.color, 'width': (100*job.time / jobs[0].time) +'%'}"
-              ></div>
+            <div class="jobs-outer w-100 d-flex flex-column align-items-center">
+              <div class="jobs-inner">
+                <div v-for="(job, index) in jobs" :key="index" class="bar my-1">
+                  <div
+                    class="bar-fill"
+                    :style="{'background-color': job.color, 'width': (100*job.time / jobs[0].time) +'%'}"
+                  ></div>
 
-              <div
-                class="position-relative d-flex flex-row align-items-center justify-content-between w-100"
-              >
-                <img :src="job.icon" alt />
-                <span>{{job.time | time}}</span>
+                  <div
+                    class="position-relative d-flex flex-row align-items-center justify-content-between w-100"
+                  >
+                    <img :src="job.icon" alt />
+                    <span>{{job.time | time}}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -213,5 +217,17 @@ export default {
   top: 0;
   bottom: 0;
   opacity: 0.8;
+}
+
+.jobs-outer {
+  background-size: cover;
+  background-image: url("~@/assets/art/misc/background-alt.jpg");
+  background-position: right center;
+}
+.jobs-inner {
+	background-color: white;
+	width: 100%;
+	max-width: 600px;
+	padding: 0px 12px;
 }
 </style>
