@@ -9,7 +9,7 @@ export default {
 		name: "Human Foot",
 		sellPrice: -5,
 		icon: require("@/assets/art/cooking/meatFoot.png"),
-		healAmount: 120
+		healAmount: 20
 	},
 	cactus: {
 		name: "Exotic Cactus",
