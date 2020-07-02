@@ -245,8 +245,15 @@ a:focus {
 		left: 240px;
 		top: 0;
     margin: 10px;
-    cursor: pointer;
-  }
+		cursor: pointer;
+		opacity: .82;
+    transition: opacity 0.3s;
+    animation-timing-function: ease-out;
+	}
+	
+	.expanded .button-toggle {
+		opacity: 1;
+	}
 
   .backing {
     display: inline-block;
