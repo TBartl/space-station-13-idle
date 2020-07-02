@@ -44,7 +44,7 @@ const RENEWABLE_ACTIONS = {
 		},
 		icon: require("@/assets/art/engineering/generator_anim2.gif"),
 		xp: 7,
-		requiredLevel: 14,
+		requiredLevel: 25,
 		requiredItems: {
 			power: 4
 		}
@@ -53,7 +53,7 @@ const RENEWABLE_ACTIONS = {
 
 const RESOURCE_CONSUMING_ACTIONS = {
 	engOil: {
-		time: 2.5,
+		time: 5,
 		name: "Oil Barrel",
 		items: {
 			id: "power",

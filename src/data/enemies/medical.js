@@ -21,13 +21,18 @@ export default {
 					},
 					{
 						id: 'ammoBallistic3',
+						count: 8,
 						weight: 1
 					},
 					{
-						id: 'jumpsuitChemistry',
+						id: 'potionChemistry',
 						weight: 1
 					}
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitChemistry"
 			},
 			{
 				chance: 1,
@@ -60,10 +65,14 @@ export default {
 						weight: 1
 					},
 					{
-						id: 'jumpsuitMedical',
+						id: 'potionTinkering',
 						weight: 1
 					}
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitMedical"
 			},
 			{
 				chance: 1,

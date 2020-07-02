@@ -5,9 +5,9 @@ export default {
 		stats: {
 			maxHealth: 310,
 			attackSpeed: 3.0,
-			precision: 86,
-			power: 91,
-			evasion: 95,
+			precision: 85,
+			power: 94,
+			evasion: 63,
 			damageType: "brute",
 			burnProtection: 10,
 			bruteProtection: 5
@@ -17,18 +17,18 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
+						id: 'potionXenobiology',
+						weight: 10
+					},
+					{
+						id: 'foodEvasion1',
+						weight: 9
+					},
+					{
 						id: 'ticket3',
 						count: [0, 2],
 						weight: 1
 					},
-					{
-						id: 'gold',
-						weight: 1
-					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -55,16 +55,16 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 1
+						id: 'foot',
+						weight: 8
 					},
 					{
-						id: 'gold',
-						weight: 1
+						id: 'gunBallistic4',
+						weight: 3
 					},
 					{
-						id: 'titanium',
-						weight: 1
+						id: 'potionShitposting',
+						weight: 2
 					}
 				]
 			},
@@ -80,9 +80,9 @@ export default {
 		stats: {
 			maxHealth: 330,
 			attackSpeed: 1.9,
-			precision: 85,
-			power: 94,
-			evasion: 63,
+			precision: 86,
+			power: 91,
+			evasion: 95,
 			damageType: "brute",
 			burnProtection: 20,
 			bruteProtection: 5
@@ -93,14 +93,15 @@ export default {
 				itemTable: [
 					{
 						id: 'ammoBallistic4',
-						weight: 1
+						count:8,
+						weight: 10
 					},
 					{
-						id: 'gold',
-						weight: 1
+						id: 'q_foodEvasion1',
+						weight: 9
 					},
 					{
-						id: 'titanium',
+						id: 'pillSpacelube',
 						weight: 1
 					}
 				]
@@ -134,16 +135,21 @@ export default {
 				itemTable: [
 					{
 						id: 'bananaBlue',
-						weight: 1
+						weight: 3
 					},
 					{
 						id: 'mushroomRed',
-						weight: 1
+						weight: 2
 					},
 					{
 						id: 'plantSeed',
+						count:5,
+						weight: 2
+					},
+					{
+						id: 'burnJunk',
 						weight: 1
-					}
+					},
 				]
 			},
 			{

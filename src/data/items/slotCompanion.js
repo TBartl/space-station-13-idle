@@ -145,9 +145,9 @@ const SLIMES = {
 		name: "Pet Mouse",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
-		tier: 7,
+		tier: 0,
 		stats: {
-			evasion: 10,
+			evasion: 5,
 			maxHealth: 50
 		}
 	},
@@ -155,9 +155,9 @@ const SLIMES = {
 		name: "Pet Corgi",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/Ian.png"),
-		tier: 7,
+		tier: 0,
 		stats: {
-			precision: 10,
+			precision: 5,
 			maxHealth: 50
 		}
 	},
@@ -165,9 +165,9 @@ const SLIMES = {
 		name: "Pet Goat",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/pete.png"),
-		tier: 7,
+		tier: 0,
 		stats: {
-			power: 10,
+			power: 5,
 			maxHealth: 50
 		}
 	},
@@ -175,7 +175,7 @@ const SLIMES = {
 		name: "Pet Bee",
 		sellPrice: 1000,
 		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
-		tier: 10,
+		tier: 0,
 		stats: {
 			protection: 1,
 			precision: 1,
@@ -188,9 +188,9 @@ const SLIMES = {
 		name: "Mine Bot",
 		sellPrice: 300,
 		icon: require("@/assets/art/xenobio/CompanionMining.png"),
-		tier: 7,
+		tier: 0,
 		stats: {
-			protection: 10,
+			protection: 5,
 			maxHealth: 100
 		}
 	},
@@ -198,12 +198,12 @@ const SLIMES = {
 		name: "Killer Tomato",
 		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
-		tier: 7,
+		tier: 5,
 		stats: {
 			maxHealth: 20,
-			evasion: 10,
-			precision: 10,
-			power: 10,
+			evasion: 5,
+			precision: 5,
+			power: 5,
 			command: -10
 		},
 	}
