@@ -65,7 +65,7 @@
             </div>
             <div class="d-flex flex-row align-items-center">
                 <img :src="require('@/assets/art/misc/claire.png')" alt />
-                <b class="mr-2">Claire "Cemci" Marvinney</b>
+                <b class="mr-2">Claire "Cemci" Marvinney:</b>
               <span>For the lovingly handpainted background image</span>
             </div>
             <div class="d-flex flex-row align-items-center">
