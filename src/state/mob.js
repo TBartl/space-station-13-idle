@@ -149,7 +149,11 @@ export function createMobModule(mobType) {
 					if (state.mobType == "player") {
 						dispatch("combat/addXP", noOverkillDamage, { root: true });
 					}
+				} else {
+					EventBus.$emit("dodge", state.mobType == "enemy" ? "player" : "enemy");
 				}
+
+				EventBus.$emit("swing", state.mobType);
 
 				// Use ammo
 				var pocket = rootGetters["inventory/equipment"].pocket;
@@ -189,6 +193,8 @@ export function createMobModule(mobType) {
 						dispatch("combat/tryAutoEat", {}, { root: true });
 					}
 				}
+
+				EventBus.$emit("getHit", state.mobType);
 			},
 			_handleSlimeFlee({ rootGetters }) {
 				var companion = rootGetters["inventory/equipment"].companion;

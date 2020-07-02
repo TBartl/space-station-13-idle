@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="row" v-if="!inCombat">
-        <div class="col-12 col-xl-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
+        <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
           <zone :zone="zone" class="mb-3" />
         </div>
       </div>
