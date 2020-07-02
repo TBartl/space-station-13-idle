@@ -1,6 +1,16 @@
-# Space Station 13 Idle
+# Space Station Idle
 
-## Project setup
+Space Station Idle is a web-based idle game based on Melvor Idle, and set in the Space Station 13 universe.
+
+This repository has not been set up well for community contribution. In addition there's very little public documentation on implementation right now...
+
+BUT, if you want to contribute anyway, pull requests are open!
+
+___
+
+## Setup and Deployal
+
+### Project setup
 ```
 npm install
 ```
@@ -9,6 +19,24 @@ npm install
 ```
 npm run serve
 ```
+
+### Deploy To Github
+```
+./deployGit.sh
+```
+! Requires admin access to the repository
+
+### Deploy to AWS
+```
+./deployAws.sh
+```
+! Requires signed in AWS account, `aws configure`
+
+___
+
+## Implementation Information
+
+TODO: Fill out with item items, actions, enemies, etc...
 
 ### How to add a new job
 1. Create and populate job data and actions in a new file under the `src/data/` folder
