@@ -8,7 +8,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/cloakmining_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -27,10 +27,10 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/engcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
 			protection: 0,
-			precision: 2,
+			precision: 1,
 			power: 0,
 		},
 		requires: {
@@ -46,7 +46,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/hoscloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
 			protection: 0,
 			precision: 1,
@@ -65,7 +65,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/capcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 5,
 			protection: 0,
 			precision: 0,
@@ -84,9 +84,9 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/tinkeringcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
-			bruteProtection: 4,
+			bruteProtection: 2,
 			precision: 0,
 			power: 0,
 		},
@@ -101,7 +101,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/hopcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 4,
+			maxHealth: 30,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -118,9 +118,9 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/cookingcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
-			burnProtection: 4,
+			burnProtection: 2,
 			precision: 0,
 			power: 0,
 		},
@@ -137,7 +137,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/scicloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -157,7 +157,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/cmocloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 0,
+			maxHealth: 20,
 			evasion: 4,
 			protection: 0,
 			precision: 0,
@@ -177,7 +177,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/shitcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 5,
+			maxHealth: 30,
 			evasion: 3,
 			precision: 2,
 			power: 2,

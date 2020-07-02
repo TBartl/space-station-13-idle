@@ -8,7 +8,7 @@ export default {
 		name: "Potato",
 		sellPrice: 5,
 		icon: require("@/assets/art/botany/PlantPotato.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -20,7 +20,7 @@ export default {
 		name: "Tomato",
 		sellPrice: 5,
 		icon: require("@/assets/art/botany/PlantTomato.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -32,7 +32,7 @@ export default {
 		name: "Banana",
 		sellPrice: 14,
 		icon: require("@/assets/art/botany/PlantBanana.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: 5,
@@ -44,7 +44,7 @@ export default {
 		name: "Sunflower",
 		sellPrice: 14,
 		icon: require("@/assets/art/botany/PlantFlowersun.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: 5,
@@ -56,7 +56,7 @@ export default {
 		name: "Glowshroom",
 		sellPrice: 25,
 		icon: require("@/assets/art/botany/PlantShroomglow.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -68,7 +68,7 @@ export default {
 		name: "Hot Pepper",
 		sellPrice: 25,
 		icon: require("@/assets/art/botany/PlantPepperhot.png"),
-		healAmount: 5,
+		healAmount: 10,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -80,7 +80,7 @@ export default {
 		name: "Potato Battery",
 		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -92,7 +92,7 @@ export default {
 		name: "Blue Tomato",
 		sellPrice: 37,
 		icon: require("@/assets/art/botany/PlantTomatoblue.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -104,7 +104,7 @@ export default {
 		name: "...",
 		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantBananamime.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 10,
@@ -116,7 +116,7 @@ export default {
 		name: "Moonflower",
 		sellPrice: 45,
 		icon: require("@/assets/art/botany/PlantFlowermoon.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 10,
@@ -128,7 +128,7 @@ export default {
 		name: "Glowcap",
 		sellPrice: 52,
 		icon: require("@/assets/art/botany/PlantShroomred.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
@@ -140,7 +140,7 @@ export default {
 		name: "Ice Pepper",
 		sellPrice: 52,
 		icon: require("@/assets/art/botany/PlantPeppercold.png"),
-		healAmount: 10,
+		healAmount: 20,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
@@ -152,7 +152,7 @@ export default {
 		name: "Orange",
 		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantOrange.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: -5,
@@ -164,7 +164,7 @@ export default {
 		name: "Bluespace Tomato",
 		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: 0,
@@ -176,7 +176,7 @@ export default {
 		name: "Blue Banana",
 		sellPrice: 27,
 		icon: require("@/assets/art/botany/PlantBananablue.png"),
-		healAmount: 66,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: 10,
@@ -188,7 +188,7 @@ export default {
 		name: "Novaflower",
 		sellPrice: 66,
 		icon: require("@/assets/art/botany/PlantFlowernova.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: 10,
@@ -200,7 +200,7 @@ export default {
 		name: "Shadowshroom",
 		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantShroomshadow.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: -5,
@@ -212,7 +212,7 @@ export default {
 		name: "Ghost Pepper",
 		sellPrice: 71,
 		icon: require("@/assets/art/botany/PlantPepperghost.png"),
-		healAmount: 15,
+		healAmount: 30,
 		stats: {
 			maxHealth: 5,
 			evasion: 0,
@@ -224,7 +224,7 @@ export default {
 		name: "Multidimensional Orange",
 		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantOrange3d_anim.gif"),
-		healAmount: 20,
+		healAmount: 40,
 		stats: {
 			maxHealth: -5,
 			evasion: 5,

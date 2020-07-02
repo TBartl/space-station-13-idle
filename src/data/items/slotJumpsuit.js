@@ -6,7 +6,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_medical.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay.png"),
 		stats: {
-			maxHealth: 20
+			maxHealth: 130
 		},
 		requires: {
 			evasion: 5
@@ -19,7 +19,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_mining.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_mining_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			power: 5,
 			evasion: 3
 		},
@@ -38,7 +38,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_engi.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_engi_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			precision: 5,
 			evasion: 3
 		},
@@ -57,7 +57,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_robotics.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_robotics_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			precision: 5,
 			evasion: 3
 		},
@@ -76,7 +76,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_grey.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_grey_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			power: 5,
 			evasion: 3
 		},
@@ -95,7 +95,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_janitor.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_janitor_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			precision: 5,
 			evasion: 3
 		},
@@ -114,7 +114,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_botany.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_botany_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			power: 5,
 			evasion: 3
 		},
@@ -133,7 +133,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_chef.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_chef_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			precision: 5,
 			evasion: 3
 		},
@@ -152,7 +152,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_chemistry.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_chemistry_overlay.png"),
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			power: 5,
 			evasion: 3
 		},
@@ -171,7 +171,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_science.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_science_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			evasion: 3,
 			command:5
 		},
@@ -190,7 +190,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_valid.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_valid_overlay.png"),
 		stats: {
-			maxHealth: 5,
+			maxHealth: 60,
 			precision: 2,
 			power: 2,
 			evasion: 3
