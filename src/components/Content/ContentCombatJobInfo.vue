@@ -220,7 +220,7 @@
         <b>Robust</b>, or you'll quickly find yourself taking a visit to our station's medical center.
       </span>
       <span>
-        If you're up to the challenge, you go after your current
+        If you're up to the challenge, I'd recommend you go after your current
         <img
           class="mx--2"
           :src="require('@/assets/art/validhunting/icon.png')"
