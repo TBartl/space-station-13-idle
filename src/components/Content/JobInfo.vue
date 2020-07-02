@@ -82,7 +82,7 @@ export default {
 .dismiss {
   color: gray;
   font-size: 12px;
-  margin-bottom: -12px;
+  margin-bottom: -10px;
   cursor: pointer;
 }
 .option-icon {

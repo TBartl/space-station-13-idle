@@ -58,6 +58,12 @@ img {
 	border-top: 4px solid #afafaf;
 	padding: 1rem;
 }
+@media (max-width: 576px) {
+	.content-block{
+		padding: .5rem;
+	}
+}
+
 .content-block.locked {
   background-color: rgb(68, 68, 68);
   border-top: 4px solid #953d3d !important;
