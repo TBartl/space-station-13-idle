@@ -8,7 +8,7 @@ const version = JSON.parse(packageJson).version || 0
 module.exports = {
 
 	publicPath:
-		process.env.NODE_ENV === "production" ? "/space-station-13-idle/" : "/",
+		process.env.NODE_ENV === "github" ? "/space-station-13-idle/" : "/",
 
 	configureWebpack: {
 		plugins: [
