@@ -5,7 +5,7 @@
     </td>
     <td>{{level}}/{{maxLevel}}</td>
     <td class="xp">{{Math.round(xp) | cleanNum}}/{{nextLevelXP | cleanNum}}</td>
-    <td width="99%">
+    <td width="99%" class="d-none d-md-table-cell">
       <progress-bar style="border-radius: 0 !important" :progress="progress" />
     </td>
   </tr>
