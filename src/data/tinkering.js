@@ -1,35 +1,35 @@
 const ACTIONS_RECYCLING = {
 	tinkerRecycleJ: {
-		time: 10,
+		time: 3,
 		actionName: "RECYCLE INTO",
 		item: "burnJunk",
 		icon: require("@/assets/art/tinkering/burnjunk.png"),
-		xp: 10,
+		xp: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			junk: 2
+			junk: 1
 		}
 	},
 	tinkerRecycleS: {
-		time: 10,
+		time: 3,
 		item: "burnJunk",
 		actionName: "RECYCLE INTO",
 		icon: require("@/assets/art/tinkering/burnjunk.png"),
-		xp: 10,
+		xp: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			spaceJunk: 2
+			spaceJunk: 1
 		}
 	},
 	tinkerRecycleA: {
-		time: 10,
+		time: 3,
 		item: "burnJunk",
 		actionName: "RECYCLE INTO",
 		icon: require("@/assets/art/tinkering/burnjunk.png"),
-		xp: 10,
+		xp: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			armorJunk: 2
+			armorJunk: 1
 		}
 	},
 }
