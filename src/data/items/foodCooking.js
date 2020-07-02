@@ -209,7 +209,7 @@ let FOOD = {
 		name: "Senpai",
 		sellPrice: 183,
 		icon: require("@/assets/art/cooking/pie3.png"),
-		healAmount: 45,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: 20,
@@ -293,7 +293,7 @@ let FOOD = {
 		name: "Bluespace Pizza",
 		sellPrice: 162,
 		icon: require("@/assets/art/cooking/animal3.png"),
-		healAmount: 50,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -305,7 +305,7 @@ let FOOD = {
 		name: "Nova Pizza",
 		sellPrice: 187,
 		icon: require("@/assets/art/cooking/animal4.png"),
-		healAmount: 50,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: 0,
@@ -341,7 +341,7 @@ let FOOD = {
 		name: "Fush n Chips",
 		sellPrice: 168,
 		icon: require("@/assets/art/cooking/Alien3.png"),
-		healAmount: 50,
+		healAmount: 60,
 		stats: {
 			maxHealth: 5,
 			evasion: 10,
@@ -353,7 +353,7 @@ let FOOD = {
 		name: "Fried Friend",
 		sellPrice: 197,
 		icon: require("@/assets/art/cooking/Alien4.png"),
-		healAmount: 50,
+		healAmount: 60,
 		stats: {
 			maxHealth: 10,
 			evasion: 10,
