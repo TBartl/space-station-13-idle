@@ -50,8 +50,23 @@ export default {
     },
     validItems() {
       return Object.keys(this.$store.getters["inventory/bank"]).filter(
-        itemId =>
-          ITEMS[itemId] && ITEMS[itemId].potionJob && ITEMS[itemId].potionJob == this.jobId
+        itemId => {
+          let item = ITEMS[itemId];
+          // Are we a potion?
+          if (!item.potionJob) return false;
+
+          // Do we belong to this job?
+          if (item.potionJob != this.jobId) return false;
+
+          let potionData = this.$store.getters["potions/get"](
+            item.potionJob
+          );
+          // Has the job ever had a potion?
+          if (!potionData) return true;
+
+          // Is the potion the same as ours?
+          return potionData.itemId != itemId;
+        }
       );
     },
     currentPotion() {
