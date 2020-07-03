@@ -36,7 +36,7 @@
           v-for="(enemyId, index) in zone.enemies"
           :key="index"
           :enemyId="enemyId"
-          :restrictFight="true"
+          :restrictFight="zone.boss"
         />
       </div>
     </div>
