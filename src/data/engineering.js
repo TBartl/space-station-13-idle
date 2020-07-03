@@ -241,7 +241,8 @@ const ILL_ADVISED_ACTIONS = {
 	},
 	engGen3: {
 		time: 5,
-		name: "THAT ONE Generator",
+		actionName: "TRY TO FIX",
+		name: "Damaged Generator",
 		items: {
 			id: "power",
 			count: 8

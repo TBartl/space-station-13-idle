@@ -27,7 +27,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["hatCrate", "knifeCrate", "lavaCrate", "supplyCrate", "syndieCrate"]
+		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "secCrate", "lavaCrate", "syndieCrate"]
 	},
 	{
 		name: "Clothes Vendo-Matic",
@@ -241,6 +241,20 @@ const CAPES = {
 }
 
 const CRATES = {
+	supplyCrate: {
+		item: "supplyCrate",
+		description: "Nanotrasen can get send the supplies YOU need directly to your location with this state of the art drop pod.",
+		requiredItems: {
+			money: 1000
+		}
+	},
+	knifeCrate: {
+		item: "knifeCrate",
+		description: "Running with knives might not always make you faster, but you'll look cool and edgy.",
+		requiredItems: {
+			money: 2500
+		}
+	},
 	hatCrate: {
 		item: "hatCrate",
 		description: `No Key Required. Hats can not be refunded for scrap. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
@@ -248,11 +262,11 @@ const CRATES = {
 			money: 10000
 		}
 	},
-	knifeCrate: {
-		item: "knifeCrate",
-		description: "Running with knives might not always make you faster, but you'll look cool and edgy.",
+	secCrate: {
+		item: "secCrate",
+		description: "Everything needed to run an effecient internal security organization. Pre-dyed red to help cover those pesky the blood stains.",
 		requiredItems: {
-			money: 1000
+			boss1Parts: 20
 		}
 	},
 	lavaCrate: {
@@ -260,13 +274,6 @@ const CRATES = {
 		description: "Handcrafted materials and relics aquired from the local planetary natives. ",
 		requiredItems: {
 			exoticParts: 20
-		}
-	},
-	supplyCrate: {
-		item: "supplyCrate",
-		description: "Nanotrasen can get send the supplies YOU need directly to your location with this state of the art drop pod.",
-		requiredItems: {
-			money: 20000
 		}
 	},
 	syndieCrate: {

@@ -284,6 +284,25 @@ const MECHS = {
 		}
 	}
 }
+const SPECIALARMOR = {
+	armorSpecial1: {
+		name: "Xenobiology Enhanced Armor",
+		equipmentSlot: "Chest",
+		sellPrice: 170,
+		icon: require("@/assets/art/combat/items/arm_u1.png"), overlay: require("@/assets/art/combat/items/arm_u1_overlay.png"),
+		stats: {
+			maxHealth: 150,
+			evasion: -5,
+			protection: 9,
+			precision: 8,
+			power: 8,
+		},
+		requires: {
+			xenobiology: 10,
+			evasion: 25
+		}
+	},
+}
 
 Object.values(BRUTEARMOR).forEach(brutearmor => {
 	brutearmor.equipmentSlot = "chest";
@@ -324,5 +343,6 @@ Object.values(MECHS).forEach(mech => {
 export default {
 	...BRUTEARMOR,
 	...BURNARMOR,
-	...MECHS
+	...MECHS,
+	...SPECIALARMOR
 }
