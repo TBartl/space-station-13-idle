@@ -46,7 +46,7 @@
           <div class="content-block d-flex flex-row justify-content-around">
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Space Used:</span>
-              <span class="primary-bubble">{{bankItemIds.length}}/{{bankSlots}}</span>
+              <span :class="fakeItemCount ? 'primary-bubble' : 'danger-bubble' ">{{bankItemIds.length}}/{{bankSlots}}</span>
             </div>
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Bank Value:</span>
