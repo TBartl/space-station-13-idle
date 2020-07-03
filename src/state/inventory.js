@@ -222,11 +222,19 @@ const inventory = {
 			}
 		},
 		equip({ state, commit, dispatch }, itemId) {
-			dispatch("unequip", itemId);
+			let slot = getEquipmentSlot(itemId);
+
+			let prevItemId = state.equipment[slot].itemId;
+			let prevCount = state.equipment[slot].count;
+
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
-			commit("setEquipment", { slot: getEquipmentSlot(itemId), itemId, count });
+			commit("setEquipment", { slot: slot, itemId, count });
 			commit("changeItemCount", { itemId, count: -count });
 			dispatch("playerMob/clampHealth", {}, { root: true })
+
+			if (prevCount) {
+				commit("changeItemCount", { itemId: prevItemId, count: prevCount });
+			}
 		},
 		purchase({ commit, dispatch }, purchase) {
 			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
