@@ -30,6 +30,25 @@
             </div>
             <button
               type="button"
+              class="btn btn-primary my-1 d-block"
+              @click="exportDataClicked"
+            >Export Data</button>
+            <div class="d-flex flex-row align-items-center">
+              <button
+                type="button"
+                class="btn btn-danger my-1 d-block flex-shrink-0 mr-2"
+                :class="{'cheats-disabled': !fileData}"
+                @click="importDataClicked"
+              >Import Data</button>
+              <input
+                type="file"
+                class="form-control-file"
+                accept="application/JSON"
+                @change="importDataChanged"
+              />
+            </div>
+            <button
+              type="button"
               class="btn btn-danger my-1 d-block"
               @click="resetDataClicked"
             >Reset ALL Data</button>
@@ -120,9 +139,15 @@ import { MAX_LEVEL } from "@/data/experience";
 
 import ENEMIES from "@/data/enemies";
 import { calcRobustness } from "@/utils/combatUtils";
+import { reducer } from "@/state/store";
 
 export default {
   extends: ContentAbstract,
+  data() {
+    return {
+      fileData: null
+    };
+  },
   computed: {
     showAllActions: {
       get() {
@@ -174,6 +199,47 @@ export default {
     resetInfoClicked() {
       this.$store.commit("info/resetAll");
       EventBus.$emit("toast", { text: "Tutorials reset!" });
+    },
+    exportDataClicked() {
+      let file = new Blob([JSON.stringify(reducer(this.$store.state))], {
+        type: "text/plain"
+      });
+
+      let el = document.createElement("a");
+      let url = URL.createObjectURL(file);
+      el.href = url;
+      el.download = "SpaceStationIdleSave.json";
+      document.body.appendChild(el);
+      el.click();
+      setTimeout(function() {
+        document.body.removeChild(el);
+        window.URL.revokeObjectURL(url);
+      }, 0);
+
+      EventBus.$emit("toast", { text: "Data exported!" });
+    },
+    importDataChanged(event) {
+      this.fileData = null;
+
+      let files = event.target.files;
+      if (files.length == 0) {
+        return;
+      }
+
+      let reader = new FileReader();
+      reader.addEventListener("load", event => {
+        this.fileData = event.target.result;
+      });
+      reader.readAsText(files[0]);
+    },
+    importDataClicked() {
+      if (!this.fileData) {
+        EventBus.$emit("toast", { text: "No file to import!" });
+        return;
+      }
+
+      this.$store.dispatch("setData", JSON.parse(this.fileData));
+      EventBus.$emit("toast", { text: "Data imported!" });
     },
     resetDataClicked() {
       this.$modal.show(ModalResetData, {}, { height: "auto", width: "320px" });
@@ -240,6 +306,7 @@ export default {
 .cheats-disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  pointer-events: none !important;
 }
 .cheats-disabled * {
   pointer-events: none !important;

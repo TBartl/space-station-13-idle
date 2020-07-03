@@ -128,7 +128,7 @@ const POTIONS = {
 			oxygen: 2,
 			oil: 2,
 			mercury: 4,
-			iron: 1
+			slimeGray: 1
 		}
 	},
 	synthPotionCooking: {
