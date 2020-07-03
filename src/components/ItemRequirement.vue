@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex fledx-row align-items-center">
-    <img :src="item.icon" :id="id" />
+  <div class="d-flex flex-row align-items-center">
+    <img :src="item.icon" :id="id" class="mx--0" />
     <item-popover :itemId="itemId" :target="id" />
     <span :style="{opacity: bankCount >= count ? 1: .5}">x{{count}} ({{bankCount ? bankCount : 0}})</span>
   </div>

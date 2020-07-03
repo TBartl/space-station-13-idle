@@ -72,14 +72,6 @@
             <b>Department</b> you're raiding.
           </span>
           <span>
-            If you want to know what to expect, hover your cursor over a
-            <img
-              class="mx--0"
-              :src="require('@/assets/art/graytiding/Mining.png')"
-            />
-            <b>Door</b> and I can give you an idea.
-          </span>
-          <span>
             Oh, and be on the look out for
             <img
               class="mx--0"
