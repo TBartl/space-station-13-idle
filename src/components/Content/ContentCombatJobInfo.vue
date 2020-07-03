@@ -14,6 +14,7 @@
 					{name: 'Combat Focus?', icon: require('@/assets/art/jobinfo/combatFocus.png'), iconClass:'mx--1'},
 					{name: 'Damage Types?', icon: require('@/assets/art/combat/armor-brute.png'), iconClass:'mx--1'},
 					{name: 'Validhunting?', icon: require('@/assets/art/validhunting/icon.png'), iconClass:'mx--1'},
+					{name: 'Bosses?', icon: require('@/assets/art/combat/enemies/boss/legion3_anim.gif'), iconClass:'mx--1'},
 					{name: 'Legality?', icon: require('@/assets/art/jobinfo/spacelaw.png'), iconClass:'mx--2'}
 				]"
   >
@@ -383,6 +384,59 @@
         <b>Robust</b>
         <img class="mx--0" :src="require('@/assets/art/combat/enemies/ai_anim.gif')" />
         <b>Enemies</b>.
+      </span>
+    </template>
+    <template slot="Bosses?">
+      <span>Looking for a challenge?</span>
+      <span>
+        Once you've collected enough
+        <img
+          class="mx--1"
+          :src="require('@/assets/art/validhunting/doceasy.png')"
+        />
+        <b>Bounty Documents</b> from
+        <img class="mx--1" :src="require('@/assets/art/combat/enemies/cargo_tech.png')" />
+        <b>Enemies</b>, you'll be able to purchase a
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/shop/items/ticketeasy.png')"
+        />
+        <b>Ticket</b> to fight a random
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/combat/enemies/boss/legion3_anim.gif')"
+        />
+        <b>Boss</b>.
+      </span>
+      <span>
+        These
+        <img class="mx--0" :src="require('@/assets/art/combat/enemies/boss/legion3_anim.gif')" />
+        <b>Bosses</b> drop their own special
+        <img
+          class="mx--2"
+          :src="require('@/assets/art/shop/items/telecrystal.png')"
+        />
+        <b>Currency</b> which can be exchanged for valuable
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/shop/items/syndiedroppod.png')"
+        />
+        <b>Loot Boxes</b> at
+        <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+        <b>Cargo</b>.
+      </span>
+      <span>
+        You're not going to be able to take them down easily though; make sure you suit up in your best
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/combat/equipment/limb.png')"
+        />
+        <b>Equipment</b> and bring some powerful
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/cooking/burger1.png')"
+        />
+        <b>Food</b>.
       </span>
     </template>
     <template slot="Legality?">
