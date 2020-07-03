@@ -141,11 +141,12 @@ const combat = {
 			if (!state.targetEnemy) return;
 			commit("_setTargetEnemy", null);
 		},
-		_resume({ state, dispatch, rootGetters }) {
+		_resume({ state, dispatch, getters, rootGetters }) {
 			dispatch("_startRegen");
 			if (!state.targetEnemy) return;
 
 			if (rootGetters["enemyMob/health"] == 0) {
+				if (ENEMIES[getters["targetEnemy"]].boss) return;
 				dispatch("_startMove");
 			}
 		},
@@ -156,9 +157,10 @@ const combat = {
 			dispatch("playerMob/startCombat", {}, { root: true });
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
-		pauseCombat({ dispatch }) {
+		pauseCombat({ dispatch, getters }) {
 			dispatch("playerMob/pauseCombat", {}, { root: true });
 			dispatch("enemyMob/pauseCombat", {}, { root: true });
+			if (ENEMIES[getters["targetEnemy"]].boss) return;
 			dispatch("_startMove");
 		},
 		continueCombat({ state, dispatch }) {

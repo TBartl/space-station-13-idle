@@ -17,6 +17,16 @@ import boss1Security from '@/data/enemies/boss1-security';
 import boss2Lavaland from '@/data/enemies/boss2-lavaland';
 import boss3Antag from '@/data/enemies/boss3-antag';
 
+const BOSS_ENEMIES = {
+	...boss1Security,
+	...boss2Lavaland,
+	...boss3Antag
+}
+
+Object.values(BOSS_ENEMIES).forEach(bossEnemy => {
+	bossEnemy.boss = true;
+});
+
 const ENEMIES = {
 	...arrivalLounge,
 	...maintenance,
@@ -30,9 +40,7 @@ const ENEMIES = {
 	...virology,
 	...science,
 	...aiCore,
-	...boss1Security,
-	...boss2Lavaland,
-	...boss3Antag
+	...BOSS_ENEMIES
 }
 
 Object.values(ENEMIES).forEach(enemy => {

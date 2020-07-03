@@ -201,12 +201,12 @@ export default {
         let promise = Velocity(
           this.$refs.body,
           { translateX: this.mobType == "player" ? "70px" : "-70px" },
-          80
+          50
         );
         if (!promise) return;
         promise.then(() => {
           if (!this.$refs.body) return;
-          Velocity(this.$refs.body, { translateX: "0px" }, 80);
+          Velocity(this.$refs.body, { translateX: "0px" }, 50);
         });
       }
     });

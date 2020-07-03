@@ -271,13 +271,42 @@ const CRATES = {
 	},
 	syndieCrate: {
 		item: "syndieCrate",
-		description: "Syndicate forces have hijacked the droppod system to help you be the murder you always knew you could be.",
+		description: "Syndicate forces have hijacked the droppod system to help you be the murderer you always knew you could be.",
 		requiredItems: {
 			telecrystal: 20,
 		}
 	},
 }
 
+const TICKETS = {
+	bossTicket1: {
+		name: "Code Green Ticket",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticketeasy.png"),
+		requiredItems: {
+			ticket1: 5,
+		},
+		fightZone: "Brutal Security"
+	},
+	bossTicket2: {
+		name: "Code Blue Bounty Ticket",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticketmedium.png"),
+		requiredItems: {
+			ticket2: 5,
+		},
+		fightZone: "Primordial Planet"
+	},
+	bossTicket3: {
+		name: "Code Red Bounty Ticket",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/tickethard.png"),
+		requiredItems: {
+			ticket3: 5,
+		},
+		fightZone: "Subversive Individuals"
+	},
+}
 
 export const PURCHASES = {
 	...INVENTORY_UPGRADES,
@@ -286,6 +315,7 @@ export const PURCHASES = {
 	...JOB_UNLOCKS,
 	...COMBAT_UPGRADES,
 	...JOB_UPGRADES,
-	...CRATES
+	...CRATES,
+	...TICKETS
 
 }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { EventBus } from "@/utils/eventBus.js";
 import ModalDeath from "@/components/Modals/ModalDeath";
 import ITEMS from "@/data/items";
+import ZONES from "@/data/zones";
 
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
@@ -209,7 +210,7 @@ const inventory = {
 			commit("changeItemCount", { itemId, count: -count });
 			dispatch("playerMob/clampHealth", {}, { root: true })
 		},
-		purchase({ commit }, purchase) {
+		purchase({ commit, dispatch }, purchase) {
 			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
 				commit("changeItemCount", { itemId, count: -count });
 			}
@@ -221,6 +222,13 @@ const inventory = {
 				for (let [itemId, count] of Object.entries(yieldedItems)) {
 					commit("changeItemCount", { itemId, count });
 				}
+			}
+
+			if (purchase.fightZone) {
+				let zone = ZONES.find(z => z.name == purchase.fightZone);
+				let enemyId = zone.enemies[Math.floor(Math.random() * zone.enemies.length)];
+				console.log(enemyId);
+				dispatch("combat/startCombat", enemyId, { root: true });
 			}
 		},
 		loseEquipmentPiece({ getters, commit }) {
