@@ -30,6 +30,10 @@ export default {
 					{
 						id: 'meleeToolbox4',
 						weight: 3
+					},
+					{
+						id: 'neckFanny1',
+						weight: 1
 					}
 				]
 			},
@@ -95,6 +99,7 @@ export default {
 				itemTable: [
 					{
 						id: 'lithium',
+						count: [1-5],
 						weight: 15
 					},
 					{
