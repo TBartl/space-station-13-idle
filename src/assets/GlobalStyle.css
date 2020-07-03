@@ -216,7 +216,7 @@ img {
 	margin-right: -.3rem;
 }
 
-@media (min-width: 2920px) {
+@media (min-width: 1900px) {
 	.col-xxl-2 {
 		flex: 0 0 16.666667% !important;
 		max-width: 16.666667% !important;
