@@ -58,9 +58,7 @@ export default {
           // Do we belong to this job?
           if (item.potionJob != this.jobId) return false;
 
-          let potionData = this.$store.getters["potions/get"](
-            item.potionJob
-          );
+          let potionData = this.$store.getters["potions/get"](item.potionJob);
           // Has the job ever had a potion?
           if (!potionData) return true;
 
@@ -98,7 +96,7 @@ export default {
   },
   methods: {
     remove() {
-      this.$store.commit("potions/remove", this.jobId);
+      this.$store.dispatch("potions/remove", this.jobId);
     }
   }
 };

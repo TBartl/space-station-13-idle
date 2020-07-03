@@ -30,7 +30,7 @@ const upgrades = {
 				})
 			}
 		},
-		remove(state, jobId) {
+		_remove(state, jobId) {
 			Vue.delete(state.potions, jobId);
 		},
 		_useCharge(state, jobId) {
@@ -51,10 +51,20 @@ const upgrades = {
 					console.log("Set");
 					dispatch("set", state.potions[jobId].itemId);
 				} else {
-					console.log("Remove");
-					commit("remove", jobId);
+					commit("_remove", jobId);
 				}
 			}
+		},
+		remove({ state, commit }, jobId) {
+			let potionData = state.potions[jobId];
+			let chargesRemaining = potionData.charges;
+			let chargesMax = ITEMS[potionData.itemId].potionCharges;
+			if (chargesRemaining >= chargesMax) {
+				// Refund the potion
+				commit("inventory/changeItemCount", { itemId: potionData.itemId, count: 1 }, { root: true });
+			}
+
+			commit("_remove", jobId);
 		}
 	}
 }
