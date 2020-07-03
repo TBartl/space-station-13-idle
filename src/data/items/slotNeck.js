@@ -187,5 +187,21 @@ export default {
 		requires: {
 			shitposting: MAX_LEVEL
 		},
-	}
+	},
+	neckFanny1: {
+		name: "Fruity Fanny Pack",
+		sellPrice: 2500,
+		icon: require("@/assets/art/combat/items/cloak/neck_orange.png"),
+		overlay: require("@/assets/art/combat/items/cloak/neck_orange_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 10,
+			evasion: 0,
+			precision: 0,
+			power: 3,
+		},
+		requires: {
+			evasion: 30
+		},
+	},
 }
