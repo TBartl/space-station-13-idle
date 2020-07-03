@@ -193,7 +193,7 @@ const ACTIONS_SHARP_WEAPONS = {
 		time: 43,
 		item: "meleeSharp7",
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
-		xp: 20,
+		xp: 73,
 		requiredLevel: 43,
 		requiredItems: {
 			junk: 2
@@ -260,7 +260,7 @@ export const ACTIONS_SPACE_SUITS = {
 		time: 10,
 		item: "armorBurn1",
 		icon: require("@/assets/art/combat/items/arm_s1.png"),
-		xp: 3,
+		xp: 5,
 		requiredLevel: 2,
 		requiredItems: {
 			spaceJunk: 1

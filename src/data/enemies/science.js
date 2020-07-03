@@ -9,7 +9,7 @@ export default {
 			power: 78,
 			evasion: 75,
 			damageType: "burn",
-			burnProtection: 20
+			burnProtection: 40
 		},
 		itemTables: [
 			{
@@ -17,16 +17,21 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 1
+						weight: 25
 					},
 					{
 						id: 'gold',
-						weight: 1
+						weight: 25
 					},
 					{
 						id: 'titanium',
-						weight: 1
-					}
+						weight: 20
+					},
+					{
+						id: 'ticket3',
+						count: [1, 2],
+						weight: 5
+					},
 				]
 			},
 			{
@@ -45,7 +50,7 @@ export default {
 			power: 60,
 			evasion: 80,
 			damageType: "burn",
-			burnProtection: 20
+			burnProtection: 40
 		},
 		itemTables: [
 			{
@@ -57,7 +62,7 @@ export default {
 						weight: 7
 					},
 					{
-						id: 'meleeSharp3',
+						id: 'meleeSharp5',
 						weight: 4
 					},
 				]
@@ -95,11 +100,11 @@ export default {
 			power: 35,
 			evasion: 20,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 40
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 0.4,
 				itemTable: [
 					{
 						id: 'wire',
@@ -140,7 +145,7 @@ export default {
 			power: 54,
 			evasion: 110,
 			damageType: "burn",
-			burnProtection: 20
+			burnProtection: 40
 		},
 		itemTables: [
 			{
@@ -148,12 +153,8 @@ export default {
 				itemTable: [
 					{
 						id: 'bluespace',
+						count: 3,
 						weight: 19
-					},
-					{
-						id: 'ticket3',
-						count: [1, 2],
-						weight: 3
 					},
 					{
 						id: "armorBrute6",

@@ -17,29 +17,28 @@ export default {
 				itemTable: [
 					{
 						id: 'junk',
-						weight: 20
+						weight: 38
 					},
 					{
 						id: 'spaceJunk',
-						weight: 18
+						weight: 22
 					},
 					{
 						id: 'armorJunk',
-						weight: 6
+						weight: 14
 					},
 					{
 						id: 'foodPower1',
-						weight: 3
+						weight: 12
 					},
 					{
 						id: 'pillMeth',
 						count: [0, 20],
-						weight: 1
+						weight: 9
 					},
 					{
 						id: 'ticket1',
-						count: [0, 2],
-						weight: 1
+						weight: 5
 					}
 				]
 			},

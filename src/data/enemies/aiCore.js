@@ -9,26 +9,29 @@ export default {
 			power: 80,
 			evasion: 72,
 			damageType: "brute",
-			burnProtection: 0,
-			bruteProtection: 5
+			bruteProtection: 50
 		},
 		itemTables: [
 			{
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 1
+						id: 'criminal',
+						weight: 13
+					},
+					{
+						id: 'titanium',
+						weight: 4
+					},
+					{
+						id: 'meleeSharp1',
+						weight: 2
 					},
 					{
 						id: 'ticket3',
 						count: [1, 3],
 						weight: 1
 					},
-					{
-						id: 'titanium',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -60,8 +63,7 @@ export default {
 			power: 73,
 			evasion: 52,
 			damageType: "burn",
-			burnProtection: 0,
-			bruteProtection: 5
+			bruteProtection: 50
 		},
 		itemTables: [
 			{
@@ -69,16 +71,29 @@ export default {
 				itemTable: [
 					{
 						id: 'ammoEnergy4',
-						weight: 1
+						count: [1, 3],
+						weight: 9
 					},
 					{
-						id: 'gold',
-						weight: 1
+						id: 'ammoEnergy3',
+						count: [1, 3],
+						weight: 8
 					},
 					{
-						id: 'titanium',
-						weight: 1
-					}
+						id: 'ammoEnergy2',
+						count: [1, 3],
+						weight: 7
+					},
+					{
+						id: 'ammoEnergy1',
+						count: [4, 8],
+						weight: 6
+					},
+					{
+						id: 'ammoEnergy4',
+						count: [8, 12],
+						weight: 2
+					},
 				]
 			},
 			{
@@ -111,7 +126,7 @@ export default {
 			evasion: 10,
 			damageType: "burn",
 			burnProtection: 50,
-			bruteProtection: 60
+			bruteProtection: 20
 		},
 		itemTables: [
 			{

@@ -16,16 +16,20 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'faceSec',
-						weight: 1
-					},
-					{
 						id: 'foodEvasion1',
-						weight: 1
+						weight: 8
 					},
 					{
-						id: 'meleeSharp3',
-						weight: 1
+						id: 'q_foodPower1',
+						weight: 6
+					},
+					{
+						id: 'faceSec',
+						weight: 4
+					},
+					{
+						id: 'meleeToolbox4',
+						weight: 3
 					}
 				]
 			},
@@ -49,27 +53,29 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: .8,
 				itemTable: [
 					{
-						id: 'faceWrestle',
-						weight: 1
-					},
-					{
 						id: 'ammoEnergy2',
-						weight: 1
+						count: 2,
+						weight: 78
 					},
 					{
-						id: 'jumpsuitSecurity',
-						weight: 1
+						id: 'faceWrestle',
+						weight: 29
 					},
 					{
 						id: 'ticket1',
 						count: [1, 3],
-						weight: 1
+						weight: 3.5
 					}
 				]
-			}, {
+			},
+			{
+				chance: .02,
+				item: "jumpsuitSecurity"
+			},
+			{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -89,7 +95,7 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.75,
+				chance: 0.6,
 				itemTable: [
 					{
 						id: 'lithium',

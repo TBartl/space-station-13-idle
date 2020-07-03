@@ -9,8 +9,7 @@ export default {
 			power: 94,
 			evasion: 63,
 			damageType: "brute",
-			burnProtection: 10,
-			bruteProtection: 5
+			bruteProtection: 40,
 		},
 		itemTables: [
 			{
@@ -47,8 +46,7 @@ export default {
 			power: 71,
 			evasion: 73,
 			damageType: "brute",
-			burnProtection: 20,
-			bruteProtection: 5
+			burnProtection: 40,
 		},
 		itemTables: [
 			{
@@ -84,8 +82,7 @@ export default {
 			power: 91,
 			evasion: 95,
 			damageType: "brute",
-			burnProtection: 20,
-			bruteProtection: 5
+			burnProtection: 40,
 		},
 		itemTables: [
 			{
@@ -107,10 +104,6 @@ export default {
 				]
 			},
 			{
-				chance: .2,
-				item: "fireaxe"
-			},
-			{
 				chance: 1,
 				item: "foodMeatH"
 			}
@@ -127,7 +120,7 @@ export default {
 			evasion: 81,
 			damageType: "brute",
 			burnProtection: 5,
-			bruteProtection: 20
+			bruteProtection: 40
 		},
 		itemTables: [
 			{

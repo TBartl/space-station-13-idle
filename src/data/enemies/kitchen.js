@@ -121,16 +121,16 @@ export default {
 				itemTable: [
 					{
 						id: 'foot',
-						weight: 2
+						weight: 4
 					}, {
 						id: 'foodMeatH',
-						weight: 2
+						weight: 4
 					}, {
 						id: 'foodMeatA',
-						weight: 2
+						weight: 4
 					}, {
 						id: 'foodMeatZ',
-						weight: 2
+						weight: 4
 					},
 					{
 						id: 'ticket2',
