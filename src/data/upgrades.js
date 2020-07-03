@@ -83,7 +83,7 @@ export const COMBAT_UPGRADES = {
 			autoeat: 0
 		},
 		requiredLevels: {
-			validhunting: 10
+			validhunting: 5
 		}
 	},
 	lootDrops1: {
