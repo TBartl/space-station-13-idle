@@ -64,19 +64,22 @@ export default [
 		name: "Brutal Security",
 		icon: require("@/assets/art/combat/zones/security.png"),
 		enemies: ["sec1", "sec2", "sec3", "sec4"],
-		boss: true
+		boss: true,
+		purchases: ["bossTicket1"]
 	},
 	{
 		name: "Primordial Planet",
 		icon: require("@/assets/art/combat/zones/lavaland.gif"),
 		enemies: ["lava1", "lava2", "lava3", "lava4"],
-		boss: true
+		boss: true,
+		purchases: ["bossTicket2"]
 	},
 	{
 		name: "Subversive Individuals",
 		icon: require("@/assets/art/combat/zones/traitor.gif"),
 		enemies: ["antag1", "antag2", "antag3", "antag4"],
-		boss: true
+		boss: true,
+		purchases: ["bossTicket3"]
 	},
 	// {
 	// 	name: "Debug Land",

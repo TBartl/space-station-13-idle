@@ -49,6 +49,7 @@ import ItemChance from "@/components/ItemTable/ItemChance";
 import { mapActions } from "vuex";
 import { getBasedStats } from "@/utils/combatUtils";
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
+
 export default {
   components: { RobustnessBadge, ItemChance, ValidhuntingCompleteButton },
   props: ["enemyId", "showValidhunting", "restrictFight"],
