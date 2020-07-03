@@ -1,7 +1,7 @@
 const randomJunkTable = [
 	{
 		id: 'junk',
-		weight: 3
+		weight: 6
 	},
 	{
 		id: 'spaceJunk',

@@ -1,7 +1,7 @@
 const MBRUTE = {
 	meleeBlunt1: {
 		name: "Rolling Pin",
-		sellPrice: 30,
+		sellPrice: 200,
 		icon: require("@/assets/art/combat/items/melee_b1.png"),
 		overlay: require("@/assets/art/combat/items/melee_b1_overlay.png"),
 		equipmentSlot: "hand",
@@ -18,7 +18,7 @@ const MBRUTE = {
 	},
 	meleeBlunt2: {
 		name: "Baseball Bat",
-		sellPrice: 30,
+		sellPrice: 240,
 		icon: require("@/assets/art/combat/items/melee_b2.png"),
 		overlay: require("@/assets/art/combat/items/melee_b2_overlay.png"),
 		equipmentSlot: "hand",
@@ -35,7 +35,7 @@ const MBRUTE = {
 	},
 	meleeBlunt3: {
 		name: "Null Rod",
-		sellPrice: 30,
+		sellPrice: 320,
 		icon: require("@/assets/art/combat/items/melee_b3.png"),
 		overlay: require("@/assets/art/combat/items/melee_b3_overlay.png"),
 		equipmentSlot: "hand",
@@ -52,7 +52,7 @@ const MBRUTE = {
 	},
 	meleeBlunt4: {
 		name: "Truncheon",
-		sellPrice: 30,
+		sellPrice: 360,
 		icon: require("@/assets/art/combat/items/melee_b4.png"),
 		overlay: require("@/assets/art/combat/items/melee_b4_overlay.png"),
 		equipmentSlot: "hand",
@@ -69,7 +69,7 @@ const MBRUTE = {
 	},
 	meleeBlunt5: {
 		name: "Air Tank",
-		sellPrice: 30,
+		sellPrice: 440,
 		icon: require("@/assets/art/combat/items/melee_b5.png"),
 		overlay: require("@/assets/art/combat/items/melee_b5_overlay.png"),
 		equipmentSlot: "hand",
@@ -86,7 +86,7 @@ const MBRUTE = {
 	},
 	meleeBlunt6: {
 		name: "Fire Extinquisher",
-		sellPrice: 30,
+		sellPrice: 480,
 		icon: require("@/assets/art/combat/items/melee_b6.png"),
 		overlay: require("@/assets/art/combat/items/melee_b6_overlay.png"),
 		equipmentSlot: "hand",
@@ -103,7 +103,7 @@ const MBRUTE = {
 	},
 	meleeBlunt7: {
 		name: "Jackhammer",
-		sellPrice: 30,
+		sellPrice: 710,
 		icon: require("@/assets/art/combat/items/melee_b7.png"),
 		overlay: require("@/assets/art/combat/items/melee_b7_overlay.png"),
 		equipmentSlot: "hand",
@@ -120,7 +120,7 @@ const MBRUTE = {
 	},
 	meleeBlunt8: {
 		name: "Chain Of Command",
-		sellPrice: 30,
+		sellPrice: 750,
 		icon: require("@/assets/art/combat/items/melee_b8.png"),
 		overlay: require("@/assets/art/combat/items/melee_b8_overlay_anim.gif"),
 		equipmentSlot: "hand",
@@ -137,7 +137,7 @@ const MBRUTE = {
 	},
 	meleeBlunt9: {
 		name: "Stun Baton",
-		sellPrice: 30,
+		sellPrice: 950,
 		icon: require("@/assets/art/combat/items/melee_b9.png"),
 		overlay: require("@/assets/art/combat/items/melee_b9_overlay.png"),
 		equipmentSlot: "hand",
@@ -157,7 +157,7 @@ const MBRUTE = {
 const MCUT = {
 	meleeSharp1: {
 		name: "Kitchen Fork",
-		sellPrice: 30,
+		sellPrice: 220,
 		icon: require("@/assets/art/combat/items/melee_c1.png"),
 		overlay: require("@/assets/art/combat/items/melee_c1_overlay.png"),
 		equipmentSlot: "hand",
@@ -174,7 +174,7 @@ const MCUT = {
 	},
 	meleeSharp2: {
 		name: "Kitchen Knife",
-		sellPrice: 30,
+		sellPrice: 300,
 		icon: require("@/assets/art/combat/items/melee_c2.png"),
 		overlay: require("@/assets/art/combat/items/melee_c2_overlay.png"),
 		equipmentSlot: "hand",
@@ -191,12 +191,12 @@ const MCUT = {
 	},
 	meleeSharp3: {
 		name: "Butcher Cleaver",
-		sellPrice: 30,
+		sellPrice: 340,
 		icon: require("@/assets/art/combat/items/melee_c3.png"),
 		overlay: require("@/assets/art/combat/items/melee_c3_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 5,
+			maxHealth: 340,
 			evasion: 5,
 			precision: -5,
 			attackSpeed: 2,
@@ -208,7 +208,7 @@ const MCUT = {
 	},
 	meleeSharp4: {
 		name: "Spear",
-		sellPrice: 30,
+		sellPrice: 420,
 		icon: require("@/assets/art/combat/items/melee_c4.png"),
 		overlay: require("@/assets/art/combat/items/melee_c4_overlay.png"),
 		equipmentSlot: "hand",
@@ -225,7 +225,7 @@ const MCUT = {
 	},
 	meleeSharp5: {
 		name: "Fire Axe",
-		sellPrice: 30,
+		sellPrice: 460,
 		icon: require("@/assets/art/combat/items/melee_c5.png"),
 		overlay: require("@/assets/art/combat/items/melee_c5_overlay.png"),
 		equipmentSlot: "hand",
@@ -242,7 +242,7 @@ const MCUT = {
 	},
 	meleeSharp6: {
 		name: "Chainsaw",
-		sellPrice: 30,
+		sellPrice: 690,
 		icon: require("@/assets/art/combat/items/melee_c6.png"),
 		overlay: require("@/assets/art/combat/items/melee_c6_overlay_anim.gif"),
 		equipmentSlot: "hand",
@@ -259,7 +259,7 @@ const MCUT = {
 	},
 	meleeSharp7: {
 		name: "Officer Sabre",
-		sellPrice: 30,
+		sellPrice: 750,
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
 		overlay: require("@/assets/art/combat/items/melee_c7_overlay.png"),
 		equipmentSlot: "hand",
@@ -279,7 +279,7 @@ const MCUT = {
 const MTOOLBOX = {
 	meleeToolbox1: {
 		name: "Toolbox",
-		sellPrice: 30,
+		sellPrice: 360,
 		icon: require("@/assets/art/combat/items/melee_t1.png"),
 		overlay: require("@/assets/art/combat/items/melee_t1_overlay.png"),
 		equipmentSlot: "hand",
@@ -297,7 +297,7 @@ const MTOOLBOX = {
 	},
 	meleeToolbox2: {
 		name: "Toolbox",
-		sellPrice: 30,
+		sellPrice: 430,
 		icon: require("@/assets/art/combat/items/melee_t2.png"),
 		overlay: require("@/assets/art/combat/items/melee_t2_overlay.png"),
 		equipmentSlot: "hand",
@@ -315,7 +315,7 @@ const MTOOLBOX = {
 	},
 	meleeToolbox3: {
 		name: "Toolbox",
-		sellPrice: 30,
+		sellPrice: 520,
 		icon: require("@/assets/art/combat/items/melee_t3.png"),
 		overlay: require("@/assets/art/combat/items/melee_t3_overlay.png"),
 		equipmentSlot: "hand",
@@ -333,7 +333,7 @@ const MTOOLBOX = {
 	},
 	meleeToolbox4: {
 		name: "Toolbox",
-		sellPrice: 21,
+		sellPrice: 610,
 		icon: require("@/assets/art/combat/items/melee_t4.png"),
 		overlay: require("@/assets/art/combat/items/melee_t4_overlay.png"),
 		equipmentSlot: "hand",
@@ -351,7 +351,7 @@ const MTOOLBOX = {
 	},
 	meleeToolbox5: {
 		name: "Toolbox",
-		sellPrice: 28,
+		sellPrice: 790,
 		icon: require("@/assets/art/combat/items/melee_t5.png"),
 		overlay: require("@/assets/art/combat/items/melee_t5_overlay.png"),
 		equipmentSlot: "hand",
@@ -369,7 +369,7 @@ const MTOOLBOX = {
 	},
 	meleeToolbox6: {
 		name: "Toolbox",
-		sellPrice: 30,
+		sellPrice: 910,
 		icon: require("@/assets/art/combat/items/melee_t6_anim.gif"),
 		overlay: require("@/assets/art/combat/items/melee_t6_overlay.png"),
 		equipmentSlot: "hand",
@@ -390,7 +390,7 @@ const MTOOLBOX = {
 const MENERGY = {
 	meleeBurn1: {
 		name: "Welding Tool",
-		sellPrice: 30,
+		sellPrice: 180,
 		icon: require("@/assets/art/combat/items/melee_e1.png"),
 		overlay: require("@/assets/art/combat/items/melee_e1_overlay_anim.gif"),
 		equipmentSlot: "hand",
@@ -408,7 +408,7 @@ const MENERGY = {
 	},
 	meleeBurn2: {
 		name: "Handheld Welder",
-		sellPrice: 30,
+		sellPrice: 280,
 		icon: require("@/assets/art/combat/items/melee_e2.png"),
 		overlay: require("@/assets/art/combat/items/melee_e2_overlay_anim.gif"),
 		equipmentSlot: "hand",
@@ -426,7 +426,7 @@ const MENERGY = {
 	},
 	meleeBurn3: {
 		name: "Energy Dagger",
-		sellPrice: 30,
+		sellPrice: 380,
 		icon: require("@/assets/art/combat/items/melee_e3_anim.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e3_anim_overlay.gif"),
 		equipmentSlot: "hand",
@@ -444,7 +444,7 @@ const MENERGY = {
 	},
 	meleeBurn4: {
 		name: "Energy Sword",
-		sellPrice: 30,
+		sellPrice: 580,
 		icon: require("@/assets/art/combat/items/melee_e4_anim.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e4_overlay_anim.gif"),
 		equipmentSlot: "hand",
@@ -462,7 +462,7 @@ const MENERGY = {
 	},
 	meleeBurn5: {
 		name: "Dual Energy Sword",
-		sellPrice: 30,
+		sellPrice: 780,
 		icon: require("@/assets/art/combat/items/melee_e5_anim.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e5_overlay.gif"),
 		equipmentSlot: "hand",
@@ -492,7 +492,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 2,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 1
@@ -509,7 +509,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 15
@@ -526,7 +526,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 1,
 			power: 3,
-			precision: 1
+			precision: 6
 		},
 		requires: {
 			rangedPower: 20
@@ -543,7 +543,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 4,
-			precision: 2
+			precision: 7
 		},
 		requires: {
 			rangedPower: 30
@@ -560,7 +560,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
-			precision: 2
+			precision: 7
 		},
 		requires: {
 			rangedPower: 35
@@ -577,7 +577,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 2,
 			power: 5,
-			precision: 3
+			precision: 8
 		},
 		requires: {
 			rangedPower: 40
@@ -594,7 +594,7 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 3,
 			power: 6,
-			precision: 4
+			precision: 9
 		},
 		requires: {
 			rangedPower: 50
@@ -614,7 +614,7 @@ const GBULLET = {
 			attackSpeed: 7,
 			evasion: 3,
 			power: 2,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 1
@@ -631,7 +631,7 @@ const GBULLET = {
 			attackSpeed: 6,
 			evasion: 4,
 			power: 3,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 20
@@ -648,7 +648,7 @@ const GBULLET = {
 			attackSpeed: 5,
 			evasion: 5,
 			power: 3,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 25
@@ -665,7 +665,7 @@ const GBULLET = {
 			attackSpeed: 4,
 			evasion: 7,
 			power: 4,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 35
@@ -682,7 +682,7 @@ const GBULLET = {
 			attackSpeed: 3,
 			evasion: 8,
 			power: 4,
-			precision: 0
+			precision: 5
 		},
 		requires: {
 			rangedPower: 40
