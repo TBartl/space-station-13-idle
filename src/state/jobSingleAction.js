@@ -112,7 +112,7 @@ export default {
 					}
 				});
 		},
-		finishAction({ commit, getters, dispatch }, actionId) {
+		finishAction({ commit, getters, dispatch, rootGetters }, actionId) {
 			if (!getters.hasActionRequiredItems(actionId)) return;
 			let action = getters.completeActions[actionId];
 
@@ -147,10 +147,25 @@ export default {
 			// The action may have been updated (like if the user ran out of potion charges)
 			action = getters.completeActions[actionId];
 			let canContinue = true;
-			if (!getters.hasActionRequiredItems(actionId)) canContinue = false;
-			if (getters.level < action.requiredLevel) canContinue = false;
-			if (canContinue) {
+			if (!getters.hasActionRequiredItems(actionId)) {
+				canContinue = false;
+				EventBus.$emit("toast", { text: "Missing items!" });
+			};
 
+			if (getters.level < action.requiredLevel) canContinue = false;
+
+			// Check that we actually got items there
+			let isMissingItem = Object.entries(yieldedItems).find(entry => {
+				let itemId = entry[0];
+				let count = entry[1];
+				if (count <= 0) return false;
+				return !rootGetters["inventory/hasItem"](itemId);
+			});
+			if (isMissingItem) {
+				canContinue = false;
+			};
+
+			if (canContinue) {
 				dispatch("_startCoroutine", { actionId, action })
 			} else {
 				commit("_setAction", null);

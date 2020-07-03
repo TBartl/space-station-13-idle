@@ -97,6 +97,15 @@ const inventory = {
 				return state.equipment[slot].itemId == itemId;
 			};
 		},
+		hasItem(state, getters) {
+			return (itemId) => {
+				// Check equipped
+				if (getters["isEquipped"](itemId)) return true;
+				// Check bank
+				if (state.bank[itemId]) return true;
+				return false
+			}
+		},
 		checkRestricted(state, getters) {
 			return (itemId) => {
 				if (!itemId) return false;
