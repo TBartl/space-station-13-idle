@@ -1,7 +1,11 @@
 <template>
   <div class="content-block d-flex flex-column align-items-center">
     <span class="text-uppercase text-center">{{name}}</span>
-    <robustness-badge :stats="stats" :mobType="mobType" />
+    <robustness-badge
+      :stats="stats"
+      :mobType="mobType"
+      :overrideRobustness="mobType=='enemy' ? enemy.overrideRobustness : undefined"
+    />
     <div class="body-icon mt-2">
       <div ref="body" class="img-body w-100 h-100">
         <div v-if="mobType == 'player'" class="w-100 h-100 overlay-div">

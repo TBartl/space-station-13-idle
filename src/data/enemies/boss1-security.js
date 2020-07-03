@@ -1,4 +1,4 @@
-export default {
+const BOSSES = {
 	sec1: {
 		name: "Corrupt Security Officer",
 		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
@@ -106,7 +106,7 @@ export default {
 					},
 				]
 			}
-			]
+		]
 	},
 	sec4: {
 		name: "Anime Inspired Head Of Security",
@@ -143,3 +143,9 @@ export default {
 		]
 	},
 }
+
+Object.values(BOSSES).forEach(boss => {
+	boss.overrideRobustness = 60;
+})
+
+export default BOSSES;

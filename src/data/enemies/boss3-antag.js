@@ -1,4 +1,4 @@
-export default {
+const BOSSES = {
 	antag1: {
 		name: "Cultist of Nar'sie",
 		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
@@ -138,3 +138,9 @@ export default {
 		]
 	},
 }
+
+Object.values(BOSSES).forEach(boss => {
+	boss.overrideRobustness = 180;
+})
+
+export default BOSSES;
