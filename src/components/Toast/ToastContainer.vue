@@ -6,7 +6,12 @@
       v-on:enter="enter"
       v-on:leave="leave"
     >
-      <toast v-for="toast in activeToasts" :key="toast.id" :toast="toast" />
+      <toast
+        v-for="toast in activeToasts"
+        :key="toast.id"
+        :toast="toast"
+        :data-duration="toast.duration"
+      />
     </transition-group>
   </div>
 </template>
@@ -16,7 +21,7 @@ import Velocity from "velocity-animate";
 import { uniqueId } from "lodash";
 import { EventBus } from "@/utils/eventBus.js";
 import Toast from "@/components/Toast/Toast";
-const TOAST_LENGTH = 800;
+const TOAST_LENGTH = 1000;
 
 export default {
   components: {
@@ -29,7 +34,7 @@ export default {
     };
   },
   mounted() {
-    EventBus.$on("toast", (toast) => {
+    EventBus.$on("toast", toast => {
       this.addToastContent(toast);
     });
   },
@@ -42,6 +47,8 @@ export default {
           contents: [toastContent],
           id: uniqueId()
         };
+				if (toastContent.duration) toast.duration = toastContent.duration;
+
         this.pendingToast = toast;
         setTimeout(() => {
           this.activeToasts.push(toast);
@@ -50,7 +57,7 @@ export default {
             let toastIndex = this.activeToasts.indexOf(toast);
             this.activeToasts.splice(toastIndex, 1);
           });
-        }, 100);
+        });
       }
     },
     beforeEnter: function(el) {
@@ -58,16 +65,22 @@ export default {
       el.style.bottom = "-40px";
     },
     enter: function(el, done) {
-      var delay = el.dataset.index * 150;
-      setTimeout(function() {
-        Velocity(el, { opacity: 1, bottom: "0px" }, { complete: done });
-      }, delay);
+      Velocity(
+        el,
+        { opacity: 1, bottom: "0px" },
+        { duration: TOAST_LENGTH / 2, complete: done }
+      );
     },
     leave: function(el, done) {
-      var delay = el.dataset.index * 150;
-      setTimeout(function() {
-        Velocity(el, { opacity: 0, bottom: "40px" }, { complete: done });
-      }, delay);
+      let duration = TOAST_LENGTH / 2;
+      let dataDuration = el.getAttribute("data-duration");
+      if (dataDuration) duration = parseInt(dataDuration);
+
+      Velocity(
+        el,
+        { opacity: 0, bottom: "40px" },
+        { duration, complete: done }
+      );
     }
   }
 };

@@ -97,6 +97,15 @@ const inventory = {
 				return state.equipment[slot].itemId == itemId;
 			};
 		},
+		hasItem(state, getters) {
+			return (itemId) => {
+				// Check equipped
+				if (getters["isEquipped"](itemId)) return true;
+				// Check bank
+				if (state.bank[itemId]) return true;
+				return false
+			}
+		},
 		checkRestricted(state, getters) {
 			return (itemId) => {
 				if (!itemId) return false;
@@ -169,7 +178,7 @@ const inventory = {
 				// Is using this.getters here supported?
 				// Hell no, but I've used this as a mutation for too long to go and update it to an action now
 				if (this.getters["inventory/bankItemIds"].length >= this.getters["inventory/bankSlots"]) { // No space
-					EventBus.$emit("toast", { text: "Your inventory is full!" });
+					EventBus.$emit("toast", { icon: require('@/assets/art/sidebar/backpack.png'), text: "Your inventory is full!", duration: 4000 });
 					return;
 				}
 
