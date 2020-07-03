@@ -4,13 +4,13 @@ export default {
 		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 160,
+			maxHealth: 500,
 			attackSpeed: 2.0,
-			precision: 34,
-			power: 45,
-			evasion: 25,
-			damageType: "brute",
-			burnProtection: 20
+			precision: 31,
+			power: 37,
+			evasion: 32,
+			damageType: "burn",
+			burnProtection: 50
 		},
 		itemTables: [
 			{
@@ -39,13 +39,13 @@ export default {
 		icon: require("@/assets/art/combat/enemies/boss/sec-detective.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 170,
+			maxHealth: 500,
 			attackSpeed: 2.1,
-			precision: 37,
-			power: 44,
-			evasion: 40,
+			precision: 31,
+			power: 35,
+			evasion: 29,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 50
 		},
 		itemTables: [
 			{
@@ -65,7 +65,7 @@ export default {
 			},
 			{
 				chance: 1,
-				item: "foodMeatZ"
+				item: "foodMeatH"
 			}
 		]
 	},
@@ -74,11 +74,11 @@ export default {
 		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 50,
-			attackSpeed: .5,
-			precision: 25,
-			power: 10,
-			evasion: 76,
+			maxHealth: 500,
+			attackSpeed: 5,
+			precision: 23,
+			power: 76,
+			evasion: 33,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -113,13 +113,12 @@ export default {
 		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 180,
+			maxHealth: 1200,
 			attackSpeed: 2.4,
-			precision: 57,
+			precision: 34,
 			power: 40,
-			evasion: 26,
+			evasion: 36,
 			damageType: "burn",
-			burnProtection: 20
 		},
 		itemTables: [
 			{

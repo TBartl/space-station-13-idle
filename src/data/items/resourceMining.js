@@ -48,6 +48,12 @@ export default {
 		name: "Bananium",
 		sellPrice: 325,
 		healAmount: 69,
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: -10,
+			power: -10,
+		},
 		icon: require("@/assets/art/mining/SheetBanana.png")
 	},
 }

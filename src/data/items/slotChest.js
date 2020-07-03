@@ -261,15 +261,13 @@ const MECHS = {
 		sellPrice: 83250,
 		icon: require("@/assets/art/fabrication/mechhonk.png"),
 		stats: {
-			moveTime: 3,
+			moveTime: 7,
 			maxHealth : 250,
 			precision : 15,
 			power: -10,
 			evasion: 15,
 			burnProtection: 16,
 			bruteProtection: 6,
-
-
 		},
 		requires: {
 			fabrication: 50
@@ -314,7 +312,7 @@ Object.values(MECHS).forEach(mech => {
 	mech.overlay = mech.icon;
 	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 2);
 	if (Object.values(mech.stats).length > 0) return;
-	mech.stats.moveTime = 3;
+	mech.stats.moveTime = 7;
 	mech.stats.maxHealth = (mech.requires.fabrication * 5) + 20;
 	mech.stats.precision = Math.ceil(mech.requires.fabrication * .2);
 	mech.stats.power = Math.ceil(mech.requires.fabrication * .2);

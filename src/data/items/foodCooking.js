@@ -7,7 +7,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/meatHuman.png"),
 		healAmount: 15,
 		stats: {
-			maxHealth: 2,
+			maxHealth: 0,
 			evasion: -1,
 			precision: 2,
 			power: -1,
@@ -19,7 +19,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/meatAlien.png"),
 		healAmount: 15,
 		stats: {
-			maxHealth: 2,
+			maxHealth: 0,
 			evasion: 2,
 			precision: -1,
 			power: -1,
@@ -31,7 +31,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/meatAnimal.png"),
 		healAmount: 15,
 		stats: {
-			maxHealth: 2,
+			maxHealth: 0,
 			evasion: -1,
 			precision: -1,
 			power: 2,
@@ -43,7 +43,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta1.png"),
 		healAmount: 6,
 		stats: {
-			maxHealth: -3,
+			maxHealth: -10,
 			evasion: 0,
 			precision: 0,
 			power: 0,
@@ -55,7 +55,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta2.png"),
 		healAmount: 12,
 		stats: {
-			maxHealth: -6,
+			maxHealth: -30,
 			evasion: 1,
 			precision: 1,
 			power: 1,
@@ -67,7 +67,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta3.png"),
 		healAmount: 18,
 		stats: {
-			maxHealth: -9,
+			maxHealth: -60,
 			evasion: 2,
 			precision: 2,
 			power: 2,
@@ -79,7 +79,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta4.png"),
 		healAmount: 24,
 		stats: {
-			maxHealth: -12,
+			maxHealth: -90,
 			evasion: 3,
 			precision: 3,
 			power: 3,
@@ -91,7 +91,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta5.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: -15,
+			maxHealth: -120,
 			evasion: 4,
 			precision: 4,
 			power: 4,
@@ -103,7 +103,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta6.png"),
 		healAmount: 36,
 		stats: {
-			maxHealth: -18,
+			maxHealth: -150,
 			evasion: 5,
 			precision: 5,
 			power: 5,
@@ -129,7 +129,7 @@ let FOOD = {
 		stats: {
 			maxHealth: 0,
 			evasion: -5,
-			precision: 20,
+			precision: 10,
 			power: -5,
 		},
 	},
@@ -139,9 +139,9 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/stew3.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: -5,
-			precision: 20,
+			precision: 10,
 			power: -5,
 		},
 	},
@@ -166,7 +166,7 @@ let FOOD = {
 			maxHealth: 0,
 			evasion: -5,
 			precision: -5,
-			power: 20,
+			power: 10,
 		},
 	},
 	foodPower3: {
@@ -175,10 +175,10 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/donk3.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: -5,
 			precision: -5,
-			power: 20,
+			power: 10,
 		},
 	},
 	foodEvasion1: {
@@ -200,7 +200,7 @@ let FOOD = {
 		healAmount: 45,
 		stats: {
 			maxHealth: 0,
-			evasion: 20,
+			evasion: 10,
 			precision: -5,
 			power: -5,
 		},
@@ -211,8 +211,8 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pie3.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
-			evasion: 20,
+			maxHealth: 50,
+			evasion: 10,
 			precision: -5,
 			power: -5,
 		},
@@ -247,7 +247,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/burger3.png"),
 		healAmount: 50,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: 0,
 			precision: 10,
 			power: 0,
@@ -259,7 +259,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/burger4_anim.gif"),
 		healAmount: 50,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: 0,
 			precision: 10,
 			power: 0,
@@ -295,7 +295,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/animal3.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: 0,
 			precision: 0,
 			power: 10,
@@ -307,7 +307,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/animal4.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: 0,
 			precision: 0,
 			power: 10,
@@ -343,7 +343,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/Alien3.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			evasion: 10,
 			precision: 0,
 			power: 0,
@@ -355,7 +355,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/Alien4.png"),
 		healAmount: 60,
 		stats: {
-			maxHealth: 10,
+			maxHealth: 50,
 			evasion: 10,
 			precision: 0,
 			power: 0,
