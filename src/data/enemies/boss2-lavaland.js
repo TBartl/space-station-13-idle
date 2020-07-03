@@ -1,51 +1,16 @@
 export default {
 	lava1: {
-		name: "Blood Drunk Miner",
-		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
-		validhuntable: false,
-		stats: {
-			maxHealth: 250,
-			attackSpeed: 1.4,
-			precision: 71,
-			power: 78,
-			evasion: 75,
-			damageType: "burn",
-			burnProtection: 20
-		},
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: 'exoticParts',
-						count: [6, 10],
-						weight: 8
-					},
-					{
-						id: 'exoticParts',
-						count: [11, 12],
-						weight: 1
-					},
-				]
-			},
-			{
-				chance: 1,
-				item: "uranium"
-			}
-		]
-	},
-	lava2: {
 		name: "Ash Drake",
 		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 260,
+			maxHealth: 1000,
 			attackSpeed: 1.7,
-			precision: 63,
-			power: 60,
-			evasion: 80,
+			precision: 50,
+			power: 63,
+			evasion: 60,
 			damageType: "burn",
-			burnProtection: 20
+			burnProtection: 70
 		},
 		itemTables: [
 			{
@@ -74,18 +39,18 @@ export default {
 			}
 		]
 	},
-	lava3: {
+	lava2: {
 		name: "Bubblegum",
 		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 270,
+			maxHealth: 1000,
 			attackSpeed: 2.1,
-			precision: 26,
-			power: 35,
-			evasion: 20,
+			precision: 60,
+			power: 50,
+			evasion: 57,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 70
 		},
 		itemTables: [
 			{
@@ -114,16 +79,51 @@ export default {
 			}
 		]
 	},
+	lava3: {
+		name: "Blood Drunk Miner",
+		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
+		validhuntable: false,
+		stats: {
+			maxHealth: 1000,
+			attackSpeed: 7,
+			precision: 53,
+			power: 121,
+			evasion: 62,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'exoticParts',
+						count: [6, 10],
+						weight: 8
+					},
+					{
+						id: 'exoticParts',
+						count: [11, 12],
+						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				item: "uranium"
+			}
+		]
+	},
 	lava4: {
 		name: "Legion",
 		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 280,
-			attackSpeed: 2.2,
-			precision: 103,
-			power: 54,
-			evasion: 110,
+			maxHealth: 2400,
+			attackSpeed: 3.4,
+			precision: 59,
+			power: 71,
+			evasion: 62,
 			damageType: "burn",
 			burnProtection: 20
 		},
