@@ -1,5 +1,5 @@
 <template>
-  <div v-if="valid" class="d-flex flex-row align-items-center mt-1 mb-2" :class="{simplified: simplified}">
+  <div v-if="valid" class="d-flex flex-row align-items-center my-1" :class="{simplified: simplified}">
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
     <img :src="item.icon" :id="id" class="mx--0" :class="{'mr-1': !simplified}" />
     <item-popover :itemId="itemId" :target="id" placement="right" />
@@ -69,5 +69,8 @@ img {
 }
 .simplified {
 	font-size: 14px;
+}
+.mx--0 {
+	margin-bottom: -8px;
 }
 </style>

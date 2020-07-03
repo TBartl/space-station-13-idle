@@ -22,7 +22,7 @@
 
       <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
 
-      <div class="d-flex flex-column align-items-center mt-2">
+      <div class="d-flex flex-row align-items-center mt-2">
         <div v-if="action.requiredItems" class="requirements d-flex flex-column align-items-center">
           <span class="danger-bubble color-weight text-light text-center mb-1">USES</span>
           <item-requirement
@@ -32,8 +32,11 @@
             :count="entry[1]"
           />
         </div>
+        <div v-if="action.requiredItems" class="d-flex flex-row align-items-center">
+          <img :src="require('@/assets/art/misc/arrows.png')" alt class = "arrows"/>
+        </div>
 
-        <div class="d-flex flex-column align-items-center" :class="{'mt-2': action.requiredItems}">
+        <div class="d-flex flex-column align-items-center">
           <span
             class="color-weight text-light text-center"
             :class="hasItems ? 'primary-bubble' : 'secondary-bubble'"
@@ -145,11 +148,12 @@ export default {
 .success-bubble,
 .primary-bubble,
 .secondary-bubble {
-	font-size: 14px;
-	opacity: .8;
+  font-size: 14px;
+	opacity: 0.8;
+	margin-left: 4px;
 }
 .secondary-bubble {
-	background-color: rgb(95, 95, 95);
+  background-color: rgb(95, 95, 95);
 }
 .failure {
   color: rgb(221, 99, 28);
@@ -158,5 +162,10 @@ export default {
 }
 .nets {
   color: rgba(255, 255, 255, 0.767);
+}
+.arrows {
+	height: unset !important;
+	opacity: .4;
+	margin: 0px .83rem;
 }
 </style>

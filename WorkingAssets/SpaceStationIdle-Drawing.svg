@@ -29,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-484.73845"
-     inkscape:cy="2061.6142"
+     inkscape:zoom="7.919596"
+     inkscape:cx="7.0593824"
+     inkscape:cy="2282.6307"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -693,5 +693,36 @@
        inkscape:export-xdpi="70.19651"
        inkscape:export-ydpi="70.19651"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:0.93333333;fill-rule:nonzero;stroke:none;stroke-width:0.22494677;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect897"
+       width="4.2333331"
+       height="16.933332"
+       x="5.2916665"
+       y="-316.75769" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79375;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 5.2916665,-316.75769 4.2333331,8.46667 -4.2333331,8.46665"
+       id="path902"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.40166008;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 5.2467728,-310.86164 1.2853123,2.57063 -1.2853123,2.57061"
+       id="path902-7-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Thomas\Desktop\Projects\space-station-idle\src\assets\art\misc\arrows.png"
+       inkscape:export-xdpi="170.30701"
+       inkscape:export-ydpi="170.30701" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.40166008;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.8774072,-310.86164 1.2853122,2.57063 -1.2853122,2.57061"
+       id="path902-7-1-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="C:\Users\Thomas\Desktop\Projects\space-station-idle\src\assets\art\misc\arrows.png"
+       inkscape:export-xdpi="170.30701"
+       inkscape:export-ydpi="170.30701" />
   </g>
 </svg>

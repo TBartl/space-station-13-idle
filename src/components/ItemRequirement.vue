@@ -2,7 +2,10 @@
   <div class="d-flex flex-row align-items-center">
     <img :src="item.icon" :id="id" class="mx--0" />
     <item-popover :itemId="itemId" :target="id" />
-    <span :style="{opacity: bankCount >= count ? 1: .5}">x{{count}} ({{bankCount ? bankCount : 0}})</span>
+    <div :style="{opacity: bankCount >= count ? 1: .5}">
+      <span>x{{count}}</span>
+      <span class="ml-1">({{bankCount ? bankCount : 0}})</span>
+    </div>
   </div>
 </template>
 
@@ -37,5 +40,9 @@ img {
 }
 span {
   font-size: 14px;
+}
+
+.mx--0 {
+	margin-bottom: -8px;
 }
 </style>

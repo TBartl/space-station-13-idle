@@ -216,6 +216,13 @@ img {
 	margin-right: -.3rem;
 }
 
+@media (min-width: 2920px) {
+	.col-xxl-2 {
+		flex: 0 0 16.666667% !important;
+		max-width: 16.666667% !important;
+	}
+}
+
 /* I've lost control of my life */
 .shitposting {
 	font-family: "Comic Sans MS", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
