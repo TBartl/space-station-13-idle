@@ -64,7 +64,7 @@ export function createCoroutineModule() {
 
 						// The time can be much longer than a few hundred millis if the window goes to sleep (like on mobile)
 						// We need to cap this so we don't get a ton of extra bonus time
-						state.bonusTime = Math.max(state.bonusTime, .5);
+						state.bonusTime = Math.min(state.bonusTime, .5);
 
 						state.progress = 0;
 						state.currentTimeout = 0;
