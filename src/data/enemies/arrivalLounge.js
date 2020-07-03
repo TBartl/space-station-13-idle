@@ -67,27 +67,27 @@ export default {
 				itemTable: [
 					{
 						id: 'junk',
-						weight: 100
+						weight: 50
 					},
 					{
 						id: 'spaceJunk',
-						weight: 90
+						weight: 45
 					},
 					{
 						id: 'meleeToolbox1',
-						weight: 10
+						weight: 5
 					},
 					{
 						id: 'meleeBlunt3',
-						weight: 1
-					},
-					{
-						id: 'lavaCrate',
 						weight: .5
 					},
 					{
+						id: 'lavaCrate',
+						weight: .02
+					},
+					{
 						id: 'meleeBlunt8',
-						weight: .03
+						weight: .01
 					}
 
 				]
