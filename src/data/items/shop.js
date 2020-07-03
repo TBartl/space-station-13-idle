@@ -192,7 +192,6 @@ export default {
 		},
 		{
 			id: 'faceSec',
-			count: 20,
 			weight: 8
 		},
 		{
@@ -223,32 +222,41 @@ export default {
 		itemTable: [
 			{
 				id: 'burnJunk',
-				weight: 10
+				count: [0,100],
+				weight: 7
 			},
 			{
 				id: 'ammoBallistic2',
-				count: 20,
-				weight: 8
+				count: [0,300],
+				weight: 6
 			},
 			{
 				id: 'oxygen',
-				count: 50,
+				count: [0,500],
 				weight: 5
+			},
+			{
+				id: 'mercury',
+				count: [0,500],
+				weight: 4
 			},
 			{
 				id: 'potionCooking',
+				count: [0,10],
 				weight: 5
 			},
 			{
-				id: 'meleeSharp5',
+				id: 'meleeShield1',
 				weight: 4
 			},
 			{
-				id: 'armorBrute3',
-				weight: 4
+				id: 'silver',
+				count: [50,250],
+				weight: 3
 			},
 			{
-				id: 'slimeGray',
+				id: 'gold',
+				count: [25,100],
 				weight: 3
 			},
 			{
@@ -263,33 +271,33 @@ export default {
 		itemTable: [
 			{
 				id: 'ammoBallistic4',
-				count: 50,
-				weight: 4
+				count: [0,100],
+				weight: 100
 			},
 			{
 				id: 'ammoEnergy4',
-				count: 50,
-				weight: 4
+				count: [0,100],
+				weight: 100
 			},
 			{
 				id: 'faceSyndicate',
-				weight: 2
+				weight: 80
 			},
 			{
 				id: 'meleeBurn4',
-				weight: 2
+				weight: 70
 			},
 			{
 				id: 'armorBurn6',
-				weight: 1
+				weight: 49
 			},
 			{
 				id: 'darkGygax',
-				weight: 1
+				weight: 43
 			},
 			{
 				id: 'meleeBurn5',
-				weight: 1
+				weight: 40
 			}
 		]
 	}

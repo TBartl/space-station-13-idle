@@ -280,8 +280,8 @@ const MTOOLBOX = {
 	meleeToolbox1: {
 		name: "Toolbox",
 		sellPrice: 360,
-		icon: require("@/assets/art/combat/items/melee_t1.png"),
-		overlay: require("@/assets/art/combat/items/melee_t1_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t1.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t1_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 5,
@@ -298,8 +298,8 @@ const MTOOLBOX = {
 	meleeToolbox2: {
 		name: "Toolbox",
 		sellPrice: 430,
-		icon: require("@/assets/art/combat/items/melee_t2.png"),
-		overlay: require("@/assets/art/combat/items/melee_t2_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t2.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t2_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 7,
@@ -309,15 +309,15 @@ const MTOOLBOX = {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 11,
-			meleePower: 11
+			precision: 13,
+			meleePower: 13
 		}
 	},
 	meleeToolbox3: {
 		name: "Toolbox",
 		sellPrice: 520,
-		icon: require("@/assets/art/combat/items/melee_t3.png"),
-		overlay: require("@/assets/art/combat/items/melee_t3_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t3.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t3_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 14,
@@ -327,15 +327,15 @@ const MTOOLBOX = {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 22,
-			meleePower: 22
+			precision: 23,
+			meleePower: 23
 		}
 	},
 	meleeToolbox4: {
 		name: "Toolbox",
 		sellPrice: 610,
-		icon: require("@/assets/art/combat/items/melee_t4.png"),
-		overlay: require("@/assets/art/combat/items/melee_t4_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t4.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t4_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 21,
@@ -352,8 +352,8 @@ const MTOOLBOX = {
 	meleeToolbox5: {
 		name: "Toolbox",
 		sellPrice: 790,
-		icon: require("@/assets/art/combat/items/melee_t5.png"),
-		overlay: require("@/assets/art/combat/items/melee_t5_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t5.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t5_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 28,
@@ -363,15 +363,15 @@ const MTOOLBOX = {
 			attackspeed: 2,
 		},
 		requires: {
-			precision: 44,
-			meleePower: 44
+			precision: 43,
+			meleePower: 43
 		}
 	},
 	meleeToolbox6: {
 		name: "Toolbox",
 		sellPrice: 910,
-		icon: require("@/assets/art/combat/items/melee_t6_anim.gif"),
-		overlay: require("@/assets/art/combat/items/melee_t6_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/melee_t6_anim.gif"),
+		overlay: require("@/assets/art/combat/items/hand/melee_t6_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 35,
@@ -476,6 +476,25 @@ const MENERGY = {
 		},
 		requires: {
 			precision: 48
+		}
+	}
+}
+
+const MSHIELD = {
+	meleeShield1: {
+		name: "Handcrafted Shield",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/melee_shield1.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_shield1_overlay.png"),
+		stats: {
+			attackSpeed: 4.5,
+			evasion: 10,
+			power: 5,
+			precision: 0
+		},
+		requires: {
+			evasion: 36
 		}
 	}
 }
@@ -777,6 +796,8 @@ const GBULLET = {
 // },
 
 // Health is 1, The remaining stats are a total of .7 (35 points at 50) Energy gets a boost due to it's bonus being good for the level
+// Cut and brute on 0-5, toolbox on 3's, energy on 8's, shield on 6
+
 
 Object.values(MBRUTE).forEach(mbrute => {
 	mbrute.equipmentSlot = "hand";
@@ -807,6 +828,17 @@ Object.values(MTOOLBOX).forEach(mtoolbox => {
 	mtoolbox.stats.evasion = Math.trunc(mtoolbox.requires.meleePower * -.1);
 	mtoolbox.stats.command = Math.ceil(mtoolbox.requires.meleePower * -.1);
 	mtoolbox.stats.attackspeed = 2.7;
+});
+
+Object.values(MSHIELD).forEach(mshield => {
+	mshield.equipmentSlot = "hand";
+	mshield.sellPrice = Math.ceil((mshield.requires.evasion + 10) * 75 - 75);
+	mshield.stats.maxHealth = mshield.requires.evasion * 5;
+	mshield.stats.precision = Math.trunc(mshield.requires.evasion * .1);
+	mshield.stats.power = Math.ceil(mshield.requires.evasion * -.2);
+	mshield.stats.evasion = Math.ceil(mshield.requires.evasion * .2);
+	mshield.stats.protection = Math.trunc(mshield.requires.evasion * .2);
+	mshield.stats.attackspeed = 4.5;
 });
 
 Object.values(MENERGY).forEach(menergy => {
@@ -843,6 +875,7 @@ const WEAPONS = {
 	...MCUT,
 	...MTOOLBOX,
 	...MENERGY,
+	...MSHIELD,
 	...GENERGY,
 	...GBULLET
 }

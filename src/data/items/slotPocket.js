@@ -84,6 +84,15 @@ export default {
 			precision: 40
 		}
 	},
+	pocketPDA1: {
+		name: "Personal Digital Assistant",
+		sellPrice: 5252,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket_pda.png"),
+		stats: {
+			evasion: 2
+		}
+	},
 	// mechGunCanno: {
 	// 	name: "Mounted Cannon",
 	// 	sellPrice: 0,
