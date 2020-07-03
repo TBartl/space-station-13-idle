@@ -21,7 +21,7 @@
     <div class="content-block content-block-bottom" v-if="expanded">
       <hr class="mt-0 mb-2" />
       <div class="enemies">
-        <zone-enemy v-for="(enemyId, index) in zone.enemies" :key="index" :enemyId="enemyId" />
+        <zone-enemy v-for="(enemyId, index) in zone.enemies" :key="index" :enemyId="enemyId" :restrictFight="true" />
       </div>
     </div>
   </div>
@@ -71,8 +71,8 @@ export default {
   font-size: 24px;
 }
 img {
-	width: 150px;
-	height: 90px;
+  width: 150px;
+  height: 90px;
 }
 .zone-difficulty {
   font-size: 13px;

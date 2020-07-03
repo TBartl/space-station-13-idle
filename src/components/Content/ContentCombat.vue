@@ -31,8 +31,14 @@
         </div>
       </div>
       <div class="row" v-if="!inCombat">
-        <div class="col-12 col-lg-6 col-xl-4" v-for="(zone, index) in zones" :key="index">
-          <zone :zone="zone" class="mb-3" />
+        <div class="col-12 col-lg-6 col-xl-4" v-for="(normZone, index) in normalZones" :key="index">
+          <zone :zone="normZone" class="mb-3" />
+        </div>
+        <div class="col-12 mt-2 d-flex flex-row align-items-center">
+          <h2 class="text-white">BOSSES</h2>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4" v-for="(bossZone, index) in bossZones" :key="index">
+          <zone :zone="bossZone" class="mb-3" />
         </div>
       </div>
     </div>
@@ -65,8 +71,11 @@ export default {
   },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),
-    zones() {
-      return ZONES;
+    normalZones() {
+      return ZONES.filter(zone => !zone.boss);
+    },
+    bossZones() {
+      return ZONES.filter(zone => zone.boss);
     },
     inCombat() {
       return this.targetEnemy != null;

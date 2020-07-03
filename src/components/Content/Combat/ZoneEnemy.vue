@@ -23,15 +23,20 @@
         <span>XP</span>
       </div>
     </div>
-		<div v-if="showValidhunting && validhuntingCount == 0">
-			<validhunting-complete-button />
-		</div>
+    <div v-if="showValidhunting && validhuntingCount == 0">
+      <validhunting-complete-button />
+    </div>
     <div class="d-flex flex-column mr-2">
       <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
       <b-popover :target="id" triggers="click blur" placement="top" delay="0">
         <item-chance :data="enemy" />
       </b-popover>
-      <button type="button" class="btn btn-danger btn-sm w-100 mt-1" @click="fight">Fight!</button>
+      <button
+        v-if="!restrictFight"
+        type="button"
+        class="btn btn-danger btn-sm w-100 mt-1"
+        @click="fight"
+      >Fight!</button>
     </div>
   </div>
 </template>
@@ -46,7 +51,7 @@ import { getBasedStats } from "@/utils/combatUtils";
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
 export default {
   components: { RobustnessBadge, ItemChance, ValidhuntingCompleteButton },
-  props: ["enemyId", "showValidhunting"],
+  props: ["enemyId", "showValidhunting", "restrictFight"],
   computed: {
     id() {
       return this._uid.toString();

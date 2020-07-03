@@ -1,7 +1,7 @@
 export default {
 	lava1: {
 		name: "Blood Drunk Miner",
-		icon: require("@/assets/art/combat/enemies/miner.png"),
+		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 250,
@@ -35,8 +35,8 @@ export default {
 		]
 	},
 	lava2: {
-		name: "Dwarf Legion",
-		icon: require("@/assets/art/combat/enemies/boss/legion0.png"),
+		name: "Ash Drake",
+		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 260,
@@ -75,8 +75,8 @@ export default {
 		]
 	},
 	lava3: {
-		name: "Legion Spawn",
-		icon: require("@/assets/art/combat/enemies/boss/legion1.png"),
+		name: "Bubbglegum",
+		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 270,
