@@ -16,7 +16,7 @@ import {
 } from "@/utils/combatUtils";
 export default {
   components: { StatsPanel },
-  props: ["stats", "mobType"],
+  props: ["stats", "mobType", "overrideRobustness"],
   computed: {
     id() {
       return this._uid.toString();
@@ -25,12 +25,13 @@ export default {
       return getBasedStats(this.stats, this.mobType);
     },
     robustness() {
+			if (this.overrideRobustness) return this.overrideRobustness;
       return calcRobustness(this.stats, this.mobType);
     },
     robustnessClass() {
       return getRobustnessCssClass(
         calcRobustness(this.$store.getters["playerMob/stats"], "player"),
-        calcRobustness(this.getBasedStats, "enemy")
+        this.robustness
       );
     }
   }

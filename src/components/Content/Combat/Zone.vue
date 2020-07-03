@@ -58,9 +58,11 @@ export default {
   },
   computed: {
     robustnessLevels() {
-      return this.zone.enemies.map(enemy =>
-        calcRobustness(ENEMIES[enemy].stats, "enemy")
-      );
+      return this.zone.enemies.map(enemyId => {
+        let enemy = ENEMIES[enemyId];
+        if (enemy.overrideRobustness) return enemy.overrideRobustness;
+        return calcRobustness(enemy.stats, "enemy");
+      });
     },
     robustnessMin() {
       return Math.min(...this.robustnessLevels);

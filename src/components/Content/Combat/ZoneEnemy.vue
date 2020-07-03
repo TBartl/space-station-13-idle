@@ -7,7 +7,7 @@
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
-          <robustness-badge class="mt-1" :stats="basedStats" mobType="enemy" />
+          <robustness-badge class="mt-1" :stats="basedStats" mobType="enemy" :overrideRobustness="enemy.overrideRobustness" />
         </div>
       </div>
     </div>

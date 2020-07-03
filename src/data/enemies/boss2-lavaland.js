@@ -1,4 +1,4 @@
-export default {
+const BOSSES = {
 	lava1: {
 		name: "Ash Drake",
 		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
@@ -150,3 +150,9 @@ export default {
 		]
 	},
 }
+
+Object.values(BOSSES).forEach(boss => {
+	boss.overrideRobustness = 110;
+})
+
+export default BOSSES;
