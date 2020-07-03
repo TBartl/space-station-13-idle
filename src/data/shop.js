@@ -285,7 +285,8 @@ const TICKETS = {
 		icon: require("@/assets/art/shop/items/ticketeasy.png"),
 		requiredItems: {
 			ticket1: 5,
-		}
+		},
+		fightZone: "Brutal Security"
 	},
 	bossTicket2: {
 		name: "Code Blue Bounty Ticket",
@@ -293,7 +294,8 @@ const TICKETS = {
 		icon: require("@/assets/art/shop/items/ticketmedium.png"),
 		requiredItems: {
 			ticket2: 5,
-		}
+		},
+		fightZone: "Primordial Planet"
 	},
 	bossTicket3: {
 		name: "Code Red Bounty Ticket",
@@ -301,7 +303,8 @@ const TICKETS = {
 		icon: require("@/assets/art/shop/items/tickethard.png"),
 		requiredItems: {
 			ticket3: 5,
-		}
+		},
+		fightZone: "Subversive Individuals"
 	},
 }
 

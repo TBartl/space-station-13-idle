@@ -4,7 +4,7 @@
     @click="()=>{cancelAllActions()}"
   >
     <img :src="require('@/assets/art/combat/run.png')" alt />
-    <span>Yakety sax away...</span>
+    <span>{{runText}}</span>
   </button>
 </template>
 
@@ -13,6 +13,13 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     ...mapActions(["cancelAllActions"])
+  },
+  computed: {
+    runText() {
+      return this.$store.getters["enemyMob/health"]
+        ? "Yakety sax away"
+        : "Leave";
+    }
   }
 };
 </script>
