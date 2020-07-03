@@ -24,7 +24,10 @@
 
       <div class="d-flex flex-row align-items-center mt-2">
         <div v-if="action.requiredItems" class="requirements d-flex flex-column align-items-center">
-          <span class="danger-bubble color-weight text-light text-center mb-1">USES</span>
+          <span
+            class="danger-bubble color-weight text-light text-center mb-1"
+            :class="hasItems ? 'orange-bubble' : 'danger-bubble'"
+          >USES</span>
           <item-requirement
             v-for="(entry, index) in Object.entries(action.requiredItems)"
             :key="index"
@@ -33,7 +36,7 @@
           />
         </div>
         <div v-if="action.requiredItems" class="d-flex flex-row align-items-center">
-          <img :src="require('@/assets/art/misc/arrows.png')" alt class = "arrows"/>
+          <img :src="require('@/assets/art/misc/arrows.png')" alt class="arrows" />
         </div>
 
         <div class="d-flex flex-column align-items-center">
@@ -149,8 +152,8 @@ export default {
 .primary-bubble,
 .secondary-bubble {
   font-size: 14px;
-	opacity: 0.8;
-	margin-left: 4px;
+  opacity: 0.8;
+  margin-left: 4px;
 }
 .secondary-bubble {
   background-color: rgb(95, 95, 95);
@@ -164,8 +167,8 @@ export default {
   color: rgba(255, 255, 255, 0.767);
 }
 .arrows {
-	height: unset !important;
-	opacity: .4;
-	margin: 0px .83rem;
+  height: unset !important;
+  opacity: 0.4;
+  margin: 0px 0.83rem;
 }
 </style>
