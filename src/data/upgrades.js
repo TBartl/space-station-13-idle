@@ -232,7 +232,7 @@ const BOTANY_UPGRADES = {
 		description: "Whenever you grow a plant, also grow the plant to the left as well",
 		icon: require('@/assets/art/botany/upgrade1.png'),
 		requiredItems: {
-			money: calcCost(1, 2)
+			money: calcCost(0, 2)
 		},
 		requiredLevels: {
 			botany: 20
@@ -247,7 +247,7 @@ const BOTANY_UPGRADES = {
 		description: "Whenever you grow a plant, also grow the plant to the left and right as well",
 		icon: require('@/assets/art/botany/upgrade1.png'),
 		requiredItems: {
-			money: calcCost(2, 2)
+			money: calcCost(1, 2)
 		},
 		requiredLevels: {
 			botany: 40
