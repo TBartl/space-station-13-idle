@@ -1,10 +1,12 @@
 <template>
-  <div v-if="valid" class="d-flex flex-row align-items-center">
+  <div v-if="valid" class="d-flex flex-row align-items-center my-1" :class="{simplified: simplified}">
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
-    <img :src="item.icon" :id="id" class="mr-1" />
+    <img :src="item.icon" :id="id" class="mx--0" :class="{'mr-1': !simplified}" />
     <item-popover :itemId="itemId" :target="id" placement="right" />
-    <span>{{countText}}&nbsp;</span>
-    <span>{{item.name}}</span>
+		<span v-if="simplified">x</span>
+    <span v-if="simplified">{{countText}}</span>
+    <span v-if="!simplified">&nbsp;{{item.name}}</span>
+		<span v-if="simplified" class="ml-1">({{bankCount}})</span>
   </div>
 </template>
 
@@ -12,7 +14,7 @@
 import ITEMS from "@/data/items";
 import ItemPopover from "@/components/ItemPopover";
 export default {
-  props: ["chance", "data"],
+  props: ["chance", "data", "simplified"],
   components: { ItemPopover },
   computed: {
     id() {
@@ -49,7 +51,11 @@ export default {
       let chance = (this.chance * 100).toFixed(2);
       if (chance.length <= 4) chance = "  " + chance;
       return chance + "%";
-    }
+		},
+		bankCount() {
+			let count = this.$store.getters["inventory/bank"][this.itemId];
+			return count ? count : 0;
+		}
   }
 };
 </script>
@@ -60,5 +66,11 @@ span {
 }
 img {
   width: 32px;
+}
+.simplified {
+	font-size: 14px;
+}
+.mx--0 {
+	margin-bottom: -8px;
 }
 </style>

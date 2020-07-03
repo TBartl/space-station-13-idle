@@ -7,28 +7,43 @@
     <div v-if="!visualLocked" class="d-flex flex-column align-items-center">
       <p class="action-title">{{_actionName}}</p>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
-      <p class="action-time mt-1 text-center">{{action.xp | stat}} XP / {{action.time | stat}} SECONDS</p>
-      <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
-      <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
-        <item-chance :data="action" />
-      </b-popover>
-      <div
-        v-if="action.requiredItems"
-        class="requirements d-flex flex-column align-items-center mt-2"
-      >
-        <span v-if="!hasItems" class="danger-bubble color-weight text-light text-center">MISSING ITEMS</span>
-        <item-requirement
-          v-for="(entry, index) in Object.entries(action.requiredItems)"
-          :key="index"
-          :itemId="entry[0]"
-          :count="entry[1]"
-        />
-      </div>
-      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
       <p
-        class="failure text-center"
+        class="action-time mt-1 text-center"
+      >{{action.xp | stat}} XP / {{action.time | stat}} SECONDS</p>
+      <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
+      <!-- <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
+        <item-chance :data="action" />
+      </b-popover>-->
+
+      <p
+        class="failure text-center mt-1"
         v-if="action.failure"
       >{{action.failure.chance*100 | cleanNum}}% chance to fail and lose {{action.failure.damage}} health</p>
+
+      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
+
+      <div class="d-flex flex-row align-items-center mt-2">
+        <div v-if="action.requiredItems" class="requirements d-flex flex-column align-items-center">
+          <span class="danger-bubble color-weight text-light text-center mb-1">USES</span>
+          <item-requirement
+            v-for="(entry, index) in Object.entries(action.requiredItems)"
+            :key="index"
+            :itemId="entry[0]"
+            :count="entry[1]"
+          />
+        </div>
+        <div v-if="action.requiredItems" class="d-flex flex-row align-items-center">
+          <img :src="require('@/assets/art/misc/arrows.png')" alt class = "arrows"/>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+          <span
+            class="color-weight text-light text-center"
+            :class="hasItems ? 'primary-bubble' : 'secondary-bubble'"
+          >GIVES</span>
+          <item-chance :data="action" :simplified="true" />
+        </div>
+      </div>
       <progress-bar class="mt-2" :progress="currentPercent" v-if="!locked && hasItems" />
     </div>
     <div v-else class="d-flex flex-column align-items-center">
@@ -71,10 +86,10 @@ export default {
       return ITEMS[this.action.item];
     },
     visualLocked() {
-			if (this.$store.getters["cheats/showAllActions"]) return false;
+      if (this.$store.getters["cheats/showAllActions"]) return false;
       return this.locked;
-		},
-		locked() {
+    },
+    locked() {
       return this.level < this.action.requiredLevel;
     },
     hasItems() {
@@ -86,8 +101,8 @@ export default {
     },
     actionTitle() {
       if (this.action.name) return this.action.name;
-			if (this.action.item) return this.item.name;
-			if (this.action.items) return ITEMS[this.action.items.id].name;
+      if (this.action.item) return this.item.name;
+      if (this.action.items) return ITEMS[this.action.items.id].name;
       if (this.action.itemTables)
         return ITEMS[this.action.itemTables[0].item].name;
       return "BAD NAME";
@@ -96,7 +111,7 @@ export default {
       if (this.action.icon) return this.action.icon;
       if (this.action.item) return this.item.icon;
       return null;
-		}
+    }
   },
   methods: {
     tryStartAction(actionId) {
@@ -129,12 +144,28 @@ export default {
   font-size: 12px;
 }
 
-.danger-bubble {
+.danger-bubble,
+.success-bubble,
+.primary-bubble,
+.secondary-bubble {
   font-size: 14px;
+	opacity: 0.8;
+	margin-left: 4px;
+}
+.secondary-bubble {
+  background-color: rgb(95, 95, 95);
 }
 .failure {
   color: rgb(221, 99, 28);
   max-width: 130px;
   font-size: 14px;
+}
+.nets {
+  color: rgba(255, 255, 255, 0.767);
+}
+.arrows {
+	height: unset !important;
+	opacity: .4;
+	margin: 0px .83rem;
 }
 </style>

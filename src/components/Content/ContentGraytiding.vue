@@ -72,14 +72,6 @@
             <b>Department</b> you're raiding.
           </span>
           <span>
-            If you want to know what to expect, hover your cursor over a
-            <img
-              class="mx--0"
-              :src="require('@/assets/art/graytiding/Mining.png')"
-            />
-            <b>Door</b> and I can give you an idea.
-          </span>
-          <span>
             Oh, and be on the look out for
             <img
               class="mx--0"
@@ -142,7 +134,7 @@
       </div>
       <div class="row">
         <div
-          class="col-6 col-md-4 col-lg-3 col-xl-2"
+          class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
           v-for="[actionId, action] in viewableActions"
           :key="actionId"
         >
