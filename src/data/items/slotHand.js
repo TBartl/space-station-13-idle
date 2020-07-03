@@ -780,7 +780,7 @@ const GBULLET = {
 
 Object.values(MBRUTE).forEach(mbrute => {
 	mbrute.equipmentSlot = "hand";
-	mbrute.sellPrice = Math.ceil(mbrute.requires.meleePower * 2 + 150);
+//	mbrute.sellPrice = Math.ceil(mbrute.requires.meleePower * 10 + 150);
 	mbrute.stats.maxHealth = mbrute.requires.meleePower * 1;
 	mbrute.stats.precision = Math.ceil(mbrute.requires.meleePower * .35);
 	mbrute.stats.power = Math.round(mbrute.requires.meleePower * .6);
@@ -790,7 +790,7 @@ Object.values(MBRUTE).forEach(mbrute => {
 
 Object.values(MCUT).forEach(mcut => {
 	mcut.equipmentSlot = "hand";
-	mcut.sellPrice = Math.ceil(mcut.requires.precision * 2 + 150);
+//	mcut.sellPrice = Math.ceil(mcut.requires.precision * 10 + 150);
 	mcut.stats.maxHealth = mcut.requires.precision * 1;
 	mcut.stats.precision = Math.ceil(mcut.requires.precision * .30);
 	mcut.stats.power = Math.round(mcut.requires.precision * .45);

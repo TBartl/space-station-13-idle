@@ -72,10 +72,6 @@ export default {
 				]
 			},
 			{
-				chance: .02,
-				item: "jumpsuitSecurity"
-			},
-			{
 				chance: 1,
 				item: "foodMeatZ"
 			}

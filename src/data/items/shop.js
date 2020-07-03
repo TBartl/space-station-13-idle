@@ -90,9 +90,8 @@ export default {
 		icon: require("@/assets/art/shop/items/weaponcrate.png"),
 		itemTable: [
 			{
-				id: 'ammoEnergy2',
-				count: 20,
-				weight: 10
+				id: 'meleeSharp1',
+				weight: 11
 			},
 			{
 				id: 'meleeSharp2',
@@ -107,18 +106,116 @@ export default {
 				weight: 8
 			},
 			{
+				id: 'meleeSharp5',
+				weight: 5
+			},
+			{
 				id: 'meleeSharp6',
+				weight: 3
+			},
+			{
+				id: 'meleeBurn3',
 				weight: 3
 			},
 			{
 				id: 'meleeSharp7',
 				weight: 1
-			},
-			{
-				id: 'meleeBurn3',
-				weight: 1
 			}
 		]
+	},
+	supplyCrate: {
+		name: "Supply Droppod",
+		icon: require("@/assets/art/shop/items/droppod.png"),
+		itemTable: [
+			{
+				id: 'plantSeed',
+				count: 10,
+				weight: 25
+			},
+			{
+				id: 'iron',
+				count: 10,
+				weight: 24
+			},
+			{
+				id: 'foodPrecision1',
+				count: 3,
+				weight: 23
+			},
+			{
+				id: 'foodEvasion1',
+				count: 3,
+				weight: 22
+			},
+			{
+				id: 'foodPower1',
+				count: 3,
+				weight: 21
+			},
+			{
+				id: 'foodMeatA',
+				count: 3,
+				weight: 20
+			},
+			{
+				id: 'foodPasta1',
+				count: 3,
+				weight: 19
+			},
+			{
+				id: 'wire',
+				count: 5,
+				weight: 18
+			},
+			{
+				id: 'power',
+				count: 50,
+				weight: 17
+			},
+			{
+				id: 'meleeBurn1',
+				weight: 6
+			},
+			{
+				id: 'companionBee',
+				weight: 1
+			},
+		]
+	},
+	secCrate:{
+	name: "Security Crate",
+	icon: require("@/assets/art/shop/items/seccrate.png"),
+	itemTable: [
+		{
+			id: 'faceSecGlassess',
+			weight: 10
+		},
+		{
+			id: 'faceSec',
+			count: 20,
+			weight: 8
+		},
+		{
+			id: 'gunEnergy6',
+			weight: 5
+		},
+		{
+			id: 'jumpsuitSecurity',
+			weight: 5
+		},
+		{
+			id: 'armorSpecial1',
+			weight: 1
+		},
+		{
+			id: 'meleeBlunt9',
+			weight: 1
+		},
+		{
+			id: 'meleeBurn2',
+			weight: 1
+		},
+	]
 	},
 	lavaCrate: {
 		name: "Local Heritage Crate",
@@ -155,47 +252,7 @@ export default {
 				weight: 3
 			},
 			{
-				id: 'meleeBurn2',
-				weight: 1
-			},
-			{
 				id: 'foot',
-				weight: 1
-			},
-		]
-	},
-	supplyCrate: {
-		name: "Supply Droppod",
-		icon: require("@/assets/art/shop/items/droppod.png"),
-		itemTable: [
-			{
-				id: 'seeds',
-				count: 10,
-				weight: 5
-			},
-			{
-				id: 'foodPrecision1',
-				count: 3,
-				weight: 4
-			},
-			{
-				id: 'foodEvasion1',
-				count: 3,
-				weight: 4
-			},
-			{
-				id: 'foodPower1',
-				count: 3,
-				weight: 4
-			},
-			{
-				id: 'power',
-				count: 50,
-				weight: 2
-			},
-			{
-				id: 'meleeBurn1',
-				count: 3,
 				weight: 1
 			},
 		]
