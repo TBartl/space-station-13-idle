@@ -1,12 +1,16 @@
 <template>
-  <div v-if="valid" class="d-flex flex-row align-items-center my-1" :class="{simplified: simplified}">
+  <div
+    v-if="valid"
+    class="d-flex flex-row align-items-center my-1"
+    :class="{simplified: simplified}"
+  >
     <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
     <img :src="item.icon" :id="id" class="mx--0" :class="{'mr-1': !simplified}" />
     <item-popover :itemId="itemId" :target="id" placement="right" />
-		<span v-if="simplified">x</span>
-    <span v-if="simplified">{{countText}}</span>
+    <span v-if="simplified">x</span>
+    <span>{{countText}}</span>
     <span v-if="!simplified">&nbsp;{{item.name}}</span>
-		<span v-if="simplified" class="ml-1">({{bankCount}})</span>
+    <span v-if="simplified" class="ml-1">({{bankCount}})</span>
   </div>
 </template>
 
@@ -51,11 +55,11 @@ export default {
       let chance = (this.chance * 100).toFixed(2);
       if (chance.length <= 4) chance = "  " + chance;
       return chance + "%";
-		},
-		bankCount() {
-			let count = this.$store.getters["inventory/bank"][this.itemId];
-			return count ? count : 0;
-		}
+    },
+    bankCount() {
+      let count = this.$store.getters["inventory/bank"][this.itemId];
+      return count ? count : 0;
+    }
   }
 };
 </script>
@@ -68,9 +72,9 @@ img {
   width: 32px;
 }
 .simplified {
-	font-size: 14px;
+  font-size: 14px;
 }
 .mx--0 {
-	margin-bottom: -8px;
+  margin-bottom: -8px;
 }
 </style>
