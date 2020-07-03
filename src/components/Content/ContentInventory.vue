@@ -61,6 +61,10 @@
         </div>
         <div class="col-12 items d-flex flex-row flex-wrap">
           <inventory-item v-for="itemId in bankItemIds" :key="itemId" :itemId="itemId" />
+          <div class="fake-inventory-item" v-for="index in fakeItemCount" :key="index" div>
+            <div />
+            <span>&#8203;</span>
+          </div>
         </div>
       </div>
     </div>
@@ -91,6 +95,9 @@ export default {
     },
     bankSlots() {
       return this.$store.getters["inventory/bankSlots"];
+    },
+    fakeItemCount() {
+      return this.bankSlots - this.bankItemIds.length;
     }
   },
   methods: {

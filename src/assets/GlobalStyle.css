@@ -160,7 +160,8 @@ img {
 }
 
 
-.inventory-item {
+.inventory-item,
+.fake-inventory-item {
   border: none;
   display: flex;
   flex-direction: column;
@@ -170,23 +171,30 @@ img {
   border-radius: 4px;
   padding-bottom: 0.25rem;
   margin: 0.5rem;
-  cursor: pointer;
 }
 .inventory-item:hover {
+  cursor: pointer;
   background-color: rgb(206, 233, 255);
 }
-.inventory-item img {
-  width: 64px;
+.inventory-item img,
+.fake-inventory-item div {
+	width: 64px;
+	height: 64px;
+}
+.fake-inventory-item {
+	background-color: #737980;
+	opacity: .5;
 }
 
-
 @media (max-width: 576px) {
-	.inventory-item {
+	.inventory-item,
+	.fake-inventory-item {
 		width: 42px;
 		margin: 0.25rem;
 	}
 	
-	.inventory-item img {
+	.inventory-item img,
+	.fake-inventory-item div {
 		width: 32px;
 	}
 }
