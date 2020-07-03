@@ -198,7 +198,7 @@ export default {
     },
     resetInfoClicked() {
       this.$store.commit("info/resetAll");
-      EventBus.$emit("toast", { text: "Tutorials reset!" });
+      EventBus.$emit("toast", { text: "Tutorials reset!", duration: 3000 });
     },
     exportDataClicked() {
       let file = new Blob([JSON.stringify(reducer(this.$store.state))], {
@@ -216,7 +216,7 @@ export default {
         window.URL.revokeObjectURL(url);
       }, 0);
 
-      EventBus.$emit("toast", { text: "Data exported!" });
+      EventBus.$emit("toast", { text: "Data exported!", duration: 3000 });
     },
     importDataChanged(event) {
       this.fileData = null;
@@ -234,12 +234,12 @@ export default {
     },
     importDataClicked() {
       if (!this.fileData) {
-        EventBus.$emit("toast", { text: "No file to import!" });
+        EventBus.$emit("toast", { text: "No file to import!", duration: 3000 });
         return;
       }
 
       this.$store.dispatch("setData", JSON.parse(this.fileData));
-      EventBus.$emit("toast", { text: "Data imported!" });
+      EventBus.$emit("toast", { text: "Data imported!", duration: 3000 });
     },
     resetDataClicked() {
       this.$modal.show(ModalResetData, {}, { height: "auto", width: "320px" });
@@ -269,7 +269,7 @@ export default {
     },
     completeCurrentValidhuntingTask() {
       this.$store.dispatch("validhunting/completeTask", true);
-      EventBus.$emit("toast", { text: "Task Complete!" });
+      EventBus.$emit("toast", { text: "Task Complete!", duration: 3000 });
 
       // In case I ever want to simulate this again:
       // let table = [

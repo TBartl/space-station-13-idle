@@ -133,7 +133,7 @@ const combat = {
 			}
 
 			if (dropsFull) {
-				EventBus.$emit("toast", { text: `Too much loot! Drop lost.` });
+				EventBus.$emit("toast", { icon: require('@/assets/art/sidebar/backpack.png'), text: `Too much loot! Drop lost.`, duration: 3000 });
 			}
 		},
 		cancelActions({ state, commit, dispatch }) {
@@ -215,7 +215,7 @@ const combat = {
 			food.count -= 1;
 			if (food.count == 0) {
 				food.itemId = null;
-				EventBus.$emit("toast", { text: `Out of food!` });
+				EventBus.$emit("toast", { text: `Out of food!`, duration: 3000 });
 			}
 			dispatch("_startFoodCD")
 		},

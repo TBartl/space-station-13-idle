@@ -149,7 +149,7 @@ export default {
 			let canContinue = true;
 			if (!getters.hasActionRequiredItems(actionId)) {
 				canContinue = false;
-				EventBus.$emit("toast", { text: "Missing items!" });
+				EventBus.$emit("toast", { text: "Missing items!", duration: 3000 });
 			};
 
 			if (getters.level < action.requiredLevel) canContinue = false;
