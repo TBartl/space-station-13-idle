@@ -63,6 +63,29 @@ const modules = {
 	enemyMob: createMobModule('enemy')
 }
 
+// Needed to Vue.set appropriately
+function customMerge(obj, source) {
+	Object.keys(source).forEach(key => {
+		if (source[key] && source[key].constructor == Object) {
+			customMerge(obj[key], source[key]);
+		} else {
+			Vue.set(obj, key, source[key]);
+		}
+	});
+}
+
+export function reducer(state) {
+	let reduced = cloneDeep(state);
+	for (let [moduleName, module] of Object.entries(modules)) {
+		if (!module.modules) continue;
+		for (let subModuleName of Object.keys(module.modules)) {
+			delete reduced[moduleName][subModuleName];
+		}
+	}
+	delete reduced.chrono.currentTimeout;
+	reduced.chrono.lastLogoutTime = new Date().getTime();
+	return reduced;
+}
 
 import VuexPersistence from 'vuex-persist'
 const vuexLocal = new VuexPersistence({
@@ -71,18 +94,7 @@ const vuexLocal = new VuexPersistence({
 		// We don't need a filter right now, but we might in the future
 		return true;
 	},
-	reducer: (state) => {
-		let reduced = cloneDeep(state);
-		for (let [moduleName, module] of Object.entries(modules)) {
-			if (!module.modules) continue;
-			for (let subModuleName of Object.keys(module.modules)) {
-				delete reduced[moduleName][subModuleName];
-			}
-		}
-		delete reduced.chrono.currentTimeout;
-		reduced.chrono.lastLogoutTime = new Date().getTime();
-		return reduced;
-	}
+	reducer: reducer
 })
 
 const state = {
@@ -115,7 +127,12 @@ const store = new Vuex.Store({
 			state.visibleSidebarItem = id;
 		},
 		_resetState(state) {
+			console.log(initialState);
 			Object.assign(state, cloneDeep(initialState));
+		},
+		_setState(state, newState) {
+			customMerge(state, newState);
+			console.log(state);
 		},
 		setWelcomeMessageSeen(state) {
 			state.welcomeMessageSeen = true;
@@ -145,6 +162,11 @@ const store = new Vuex.Store({
 		resetData({ commit, dispatch }) {
 			dispatch("cancelAllActions");
 			commit("_resetState");
+		},
+		setData({ commit, dispatch }, newData) {
+			dispatch("cancelAllActions");
+			commit("_setState", newData);
+			dispatch("cancelAllActions");
 		}
 	},
 	plugins: [vuexLocal.plugin]
