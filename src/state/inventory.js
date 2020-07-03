@@ -79,13 +79,22 @@ const inventory = {
 		canEquip(state, getters, rootState, rootGetters) {
 			return (itemId) => {
 				let item = ITEMS[itemId];
-				if (!getEquipmentSlot(itemId)) return false;
+				let slot = getEquipmentSlot(itemId);
+				if (!slot) return false;
 				if (!item.requires) return true;
 				for (let [jobId, requiredLevel] of Object.entries(item.requires)) {
 					let jobLevel = rootGetters[jobId + "/level"];
 					if (jobLevel < requiredLevel) return false;
 				}
+				if (state.equipment[slot].itemId == itemId) return false;
 				return true;
+			};
+		},
+		isEquipped(state, getters, rootState, rootGetters) {
+			return (itemId) => {
+				let slot = getEquipmentSlot(itemId);
+				if (!slot) return false;
+				return state.equipment[slot].itemId == itemId;
 			};
 		},
 		checkRestricted(state, getters) {

@@ -125,7 +125,7 @@ const ACTIONS = {
 						id: "ammoBallistic4",
 						weight: 10
 					}, {
-						id: "limbJackBoots",
+						id: "limbJackboots",
 						weight: 1
 					},
 				]

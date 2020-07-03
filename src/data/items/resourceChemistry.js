@@ -66,7 +66,7 @@ const POTIONS = {
 		name: "Unstable Mutagen",
 		sellPrice: 67,
 		icon: require("@/assets/art/chemistry/plantbgone.png"),
-		description: `Plants have a ${BOTANY_POTION_PERCENT * 100} chance to grow an additional plant of that family.`,
+		description: `Plants have a ${BOTANY_POTION_PERCENT * 100}% chance to grow an additional plant of that family.`,
 		potionJob: "botany",
 		potionCharges: 5
 	},

@@ -13,12 +13,16 @@
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
         >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
+        <span v-if="isEquipped" class="description">Already Equipped</span>
 
-        <button
-          v-if="canEquipChem"
-          class="mt-1 btn btn-primary btn-sm"
-          @click="$store.dispatch('potions/set', itemId); $refs.popover.$emit('close');"
-        >Equip CHEM</button>
+        <div v-if="item.potionJob" class="mt-1">
+          <button
+            v-if="canEquipChem"
+            class="mt-1 btn btn-primary btn-sm"
+            @click="$store.dispatch('potions/set', itemId); $refs.popover.$emit('close');"
+          >Equip CHEM</button>
+          <span v-else class="description">Already Equipped</span>
+        </div>
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="viewOdds">View Odds</button>
         <div v-if="item.sellPrice" class="mt-1">
@@ -64,11 +68,15 @@ export default {
       return this.bank[this.itemId];
     },
     canEquip() {
-      if (!this.$store.getters["inventory/canEquip"](this.itemId)) return false;
-      return true;
+      return this.$store.getters["inventory/canEquip"](this.itemId);
+    },
+    isEquipped() {
+      return this.$store.getters["inventory/isEquipped"](this.itemId);
     },
     canEquipChem() {
-      return this.item.potionJob;
+      let potionData = this.$store.getters["potions/get"](this.item.potionJob);
+      if (!potionData) return true;
+      return potionData.itemId != this.itemId;
     },
     canOpen() {
       return (
