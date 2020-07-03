@@ -16,6 +16,19 @@
               class="btn btn-primary my-1 d-block"
               @click="resetInfoClicked"
             >Reset Dismissed Tutorials</button>
+
+            <div class="custom-control custom-switch">
+              <input
+                v-model="inventoryFullStop"
+                type="checkbox"
+                class="custom-control-input"
+                id="inventoryFullStop"
+              />
+              <label
+                class="custom-control-label"
+                for="inventoryFullStop"
+              >Stop Actions when Full Inventory</label>
+            </div>
             <div class="custom-control custom-switch">
               <input
                 v-model="showVirtualLevels"
@@ -179,6 +192,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowVirtualLevels", value);
+      }
+    },
+    inventoryFullStop: {
+      get() {
+        return this.$store.getters["settings/inventoryFullStop"];
+      },
+      set(value) {
+        this.$store.commit("settings/setInventoryFullStop", value);
       }
     },
     cheatsEnabled() {

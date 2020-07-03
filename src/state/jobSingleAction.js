@@ -161,7 +161,7 @@ export default {
 				if (count <= 0) return false;
 				return !rootGetters["inventory/hasItem"](itemId);
 			});
-			if (isMissingItem) {
+			if (isMissingItem && rootGetters["settings/inventoryFullStop"]) {
 				canContinue = false;
 			};
 
