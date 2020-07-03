@@ -17,8 +17,11 @@
         id="inventory"
         text="Inventory"
         :icon="require('@/assets/art/sidebar/backpack.png')"
+        :textColor="bankItemIds.length == bankSlots ? 'rgb(255, 113, 113)' : ''"
       >
-        <span>{{bankItemIds.length}}/{{bankSlots}}</span>
+        <span
+          :style="{color: bankItemIds.length == bankSlots ?  'rgb(255, 113, 113)': ''}"
+        >{{bankItemIds.length}}/{{bankSlots}}</span>
       </sidebar-item>
 
       <p class="items-header">Jobs</p>
@@ -242,18 +245,18 @@ a:focus {
     width: 64px;
     height: 64px;
 
-		left: 240px;
-		top: 0;
+    left: 240px;
+    top: 0;
     margin: 10px;
-		cursor: pointer;
-		opacity: .82;
+    cursor: pointer;
+    opacity: 0.82;
     transition: opacity 0.3s;
     animation-timing-function: ease-out;
-	}
-	
-	.expanded .button-toggle {
-		opacity: 1;
-	}
+  }
+
+  .expanded .button-toggle {
+    opacity: 1;
+  }
 
   .backing {
     display: inline-block;
