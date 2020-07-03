@@ -1,12 +1,14 @@
 export default {
 	innocent: {
-		name: "BWOINK",
-		sellPrice: -10,
+		name: "Dedication Medal",
+		sellPrice: 1,
+		description: "A token of appreciation given by central command to hard workers. Just throw it away since it's not worth the medal it's printed on.",
 		icon: require("@/assets/art/validhunting/innocent.png")
 	},
 	criminal: {
-		name: "Valid Points",
-		sellPrice: 0,
+		name: "Valor In Combat Medal",
+		description: "Given to particularly bloodthirst crewmembers for killing an enemy of Nanotrasen. Just throw it away since it's not worth the medal it's printed on.",
+		sellPrice: 1,
 		icon: require("@/assets/art/validhunting/guilty.png")
 	},
 	ticket1: {

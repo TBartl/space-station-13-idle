@@ -45,18 +45,18 @@ export default {
 				chance: 0.15,
 				itemTable: [
 					{
-						id: 'ticket1',
-						count: [1, 2],
-						weight: 1
-					},
-					{
 						id: 'armorBrute1',
-						weight: .3
+						weight: 43
 					},
 					{
 						id: 'meleeToolbox2',
-						weight: .1
-					}
+						weight: 32
+					},
+					{
+						id: 'ticket1',
+						count: [1, 2],
+						weight: 25
+					},
 				]
 			},
 			{

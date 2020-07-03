@@ -9,7 +9,7 @@ export default {
 			power: 66,
 			evasion: 57,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 30
 		},
 		itemTables: [
 			{
@@ -17,16 +17,20 @@ export default {
 				itemTable: [
 					{
 						id: 'faceMedHud',
-						weight: 1
+						weight: 9
 					},
 					{
 						id: 'ammoBallistic3',
 						count: 8,
-						weight: 1
+						weight: 6
+					},
+					{
+						id: 'q_foodMeatZ',
+						weight: 3
 					},
 					{
 						id: 'potionChemistry',
-						weight: 1
+						weight: 2
 					}
 				]
 			},
@@ -50,7 +54,7 @@ export default {
 			power: 48,
 			evasion: 30,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 30
 		},
 		itemTables: [
 			{
@@ -58,15 +62,23 @@ export default {
 				itemTable: [
 					{
 						id: 'foot',
-						weight: 1
+						weight: 25
+					},
+					{
+						id: 'innocent',
+						weight: 14
+					},
+					{
+						id: 'q_foodMeatA',
+						weight: 11
 					},
 					{
 						id: 'junk',
-						weight: 1
+						weight: 9
 					},
 					{
 						id: 'potionTinkering',
-						weight: 1
+						weight: 8
 					}
 				]
 			},
@@ -90,19 +102,23 @@ export default {
 			power: 78,
 			evasion: 68,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 30
 		},
 		itemTables: [
 			{
-				chance: 0.5,
+				chance: 0.25,
 				itemTable: [
 					{
 						id: 'faceScience',
-						weight: 1
+						weight: 4
 					},
 					{
 						id: 'meleeToolbox5',
-						weight: 1
+						weight: 3
+					},
+					{
+						id: 'q_foodMeatH',
+						weight: 2
 					},
 					{
 						id: 'ticket2',

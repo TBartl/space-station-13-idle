@@ -23,12 +23,12 @@ export default {
 				itemTable: [
 					{
 						id: "wire",
-						weight: 150,
+						weight: 74,
 						count: [1, 3]
 					},
 					{
 						id: "foodMeatA",
-						weight: 48
+						weight: 24
 					},
 					{
 						id: "companionMouse",
@@ -69,12 +69,13 @@ export default {
 						weight: 5,
 						count: [1, 3]
 					},
-					{
-						id: 'jumpsuitScience',
-						weight: 1
-					}
 				]
-			}, {
+			},
+			{
+				chance: .02,
+				item: "jumpsuitScience"
+			},
+			{
 				chance: 1,
 				item: "foodMeatZ"
 			}
@@ -98,24 +99,25 @@ export default {
 				itemTable: [
 					{
 						id: 'glass',
-						weight: 1,
+						weight: 65,
 						count: [1, 8]
 					},
 					{
 						id: 'silver',
-						weight: 1,
+						weight: 30,
 						count: [1, 5]
 					},
 					{
 						id: 'ticket1',
 						count: [0, 2],
-						weight: 1
+						weight: 5
 					},
-					{
-						id: 'jumpsuitTinkering',
-						weight: .5
-					}
+
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitTinkering"
 			},
 			{
 				chance: 1,

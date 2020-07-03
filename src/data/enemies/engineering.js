@@ -16,6 +16,16 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
+						id: 'oil',
+						count: 3,
+						weight: 29
+					},
+
+					{
+						id: 'burnJunk',
+						weight: 24
+					},
+					{
 						id: 'armorBrute2',
 						weight: 1
 					},
@@ -54,22 +64,26 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 1
+						weight: 60
 					},
 					{
-						id: 'meleeToolbox3',
-						weight: 1
+						id: 'innocent',
+						weight: 34
 					},
 					{
-						id: 'jumpsuitEngineering',
-						weight: 1
+						id: 'meleeToolbox4',
+						weight: 33
 					},
 					{
 						id: 'ticket2',
 						count: [0, 1],
-						weight: 1
+						weight: 27
 					}
 				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitEngineering"
 			},
 			{
 				chance: 1,

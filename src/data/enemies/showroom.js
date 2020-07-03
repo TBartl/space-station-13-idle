@@ -49,7 +49,7 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.05,
+				chance: 0.1,
 				itemTable: [
 					{
 						id: 'banana',
@@ -59,10 +59,6 @@ export default {
 						id: 'honk',
 						weight: 1
 					},
-					{
-						id: 'meleeToolbox4',
-						weight: 1
-					}
 				]
 			},
 			{
@@ -122,20 +118,24 @@ export default {
 				itemTable: [
 					{
 						id: 'banana',
-						weight: 10
+						weight: 38
+					},
+					{
+						id: 'innocent',
+						weight: 22
 					},
 					{
 						id: 'bananium',
-						weight: 1
+						weight: 20
 					},
 					{
 						id: 'faceClown',
-						weight: 1
+						weight: 15
 					},
 					{
 						id: 'ticket2',
 						count: [0, 2],
-						weight: 3
+						weight: 5
 					}
 				]
 			},
