@@ -75,7 +75,7 @@ export default {
 		]
 	},
 	lava3: {
-		name: "Bubbglegum",
+		name: "Bubblegum",
 		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
 		validhuntable: false,
 		stats: {
