@@ -13,6 +13,7 @@
           class="mt-1 btn btn-primary btn-sm"
           @click="$store.dispatch('inventory/equip', itemId)"
         >Equip {{item.healAmount ? "food" : item.equipmentSlot}}</button>
+        <span v-if="isEquipped" class="description">Already Equipped</span>
 
         <div v-if="item.potionJob" class="mt-1">
           <button
@@ -67,8 +68,10 @@ export default {
       return this.bank[this.itemId];
     },
     canEquip() {
-      if (!this.$store.getters["inventory/canEquip"](this.itemId)) return false;
-      return true;
+      return this.$store.getters["inventory/canEquip"](this.itemId);
+    },
+    isEquipped() {
+      return this.$store.getters["inventory/isEquipped"](this.itemId);
     },
     canEquipChem() {
       let potionData = this.$store.getters["potions/get"](this.item.potionJob);
