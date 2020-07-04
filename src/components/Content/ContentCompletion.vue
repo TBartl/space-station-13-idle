@@ -138,7 +138,7 @@ export default {
     return {
       itemsExpanded: false,
       enemiesExpanded: false,
-      timeExpanded: true
+      timeExpanded: false
     };
   },
   computed: {
