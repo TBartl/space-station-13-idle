@@ -1,5 +1,5 @@
 <template>
-  <div class="content-wrapper">
+  <div class="content-wrapper" :class="{reversed: reversed}">
     <component :is="'content-' + visibleSidebarItem" class="w-100" />
   </div>
 </template>
@@ -48,7 +48,10 @@ export default {
     ContentAbout
   },
   computed: {
-    ...mapGetters(["visibleSidebarItem"])
+    ...mapGetters(["visibleSidebarItem"]),
+    reversed() {
+      return this.$store.getters["cheats/cheatsEnabled"];
+    }
   }
 };
 </script>
@@ -56,5 +59,14 @@ export default {
 <style scoped>
 .content-wrapper {
   flex: 1;
+
+  /* background-image: url("~@/assets/art/misc/background.png"); */
+  background-image: url("~@/assets/art/misc/background-alt.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+
+.content-wrapper.reversed {
+  background-image: url("~@/assets/art/misc/background-alt-reversed.jpg");
 }
 </style>	
