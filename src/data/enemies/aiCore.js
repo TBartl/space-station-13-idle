@@ -154,7 +154,7 @@ export default {
 						weight: 14
 					},
 					{
-						id: 'spacejunk',
+						id: 'spaceJunk',
 						weight: 5
 					},
 					{
