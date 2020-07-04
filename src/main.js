@@ -23,6 +23,14 @@ Vue.filter('stat', function (value) {
 	if (value == undefined) return "";
 	return +value.toFixed(2);
 })
+Vue.filter('aggressive', function (value) {
+	if (value == undefined) return 0;
+	if (value >= 1000) {
+		value = Math.min(Math.floor(value / 1000), 9);
+		return `>${value}k`;
+	}
+	return value;
+})
 
 new Vue({
 	store,

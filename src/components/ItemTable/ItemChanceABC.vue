@@ -10,7 +10,7 @@
     <span v-if="simplified">x</span>
     <span>{{countText}}</span>
     <span v-if="!simplified">&nbsp;{{item.name}}</span>
-    <span v-if="simplified" class="ml-1">({{bankCount}})</span>
+    <span v-if="simplified" class="ml-1">({{bankCount | aggressive}})</span>
   </div>
 </template>
 

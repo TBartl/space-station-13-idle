@@ -4,7 +4,7 @@
     <item-popover :itemId="itemId" :target="id" />
     <div :style="{opacity: bankCount >= count ? 1: .5}">
       <span>x{{count}}</span>
-      <span class="ml-1">({{bankCount ? bankCount : 0}})</span>
+      <span class="ml-1">({{bankCount ? bankCount : 0 | aggressive}})</span>
     </div>
   </div>
 </template>
