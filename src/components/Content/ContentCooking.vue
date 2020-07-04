@@ -14,7 +14,7 @@
       <job-info
         infoId="cooking"
         :icon="require('@/assets/art/jobinfo/cooking.png')"
-        title="Korol Konents the Cook says..."
+        title="Korol Konets the Cook says..."
         :options="[
 					{name: 'Back'},
 					{name: 'Produce?', icon: require('@/assets/art/botany/PlantPepperhot.png'), iconClass:'mx--2'},
