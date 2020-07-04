@@ -43,7 +43,7 @@ export default {
 						id: 'mushroomRed',
 						weight: 1
 					}, {
-						id: 'pepperred',
+						id: 'pepper',
 						weight: 1
 					}
 				]
