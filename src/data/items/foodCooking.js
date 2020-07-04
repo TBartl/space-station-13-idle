@@ -43,7 +43,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta1.png"),
 		healAmount: 6,
 		stats: {
-			maxHealth: -10,
+			maxHealth: 0,
 			evasion: 0,
 			precision: 0,
 			power: 0,
@@ -67,7 +67,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta3.png"),
 		healAmount: 18,
 		stats: {
-			maxHealth: -60,
+			maxHealth: -45,
 			evasion: 2,
 			precision: 2,
 			power: 2,
@@ -79,7 +79,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta4.png"),
 		healAmount: 24,
 		stats: {
-			maxHealth: -90,
+			maxHealth: -60,
 			evasion: 3,
 			precision: 3,
 			power: 3,
@@ -91,7 +91,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta5.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: -120,
+			maxHealth: -75,
 			evasion: 4,
 			precision: 4,
 			power: 4,
@@ -103,7 +103,7 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/pasta6.png"),
 		healAmount: 36,
 		stats: {
-			maxHealth: -150,
+			maxHealth: -90,
 			evasion: 5,
 			precision: 5,
 			power: 5,

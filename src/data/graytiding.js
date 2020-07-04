@@ -15,12 +15,11 @@ const randomJunkTable = [
 
 const ACTIONS = {
 	//at 25 xp per action gives approximately 4000 total junk to hit 50.
-	graytideMining: {
-		name: "Mining",
-		icon: require("@/assets/art/graytiding/Mining.png"),
+	graytideMoney: {
+		name: "Botany",
+		icon: require("@/assets/art/graytiding/Cargo.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -30,21 +29,46 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "iron",
-						count: [1, 3],
-						weight: 300
-					}, {
-						id: "silver",
-						count: 2,
-						weight: 100
-					}, {
-						id: "gold",
+						id: "money",
+						count: [0, 100],
+						weight: 99
+					}
+				]
+			},
+			{
+				chance: .003,
+				item: "limbBoxing",
+				weight: 1
+			}
+		]
+	},
+	graytideSeeds: {
+		name: "Botany",
+		icon: require("@/assets/art/graytiding/Botany.png"),
+		time: 6,
+		xp: 25,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "plantSeed",
+						count: [2, 5],
 						weight: 99
 					}, {
-						id: "limbMagBoots",
+						id: "potionBotany",
 						weight: 1
 					}
 				]
+			},
+			{
+				chance: .003,
+				item: "limbMagkrava",
+				weight: 1
 			}
 		]
 	},
@@ -53,7 +77,6 @@ const ACTIONS = {
 		icon: require("@/assets/art/graytiding/Medical.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -64,30 +87,31 @@ const ACTIONS = {
 				itemTable: [
 					{
 						id: "foodMeatH",
-						count: [0, 2],
+						count: [0, 3],
 						weight: 165
 					}, {
 						id: "foodMeatZ",
-						count: [0, 2],
+						count: [0, 3],
 						weight: 165
 					}, {
 						id: "foodMeatA",
-						count: [0, 2],
+						count: [0, 3],
 						weight: 165
-					}, {
-						id: "limbClownShoes",
-						weight: 1
 					}
 				]
+			},
+			{
+				chance: .003,
+				item: "limbNitrile",
+				weight: 1
 			}
 		]
 	},
-	graytideSecurity: {
-		name: "Security",
-		icon: require("@/assets/art/graytiding/Security.png"),
+	graytidePower: {
+		name: "Engineering",
+		icon: require("@/assets/art/graytiding/Engineering.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -97,38 +121,142 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "ammoEnergy1",
+						id: "power",
+						count: [0, 15],
+						weight: 300
+					},
+					{
+						id: "wire",
 						count: [1, 3],
-						weight: 119
-					}, {
-						id: "ammoEnergy2",
-						count: 2,
-						weight: 40
-					}, {
-						id: "ammoEnergy3",
-						weight: 20
-					}, {
-						id: "ammoEnergy4",
+						weight: 200
+					},
+				]
+			},
+			{
+				chance: .003,
+				item: "limbInsuls",
+				weight: 1
+			}
+		]
+	},
+	graytideVault: {
+		name: "Vault",
+		icon: require("@/assets/art/graytiding/Vault.png"),
+		time: 6,
+		xp: 25,
+		itemTables: [
+			{
+				chance: .03,
+				itemTable: [
+					{
+						id: 'junk',
+						count: [0, 100],
 						weight: 10
 					}, {
-						id: "ammoBallistic1",
-						count: [1, 3],
-						weight: 120
-					}, {
-						id: "ammoBallistic2",
-						count: 2,
-						weight: 40
-					}, {
-						id: "ammoBallistic3",
-						weight: 20
-					}, {
-						id: "ammoBallistic4",
+						id: 'spaceJunk',
+						count: [0, 100],
 						weight: 10
 					}, {
-						id: "limbJackboots",
+						id: 'armorJunk',
+						count: [0, 100],
+						weight: 10
+					},
+				]
+			},
+			{
+				chance: .003,
+				item: "limbCapt",
+				weight: 1
+			}
+		]
+	},
+	graytideSpace: {
+		name: "Space",
+		icon: require("@/assets/art/graytiding/space_anim.gif"),
+		time: 6,
+		xp: 26,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: .003,
+				item: "limbNinja",
+				weight: 1
+			}
+		]
+	},
+	graytideDouble: {
+		name: "Rage Cage",
+		icon: require("@/assets/art/graytiding/Rage.png"),
+		time: 6,
+		xp: 25,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: .003,
+				item: "limbClownShoes",
+				weight: 1
+			}
+		]
+	},
+	graytideChem: {
+		name: "Chemistry",
+		icon: require("@/assets/art/graytiding/Chem.png"),
+		time: 6,
+		xp: 25,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "oxygen",
+						count: [0, 5],
+						weight: 10
+					},{
+						id: "oil",
+						count: [0, 5],
+						weight: 10
+					},{
+						id: "oxygen",
+						count: [0, 5],
+						weight: 10
+					},{
+						id: "sacid",
+						count: [0, 5],
+						weight: 10
+					},{
+						id: "mercury",
+						count: [0, 5],
+						weight: 10
+					},{
+						id: "lithium",
+						count: [0, 5],
+						weight: 10
+					},
+					{
+						id: "potionChemistry",
+						count: [0, 1],
 						weight: 1
 					},
 				]
+			},
+			{
+				chance: .003,
+				item: "limbBronze",
+				weight: 1
 			}
 		]
 	},
@@ -137,7 +265,6 @@ const ACTIONS = {
 		icon: require("@/assets/art/graytiding/Science.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -167,46 +294,21 @@ const ACTIONS = {
 					}, {
 						id: "slimeDarkBlue",
 						weight: 30
-					}, {
-						id: "limbAdvancedMagboots",
-						weight: 1
 					}
 				]
-			}
-		]
-	},
-	graytideSeeds: {
-		name: "Botany",
-		icon: require("@/assets/art/graytiding/Botany.png"),
-		time: 6,
-		xp: 25,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: randomJunkTable
 			},
 			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "plantSeed",
-						count: [2, 5],
-						weight: 499
-					}, {
-						id: "limbBlack",
-						weight: 1
-					}
-				]
+				chance: .003,
+				item: "limbAdvancedMagboots",
+				weight: 1
 			}
 		]
 	},
 	graytideBridge: {
-		name: "Captains Quarters",
+		name: "Captain's Quarters",
 		icon: require("@/assets/art/graytiding/Command.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -232,21 +334,22 @@ const ACTIONS = {
 						weight: 40
 					}, {
 						id: "foodPasta6",
-						weight: 24
-					}, {
-						id: "limbCapt",
-						weight: 1
+						weight: 25
 					}
 				]
+			},
+			{
+				chance: .003,
+				item: "limbBlack",
+				weight: 1
 			}
 		]
 	},
-	graytidePower: {
-		name: "Engineering",
-		icon: require("@/assets/art/graytiding/Engineering.png"),
+	graytideMining: {
+		name: "Mining",
+		icon: require("@/assets/art/graytiding/Mining.png"),
 		time: 6,
 		xp: 25,
-		requiredLevel: 1,
 		itemTables: [
 			{
 				chance: 1,
@@ -256,85 +359,106 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "power",
-						count: [0, 25],
-						weight: 499
-					}, {
-						id: "limbInsuls",
-						weight: 1
-					}
-				]
-			}
-		]
-	},
-	graytideSpace: {
-		name: "Space",
-		icon: require("@/assets/art/graytiding/space_anim.gif"),
-		time: 6,
-		xp: 25,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: randomJunkTable
-			},
-			{
-				chance: .002,
-				item: "limbNinja",
-				weight: 1
-			}
-		]
-	},
-	graytideDouble: {
-		name: "Rage Cage",
-		icon: require("@/assets/art/graytiding/Rage.png"),
-		time: 6,
-		xp: 25,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: 1,
-				itemTable: randomJunkTable
-			},
-			{
-				chance: 1,
-				itemTable: randomJunkTable
-			},
-			{
-				chance: .002,
-				item: "limbBoxing",
-				weight: 1
-			}
-		]
-	},
-	graytideVault: {
-		name: "Vault",
-		icon: require("@/assets/art/graytiding/Vault.png"),
-		time: 6,
-		xp: 25,
-		requiredLevel: 1,
-		itemTables: [
-			{
-				chance: .03,
-				itemTable: [
-					{
-						id: 'junk',
-						count: [0, 100],
+						id: "iron",
+						count: [1, 3],
+						weight: 325
+					},{
+						id: "glass",
+						count: [1, 3],
+						weight: 220
+					},{
+						id: "silver",
+						count: [1, 3],
+						weight: 175
+					},{
+						id: "gold",
+						count: [1, 3],
+						weight: 135
+					},{
+						id: "titanium",
+						count: [1, 3],
+						weight: 100
+					},{
+						id: "uranium",
+						count: [1, 3],
+						weight: 70
+					},{
+						id: "plasma",
+						count: [1, 3],
+						weight: 45
+					},{
+						id: "diamond",
+						count: [1, 3],
+						weight: 25
+					},{
+						id: "bluespace",
+						count: [1, 3],
 						weight: 10
-					}, {
-						id: 'spaceJunk',
-						count: [0, 100],
-						weight: 10
-					}, {
-						id: 'armorJunk',
-						count: [0, 100],
-						weight: 10
+					},{
+						id: "bananium",
+						count: [1, 3],
+						weight: 2
 					},
 				]
 			},
 			{
-				chance: .002,
-				item: "limbMagkrava",
+				chance: .003,
+				item: "limbMagBoots",
+				weight: 1
+			}
+		]
+	},
+	graytideSecurity: {
+		name: "Security",
+		icon: require("@/assets/art/graytiding/Security.png"),
+		time: 6,
+		xp: 25,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "ammoEnergy1",
+						count: [1, 5],
+						weight: 119
+					}, {
+						id: "ammoEnergy2",
+						count: [1, 4],
+						weight: 40
+					}, {
+						id: "ammoEnergy3",
+						count: [1, 3],
+						weight: 20
+					}, {
+						id: "ammoEnergy4",
+						count: [1, 3],
+						weight: 10
+					}, {
+						id: "ammoBallistic1",
+						count: [1, 5],
+						weight: 120
+					}, {
+						id: "ammoBallistic2",
+						count: [1, 4],
+						weight: 40
+					}, {
+						id: "ammoBallistic3",
+						count: [1, 3],
+						weight: 20
+					}, {
+						id: "ammoBallistic4",
+						count: [1, 3],
+						weight: 10
+					}
+				]
+			},
+			{
+				chance: .003,
+				item: "limbJackboots",
 				weight: 1
 			}
 		]
