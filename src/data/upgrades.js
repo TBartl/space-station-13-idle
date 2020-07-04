@@ -219,7 +219,7 @@ for (let i = 0; i < 5; i++) {
 
 	if (i != 0) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
-		upgrade.description += `, to -${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+		upgrade.description += `, to ${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
@@ -274,7 +274,7 @@ for (let i = 0; i < 10; i++) {
 
 	if (i != 0) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
-		upgrade.description += `, to -${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+		upgrade.description += `, to ${(GRAYTIDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 10);
 
@@ -296,7 +296,7 @@ for (let i = 0; i < 5; i++) {
 
 	if (i != 0) {
 		upgrade.description = upgrade.description.replace("by", "by an additional");
-		upgrade.description += `, to -${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+		upgrade.description += `, to ${(CHEMISTRY_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
