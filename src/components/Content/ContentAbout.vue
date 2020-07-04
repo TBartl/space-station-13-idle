@@ -37,7 +37,6 @@
                 <b>Discord Server</b>
               </a>.
             </p>
-            <b>THIS GAME HAS STILL NOT BEEN RELEASED TO THE PUBLIC; DO NOT SHARE IT</b>
           </div>
           <div class="content-block mt-3">
             <h4 class="mb-3">Credits</h4>
