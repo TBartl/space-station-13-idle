@@ -99,6 +99,10 @@ export default {
 						id: 'gunBallistic2',
 						weight: 1
 					},
+					{
+						id: 'faceFox',
+						weight: .9
+					},
 				]
 			}, {
 				chance: 1,
