@@ -91,7 +91,7 @@ export default {
 			power: 0,
 		},
 		requires: {
-			graytiding: MAX_LEVEL
+			tinkering: MAX_LEVEL
 		}
 	},
 	capeBotany: {

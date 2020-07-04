@@ -44,7 +44,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/faunaPerfume.png"),
 		description: "Mining has a chance to yield a special bonus item.",
 		potionJob: "mining",
-		potionCharges: 5
+		potionCharges: 8
 	},
 	potionGraytiding: {
 		name: "Thermite",
@@ -68,7 +68,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/plantbgone.png"),
 		description: `Plants have a ${BOTANY_POTION_PERCENT * 100}% chance to grow an additional plant of that family.`,
 		potionJob: "botany",
-		potionCharges: 5
+		potionCharges: 8
 	},
 	potionEngineering: {
 		name: "Energy Drink",
@@ -76,7 +76,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
 		description: "Whenever you get energy from engineering, also get money of the same amount.",
 		potionJob: "engineering",
-		potionCharges: 5
+		potionCharges: 10
 	},
 	potionTinkering: {
 		name: "Super Glue",
@@ -84,7 +84,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/superglue.png"),
 		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
-		potionCharges: 5
+		potionCharges: 10
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",
@@ -92,7 +92,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/splittingagent.gif"),
 		description: "Xenobiology actions will also give a slime of a lower tier.",
 		potionJob: "xenobiology",
-		potionCharges: 5
+		potionCharges: 30
 	},
 	potionCooking: {
 		name: "Monosodium Glutamate",
@@ -100,7 +100,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/ketchup.png"),
 		description: `Cooking has an additional ${COOKING_POTION_PERCENT * 100}% chance to yield a quality item.`,
 		potionJob: "cooking",
-		potionCharges: 5
+		potionCharges: 10
 	},
 	potionFabrication: {
 		name: "Bluespace Acid",
