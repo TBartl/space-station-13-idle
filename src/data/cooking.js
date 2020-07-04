@@ -58,7 +58,7 @@ const PASTA_ACTIONS = {
 	cookPasta6: {
 		time: 3,
 		name: "Babel Pasta",
-		item: "foodPasta5",
+		item: "foodPasta6",
 		icon: require("@/assets/art/cooking/pasta6.png"),
 		xp: 30,
 		requiredLevel: 50,
