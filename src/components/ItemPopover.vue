@@ -74,7 +74,7 @@ export default {
         let jobLevel = this.$store.getters[jobId + "/level"];
         return {
           icon: job.icon,
-          text: requiredLevel,
+          text: "lvl" + requiredLevel,
           class: jobLevel >= requiredLevel ? "alert-success" : "alert-danger"
         };
       });
@@ -98,7 +98,7 @@ export default {
         restrictions = restrictions.concat(this.item.ammoType);
       }
       return restrictions;
-		}
+    }
   }
 };
 </script>
