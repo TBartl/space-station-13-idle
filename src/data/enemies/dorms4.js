@@ -99,7 +99,7 @@ export default {
 				itemTable: [
 					{
 						id: 'lithium',
-						count: [1-5],
+						count: [1,5],
 						weight: 15
 					},
 					{

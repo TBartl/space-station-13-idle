@@ -17,7 +17,7 @@ export default {
 				itemTable: [
 					{
 						id: 'oil',
-						count: 3,
+						count: [1,10],
 						weight: 29
 					},
 
@@ -27,11 +27,11 @@ export default {
 					},
 					{
 						id: 'armorBrute2',
-						weight: 1
+						weight: 6
 					},
 					{
 						id: 'faceTiki',
-						weight: 1
+						weight: 2
 					},
 					{
 						id: 'wire',
@@ -109,15 +109,20 @@ export default {
 				itemTable: [
 					{
 						id: 'uranium',
-						weight: 1
+						count: [1,3],
+						weight: 13
 					},
 					{
 						id: 'foodPasta1',
-						weight: 1
+						weight: 12
+					},
+					{
+						id: 'q_foodPasta1',
+						weight: 4
 					},
 					{
 						id: 'faceMeson',
-						weight: 1
+						weight: 3
 					}
 				]
 			},
@@ -145,15 +150,17 @@ export default {
 				itemTable: [
 					{
 						id: 'slimeRed',
-						weight: 1
+						weight: 7
 					},
 					{
 						id: 'power',
-						weight: 1
+						count: [5,25],
+						weight: 5
 					},
 					{
 						id: 'titanium',
-						weight: 1
+						count: [1,4],
+						weight: 4
 					}
 				]
 			},

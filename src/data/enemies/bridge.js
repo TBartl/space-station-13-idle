@@ -55,6 +55,7 @@ export default {
 				itemTable: [
 					{
 						id: 'pillPumpup',
+						count: [5,10],
 						weight: 7
 					},
 					{

@@ -17,11 +17,16 @@ export default {
 				itemTable: [
 					{
 						id: 'bananaMime',
-						weight: 1
+						count: [4,20],
+						weight: 8
 					},
 					{
 						id: 'spaceJunk',
-						weight: 1
+						weight: 6
+					},
+					{
+						id: 'foodHuman2',
+						weight: 4
 					},
 					{
 						id: 'faceMime',

@@ -133,15 +133,26 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'gold',
-						weight: 1
+						id: 'glass',
+						count: [1,7],
+						weight: 80
 					},
 					{
 						id: 'gold',
-						weight: 1
+						count: [1,3],
+						weight: 32
 					},
 					{
-						id: 'titanium',
+						id: 'power',
+						count: [50,250],
+						weight: 28
+					},
+					{
+						id: 'potionShitposting',
+						weight: 4
+					},
+					{
+						id: 'boss1Parts',
 						weight: 1
 					}
 				]
@@ -154,7 +165,7 @@ export default {
 						weight: 14
 					},
 					{
-						id: 'spacejunk',
+						id: 'spaceJunk',
 						weight: 5
 					},
 					{
