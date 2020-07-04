@@ -32,7 +32,7 @@ export default {
   mounted() {
     if (!this.welcomeMessageSeen) {
       // this.$modal.show(ModalWelcome, {}, { height: "auto", width: "360px" });
-      // this.setWelcomeMessageSeen();
+      this.setWelcomeMessageSeen();
     } else if (this.$store.getters["chrono/lastGain"] > 30 * 1000) {
       this.$modal.show(
         ModalWelcomeBack,
