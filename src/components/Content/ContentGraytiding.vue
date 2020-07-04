@@ -33,7 +33,7 @@
           <span>It's not a job; it's an art.</span>
         </template>
         <template slot="&quot;Graytiding&quot;?">
-          <span>Us assistants, or "Grayshirts", don't have the privelege of departmental funding.</span>
+          <span>Us assistants, or "Grayshirts", don't have the privilege of departmental funding.</span>
           <span>So how do we close the gap? It's simple; we just take what we need from the other departments for ourselves.</span>
           <span>
             <img class="mx--0" :src="require('@/assets/art/jobinfo/shitcurity.png')" />
