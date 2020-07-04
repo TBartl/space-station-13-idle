@@ -34,6 +34,9 @@ export function combineStats(a, b) {
 		} else {
 			a[statId] += value;
 		}
+		if (statId == "maxHealth") {
+			a[statId] = Math.max(1, a[statId]);
+		}
 	}
 
 	return a;
