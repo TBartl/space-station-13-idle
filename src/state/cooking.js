@@ -31,18 +31,18 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 						totalPercent += COOKING_POTION_PERCENT;
 					}
 
-					action.itemTables = [
+					action.itemTable = [
 						{
-							chance: 1 - totalPercent,
-							item: originalItem
+							weight: 1 - totalPercent,
+							id: originalItem
 						}
 					]
 					delete action.item;
 
 					if (upgradeCount) {
-						action.itemTables.push({
-							chance: totalPercent,
-							item: "q_" + originalItem
+						action.itemTable.push({
+							weight: totalPercent,
+							id: "q_" + originalItem
 						})
 					}
 				})
