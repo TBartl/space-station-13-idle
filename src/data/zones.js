@@ -22,12 +22,12 @@ export default [
 	{
 		name: "Engineering",
 		icon: require("@/assets/art/combat/zones/engineering.png"),
-		enemies: ["flamingatmostech", "badengineer", "goodengineer", "redslime"]
+		enemies: ["redslime", "flamingatmostech", "badengineer", "goodengineer"]
 	},
 	{
 		name: "Showroom",
 		icon: require("@/assets/art/combat/zones/showroom.png"),
-		enemies: ["mime", "badclown", "bee", "goodclown"]
+		enemies: ["bee", "mime", "badclown", "goodclown"]
 	},
 	{
 		name: "Kitchen",

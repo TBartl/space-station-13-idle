@@ -1,4 +1,42 @@
 export default {
+	redslime: {
+		name: "Supermatter Anomaly",
+		icon: require("@/assets/art/combat/enemies/redslime_anim.gif"),
+		stats: {
+			maxHealth: 150,
+			attackSpeed: 2.7,
+			precision: 10,
+			power: 37,
+			evasion: 28,
+			damageType: "brute",
+			bruteProtection: 90
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'slimeRed',
+						weight: 7
+					},
+					{
+						id: 'power',
+						count: [5,25],
+						weight: 5
+					},
+					{
+						id: 'titanium',
+						count: [1,4],
+						weight: 4
+					}
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatA"
+			}
+		]
+	},
 	flamingatmostech: {
 		name: "Wannabe Pyromancer Atmospheric Technician",
 		icon: require("@/assets/art/combat/enemies/atmos.gif"),
@@ -129,44 +167,6 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
-			}
-		]
-	},
-	redslime: {
-		name: "Supermatter Anomaly",
-		icon: require("@/assets/art/combat/enemies/redslime_anim.gif"),
-		stats: {
-			maxHealth: 150,
-			attackSpeed: 2.7,
-			precision: 10,
-			power: 37,
-			evasion: 28,
-			damageType: "brute",
-			bruteProtection: 90
-		},
-		itemTables: [
-			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'slimeRed',
-						weight: 7
-					},
-					{
-						id: 'power',
-						count: [5,25],
-						weight: 5
-					},
-					{
-						id: 'titanium',
-						count: [1,4],
-						weight: 4
-					}
-				]
-			},
-			{
-				chance: 1,
-				item: "foodMeatA"
 			}
 		]
 	},

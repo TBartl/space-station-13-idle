@@ -1,4 +1,37 @@
 export default {
+	bee: {
+		name: "Bee",
+		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
+		stats: {
+			maxHealth: 50,
+			attackSpeed: .5,
+			precision: 25,
+			power: 10,
+			evasion: 76,
+			damageType: "brute",
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "oxygen",
+				}
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 3
+					},
+					{
+						id: "companionBee",
+						weight: 1
+					},
+				]
+			}
+		]
+	},
 	mime: {
 		name: ".....",
 		icon: require("@/assets/art/combat/enemies/mime.png"),
@@ -69,39 +102,6 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
-			}
-		]
-	},
-	bee: {
-		name: "Bee",
-		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
-		stats: {
-			maxHealth: 50,
-			attackSpeed: .5,
-			precision: 25,
-			power: 10,
-			evasion: 76,
-			damageType: "brute",
-		},
-		itemTables: [
-			{
-				chance: 1,
-				items: {
-					id: "oxygen",
-				}
-			},
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: "foodMeatA",
-						weight: 3
-					},
-					{
-						id: "companionBee",
-						weight: 1
-					},
-				]
 			}
 		]
 	},
