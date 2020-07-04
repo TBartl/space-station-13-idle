@@ -28,7 +28,7 @@ export function acquireItemFrom(data, toReturn = {}) {
 		let total = data.itemTable.reduce((total, subData) => {
 			return total + subData.weight;
 		}, 0);
-		let val = Math.floor(Math.random() * total);
+		let val = Math.random() * total;
 		let runningTotal = 0;
 		for (let subData of data.itemTable) {
 			runningTotal += subData.weight;
