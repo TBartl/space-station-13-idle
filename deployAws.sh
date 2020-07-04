@@ -5,6 +5,7 @@ set -e
 
 # build
 npm run build
+rm -rf ./dist/.git/
 
 aws s3 rm s3://spacestationidle.com/ --recursive
 aws s3 cp ./dist/ s3://spacestationidle.com/ --recursive
