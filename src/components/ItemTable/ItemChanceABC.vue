@@ -57,8 +57,16 @@ export default {
       return chance + "%";
     },
     bankCount() {
-      let count = this.$store.getters["inventory/bank"][this.itemId];
-      return count ? count : 0;
+			let count = this.$store.getters["inventory/bank"][this.itemId];
+			count = count ? count : 0;
+      Object.values(this.$store.getters["inventory/equipment"]).forEach(
+        equipment => {
+          if (this.itemId == equipment.itemId) {
+						count += equipment.count;
+          }
+        }
+      );
+      return count;
     }
   }
 };
