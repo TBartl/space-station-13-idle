@@ -98,9 +98,9 @@ export default {
 		stats: {
 			maxHealth: 240,
 			attackSpeed: 1.7,
-			precision: 250,
-			power: 78,
-			evasion: 68,
+			precision: 43,
+			power: 102,
+			evasion: 64,
 			damageType: "brute",
 			burnProtection: 30
 		},

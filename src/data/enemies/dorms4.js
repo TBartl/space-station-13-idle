@@ -43,6 +43,43 @@ export default {
 			}
 		]
 	},
+	traitor: {
+		name: "Unprepared Traitor",
+		icon: require("@/assets/art/combat/enemies/tot.png"),
+		stats: {
+			maxHealth: 110,
+			attackSpeed: 2.5,
+			precision: 27,
+			power: 22,
+			evasion: 33,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 0.6,
+				itemTable: [
+					{
+						id: 'lithium',
+						count: [1, 5],
+						weight: 15
+					},
+					{
+						id: 'faceSyndicate',
+						weight: 4
+					},
+					{
+						id: 'telecrystal',
+						weight: 1
+					}
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
+			}
+		]
+	},
 	braindead: {
 		name: "Braindead Assistant",
 		icon: require("@/assets/art/combat/enemies/bdassist.png"),
@@ -78,43 +115,6 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
-			}
-		]
-	},
-	traitor: {
-		name: "Unprepared Traitor",
-		icon: require("@/assets/art/combat/enemies/tot.png"),
-		stats: {
-			maxHealth: 110,
-			attackSpeed: 2.5,
-			precision: 27,
-			power: 22,
-			evasion: 33,
-			damageType: "burn",
-			burnProtection: 20
-		},
-		itemTables: [
-			{
-				chance: 0.6,
-				itemTable: [
-					{
-						id: 'lithium',
-						count: [1,5],
-						weight: 15
-					},
-					{
-						id: 'faceSyndicate',
-						weight: 4
-					},
-					{
-						id: 'telecrystal',
-						weight: 1
-					}
-				]
-			},
-			{
-				chance: 1,
-				item: "foodMeatH"
 			}
 		]
 	},

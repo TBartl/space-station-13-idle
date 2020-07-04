@@ -1,5 +1,5 @@
 export default {
-	goodchef: {
+	botanist: {
 		name: "Botanist",
 		icon: require("@/assets/art/combat/enemies/botanist.png"),
 		stats: {

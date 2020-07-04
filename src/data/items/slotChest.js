@@ -103,7 +103,7 @@ const BURNARMOR = {
 		}
 	},
 	armorBurn5: {
-		name: "Captains Hardsuit",
+		name: "Captain's Hardsuit",
 		sellPrice: 920,
 		icon: require("@/assets/art/combat/items/arm_s5.png"), overlay: require("@/assets/art/combat/items/arm_s5_overlay.png"),
 		stats: {

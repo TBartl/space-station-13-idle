@@ -5,7 +5,7 @@ export default {
 		stats: {
 			maxHealth: 350,
 			attackSpeed: 2.1,
-			precision: 104,
+			precision: 84,
 			power: 80,
 			evasion: 72,
 			damageType: "brute",
@@ -58,9 +58,9 @@ export default {
 		icon: require("@/assets/art/combat/enemies/turret.png"),
 		stats: {
 			maxHealth: 360,
-			attackSpeed: 2.4,
-			precision: 93,
-			power: 73,
+			attackSpeed: 1,
+			precision: 103,
+			power: 93,
 			evasion: 52,
 			damageType: "burn",
 			bruteProtection: 50
