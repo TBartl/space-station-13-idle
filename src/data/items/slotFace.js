@@ -191,7 +191,7 @@ export default {
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/face_clown.png"),
 		equipmentSlot: "face",
-		overlay: require("@/assets/art/combat/items/face_mime_overlay.png"),
+		overlay: require("@/assets/art/combat/items/face_clown_overlay.png"),
 		stats: {
 			maxHealth: 170,
 			evasion: 0,
