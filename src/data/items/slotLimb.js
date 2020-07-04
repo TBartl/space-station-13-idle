@@ -1,119 +1,103 @@
 export default {
-	limbInsuls: {
-		name: "Insulated Gloves",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/glove_yellow.png"),
-		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/glove_yellow_overlay.png"),
-		stats: {
-			maxHealth: 60,
-			precision: -4,
-			power: 7,
-			evasion: 7,
-			protection: 0,
-		},
-		requires: {
-			evasion: 15,
-		}
-	},
 	limbBoxing: {
 		name: "Boxing Gloves",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/glove_boxing.png"),
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_boxing.png"),
 		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/glove_boxing_overlay.png"),
+		overlay: require("@/assets/art/combat/items/limb/glove_boxing_overlay.png"),
 		stats: {
-			maxHealth: 60,
-			precision: 7,
-			power: -4,
-			evasion: 7,
-			protection: 0,
-		},
-		requires: {
-			evasion: 15,
-		}
-	},
-	limbMagkrava: {
-		name: "Mag Krava Gloves",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/glove_fightgloves.png"),
-		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/glove_fightgloves_overlay.png"),
-		stats: {
-			maxHealth: 60,
-			precision: 7,
-			power: 7,
-			evasion: -4,
-			protection: 0,
-		},
-		requires: {
-			evasion: 15,
-		}
-	},
-	limbCapt: {
-		name: "Captain's Gloves",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/glove_captain.png"),
-		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/glove_captain_overlay.png"),
-		stats: {
-			maxHealth: 60,
-			precision: 0,
-			power: 0,
-			evasion: 0,
-			protection: 5,
-			command: 5
-		},
-		requires: {
-			evasion: 15,
-		}
-	},
-	limbNinja: {
-		name: "Ninja Gloves",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/glove_ninja.png"),
-		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/glove_ninja_overlay.png"),
-		stats: {
-			maxHealth: 60,
-			precision: 4,
-			power: 4,
-			evasion: 4,
-			command: -5,
-		},
-		requires: {
-			evasion: 15,
-		}
-	},
-	limbBlack: {
-		name: "Black Sneakers",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/shoe_black.png"),
-		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/shoe_black_overlay.png"),
-		stats: {
-			maxHealth: 60,
+			maxHealth: 30,
 			precision: 5,
 			power: 0,
-			evasion: 5,
+			evasion: 0,
 			protection: 0,
 		},
 		requires: {
 			evasion: 10,
 		}
 	},
-	limbMagBoots: {
-		name: "Magnetic Boots",
-		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/shoe_magboots.png"),
+	limbMagkrava: {
+		name: "Mag Krava Gloves",
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_fightgloves.png"),
 		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/shoe_magboots_overlay.png"),
+		overlay: require("@/assets/art/combat/items/limb/glove_fightgloves_overlay.png"),
 		stats: {
-			maxHealth: 60,
-			precision: 5,
-			power: 5,
+			maxHealth: 30,
+			precision: 3,
+			power: 2,
 			evasion: 0,
 			protection: 0,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	limbNitrile: {
+		name: "Nitrile Gloves",
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_nitrile.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/glove_nitrile_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			precision: 3,
+			power: 0,
+			evasion: 0,
+			protection: 0,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	limbInsuls: {
+		name: "Insulated Gloves",
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_yellow.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/glove_yellow_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			precision: 3,
+			power: 0,
+			evasion: 0,
+			protection: 2,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+
+	limbCapt: {
+		name: "Captain's Gloves",
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_captain.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/glove_captain_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			precision: 3,
+			power: 0,
+			evasion: 0,
+			protection: 1,
+			command: 5
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	limbNinja: {
+		name: "Ninja Gloves",
+		sellPrice: 800,
+		icon: require("@/assets/art/combat/items/limb/glove_ninja.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/glove_ninja_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			precision: 3,
+			power: 0,
+			evasion: 3,
+			command: -5,
 		},
 		requires: {
 			evasion: 10,
@@ -122,52 +106,103 @@ export default {
 	limbClownShoes: {
 		name: "Clown Shoes",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/shoe_clown.png"),
+		icon: require("@/assets/art/combat/items/limb/shoe_clown.png"),
 		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/shoe_clown_overlay.png"),
+		overlay: require("@/assets/art/combat/items/limb/shoe_clown_overlay.png"),
 		stats: {
-			maxHealth: 60,
-			precision: 0,
+			maxHealth: 200,
+			precision: -14,
 			power: 5,
 			evasion: 5,
 			protection: 0,
 		},
 		requires: {
-			evasion: 10,
+			evasion: 40,
 		}
 	},
-	limbJackboots: {
-		name: "Jackboots",
+	limbBronze: {
+		name: "Bronze Clockwork Treads",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/shoe_jackboots.png"),
+		icon: require("@/assets/art/combat/items/limb/shoe_clockwork.png"),
 		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/shoe_jackboots_overlay.png"),
+		overlay: require("@/assets/art/combat/items/limb/shoe_clockwork_overlay.png"),
 		stats: {
 			maxHealth: 60,
 			precision: 0,
-			power: 0,
-			evasion: 0,
-			protection: 5,
+			power: 2,
+			evasion: 2,
+			protection: 6,
 		},
 		requires: {
-			evasion: 10,
+			evasion: 40,
+		}
+	},
+	limbMagBoots: {
+		name: "Magnetic Boots",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/limb/shoe_magboots.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/shoe_magboots_overlay.png"),
+		stats: {
+			maxHealth: 60,
+			precision: 6,
+			power: 2,
+			evasion: 2,
+			protection: 0,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	limbBlack: {
+		name: "Black Sneakers",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/limb/shoe_black.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/shoe_black_overlay.png"),
+		stats: {
+			maxHealth: 60,
+			precision: 0,
+			power: 2,
+			evasion: 8,
+			protection: 0,
+		},
+		requires: {
+			evasion: 40,
 		}
 	},
 	limbAdvancedMagboots: {
 		name: "Advanced Magboots",
 		sellPrice: 1200,
-		icon: require("@/assets/art/combat/items/shoe_advmag.png"),
+		icon: require("@/assets/art/combat/items/limb/shoe_advmag.png"),
 		equipmentSlot: "limb",
-		overlay: require("@/assets/art/combat/items/shoe_advmag_overlay.png"),
+		overlay: require("@/assets/art/combat/items/limb/shoe_advmag_overlay.png"),
 		stats: {
-			maxHealth: 60,
-			precision: 3,
-			power: 3,
-			evasion: 3,
-			protection: 1,
+			maxHealth: 120,
+			precision: 0,
+			power: 2,
+			evasion: 2,
+			protection: 0,
 		},
 		requires: {
-			evasion: 10,
+			evasion: 40,
+		}
+	},
+	limbJackboots: {
+		name: "Jackboots",
+		sellPrice: 1200,
+		icon: require("@/assets/art/combat/items/limb/shoe_jackboots.png"),
+		equipmentSlot: "limb",
+		overlay: require("@/assets/art/combat/items/limb/shoe_jackboots_overlay.png"),
+		stats: {
+			maxHealth: 60,
+			precision: 0,
+			power: 8,
+			evasion: 2,
+			protection: 0,
+		},
+		requires: {
+			evasion: 40,
 		}
 	},
 }

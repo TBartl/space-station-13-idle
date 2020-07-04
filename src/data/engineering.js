@@ -71,7 +71,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Incinerator",
 		items: {
 			id: "power",
-			count: 10
+			count: 14
 		},
 		icon: require("@/assets/art/engineering/incinerator_anim.gif"),
 		xp: 10,
@@ -85,7 +85,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Charged Slime",
 		items: {
 			id: "power",
-			count: 10
+			count: 13
 		},
 		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
 		xp: 8.5,
@@ -99,7 +99,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Potato Battery",
 		items: {
 			id: "power",
-			count: 10
+			count: 12
 		},
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
 		xp: 10,
@@ -113,7 +113,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Solars",
 		items: {
 			id: "power",
-			count: 10
+			count: 11
 		},
 		icon: require("@/assets/art/engineering/solars.png"),
 		xp: 11.5,
@@ -127,7 +127,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Plan Bee",
 		items: {
 			id: "power",
-			count: 16
+			count: 34
 		},
 		icon: require("@/assets/art/engineering/beepower.png"),
 		xp: 13.5,
@@ -155,7 +155,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "American Military Slime",
 		items: {
 			id: "power",
-			count: 19
+			count: 25
 		},
 		icon: require("@/assets/art/xenobio/SlimeOil.gif"),
 		xp: 18,
@@ -169,7 +169,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Unholy Matter",
 		items: {
 			id: "power",
-			count: 74
+			count: 64
 		},
 		icon: require("@/assets/art/engineering/eng_shitpost.png"),
 		xp: 20,
@@ -183,7 +183,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Super Compressed Matter",
 		items: {
 			id: "power",
-			count: 17
+			count: 19
 		},
 		icon: require("@/assets/art/engineering/supermatter_anim.gif"),
 		xp: 21.5,
@@ -197,7 +197,7 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		name: "Advanced Capacitors Plating",
 		items: {
 			id: "power",
-			count: 17
+			count: 19
 		},
 		icon: require("@/assets/art/engineering/banana.png"),
 		xp: 23,

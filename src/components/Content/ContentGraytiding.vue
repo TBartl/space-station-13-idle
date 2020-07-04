@@ -75,10 +75,10 @@
             Oh, and be on the look out for
             <img
               class="mx--0"
-              :src="require('@/assets/art/combat/items/glove_yellow.png')"
+              :src="require('@/assets/art/combat/items/limb/glove_yellow.png')"
             />
             <b>Gloves</b> and
-            <img class="mx--2" :src="require('@/assets/art/combat/items/shoe_jackboots.png')" />
+            <img class="mx--2" :src="require('@/assets/art/combat/items/limb/shoe_jackboots.png')" />
             <b>Shoes</b>. They're especially rare.
           </span>
         </template>

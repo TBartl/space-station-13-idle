@@ -176,11 +176,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face_mime_overlay.png"),
 		stats: {
-			maxHealth: -130,
-			evasion: 10,
-			protection: -10,
-			precision: 10,
-			power: 10,
+			maxHealth: -90,
+			evasion: 9,
+			protection: -11,
+			precision: 9,
+			power: 9,
 		},
 		requires: {
 			evasion: 25,

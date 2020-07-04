@@ -198,13 +198,12 @@ const SLIMES = {
 		name: "Killer Tomato",
 		sellPrice: 83,
 		icon: require("@/assets/art/botany/PlantTomatokiller.png"),
-		tier: 5,
+		tier: 11,
 		stats: {
-			maxHealth: 20,
+			maxHealth: -90,
 			evasion: 5,
 			precision: 5,
 			power: 5,
-			command: -10
 		},
 	}
 }
