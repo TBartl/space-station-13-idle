@@ -16,7 +16,7 @@ const randomJunkTable = [
 const ACTIONS = {
 	//at 25 xp per action gives approximately 4000 total junk to hit 50.
 	graytideMoney: {
-		name: "Botany",
+		name: "Cargo Bay",
 		icon: require("@/assets/art/graytiding/Cargo.png"),
 		time: 6,
 		xp: 25,
