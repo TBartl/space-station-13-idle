@@ -58,7 +58,7 @@ export default {
 						weight: 7
 					},
 					{
-						id: 'pillCrank',
+						id: 'pillSpacedrugs',
 						weight: 4
 					},
 					{

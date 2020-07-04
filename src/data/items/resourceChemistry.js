@@ -134,7 +134,7 @@ const PILLS = {
 		}
 	},
 	pillSpacedrugs: {
-		name: "Crank",
+		name: "Space Drugs",
 		sellPrice: 6,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		equipmentSlot: "pocket",
