@@ -1,12 +1,12 @@
 export default {
 	locker: {
-		name: "Captains Locker",
+		name: "Captain's Locker",
 		icon: require("@/assets/art/combat/enemies/locker.png"),
 		stats: {
 			maxHealth: 500,
-			attackSpeed: 30,
-			precision: 20,
-			power: 500,
+			attackSpeed: 45,
+			precision: 200,
+			power: 80,
 			evasion: -10,
 			damageType: "brute",
 			burnProtection: 20,

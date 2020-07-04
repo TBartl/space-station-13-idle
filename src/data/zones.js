@@ -17,7 +17,7 @@ export default [
 	{
 		name: "Dorms 4",
 		icon: require("@/assets/art/combat/zones/dorms4.png"),
-		enemies: ["catgirl", "braindead", "traitor"]
+		enemies: ["catgirl", "traitor", "braindead"]
 	},
 	{
 		name: "Engineering",
@@ -32,28 +32,28 @@ export default [
 	{
 		name: "Kitchen",
 		icon: require("@/assets/art/combat/zones/kitchen.png"),
-		enemies: ["goodchef", "pete", "cannibal"]
+		enemies: ["pete", "cannibal", "botanist"]
 	},
 
 	{
 		name: "Medical",
 		icon: require("@/assets/art/combat/zones/medical.png"),
-		enemies: ["cluelessdoctor", "surgeon", "hulk"]
+		enemies: ["surgeon", "cluelessdoctor", "hulk"]
 	},
 	{
 		name: "Bridge",
 		icon: require("@/assets/art/combat/zones/bridge.png"),
-		enemies: ["locker", "axeassistant", "captain"]
+		enemies: ["axeassistant", "captain", "locker"]
 	},
 	{
 		name: "Virology",
 		icon: require("@/assets/art/combat/zones/viro.png"),
-		enemies: ["afkviro", "monkey", "movingviro", "gorilla"]
+		enemies: ["monkey", "afkviro", "gorilla", "movingviro"]
 	},
 	{
 		name: "Science",
 		icon: require("@/assets/art/combat/zones/robotics.png"),
-		enemies: ["minibot", "techpriest", "mech", "ayyyyy"]
+		enemies: ["mech", "techpriest", "minibot", "ayyyyy"]
 	},
 	{
 		name: "AI Core",
