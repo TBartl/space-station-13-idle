@@ -75,15 +75,7 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'foodPasta2',
-						weight: 1
-					},
-					{
-						id: 'faceFox',
-						weight: 1
-					},
-					{
-						id: 'slimeSilver',
+						id: 'foodMeatA',
 						weight: 1
 					}
 				]

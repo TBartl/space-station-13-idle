@@ -17,7 +17,8 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 25
+						count: [5,10],
+						weight: 27
 					},
 					{
 						id: 'gold',
@@ -30,7 +31,7 @@ export default {
 					{
 						id: 'ticket3',
 						count: [1, 2],
-						weight: 5
+						weight: 4
 					},
 				]
 			},
@@ -96,8 +97,8 @@ export default {
 		stats: {
 			maxHealth: 270,
 			attackSpeed: 2.1,
-			precision: 26,
-			power: 35,
+			precision: 86,
+			power: 85,
 			evasion: 20,
 			damageType: "brute",
 			burnProtection: 40
