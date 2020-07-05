@@ -10,6 +10,16 @@ const chrono = {
 		lastGain: 0
 	},
 	getters: {
+		defaultSpeeds() {
+			return [1, 1.5, 2, 3, 5]
+		},
+		speeds(state, getters, rootState, rootGetters) {
+			if (rootGetters["cheats/extraChronoOptions"]) {
+				return [1, 1.5, 2, 3, 5, 10, 25, 100, 250, 500, 1000];
+			}
+			return getters["defaultSpeeds"];
+		},
+
 		desiredSpeed(state) {
 			return state.desiredSpeed;
 		},
@@ -54,7 +64,7 @@ const chrono = {
 			state.desiredSpeed = val;
 		},
 		_updateRemainingTime(state, val) {
-			state.remainingTime = val;
+			state.remainingTime = Math.max(0, val);
 		}
 	},
 	actions: {

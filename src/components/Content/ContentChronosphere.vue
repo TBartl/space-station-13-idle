@@ -87,11 +87,8 @@ export default {
   extends: ContentAbstract,
   components: { ProgressBar },
   computed: {
-    speeds() {
-      if (this.$store.getters["cheats/extraChronoOptions"]) {
-        return [1, 1.5, 2, 3, 5, 10, 25, 100, 250, 500, 1000];
-      }
-      return [1, 1.5, 2, 3, 5];
+    speeds(state, getters) {
+      return this.$store.getters["chrono/speeds"];
     },
     chronoSpeed() {
       return this.$store.getters["chrono/speed"];
@@ -137,9 +134,6 @@ export default {
   max-width: 800px;
 }
 
-.black-background {
-  background-color: rgb(61, 61, 61) !important;
-}
 .max {
   font-size: 12px;
   color: gray;

@@ -115,9 +115,6 @@ export default {
   padding: 0.12rem 0.55rem;
 }
 
-.black-background {
-  background-color: rgb(61, 61, 61) !important;
-}
 .food-cooldown {
   max-width: 200px;
 }

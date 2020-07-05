@@ -5,6 +5,7 @@
       <sidebar />
       <content-wrapper class="content-wrapper" />
     </div>
+    <panels-container />
     <modals-container />
   </div>
 </template>
@@ -15,13 +16,15 @@ import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
 import ModalWelcome from "@/components/Modals/ModalWelcome";
 import ModalWelcomeBack from "@/components/Modals/ModalWelcomeBack";
+import PanelsContainer from "@/components/Panels/PanelsContainer";
 import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "App",
   components: {
     ToastContainer,
     Sidebar,
-    ContentWrapper
+    ContentWrapper,
+    PanelsContainer
   },
   computed: {
     ...mapGetters(["welcomeMessageSeen"])
