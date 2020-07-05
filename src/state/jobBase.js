@@ -30,5 +30,13 @@ export default {
 		addXP(state, xp) {
 			state.xp += xp;
 		}
+	},
+	actions: {
+		cleanup({ state }) {
+			if (state.xp == "string") {
+				console.log("Attempted to fix bad XP:", state.xp);
+				state.xp = parseInt(state.xp);
+			}
+		}
 	}
 }

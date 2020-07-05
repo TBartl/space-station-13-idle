@@ -37,5 +37,6 @@ new Vue({
 	render: h => h(App),
 }).$mount('#app')
 
+store.dispatch("cleanup");
 store.dispatch('chrono/updateOfflineTime');
 store.dispatch("_resume");
