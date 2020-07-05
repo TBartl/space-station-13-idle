@@ -58,7 +58,7 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				action.time *= (1 - MINING_UPGRADE_PERCENT / 2 * upgradeCount);
+				action.time *= 1 / (1 + MINING_UPGRADE_PERCENT * upgradeCount);
 
 				if (potionItemId == "potionMining") {
 					let originalItem = action.item;
