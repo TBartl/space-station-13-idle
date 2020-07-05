@@ -3,7 +3,7 @@ export default {
 		name: "Mouse",
 		icon: require("@/assets/art/combat/enemies/mouse.png"),
 		stats: {
-			maxHealth: 20,
+			maxHealth: 10,
 			attackSpeed: 2.5,
 			precision: -1,
 			power: -1,
