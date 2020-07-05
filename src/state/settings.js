@@ -5,7 +5,8 @@ const settings = {
 	state: {
 		showVirtualLevels: false,
 		inventoryFullStop: true,
-		autoEatEnabled: true
+		autoEatEnabled: true,
+		chronoPanelEnabled: false
 	},
 	getters: {
 		showVirtualLevels(state) {
@@ -16,6 +17,9 @@ const settings = {
 		},
 		autoEatEnabled(state) {
 			return state.autoEatEnabled;
+		},
+		chronoPanelEnabled(state) {
+			return state.chronoPanelEnabled;
 		}
 	},
 	mutations: {
@@ -25,8 +29,8 @@ const settings = {
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
 		},
-		setAutoEatEnabled(state, val) {
-			state.autoEatEnabled = val;
+		setChronoPanelEnabled(state, val) {
+			state.chronoPanelEnabled = val;
 		}
 	}
 }

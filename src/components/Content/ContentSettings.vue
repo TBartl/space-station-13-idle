@@ -29,6 +29,19 @@
                 for="inventoryFullStop"
               >Stop Actions when Full Inventory</label>
             </div>
+
+            <div class="custom-control custom-switch">
+              <input
+                v-model="chronoPanelEnabled"
+                type="checkbox"
+                class="custom-control-input"
+                id="chronoPanelEnabled"
+              />
+              <label
+                class="custom-control-label"
+                for="chronoPanelEnabled"
+              >Show Mini Chrono Panel when Time is Banked</label>
+            </div>
             <div class="custom-control custom-switch">
               <input
                 v-model="showVirtualLevels"
@@ -200,6 +213,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setInventoryFullStop", value);
+      }
+    },
+    chronoPanelEnabled: {
+      get() {
+        return this.$store.getters["settings/chronoPanelEnabled"];
+      },
+      set(value) {
+        this.$store.commit("settings/setChronoPanelEnabled", value);
       }
     },
     cheatsEnabled() {

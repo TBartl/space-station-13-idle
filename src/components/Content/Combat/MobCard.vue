@@ -250,9 +250,6 @@ export default {
   border-radius: 0.5rem;
 }
 
-.black-background {
-  background-color: rgb(61, 61, 61) !important;
-}
 .rotate-90 {
   transform: rotate(90deg);
 }
