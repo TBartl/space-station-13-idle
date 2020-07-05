@@ -228,7 +228,7 @@ const MECHS = {
 	},
 	darkGygax: {
 		name: "Assault Gygax",
-		sellPrice: 1000,
+		sellPrice: 53880,
 		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
 		stats: {
 		},
@@ -238,7 +238,7 @@ const MECHS = {
 	},
 	reticence: {
 		name: ".........",
-		sellPrice: 23880,
+		sellPrice: 56945,
 		icon: require("@/assets/art/fabrication/mechreticence.png"),
 		stats: {
 		},
