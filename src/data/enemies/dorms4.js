@@ -28,7 +28,7 @@ export default {
 						weight: 4
 					},
 					{
-						id: 'meleeToolbox4',
+						id: 'meleeToolbox3',
 						weight: 3
 					},
 					{

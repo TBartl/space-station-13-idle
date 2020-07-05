@@ -314,7 +314,7 @@ let FOOD = {
 		},
 	},
 	foodAlien1: {
-		name: "Fesh 'Shishi'",
+		name: "Fresh 'Shishi'",
 		sellPrice: 69,
 		icon: require("@/assets/art/cooking/Alien1.png"),
 		healAmount: 20,

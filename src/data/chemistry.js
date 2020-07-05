@@ -162,6 +162,19 @@ const POTIONS = {
 
 const PILL_COUNT = 20;
 const PILLS = {
+	synthPillCommand: {
+		items: {
+			id: "pillHappy",
+			count: PILL_COUNT*1.5
+		},
+		sellPrice: 50,
+		icon: require("@/assets/art/combat/items/pill5.png"),
+		time: 2,
+		requiredItems: {
+			lithium: 2,
+			power: 1
+		}
+	},
 	synthPillMeth: {
 		items: {
 			id: "pillMeth",
@@ -201,7 +214,7 @@ const PILLS = {
 		requiredItems: {
 			oxygen: 1,
 			oil: 1,
-			sacid: 1,
+			sacid: 2,
 		}
 	},
 	sythnPillKrokodil: {
@@ -213,7 +226,7 @@ const PILLS = {
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		time: 2,
 		requiredItems: {
-			sacid: 3
+			sacid: 4
 
 		}
 	},
@@ -226,8 +239,8 @@ const PILLS = {
 		icon: require("@/assets/art/chemistry/lube.png"),
 		time: 2,
 		requiredItems: {
-			oil: 2,
-			water: 1,
+			oil: 3,
+			water: 2,
 		}
 	},
 }
@@ -245,9 +258,9 @@ Object.values(POTIONS).forEach((action, index) => {
 Object.values(PILLS).forEach((action, index) => {
 	action.type = "pills";
 
-	let minLevel = 20;
+	let minLevel = 8;
 
-	let level = Math.round(minLevel + index / (Object.values(PILLS).length - 1) * (MAX_LEVEL - minLevel));
+	let level = Math.round(minLevel + index / (Object.values(PILLS).length - 1) * (MAX_LEVEL - minLevel - 1));
 
 	action.requiredLevel = level;
 	action.xp = 5 * level / 10;

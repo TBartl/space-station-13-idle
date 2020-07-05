@@ -25,7 +25,7 @@
 				]"
       >
         <template slot="Back">
-          <span>You look a bit puzzzled, chimapnzzzee-descendent citizzzen.</span>
+          <span>You look a bit puzzzled, chimpanzzzee-descendent citizzzen.</span>
           <span>
             <img class="mx--1" :src="require('@/assets/art/xenobio/icon.gif')" />
             <b>Xenobiology</b> is a hazzzardous place, it's a crazzzy idea to come in here without specializzzed knowledge of this zzzone.
