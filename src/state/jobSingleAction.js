@@ -122,6 +122,10 @@ export default {
 					EventBus.$emit("toast", { text: "Apprehended!" });
 					dispatch("_startCoroutine", { actionId, action })
 					dispatch("playerMob/getHit", action.failure.damage, { root: true });
+					
+					if (!action.preservePotion) {
+						dispatch("potions/useCharge", getters["jobId"], { root: true });
+					}
 					return;
 				}
 			}
