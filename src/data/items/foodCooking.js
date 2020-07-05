@@ -372,7 +372,8 @@ let premiumFoodEntries = Object.entries(FOOD).map(entry => {
 	newFood.healAmount = Math.round(newFood.healAmount * 1.3);
 	newFood.sellPrice *= 2;
 	for (let statId of Object.keys(newFood.stats)) {
-		newFood.stats[statId] = Math.round(newFood.stats[statId] * 1.5);
+		if (newFood.stats[statId] > 0)
+			newFood.stats[statId] = Math.round(newFood.stats[statId] * 1.5);
 	}
 	return ["q_" + originalId, newFood];
 });
