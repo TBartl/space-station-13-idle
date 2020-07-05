@@ -16,11 +16,13 @@ const BASES = {
 	},
 	sacid: {
 		name: "Sulphuric Acid",
+		description: "Due to the Highly Toxic nature special disposal measures are required.",
 		sellPrice: -2,
 		icon: require("@/assets/art/chemistry/chemAcid.png")
 	},
 	mercury: {
 		name: "Mercury",
+		description: "Due to the Highly Toxic nature special disposal measures are required.",
 		sellPrice: -1,
 		icon: require("@/assets/art/chemistry/chemMercury.png")
 	},
@@ -114,7 +116,7 @@ const POTIONS = {
 		name: "Brain Juice",
 		sellPrice: -37,
 		icon: require("@/assets/art/chemistry/brainjuice.png"),
-		description: "Allows you to gain additional XP when completing ??? actions",
+		description: "Allows you to gain additional XP when completing ??? actions. Highly Toxic.",
 		potionJob: "shitposting",
 		potionCharges: 5
 	}
