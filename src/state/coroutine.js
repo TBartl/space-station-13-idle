@@ -57,14 +57,15 @@ export function createCoroutineModule() {
 				state.currentTimeout = setTimeout(() => {
 					var to = new Date().getTime();
 					var elapsed = (to - from) / 1000;
-					state.progress += elapsed * rootGetters["chrono/speed"];
+					let speed = rootGetters["chrono/speed"];
+					state.progress += elapsed * speed;
 
 					if (state.progress >= state.duration) {
 						state.bonusTime = state.progress - state.duration;
 
 						// The time can be much longer than a few hundred millis if the window goes to sleep (like on mobile)
 						// We need to cap this so we don't get a ton of extra bonus time
-						state.bonusTime = Math.min(state.bonusTime, .5);
+						state.bonusTime = Math.min(state.bonusTime, .5 * speed);
 
 						state.progress = 0;
 						state.currentTimeout = 0;

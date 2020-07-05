@@ -87,20 +87,35 @@
         <div class="col-12 my-3">
           <div
             class="content-block content-block-top clickable"
-            :class="{expanded: timeExpanded}"
-            @click="timeExpanded = !timeExpanded"
+            :class="{expanded: jobsExpanded}"
+            @click="jobsExpanded = !jobsExpanded"
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
-            <span class="mr-1">TIME</span>
+            <span class="mr-1">JOBS</span>
           </div>
-          <div
-            v-if="timeExpanded"
-            class="content-block content-block-bottom d-flex flex-column align-items-center"
-          >
-            <h5 class="pt-2">Job Time</h5>
-            <div class="jobs-outer w-100 d-flex flex-column align-items-center">
-              <div class="jobs-inner">
-                <div v-for="(job, index) in jobs" :key="index" class="bar my-1">
+          <div v-if="jobsExpanded" class="content-block content-block-bottom d-flex flex-row">
+            <div class="d-flex flex-column align-items-center flex-fill">
+              <h5 class="pt-2">Levels</h5>
+              <div class="jobs">
+                <div v-for="(job, index) in jobsLevelSorted" :key="index" class="bar my-1">
+                  <div
+                    class="bar-fill"
+                    :style="{'background-color': job.color, 'width': (100*job.level / maxLevel) +'%'}"
+                  ></div>
+
+                  <div
+                    class="position-relative d-flex flex-row align-items-center justify-content-between w-100"
+                  >
+                    <img :src="job.icon" alt />
+                    <span>{{job.level}}/{{maxLevel}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center flex-fill">
+              <h5 class="pt-2">Time</h5>
+              <div class="jobs">
+                <div v-for="(job, index) in jobsTimeSorted" :key="index" class="bar my-1">
                   <div
                     class="bar-fill"
                     :style="{'background-color': job.color, 'width': (100*job.time / jobs[0].time) +'%'}"
@@ -130,6 +145,7 @@ import { mapGetters } from "vuex";
 import ITEMS from "@/data/items";
 import ENEMIES from "@/data/enemies";
 import { ALL_JOBS } from "@/data/jobs";
+import { MAX_LEVEL } from "@/data/experience";
 
 export default {
   extends: ContentAbstract,
@@ -138,7 +154,7 @@ export default {
     return {
       itemsExpanded: false,
       enemiesExpanded: false,
-      timeExpanded: false
+      jobsExpanded: false
     };
   },
   computed: {
@@ -162,9 +178,19 @@ export default {
     jobs() {
       return ALL_JOBS.map(job => {
         return Object.assign({}, job, {
-          time: this.$store.getters["completion/jobTime"](job.id)
+          time: this.$store.getters["completion/jobTime"](job.id),
+          level: Math.min(this.$store.getters[job.id + "/level"], MAX_LEVEL)
         });
-      }).sort((a, b) => b.time - a.time);
+      });
+    },
+    jobsLevelSorted() {
+      return [...this.jobs].sort((a, b) => b.level - a.level);
+    },
+    jobsTimeSorted() {
+      return [...this.jobs].sort((a, b) => b.time - a.time);
+    },
+    maxLevel() {
+      return MAX_LEVEL;
     }
   },
   filters: {
@@ -218,16 +244,9 @@ export default {
   bottom: 0;
   opacity: 0.8;
 }
-
-.jobs-outer {
-  background-size: cover;
-  background-image: url("~@/assets/art/misc/background-alt.jpg");
-  background-position: right center;
-}
-.jobs-inner {
-	background-color: white;
-	width: 100%;
-	max-width: 600px;
-	padding: 0px 12px;
+.jobs {
+  width: 100%;
+  max-width: 620px;
+  padding: 0px 12px;
 }
 </style>
