@@ -187,7 +187,7 @@ const PILLS = {
 	pillSpacelube: {
 		name: "Space Lube",
 		sellPrice: 10,
-		icon: require("@/assets/art/combat/items/pill5.png"),
+		icon: require("@/assets/art/chemistry/lube.png"),
 		description: "It may taste like cherry, but you don't eat this one.",
 		equipmentSlot: "pocket",
 		stats: {
