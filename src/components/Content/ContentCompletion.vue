@@ -119,7 +119,7 @@
                 <div v-for="(job, index) in jobsTimeSorted" :key="index" class="bar my-1">
                   <div
                     class="bar-fill"
-                    :style="{'background-color': job.color, 'width': (100*job.time / jobs[0].time) +'%'}"
+                    :style="{'background-color': job.color, 'width': (100*job.time / jobsTimeSorted[0].time) +'%'}"
                   ></div>
 
                   <div
