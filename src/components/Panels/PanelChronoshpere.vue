@@ -1,5 +1,5 @@
 <template>
-  <div class="chrono-panel">
+  <div v-if="shouldShow" class="chrono-panel">
     <div class="content-block d-flex flex-column align-items-center">
       <div class="d-flex flex-row align-items-center">
         <img :src="require('@/assets/art/sidebar/chronohelmet.png')" alt />
@@ -30,6 +30,11 @@ import ProgressBar from "@/components/ProgressBar";
 export default {
   components: { ProgressBar },
   computed: {
+    shouldShow() {
+      if (!this.$store.getters["settings/chronoPanelEnabled"]) return false;
+      if (this.infinite) return true;
+      return this.$store.getters["chrono/remainingTime"] > 0;
+    },
     speeds() {
       return this.$store.getters["chrono/defaultSpeeds"];
     },
@@ -43,6 +48,9 @@ export default {
         this.$store.getters["chrono/remainingTime"] /
         this.$store.getters["chrono/maxDuration"]
       );
+    },
+    infinite() {
+      return this.$store.getters["cheats/infiniteChrono"];
     },
     remainingTimeText() {
       if (this.infinite) return "INFINTE";
@@ -76,9 +84,9 @@ export default {
   border-top-color: rgb(58, 148, 184);
   margin-right: 2.5rem;
   margin-bottom: 2rem;
-  box-shadow: 3px 3px 5px 6px #000000b0;
+  box-shadow: 3px 3px 5px 5px #000000b0;
 }
 .btn:not(:last-child) {
-	margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 </style>
