@@ -245,7 +245,7 @@ Object.values(POTIONS).forEach((action, index) => {
 Object.values(PILLS).forEach((action, index) => {
 	action.type = "pills";
 
-	let minLevel = 20;
+	let minLevel = 9;
 
 	let level = Math.round(minLevel + index / (Object.values(PILLS).length - 1) * (MAX_LEVEL - minLevel));
 
