@@ -7,7 +7,7 @@ export const PLAYER_BASE_STATS = {
 	evasion: 0,
 	protection: 0,
 	command: 0,
-	moveTime: 3,
+	moveTime: 3.5,
 	bruteProtection: 0,
 	burnProtection: 0,
 	damageType: "brute"
