@@ -29,6 +29,9 @@ const settings = {
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
 		},
+		setAutoEatEnabled(state, val) {
+			state.autoEatEnabled = val;
+		},
 		setChronoPanelEnabled(state, val) {
 			state.chronoPanelEnabled = val;
 		}
