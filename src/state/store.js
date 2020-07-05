@@ -167,6 +167,13 @@ const store = new Vuex.Store({
 			dispatch("cancelAllActions");
 			commit("_setState", newData);
 			dispatch("cancelAllActions");
+		},
+		cleanup({ dispatch }) {
+			for (let [moduleName, module] of Object.entries(modules)) {
+				if (module.actions && module.actions.cleanup) {
+					dispatch(moduleName + "/cleanup");
+				}
+			}
 		}
 	},
 	plugins: [vuexLocal.plugin]
