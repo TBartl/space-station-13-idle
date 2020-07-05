@@ -196,6 +196,7 @@ img {
 	.inventory-item img,
 	.fake-inventory-item div {
 		width: 32px;
+		height: 32px;
 	}
 }
 
