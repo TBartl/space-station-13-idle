@@ -243,7 +243,7 @@ const CAPES = {
 const CRATES = {
 	supplyCrate: {
 		item: "supplyCrate",
-		description: "Nanotrasen can get send the supplies YOU need directly to your location with this state of the art drop pod.",
+		description: "Nanotrasen can send the supplies YOU need directly to your location with this state of the art drop pod.",
 		requiredItems: {
 			money: 1000
 		}
@@ -264,7 +264,7 @@ const CRATES = {
 	},
 	secCrate: {
 		item: "secCrate",
-		description: "Everything needed to run an effecient internal security organization. Pre-dyed red to help cover those pesky the blood stains.",
+		description: "Everything needed to run an effecient internal security organization. Pre-dyed red to help cover those pesky blood stains.",
 		requiredItems: {
 			boss1Parts: 20
 		}

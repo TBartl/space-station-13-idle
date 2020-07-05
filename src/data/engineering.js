@@ -215,7 +215,7 @@ const ILL_ADVISED_ACTIONS = {
 		name: "Vital Equipment",
 		items: {
 			id: "money",
-			count: [10, 100]
+			count: [10, 160]
 		},
 		icon: require("@/assets/art/engineering/parts.png"),
 		xp: -15,

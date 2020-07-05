@@ -123,9 +123,22 @@ const POTIONS = {
 }
 
 const PILLS = {
+	pillHappy: {
+		name: "'Happy' Pills",
+		sellPrice: 2,
+		icon: require("@/assets/art/combat/items/pill5.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: 1,
+			power: 0,
+			command: 5
+		}
+	},
 	pillMeth: {
 		name: "Methamphetamine",
-		sellPrice: 4,
+		sellPrice: 5,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		equipmentSlot: "pocket",
 		stats: {

@@ -17,18 +17,23 @@ export default {
 				itemTable: [
 					{
 						id: 'potato',
+						count:2,
 						weight: 1
 					}, {
 						id: 'tomato',
+						count:2,
 						weight: 1
 					}, {
 						id: 'flowerSun',
+						count:2,
 						weight: 1
 					}, {
 						id: 'mushroom',
+						count:2,
 						weight: 1
 					}, {
 						id: 'pepper',
+						count:2,
 						weight: 1
 					}, {
 						id: 'potatoBattery',
@@ -43,7 +48,7 @@ export default {
 						id: 'mushroomRed',
 						weight: 1
 					}, {
-						id: 'pepper',
+						id: 'peppercold',
 						weight: 1
 					}
 				]
