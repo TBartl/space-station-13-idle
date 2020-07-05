@@ -4,6 +4,7 @@ import ITEMS from "@/data/items";
 import { EventBus } from "@/utils/eventBus.js";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { createCoroutineModule } from "./coroutine";
+import { cloneDeep } from 'lodash';
 
 export default {
 	modules: {
@@ -40,11 +41,14 @@ export default {
 					if (bonus) xpBonus += bonus;
 				}
 			}
-			// We could clone this, but it's already getting cloned a layer down so *shrug*
+			
 			let actions = getters.baseActions;
-			for (let action of Object.values(actions)) {
-				// Not on negative XP
-				if (action.xp > 0) action.xp *= (1 + xpBonus / 100);
+			if (xpBonus) {
+				actions = cloneDeep(actions);
+				for (let action of Object.values(actions)) {
+					// Not on negative XP
+					if (action.xp > 0) action.xp *= (1 + xpBonus / 100);
+				}
 			}
 			return actions;
 		},
