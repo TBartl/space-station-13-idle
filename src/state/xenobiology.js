@@ -53,6 +53,10 @@ const xenobio = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				} else {
 					action.items = newBaseItems;
 				}
+
+				if (tier == 1) {
+					action.preservePotion = true;
+				}
 			}
 
 			return actions;

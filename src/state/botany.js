@@ -51,6 +51,9 @@ const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 						if (i + 6 < actionEntries.length) {
 							mergeActionMutated(actionEntries[i + 6], action);
 						}
+						else {
+							action.preservePotion = true;
+						}
 					});
 				}
 
