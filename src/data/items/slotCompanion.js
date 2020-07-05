@@ -5,7 +5,7 @@ const SLIMES = {
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		tier: 1,
 		stats: {
-			maxHealth: 50
+			maxHealth: 15
 		}
 	},
 	slimeOrange: {
