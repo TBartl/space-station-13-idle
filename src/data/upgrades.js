@@ -91,18 +91,33 @@ export const COMBAT_UPGRADES = {
 		description: "Increases the number of loot drop slots from 16 to 32.",
 		icon: require('@/assets/art/combat/upgrades/loot.png'),
 		requiredItems: {
-			money: 30000
+			money: 10000
 		},
 		upgrade: "lootDrops",
 		requiredUpgrades: {
 			lootDrops: 0
 		},
 		requiredLevels: {
-			validhunting: 15
+			validhunting: 10
 		}
 	},
 	lootDrops2: {
 		name: "Extended Looting Tier II",
+		description: "Allows meat loot to stack with other meat.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 30000
+		},
+		upgrade: "lootDrops",
+		requiredUpgrades: {
+			lootDrops: 1
+		},
+		requiredLevels: {
+			validhunting: 15
+		}
+	},
+	lootDrops3: {
+		name: "Extended Looting Tier III",
 		description: "Increases the number of loot drop slots from 32 to 64.",
 		icon: require('@/assets/art/combat/upgrades/loot.png'),
 		requiredItems: {
@@ -110,22 +125,22 @@ export const COMBAT_UPGRADES = {
 		},
 		upgrade: "lootDrops",
 		requiredUpgrades: {
-			lootDrops: 1
+			lootDrops: 2
 		},
 		requiredLevels: {
 			validhunting: 20
 		}
 	},
-	lootDrops3: {
-		name: "Extended Looting Tier III",
-		description: "Allows loot to stack with items of the same type.",
+	lootDrops4: {
+		name: "Extended Looting Tier IV",
+		description: "Allows all loot to stack with items of the same type.",
 		icon: require('@/assets/art/combat/upgrades/loot.png'),
 		requiredItems: {
 			money: 150000
 		},
 		upgrade: "lootDrops",
 		requiredUpgrades: {
-			lootDrops: 2
+			lootDrops: 3
 		},
 		requiredLevels: {
 			validhunting: 25

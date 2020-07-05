@@ -23,7 +23,7 @@ const combat = {
 		},
 		maxDrops(state, getters, rootState, rootGetters) {
 			let upgradeCount = rootGetters["upgrades/get"]("lootDrops")
-			if (upgradeCount >= 2) return 64;
+			if (upgradeCount >= 3) return 64;
 			if (upgradeCount >= 1) return 32;
 			return 16;
 		},
@@ -127,8 +127,10 @@ const combat = {
 					continue;
 				}
 				let stack = false;
-				if (itemId == "money") stack = true;
-				else if (rootGetters["upgrades/get"]("lootDrops") == 3) stack = true;
+				
+				if (rootGetters["upgrades/get"]("lootDrops") >= 4) stack = true;
+				else if (itemId == "money") stack = true;
+				else if (itemId.toLowerCase().includes("meat") && rootGetters["upgrades/get"]("lootDrops") >= 2) stack = true;
 				commit("addLootItem", { itemId, count, stack });
 			}
 
