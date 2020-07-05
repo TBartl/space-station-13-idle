@@ -19,7 +19,7 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				// Not on negative XP
 				if (action.xp > 0)
-					action.xp = (action.xp * (1 + upgradeCount * ENGINEERING_UPGRADE_PERCENT)).toFixed(2);
+					action.xp = (action.xp * (1 + upgradeCount * ENGINEERING_UPGRADE_PERCENT));
 
 				if (potionItemId == "potionEngineering") {
 					let originalItems = action.items;

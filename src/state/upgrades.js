@@ -27,7 +27,7 @@ const upgrades = {
 
 					if (ITEMS[itemId].providesUpgrade == upgradeId) upgradeCount += 1;
 				});
-				return upgradeCount;
+				return upgradeCount ? upgradeCount : 0;
 			}
 		},
 	},
