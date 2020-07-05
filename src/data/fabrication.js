@@ -42,10 +42,10 @@ const MECHS = {
 		xp: 1482,
 		requiredLevel: 19,
 		requiredItems: {
-			silver: 25,
+			glass: 30,
+			silver: 45,
 			gold: 50,
-			titanium: 50,
-			uranium: 5
+			titanium: 5
 		}
 	},
 	fabricateClarke: {
