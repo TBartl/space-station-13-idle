@@ -4,7 +4,10 @@
     :class="[canPurchase ? 'clickable' :'locked']"
     @click="buy"
   >
-    <img :src="icon" class="mr-2 purchase-icon" alt />
+    <img :id="'purchase'+id" :src="icon" class="mr-2 purchase-icon" alt />
+
+    <item-popover v-if="purchase.item" :target="'purchase'+id" :itemId="purchase.item" placement="right" />
+
     <div class="d-flex flex-column">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>

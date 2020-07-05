@@ -21,6 +21,7 @@ export default {
 
 	hatCrate: {
 		name: "Hat Crate",
+		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/hatcrate.png"),
 		itemTable: [
 			{
@@ -87,6 +88,7 @@ export default {
 	},
 	knifeCrate: {
 		name: "Weapon Crate",
+		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/weaponcrate.png"),
 		itemTable: [
 			{
@@ -125,6 +127,7 @@ export default {
 	},
 	supplyCrate: {
 		name: "Supply Droppod",
+		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/droppod.png"),
 		itemTable: [
 			{
@@ -184,6 +187,7 @@ export default {
 	},
 	secCrate:{
 	name: "Security Crate",
+	description: "Can be opened",
 	icon: require("@/assets/art/shop/items/seccrate.png"),
 	itemTable: [
 		{
@@ -218,6 +222,7 @@ export default {
 	},
 	lavaCrate: {
 		name: "Local Heritage Crate",
+		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/necrocrate.png"),
 		itemTable: [
 			{
@@ -267,6 +272,7 @@ export default {
 	},
 	syndieCrate: {
 		name: "Hijacked Droppod",
+		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/syndiedroppod.png"),
 		itemTable: [
 			{
