@@ -55,10 +55,10 @@ const MECHS = {
 		xp: 1716,
 		requiredLevel: 22,
 		requiredItems: {
-			silver: 10,
-			gold: 10,
-			titanium: 10,
-			uranium: 10
+			silver: 25,
+			gold: 50,
+			titanium: 50,
+			uranium: 5
 		}
 	},
 	fabricateDurand: {
