@@ -94,9 +94,6 @@
         </template>
         <template slot="Cannibalism?">
           <span>
-            <i>Frutti proibiti sono i più dolci.</i>
-          </span>
-          <span>
             <i>Tranquillo signore.</i> If you go telling-a the
             <img
               class="mx--0"
