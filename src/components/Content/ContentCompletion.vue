@@ -97,7 +97,7 @@
             <div class="d-flex flex-column align-items-center flex-fill">
               <h5 class="pt-2">Levels</h5>
               <div class="jobs">
-                <div v-for="(job, index) in jobs" :key="index" class="bar my-1">
+                <div v-for="(job, index) in jobsLevelSorted" :key="index" class="bar my-1">
                   <div
                     class="bar-fill"
                     :style="{'background-color': job.color, 'width': (100*job.level / maxLevel) +'%'}"
@@ -115,7 +115,7 @@
             <div class="d-flex flex-column align-items-center flex-fill">
               <h5 class="pt-2">Time</h5>
               <div class="jobs">
-                <div v-for="(job, index) in jobs" :key="index" class="bar my-1">
+                <div v-for="(job, index) in jobsTimeSorted" :key="index" class="bar my-1">
                   <div
                     class="bar-fill"
                     :style="{'background-color': job.color, 'width': (100*job.time / jobs[0].time) +'%'}"
@@ -181,7 +181,13 @@ export default {
           time: this.$store.getters["completion/jobTime"](job.id),
           level: Math.min(this.$store.getters[job.id + "/level"], MAX_LEVEL)
         });
-      }).sort((a, b) => b.time - a.time);
+      });
+    },
+    jobsLevelSorted() {
+      return [...this.jobs].sort((a, b) => b.level - a.level);
+    },
+    jobsTimeSorted() {
+      return [...this.jobs].sort((a, b) => b.time - a.time);
     },
     maxLevel() {
       return MAX_LEVEL;
