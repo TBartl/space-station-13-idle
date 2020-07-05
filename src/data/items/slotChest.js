@@ -248,7 +248,7 @@ const MECHS = {
 	},
 	seraph: {
 		name: "Seraph",
-		sellPrice: 56945,
+		sellPrice: 67635,
 		icon: require("@/assets/art/fabrication/mechseraph.png"),
 		stats: {
 		},
