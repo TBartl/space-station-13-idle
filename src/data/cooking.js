@@ -195,7 +195,7 @@ const HUMAN_ACTIONS = {
 		requiredLevel: 8,
 		requiredItems: {
 			foodMeatH: 1,
-			banana: 1
+			pepper: 1
 		}
 	},
 	cookHuman2: {
@@ -207,7 +207,7 @@ const HUMAN_ACTIONS = {
 		requiredLevel: 22,
 		requiredItems: {
 			foodMeatH: 1,
-			peppercold: 1
+			bananaMime: 1
 		}
 	},
 	cookHuman3: {
