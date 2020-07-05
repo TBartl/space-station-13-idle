@@ -230,7 +230,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 	}
 	else if (mod == 2) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 15,
+			maxHealth: (slime.tier) * 25,
 			moveTime: 1,
 		}
 	}
