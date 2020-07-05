@@ -59,17 +59,15 @@ export default {
           bonus: "+5 evasion bonus",
           description: damageDealtText + "evasion XP",
           icon: require("@/assets/art/combat/black_shoes.png")
-        }
-      ];
-      if (this.$store.getters["upgrades/get"]("xenobiologyUnlocked")) {
-        focuses.push({
+        },
+        {
           name: "Command",
           id: "command",
           bonus: "+5 command bonus",
           description: damageDealtText + "command XP",
           icon: require("@/assets/art/combat/command.png")
-        });
-      }
+        }
+      ];
       return focuses;
     }
   }
