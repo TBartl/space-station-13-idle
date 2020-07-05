@@ -36,7 +36,7 @@ const ACTIONS = {
 				]
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbBoxing",
 				weight: 1
 			}
@@ -66,7 +66,7 @@ const ACTIONS = {
 				]
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbMagkrava",
 				weight: 1
 			}
@@ -101,7 +101,7 @@ const ACTIONS = {
 				]
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbNitrile",
 				weight: 1
 			}
@@ -133,7 +133,7 @@ const ACTIONS = {
 				]
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbInsuls",
 				weight: 1
 			}
@@ -164,7 +164,7 @@ const ACTIONS = {
 				]
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbCapt",
 				weight: 1
 			}
@@ -181,7 +181,7 @@ const ACTIONS = {
 				itemTable: randomJunkTable
 			},
 			{
-				chance: .003,
+				chance: .005,
 				item: "limbNinja",
 				weight: 1
 			}
