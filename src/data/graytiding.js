@@ -230,7 +230,7 @@ const ACTIONS = {
 						count: [0, 5],
 						weight: 10
 					},{
-						id: "oxygen",
+						id: "water",
 						count: [0, 5],
 						weight: 10
 					},{
