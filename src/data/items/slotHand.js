@@ -853,7 +853,7 @@ Object.values(MENERGY).forEach(menergy => {
 });
 
 Object.values(GENERGY).forEach(genergy => {
-	// genergy.equipmentSlot = "hand";
+	genergy.stats.damageType = "burn"
 	// genergy.stats.maxHealth = genergy.requires.meleePower * 1;
 	// genergy.stats.precision = Math.ceil(genergy.requires.meleePower * .35);
 	// genergy.stats.power = Math.round(genergy.requires.meleePower * .7);
