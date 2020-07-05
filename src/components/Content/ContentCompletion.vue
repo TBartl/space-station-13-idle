@@ -92,9 +92,10 @@
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
             <span class="mr-1">JOBS</span>
+            <span class="primary-bubble">{{Math.floor(100*totalLevelPercent)}}%</span>
           </div>
           <div v-if="jobsExpanded" class="content-block content-block-bottom d-flex flex-row">
-            <div class="d-flex flex-column align-items-center flex-fill">
+            <div class="d-flex flex-column align-items-center w-50">
               <h5 class="pt-2">Levels</h5>
               <div class="jobs">
                 <div v-for="(job, index) in jobsLevelSorted" :key="index" class="bar my-1">
@@ -112,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex flex-column align-items-center flex-fill">
+            <div class="d-flex flex-column align-items-center w-50">
               <h5 class="pt-2">Time</h5>
               <div class="jobs">
                 <div v-for="(job, index) in jobsTimeSorted" :key="index" class="bar my-1">
@@ -191,6 +192,12 @@ export default {
     },
     maxLevel() {
       return MAX_LEVEL;
+    },
+    totalLevelPercent() {
+      let sum = 0;
+      this.jobs.forEach(job => (sum += job.level));
+      let max = this.jobs.length * MAX_LEVEL;
+      return sum / max;
     }
   },
   filters: {
