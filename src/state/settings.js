@@ -4,7 +4,8 @@ const settings = {
 	namespaced: true,
 	state: {
 		showVirtualLevels: false,
-		inventoryFullStop: true
+		inventoryFullStop: true,
+		autoEatEnabled: true
 	},
 	getters: {
 		showVirtualLevels(state) {
@@ -12,6 +13,9 @@ const settings = {
 		},
 		inventoryFullStop(state) {
 			return state.inventoryFullStop;
+		},
+		autoEatEnabled(state) {
+			return state.autoEatEnabled;
 		}
 	},
 	mutations: {
@@ -20,6 +24,9 @@ const settings = {
 		},
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
+		},
+		setAutoEatEnabled(state, val) {
+			state.autoEatEnabled = val;
 		}
 	}
 }

@@ -196,6 +196,8 @@ const combat = {
 		tryAutoEat({ dispatch, getters, rootGetters }) {
 			let hasAutoEat = rootGetters["upgrades/get"]("autoeat");
 			if (!hasAutoEat) return;
+			let isEnabled = rootGetters["settings/autoEatEnabled"];
+			if (!isEnabled) return;
 			let isOnCooldown = getters["foodCoroutine/isActive"];
 			if (isOnCooldown) return;
 

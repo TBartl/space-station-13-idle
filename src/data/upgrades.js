@@ -118,7 +118,7 @@ export const COMBAT_UPGRADES = {
 	},
 	lootDrops3: {
 		name: "Extended Looting Tier III",
-		description: "Allows loot to stacks with items of the same type.",
+		description: "Allows loot to stack with items of the same type.",
 		icon: require('@/assets/art/combat/upgrades/loot.png'),
 		requiredItems: {
 			money: 150000
