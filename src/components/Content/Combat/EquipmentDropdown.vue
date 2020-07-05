@@ -1,5 +1,5 @@
 <template>
-  <b-popover :target="target" triggers="click blur" placement="bottom" delay="0">
+  <b-popover :target="target" triggers="click blur" placement="bottom" delay="30">
     <div class="d-flex flex-column align-items-center">
       <p class="title text-uppercase">{{equipmentSlot}}</p>
       <equipment-dropdown-item
@@ -29,7 +29,7 @@ export default {
       return getBankItemsOfSlot(
         this.$store.getters["inventory/bank"],
         this.equipmentSlot
-      );
+      ).filter(itemId => !this.$store.getters["inventory/isEquipped"](itemId));
     }
   },
   methods: {

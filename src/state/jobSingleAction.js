@@ -43,7 +43,8 @@ export default {
 			// We could clone this, but it's already getting cloned a layer down so *shrug*
 			let actions = getters.baseActions;
 			for (let action of Object.values(actions)) {
-				action.xp *= (1 + xpBonus / 100);
+				// Not on negative XP
+				if (action.xp > 0) action.xp *= (1 + xpBonus / 100);
 			}
 			return actions;
 		},
@@ -122,7 +123,7 @@ export default {
 					EventBus.$emit("toast", { text: "Apprehended!" });
 					dispatch("_startCoroutine", { actionId, action })
 					dispatch("playerMob/getHit", action.failure.damage, { root: true });
-					
+
 					if (!action.preservePotion) {
 						dispatch("potions/useCharge", getters["jobId"], { root: true });
 					}

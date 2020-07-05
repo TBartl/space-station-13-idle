@@ -55,7 +55,7 @@ const combat = {
 			return false;
 		},
 		xpRatio() {
-			return .3;
+			return .33;
 		},
 		xpSkill(state, getters) {
 			let skill = getters.focus;
