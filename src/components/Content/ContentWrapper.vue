@@ -1,6 +1,6 @@
 <template>
   <div class="content-wrapper" :class="{reversed: reversed}">
-    <component :is="'content-' + visibleSidebarItem" class="w-100" />
+    <component :is="'content-' + visibleSidebarItem" class="w-100 big-bottom-margin" />
   </div>
 </template>
 
@@ -24,6 +24,7 @@ import ContentChronosphere from "./ContentChronosphere";
 import ContentCompletion from "./ContentCompletion";
 import ContentItemSpawner from "./ContentItemSpawner";
 import ContentAbout from "@/components/Content/ContentAbout";
+import ContentCustomization from "@/components/Content/ContentCustomization";
 
 export default {
   name: "ContentWrapper",
@@ -45,7 +46,8 @@ export default {
     ContentChronosphere,
     ContentCompletion,
     ContentItemSpawner,
-    ContentAbout
+    ContentAbout,
+    ContentCustomization
   },
   computed: {
     ...mapGetters(["visibleSidebarItem"]),
@@ -68,5 +70,8 @@ export default {
 
 .content-wrapper.reversed {
   background-image: url("~@/assets/art/misc/background-alt-reversed.jpg");
+}
+.big-bottom-margin {
+	margin-bottom: 8rem;
 }
 </style>	

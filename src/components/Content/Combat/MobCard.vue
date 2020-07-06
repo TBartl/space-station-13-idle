@@ -9,6 +9,7 @@
     <div class="body-icon mt-2">
       <div ref="body" class="img-body w-100 h-100">
         <div v-if="mobType == 'player'" class="w-100 h-100 overlay-div">
+          <player-display />
           <img
             v-for="(overlay, index) in playerOverlayIcons"
             :key="index"
@@ -89,6 +90,7 @@ import StatExplainMaxHit from "@/components/Content/Combat/StatExplainMaxHit";
 import StatExplainHitChance from "@/components/Content/Combat/StatExplainHitChance";
 import StatExplainFleeChance from "@/components/Content/Combat/StatExplainFleeChance";
 import StatsPanel from "@/components/Content/Combat/StatsPanel";
+import PlayerDisplay from "@/components/PlayerDisplay";
 
 const playerBaseIcon = require("@/assets/art/combat/player.png");
 import { JOB as VALIDHUNTING_JOB } from "@/data/validhunting";
@@ -103,7 +105,8 @@ export default {
     StatExplainMaxHit,
     StatExplainHitChance,
     StatExplainFleeChance,
-    StatsPanel
+    StatsPanel,
+    PlayerDisplay
   },
   props: ["mobType"],
   computed: {
@@ -159,7 +162,7 @@ export default {
       return this.$store.getters["playerMob/stats"].moveTime;
     },
     playerOverlayIcons() {
-      let icons = [{ icon: playerBaseIcon }];
+      let icons = [];
       let equipment = this.$store.getters["inventory/equipment"];
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
         if (!itemId) continue;
