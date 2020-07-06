@@ -4,11 +4,11 @@
       class="skin"
       :style="{backgroundImage: 'url('+skin+')', maskImage: 'url('+skin+')', backgroundColor: skinColor}"
     />
+    <img :src="clothing" />
     <div
       class="hair"
       :style="{backgroundImage: 'url('+hair+')', maskImage: 'url('+hair+')', backgroundColor: hairColor}"
     />
-    <img :src="clothing" />
   </div>
 </template>
 
@@ -25,14 +25,14 @@ export default {
     },
     clothing() {
       return BASE_CLOTHING;
-		},
-		hair() {
-			let hairId = this.$store.getters["customization/hair"];
+    },
+    hair() {
+      let hairId = this.$store.getters["customization/hair"];
       return HAIR[hairId];
-		},
+    },
     hairColor() {
       return this.$store.getters["customization/hairColor/hsl"];
-    },
+    }
   }
 };
 </script>
