@@ -54,6 +54,12 @@
                 for="showVirtualLevels"
               >Show Virtual Levels Beyond {{maxLevel}}</label>
             </div>
+
+            <button
+              type="button"
+              class="btn btn-primary my-1 d-block"
+              @click="openCustomization"
+            >Customize Character</button>
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -288,6 +294,9 @@ export default {
     },
     openItemSpawner() {
       this.$store.commit("setVisibleSidebarItem", "item-spawner");
+    },
+    openCustomization() {
+      this.$store.commit("setVisibleSidebarItem", "customization");
     },
     openLevelAllJobs() {
       this.$modal.show(

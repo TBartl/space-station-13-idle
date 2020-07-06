@@ -31,6 +31,7 @@ import completion from './completion';
 import cheats from './cheats'
 import settings from '@/state/settings';
 import chrono from '@/state/chrono';
+import customization from '@/state/customization';
 import { createMobModule } from "./mob";
 
 const modules = {
@@ -59,6 +60,7 @@ const modules = {
 	cheats,
 	settings,
 	chrono,
+	customization,
 	playerMob: createMobModule('player'),
 	enemyMob: createMobModule('enemy')
 }
@@ -127,8 +129,8 @@ const store = new Vuex.Store({
 			state.visibleSidebarItem = id;
 		},
 		_resetState(state) {
-			console.log(initialState);
-			Object.assign(state, cloneDeep(initialState));
+			customMerge(state, cloneDeep(initialState));
+			console.log(state);
 		},
 		_setState(state, newState) {
 			customMerge(state, newState);

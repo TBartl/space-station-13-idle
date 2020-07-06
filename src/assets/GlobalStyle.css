@@ -145,7 +145,8 @@ img {
 .overlay-div * {
 	z-index: 1;
 }
-.overlay-div img {
+.overlay-div img,
+.overlay-div div {
 	position: absolute;
 	top: 0;
 	bottom: 0;
