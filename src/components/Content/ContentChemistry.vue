@@ -14,7 +14,7 @@
       <job-info
         infoId="chemistry"
         :icon="require('@/assets/art/jobinfo/chemistry.png')"
-        title="Mikal Blak the Chemist says..."
+        title="Reed Glover the Chemist says..."
         :options="[
 					{name: 'Back'},
 					{name: 'Power?', icon: require('@/assets/art/engineering/power.png'), iconClass:'mx--0'},
