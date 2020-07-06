@@ -69,6 +69,7 @@ const modules = {
 function customMerge(obj, source) {
 	Object.keys(source).forEach(key => {
 		if (source[key] && source[key].constructor == Object) {
+			if (!obj[key]) Vue.set(obj, key, {});
 			customMerge(obj[key], source[key]);
 		} else {
 			Vue.set(obj, key, source[key]);
