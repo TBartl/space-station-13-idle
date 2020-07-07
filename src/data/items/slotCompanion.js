@@ -148,7 +148,7 @@ const SLIMES = {
 		tier: 0,
 		stats: {
 			evasion: 5,
-			maxHealth: 50
+			maxHealth: 0
 		}
 	},
 	companionDog: {
@@ -158,7 +158,7 @@ const SLIMES = {
 		tier: 0,
 		stats: {
 			precision: 5,
-			maxHealth: 50
+			maxHealth: 0
 		}
 	},
 	companionGoat: {
@@ -168,7 +168,7 @@ const SLIMES = {
 		tier: 0,
 		stats: {
 			power: 5,
-			maxHealth: 50
+			maxHealth: 0
 		}
 	},
 	companionBee: {
@@ -181,7 +181,7 @@ const SLIMES = {
 			precision: 1,
 			evasion: 1,
 			power: 1,
-			maxHealth: 50
+			maxHealth: 0
 		}
 	},
 	companionMining: {
@@ -191,7 +191,7 @@ const SLIMES = {
 		tier: 0,
 		stats: {
 			protection: 5,
-			maxHealth: 100
+			maxHealth: 0
 		}
 	},
 	companionKillerTomato: {

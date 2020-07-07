@@ -1,46 +1,9 @@
 export default {
-	afkviro: {
-		name: "Harmless Virologist",
-		icon: require("@/assets/art/combat/enemies/goodviro.png"),
-		stats: {
-			maxHealth: 310,
-			attackSpeed: 3.0,
-			precision: 85,
-			power: 94,
-			evasion: 63,
-			damageType: "brute",
-			bruteProtection: 40,
-		},
-		itemTables: [
-			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'potionXenobiology',
-						weight: 10
-					},
-					{
-						id: 'foodEvasion1',
-						weight: 9
-					},
-					{
-						id: 'ticket3',
-						count: [0, 2],
-						weight: 1
-					},
-				]
-			},
-			{
-				chance: 1,
-				item: "foodMeatH"
-			}
-		]
-	},
 	monkey: {
 		name: "Infected Monkey",
 		icon: require("@/assets/art/combat/enemies/monkey.png"),
 		stats: {
-			maxHealth: 320,
+			maxHealth: 310,
 			attackSpeed: 1.9,
 			precision: 75,
 			power: 71,
@@ -72,11 +35,49 @@ export default {
 			}
 		]
 	},
+	afkviro: {
+		name: "Harmless Virologist",
+		icon: require("@/assets/art/combat/enemies/goodviro.png"),
+		stats: {
+			maxHealth: 320,
+			attackSpeed: 3.0,
+			precision: 85,
+			power: 94,
+			evasion: 63,
+			damageType: "brute",
+			bruteProtection: 40,
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'potionXenobiology',
+						weight: 10
+					},
+					{
+						id: 'foodAnimal2',
+						weight: 9
+					},
+					{
+						id: 'ticket3',
+						count: [0, 2],
+						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
+			}
+		]
+	},
+
 	movingviro: {
 		name: "Moving Virologist",
 		icon: require("@/assets/art/combat/enemies/badviro.png"),
 		stats: {
-			maxHealth: 330,
+			maxHealth: 340,
 			attackSpeed: 1.9,
 			precision: 86,
 			power: 91,
@@ -94,7 +95,7 @@ export default {
 						weight: 10
 					},
 					{
-						id: 'q_foodEvasion1',
+						id: 'q_foodAnimal1',
 						weight: 9
 					},
 					{
@@ -113,7 +114,7 @@ export default {
 		name: "Gorilla",
 		icon: require("@/assets/art/combat/enemies/gorilla.png"),
 		stats: {
-			maxHealth: 340,
+			maxHealth: 330,
 			attackSpeed: 1.5,
 			precision: 84,
 			power: 87,
@@ -128,10 +129,12 @@ export default {
 				itemTable: [
 					{
 						id: 'bananaBlue',
+						count: [1,5],
 						weight: 3
 					},
 					{
 						id: 'mushroomRed',
+						count: [1,5],
 						weight: 2
 					},
 					{

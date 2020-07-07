@@ -45,7 +45,7 @@ export default {
 		name: "Techpriest Roboticist",
 		icon: require("@/assets/art/combat/enemies/techpriest.png"),
 		stats: {
-			maxHealth: 260,
+			maxHealth: 360,
 			attackSpeed: 1.7,
 			precision: 63,
 			power: 60,
@@ -95,7 +95,7 @@ export default {
 		name: "Mech Building Roboticist",
 		icon: require("@/assets/art/combat/enemies/mechbuild.png"),
 		stats: {
-			maxHealth: 270,
+			maxHealth: 350,
 			attackSpeed: 2.1,
 			precision: 86,
 			power: 85,
@@ -140,7 +140,7 @@ export default {
 		name: "Bald Tourist",
 		icon: require("@/assets/art/combat/enemies/bald_visitor.png"),
 		stats: {
-			maxHealth: 280,
+			maxHealth: 370,
 			attackSpeed: 2.2,
 			precision: 103,
 			power: 54,

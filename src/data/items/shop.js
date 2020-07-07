@@ -246,8 +246,8 @@ export default {
 				weight: 4
 			},
 			{
-				id: 'potionCooking',
-				count: [0,10],
+				id: 'slimeOil',
+				count: [0,50],
 				weight: 5
 			},
 			{

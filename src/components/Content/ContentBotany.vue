@@ -14,7 +14,7 @@
       <job-info
         infoId="botany"
         :icon="require('@/assets/art/jobinfo/botany.png')"
-        title="Reed Glover the Botanist says..."
+        title="Daisy Holmes the Botanist says..."
         :options="[
 					{name: 'Back'},
 					{name: 'Seeds?', icon: require('@/assets/art/botany/seed.png'), iconClass:'mx--2'},

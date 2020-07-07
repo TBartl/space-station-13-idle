@@ -4,11 +4,11 @@ const randomJunkTable = [
 		weight: 6
 	},
 	{
-		id: 'spaceJunk',
+		id: 'armorJunk',
 		weight: 3
 	},
 	{
-		id: 'armorJunk',
+		id: 'spaceJunk',
 		weight: 3
 	},
 ];
@@ -153,11 +153,11 @@ const ACTIONS = {
 						count: [0, 100],
 						weight: 10
 					}, {
-						id: 'spaceJunk',
+						id: 'armorJunk',
 						count: [0, 100],
 						weight: 10
 					}, {
-						id: 'armorJunk',
+						id: 'spaceJunk',
 						count: [0, 100],
 						weight: 10
 					},

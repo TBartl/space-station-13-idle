@@ -172,6 +172,25 @@ export default {
 		description: "+1 Chemistry Upgrade",
 		providesUpgrade: "chemDispenser"
 	},
+	capeValid: {
+		name: "Validhunter Mastery Cloak",
+		sellPrice: 500000,
+		icon: require("@/assets/art/combat/items/cloak/cloakvalid.png"),
+		overlay: require("@/assets/art/combat/items/cloak/cloakvalid_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			protection: 0,
+			precision: 5,
+			power: 5,
+			command: -15
+		},
+		requires: {
+			validhunting: MAX_LEVEL
+		},
+		description: "Mortals fear your name",
+	},
 	capeShitposting: {
 		name: "Cloak of the True Master",
 		sellPrice: 500000,

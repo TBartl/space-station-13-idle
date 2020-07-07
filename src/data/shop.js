@@ -31,7 +31,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-Matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeXenobiology", "capeChemistry", "capeShitposting"]
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeXenobiology", "capeChemistry","capeValid", "capeShitposting"]
 	}
 ]
 
@@ -226,6 +226,20 @@ const CAPES = {
 		},
 		requiredItems: {
 			money: 1000000
+		}
+	},
+	capeValid: {
+		item: "capeValid",
+		description: "Requires max Validhunting to wear.",
+		requiredLevels: {
+			validhunting: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 500000,
+			foodMeatH: 250,
+			foodMeatZ: 250,
+			foodMeatA: 250,
+			foot: 5
 		}
 	},
 	capeShitposting: {

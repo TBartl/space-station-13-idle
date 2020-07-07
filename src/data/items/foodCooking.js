@@ -260,9 +260,9 @@ let FOOD = {
 		healAmount: 50,
 		stats: {
 			maxHealth: 50,
-			evasion: 0,
-			precision: 10,
-			power: 0,
+			evasion: 1,
+			precision: 8,
+			power: 1,
 		},
 	},
 	foodAnimal1: {
@@ -296,9 +296,9 @@ let FOOD = {
 		healAmount: 60,
 		stats: {
 			maxHealth: 50,
-			evasion: 0,
-			precision: 0,
-			power: 10,
+			evasion: 1,
+			precision: 1,
+			power: 8,
 		},
 	},
 	foodAnimal4: {
@@ -356,9 +356,9 @@ let FOOD = {
 		healAmount: 60,
 		stats: {
 			maxHealth: 50,
-			evasion: 10,
-			precision: 0,
-			power: 0,
+			evasion: 8,
+			precision: 1,
+			power: 1,
 		},
 	},
 }

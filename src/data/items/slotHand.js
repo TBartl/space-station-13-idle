@@ -631,9 +631,9 @@ const GBULLET = {
 		ammoType: "ballistic",
 		stats: {
 			attackSpeed: 7,
-			evasion: 3,
+			evasion: 2,
 			power: 2,
-			precision: 5
+			precision: 0
 		},
 		requires: {
 			rangedPower: 1
@@ -648,9 +648,9 @@ const GBULLET = {
 		ammoType: "ballistic",
 		stats: {
 			attackSpeed: 6,
-			evasion: 4,
-			power: 3,
-			precision: 5
+			evasion: 6,
+			power: 2,
+			precision: 0
 		},
 		requires: {
 			rangedPower: 20
@@ -665,9 +665,9 @@ const GBULLET = {
 		ammoType: "ballistic",
 		stats: {
 			attackSpeed: 5,
-			evasion: 5,
-			power: 3,
-			precision: 5
+			evasion: 7,
+			power: 2,
+			precision: 0
 		},
 		requires: {
 			rangedPower: 25
@@ -683,8 +683,8 @@ const GBULLET = {
 		stats: {
 			attackSpeed: 4,
 			evasion: 7,
-			power: 4,
-			precision: 5
+			power: 3,
+			precision: 0
 		},
 		requires: {
 			rangedPower: 35
@@ -700,8 +700,8 @@ const GBULLET = {
 		stats: {
 			attackSpeed: 3,
 			evasion: 8,
-			power: 4,
-			precision: 5
+			power: 3,
+			precision: 0
 		},
 		requires: {
 			rangedPower: 40
@@ -716,8 +716,8 @@ const GBULLET = {
 		ammoType: "ballistic",
 		stats: {
 			attackSpeed: 2,
-			evasion: 9,
-			power: 5,
+			evasion: 8,
+			power: 4,
 			precision: 0
 		},
 		requires: {
@@ -733,8 +733,8 @@ const GBULLET = {
 		ammoType: "ballistic",
 		stats: {
 			attackSpeed: 1,
-			evasion: 10,
-			power: 5,
+			evasion: 9,
+			power: 4,
 			precision: 0
 		},
 		requires: {

@@ -47,7 +47,7 @@ export default {
 		name: "Unprepared Traitor",
 		icon: require("@/assets/art/combat/enemies/tot.png"),
 		stats: {
-			maxHealth: 110,
+			maxHealth: 100,
 			attackSpeed: 2.5,
 			precision: 27,
 			power: 22,
@@ -84,7 +84,7 @@ export default {
 		name: "Braindead Assistant",
 		icon: require("@/assets/art/combat/enemies/bdassist.png"),
 		stats: {
-			maxHealth: 100,
+			maxHealth: 110,
 			attackSpeed: 2.2,
 			precision: 37,
 			power: 28,
@@ -115,6 +115,70 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
+			}
+		]
+	},
+chemist: {
+		name: "Wandering Chemist",
+		icon: require("@/assets/art/combat/enemies/chemist.png"),
+		stats: {
+			maxHealth: 110,
+			attackSpeed: 2.2,
+			precision: 24,
+			power: 30,
+			evasion: 39,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: .5,
+				itemTable: [
+					{
+						id: 'potionMining',
+						weight: 50
+					},
+					{
+						id: 'potionGraytiding',
+						weight: 49
+					},
+					{
+						id: 'potionChemistry',
+						weight: 48
+					},
+					{
+						id: 'potionBotany',
+						weight: 47
+					},
+					{
+						id: 'potionEngineering',
+						weight: 46
+					},
+					{
+						id: 'potionTinkering',
+						weight: 45
+					},
+					{
+						id: 'potionXenobiology',
+						weight: 44
+					},
+					{
+						id: 'potionCooking',
+						weight: 43
+					},
+					{
+						id: 'potionFabrication',
+						weight: 42
+					},
+				]
+			},
+			{
+				chance: .02,
+				item: "jumpsuitChemistry"
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
 			}
 		]
 	},
