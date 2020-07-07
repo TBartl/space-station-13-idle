@@ -167,9 +167,6 @@ const inventory = {
 				if (!itemId) return false;
 				if (state.bank[itemId]) return true;
 
-				console.log(Object.keys(state.bank).length, getters.bankSlots);
-
-
 				if (getters.bankItemIds.length >= getters.bankSlots) return false;
 
 				return true;

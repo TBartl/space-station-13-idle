@@ -112,7 +112,6 @@ export default {
     },
 
     companion() {
-      if (this.mobType != "player") return null;
       let companionItemId = this.$store.getters["inventory/equipment"].companion
         .itemId;
       if (!companionItemId) return null;
