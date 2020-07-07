@@ -8,15 +8,8 @@
     />
     <div class="body-icon mt-2">
       <div ref="body" class="img-body w-100 h-100">
-        <div v-if="mobType == 'player'" class="w-100 h-100 overlay-div">
+        <div v-if="mobType == 'player'" class="w-100 h-100">
           <player-display />
-          <img
-            v-for="(overlay, index) in playerOverlayIcons"
-            :key="index"
-            :src="overlay.icon"
-            :class="{'appear-in-back': overlay.appearInBack}"
-          />
-          <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
         </div>
         <img v-else class="w-100" :src="icon" :class="{'rotate-90': health==0}" />
       </div>
@@ -161,22 +154,6 @@ export default {
     moveTime() {
       return this.$store.getters["playerMob/stats"].moveTime;
     },
-    playerOverlayIcons() {
-      let icons = [];
-      let equipment = this.$store.getters["inventory/equipment"];
-      for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
-        if (!itemId) continue;
-        let item = ITEMS[itemId];
-        if (this.$store.getters["inventory/checkRestricted"](itemId)) continue;
-        if (item.overlay) {
-          icons.push({
-            icon: item.overlay,
-            appearInBack: item.overlayAppearInBack
-          });
-        }
-      }
-      return icons;
-    },
     companion() {
       if (this.mobType != "player") return null;
       let companionItemId = this.$store.getters["inventory/equipment"].companion
@@ -284,18 +261,8 @@ export default {
 .remaining-kills-desc {
   color: gray;
 }
-.companion-overlay {
-  width: 50%;
-  height: 50%;
-  top: 58%;
-  left: 55%;
-}
 .damage-type {
   width: 15px !important;
-}
-.appear-in-back {
-  z-index: 0;
-  filter: blur(3px);
 }
 
 .fake-bar {

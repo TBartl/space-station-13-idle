@@ -1,6 +1,9 @@
 <template>
   <div class="overlay-div w-100 h-100">
-    <div class="skin" :style="{backgroundImage: 'url('+skin+')', maskImage: 'url('+skin+')', backgroundColor: skinColor}" />
+    <div
+      class="skin"
+      :style="{backgroundImage: 'url('+skin+')', maskImage: 'url('+skin+')', backgroundColor: skinColor}"
+    />
     <div
       v-if="race.moth"
       class="skin"
@@ -28,6 +31,14 @@
       class="hair"
       :style="{backgroundImage: 'url('+moth.head+')', maskImage: 'url('+moth.head+')'}"
     />
+
+    <img
+      v-for="(overlay, index) in playerOverlayIcons"
+      :key="index"
+      :src="overlay.icon"
+      :class="{'appear-in-back': overlay.appearInBack}"
+    />
+    <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
   </div>
 </template>
 
@@ -40,6 +51,7 @@ import {
   FRILLS,
   MOTH
 } from "@/data/customization";
+import ITEMS from "@/data/items";
 
 export default {
   computed: {
@@ -77,6 +89,31 @@ export default {
     moth() {
       let mothId = this.$store.getters["customization/moth"];
       return MOTH[mothId];
+    },
+
+    playerOverlayIcons() {
+      let icons = [];
+      let equipment = this.$store.getters["inventory/equipment"];
+      for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
+        if (!itemId) continue;
+        let item = ITEMS[itemId];
+        if (this.$store.getters["inventory/checkRestricted"](itemId)) continue;
+        if (item.overlay) {
+          icons.push({
+            icon: item.overlay,
+            appearInBack: item.overlayAppearInBack
+          });
+        }
+      }
+      return icons;
+    },
+
+    companion() {
+      if (this.mobType != "player") return null;
+      let companionItemId = this.$store.getters["inventory/equipment"].companion
+        .itemId;
+      if (!companionItemId) return null;
+      return ITEMS[companionItemId];
     }
   }
 };
@@ -93,5 +130,17 @@ export default {
   background-color: white;
   mask-mode: alpha;
   mask-size: cover;
+}
+
+.companion-overlay {
+  width: 50%;
+  height: 50%;
+  top: 58%;
+  left: 55%;
+}
+
+.appear-in-back {
+  z-index: 0;
+  filter: blur(3px);
 }
 </style>
