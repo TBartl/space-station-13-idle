@@ -11,6 +11,7 @@
     />
 
     <img :src="clothing" />
+    <img v-if="race.hair" :src="baseShoes" />
     <div
       v-if="race.hair && !hasHat"
       class="hair"
@@ -45,6 +46,7 @@
 <script>
 import {
   BASE_CLOTHING,
+  BASE_SHOES,
   RACES,
   HAIR,
   HORNS,
@@ -73,7 +75,10 @@ export default {
       let jumpsuit =
         ITEMS[this.$store.getters["inventory/equipment"].jumpsuit.itemId];
       return jumpsuit ? jumpsuit.overlay : BASE_CLOTHING;
-    },
+		},
+		baseShoes() {
+			return BASE_SHOES;
+		},
     hair() {
       let hairId = this.$store.getters["customization/hair"];
       return HAIR[hairId];
@@ -82,13 +87,14 @@ export default {
       return this.$store.getters["customization/hairColor/hsl"];
     },
     hasHat() {
-			if (!this.showEquipment) return false;
-			let headItem = ITEMS[this.$store.getters["inventory/equipment"].head.itemId];
-			if (!headItem) return false;
-			return headItem.isHat;
+      if (!this.showEquipment) return false;
+      let headItem =
+        ITEMS[this.$store.getters["inventory/equipment"].head.itemId];
+      if (!headItem) return false;
+      return headItem.isHat;
     },
     frills() {
-			let frillsId = this.$store.getters["customization/frills"];
+      let frillsId = this.$store.getters["customization/frills"];
       return FRILLS[frillsId];
     },
     horns() {
