@@ -15,12 +15,14 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
+				items: {
+					id: "money",
+					count: [0, 5000]
+				}
+			},
+			{
+				chance: 1,
 				itemTable: [
-					{
-						chance: 1,
-						item: "money",
-						count: [0-5000]
-					},
 					{
 						id: 'boss1Parts',
 						count: [6, 10],
@@ -34,14 +36,15 @@ const BOSSES = {
 				]
 			},
 			{
-			chance: 1,
-			itemTable: [
-				{
-					id: 'foodMeatH',
-					weight: 1,
-					count: 10
-				},
-			]}
+				chance: 1,
+				itemTable: [
+					{
+						id: 'foodMeatH',
+						weight: 1,
+						count: 10
+					},
+				]
+			}
 		]
 	},
 	sec2: {
@@ -60,8 +63,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-5000]
+				items: {
+					id: "money",
+					count: [0, 5000]
+				}
 			},
 			{
 				chance: 1,
@@ -86,7 +91,8 @@ const BOSSES = {
 						weight: 1,
 						count: 10
 					},
-				]}
+				]
+			}
 		]
 	},
 	sec3: {
@@ -104,8 +110,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-5000]
+				items: {
+					id: "money",
+					count: [0, 5000]
+				}
 			},
 			{
 				chance: 1,
@@ -149,6 +157,13 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
+				items: {
+					id: "money",
+					count: [0, 5000]
+				}
+			},
+			{
+				chance: 1,
 				itemTable: [
 					{
 						id: 'boss1Parts',
@@ -170,7 +185,8 @@ const BOSSES = {
 						weight: 1,
 						count: 10
 					},
-				]}
+				]
+			}
 		]
 	},
 }
