@@ -84,6 +84,7 @@ export const MOTH = {
 	}
 };
 export const BASE_CLOTHING = require("@/assets/art/customization/BaseClothing.png");
+export const BASE_SHOES = require("@/assets/art/customization/BaseShoes.png");
 
 
 export const SKIN_COLORS = [
