@@ -69,7 +69,9 @@ export default {
       return "";
     },
     clothing() {
-      return BASE_CLOTHING;
+      let jumpsuit =
+        ITEMS[this.$store.getters["inventory/equipment"].jumpsuit.itemId];
+      return jumpsuit ? jumpsuit.overlay : BASE_CLOTHING;
     },
     hair() {
       let hairId = this.$store.getters["customization/hair"];
@@ -99,6 +101,7 @@ export default {
         let item = ITEMS[itemId];
         if (this.$store.getters["inventory/checkRestricted"](itemId)) continue;
         if (item.overlay) {
+          if (item.equipmentSlot == "jumpsuit") continue;
           icons.push({
             icon: item.overlay,
             appearInBack: item.overlayAppearInBack
