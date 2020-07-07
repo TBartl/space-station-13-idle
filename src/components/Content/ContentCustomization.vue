@@ -54,6 +54,15 @@
                   :presets="vividColors"
                 />
               </div>
+
+              <div v-if="race.scaleColor" class="mt-3">
+                <h6>Scale Color</h6>
+                <color-setter
+                  class="color-setter"
+                  propPath="customization/scaleColor"
+                  :presets="vividColors"
+                />
+              </div>
             </div>
           </div>
         </div>

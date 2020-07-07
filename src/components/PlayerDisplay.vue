@@ -6,6 +6,7 @@
     />
     <img :src="clothing" />
     <div
+      v-if="race.hair"
       class="hair"
       :style="{backgroundImage: 'url('+hair+')', maskImage: 'url('+hair+')', backgroundColor: hairColor}"
     />
@@ -17,11 +18,18 @@ import { BASE_CLOTHING, RACES, HAIR } from "@/data/customization";
 
 export default {
   computed: {
+    race() {
+      return RACES[this.$store.getters["customization/race"]];
+    },
     skin() {
-      return RACES[this.$store.getters["customization/race"]].skin;
+      return this.race.skin;
     },
     skinColor() {
-      return this.$store.getters["customization/skinColor/hsl"];
+      if (this.race.skinColor)
+        return this.$store.getters["customization/skinColor/hsl"];
+      if (this.race.scaleColor)
+        return this.$store.getters["customization/scaleColor/hsl"];
+      return "";
     },
     clothing() {
       return BASE_CLOTHING;

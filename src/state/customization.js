@@ -6,7 +6,8 @@ const customization = {
 	namespaced: true,
 	modules: {
 		skinColor: createColorModule(20, 100, 91),
-		hairColor: createColorModule(0, 0, 15)
+		hairColor: createColorModule(0, 0, 15),
+		scaleColor: createColorModule(0, 0, 50),
 	},
 	state: {
 		race: 'human',

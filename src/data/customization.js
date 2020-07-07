@@ -139,7 +139,8 @@ export const RACES = {
 	},
 	lizard: {
 		icon: require("@/assets/art/customization/lizardIcon.png"),
-		skin: require("@/assets/art/customization/LizardMale.png")
+		skin: require("@/assets/art/customization/LizardMale.png"),
+		scaleColor: true
 	},
 	moth: {
 		icon: require("@/assets/art/customization/mothIcon.png"),
