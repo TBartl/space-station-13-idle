@@ -49,6 +49,8 @@ Object.values(ENEMIES).forEach(enemy => {
 	// Don't allow negative robustness for the purpose of calculations (I'm lookin' at you mouse)
 	robustness = Math.max(1, robustness);
 
+	if (enemy.boss) return;
+
 	enemy.itemTables.unshift({
 		chance: 1,
 		items: {

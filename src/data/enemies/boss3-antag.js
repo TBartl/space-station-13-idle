@@ -15,8 +15,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-40000]
+				items: {
+					id: "money",
+					count: [0, 40000]
+				}
 			},
 			{
 				chance: 1,
@@ -61,8 +63,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-40000]
+				items: {
+					id: "money",
+					count: [0, 40000]
+				}
 			},
 			{
 				chance: 1,
@@ -106,8 +110,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-40000]
+				items: {
+					id: "money",
+					count: [0, 40000]
+				}
 			},
 			{
 				chance: 1,
@@ -151,8 +157,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-50000]
+				items: {
+					id: "money",
+					count: [0, 40000]
+				}
 			},
 			{
 				chance: 1,

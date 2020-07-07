@@ -15,6 +15,13 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
+				items: {
+					id: "money",
+					count: [0, 10000]
+				}
+			},
+			{
+				chance: 1,
 				itemTable: [
 					{
 						id: 'exoticParts',
@@ -56,8 +63,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-10000]
+				items: {
+					id: "money",
+					count: [0, 10000]
+				}
 			},
 			{
 				chance: 1,
@@ -102,8 +111,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-10000]
+				items: {
+					id: "money",
+					count: [0, 10000]
+				}
 			},
 			{
 				chance: 1,
@@ -148,8 +159,10 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
-				item: "money",
-				count: [0-10000]
+				items: {
+					id: "money",
+					count: [0, 10000]
+				}
 			},
 			{
 				chance: 1,
