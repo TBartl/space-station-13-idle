@@ -14,7 +14,8 @@ export const RACES = {
 	},
 	moth: {
 		icon: require("@/assets/art/customization/mothIcon.png"),
-		skin: require("@/assets/art/customization/MothMale.png")
+		skin: require("@/assets/art/customization/MothMale.png"),
+		moth: true
 	},
 	// ipc: {
 	// 	icon: require("@/assets/art/customization/ipcIcon.png"),
@@ -60,19 +61,28 @@ export const FRILLS = {
 	simple: require("@/assets/art/customization/lizard_frills/simple.png"),
 };
 
-// export const MOTH = {
-// 	none,
-// 	moth1t: require("@/assets/art/customization/moth/moth_firewatch_top.png"),
-// 	moth1: require("@/assets/art/customization/moth/moth_firewatch.png"),
-// 	moth2t: require("@/assets/art/customization/moth/moth_lovers_top.png"),
-// 	moth2: require("@/assets/art/customization/moth/moth_lovers.png"),
-// 	moth3t: require("@/assets/art/customization/moth/moth_moonfly_top.png"),
-// 	moth3: require("@/assets/art/customization/moth/moth_moonfly.png"),
-// 	moth4t: require("@/assets/art/customization/moth/moth_plain_top.png"),
-// 	moth4: require("@/assets/art/customization/moth/moth_plain.png"),
-// 	moth5t: require("@/assets/art/customization/moth/moth_white_top.png"),
-// 	moth5: require("@/assets/art/customization/moth/moth_white.png"),
-// };
+export const MOTH = {
+	plain: {
+		body: require("@/assets/art/customization/moth/plain.png"),
+		head: require("@/assets/art/customization/moth/plain_top.png")
+	},
+	firewatch: {
+		body: require("@/assets/art/customization/moth/firewatch.png"),
+		head: require("@/assets/art/customization/moth/firewatch_top.png")
+	},
+	lovers: {
+		body: require("@/assets/art/customization/moth/lovers.png"),
+		head: require("@/assets/art/customization/moth/lovers_top.png"),
+	},
+	moonfly: {
+		body: require("@/assets/art/customization/moth/moonfly.png"),
+		head: require("@/assets/art/customization/moth/moonfly_top.png"),
+	},
+	white: {
+		body: require("@/assets/art/customization/moth/white.png"),
+		head: require("@/assets/art/customization/moth/white_top.png")
+	}
+};
 export const BASE_CLOTHING = require("@/assets/art/customization/BaseClothing.png");
 
 

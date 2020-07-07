@@ -28,6 +28,9 @@ const customization = {
 		},
 		frills(state) {
 			return state.frills;
+		},
+		moth(state) {
+			return state.moth;
 		}
 	},
 	mutations: {
@@ -42,6 +45,9 @@ const customization = {
 		},
 		setFrills(state, val) {
 			state.frills = val;
+		},
+		setMoth(state, val) {
+			state.moth = val;
 		}
 	}
 }

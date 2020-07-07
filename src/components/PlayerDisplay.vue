@@ -1,9 +1,12 @@
 <template>
   <div class="overlay-div w-100 h-100">
+    <div class="skin" :style="{backgroundImage: 'url('+skin+')', maskImage: 'url('+skin+')', backgroundColor: skinColor}" />
     <div
+      v-if="race.moth"
       class="skin"
-      :style="{backgroundImage: 'url('+skin+')', maskImage: 'url('+skin+')', backgroundColor: skinColor}"
+      :style="{backgroundImage: 'url('+moth.body+')', maskImage: 'url('+moth.body+')'}"
     />
+
     <img :src="clothing" />
     <div
       v-if="race.hair"
@@ -20,11 +23,23 @@
       class="hair"
       :style="{backgroundImage: 'url('+horns+')', maskImage: 'url('+horns+')', backgroundColor: skinColor}"
     />
+    <div
+      v-if="race.moth"
+      class="hair"
+      :style="{backgroundImage: 'url('+moth.head+')', maskImage: 'url('+moth.head+')'}"
+    />
   </div>
 </template>
 
 <script>
-import { BASE_CLOTHING, RACES, HAIR, HORNS, FRILLS } from "@/data/customization";
+import {
+  BASE_CLOTHING,
+  RACES,
+  HAIR,
+  HORNS,
+  FRILLS,
+  MOTH
+} from "@/data/customization";
 
 export default {
   computed: {
@@ -58,6 +73,10 @@ export default {
     horns() {
       let hornsId = this.$store.getters["customization/horns"];
       return HORNS[hornsId];
+    },
+    moth() {
+      let mothId = this.$store.getters["customization/moth"];
+      return MOTH[mothId];
     }
   }
 };
@@ -71,7 +90,7 @@ export default {
 
   background-blend-mode: multiply;
 
-  background-color: #ffe0d1;
+  background-color: white;
   mask-mode: alpha;
   mask-size: cover;
 }

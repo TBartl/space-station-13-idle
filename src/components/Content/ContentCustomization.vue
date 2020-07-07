@@ -89,6 +89,20 @@
                   <img :src="frill[1]" alt />
                 </button>
               </div>
+
+              <div v-if="race.moth" class="mt-3">
+                <h6>Style</h6>
+                <button
+                  class="btn mr-2 mb-2"
+                  v-for="moth in Object.entries(mothOptions)"
+                  :class="$store.getters['customization/moth'] == moth[0] ? 'btn-primary' : 'btn-outline-primary'"
+                  :key="moth[0]"
+                  @click="$store.commit('customization/setMoth', moth[0])"
+                >
+                  <img :src="moth[1].body" alt />
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -105,8 +119,9 @@ import ColorSetter from "@/components/ColorSetter";
 import {
   RACES,
   HAIR,
-	HORNS,
+  HORNS,
 	FRILLS,
+	MOTH,
   SKIN_COLORS,
   VIVID_COLORS
 } from "@/data/customization";
@@ -135,6 +150,9 @@ export default {
     },
     frillOptions() {
       return FRILLS;
+    },
+    mothOptions() {
+      return MOTH;
     }
   }
 };
