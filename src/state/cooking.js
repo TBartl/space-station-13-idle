@@ -7,6 +7,9 @@ import { COOKING_UPGRADE_PERCENT } from "@/data/upgrades";
 import { COOKING_POTION_PERCENT } from '@/data/items/resourceChemistry';
 
 const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
+	state: {
+		upgradeEnabled: true
+	},
 	getters: {
 		jobId() {
 			return "cooking";
@@ -15,6 +18,8 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let actions = cloneDeep(ACTIONS);
 
 			let upgradeCount = rootGetters["upgrades/get"]("fryCooking");
+			if (!state.upgradeEnabled) upgradeCount = 0;
+
 			let potion = rootGetters["potions/get"]("cooking");
 			let potionItemId = potion ? potion.itemId : null;
 
@@ -52,6 +57,14 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		locked(state, getters, rootState, rootGetters) {
 			return !rootGetters["upgrades/get"]("cookingUnlocked");
+		},
+		upgradeEnabled(state) {
+			return state.upgradeEnabled
+		}
+	},
+	mutations: {
+		setUpgradeEnabled(state, val) {
+			state.upgradeEnabled = val;
 		}
 	}
 });

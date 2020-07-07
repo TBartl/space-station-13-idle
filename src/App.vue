@@ -14,7 +14,7 @@
 import ToastContainer from "@/components/Toast/ToastContainer";
 import Sidebar from "@/components/Sidebar/Sidebar.vue";
 import ContentWrapper from "@/components/Content/ContentWrapper.vue";
-import ModalWelcome from "@/components/Modals/ModalWelcome";
+import ModalUpdate from "@/components/Modals/ModalUpdate";
 import ModalWelcomeBack from "@/components/Modals/ModalWelcomeBack";
 import PanelsContainer from "@/components/Panels/PanelsContainer";
 import { mapGetters, mapMutations } from "vuex";
@@ -33,9 +33,9 @@ export default {
     ...mapMutations(["setWelcomeMessageSeen"])
   },
   mounted() {
-    if (!this.welcomeMessageSeen) {
-      // this.$modal.show(ModalWelcome, {}, { height: "auto", width: "360px" });
-      this.setWelcomeMessageSeen();
+    if (!this.$store.state.update1Seen) {
+      this.$modal.show(ModalUpdate, {}, { height: "auto", width: "360px" });
+      this.$store.state.update1Seen = true;
     } else if (this.$store.getters["chrono/lastGain"] > 30 * 1000) {
       this.$modal.show(
         ModalWelcomeBack,

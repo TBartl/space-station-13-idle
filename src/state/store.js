@@ -122,7 +122,7 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	welcomeMessageSeen: false
+	update1Seen: false
 }
 
 let initialState = cloneDeep(state);

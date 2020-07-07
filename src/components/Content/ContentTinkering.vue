@@ -20,8 +20,7 @@
 					{name: 'Junk?', icon: require('@/assets/art/graytiding/junk.png'), iconClass:'mx--0'},
 					{name: 'Recycling?', icon: require('@/assets/art/tinkering/burnjunk.png'), iconClass:'mx--0'},
 					{name: 'Weaponsss?', icon: require('@/assets/art/combat/items/melee_c4.png'), iconClass:'mx--1'},
-					{name: 'Armor?', icon: require('@/assets/art/combat/items/arm_b2.png'), iconClass:'mx--1'},
-					{name: 'Upgrade?', icon: require('@/assets/art/tinkering/upgrade1.png'), iconClass:'mx--1'}
+					{name: 'Armor?', icon: require('@/assets/art/combat/items/arm_b2.png'), iconClass:'mx--1'}
 				]"
       >
         <template slot="Back">
@@ -148,17 +147,26 @@
             <b>Move</b> from prey to prey.
           </span>
         </template>
-        <template slot="Upgrade?">
-          <span>
-            An
-            <img class="mx--0" :src="require('@/assets/art/tinkering/upgrade1.png')" />
-            <b>Upgrade</b> from
-            <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
-            <b>Cargo</b>? Bah, who needsss that.
-          </span>
-          <span>Tinkering is the bessst job, upgrade or not.</span>
-        </template>
       </job-info>
+
+      <div class="row my-3" v-if="this.$store.getters['upgrades/get']('tinkeringSpirits')">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="content-block">
+            <div class="d-flex flex-row align-items-center">
+              <img :src="require('@/assets/art/tinkering/upgrade1.png')" />
+              <h5 class="mb-1">Upgrades</h5>
+            </div>
+            <p>
+              <b>Streak:</b>
+              {{$store.getters['tinkering/streak']}}
+            </p>
+            <p>
+              <b>Bonus:</b>
+              {{(100*$store.getters["tinkering/streakBonus"]).toFixed()}}% / {{(100*$store.getters["tinkering/streakCap"]).toFixed()}}%
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div
         class="tier row"

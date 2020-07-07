@@ -340,11 +340,37 @@ for (let i = 0; i < 5; i++) {
 	COOKING_UPGRADES[`upgradeCooking${i + 1}`] = upgrade;
 }
 
+
+export const TINKERING_UPGRADE_INCREMENT = .03;
+export const TINKERING_UPGRADE_CAP = .25;
+const TINKERING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Buy Balmer Spirits",
+		description: `Each consecutive tinkering craft of the same item increases future crafting speeds by ${TINKERING_UPGRADE_INCREMENT * 100}%. This effect caps at ${(i + 1) * TINKERING_UPGRADE_CAP * 100}%`, // Expanded below
+		icon: require('@/assets/art/tinkering/upgrade1.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { tinkering: (i + 1) * 10 },
+		upgrade: "tinkeringSpirits",
+		requiredUpgrades: { tinkeringSpirits: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description += `, up from ${(TINKERING_UPGRADE_CAP * i * 100).toFixed()}%`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	TINKERING_UPGRADES[`upgradeTinkering${i + 1}`] = upgrade;
+}
+
+
 const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
 	...GRAYTIDING_UPGRADES,
+	...TINKERING_UPGRADES,
 	...BOTANY_UPGRADES,
 	...COOKING_UPGRADES,
 	...XENOBIO_UPGRADES,

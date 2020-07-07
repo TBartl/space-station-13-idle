@@ -21,6 +21,10 @@ function mergeActionMutated(action, into) {
 }
 
 const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
+	state: {
+		upgradeLeftEnabled: true,
+		upgradeRightEnabled: true
+	},
 	getters: {
 		jobId() {
 			return "botany";
@@ -60,10 +64,10 @@ const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (upgradeCount) {
 					let originalEntries = cloneDeep(actionEntries);
 					actionEntries.forEach((action, i) => {
-						if (upgradeCount >= 1 && i > 0) {
+						if (upgradeCount >= 1 && i > 0 && state.upgradeLeftEnabled) {
 							mergeAction(originalEntries[i - 1], action);
 						}
-						if (upgradeCount >= 2 && i < actionEntries.length - 1) {
+						if (upgradeCount >= 2 && i < actionEntries.length - 1 && state.upgradeRightEnabled) {
 							mergeAction(originalEntries[i + 1], action);
 						}
 					});
@@ -71,6 +75,20 @@ const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			}
 
 			return actions;
+		},
+		upgradeLeftEnabled(state) {
+			return state.upgradeLeftEnabled
+		},
+		upgradeRightEnabled(state) {
+			return state.upgradeRightEnabled
+		}
+	},
+	mutations: {
+		setUpgradeLeftEnabled(state, val) {
+			state.upgradeLeftEnabled = val;
+		},
+		setUpgradeRightEnabled(state, val) {
+			state.upgradeRightEnabled = val;
 		}
 	}
 });

@@ -13,8 +13,8 @@ const customization = {
 		race: 'human',
 		hair: 'thinningrear',
 		horns: 'none',
-		frills: 'none'
-
+		frills: 'none',
+		moth: 'plain'
 	},
 	getters: {
 		race(state) {
