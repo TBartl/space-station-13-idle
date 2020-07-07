@@ -11,7 +11,9 @@ const customization = {
 	},
 	state: {
 		race: 'human',
-		hair: 'thinningrear'
+		hair: 'thinningrear',
+		horns: 'none',
+		frills: 'none'
 
 	},
 	getters: {
@@ -20,6 +22,12 @@ const customization = {
 		},
 		hair(state) {
 			return state.hair;
+		},
+		horns(state) {
+			return state.horns;
+		},
+		frills(state) {
+			return state.frills;
 		}
 	},
 	mutations: {
@@ -28,6 +36,12 @@ const customization = {
 		},
 		setHair(state, val) {
 			state.hair = val;
+		},
+		setHorns(state, val) {
+			state.horns = val;
+		},
+		setFrills(state, val) {
+			state.frills = val;
 		}
 	}
 }

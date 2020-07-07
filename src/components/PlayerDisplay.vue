@@ -10,11 +10,21 @@
       class="hair"
       :style="{backgroundImage: 'url('+hair+')', maskImage: 'url('+hair+')', backgroundColor: hairColor}"
     />
+    <div
+      v-if="race.frills"
+      class="hair"
+      :style="{backgroundImage: 'url('+frills+')', maskImage: 'url('+frills+')', backgroundColor: skinColor}"
+    />
+    <div
+      v-if="race.horns"
+      class="hair"
+      :style="{backgroundImage: 'url('+horns+')', maskImage: 'url('+horns+')', backgroundColor: skinColor}"
+    />
   </div>
 </template>
 
 <script>
-import { BASE_CLOTHING, RACES, HAIR } from "@/data/customization";
+import { BASE_CLOTHING, RACES, HAIR, HORNS, FRILLS } from "@/data/customization";
 
 export default {
   computed: {
@@ -40,6 +50,14 @@ export default {
     },
     hairColor() {
       return this.$store.getters["customization/hairColor/hsl"];
+    },
+    frills() {
+      let frillsId = this.$store.getters["customization/frills"];
+      return FRILLS[frillsId];
+    },
+    horns() {
+      let hornsId = this.$store.getters["customization/horns"];
+      return HORNS[hornsId];
     }
   }
 };

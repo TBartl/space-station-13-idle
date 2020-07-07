@@ -63,6 +63,32 @@
                   :presets="vividColors"
                 />
               </div>
+
+              <div v-if="race.horns" class="mt-3">
+                <h6>Horns</h6>
+                <button
+                  class="btn mr-2 mb-2 hair"
+                  v-for="horn in Object.entries(hornOptions)"
+                  :class="$store.getters['customization/horns'] == horn[0] ? 'btn-primary' : 'btn-outline-primary'"
+                  :key="horn[0]"
+                  @click="$store.commit('customization/setHorns', horn[0])"
+                >
+                  <img :src="horn[1]" alt />
+                </button>
+              </div>
+
+              <div v-if="race.frills" class="mt-3">
+                <h6>Frills</h6>
+                <button
+                  class="btn mr-2 mb-2 hair"
+                  v-for="frill in Object.entries(frillOptions)"
+                  :class="$store.getters['customization/frills'] == frill[0] ? 'btn-primary' : 'btn-outline-primary'"
+                  :key="frill[0]"
+                  @click="$store.commit('customization/setFrills', frill[0])"
+                >
+                  <img :src="frill[1]" alt />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +102,14 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import PlayerDisplay from "@/components/PlayerDisplay";
 import ColorSetter from "@/components/ColorSetter";
-import { RACES, HAIR, SKIN_COLORS, VIVID_COLORS } from "@/data/customization";
+import {
+  RACES,
+  HAIR,
+	HORNS,
+	FRILLS,
+  SKIN_COLORS,
+  VIVID_COLORS
+} from "@/data/customization";
 
 export default {
   extends: ContentAbstract,
@@ -96,6 +129,12 @@ export default {
     },
     hairOptions() {
       return HAIR;
+    },
+    hornOptions() {
+      return HORNS;
+    },
+    frillOptions() {
+      return FRILLS;
     }
   }
 };
