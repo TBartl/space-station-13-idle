@@ -78,7 +78,7 @@ export default {
 	},
 	potatoBattery: {
 		name: "Potato Battery",
-		sellPrice: 37,
+		sellPrice: 35,
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
 		healAmount: 20,
 		stats: {
@@ -90,7 +90,7 @@ export default {
 	},
 	tomatoBlue: {
 		name: "Blue Tomato",
-		sellPrice: 37,
+		sellPrice: 35,
 		icon: require("@/assets/art/botany/PlantTomatoblue.png"),
 		healAmount: 20,
 		stats: {
@@ -102,7 +102,7 @@ export default {
 	},
 	bananaMime: {
 		name: "...",
-		sellPrice: 45,
+		sellPrice: 42,
 		icon: require("@/assets/art/botany/PlantBananamime.png"),
 		healAmount: 20,
 		stats: {
@@ -114,7 +114,7 @@ export default {
 	},
 	flowerMoon: {
 		name: "Moonflower",
-		sellPrice: 45,
+		sellPrice: 42,
 		icon: require("@/assets/art/botany/PlantFlowermoon.png"),
 		healAmount: 20,
 		stats: {
@@ -126,7 +126,7 @@ export default {
 	},
 	mushroomRed: {
 		name: "Glowcap",
-		sellPrice: 52,
+		sellPrice: 48,
 		icon: require("@/assets/art/botany/PlantShroomred.png"),
 		healAmount: 20,
 		stats: {
@@ -138,7 +138,7 @@ export default {
 	},
 	peppercold: {
 		name: "Ice Pepper",
-		sellPrice: 52,
+		sellPrice: 48,
 		icon: require("@/assets/art/botany/PlantPeppercold.png"),
 		healAmount: 20,
 		stats: {
@@ -150,11 +150,11 @@ export default {
 	},
 	orange: {
 		name: "Orange",
-		sellPrice: 61,
+		sellPrice: 49,
 		icon: require("@/assets/art/botany/PlantOrange.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: -5,
 			precision: 0,
 			power: 10,
@@ -162,11 +162,11 @@ export default {
 	},
 	tomatoBluespace: {
 		name: "Bluespace Tomato",
-		sellPrice: 61,
+		sellPrice: 49,
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: 0,
 			precision: 10,
 			power: -5,
@@ -174,11 +174,11 @@ export default {
 	},
 	bananaBlue: {
 		name: "Blue Banana",
-		sellPrice: 27,
+		sellPrice: 53,
 		icon: require("@/assets/art/botany/PlantBananablue.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: 10,
 			precision: -5,
 			power: 0,
@@ -186,11 +186,11 @@ export default {
 	},
 	flowerNova: {
 		name: "Novaflower",
-		sellPrice: 66,
+		sellPrice: 53,
 		icon: require("@/assets/art/botany/PlantFlowernova.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: 10,
 			precision: 0,
 			power: -5,
@@ -198,11 +198,11 @@ export default {
 	},
 	mushroomShadow: {
 		name: "Shadowshroom",
-		sellPrice: 71,
+		sellPrice: 57,
 		icon: require("@/assets/art/botany/PlantShroomshadow.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: -5,
 			precision: 10,
 			power: 0,
@@ -210,11 +210,11 @@ export default {
 	},
 	pepperGhost: {
 		name: "Ghost Pepper",
-		sellPrice: 71,
+		sellPrice: 57,
 		icon: require("@/assets/art/botany/PlantPepperghost.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 5,
+			maxHealth: 0,
 			evasion: 0,
 			precision: -5,
 			power: 10,
@@ -222,11 +222,12 @@ export default {
 	},
 	orange3d: {
 		name: "Multidimensional Orange",
-		sellPrice: 83,
+		description: 'Looking at this makes your head hurt',
+		sellPrice: 61,
 		icon: require("@/assets/art/botany/PlantOrange3d_anim.gif"),
 		healAmount: 40,
 		stats: {
-			maxHealth: -5,
+			maxHealth: -50,
 			evasion: 5,
 			precision: 5,
 			power: 5,

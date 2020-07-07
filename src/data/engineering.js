@@ -230,7 +230,7 @@ const ILL_ADVISED_ACTIONS = {
 		name: "Stored Power",
 		items: {
 			id: "money",
-			count: 50
+			count: [200, 350]
 		},
 		icon: require("@/assets/art/engineering/smes_anim.gif"),
 		xp: 15,

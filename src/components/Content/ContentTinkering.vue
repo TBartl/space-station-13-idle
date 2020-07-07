@@ -140,7 +140,7 @@
               class="mx--0"
               :src="require('@/assets/art/combat/black_shoes.png')"
             />
-            <b>Dodge</b> a lot more effectively. It alssso won't ssslow you down as you
+            <b>Evade</b> a lot more effectively. It alssso won't ssslow you down as you
             <img
               class="mx--0"
               :src="require('@/assets/art/combat/evasion.png')"

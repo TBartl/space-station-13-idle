@@ -37,7 +37,7 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							chance: 1,
 							items: {
 								id: "money",
-								count: originalItems.count
+								count: originalItems.count * 4
 							}
 						}
 					]

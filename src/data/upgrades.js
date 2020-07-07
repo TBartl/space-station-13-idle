@@ -148,7 +148,7 @@ export const COMBAT_UPGRADES = {
 	}
 }
 
-export const MINING_UPGRADE_PERCENT = .2;
+export const MINING_UPGRADE_PERCENT = .15;
 const MINING_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {

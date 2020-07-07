@@ -107,7 +107,7 @@
       <li>
         <span>
           <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
-          <b>Evasion</b> increases your chance to dodge enemy attacks.
+          <b>Evasion</b> increases your chance to evade enemy attacks.
         </span>
       </li>
       <li>
