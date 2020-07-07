@@ -36,37 +36,6 @@
               >
                 <img :src="hair[1]" alt />
               </button>
-
-              <h6 class="mt-3">Alien Top Color</h6>
-              <color-setter class="color-setter" propPath="customization/lizardColor" />
-
-                            <h6 class="mt-2">Lizard</h6>
-              <button
-                class="btn mr-2 mb-2 lizard"
-                v-for="lizard in Object.entries(lizardOptions)"
-                :class="$store.getters['customization/lizard'] == lizard[0] ? 'btn-primary' : 'btn-outline-primary'"
-                :key="lizard[0]"
-                @click="$store.commit('customization/setLizard', lizard[0])"
-              >
-                <img :src="lizard[1]" alt />
-              </button>
-
-              <h6 class="mt-3">Alien Bottom Color</h6>
-              <color-setter class="color-setter" propPath="customization/mothColor" />
-
-                            <h6 class="mt-2">Moth</h6>
-              <button
-                class="btn mr-2 mb-2 moth"
-                v-for="moth in Object.entries(mothOptions)"
-                :class="$store.getters['customization/moth'] == moth[0] ? 'btn-primary' : 'btn-outline-primary'"
-                :key="moth[0]"
-                @click="$store.commit('customization/setMoth', moth[0])"
-              >
-                <img :src="moth[1]" alt />
-              </button>
-
-              <h6 class="mt-3">Moth Color</h6>
-              <color-setter class="color-setter" propPath="customization/mothColor" />
             </div>
           </div>
         </div>
@@ -80,7 +49,7 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import PlayerDisplay from "@/components/PlayerDisplay";
 import ColorSetter from "@/components/ColorSetter";
-import { RACES, HAIR, LIZARD, MOTH } from "@/data/customization";
+import { RACES, HAIR } from "@/data/customization";
 
 export default {
   extends: ContentAbstract,
@@ -91,14 +60,7 @@ export default {
     },
     hairOptions() {
       return HAIR;
-    },
-    lizardOptions() {
-      return LIZARD;
-    },
-    mothOptions() {
-      return MOTH;
     }
-    
   }
 };
 </script>
@@ -112,10 +74,10 @@ export default {
 }
 
 .color-setter {
-	max-width: 200px;
+  max-width: 200px;
 }
 .hair img {
-	transform: scale(2)  translateY(6px);
-	filter: brightness(.5);
+  transform: scale(2) translateY(6px);
+  filter: brightness(0.5);
 }
 </style>
