@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { cloneDeep } from 'lodash';
+import { cloneDeep, union } from 'lodash';
 
 Vue.use(Vuex)
 
@@ -66,11 +66,31 @@ const modules = {
 }
 
 // Needed to Vue.set appropriately
-function customMerge(obj, source) {
-	Object.keys(source).forEach(key => {
+function customMerge(obj, source, root = true) {
+	let allKeys = Object.keys(source);
+	if (obj.constructor == Object) {
+		allKeys = union(allKeys, Object.keys(obj));
+	}
+
+	allKeys.forEach(key => {
+		if (key.toLowerCase().includes("coroutine")) {
+			return;
+		}
+
+		if (!root && obj[key] && obj[key].constructor == Object) {
+			Vue.set(obj, key, {});
+		}
 		if (source[key] && source[key].constructor == Object) {
-			customMerge(obj[key], source[key]);
-		} else {
+			if (!obj[key]) Vue.set(obj, key, {});
+			customMerge(obj[key], source[key], false);
+		}
+		else if (Array.isArray(source[key])) {
+			Vue.set(obj, key, []);
+			for (let i = 0; i < source[key].length; i++) {
+				Vue.set(obj[key], i, source[key][i]);
+			}
+		}
+		else {
 			Vue.set(obj, key, source[key]);
 		}
 	});
@@ -81,7 +101,8 @@ export function reducer(state) {
 	for (let [moduleName, module] of Object.entries(modules)) {
 		if (!module.modules) continue;
 		for (let subModuleName of Object.keys(module.modules)) {
-			delete reduced[moduleName][subModuleName];
+			if (subModuleName.toLowerCase().includes("coroutine"))
+				delete reduced[moduleName][subModuleName];
 		}
 	}
 	delete reduced.chrono.currentTimeout;
@@ -129,12 +150,10 @@ const store = new Vuex.Store({
 			state.visibleSidebarItem = id;
 		},
 		_resetState(state) {
-			customMerge(state, cloneDeep(initialState));
-			console.log(state);
+			customMerge(state, initialState);
 		},
 		_setState(state, newState) {
 			customMerge(state, newState);
-			console.log(state);
 		},
 		setWelcomeMessageSeen(state) {
 			state.welcomeMessageSeen = true;

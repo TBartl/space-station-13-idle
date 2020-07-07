@@ -57,6 +57,11 @@
 
       <p class="items-header">Other</p>
       <sidebar-item
+        id="customization"
+        text="Player"
+        :icon="require('@/assets/art/customization/icon.png')"
+      />
+      <sidebar-item
         id="chronosphere"
         text="Chronosphere"
         :icon="require('@/assets/art/sidebar/chronohelmet.png')"

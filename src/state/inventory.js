@@ -161,6 +161,16 @@ const inventory = {
 				}
 				return true;
 			}
+		},
+		canUnequip(state, getters) {
+			return (itemId) => {
+				if (!itemId) return false;
+				if (state.bank[itemId]) return true;
+
+				if (getters.bankItemIds.length >= getters.bankSlots) return false;
+
+				return true;
+			}
 		}
 	},
 	mutations: {

@@ -8,7 +8,7 @@
         :key="index"
         :itemId="itemId"
       />
-      <button v-if="currentItemId" class="btn btn-outline-danger" @click="unequip">UNEQUIP</button>
+      <button v-if="canUnequip" class="btn btn-outline-danger" @click="unequip">UNEQUIP</button>
       <span v-if="!currentItemId && validItems.length == 0">No {{equipmentSlot}} items available.</span>
     </div>
   </b-popover>
@@ -30,6 +30,9 @@ export default {
         this.$store.getters["inventory/bank"],
         this.equipmentSlot
       ).filter(itemId => !this.$store.getters["inventory/isEquipped"](itemId));
+    },
+    canUnequip() {
+      return this.$store.getters["inventory/canUnequip"](this.currentItemId);
     }
   },
   methods: {

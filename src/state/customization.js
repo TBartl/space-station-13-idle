@@ -6,13 +6,14 @@ const customization = {
 	namespaced: true,
 	modules: {
 		skinColor: createColorModule(20, 100, 91),
-		hairColor: createColorModule(0, 0, 15)
+		hairColor: createColorModule(0, 0, 15),
+		scaleColor: createColorModule(0, 0, 50),
 	},
 	state: {
 		race: 'human',
 		hair: 'thinningrear',
-		lizard: 'lizard1',
-		moth: 'moth1'
+		horns: 'none',
+		frills: 'none'
 
 	},
 	getters: {
@@ -22,8 +23,11 @@ const customization = {
 		hair(state) {
 			return state.hair;
 		},
-		lizard(state) {
-			return state.lizard;
+		horns(state) {
+			return state.horns;
+		},
+		frills(state) {
+			return state.frills;
 		},
 		moth(state) {
 			return state.moth;
@@ -36,8 +40,11 @@ const customization = {
 		setHair(state, val) {
 			state.hair = val;
 		},
-		setlizard(state, val) {
-			state.lizard = val;
+		setHorns(state, val) {
+			state.horns = val;
+		},
+		setFrills(state, val) {
+			state.frills = val;
 		},
 		setMoth(state, val) {
 			state.moth = val;
