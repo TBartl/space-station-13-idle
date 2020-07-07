@@ -17,6 +17,11 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
+						chance: 1,
+						item: "money",
+						count: [0-5000]
+					},
+					{
 						id: 'boss1Parts',
 						count: [6, 10],
 						weight: 8
@@ -29,9 +34,14 @@ const BOSSES = {
 				]
 			},
 			{
-				chance: 1,
-				item: "foodMeatH"
-			}
+			chance: 1,
+			itemTable: [
+				{
+					id: 'foodMeatH',
+					weight: 1,
+					count: 10
+				},
+			]}
 		]
 	},
 	sec2: {
@@ -50,6 +60,11 @@ const BOSSES = {
 		itemTables: [
 			{
 				chance: 1,
+				item: "money",
+				count: [0-5000]
+			},
+			{
+				chance: 1,
 				itemTable: [
 					{
 						id: 'boss1Parts',
@@ -65,8 +80,13 @@ const BOSSES = {
 			},
 			{
 				chance: 1,
-				item: "foodMeatH"
-			}
+				itemTable: [
+					{
+						id: 'foodMeatH',
+						weight: 1,
+						count: 10
+					},
+				]}
 		]
 	},
 	sec3: {
@@ -82,6 +102,11 @@ const BOSSES = {
 			damageType: "brute",
 		},
 		itemTables: [
+			{
+				chance: 1,
+				item: "money",
+				count: [0-5000]
+			},
 			{
 				chance: 1,
 				itemTable: [
@@ -102,7 +127,8 @@ const BOSSES = {
 				itemTable: [
 					{
 						id: 'foodMeatZ',
-						weight: 1
+						weight: 1,
+						count: 10
 					},
 				]
 			}
@@ -138,8 +164,13 @@ const BOSSES = {
 			},
 			{
 				chance: 1,
-				item: "foodMeatH"
-			}
+				itemTable: [
+					{
+						id: 'foodMeatH',
+						weight: 1,
+						count: 10
+					},
+				]}
 		]
 	},
 }

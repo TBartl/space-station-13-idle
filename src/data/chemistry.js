@@ -165,7 +165,7 @@ const PILLS = {
 	synthPillCommand: {
 		items: {
 			id: "pillHappy",
-			count: PILL_COUNT*1.5
+			count: PILL_COUNT*1.25
 		},
 		sellPrice: 50,
 		icon: require("@/assets/art/combat/items/pill5.png"),

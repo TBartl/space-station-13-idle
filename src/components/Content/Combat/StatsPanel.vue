@@ -2,7 +2,7 @@
   <div class="d-flex flex-column align-items-center">
     <stat-panel-item
       name="Max Health"
-      description="Increases total health pool"
+      description="Increases total health pool and regeneration"
       :icon="require('@/assets/art/combat/health.gif')"
       :value="fixedStats.maxHealth"
     />

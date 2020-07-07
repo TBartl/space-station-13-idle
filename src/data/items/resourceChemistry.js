@@ -34,7 +34,7 @@ const BASES = {
 }
 
 export const FABRICATION_POTION_PERCENT = .3;
-export const GRAYTIDING_POTION_PERCENT = .15;
+export const GRAYTIDING_POTION_PERCENT = .30;
 export const TINKERING_POTION_PERCENT = .15;
 export const BOTANY_POTION_PERCENT = .3;
 export const COOKING_POTION_PERCENT = .25;
@@ -76,7 +76,7 @@ const POTIONS = {
 		name: "Energy Drink",
 		sellPrice: 79,
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
-		description: "Whenever you get energy from engineering, also get money of the same amount.",
+		description: "Whenever you get energy from engineering, also get four times that amount of money.",
 		potionJob: "engineering",
 		potionCharges: 10
 	},
@@ -86,7 +86,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/superglue.png"),
 		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
-		potionCharges: 10
+		potionCharges: 5
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",
