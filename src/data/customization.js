@@ -81,6 +81,10 @@ export const MOTH = {
 	white: {
 		body: require("@/assets/art/customization/moth/white.png"),
 		head: require("@/assets/art/customization/moth/white_top.png")
+	},
+	gothic: {
+		body: require("@/assets/art/customization/moth/gothic.png"),
+		head: require("@/assets/art/customization/moth/gothic_top.png")
 	}
 };
 export const BASE_CLOTHING = require("@/assets/art/customization/BaseClothing.png");
