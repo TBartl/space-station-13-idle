@@ -35,7 +35,7 @@ const BOSSES = {
 		]
 	},
 	antag2: {
-		name: "Cultist of Ravtar",
+		name: "Cultist of Ratvar",
 		icon: require("@/assets/art/combat/enemies/boss/antag-clock.png"),
 		validhuntable: false,
 		stats: {

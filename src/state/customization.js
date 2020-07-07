@@ -10,7 +10,10 @@ const customization = {
 	},
 	state: {
 		race: 'human',
-		hair: 'thinningrear'
+		hair: 'thinningrear',
+		lizard: 'lizard1',
+		moth: 'moth1'
+
 	},
 	getters: {
 		race(state) {
@@ -18,6 +21,12 @@ const customization = {
 		},
 		hair(state) {
 			return state.hair;
+		},
+		lizard(state) {
+			return state.lizard;
+		},
+		moth(state) {
+			return state.moth;
 		}
 	},
 	mutations: {
@@ -26,6 +35,12 @@ const customization = {
 		},
 		setHair(state, val) {
 			state.hair = val;
+		},
+		setlizard(state, val) {
+			state.lizard = val;
+		},
+		setMoth(state, val) {
+			state.moth = val;
 		}
 	}
 }
