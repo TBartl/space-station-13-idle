@@ -2,6 +2,7 @@ import { cloneDeep, merge } from 'lodash';
 import jobBase from '@/state/jobBase';
 import ENEMIES from "@/data/enemies";
 import { calcRobustness } from "@/utils/combatUtils";
+import ModalValidhuntingComplete from '@/components/Modals/ModalValidhuntingComplete';
 
 const validhunting = merge(cloneDeep(jobBase), {
 	state: {
@@ -36,8 +37,10 @@ const validhunting = merge(cloneDeep(jobBase), {
 	},
 	actions: {
 		mobKilled({ state, commit }, enemyId) {
-			if (state.enemyId == enemyId) {
+			if (state.enemyId == enemyId && state.count > 0) {
 				commit("lowerCount");
+				if (state.count == 0)
+					this._vm.$modal.show(ModalValidhuntingComplete, {}, { height: "auto", width: "320px" });
 			}
 		},
 		completeTask({ state, commit, getters }, cheat) {
