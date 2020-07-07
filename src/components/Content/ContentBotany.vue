@@ -107,6 +107,38 @@
         </template>
       </job-info>
 
+      <div class="row my-3" v-if="this.$store.getters['upgrades/get']('botanyTrays')">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="content-block">
+            <div class="d-flex flex-row align-items-center">
+              <img :src="require('@/assets/art/botany/upgrade1.png')" />
+              <h5 class="mb-1">Upgrades</h5>
+            </div>
+            <div class="custom-control custom-switch mt-1">
+              <input
+                v-model="upgradeLeftEnabled"
+                type="checkbox"
+                class="custom-control-input"
+                id="upgradeLeftEnabled"
+              />
+              <label class="custom-control-label" for="upgradeLeftEnabled">Upgrade Enabled (Left)</label>
+            </div>
+            <div
+              class="custom-control custom-switch mt-1"
+              v-if="this.$store.getters['upgrades/get']('botanyTrays') > 1"
+            >
+              <input
+                v-model="upgradeRightEnabled"
+                type="checkbox"
+                class="custom-control-input"
+                id="upgradeRightEnabled"
+              />
+              <label class="custom-control-label" for="upgradeRightEnabled">Upgrade Enabled (Right)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="tier row" v-for="(tierEntries, tier) in viewableTieredActions" :key="tier">
         <div class="col-12">
           <span class="tier-text">TIER {{tier+1}}</span>
@@ -162,6 +194,22 @@ export default {
       }
 
       return tiers;
+    },
+    upgradeLeftEnabled: {
+      get() {
+        return this.$store.getters["botany/upgradeLeftEnabled"];
+      },
+      set(value) {
+        this.$store.commit("botany/setUpgradeLeftEnabled", value);
+      }
+    },
+    upgradeRightEnabled: {
+      get() {
+        return this.$store.getters["botany/upgradeRightEnabled"];
+      },
+      set(value) {
+        this.$store.commit("botany/setUpgradeRightEnabled", value);
+      }
     }
   }
 };

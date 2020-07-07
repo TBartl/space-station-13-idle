@@ -110,6 +110,26 @@
         </template>
       </job-info>
 
+      <div class="row my-3" v-if="this.$store.getters['upgrades/get']('fryCooking')">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="content-block">
+            <div class="d-flex flex-row align-items-center">
+              <img :src="require('@/assets/art/cooking/upgrade1.png')" />
+              <h5 class="mb-1">Upgrades</h5>
+            </div>
+            <div class="custom-control custom-switch mt-1">
+              <input
+                v-model="upgradeEnabled"
+                type="checkbox"
+                class="custom-control-input"
+                id="fryCookingEnabled"
+              />
+              <label class="custom-control-label" for="fryCookingEnabled">Fry Cooking Enabled</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
@@ -164,7 +184,15 @@ export default {
       }
 
       return toReturn;
-    }
+		},
+    upgradeEnabled: {
+      get() {
+        return this.$store.getters["cooking/upgradeEnabled"];
+      },
+      set(value) {
+        this.$store.commit("cooking/setUpgradeEnabled", value);
+      }
+    },
   }
 };
 </script>

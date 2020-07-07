@@ -337,69 +337,6 @@ const ALIEN_ACTIONS = {
 		}
 	},
 }
-
-const QPASTA_ACTIONS = {
-	cookPasta2q: {
-		time: 3,
-		name: "Copy Pasta",
-		item: "foodPasta2",
-		icon: require("@/assets/art/cooking/pasta2_anim.gif"),
-		xp: 11,
-		requiredLevel: 11,
-		requiredItems: {
-			q_foodPasta1: 2,
-		}
-	},
-	cookPasta3q: {
-		time: 3,
-		name: "Triple Pasta",
-		item: "foodPasta3",
-		icon: require("@/assets/art/cooking/pasta3.png"),
-		xp: 16,
-		requiredLevel: 21,
-		requiredItems: {
-			q_foodPasta1: 1,
-			q_foodPasta2: 1
-		}
-	},
-	cookPasta4q: {
-		time: 3,
-		name: "Pasta Tower",
-		item: "foodPasta4",
-		icon: require("@/assets/art/cooking/pasta4.png"),
-		xp: 21,
-		requiredLevel: 31,
-		requiredItems: {
-			q_foodPasta1: 1,
-			q_foodPasta3: 1
-		}
-	},
-	cookPasta5q: {
-		time: 3,
-		name: "InSPIRED Pasta",
-		item: "foodPasta5",
-		icon: require("@/assets/art/cooking/pasta5.png"),
-		xp: 26,
-		requiredLevel: 41,
-		requiredItems: {
-			q_foodPasta1: 1,
-			q_foodPasta4: 1
-		}
-	},
-	cookPasta6q: {
-		time: 3,
-		name: "Babel Pasta",
-		item: "foodPasta6",
-		icon: require("@/assets/art/cooking/pasta6.png"),
-		xp: 31,
-		requiredLevel: 50,
-		requiredItems: {
-			q_foodPasta1: 1,
-			q_foodPasta5: 1
-		}
-	},
-}
-
 Object.values(PASTA_ACTIONS).forEach(action => action.type = "PASTA");
 Object.values(PRECISION_ACTIONS).forEach(action => action.type = "STEWS");
 Object.values(POWER_ACTIONS).forEach(action => action.type = "POCKETS");
@@ -407,7 +344,6 @@ Object.values(EVASION_ACTIONS).forEach(action => action.type = "PIES");
 Object.values(ANIMAL_ACTIONS).forEach(action => action.type = "PIZZA");
 Object.values(HUMAN_ACTIONS).forEach(action => action.type = "BURGERS");
 Object.values(ALIEN_ACTIONS).forEach(action => action.type = `EXOTIC`);
-Object.values(QPASTA_ACTIONS).forEach(action => action.type = "HIGH QUALITY PASTA");
 
 export const ACTIONS = {
 	...PASTA_ACTIONS,
@@ -417,7 +353,6 @@ export const ACTIONS = {
 	...ANIMAL_ACTIONS,
 	...HUMAN_ACTIONS,
 	...ALIEN_ACTIONS,
-	...QPASTA_ACTIONS,
 }
 
 export const JOB = {
