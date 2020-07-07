@@ -43,9 +43,14 @@ const validhunting = merge(cloneDeep(jobBase), {
 					this._vm.$modal.show(ModalValidhuntingComplete, {}, { height: "auto", width: "320px" });
 			}
 		},
-		completeTask({ state, commit, getters }, cheat) {
+		completeTask({ state, commit, getters, rootGetters }, cheat) {
 			if (!cheat && state.count > 0) return;
-			commit("addXP", state.xpReward);
+			let xpFactor = 1;
+			if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitSecurity') {
+				xpFactor = 1.2;
+			}
+			console.log(xpFactor);
+			commit("addXP", state.xpReward * xpFactor);
 			// Get a new task
 			let minCount = 10;
 			let maxAddedCount = minCount + getters.level * 2;
