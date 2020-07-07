@@ -246,6 +246,68 @@ const MECHS = {
 			fabrication: 44
 		}
 	},
+	honk: {
+		name: "H.O.N.K.",
+		sellPrice: 83250,
+		icon: require("@/assets/art/fabrication/mechhonk.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 50
+		}
+	},
+}
+const ASSAULTMECHS = {
+	ripleymk2: {
+		name: "R.I.P.L.E.Y. MK2",
+		sellPrice: 9415,
+		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 11
+		}
+	},
+	firefighter: {
+		name: "R.I.P.L.E.Y. MK3",
+		sellPrice: 18845,
+		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 19
+		}
+	},
+	durand: {
+		name: "Durand",
+		sellPrice: 27875,
+		icon: require("@/assets/art/fabrication/mechdurand.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 25
+		}
+	},
+	gygax: {
+		name: "Gygax",
+		sellPrice: 37960,
+		icon: require("@/assets/art/fabrication/mechgygax.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 32
+		}
+	},
+	darkGygax: {
+		name: "Assault Gygax",
+		sellPrice: 53880,
+		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
+		stats: {
+		},
+		requires: {
+			fabrication: 41
+		}
+	},
 	seraph: {
 		name: "Seraph",
 		sellPrice: 67635,
@@ -254,23 +316,6 @@ const MECHS = {
 		},
 		requires: {
 			fabrication: 47
-		}
-	},
-	honk: {
-		name: "H.O.N.K.",
-		sellPrice: 83250,
-		icon: require("@/assets/art/fabrication/mechhonk.png"),
-		stats: {
-			moveTime: 6.5,
-			maxHealth : 250,
-			precision : 15,
-			power: -10,
-			evasion: 15,
-			burnProtection: 16,
-			bruteProtection: 6,
-		},
-		requires: {
-			fabrication: 50
 		}
 	},
 	phazon: {
@@ -329,20 +374,36 @@ Object.values(MECHS).forEach(mech => {
 	// mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
 	mech.overlay = mech.icon;
-	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 2);
+	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 5 * 3);
 	if (Object.values(mech.stats).length > 0) return;
 	mech.stats.moveTime = 6.5;
 	mech.stats.maxHealth = (mech.requires.fabrication * 5) + 20;
-	mech.stats.precision = Math.ceil(mech.requires.fabrication * .2);
-	mech.stats.power = Math.ceil(mech.requires.fabrication * .2);
+	mech.stats.precision = Math.ceil(mech.requires.fabrication * .2)+1;
+	mech.stats.power = Math.ceil(mech.requires.fabrication * .2)-1;
 	mech.stats.evasion = Math.trunc(mech.requires.fabrication * .1);
 	mech.stats.protection = Math.trunc(mech.requires.fabrication * .15);
 	mech.stats.bruteProtection = Math.trunc(mech.requires.fabrication * .2);
+});
+Object.values(ASSAULTMECHS).forEach(assaultmech => {
+	assaultmech.equipmentSlot = "chest";
+	// assaultmech.liftsRestrictions= ["mech"];
+	assaultmech.overlayAppearInBack = true;
+	assaultmech.overlay = assaultmech.icon;
+	assaultmech.requires.evasion = Math.trunc(assaultmech.requires.fabrication / 5 * 3);
+	if (Object.values(assaultmech.stats).length > 0) return;
+	assaultmech.stats.moveTime = 6.5;
+	assaultmech.stats.maxHealth = (assaultmech.requires.fabrication * 5);
+	assaultmech.stats.precision = Math.ceil(assaultmech.requires.fabrication * .25) - 1;
+	assaultmech.stats.power = Math.ceil(assaultmech.requires.fabrication * .25) + 3;
+	assaultmech.stats.evasion = 0;
+	assaultmech.stats.protection = Math.trunc(assaultmech.requires.fabrication * .15) - 1;
+	assaultmech.stats.burnProtection = Math.trunc(assaultmech.requires.fabrication * .2);
 });
 
 export default {
 	...BRUTEARMOR,
 	...BURNARMOR,
 	...MECHS,
+	...ASSAULTMECHS,
 	...SPECIALARMOR
 }

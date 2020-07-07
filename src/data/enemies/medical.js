@@ -1,54 +1,9 @@
 export default {
-	cluelessdoctor: {
-		name: "Useless Doctor",
-		icon: require("@/assets/art/combat/enemies/baddoctor.png"),
-		stats: {
-			maxHealth: 220,
-			attackSpeed: 1.1,
-			precision: 47,
-			power: 66,
-			evasion: 57,
-			damageType: "brute",
-			burnProtection: 30
-		},
-		itemTables: [
-			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'faceMedHud',
-						weight: 9
-					},
-					{
-						id: 'ammoBallistic3',
-						count: 8,
-						weight: 6
-					},
-					{
-						id: 'q_foodMeatZ',
-						weight: 3
-					},
-					{
-						id: 'potionChemistry',
-						weight: 2
-					}
-				]
-			},
-			{
-				chance: .02,
-				item: "jumpsuitChemistry"
-			},
-			{
-				chance: 1,
-				item: "foodMeatH"
-			}
-		]
-	},
 	surgeon: {
 		name: "Chirurgeon",
 		icon: require("@/assets/art/combat/enemies/gooddoctor.png"),
 		stats: {
-			maxHealth: 230,
+			maxHealth: 220,
 			attackSpeed: 2.0,
 			precision: 50,
 			power: 48,
@@ -89,6 +44,48 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
+			}
+		]
+	},
+	cluelessdoctor: {
+		name: "Useless Doctor",
+		icon: require("@/assets/art/combat/enemies/baddoctor.png"),
+		stats: {
+			maxHealth: 230,
+			attackSpeed: 1.1,
+			precision: 47,
+			power: 66,
+			evasion: 57,
+			damageType: "brute",
+			burnProtection: 30
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'faceMedHud',
+						weight: 9
+					},
+					{
+						id: 'ammoBallistic3',
+						count: 8,
+						weight: 6
+					},
+					{
+						id: 'q_foodMeatZ',
+						weight: 5
+					},
+					{
+						id: 'pillHappy',
+						count: 10,
+						weight: 4
+					},
+				]
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
 			}
 		]
 	},

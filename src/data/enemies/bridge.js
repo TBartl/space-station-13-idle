@@ -101,20 +101,24 @@ export default {
 					{
 						id: 'wire',
 						count: [2, 5],
-						weight: 10
+						weight: 9
 					},
 					{
 						id: 'money',
 						count: [220, 660],
-						weight: 8
+						weight: 7
+					},
+					{
+						id: 'titanium',
+						weight: 2
+					},
+					{
+						id: 'meleeBlunt8',
+						weight: 1
 					},
 					{
 						id: 'ticket3',
 						count: [0, 1],
-						weight: 1
-					},
-					{
-						id: 'titanium',
 						weight: 1
 					},
 				]

@@ -11,18 +11,6 @@ const MECHS = {
 			silver: 10
 		}
 	},
-	fabricateRipleymk2: {
-		time: 780,
-		item: "ripleymk2",
-		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
-		xp: 858,
-		requiredLevel: 11,
-		requiredItems: {
-			iron: 90,
-			glass: 20,
-			silver: 20
-		}
-	},
 	fabricateOdysseus: {
 		time: 780,
 		item: "odysseus",
@@ -34,18 +22,6 @@ const MECHS = {
 			glass: 25,
 			silver: 50,
 			gold: 50
-		}
-	}, fabricateFirefighter: {
-		time: 780,
-		item: "firefighter",
-		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
-		xp: 1482,
-		requiredLevel: 19,
-		requiredItems: {
-			glass: 30,
-			silver: 45,
-			gold: 50,
-			titanium: 5
 		}
 	},
 	fabricateClarke: {
@@ -61,19 +37,6 @@ const MECHS = {
 			uranium: 5
 		}
 	},
-	fabricateDurand: {
-		time: 780,
-		item: "durand",
-		icon: require("@/assets/art/fabrication/mechdurand.png"),
-		xp: 1950,
-		requiredLevel: 25,
-		requiredItems: {
-			silver: 5,
-			gold: 50,
-			titanium: 50,
-			uranium: 25
-		}
-	},
 	fabricateMarauder: {
 		time: 780,
 		item: "marauder",
@@ -82,19 +45,6 @@ const MECHS = {
 		requiredLevel: 28,
 		requiredItems: {
 			gold: 65,
-			titanium: 50,
-			uranium: 50,
-			plasma: 25
-		}
-	},
-	fabricateGygax: {
-		time: 780,
-		item: "gygax",
-		icon: require("@/assets/art/fabrication/mechgygax.png"),
-		xp: 2496,
-		requiredLevel: 32,
-		requiredItems: {
-			gold: 25,
 			titanium: 50,
 			uranium: 50,
 			plasma: 25
@@ -126,19 +76,6 @@ const MECHS = {
 			bluespace: 5
 		}
 	},
-	fabricateDarkgygax: {
-		time: 780,
-		item: "darkGygax",
-		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
-		xp: 3196,
-		requiredLevel: 41,
-		requiredItems: {
-			uranium: 90,
-			plasma: 55,
-			diamond: 25,
-			bluespace: 5
-		}
-	},
 	fabricateReticence: {
 		time: 780,
 		item: "reticence",
@@ -150,18 +87,6 @@ const MECHS = {
 			diamond: 50,
 			bluespace: 25,
 			bananium: 5
-		}
-	},
-	fabricateseraph: {
-		time: 780,
-		item: "seraph",
-		icon: require("@/assets/art/fabrication/mechseraph.png"),
-		xp: 3666,
-		requiredLevel: 47,
-		requiredItems: {
-			plasma: 80,
-			diamond: 65,
-			bluespace: 40
 		}
 	},
 	fabricateHONK: {
@@ -177,8 +102,86 @@ const MECHS = {
 			bananium: 65
 		}
 	},
+}
+const ASSAULTMECHS = {
+	fabricateRipleymk2: {
+		time: 780,
+		item: "ripleymk2",
+		icon: require("@/assets/art/fabrication/mechripleymkii.png"),
+		xp: 858,
+		requiredLevel: 11,
+		requiredItems: {
+			iron: 90,
+			glass: 20,
+			silver: 20
+		}
+	},
+	fabricateFirefighter: {
+		time: 780,
+		item: "firefighter",
+		icon: require("@/assets/art/fabrication/mechfirefighter.png"),
+		xp: 1482,
+		requiredLevel: 19,
+		requiredItems: {
+			glass: 30,
+			silver: 45,
+			gold: 50,
+			titanium: 5
+		}
+	},
+	fabricateDurand: {
+		time: 780,
+		item: "durand",
+		icon: require("@/assets/art/fabrication/mechdurand.png"),
+		xp: 1950,
+		requiredLevel: 25,
+		requiredItems: {
+			silver: 5,
+			gold: 50,
+			titanium: 50,
+			uranium: 25
+		}
+	},
+	fabricateGygax: {
+		time: 780,
+		item: "gygax",
+		icon: require("@/assets/art/fabrication/mechgygax.png"),
+		xp: 2496,
+		requiredLevel: 32,
+		requiredItems: {
+			gold: 25,
+			titanium: 50,
+			uranium: 50,
+			plasma: 25
+		}
+	},
+	fabricateDarkgygax: {
+		time: 780,
+		item: "darkGygax",
+		icon: require("@/assets/art/fabrication/mechdarkgygax.png"),
+		xp: 3196,
+		requiredLevel: 41,
+		requiredItems: {
+			uranium: 90,
+			plasma: 55,
+			diamond: 25,
+			bluespace: 5
+		}
+	},
+	fabricateseraph: {
+		time: 780,
+		item: "seraph",
+		icon: require("@/assets/art/fabrication/mechseraph.png"),
+		xp: 3666,
+		requiredLevel: 47,
+		requiredItems: {
+			plasma: 80,
+			diamond: 65,
+			bluespace: 40
+		}
+	},
 	fabricatephazon: {
-		time: 3000,
+		time: 780,
 		item: "phazon",
 		icon: require("@/assets/art/fabrication/mechphazon.png"),
 		xp: 3900,
@@ -377,14 +380,16 @@ Object.values(BALLISTIC_AMMO).forEach(action => action.type = "ballistic ammo");
 Object.values(ENERGY_AMMO).forEach(action => action.type = "energy ammo");
 Object.values(BALLISTIC_GUNS).forEach(action => action.type = "ballistic guns");
 Object.values(ENERGY_GUNS).forEach(action => action.type = "energy guns");
-Object.values(MECHS).forEach(action => action.type = "mechs");
+Object.values(MECHS).forEach(action => action.type = "MECHANIZED EXOSUITs");
+Object.values(ASSAULTMECHS).forEach(action => action.type = "ASSAULT MECHANIZED EXOSUITs");
 
 const ACTIONS = {
 	...BALLISTIC_AMMO,
 	...ENERGY_AMMO,
 	...BALLISTIC_GUNS,
 	...ENERGY_GUNS,
-	...MECHS
+	...MECHS,
+	...ASSAULTMECHS
 }
 for (let action of Object.values(ACTIONS)) {
 	let multiplyer = 1;

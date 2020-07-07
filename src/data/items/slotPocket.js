@@ -47,8 +47,8 @@ export default {
 		icon: require("@/assets/art/combat/items/ammo_b1.png"),
 		ammoType: "ballistic",
 		stats: {
-			power: 5,
-			precision: 25
+			power: 3,
+			precision: 21
 		}
 	},
 	ammoBallistic2: {
@@ -58,8 +58,8 @@ export default {
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
 		ammoType: "ballistic",
 		stats: {
-			power: 13,
-			precision: 30
+			power: 5,
+			precision: 24
 		}
 	},
 	ammoBallistic3: {
@@ -69,8 +69,8 @@ export default {
 		icon: require("@/assets/art/combat/items/ammo_b3.png"),
 		ammoType: "ballistic",
 		stats: {
-			power: 20,
-			precision: 35
+			power: 7,
+			precision: 27
 		}
 	},
 	ammoBallistic4: {
@@ -80,8 +80,8 @@ export default {
 		icon: require("@/assets/art/combat/items/ammo_b4_anim.gif"),
 		ammoType: "ballistic",
 		stats: {
-			power: 25,
-			precision: 40
+			power: 9,
+			precision: 30
 		}
 	},
 	// pocketPDA1: {

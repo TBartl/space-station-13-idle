@@ -424,5 +424,5 @@ export const JOB = {
 	id: "cooking",
 	name: "Cooking",
 	icon: require("@/assets/art/cooking/icon.png"),
-	color: "#EEEEEE"
+	color: "#FFFFE0"
 }

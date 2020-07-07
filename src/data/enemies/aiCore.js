@@ -3,7 +3,7 @@ export default {
 		name: "Security Bot",
 		icon: require("@/assets/art/combat/enemies/secbot.png"),
 		stats: {
-			maxHealth: 350,
+			maxHealth: 380,
 			attackSpeed: 2.1,
 			precision: 84,
 			power: 80,
@@ -57,7 +57,7 @@ export default {
 		name: "Defense Turret",
 		icon: require("@/assets/art/combat/enemies/turret.png"),
 		stats: {
-			maxHealth: 360,
+			maxHealth: 390,
 			attackSpeed: 1,
 			precision: 103,
 			power: 93,

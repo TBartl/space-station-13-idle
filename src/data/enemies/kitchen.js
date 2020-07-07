@@ -3,7 +3,7 @@ export default {
 		name: "Botanist",
 		icon: require("@/assets/art/combat/enemies/botanist.png"),
 		stats: {
-			maxHealth: 190,
+			maxHealth: 210,
 			attackSpeed: 1.6,
 			precision: 41,
 			power: 61,
@@ -67,7 +67,7 @@ export default {
 		name: "Pete",
 		icon: require("@/assets/art/combat/enemies/pete.png"),
 		stats: {
-			maxHealth: 200,
+			maxHealth: 190,
 			attackSpeed: 1.7,
 			precision: 49,
 			power: 49,
@@ -104,10 +104,10 @@ export default {
 		name: "Soylent Green Chef",
 		icon: require("@/assets/art/combat/enemies/badchef.png"),
 		stats: {
-			maxHealth: 210,
+			maxHealth: 200,
 			attackSpeed: 2.4,
 			precision: 41,
-			power: 59,
+			power: 63,
 			evasion: 42,
 			damageType: "brute",
 			burnProtection: 20

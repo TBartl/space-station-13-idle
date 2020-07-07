@@ -17,12 +17,12 @@ export default [
 	{
 		name: "Dorms 4",
 		icon: require("@/assets/art/combat/zones/dorms4.png"),
-		enemies: ["catgirl", "traitor", "braindead"]
+		enemies: ["catgirl", "traitor", "braindead","chemist"]
 	},
 	{
 		name: "Engineering",
 		icon: require("@/assets/art/combat/zones/engineering.png"),
-		enemies: ["redslime", "flamingatmostech", "badengineer", "goodengineer"]
+		enemies: ["redslime", "flamingatmostech", "goodengineer", "badengineer"]
 	},
 	{
 		name: "Showroom",
