@@ -1,5 +1,14 @@
 <template>
   <div>
+    <div v-if="presets" class="d-flex flex-row align-items-center">
+      <div
+        v-for="(preset, index) in presets"
+        :key="index"
+        class="preset"
+        :style="{backgroundColor: `hsl(${preset.hue},${preset.saturation}%,${preset.lightness}%)`}"
+        @click="hue=preset.hue; saturation=preset.saturation; lightness=preset.lightness"
+      ></div>
+    </div>
     <div class="d-flex flex-row align-items-center">
       <span class="mr-2">H:</span>
       <input class="form-control-range hue" type="range" v-model="hue" min="0" max="360" />
@@ -31,7 +40,7 @@
 
 <script>
 export default {
-  props: ["propPath"],
+  props: ["propPath", "presets"],
   computed: {
     hue: {
       get() {
@@ -102,5 +111,15 @@ input[type="range"]::-webkit-slider-thumb {
   height: 18px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.preset {
+  width: 12px;
+  height: 24px;
+  background-color: black;
+  border-radius: 4px;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  border: 1px solid gray;
 }
 </style>

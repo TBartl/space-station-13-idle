@@ -23,19 +23,37 @@
               >
                 <img :src="race[1].icon" alt />
               </button>
-              <h6 class="mt-3">Skin Color</h6>
-              <color-setter class="color-setter" propPath="customization/skinColor" />
 
-              <h6 class="mt-2">Hair</h6>
-              <button
-                class="btn mr-2 mb-2 hair"
-                v-for="hair in Object.entries(hairOptions)"
-                :class="$store.getters['customization/hair'] == hair[0] ? 'btn-primary' : 'btn-outline-primary'"
-                :key="hair[0]"
-                @click="$store.commit('customization/setHair', hair[0])"
-              >
-                <img :src="hair[1]" alt />
-              </button>
+              <div v-if="race.skinColor" class="mt-3">
+                <h6>Skin Color</h6>
+                <color-setter
+                  class="color-setter"
+                  propPath="customization/skinColor"
+                  :presets="skinColors"
+                />
+              </div>
+
+              <div v-if="race.hair" class="mt-3">
+                <h6>Hair Style</h6>
+                <button
+                  class="btn mr-2 mb-2 hair"
+                  v-for="hair in Object.entries(hairOptions)"
+                  :class="$store.getters['customization/hair'] == hair[0] ? 'btn-primary' : 'btn-outline-primary'"
+                  :key="hair[0]"
+                  @click="$store.commit('customization/setHair', hair[0])"
+                >
+                  <img :src="hair[1]" alt />
+                </button>
+              </div>
+
+              <div v-if="race.skinColor" class="mt-3">
+                <h6>Hair Color</h6>
+                <color-setter
+                  class="color-setter"
+                  propPath="customization/hairColor"
+                  :presets="vividColors"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -49,7 +67,7 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import PlayerDisplay from "@/components/PlayerDisplay";
 import ColorSetter from "@/components/ColorSetter";
-import { RACES, HAIR } from "@/data/customization";
+import { RACES, HAIR, SKIN_COLORS, VIVID_COLORS } from "@/data/customization";
 
 export default {
   extends: ContentAbstract,
@@ -57,6 +75,15 @@ export default {
   computed: {
     races() {
       return RACES;
+    },
+    race() {
+      return RACES[this.$store.getters["customization/race"]];
+    },
+    skinColors() {
+      return SKIN_COLORS;
+    },
+    vividColors() {
+      return VIVID_COLORS;
     },
     hairOptions() {
       return HAIR;

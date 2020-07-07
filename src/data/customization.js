@@ -1,8 +1,141 @@
+export const SKIN_COLORS = [
+	{
+		hue: 20,
+		saturation: 100,
+		lightness: 91
+	},
+	{
+		hue: 21,
+		saturation: 92,
+		lightness: 85
+	},
+	{
+		hue: 20,
+		saturation: 63,
+		lightness: 76
+	},
+	{
+		hue: 21,
+		saturation: 47,
+		lightness: 72
+	},
+	{
+		hue: 16,
+		saturation: 35,
+		lightness: 66
+	},
+	{
+		hue: 34,
+		saturation: 100,
+		lightness: 85
+	},
+	{
+		hue: 34,
+		saturation: 63,
+		lightness: 70
+	},
+	{
+		hue: 30,
+		saturation: 46,
+		lightness: 57
+	},
+	{
+		hue: 28,
+		saturation: 48,
+		lightness: 49
+	},
+	{
+		hue: 25,
+		saturation: 54,
+		lightness: 30
+	},
+	{
+		hue: 5,
+		saturation: 49,
+		lightness: 19
+	},
+	{
+		hue: 34,
+		saturation: 100,
+		lightness: 95
+	}
+]
+
+export const VIVID_COLORS = [
+	{
+		hue: 0,
+		saturation: 0,
+		lightness: 95,
+	},
+	{
+		hue: 0,
+		saturation: 0,
+		lightness: 70,
+	},
+	{
+		hue: 0,
+		saturation: 0,
+		lightness: 30,
+	},
+	{
+		hue: 0,
+		saturation: 0,
+		lightness: 5,
+	},
+	{
+		hue: 10,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 40,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 70,
+		saturation: 95,
+		lightness: 65,
+	},
+	{
+		hue: 100,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 150,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 190,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 230,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 280,
+		saturation: 95,
+		lightness: 55,
+	},
+	{
+		hue: 315,
+		saturation: 95,
+		lightness: 55,
+	},
+]
+
 
 export const RACES = {
 	human: {
 		icon: require("@/assets/art/customization/icon.png"),
-		skin: require("@/assets/art/customization/HumanMale.png")
+		skin: require("@/assets/art/customization/HumanMale.png"),
+		skinColor: true,
+		hair: true
 	},
 	lizard: {
 		icon: require("@/assets/art/customization/lizardIcon.png"),
@@ -12,10 +145,10 @@ export const RACES = {
 		icon: require("@/assets/art/customization/mothIcon.png"),
 		skin: require("@/assets/art/customization/MothMale.png")
 	},
-	ipc: {
-		icon: require("@/assets/art/customization/ipcIcon.png"),
-		skin: require("@/assets/art/customization/IpcMale.png")
-	}
+	// ipc: {
+	// 	icon: require("@/assets/art/customization/ipcIcon.png"),
+	// 	skin: require("@/assets/art/customization/IpcMale.png")
+	// }
 };
 
 const none = require("@/assets/art/customization/none.png");
