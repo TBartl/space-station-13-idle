@@ -107,7 +107,7 @@ export default {
       return this.$store.getters["inventory/money"];
     },
     version() {
-      return `Alpha v${process.env.PACKAGE_VERSION}`;
+      return `v${process.env.PACKAGE_VERSION}`;
     },
     nonCombatJobs() {
       return ALL_JOBS.filter(job => !job.isCombat);
