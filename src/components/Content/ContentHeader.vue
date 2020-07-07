@@ -8,7 +8,7 @@
       <span>{{text}}</span>
     </div>
     <div class="player-icon" @click="openCustomization">
-      <player-display />
+      <player-display :showEquipment="true" />
     </div>
   </div>
 </template>

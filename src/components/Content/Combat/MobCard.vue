@@ -9,7 +9,7 @@
     <div class="body-icon mt-2">
       <div ref="body" class="img-body w-100 h-100">
         <div v-if="mobType == 'player'" class="w-100 h-100">
-          <player-display />
+          <player-display :showEquipment="true" />
         </div>
         <img v-else class="w-100" :src="icon" :class="{'rotate-90': health==0}" />
       </div>

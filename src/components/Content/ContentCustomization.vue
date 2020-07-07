@@ -10,7 +10,7 @@
         <div class="col-12">
           <div class="content-block d-flex flex-column flex-md-row">
             <div class="body-icon flex-shrink-0">
-              <player-display />
+              <player-display :showEquipment="equipment" />
             </div>
             <div class="mt-2 mt-md-0 ml-2">
               <div class="btn-group mb-2">

@@ -38,7 +38,7 @@
       :src="overlay.icon"
       :class="{'appear-in-back': overlay.appearInBack}"
     />
-    <img v-if="companion" :src="companion.icon" alt class="companion-overlay" />
+    <img v-if="companion && showEquipment" :src="companion.icon" alt class="companion-overlay" />
   </div>
 </template>
 
@@ -54,6 +54,7 @@ import {
 import ITEMS from "@/data/items";
 
 export default {
+  props: ["showEquipment"],
   computed: {
     race() {
       return RACES[this.$store.getters["customization/race"]];
@@ -94,6 +95,7 @@ export default {
     },
 
     playerOverlayIcons() {
+			if (!this.showEquipment) return [];
       let icons = [];
       let equipment = this.$store.getters["inventory/equipment"];
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {
