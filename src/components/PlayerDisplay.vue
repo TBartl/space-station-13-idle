@@ -12,17 +12,17 @@
 
     <img :src="clothing" />
     <div
-      v-if="race.hair"
+      v-if="race.hair && !hasHat"
       class="hair"
       :style="{backgroundImage: 'url('+hair+')', maskImage: 'url('+hair+')', backgroundColor: hairColor}"
     />
     <div
-      v-if="race.frills"
+      v-if="race.frills && !hasHat"
       class="hair"
       :style="{backgroundImage: 'url('+frills+')', maskImage: 'url('+frills+')', backgroundColor: skinColor}"
     />
     <div
-      v-if="race.horns"
+      v-if="race.horns && !hasHat"
       class="hair"
       :style="{backgroundImage: 'url('+horns+')', maskImage: 'url('+horns+')', backgroundColor: skinColor}"
     />
@@ -81,8 +81,14 @@ export default {
     hairColor() {
       return this.$store.getters["customization/hairColor/hsl"];
     },
+    hasHat() {
+			if (!this.showEquipment) return false;
+			let headItem = ITEMS[this.$store.getters["inventory/equipment"].head.itemId];
+			if (!headItem) return false;
+			return headItem.isHat;
+    },
     frills() {
-      let frillsId = this.$store.getters["customization/frills"];
+			let frillsId = this.$store.getters["customization/frills"];
       return FRILLS[frillsId];
     },
     horns() {
@@ -95,7 +101,7 @@ export default {
     },
 
     playerOverlayIcons() {
-			if (!this.showEquipment) return [];
+      if (!this.showEquipment) return [];
       let icons = [];
       let equipment = this.$store.getters["inventory/equipment"];
       for (let [equipmentSlot, { itemId }] of Object.entries(equipment)) {

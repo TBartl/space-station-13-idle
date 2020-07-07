@@ -14,7 +14,7 @@ export default {
 		requires: {
 			evasion: 15,
 		}
-	},	
+	},
 	headCommon2: {
 		name: "Ear Protection Headset",
 		sellPrice: 500,
@@ -82,6 +82,7 @@ export default {
 	},
 	headRare1: {
 		name: "Hard Hat",
+		isHat: true,
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h1.png"),
 		equipmentSlot: "head",
@@ -98,6 +99,7 @@ export default {
 	},
 	headRare2: {
 		name: "Cake Hat",
+		isHat: true,
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h2.png"),
 		equipmentSlot: "head",
@@ -114,6 +116,7 @@ export default {
 	},
 	headRare3: {
 		name: "Ushanka",
+		isHat: true,
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h3.png"),
 		equipmentSlot: "head",
@@ -130,6 +133,7 @@ export default {
 	},
 	headRare4: {
 		name: "Security Beret",
+		isHat: true,
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h4.png"),
 		equipmentSlot: "head",
@@ -146,6 +150,7 @@ export default {
 	},
 	headRare5: {
 		name: "Captain's Hat",
+		isHat: true,
 		sellPrice: 1200,
 		icon: require("@/assets/art/combat/items/head/head_h5.png"),
 		equipmentSlot: "head",
@@ -163,6 +168,7 @@ export default {
 	},
 	headEpic1: {
 		name: "Wizard Hat",
+		isHat: true,
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r1.png"),
 		equipmentSlot: "head",
@@ -179,6 +185,7 @@ export default {
 	},
 	headEpic2: {
 		name: "Abductor Interface",
+		isHat: true,
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r2.png"),
 		equipmentSlot: "head",
@@ -195,6 +202,7 @@ export default {
 	},
 	headEpic3: {
 		name: "Plasma Environmental Helm",
+		isHat: true,
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r3.png"),
 		equipmentSlot: "head",
@@ -211,6 +219,7 @@ export default {
 	},
 	headEpic4: {
 		name: "Carp Helmet",
+		isHat: true,
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r4.png"),
 		equipmentSlot: "head",
@@ -227,6 +236,7 @@ export default {
 	},
 	headEpic5: {
 		name: "The Liberator",
+		isHat: true,
 		sellPrice: 5000,
 		icon: require("@/assets/art/combat/items/head/head_r5.png"),
 		equipmentSlot: "head",
