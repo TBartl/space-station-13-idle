@@ -92,7 +92,9 @@ export default {
 		},
 		requires: {
 			tinkering: MAX_LEVEL
-		}
+		},
+		description: "+1 Tinkering Upgrade",
+		providesUpgrade: "tinkeringSpirits"
 	},
 	capeBotany: {
 		name: "Botany Mastery Cloak",
