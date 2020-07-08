@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="item" :id="id" @click="lootItem">
+    <button class="inventory-item" :id="id" @click="lootItem">
       <img :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </button>
@@ -32,22 +32,4 @@ export default {
 </script>
 
 <style scoped>
-.item {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  width: 64px;
-  border-radius: 4px;
-  padding-bottom: 0.25rem;
-  margin: 0.5rem;
-  cursor: pointer;
-}
-.item:hover {
-  background-color: rgb(206, 233, 255);
-}
-.item img {
-  width: 64px;
-}
 </style>

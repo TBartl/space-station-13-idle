@@ -5,7 +5,7 @@
         :id="id+focus.id"
         type="button"
         class="btn mx-1 mb-1"
-        :class="[currentFocus == focus.id ? 'btn-primary' : 'btn-secondary']"
+        :class="[currentFocus == focus.id ? 'btn-primary' : 'btn-outline-primary']"
         @click="$store.commit('combat/setFocus',focus.id)"
       >
         <img :src="focus.icon" />

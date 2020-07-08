@@ -40,7 +40,7 @@
               <label
                 class="custom-control-label"
                 for="darkMode"
-              >Dark Mode</label>
+              >Dark Mode [EXPERIMENTAL!]</label>
             </div>
 
             <div class="custom-control custom-switch">

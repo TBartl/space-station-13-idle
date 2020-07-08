@@ -58,4 +58,7 @@ button {
   min-height: 109px;
   box-shadow: inset 0 0 10px #00000018;
 }
+.dark-mode .loot-grid {
+	background-color: #2C2D33;
+}
 </style>

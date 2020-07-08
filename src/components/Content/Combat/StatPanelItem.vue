@@ -45,4 +45,11 @@ img {
   border: 1px solid rgba(160, 119, 119, 0.198) !important;
   background-color: rgba(185, 119, 119, 0.356) !important;
 }
+
+.dark-mode .positive {
+	color: rgb(148, 212, 128) !important;
+}
+.dark-mode .negative {
+	color: rgb(212, 128, 128) !important;
+}
 </style>

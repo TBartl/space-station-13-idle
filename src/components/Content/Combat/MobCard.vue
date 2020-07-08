@@ -258,11 +258,20 @@ export default {
   margin-left: 0.25rem;
   font-weight: normal;
 }
+
+.dark-mode .stat {
+  background-color: rgb(80, 86, 95);
+  border: 1px solid #4a4f53 !important;
+}
+.dark-mode .stat-desc {
+	color: rgb(159, 166, 187);
+}
+
 .stat img {
   width: 32px;
 }
 .remaining-kills-desc {
-  color: gray;
+  color: rgba(187, 187, 187, 0.733);
 }
 .damage-type {
   width: 15px !important;
