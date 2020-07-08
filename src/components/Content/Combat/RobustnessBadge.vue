@@ -1,7 +1,7 @@
 <template>
   <div>
     <span :id="id" class="robustness" :class="[robustnessClass]">ROBUSTNESS: {{robustness}}</span>
-    <b-popover :target="id" triggers="hover" placement="top" delay="0">
+    <b-popover :target="id" triggers="hover" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
       <stats-panel :stats="getBasedStats" />
     </b-popover>
   </div>

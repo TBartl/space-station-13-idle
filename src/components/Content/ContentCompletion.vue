@@ -36,6 +36,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
+								:customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
@@ -74,6 +75,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
+								:customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>

@@ -1,5 +1,5 @@
 <template>
-  <b-popover :target="target" triggers="hover" placement="right" delay="0">
+  <b-popover :target="target" triggers="hover" placement="right" delay="0" :customClass="$store.getters['settings/darkModeClass']">
     <p>COMMAND_RATIO: {{commandRatio*100 | stat}}%</p>
     <br />
     <p>baseFleeChance: {{baseFleeChance*100 | stat}}%</p>

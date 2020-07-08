@@ -4,7 +4,7 @@
       <span class="loot-title">Loot ({{drops.length}}/{{maxDrops}})</span>
       <div >
         <button type="button" id="view-enemy-loot" class="my-1 btn btn-primary mr-1">View Enemy Drops</button>
-        <b-popover target="view-enemy-loot" triggers="click blur" placement="top" delay="0">
+        <b-popover target="view-enemy-loot" triggers="click blur" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
           <item-chance :data="enemy" />
         </b-popover>
         <button class="my-1 btn btn-primary" @click="lootAll">Loot all</button>

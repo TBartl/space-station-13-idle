@@ -4,7 +4,7 @@
       <img :src="icon" class="mr-1" />
       <span>{{value ? value : 0}}{{showPercent ? "%" : ""}}</span>
     </div>
-    <b-popover :target="id" triggers="hover" placement="top" delay="0">
+    <b-popover :target="id" triggers="hover" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
       <div class="d-flex flex-column align-items-center">
         <h6>{{name}}</h6>
         <span>{{description}}</span>

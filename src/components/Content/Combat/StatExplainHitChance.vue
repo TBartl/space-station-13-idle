@@ -1,5 +1,5 @@
 <template>
-  <b-popover :target="target" triggers="hover" placement="right" delay="0">
+  <b-popover :target="target" triggers="hover" placement="right" delay="0" :customClass="$store.getters['settings/darkModeClass']">
     <p>PRECISION: {{stats.precision | stat}}</p>
     <p>TARGET_EVASION: {{targetStats.evasion | stat}}</p>
     <p>INTERVAL: {{hitSigma | stat}}</p>

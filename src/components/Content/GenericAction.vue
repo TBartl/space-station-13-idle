@@ -11,7 +11,7 @@
         class="action-time mt-1 text-center"
       >{{action.xp | stat}} XP / {{action.time | stat}} SECONDS</p>
       <img :id="'action-icon-'+id" :src="icon" alt class="mt-2" />
-      <!-- <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0">
+      <!-- <b-popover :target="'action-icon-'+id" triggers="hover" placement="right" delay="0" :customClass="$store.getters['settings/darkModeClass']">
         <item-chance :data="action" />
       </b-popover>-->
 

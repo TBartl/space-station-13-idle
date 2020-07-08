@@ -11,7 +11,7 @@
         <img :src="focus.icon" />
         <span>{{focus.name}}</span>
       </button>
-      <b-popover :target="id+focus.id" triggers="hover" placement="top" delay="0">
+      <b-popover :target="id+focus.id" triggers="hover" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
         <div class="focus-text d-flex flex-column align-items-center">
           <p class="focus-bonus">{{focus.bonus}}</p>
           <p class="text-center">{{focus.description}}</p>

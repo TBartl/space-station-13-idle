@@ -1,5 +1,5 @@
 <template>
-  <b-popover :target="target" triggers="hover" placement="right" delay="0">
+  <b-popover :target="target" triggers="hover" placement="right" delay="0" :customClass="$store.getters['settings/darkModeClass']">
     <p>BASE_DPS: {{baseDps | stat}}</p>
     <p>POWER_RATIO: {{powerRatio | stat}}</p>
 		<br>
