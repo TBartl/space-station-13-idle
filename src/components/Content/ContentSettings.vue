@@ -32,6 +32,19 @@
 
             <div class="custom-control custom-switch">
               <input
+                v-model="darkMode"
+                type="checkbox"
+                class="custom-control-input"
+                id="darkMode"
+              />
+              <label
+                class="custom-control-label"
+                for="darkMode"
+              >Dark Mode [EXPERIMENTAL!]</label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input
                 v-model="chronoPanelEnabled"
                 type="checkbox"
                 class="custom-control-input"
@@ -221,6 +234,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setChronoPanelEnabled", value);
+      }
+    },
+    darkMode: {
+      get() {
+        return this.$store.getters["settings/darkMode"];
+      },
+      set(value) {
+        this.$store.commit("settings/setDarkMode", value);
       }
     },
     cheatsEnabled() {

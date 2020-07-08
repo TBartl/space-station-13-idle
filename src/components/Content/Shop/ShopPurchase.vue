@@ -122,12 +122,22 @@ export default {
 .locked .description {
   color: rgb(214, 214, 214);
 }
+.dark-mode .locked .description {
+  color: rgb(151, 151, 151);
+}
 .requires {
   color: rgb(97, 97, 97);
   font-size: 15px;
 }
+.dark-mode .requires {
+  color: rgb(121, 121, 121);
+
+}
 .locked .requires {
   color: rgb(241, 241, 241);
+}
+.dark-mode .locked .requires {
+  color: rgb(199, 199, 199);
 }
 .requires img {
   width: 32px;

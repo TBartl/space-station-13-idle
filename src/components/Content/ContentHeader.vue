@@ -61,4 +61,7 @@ span {
   transform: translateY(-2px);
   background-color: rgb(227, 235, 240);
 }
+.dark-mode .content-header {
+	filter: brightness(.8) saturate(1.3);
+}
 </style>

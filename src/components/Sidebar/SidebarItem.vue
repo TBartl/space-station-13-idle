@@ -1,6 +1,6 @@
 <template>
   <div
-    class="item d-flex align-items-center justify-content-between"
+    class="sidebar-item d-flex align-items-center justify-content-between"
     :class="{'locked': locked}"
     @click="setVisibleSidebarItem(id)"
   >
@@ -45,13 +45,13 @@ export default {
 </script>
 
 <style scoped>
-.item {
+.sidebar-item {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   padding: 0.3rem 1rem;
 }
 
-.item:not(.locked):hover {
+.sidebar-item:not(.locked):hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
 }

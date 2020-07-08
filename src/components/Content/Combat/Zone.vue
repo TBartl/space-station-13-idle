@@ -101,4 +101,7 @@ img {
   padding: 4px;
   background-color: rgb(230, 230, 230);
 }
+.dark-mode .enemies {
+  background-color: rgb(31, 32, 37);
+}
 </style>

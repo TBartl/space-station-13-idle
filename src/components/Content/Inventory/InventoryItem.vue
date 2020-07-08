@@ -5,7 +5,7 @@
       <span>{{count | cleanNum}}</span>
     </button>
     <item-popover :target="id" :itemId="itemId" />
-    <b-popover ref="popover" :target="id" triggers="click blur" placement="bottom" delay="30">
+    <b-popover ref="popover" :target="id" triggers="click blur" placement="bottom" delay="30" :customClass="$store.getters['settings/darkModeClass']">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <button

@@ -14,10 +14,58 @@ body {
 	}
 }
 
+.dark-mode {
+	color: #c4ccd1;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #646a6e;
 	margin-bottom: 0;
 }
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode h4, .dark-mode h5, .dark-mode h6,
+.dark-mode th, .dark-mode td {
+	color: #91999e;
+}
+
+.dark-mode .text-muted {
+	color: #b0bac0 !important;
+}
+
+.content-block {
+	transition: background-color .2s;
+}
+
+.dark-mode .content-block,
+.dark-mode .inventory-item{
+	background-color: rgb(51, 57, 66);
+}
+
+.dark-mode .progress,
+.dark-mode .black-background {
+	background-color: #26282a !important;
+}
+
+.dark-mode .vm--modal {
+	background-color: rgb(51, 57, 66) !important;
+}
+
+.dark-mode.popover {
+	background-color: rgb(240, 241, 243) !important;
+}
+
+/* .dark-mode .alert-danger {
+  color: rgb(255, 111, 111) !important;
+  border: 1px solid rgba(197, 125, 125, 0.452) !important;
+  background-color: rgba(163, 64, 64, 0.356) !important;
+}
+
+.dark-mode .alert-success {
+  color: rgb(111, 255, 123) !important;
+  border: 1px solid rgba(125, 160, 119, 0.198) !important;
+  background-color: rgba(76, 163, 64, 0.356) !important;
+} */
+
 
 p {
 	margin: 0;
@@ -70,6 +118,12 @@ img {
   color: rgb(255, 255, 255) !important;
 }
 
+.dark-mode .content-block.locked {
+	background-color: rgb(46, 32, 32);
+	color: #737980 !important;
+
+}
+
 .content-block-top.expanded {
   margin-bottom: 0;
   border-bottom-width: 0;
@@ -91,47 +145,47 @@ img {
 	background-color: white;
   transition: background-color 0.1s;
 }
-.clickable:hover {
-	cursor: pointer;
+
+.clickable:hover,
+.inventory-item:hover {
+  cursor: pointer;
   background-color: rgb(206, 233, 255);
 }
 
+.dark-mode .clickable:hover,
+.dark-mode .inventory-item:hover {
+	background-color: rgb(79, 83, 98);;
+}
 
-.danger-bubble {
-  padding: 0.1rem 0.35rem;
-  background-color: rgb(179, 43, 43);
-	border-radius: 8px;
-	color: white;
-}
-.warning-bubble {
-  padding: 0.1rem 0.35rem;
-  background-color: rgb(241, 181, 0);
-	border-radius: 8px;
-	color: white;
-}
-.success-bubble {
-  padding: 0.1rem 0.35rem;
-  background-color: rgb(5, 134, 11);
-	border-radius: 8px;
-	color: white;
-}
-.secondary-bubble {
-  padding: 0.1rem 0.35rem;
-  background-color: rgb(133, 133, 133);
-	border-radius: 8px;
-	color: white;
-}
-.orange-bubble {
-  padding: 0.1rem 0.35rem;
-  background-color: rgb(223, 89, 0);
-	border-radius: 8px;
-	color: white;
-}
+
+.danger-bubble,
+.warning-bubble,
+.success-bubble,
+.secondary-bubble,
+.orange-bubble,
 .primary-bubble {
   padding: 0.1rem 0.35rem;
-  background-color: #007bff;
 	border-radius: 8px;
 	color: white;
+}
+
+.danger-bubble {
+  background-color: rgb(179, 43, 43);
+}
+.warning-bubble {
+  background-color: rgb(241, 181, 0);
+}
+.success-bubble {
+  background-color: rgb(5, 134, 11);
+}
+.secondary-bubble {
+  background-color: rgb(133, 133, 133);
+}
+.orange-bubble {
+  background-color: rgb(223, 89, 0);
+}
+.primary-bubble {
+  background-color: #007bff;
 }
 .popover {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.459);
@@ -173,10 +227,11 @@ img {
   padding-bottom: 0.25rem;
   margin: 0.5rem;
 }
-.inventory-item:hover {
-  cursor: pointer;
-  background-color: rgb(206, 233, 255);
+
+.dark-mode .inventory-item {
+	color: rgb(163, 164, 179);
 }
+
 .inventory-item img,
 .fake-inventory-item div {
 	width: 64px;
@@ -185,6 +240,9 @@ img {
 .fake-inventory-item {
 	background-color: #737980;
 	opacity: .5;
+}
+.dark-mode .fake-inventory-item {
+	background-color: #232529;
 }
 
 @media (max-width: 576px) {

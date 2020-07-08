@@ -24,7 +24,7 @@
 				]"
       >
         <template slot="Back">
-          <span>Flourine, Uranium, Carbon, Potassium, Arsenic, Sulfur...</span>
+          <span>Fluorine, Uranium, Carbon, Potassium, Arsenic, Sulfur...</span>
           <span>I'm sorry, did you need something?</span>
         </template>
         <template slot="Power?">

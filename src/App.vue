@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'dark-mode' : darkMode}">
     <toast-container />
     <div class="mega-container">
       <sidebar />
@@ -27,7 +27,10 @@ export default {
     PanelsContainer
   },
   computed: {
-    ...mapGetters(["welcomeMessageSeen"])
+    ...mapGetters(["welcomeMessageSeen"]),
+    darkMode() {
+      return this.$store.getters["settings/darkMode"];
+    }
   },
   methods: {
     ...mapMutations(["setWelcomeMessageSeen"])

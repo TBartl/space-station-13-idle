@@ -1,8 +1,17 @@
 <template>
   <div>
     <span :id="id" class="robustness" :class="[robustnessClass]">ROBUSTNESS: {{robustness}}</span>
-    <b-popover :target="id" triggers="hover" placement="top" delay="0">
-      <stats-panel :stats="getBasedStats" />
+    <b-popover
+      :target="id"
+      triggers="hover"
+      placement="top"
+      delay="0"
+      :customClass="$store.getters['settings/darkModeClass']"
+    >
+      <div class="d-flex flex-column align-items-center">
+				<span class="mb-1 description">Attack Speed: {{getBasedStats.attackSpeed}}</span>
+        <stats-panel :stats="getBasedStats" />
+      </div>
     </b-popover>
   </div>
 </template>
@@ -25,7 +34,7 @@ export default {
       return getBasedStats(this.stats, this.mobType);
     },
     robustness() {
-			if (this.overrideRobustness) return this.overrideRobustness;
+      if (this.overrideRobustness) return this.overrideRobustness;
       return calcRobustness(this.stats, this.mobType);
     },
     robustnessClass() {

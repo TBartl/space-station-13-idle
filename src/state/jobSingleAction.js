@@ -41,7 +41,7 @@ export default {
 					if (bonus) xpBonus += bonus;
 				}
 			}
-			
+
 			let actions = getters.baseActions;
 			if (xpBonus) {
 				actions = cloneDeep(actions);
@@ -135,18 +135,18 @@ export default {
 				}
 			}
 
+			if (action.requiredItems) {
+				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
+					commit("inventory/changeItemCount", { itemId, count: -requiredCount }, { root: true });
+				}
+			}
+
 			let yieldedItems = acquireItemFrom(action);
 			for (let [itemId, count] of Object.entries(yieldedItems)) {
 				if (!count) continue;
 				commit("inventory/changeItemCount", { itemId, count }, { root: true });
 			}
 			commit("addXP", action.xp);
-
-			if (action.requiredItems) {
-				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
-					commit("inventory/changeItemCount", { itemId, count: -requiredCount }, { root: true });
-				}
-			}
 
 			if (!action.preservePotion) {
 				dispatch("potions/useCharge", getters["jobId"], { root: true });

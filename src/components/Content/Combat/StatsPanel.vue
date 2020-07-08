@@ -24,14 +24,14 @@
         description="Reduces damage taken from brute attacks"
         :icon="require('@/assets/art/combat/armor-brute.png')"
         :value="fixedStats.bruteProtection"
-				:showPercent="true"
+        :showPercent="true"
       />
       <stat-panel-item
         name="Burn Protection"
         description="Reduces damage taken from burn attacks"
         :icon="require('@/assets/art/combat/armor-burn.png')"
         :value="fixedStats.burnProtection"
-				:showPercent="true"
+        :showPercent="true"
       />
       <stat-panel-item
         name="Precision"
@@ -60,6 +60,7 @@
       triggers="hover"
       placement="top"
       delay="0"
+      :customClass="$store.getters['settings/darkModeClass']"
     >
       <div class="d-flex flex-column align-items-center">
         <h6>Damage Type: {{stats.damageType.toUpperCase()}}</h6>
@@ -98,7 +99,7 @@ export default {
 <style scoped>
 .stats-panel {
   max-width: 160px;
-	min-width: 130px;
+  min-width: 130px;
 }
 .attack-type-image {
   min-width: 15px;
@@ -112,8 +113,8 @@ export default {
   width: 50%;
   min-width: 64px;
   padding: 2px 4px;
-  border: 1px solid rgba(135, 138, 148, 0.322);
-  background-color: rgba(176, 200, 216, 0.438);
+  border: 1px solid rgba(149, 154, 185, 0.246);
+  background-color: rgba(124, 200, 255, 0.24);
   min-height: 36px;
 }
 </style>

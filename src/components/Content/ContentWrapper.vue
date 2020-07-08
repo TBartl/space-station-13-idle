@@ -1,5 +1,6 @@
 <template>
   <div class="content-wrapper" :class="{reversed: reversed}">
+    <div class="background"></div>
     <component :is="'content-' + visibleSidebarItem" class="w-100 big-bottom-margin" />
   </div>
 </template>
@@ -61,17 +62,27 @@ export default {
 <style scoped>
 .content-wrapper {
   flex: 1;
+}
+.dark-mode .background {
+  filter: brightness(0.6) !important;
+}
 
+.background {
   /* background-image: url("~@/assets/art/misc/background.png"); */
   background-image: url("~@/assets/art/misc/background-alt.jpg");
   background-size: cover;
-  background-position: right center;
+	background-position: right center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -10;
 }
-
-.content-wrapper.reversed {
+.background.reversed {
   background-image: url("~@/assets/art/misc/background-alt-reversed.jpg");
 }
 .big-bottom-margin {
-	margin-bottom: 8rem;
+  margin-bottom: 8rem;
 }
 </style>	

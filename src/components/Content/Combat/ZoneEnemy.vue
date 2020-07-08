@@ -28,7 +28,7 @@
     </div>
     <div class="d-flex flex-column mr-2">
       <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
-      <b-popover :target="id" triggers="click blur" placement="top" delay="0">
+      <b-popover :target="id" triggers="click blur" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
         <item-chance :data="enemy" />
       </b-popover>
       <button

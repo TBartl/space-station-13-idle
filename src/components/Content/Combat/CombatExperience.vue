@@ -57,4 +57,8 @@ th {
   font-size: 13px;
   color: rgb(132, 135, 143);
 }
+.dark-mode th {
+  color: rgb(152, 155, 165);
+
+}
 </style>

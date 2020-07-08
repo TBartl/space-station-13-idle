@@ -36,6 +36,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
+								:customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
@@ -74,6 +75,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
+								:customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
@@ -236,6 +238,10 @@ export default {
 .hidden {
   filter: brightness(0.15) opacity(0.2);
 }
+.dark-mode .hidden {
+  filter: brightness(0.10) opacity(0.2);
+}
+
 .bar {
   background-color: rgba(89, 141, 253, 0.137);
   position: relative;
@@ -243,6 +249,10 @@ export default {
   width: 100%;
   max-width: 600px;
 }
+.dark-mode .bar {
+  background-color: rgba(89, 141, 253, 0.082);
+}
+
 .bar-fill {
   background-color: rgb(97, 30, 30);
   position: absolute;

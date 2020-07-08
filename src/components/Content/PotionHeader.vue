@@ -15,7 +15,7 @@
       :target="target"
       placement="left"
     />
-    <b-popover :target="target" triggers="click blur" placement="auto bottom" delay="30">
+    <b-popover :target="target" triggers="click blur" placement="auto bottom" delay="30" :customClass="$store.getters['settings/darkModeClass']">
       <div class="d-flex flex-column align-items-center">
         <potion-header-item
           class="w-100"
