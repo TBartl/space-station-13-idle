@@ -34,16 +34,15 @@ img {
 }
 
 .positive {
-  border: 1px solid rgba(135, 148, 138, 0.322) !important;
-  background-color: rgba(176, 216, 179, 0.438) !important;
+  border: 1px solid rgba(132, 179, 142, 0.198) !important;
+  background-color: rgba(137, 209, 143, 0.356) !important;
 }
-
 .empty {
   opacity: 0.2;
 }
 
 .negative {
-  border: 1px solid rgba(148, 135, 135, 0.322) !important;
-  background-color: rgba(216, 176, 176, 0.438) !important;
+  border: 1px solid rgba(160, 119, 119, 0.198) !important;
+  background-color: rgba(185, 119, 119, 0.356) !important;
 }
 </style>

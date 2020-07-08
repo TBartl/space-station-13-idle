@@ -53,4 +53,8 @@ export default {
   background-color: rgb(230, 230, 230);
   border-radius: 4px;
 }
+
+.dark-mode .purchases {
+  background-color: rgb(31, 32, 37);
+}
 </style>

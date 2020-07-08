@@ -57,4 +57,7 @@ export default {
 .player-block-header {
   margin-bottom: 0.25rem;
 }
+.dark-mode .player-block {
+  background-color: rgb(44, 45, 51);
+}
 </style>

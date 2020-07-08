@@ -6,7 +6,8 @@ const settings = {
 		showVirtualLevels: false,
 		inventoryFullStop: true,
 		autoEatEnabled: true,
-		chronoPanelEnabled: false
+		chronoPanelEnabled: false,
+		darkMode: false
 	},
 	getters: {
 		showVirtualLevels(state) {
@@ -20,6 +21,12 @@ const settings = {
 		},
 		chronoPanelEnabled(state) {
 			return state.chronoPanelEnabled;
+		},
+		darkMode(state) {
+			return state.darkMode;
+		},
+		darkModeClass(state) {
+			return state.darkMode ? 'dark-mode' : ''
 		}
 	},
 	mutations: {
@@ -34,6 +41,9 @@ const settings = {
 		},
 		setChronoPanelEnabled(state, val) {
 			state.chronoPanelEnabled = val;
+		},
+		setDarkMode(state, val) {
+			state.darkMode = val;
 		}
 	}
 }

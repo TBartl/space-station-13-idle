@@ -229,6 +229,9 @@ export default {
   background-color: #ececec;
   border-radius: 0.5rem;
 }
+.dark-mode .body-icon {
+  background-color: rgb(75, 77, 88);
+}
 
 .rotate-90 {
   transform: rotate(90deg);

@@ -1,7 +1,7 @@
 <template>
   <div class="experience-header">
     <div
-      class="experience-block d-flex flex-column flex-sm-row align-items-center justify-content-around bg-white p-2"
+      class="content-block experience-block d-flex flex-column flex-sm-row align-items-center justify-content-around p-2"
       :style="{'border-color': color}"
     >
       <div class="d-flex align-items-center">
@@ -69,5 +69,10 @@ export default {
 }
 .xp {
   background-color: #449fe9;
+}
+
+.dark-mode .level,
+.dark-mode .xp {
+  color: white !important;
 }
 </style>

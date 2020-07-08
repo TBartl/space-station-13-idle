@@ -187,6 +187,9 @@ export default {
   background-color: #ececec;
   border-radius: 0.5rem;
 }
+.dark-mode .body-icon {
+  background-color: rgb(75, 77, 88);
+}
 
 .color-setter {
   max-width: 200px;
