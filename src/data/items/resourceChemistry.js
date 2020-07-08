@@ -34,8 +34,8 @@ const BASES = {
 }
 
 export const FABRICATION_POTION_PERCENT = .3;
-export const GRAYTIDING_POTION_PERCENT = .30;
-export const TINKERING_POTION_PERCENT = .15;
+export const GRAYTIDING_POTION_PERCENT = .15;
+export const TINKERING_POTION_PERCENT = .30;
 export const BOTANY_POTION_PERCENT = .3;
 export const COOKING_POTION_PERCENT = .25;
 
