@@ -218,12 +218,12 @@ for (let i = 0; i < 5; i++) {
 	ENGINEERING_UPGRADES[`upgradeEngineering${i + 1}`] = upgrade;
 }
 
-export const FABRICATION_UPGRADE_PERCENT = .2;
+export const FABRICATION_UPGRADE_PERCENT = .1;
 const FABRICATION_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Matter Bins",
-		description: `Reduces fabrication ore costs by ${FABRICATION_UPGRADE_PERCENT * 100}%`, // Expanded below
+		description: `Reduces fabrication ore costs to ${100-FABRICATION_UPGRADE_PERCENT * (i + 1) * 100}%`, // Expanded below
 		icon: require('@/assets/art/fabrication/upgrade1.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { fabrication: (i + 1) * 10 },
@@ -233,8 +233,7 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description = upgrade.description.replace("by", "by an additional");
-		upgrade.description += `, to ${(FABRICATION_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+		upgrade.description += `, from ${(100-FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
