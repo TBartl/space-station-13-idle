@@ -7,17 +7,18 @@
       <img :src="icon" alt />
       <span>{{text}}</span>
     </div>
-    <div class="player-icon" @click="openCustomization">
+    <!-- <div class="player-icon" @click="openCustomization">
       <player-display :showEquipment="true" />
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
-import PlayerDisplay from "@/components/PlayerDisplay";
+// Too laggy
+// import PlayerDisplay from "@/components/PlayerDisplay";
 export default {
   props: ["icon", "text", "color"],
-  components: { PlayerDisplay },
+  // components: { PlayerDisplay },
   methods: {
     openCustomization() {
       this.$store.commit("setVisibleSidebarItem", "customization");
