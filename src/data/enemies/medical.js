@@ -64,23 +64,24 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'faceMedHud',
+						id: 'q_foodMeatZ',
 						weight: 9
 					},
 					{
 						id: 'ammoBallistic3',
 						count: 8,
-						weight: 6
-					},
-					{
-						id: 'q_foodMeatZ',
-						weight: 5
+						weight: 7
 					},
 					{
 						id: 'pillHappy',
 						count: 10,
+						weight: 6
+					},
+					{
+						id: 'faceMedHud',
 						weight: 4
 					},
+
 				]
 			},
 			{
@@ -103,24 +104,28 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: 0.25,
+				chance: 0.5,
 				itemTable: [
 					{
-						id: 'faceScience',
-						weight: 4
+						id: 'q_foodMeatH',
+						weight: 35
+					},
+					{
+						id: 'foodMeatH',
+						weight: 25
 					},
 					{
 						id: 'meleeToolbox5',
-						weight: 3
+						weight: 15
 					},
 					{
-						id: 'q_foodMeatH',
-						weight: 2
+						id: 'faceScience',
+						weight: 10
 					},
 					{
 						id: 'ticket2',
 						count: [1, 3],
-						weight: 1
+						weight: 5
 					}
 				]
 			},

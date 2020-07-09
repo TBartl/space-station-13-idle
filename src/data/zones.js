@@ -12,7 +12,7 @@ export default [
 	{
 		name: "Head of Personnel Line",
 		icon: require("@/assets/art/combat/zones/hopline.png"),
-		enemies: ["Ian", "paperworkhop", "hopcurity"]
+		enemies: ["Ian", "paperworkhop", "hopcurity","plasmarobo"]
 	},
 	{
 		name: "Dorms 4",

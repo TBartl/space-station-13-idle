@@ -17,19 +17,19 @@ export default {
 				itemTable: [
 					{
 						id: 'foodEvasion1',
-						weight: 8
+						weight: 9
 					},
 					{
 						id: 'q_foodPower1',
-						weight: 6
-					},
-					{
-						id: 'faceSec',
-						weight: 4
+						weight: 7
 					},
 					{
 						id: 'meleeToolbox3',
-						weight: 3
+						weight: 4
+					},
+					{
+						id: 'faceSec',
+						weight: 1
 					},
 					{
 						id: 'neckFanny1',
@@ -65,8 +65,12 @@ export default {
 						weight: 15
 					},
 					{
+						id: 'criminal',
+						weight: 10
+					},
+					{
 						id: 'faceSyndicate',
-						weight: 4
+						weight: 1.1
 					},
 					{
 						id: 'telecrystal',
@@ -102,8 +106,12 @@ export default {
 						weight: 78
 					},
 					{
+						id: 'slimeGreen',
+						weight: 25
+					},
+					{
 						id: 'faceWrestle',
-						weight: 29
+						weight: 4
 					},
 					{
 						id: 'ticket1',

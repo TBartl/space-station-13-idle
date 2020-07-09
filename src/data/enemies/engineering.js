@@ -147,12 +147,13 @@ export default {
 				itemTable: [
 					{
 						id: 'uranium',
-						count: [1,3],
-						weight: 13
+						count: [1,5],
+						weight: 10
 					},
 					{
 						id: 'foodPasta1',
-						weight: 12
+						count: [1,3],
+						weight: 8
 					},
 					{
 						id: 'q_foodPasta1',
@@ -160,7 +161,7 @@ export default {
 					},
 					{
 						id: 'faceMeson',
-						weight: 3
+						weight: 1
 					}
 				]
 			},

@@ -73,10 +73,6 @@ export default {
 				]
 			},
 			{
-				chance: .02,
-				item: "jumpsuitGraytide"
-			},
-			{
 				chance: 1,
 				item: "foodMeatH"
 			}
@@ -100,12 +96,12 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						count: [2, 5],
+						count: [2,5],
 						weight: 9
 					},
 					{
 						id: 'money',
-						count: [220, 660],
+						count: [220,660],
 						weight: 7
 					},
 					{

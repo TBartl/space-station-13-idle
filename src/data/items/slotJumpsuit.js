@@ -200,7 +200,27 @@ export default {
 			validhunting: 20
 		},
 		requires: {
-			evasion: 5
+			evasion: 15
+		}
+	},
+	jumpsuitClown: {
+		name: "Clownsuit",
+		sellPrice: 300,
+		equipmentSlot: "jumpsuit",
+		icon: require("@/assets/art/combat/items/jumpsuit_clown.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_clown_overlay.png"),
+		stats: {
+			maxHealth: 100,
+			precision: -5,
+			power: 0,
+			evasion: 8
+		},
+		description: "+20% Clown XP, HONK",
+		xpBonuses: {
+			clown: 20
+		},
+		requires: {
+			evasion: 15
 		}
 	},
 }
