@@ -228,7 +228,7 @@ export default {
 			{
 				id: 'burnJunk',
 				count: [0,100],
-				weight: 7
+				weight: 6
 			},
 			{
 				id: 'ammoBallistic2',
@@ -243,26 +243,29 @@ export default {
 			{
 				id: 'mercury',
 				count: [0,500],
-				weight: 4
+				weight: 5
 			},
 			{
 				id: 'slimeOil',
 				count: [0,50],
-				weight: 5
-			},
-			{
-				id: 'meleeShield1',
 				weight: 4
 			},
 			{
-				id: 'silver',
-				count: [50,250],
+				id: 'jumpsuitClown',
+				weight: 4
+			},
+			{
+				id: 'meleeShield1',
+				weight: 3
+			},
+			{
+				id: 'companionLava',
 				weight: 3
 			},
 			{
 				id: 'gold',
-				count: [25,100],
-				weight: 3
+				count: [50,250],
+				weight: 2
 			},
 			{
 				id: 'foot',

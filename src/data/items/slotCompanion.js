@@ -205,6 +205,18 @@ const SLIMES = {
 			precision: 5,
 			power: 5,
 		},
+	},
+	companionLava: {
+		name: "Dwarf Legion",
+		sellPrice: 83,
+		icon: require("@/assets/art/xenobio/CompanionLava.png"),
+		tier: 4.5,
+		stats: {
+			maxHealth: 100,
+			evasion: 8,
+			precision: -1,
+			power: 3,
+		},
 	}
 }
 Object.values(SLIMES).forEach((slime, index) => {

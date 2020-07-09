@@ -248,8 +248,8 @@ const ACTIONS = {
 					},
 					{
 						id: "potionChemistry",
-						count: [0, 1],
-						weight: 1
+						count: [1],
+						weight: 2
 					},
 				]
 			},

@@ -51,7 +51,7 @@ export default {
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
-			precision: -10,
+			precision: -15,
 			power: -10,
 		},
 		icon: require("@/assets/art/mining/SheetBanana.png")

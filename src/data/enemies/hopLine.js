@@ -71,7 +71,7 @@ export default {
 		stats: {
 			maxHealth: 80,
 			attackSpeed: 1.7,
-			precision: 39,
+			precision: 36,
 			power: 19,
 			evasion: 26,
 			damageType: "burn",
@@ -83,12 +83,12 @@ export default {
 				itemTable: [
 					{
 						id: 'ammoBallistic1',
-						count: [1,20],
+						count: [1,15],
 						weight: 50
 					},
 					{
 						id: 'ammoBallistic2',
-						count: [1,12],
+						count: [1,10],
 						weight: 25
 					},
 					{
@@ -96,18 +96,66 @@ export default {
 						weight: 5
 					},
 					{
-						id: 'gunBallistic2',
-						weight: 1
+						id: 'faceFox',
+						weight: 3
 					},
 					{
-						id: 'faceFox',
-						weight: .9
+						id: 'gunBallistic2',
+						weight: 1
 					},
 				]
 			}, {
 				chance: 1,
 				item: "foodMeatH"
-			}
+			},
+			{
+				chance: .02,
+				item: "jumpsuitGraytide"
+			},
+		]
+	},
+	plasmarobo: {
+		name: "Plasmaperson Roboticist",
+		icon: require("@/assets/art/combat/enemies/plasmarobo.png"),
+		stats: {
+			maxHealth: 100,
+			attackSpeed: 3.2,
+			precision: 26,
+			power: 30,
+			evasion: 27,
+			damageType: "brute",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'plasma',
+						weight: 20
+					},
+					{
+						id: 'potatoBattery',
+						count: [1,3],
+						weight: 15
+					},
+					{
+						id: 'meleeBlunt2',
+						weight: 5
+					},
+					{
+						id: 'potionFabrication',
+						weight: 3
+					},
+				]
+			}, {
+				chance: 1,
+				item: "plasma"
+			},
+			{
+				chance: .02,
+				item: "jumpsuitFabrication"
+			},
 		]
 	},
 }

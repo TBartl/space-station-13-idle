@@ -69,10 +69,6 @@ export default {
 				]
 			},
 			{
-				chance: .02,
-				item: "jumpsuitFabrication"
-			},
-			{
 				chance: 1,
 				itemTable: [
 					{

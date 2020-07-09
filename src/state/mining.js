@@ -24,7 +24,7 @@ const potionDropTable = [
 			{
 				id: "cactus",
 				count: 1,
-				weight: 20
+				weight: 23
 			},
 			{
 				id: "companionMining",
@@ -34,7 +34,7 @@ const potionDropTable = [
 			{
 				id: "exoticParts",
 				count: 1,
-				weight: 10
+				weight: 7
 			},
 			{
 				id: "jumpsuitExplorer",
