@@ -38,6 +38,7 @@ export default {
 					},
 					{
 						id: 'ticket1',
+						count: [0, 2],
 						weight: 5
 					}
 				]
