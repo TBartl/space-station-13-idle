@@ -83,7 +83,7 @@ const PRECISION_ACTIONS = {
 	},
 	cookPer2: {
 		time: 3,
-		name: "Tingle Soup",
+		name: "Tingle Stew",
 		item: "foodPrecision2",
 		icon: require("@/assets/art/cooking/stew2.png"),
 		xp: 6,

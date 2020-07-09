@@ -134,7 +134,7 @@ let FOOD = {
 		},
 	},
 	foodPrecision3: {
-		name: "Dad's Soup",
+		name: "Dad's Stew",
 		sellPrice: 171,
 		icon: require("@/assets/art/cooking/stew3.png"),
 		healAmount: 50,
