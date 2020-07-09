@@ -332,7 +332,7 @@ const ASSAULTMECHS = {
 const SPECIALARMOR = {
 	armorSpecial1: {
 		name: "Xenobiology Enhanced Armor",
-		equipmentSlot: "Chest",
+		equipmentSlot: "chest",
 		sellPrice: 170,
 		icon: require("@/assets/art/combat/items/arm_u1.png"), overlay: require("@/assets/art/combat/items/arm_u1_overlay.png"),
 		stats: {
