@@ -55,7 +55,7 @@ export default {
 				itemTable: [
 					{
 						id: 'pillPumpup',
-						count: [5,10],
+						count: [5, 10],
 						weight: 7
 					},
 					{
@@ -96,12 +96,12 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						count: [2,5],
+						count: [2, 5],
 						weight: 9
 					},
 					{
 						id: 'money',
-						count: [220,660],
+						count: [220, 660],
 						weight: 7
 					},
 					{
@@ -122,6 +122,34 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatH"
+			}
+		]
+	},
+	renault: {
+		name: "Renault",
+		icon: require("@/assets/art/combat/enemies/renault.png"),
+		stats: {
+			maxHealth: 250,
+			attackSpeed: 1.9,
+			precision: 50,
+			power: 50,
+			evasion: 65,
+			damageType: "brute",
+			burnProtection: 30,
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 98
+					},
+					{
+						id: "companionFox",
+						weight: 2
+					},
+				]
 			}
 		]
 	},
