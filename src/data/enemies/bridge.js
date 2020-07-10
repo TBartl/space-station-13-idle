@@ -55,7 +55,7 @@ export default {
 				itemTable: [
 					{
 						id: 'pillPumpup',
-						count: [5, 10],
+						count: [5,10],
 						weight: 7
 					},
 					{
@@ -96,12 +96,12 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						count: [2, 5],
+						count: [2,5],
 						weight: 9
 					},
 					{
 						id: 'money',
-						count: [220, 660],
+						count: [220,660],
 						weight: 7
 					},
 					{
