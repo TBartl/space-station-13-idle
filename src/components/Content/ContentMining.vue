@@ -52,7 +52,20 @@
             <b>Ore</b>.
           </span>
           <span>
-            Of course, you're probably going to want to build some experience up before you go after some of the
+            Beginners start by pounding 
+            <img
+              class="mx--0"
+
+              :src="require('@/assets/art/mining/OreGlass.png')"
+            />
+            <b>Sand</b> to make some
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/mining/SheetGlass.png')"
+            /> <b>Glass</b>.
+          </span>
+          <span>
+            Of course, you're probably going to need to build some experience up before you go after some of the
             <img
               class="mx--2"
               :src="require('@/assets/art/mining/SheetGold.png')"
@@ -76,10 +89,7 @@
               class="mx--0"
               :src="require('@/assets/art/fabrication/icon.png')"
             />
-            <b>Fabrication</b> might turn it into weapons or something.
-          </span>
-          <span>
-            Or maybe they just sell it straight for
+            <b>Fabrication</b> might turn it into weapons or something, or you could just sell it straight for
             <img
               class="mx--2"
               :src="require('@/assets/art/misc/coin-padded.png')"
