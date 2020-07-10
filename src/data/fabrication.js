@@ -111,8 +111,8 @@ const ASSAULTMECHS = {
 		xp: 858,
 		requiredLevel: 11,
 		requiredItems: {
-			iron: 90,
-			glass: 20,
+			glass: 90,
+			iron: 20,
 			silver: 20
 		}
 	},
@@ -123,7 +123,7 @@ const ASSAULTMECHS = {
 		xp: 1482,
 		requiredLevel: 19,
 		requiredItems: {
-			glass: 30,
+			iron: 30,
 			silver: 45,
 			gold: 50,
 			titanium: 5
@@ -208,7 +208,7 @@ const ENERGY_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			iron: 1
+			glass: 1
 		}
 	},
 	fabricateEammo2: {
@@ -256,7 +256,7 @@ const BALLISTIC_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			glass: 1
+			iron: 1
 		}
 	},
 	fabricateBammo2: {
@@ -341,7 +341,7 @@ const BALLISTIC_GUNS = {
 		xp: 20,
 		requiredLevel: 8,
 		requiredItems: {
-			glass: 5
+			iron: 5
 		}
 	},
 	fabricateBgun3: {
