@@ -125,4 +125,32 @@ export default {
 			}
 		]
 	},
+	renault: {
+		name: "Renault",
+		icon: require("@/assets/art/combat/enemies/renault.png"),
+		stats: {
+			maxHealth: 250,
+			attackSpeed: 1.9,
+			precision: 50,
+			power: 50,
+			evasion: 65,
+			damageType: "brute",
+			burnProtection: 30,
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 98
+					},
+					{
+						id: "companionFox",
+						weight: 2
+					},
+				]
+			}
+		]
+	},
 }

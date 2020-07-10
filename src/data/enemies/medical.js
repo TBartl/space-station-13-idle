@@ -135,4 +135,32 @@ export default {
 			}
 		]
 	},
+	runtime: {
+		name: "Runtime",
+		icon: require("@/assets/art/combat/enemies/runtime.png"),
+		stats: {
+			maxHealth: 170,
+			attackSpeed: 2.1,
+			precision: 40,
+			power: 30,
+			evasion: 50,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 98
+					},
+					{
+						id: "companionCat",
+						weight: 2
+					},
+				]
+			}
+		]
+	},
 }

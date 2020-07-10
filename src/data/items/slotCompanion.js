@@ -157,6 +157,26 @@ const SLIMES = {
 		icon: require("@/assets/art/combat/enemies/Ian.png"),
 		tier: 0,
 		stats: {
+			bruteProtection: 7,
+			maxHealth: 0
+		}
+	},
+	companionCat: {
+		name: "Pet Cat",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/runtime.png"),
+		tier: 0,
+		stats: {
+			burnProtection: 7,
+			maxHealth: 0
+		}
+	},
+	companionFox: {
+		name: "Pet Fox",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/renault.png"),
+		tier: 0,
+		stats: {
 			precision: 5,
 			maxHealth: 0
 		}
