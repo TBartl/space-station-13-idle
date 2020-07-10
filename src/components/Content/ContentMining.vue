@@ -28,7 +28,7 @@
               :src="require('@/assets/art/mining/icon.png')"
             />
             <b>Mine</b> some
-            <img class="mx--2" :src="require('@/assets/art/mining/SheetGlass.png')" />
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
             <b>Ore</b>.
           </span>
         </template>
