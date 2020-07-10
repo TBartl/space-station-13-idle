@@ -190,7 +190,7 @@ const ACTIONS_SHARP_WEAPONS = {
 		}
 	},
 	tinkerMeleec7: {
-		time: 43,
+		time: 10,
 		item: "meleeSharp7",
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
 		xp: 73,
