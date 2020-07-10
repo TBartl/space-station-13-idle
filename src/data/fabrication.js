@@ -6,8 +6,8 @@ const MECHS = {
 		xp: 546,
 		requiredLevel: 7,
 		requiredItems: {
-			iron: 100,
-			glass: 20,
+			glass: 100,
+			iron: 20,
 			silver: 10
 		}
 	},
@@ -18,8 +18,8 @@ const MECHS = {
 		xp: 1170,
 		requiredLevel: 15,
 		requiredItems: {
-			iron: 5,
-			glass: 25,
+			glass: 5,
+			iron: 25,
 			silver: 50,
 			gold: 50
 		}
