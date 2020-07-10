@@ -54,7 +54,8 @@
           <span>
             Beginners start by pounding 
             <img
-              class="mx--2"
+              class="mx--0"
+
               :src="require('@/assets/art/mining/OreGlass.png')"
             />
             <b>Sand</b> to make some
