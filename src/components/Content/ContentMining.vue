@@ -89,7 +89,7 @@
               class="mx--0"
               :src="require('@/assets/art/fabrication/icon.png')"
             />
-            <b>Fabrication</b> might turn it into weapons or something, or maybe the quartermaster just sell it straight for
+            <b>Fabrication</b> might turn it into weapons or something, or you could just sell it straight for
             <img
               class="mx--2"
               :src="require('@/assets/art/misc/coin-padded.png')"
