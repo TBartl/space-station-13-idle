@@ -231,7 +231,7 @@ export const ACTIONS = {
 		time: 5,
 		item: "slimeRainbow",
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
-		xp: -200,
+		xp: 0,
 		requiredLevel: 50,
 		requiredItems: {
 			slimeGray: 1,
