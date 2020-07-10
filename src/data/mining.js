@@ -1,15 +1,15 @@
 export const ACTIONS = {
-	mineIron: {
+	mineSand: {
 		time: 1.5,
-		item: "iron",
-		icon: require("@/assets/art/mining/OreIron.png"),
+		item: "glass",
+		icon: require("@/assets/art/mining/OreGlass.png"),
 		xp: .5,
 		requiredLevel: 1
 	},
-	mineSand: {
+	mineIron: {
 		time: 2.0,
-		item: "glass",
-		icon: require("@/assets/art/mining/OreGlass.png"),
+		item: "iron",
+		icon: require("@/assets/art/mining/OreIron.png"),
 		xp: 1,
 		requiredLevel: 5
 	},
