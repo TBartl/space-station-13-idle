@@ -55,7 +55,12 @@
               class="mx--2"
               :src="require('@/assets/art/chemistry/chemOil.png')"
             />
-            <b>Bases</b> that make it up.
+            <b>Bases</b> that make it up, and sometimes you will a special vessel made with
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/mining/SheetGlass.png')"
+            />
+            <b>Glass</b> to hold it.
           </span>
           <span>
             You can speed up this process with
