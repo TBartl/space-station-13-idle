@@ -1,13 +1,13 @@
 export default {
-	iron: {
-		name: "Iron",
-		sellPrice: 2,
-		icon: require("@/assets/art/mining/SheetIron.png")
-	},
 	glass: {
 		name: "Glass",
-		sellPrice: 10,
+		sellPrice: 2,
 		icon: require("@/assets/art/mining/SheetGlass.png")
+	},
+	iron: {
+		name: "Iron",
+		sellPrice: 10,
+		icon: require("@/assets/art/mining/SheetIron.png")
 	},
 	silver: {
 		name: "Silver",
