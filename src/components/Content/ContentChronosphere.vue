@@ -119,6 +119,12 @@
           <div class="content-block">
             <h5>Recursion</h5>
             <hr />
+
+            <div v-for="(section, index) in auditSections" :key="index">
+							<div v-for="(threshold, thresholdIndex) in section.thresholds" :key="'t'+thresholdIndex">
+								{{threshold}}
+							</div>
+						</div>
           </div>
         </div>
       </div>
@@ -172,6 +178,18 @@ export default {
     },
     sections() {
       return SECTIONS;
+    },
+    auditSections() {
+      return [
+        {
+          thresholds: [
+            {
+              name: "Base",
+              value: 5
+            }
+          ]
+        }
+      ];
     }
   },
   methods: {
