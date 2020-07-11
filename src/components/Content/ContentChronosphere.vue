@@ -119,12 +119,32 @@
           <div class="content-block">
             <h5>Recursion</h5>
             <hr />
-
-            <div v-for="(section, index) in auditSections" :key="index">
-							<div v-for="(threshold, thresholdIndex) in section.thresholds" :key="'t'+thresholdIndex">
-								{{threshold}}
-							</div>
-						</div>
+            <div class="audit py-3 px-4">
+              <h5 class="text-center mb-2">Recursion Potential</h5>
+              <div v-for="(section, index) in auditSections" :key="index" class="mb-3">
+                <p class="description text-uppercase" v-if="section.name">{{section.name}}</p>
+                <div
+                  v-for="(threshold, thresholdIndex) in section.thresholds"
+                  :key="'t'+thresholdIndex"
+                  class="d-flex flex-row align-items-center justify-content-between my-1"
+                  :class="{'disabled': threshold.disabled}"
+                >
+                  <span>{{threshold.name}}</span>
+                  <div>
+                    <span class="mr-1">+{{threshold.count}}</span>
+                    <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex flex-row align-items-center justify-content-between">
+                <span>TOTAL</span>
+                <div>
+                  <span class="mr-1">+{{$store.getters['chrono/recursionPotential']}}</span>
+                  <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -136,14 +156,35 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ProgressBar from "@/components/ProgressBar";
 import ShopSection from "@/components/Content/Shop/ShopSection";
-import { SECTIONS } from "@/data/chronoshop";
+import {
+  SECTIONS,
+  BASE_BONUS,
+  ITEM_INTERVALS,
+  ENEMY_INTERVALS,
+  JOB_INTERVALS
+} from "@/data/chrono";
+
+function createAuditSection(name, percent, intervals) {
+  let section = {
+    name: `${name} Bonuses (${percent}%)`,
+    thresholds: []
+  };
+  intervals.forEach(interval =>
+    section.thresholds.push({
+      name: `${interval}%`,
+      count: 1,
+      disabled: percent < interval
+    })
+  );
+  return section;
+}
 
 export default {
   extends: ContentAbstract,
   components: { ProgressBar, ShopSection },
   data() {
     return {
-      tab: "bank"
+      tab: "recursion"
     };
   },
   computed: {
@@ -179,17 +220,36 @@ export default {
     sections() {
       return SECTIONS;
     },
+    itemPercent() {
+      return this.$store.getters["completion/itemPercent"];
+    },
+    enemyPercent() {
+      return this.$store.getters["completion/enemyPercent"];
+    },
+    jobPercent() {
+      return this.$store.getters["completion/jobPercent"];
+    },
     auditSections() {
-      return [
+      let sections = [
         {
           thresholds: [
             {
               name: "Base",
-              value: 5
+              count: BASE_BONUS
             }
           ]
         }
       ];
+
+      sections.push(
+        createAuditSection("Item", this.itemPercent, ITEM_INTERVALS)
+      );
+      sections.push(
+        createAuditSection("Enemy", this.enemyPercent, ENEMY_INTERVALS)
+      );
+      sections.push(createAuditSection("Job", this.jobPercent, JOB_INTERVALS));
+
+      return sections;
     }
   },
   methods: {
@@ -212,5 +272,14 @@ export default {
 .max {
   font-size: 12px;
   color: gray;
+}
+.audit {
+  background-color: rgba(128, 128, 128, 0.178);
+  border-radius: 8px;
+  margin: auto;
+  max-width: 280px;
+}
+.disabled {
+  opacity: 0.4;
 }
 </style>

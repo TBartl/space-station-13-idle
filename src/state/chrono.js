@@ -1,5 +1,12 @@
 import Vue from 'vue'
 
+import {
+	BASE_BONUS,
+	ITEM_INTERVALS,
+	ENEMY_INTERVALS,
+	JOB_INTERVALS
+} from "@/data/chrono";
+
 const chrono = {
 	namespaced: true,
 	state: {
@@ -57,6 +64,19 @@ const chrono = {
 		},
 		lastGain(state) {
 			return state.lastGain;
+		},
+		recursionPotential(state, getters, rootState, rootGetters) {
+			let sum = BASE_BONUS;
+			ITEM_INTERVALS.forEach(x => {
+				if (x < rootGetters["completion/itemPercent"]) sum += 1;
+			});
+			ENEMY_INTERVALS.forEach(x => {
+				if (x < rootGetters["completion/enemyPercent"]) sum += 1;
+			});
+			JOB_INTERVALS.forEach(x => {
+				if (x < rootGetters["completion/jobPercent"]) sum += 1;
+			});
+			return sum;
 		}
 	},
 	mutations: {
