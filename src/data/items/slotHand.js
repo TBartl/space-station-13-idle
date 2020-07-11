@@ -740,6 +740,22 @@ const GBULLET = {
 		requires: {
 			rangedPower: 50
 		}
+	},
+	rocketLauncher1: {
+		name: "Rocket Launcher",
+		sellPrice: 15000,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/rocket_launcher.png"),
+		ammoType: "rocket",
+		stats: {
+			attackspeed: 44,
+			evasion: -6,
+			power: 5,
+			precision: 1,
+		},
+		requires: {
+			rangedPower: 40
+		}
 	}
 }
 // 	mechGunEnergyRifle: {
