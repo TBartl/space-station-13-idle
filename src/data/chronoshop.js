@@ -8,7 +8,7 @@ export const SECTIONS = [
 
 	{
 		name: "Time Bank Upgrades",
-		purchases: [""]
+		purchases: []
 	},
 ]
 
