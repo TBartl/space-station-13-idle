@@ -40,7 +40,7 @@
 
       <div class="items-header flex-row align-items-center justify-content-between">
         <span>Combat</span>
-        <span :class="healthClass">({{playerHealth}}/{{playerMaxHealth}})</span>
+        <span :style="healthStyle">({{playerHealth}}/{{playerMaxHealth}})</span>
       </div>
       <sidebar-item
         v-for="job in combatJobs"
@@ -121,10 +121,10 @@ export default {
     playerMaxHealth() {
       return this.$store.getters["playerMob/stats"].maxHealth;
     },
-    healthClass() {
-      return this.playerHealth == this.playerMaxHealth
-        ? "health-full"
-        : "health-damaged";
+    healthStyle() {
+      let healthPercentage = this.playerHealth / this.playerMaxHealth;
+      let healthRGB = Math.floor(healthPercentage * 120);
+      return "color: hsl("+healthRGB+",100%,40%)";
     },
     bankItemIds() {
       return this.$store.getters["inventory/bankItemIds"];
@@ -224,13 +224,6 @@ export default {
   text-transform: uppercase;
   padding: 1rem 1rem 0.25rem 1rem;
   font-weight: bold;
-}
-
-.health-damaged {
-  color: rgb(202, 80, 80);
-}
-.health-full {
-  color: green;
 }
 
 a:hover,
