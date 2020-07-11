@@ -7,7 +7,7 @@ export default {
 	},
 	criminal: {
 		name: "Valor In Combat Medal",
-		description: "Given to particularly bloodthirst crewmembers for killing an enemy of Nanotrasen. Just throw it away since it's not worth the metal it's printed on.",
+		description: "Given to particularly bloodthirsty crewmembers for killing an enemy of Nanotrasen. Just throw it away since it's not worth the metal it's printed on.",
 		sellPrice: 1,
 		icon: require("@/assets/art/validhunting/guilty.png")
 	},
