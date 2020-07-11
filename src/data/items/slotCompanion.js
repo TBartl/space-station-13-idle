@@ -226,6 +226,19 @@ const SLIMES = {
 			power: 5,
 		},
 	},
+	companionParasite: {
+		name: "Holoparasite",
+		sellPrice: 10000,
+		icon: require("@/assets/art/combat/enemies/missing.png"), //todo
+		tier: 0,
+		stats: {
+			precision: 15,
+			power: 15,
+			protection: 15,
+			evasion: 15,
+			maxHealth: -1000
+		}
+	},
 	companionLava: {
 		name: "Dwarf Legion",
 		sellPrice: 83,

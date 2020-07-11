@@ -84,6 +84,17 @@ export default {
 			precision: 30
 		}
 	},
+	ammoRocket1: {
+		name: "Rocket",
+		sellPrice: 700,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/rocket_anim.gif"),
+		ammoType: "rocket",
+		stats: {
+			power: 15,
+			precision: 35
+		}
+	}
 	// pocketPDA1: {
 	// 	name: "Personal Digital Assistant",
 	// 	sellPrice: 5252,
