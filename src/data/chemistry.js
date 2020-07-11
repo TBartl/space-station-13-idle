@@ -64,7 +64,7 @@ const POTIONS = {
 		requiredItems: {
 			oxygen: 1,
 			oil: 2,
-			iron: 1
+			glass: 1
 		}
 	},
 	synthPotionGraytiding: {
@@ -118,7 +118,7 @@ const POTIONS = {
 			sacid: 1,
 			mercury: 1,
 			lithium: 1,
-			iron: 1
+			glass: 1
 		}
 	},
 	synthPotionXenobiology: {

@@ -193,7 +193,7 @@ const ACTIONS_SHARP_WEAPONS = {
 		time: 10,
 		item: "meleeSharp7",
 		icon: require("@/assets/art/combat/items/melee_c7.png"),
-		xp: 73,
+		xp: 43,
 		requiredLevel: 43,
 		requiredItems: {
 			junk: 2

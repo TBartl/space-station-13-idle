@@ -358,11 +358,11 @@ const ACTIONS = {
 				chance: 1,
 				itemTable: [
 					{
-						id: "iron",
+						id: "glass",
 						count: [1, 3],
 						weight: 325
 					},{
-						id: "glass",
+						id: "iron",
 						count: [1, 3],
 						weight: 220
 					},{

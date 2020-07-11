@@ -157,6 +157,26 @@ const SLIMES = {
 		icon: require("@/assets/art/combat/enemies/Ian.png"),
 		tier: 0,
 		stats: {
+			bruteProtection: 7,
+			maxHealth: 0
+		}
+	},
+	companionCat: {
+		name: "Pet Cat",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/runtime.png"),
+		tier: 0,
+		stats: {
+			burnProtection: 7,
+			maxHealth: 0
+		}
+	},
+	companionFox: {
+		name: "Pet Fox",
+		sellPrice: 1000,
+		icon: require("@/assets/art/combat/enemies/renault.png"),
+		tier: 0,
+		stats: {
 			precision: 5,
 			maxHealth: 0
 		}
@@ -206,6 +226,19 @@ const SLIMES = {
 			power: 5,
 		},
 	},
+	companionParasite: {
+		name: "Holoparasite",
+		sellPrice: 10000,
+		icon: require("@/assets/art/combat/enemies/missing.png"), //todo
+		tier: 0,
+		stats: {
+			precision: 15,
+			power: 15,
+			protection: 15,
+			evasion: 15,
+			maxHealth: -1000
+		}
+	},
 	companionLava: {
 		name: "Dwarf Legion",
 		sellPrice: 83,
@@ -217,7 +250,32 @@ const SLIMES = {
 			precision: -1,
 			power: 3,
 		},
-	}
+	} /*
+	companionPai: {
+		name: "Personal AI",
+		sellPrice: 1500,
+		icon: require("@/assets/art/combat/items/CompanionPai.png"),
+		tier: 2,
+		stats: {
+			maxHealth: 20,
+			precision: 2,
+			evasion: 2,
+			power: 2,
+		}
+	},
+	companionAicard: {
+		name: "Carded AI",
+		sellPrice: 2500,
+		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
+		tier: 5,
+		stats: {
+			maxHealth: 80,
+			burnProtection: 0,
+			bruteProtection: -2,
+			precision: 5,
+			evasion: 4,
+		}
+	} */
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";

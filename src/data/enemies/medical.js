@@ -9,7 +9,7 @@ export default {
 			power: 48,
 			evasion: 30,
 			damageType: "brute",
-			burnProtection: 30
+			burnProtection: 40
 		},
 		itemTables: [
 			{
@@ -44,6 +44,34 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatZ"
+			}
+		]
+	},
+	runtime: {
+		name: "Runtime",
+		icon: require("@/assets/art/combat/enemies/runtime.png"),
+		stats: {
+			maxHealth: 180,
+			attackSpeed: 2.1,
+			precision: 59,
+			power: 53,
+			evasion: 44,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 98
+					},
+					{
+						id: "companionCat",
+						weight: 2
+					},
+				]
 			}
 		]
 	},

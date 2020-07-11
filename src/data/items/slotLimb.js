@@ -144,8 +144,8 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/limb/shoe_magboots_overlay.png"),
 		stats: {
-			maxHealth: 60,
-			precision: 6,
+			maxHealth: 120,
+			precision: 0,
 			power: 2,
 			evasion: 2,
 			protection: 0,
@@ -178,8 +178,8 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/limb/shoe_advmag_overlay.png"),
 		stats: {
-			maxHealth: 120,
-			precision: 0,
+			maxHealth: 60,
+			precision: 6,
 			power: 2,
 			evasion: 2,
 			protection: 0,
