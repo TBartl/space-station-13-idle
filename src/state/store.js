@@ -18,6 +18,7 @@ import tinkering from "./tinkering";
 import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
+import bartending from "./bartending";
 import precision from "./precision";
 import meleePower from "./meleePower";
 import rangedPower from "./rangedPower";
@@ -47,6 +48,7 @@ const modules = {
 	command,
 	validhunting,
 	shitposting,
+	bartending,
 	precision,
 	meleePower,
 	rangedPower,
