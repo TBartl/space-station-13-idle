@@ -61,7 +61,7 @@ export default [
 		enemies: ["securitybot", "turrets", "AI"]
 	},
 	{
-		name: "Workers Revolution",
+		name: "Worker Strike",
 		icon: require("@/assets/art/combat/zones/revolution.png"),
 		enemies: ["rev1", "rev2", "rev3", "rev4"],
 		boss: true,
@@ -84,7 +84,7 @@ export default [
 	{
 		name: "Syndicate Nuclear Assault Team",
 		icon: require("@/assets/art/combat/zones/nuke.png"),
-		enemies: ["sec1", "sec2", "sec3", "sec4"],
+		enemies: ["nuke1", "nuke2", "nuke3", "nuke4"],
 		boss: true,
 		purchases: ["bossTicket40"]
 	},

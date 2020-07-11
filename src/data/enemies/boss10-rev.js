@@ -1,14 +1,14 @@
 const BOSSES = {
 	rev1: {
-		name: "Corrupt Security Officer",
-		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
+		name: "'Head' Of Cargo",
+		icon: require("@/assets/art/combat/enemies/boss/rev1.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
+			maxHealth: 300,
 			attackSpeed: 2.0,
-			precision: 31,
-			power: 37,
-			evasion: 32,
+			precision: 11,
+			power: 16,
+			evasion: 22,
 			damageType: "burn",
 			burnProtection: 50
 		},
@@ -17,19 +17,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 10000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [11, 12],
 						weight: 1
 					},
@@ -48,15 +48,15 @@ const BOSSES = {
 		]
 	},
 	rev2: {
-		name: "Meddling Detective",
-		icon: require("@/assets/art/combat/enemies/boss/sec-detective.png"),
+		name: "New Chief Medical Officer",
+		icon: require("@/assets/art/combat/enemies/boss/rev2.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
+			maxHealth: 300,
 			attackSpeed: 2.1,
-			precision: 31,
-			power: 35,
-			evasion: 29,
+			precision: 15,
+			power: 20,
+			evasion: 15,
 			damageType: "brute",
 			bruteProtection: 50
 		},
@@ -65,19 +65,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 10000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [13, 14],
 						weight: 1
 					},
@@ -96,15 +96,15 @@ const BOSSES = {
 		]
 	},
 	rev3: {
-		name: "Gulag Warden",
-		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
+		name: "IPC Research Director",
+		icon: require("@/assets/art/combat/enemies/boss/rev3_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
-			attackSpeed: 5,
-			precision: 23,
-			power: 76,
-			evasion: 33,
+			maxHealth: 300,
+			attackSpeed: 4,
+			precision: 10,
+			power: 29,
+			evasion: 10,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -112,19 +112,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 10000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [10, 16],
 						weight: 12
 					},
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [17, 18],
 						weight: 1
 					},
@@ -143,15 +143,15 @@ const BOSSES = {
 		]
 	},
 	rev4: {
-		name: "Anime Inspired Head Of Security",
-		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
+		name: "Agent Provocateur",
+		icon: require("@/assets/art/combat/enemies/boss/rev4.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1200,
+			maxHealth: 700,
 			attackSpeed: 2.4,
-			precision: 34,
-			power: 40,
-			evasion: 36,
+			precision: 22,
+			power: 17,
+			evasion: 20,
 			damageType: "burn",
 		},
 		itemTables: [
@@ -159,19 +159,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 20000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'boss1Parts',
+						id: 'revParts',
 						count: [23, 24],
 						weight: 1
 					},
@@ -183,7 +183,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 20
 					},
 				]
 			}
@@ -192,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 60;
+	boss.overrideRobustness = 25;
 })
 
 export default BOSSES;

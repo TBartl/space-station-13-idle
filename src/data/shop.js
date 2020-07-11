@@ -27,7 +27,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "secCrate", "lavaCrate", "syndieCrate"]
+		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "wizCrate",]
 	},
 	{
 		name: "Clothes Vendo-Matic",
@@ -276,6 +276,13 @@ const CRATES = {
 			money: 10000
 		}
 	},
+	revCrate: {
+		item: "revCrate",
+		description: "Workers fighting for equal pay have stashed supplies for the next time they inevitably need them. Finders Keepers.",
+		requiredItems: {
+			revParts: 20
+		}
+	},
 	secCrate: {
 		item: "secCrate",
 		description: "Everything needed to run an effecient internal security organization. Pre-dyed red to help cover those pesky blood stains.",
@@ -297,20 +304,34 @@ const CRATES = {
 			telecrystal: 20,
 		}
 	},
+	cultCrate: {
+		item: "cultCrate",
+		description: "If you avert your eyes from the sigils and just reach into the pod you can escape mostly intact.",
+		requiredItems: {
+			cultParts: 20,
+		}
+	},
+	wizCrate: {
+		item: "wizCrate",
+		description: "Syndicate forces have hijacked the droppod system to help you be the murderer you always knew you could be.",
+		requiredItems: {
+			wizParts: 20,
+		}
+	},
 }
 
 const TICKETS = {
 	bossTicket10: {
-		name: "Employment Contract",
+		name: "Review Employment Contract",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket10.png"),
 		requiredItems: {
-			ticket1: 5,
+			ticket10: 5,
 		},
-		fightZone: "Workers Revolution"
+		fightZone: "Worker Strike"
 	},
 	bossTicket1: {
-		name: "Code Green Ticket",
+		name: "Appeal Improper Citation",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket20.png"),
 		requiredItems: {
@@ -319,7 +340,7 @@ const TICKETS = {
 		fightZone: "Brutal Security"
 	},
 	bossTicket2: {
-		name: "Code Blue Bounty Ticket",
+		name: "Book Planetay Travel",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket30.png"),
 		requiredItems: {
@@ -328,16 +349,16 @@ const TICKETS = {
 		fightZone: "Primordial Planet"
 	},
 	bossTicket40: {
-		name: "Code Green Ticket",
+		name: "Crack Cryptographic Code",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket40.png"),
 		requiredItems: {
-			ticket1: 5,
+			ticket40: 5,
 		},
 		fightZone: "Syndicate Nuclear Assault Team"
 	},
 	bossTicket3: {
-		name: "Code Red Bounty Ticket",
+		name: "Investigate Occult Theory",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket50.png"),
 		requiredItems: {
@@ -346,11 +367,11 @@ const TICKETS = {
 		fightZone: "Subversive Individuals"
 	},
 	bossTicket60: {
-		name: "Code Green Ticket",
+		name: "Schedule Celebrity Tour",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket60_anim.gif"),
 		requiredItems: {
-			ticket1: 5,
+			ticket60: 5,
 		},
 		fightZone: "Brutal Security"
 	},

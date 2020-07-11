@@ -392,7 +392,7 @@
         Once you've collected enough
         <img
           class="mx--1"
-          :src="require('@/assets/art/validhunting/doceasy.png')"
+          :src="require('@/assets/art/validhunting/doc10.png')"
         />
         <b>Bounty Documents</b> from
         <img class="mx--1" :src="require('@/assets/art/combat/enemies/cargo_tech.png')" />

@@ -11,22 +11,40 @@ export default {
 		sellPrice: 1,
 		icon: require("@/assets/art/validhunting/guilty.png")
 	},
-	ticket1: {
-		name: "Code Green Bounty Documents",
-		description: "Gives the holder legal protection while dealing with minor criminals.",
+	ticket10: {
+		name: "Proletariat Propaganda",
+		description: "This propaganda claims that unions are immoral and your contract is fair.",
 		sellPrice: 250,
-		icon: require("@/assets/art/validhunting/doceasy.png")
+		icon: require("@/assets/art/validhunting/doc10.png")
+	},
+	ticket1: {
+		name: "Facist Propagandas",
+		description: "This propaganda claims the security team is here for your protection.",
+		sellPrice: 250,
+		icon: require("@/assets/art/validhunting/doc20.png")
 	},
 	ticket2: {
-		name: "Code Blue Bounty Documents",
-		description: "Provides the holder legal protection while dealing with native threats.",
+		name: "Local Fauna Propaganda",
+		description: "This propaganda claims the orbited planet is safe to visit.",
 		sellPrice: 500,
-		icon: require("@/assets/art/validhunting/docmedium.png")
+		icon: require("@/assets/art/validhunting/doc30.png")
+	},
+	ticket40: {
+		name: "Security Propaganda",
+		description: "This propaganda claims Nanotrasen and the Syndicate aren't engaged in armed corporate warfare.",
+		sellPrice: 500,
+		icon: require("@/assets/art/validhunting/doc40.png")
 	},
 	ticket3: {
-		name: "Code Red Bounty Documents",
-		description: "Gives the holder carte blance legal immunity while dealing with threats to station.",
+		name: "Religious Propagana",
+		description: "This propaganda claims the veil to the higher realms is stable.",
 		sellPrice: 1000,
-		icon: require("@/assets/art/validhunting/dochard.png")
-	}
+		icon: require("@/assets/art/validhunting/doc50.png")
+	},
+	ticket60: {
+		name: "Casuality Propaganda",
+		description: "This propaganda claims magic isn't real and can't hurt you.",
+		sellPrice: 500,
+		icon: require("@/assets/art/validhunting/doc60.png")
+	},
 }

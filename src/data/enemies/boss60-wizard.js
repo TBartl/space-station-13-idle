@@ -1,15 +1,14 @@
 const BOSSES = {
 	wizard1: {
 		name: "Skeletal Thrall",
-		//give reed/jegub credit for the skeleton sprite
 		icon: require("@/assets/art/combat/enemies/boss/wiz-skeleton.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
 			attackSpeed: 2.6,
-			precision: 86,
-			power: 78,
-			evasion: 80,
+			precision: 100,
+			power: 100,
+			evasion: 100,
 			damageType: "brute",
 			burnProtection: 90,
 		},
@@ -18,19 +17,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 60000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [11, 12],
 						weight: 1
 					},
@@ -55,9 +54,9 @@ const BOSSES = {
 		stats: {
 			maxHealth: 3000,
 			attackSpeed: 2.9,
-			precision: 82,
-			power: 86,
-			evasion: 84,
+			precision: 100,
+			power: 100,
+			evasion: 100,
 			damageType: "brute",
 			bruteProtection: 90
 		},
@@ -66,19 +65,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 60000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [10, 16],
 						weight: 12
 					},
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [17, 18],
 						weight: 1
 					},
@@ -90,22 +89,22 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 60
 					},
 				]
 			}
 		]
 	},
 	wizard3: {
-		name: "Syndicate Nuclear Operative",
+		name: "Weilder of True Light",
 		icon: require("@/assets/art/combat/enemies/boss/wiz-moth_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
 			attackSpeed: 9,
-			precision: 73,
-			power: 166,
-			evasion: 71,
+			precision: 100,
+			power: 100,
+			evasion: 100,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -113,19 +112,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 60000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [13, 14],
 						weight: 1
 					},
@@ -137,22 +136,22 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 25
+						count: 60
 					},
 				]
 			}
 		]
 	},
 	wizard4: {
-		name: "Wizard",
+		name: "THE Wizard",
 		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3600,
 			attackSpeed: 1.5,
-			precision: 90,
-			power: 94,
-			evasion: 88,
+			precision: 110,
+			power: 110,
+			evasion: 110,
 			damageType: "burn",
 		},
 		itemTables: [
@@ -160,19 +159,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 70000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'telecrystal',
+						id: 'wizParts',
 						count: [23, 24],
 						weight: 1
 					},
@@ -184,7 +183,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 70
 					},
 				]
 			}
@@ -193,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 180;
+	boss.overrideRobustness = 130;
 })
 
 export default BOSSES;

@@ -4,11 +4,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
-			attackSpeed: 1.7,
-			precision: 50,
-			power: 63,
-			evasion: 60,
+			maxHealth: 1200,
+			attackSpeed: 3.2,
+			precision: 63,
+			power: 51,
+			evasion: 36,
 			damageType: "burn",
 			burnProtection: 70
 		},
@@ -17,7 +17,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 30000]
 				}
 			},
 			{
@@ -52,11 +52,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
+			maxHealth: 1200,
 			attackSpeed: 2.1,
-			precision: 60,
-			power: 50,
-			evasion: 57,
+			precision: 37,
+			power: 70,
+			evasion: 43,
 			damageType: "brute",
 			bruteProtection: 70
 		},
@@ -65,7 +65,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 30000]
 				}
 			},
 			{
@@ -100,11 +100,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
-			attackSpeed: 7,
-			precision: 53,
-			power: 121,
-			evasion: 62,
+			maxHealth: 1200,
+			attackSpeed: 6,
+			precision: 71,
+			power: 33,
+			evasion: 46,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -113,7 +113,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 30000]
 				}
 			},
 			{
@@ -137,7 +137,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 30
 					},
 				]
 			}
@@ -148,11 +148,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 2400,
+			maxHealth: 3000,
 			attackSpeed: 3.4,
-			precision: 59,
-			power: 71,
-			evasion: 62,
+			precision: 56,
+			power: 55,
+			evasion: 51,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -161,7 +161,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 40000]
 				}
 			},
 			{
@@ -185,7 +185,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 40
 					},
 				]
 			}
@@ -194,7 +194,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 110;
+	boss.overrideRobustness = 65;
 })
 
 export default BOSSES;

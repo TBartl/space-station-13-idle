@@ -4,11 +4,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
+			maxHealth: 700,
 			attackSpeed: 2.0,
-			precision: 31,
-			power: 37,
-			evasion: 32,
+			precision: 36,
+			power: 30,
+			evasion: 33,
 			damageType: "burn",
 			burnProtection: 50
 		},
@@ -17,7 +17,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 20000]
 				}
 			},
 			{
@@ -41,7 +41,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 20
 					},
 				]
 			}
@@ -52,11 +52,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/sec-detective.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
+			maxHealth: 700,
 			attackSpeed: 2.1,
-			precision: 31,
-			power: 35,
-			evasion: 29,
+			precision: 32,
+			power: 34,
+			evasion: 34,
 			damageType: "brute",
 			bruteProtection: 50
 		},
@@ -65,7 +65,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 20000]
 				}
 			},
 			{
@@ -89,7 +89,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 20
 					},
 				]
 			}
@@ -100,11 +100,11 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
+			maxHealth: 700,
 			attackSpeed: 5,
-			precision: 23,
-			power: 76,
-			evasion: 33,
+			precision: 30,
+			power: 41,
+			evasion: 30,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -136,7 +136,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatZ',
 						weight: 1,
-						count: 10
+						count: 20
 					},
 				]
 			}
@@ -147,7 +147,7 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1200,
+			maxHealth: 1750,
 			attackSpeed: 2.4,
 			precision: 34,
 			power: 40,
@@ -159,7 +159,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 30000]
 				}
 			},
 			{
@@ -183,7 +183,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 30
 					},
 				]
 			}
@@ -192,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 60;
+	boss.overrideRobustness = 45;
 })
 
 export default BOSSES;

@@ -1,10 +1,10 @@
 const BOSSES = {
 	nuke1: {
-		name: "Ash Drake",
-		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
+		name: "Hasty Recruit",
+		icon: require("@/assets/art/combat/enemies/boss/nukeop1.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
+			maxHealth: 1800,
 			attackSpeed: 1.7,
 			precision: 50,
 			power: 63,
@@ -17,19 +17,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 40000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [13, 14],
 						weight: 1
 					},
@@ -39,20 +39,20 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatA',
+						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 40
 					},
 				]
 			}
 		]
 	},
 	nuke2: {
-		name: "Bubblegum",
-		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
+		name: "Syndicate Assault Cyborg",
+		icon: require("@/assets/art/combat/enemies/boss/nukeborg_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
+			maxHealth: 1800,
 			attackSpeed: 2.1,
 			precision: 60,
 			power: 50,
@@ -65,19 +65,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 40000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [10, 16],
 						weight: 12
 					},
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [17, 18],
 						weight: 1
 					},
@@ -89,18 +89,18 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 40
 					},
 				]
 			}
 		]
 	},
 	nuke3: {
-		name: "Blood Drunk Miner",
-		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
+		name: "'Larry' Incendiary",
+		icon: require("@/assets/art/combat/enemies/boss/OPl6.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1000,
+			maxHealth: 1800,
 			attackSpeed: 7,
 			precision: 53,
 			power: 121,
@@ -113,19 +113,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 40000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [11, 12],
 						weight: 1
 					},
@@ -137,18 +137,18 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 40
 					},
 				]
 			}
 		]
 	},
 	nuke4: {
-		name: "Legion",
-		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
+		name: "Mechanized Assault Suit",
+		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 2400,
+			maxHealth: 3600,
 			attackSpeed: 3.4,
 			precision: 59,
 			power: 71,
@@ -161,19 +161,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 10000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'exoticParts',
+						id: 'telecrystal',
 						count: [23, 24],
 						weight: 1
 					},
@@ -185,7 +185,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 50
 					},
 				]
 			}
@@ -194,7 +194,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 110;
+	boss.overrideRobustness = 85;
 })
 
 export default BOSSES;

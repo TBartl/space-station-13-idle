@@ -1,7 +1,7 @@
 const BOSSES = {
 	cult1: {
-		name: "Cultist of Nar'sie",
-		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
+		name: "Proselytizing Cultist",
+		icon: require("@/assets/art/combat/enemies/boss/cult1_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
@@ -17,19 +17,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [11, 12],
 						weight: 1
 					},
@@ -41,15 +41,15 @@ const BOSSES = {
 					{
 						id: 'foodMeatZ',
 						weight: 1,
-						count: 25
+						count: 50
 					},
 				]
 			}
 		]
 	},
 	cult2: {
-		name: "Cultist of Ratvar",
-		icon: require("@/assets/art/combat/enemies/boss/antag-clock.png"),
+		name: "Devout Neophyte",
+		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
@@ -65,19 +65,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [10, 16],
 						weight: 12
 					},
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [17, 18],
 						weight: 1
 					},
@@ -89,22 +89,22 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 50
 					},
 				]
 			}
 		]
 	},
 	cult3: {
-		name: "Syndicate Nuclear Operative",
-		icon: require("@/assets/art/combat/enemies/boss/antag-op.png"),
+		name: "Wraith Construct",
+		icon: require("@/assets/art/combat/enemies/boss/cultwraith_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
-			attackSpeed: 9,
+			attackSpeed: 8,
 			precision: 73,
-			power: 166,
-			evasion: 71,
+			power: 71,
+			evasion: 166,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -112,19 +112,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [13, 14],
 						weight: 1
 					},
@@ -136,15 +136,15 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 25
+						count: 50
 					},
 				]
 			}
 		]
 	},
 	cult4: {
-		name: "Wizard",
-		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
+		name: "Curate Of Blood",
+		icon: require("@/assets/art/combat/enemies/boss/cult4_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3600,
@@ -159,19 +159,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'telecrystal',
+						id: 'cultParts',
 						count: [23, 24],
 						weight: 1
 					},
@@ -183,7 +183,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 60
 					},
 				]
 			}
@@ -192,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 180;
+	boss.overrideRobustness = 110;
 })
 
 export default BOSSES;
