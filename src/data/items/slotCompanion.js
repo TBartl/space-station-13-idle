@@ -237,7 +237,32 @@ const SLIMES = {
 			precision: -1,
 			power: 3,
 		},
-	}
+	} /*
+	companionPai: {
+		name: "Personal AI",
+		sellPrice: 1500,
+		icon: require("@/assets/art/combat/items/CompanionPai.png"),
+		tier: 2,
+		stats: {
+			maxHealth: 20,
+			precision: 2,
+			evasion: 2,
+			power: 2,
+		}
+	},
+	companionAicard: {
+		name: "Carded AI",
+		sellPrice: 2500,
+		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
+		tier: 5,
+		stats: {
+			maxHealth: 80,
+			burnProtection: 0,
+			bruteProtection: -2,
+			precision: 5,
+			evasion: 4,
+		}
+	} */
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";
