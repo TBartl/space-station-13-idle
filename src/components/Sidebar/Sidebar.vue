@@ -122,9 +122,16 @@ export default {
       return this.$store.getters["playerMob/stats"].maxHealth;
     },
     healthClass() {
-      return this.playerHealth == this.playerMaxHealth
-        ? "health-full"
-        : "health-damaged";
+      if (this.playerMaxHealth == this.playerHealth) {
+        return "health-full"
+      }
+      else if (parseInt(this.playerMaxHealth) / 2 < this.playerHealth) {
+        return "health-damaged"
+      }
+      else if (parseInt(this.playerMaxHealth) / 4 < this.playerHealth) {
+        return "health-severe"
+      }
+      else return "health-critical"
     },
     bankItemIds() {
       return this.$store.getters["inventory/bankItemIds"];
@@ -226,8 +233,14 @@ export default {
   font-weight: bold;
 }
 
+.health-critical {
+  color: red;
+}
+.health-severe {
+  color: orange
+}
 .health-damaged {
-  color: rgb(202, 80, 80);
+  color: rgb(197, 197, 0);
 }
 .health-full {
   color: green;
