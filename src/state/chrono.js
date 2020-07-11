@@ -68,13 +68,13 @@ const chrono = {
 		recursionPotential(state, getters, rootState, rootGetters) {
 			let sum = BASE_BONUS;
 			ITEM_INTERVALS.forEach(x => {
-				if (x < rootGetters["completion/itemPercent"]) sum += 1;
+				if (x <= rootGetters["completion/itemPercent"]) sum += 1;
 			});
 			ENEMY_INTERVALS.forEach(x => {
-				if (x < rootGetters["completion/enemyPercent"]) sum += 1;
+				if (x <= rootGetters["completion/enemyPercent"]) sum += 1;
 			});
 			JOB_INTERVALS.forEach(x => {
-				if (x < rootGetters["completion/jobPercent"]) sum += 1;
+				if (x <= rootGetters["completion/jobPercent"]) sum += 1;
 			});
 			return sum;
 		}
