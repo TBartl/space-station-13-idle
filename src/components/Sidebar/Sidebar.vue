@@ -124,7 +124,7 @@ export default {
     healthStyle() {
       let healthPercentage = this.playerHealth / this.playerMaxHealth;
       let healthRGB = Math.floor(healthPercentage * 120);
-      return "color: hsl("+healthRGB+",100%,40%)"
+      return "color: hsl("+healthRGB+",100%,40%)";
     },
     bankItemIds() {
       return this.$store.getters["inventory/bankItemIds"];
