@@ -15,9 +15,7 @@
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
             <span class="mr-1">ITEMS</span>
-            <span
-              class="primary-bubble"
-            >{{Math.floor(100 * itemsComplete / Object.keys(items).length)}}%</span>
+            <span class="primary-bubble">{{$store.getters['completion/itemPercent']}}%</span>
           </div>
           <div
             v-if="itemsExpanded"
@@ -36,7 +34,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
-								:customClass="$store.getters['settings/darkModeClass']"
+                :customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
@@ -54,9 +52,7 @@
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
             <span class="mr-1">ENEMIES</span>
-            <span
-              class="primary-bubble"
-            >{{Math.floor(100 * enemiesComplete / Object.keys(enemies).length)}}%</span>
+            <span class="primary-bubble">{{$store.getters['completion/enemyPercent']}}%</span>
           </div>
           <div
             v-if="enemiesExpanded"
@@ -75,7 +71,7 @@
                 triggers="hover"
                 placement="top"
                 delay="0"
-								:customClass="$store.getters['settings/darkModeClass']"
+                :customClass="$store.getters['settings/darkModeClass']"
               >
                 <div class="d-flex flex-column align-items-center">
                   <h6>{{entry[1].name}}</h6>
@@ -94,7 +90,7 @@
           >
             <img :src="require('@/assets/art/misc/eyes.png')" class="mr-2" />
             <span class="mr-1">JOBS</span>
-            <span class="primary-bubble">{{Math.floor(100*totalLevelPercent)}}%</span>
+            <span class="primary-bubble">{{$store.getters['completion/jobPercent']}}%</span>
           </div>
           <div v-if="jobsExpanded" class="content-block content-block-bottom d-flex flex-row">
             <div class="d-flex flex-column align-items-center w-50">
@@ -171,13 +167,6 @@ export default {
     enemies() {
       return ENEMIES;
     },
-    itemsComplete() {
-      return Object.keys(ITEMS).filter(itemId => this.getItem(itemId)).length;
-    },
-    enemiesComplete() {
-      return Object.keys(ENEMIES).filter(enemyId => this.getEnemy(enemyId))
-        .length;
-    },
     jobs() {
       return ALL_JOBS.map(job => {
         return Object.assign({}, job, {
@@ -194,12 +183,6 @@ export default {
     },
     maxLevel() {
       return MAX_LEVEL;
-    },
-    totalLevelPercent() {
-      let sum = 0;
-      this.jobs.forEach(job => (sum += job.level));
-      let max = this.jobs.length * MAX_LEVEL;
-      return sum / max;
     }
   },
   filters: {
@@ -239,7 +222,7 @@ export default {
   filter: brightness(0.15) opacity(0.2);
 }
 .dark-mode .hidden {
-  filter: brightness(0.10) opacity(0.2);
+  filter: brightness(0.1) opacity(0.2);
 }
 
 .bar {
@@ -248,6 +231,9 @@ export default {
   padding: 2px 4px;
   width: 100%;
   max-width: 600px;
+}
+.dark-mode .bar span {
+  color: rgb(241, 241, 241);
 }
 .dark-mode .bar {
   background-color: rgba(89, 141, 253, 0.082);

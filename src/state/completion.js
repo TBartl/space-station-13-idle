@@ -1,7 +1,11 @@
 import Vue from 'vue'
 
 
+
+import ITEMS from "@/data/items";
+import ENEMIES from "@/data/enemies";
 import { ALL_JOBS } from "@/data/jobs";
+import { MAX_LEVEL } from "@/data/experience";
 
 const BASE_JOB_TIME = {};
 ALL_JOBS.forEach(job => {
@@ -34,6 +38,20 @@ const completion = {
 			return (jobId) => {
 				return state.jobTime[jobId];
 			}
+		},
+		itemPercent(state, getters) {
+			let itemsComplete = Object.keys(ITEMS).filter(itemId => getters.getItem(itemId)).length;
+			return Math.floor(100 * itemsComplete / Object.keys(ITEMS).length);
+		},
+		enemyPercent(state, getters) {
+			let enemiesComplete = Object.keys(ENEMIES).filter(enemyId => getters.getEnemy(enemyId))
+				.length;
+			return Math.floor(100 * enemiesComplete / Object.keys(ENEMIES).length);
+		},
+		jobPercent(state, getters, rootState, rootGetters) {
+			let sum = 0;
+			ALL_JOBS.forEach(job => (sum += Math.min(rootGetters[job.id + "/level"], MAX_LEVEL)));
+			return Math.floor(100 * sum / (ALL_JOBS.length * MAX_LEVEL));
 		}
 	},
 	mutations: {
