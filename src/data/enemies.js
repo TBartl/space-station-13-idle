@@ -13,14 +13,20 @@ import science from "./enemies/science.js";
 import showroom from "./enemies/showroom.js";
 import virology from "./enemies/virology.js";
 
-import boss1Security from '@/data/enemies/boss1-security';
-import boss2Lavaland from '@/data/enemies/boss2-lavaland';
-import boss3Antag from '@/data/enemies/boss3-antag';
+import boss10Rev from '@/data/enemies/boss10-rev';
+import boss20Security from '@/data/enemies/boss20-security';
+import boss30Lavaland from '@/data/enemies/boss30-lavaland';
+import boss40Nuke from '@/data/enemies/boss40-nuke';
+import boss50Cult from '@/data/enemies/boss50-cult';
+import boss60Wizard from '@/data/enemies/boss60-wizard';
 
 const BOSS_ENEMIES = {
-	...boss1Security,
-	...boss2Lavaland,
-	...boss3Antag
+	...boss10Rev,
+	...boss20Security,
+	...boss30Lavaland,
+	...boss40Nuke,
+	...boss50Cult,
+	...boss60Wizard,
 }
 
 Object.values(BOSS_ENEMIES).forEach(bossEnemy => {

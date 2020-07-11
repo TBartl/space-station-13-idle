@@ -399,7 +399,7 @@
         <b>Enemies</b>, you'll be able to purchase a
         <img
           class="mx--0"
-          :src="require('@/assets/art/shop/items/ticketeasy.png')"
+          :src="require('@/assets/art/shop/items/ticket20.png')"
         />
         <b>Ticket</b> to fight a random
         <img

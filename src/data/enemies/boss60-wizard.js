@@ -1,7 +1,8 @@
 const BOSSES = {
-	antag1: {
-		name: "Cultist of Nar'sie",
-		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
+	wizard1: {
+		name: "Skeletal Thrall",
+		//give reed/jegub credit for the skeleton sprite
+		icon: require("@/assets/art/combat/enemies/boss/wiz-skeleton.png"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
@@ -47,9 +48,9 @@ const BOSSES = {
 			}
 		]
 	},
-	antag2: {
-		name: "Cultist of Ratvar",
-		icon: require("@/assets/art/combat/enemies/boss/antag-clock.png"),
+	wizard2: {
+		name: "Magical Holoparasite",
+		icon: require("@/assets/art/combat/enemies/boss/wiz-stand_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
@@ -95,9 +96,9 @@ const BOSSES = {
 			}
 		]
 	},
-	antag3: {
+	wizard3: {
 		name: "Syndicate Nuclear Operative",
-		icon: require("@/assets/art/combat/enemies/boss/antag-op.png"),
+		icon: require("@/assets/art/combat/enemies/boss/wiz-moth_anim.gif"),
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
@@ -142,7 +143,7 @@ const BOSSES = {
 			}
 		]
 	},
-	antag4: {
+	wizard4: {
 		name: "Wizard",
 		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
 		validhuntable: false,

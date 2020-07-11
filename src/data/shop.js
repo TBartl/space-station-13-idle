@@ -300,10 +300,19 @@ const CRATES = {
 }
 
 const TICKETS = {
+	bossTicket10: {
+		name: "Employment Contract",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticket10.png"),
+		requiredItems: {
+			ticket1: 5,
+		},
+		fightZone: "Workers Revolution"
+	},
 	bossTicket1: {
 		name: "Code Green Ticket",
 		description: "On purchase, starts a fight with a random boss in this zone.",
-		icon: require("@/assets/art/shop/items/ticketeasy.png"),
+		icon: require("@/assets/art/shop/items/ticket20.png"),
 		requiredItems: {
 			ticket1: 5,
 		},
@@ -312,20 +321,38 @@ const TICKETS = {
 	bossTicket2: {
 		name: "Code Blue Bounty Ticket",
 		description: "On purchase, starts a fight with a random boss in this zone.",
-		icon: require("@/assets/art/shop/items/ticketmedium.png"),
+		icon: require("@/assets/art/shop/items/ticket30.png"),
 		requiredItems: {
 			ticket2: 5,
 		},
 		fightZone: "Primordial Planet"
 	},
+	bossTicket40: {
+		name: "Code Green Ticket",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticket40.png"),
+		requiredItems: {
+			ticket1: 5,
+		},
+		fightZone: "Syndicate Nuclear Assault Team"
+	},
 	bossTicket3: {
 		name: "Code Red Bounty Ticket",
 		description: "On purchase, starts a fight with a random boss in this zone.",
-		icon: require("@/assets/art/shop/items/tickethard.png"),
+		icon: require("@/assets/art/shop/items/ticket50.png"),
 		requiredItems: {
 			ticket3: 5,
 		},
 		fightZone: "Subversive Individuals"
+	},
+	bossTicket60: {
+		name: "Code Green Ticket",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticket60_anim.gif"),
+		requiredItems: {
+			ticket1: 5,
+		},
+		fightZone: "Brutal Security"
 	},
 }
 
