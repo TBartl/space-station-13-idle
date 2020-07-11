@@ -122,6 +122,10 @@ export default {
       return this.$store.getters["playerMob/stats"].maxHealth;
     },
     healthClass() {
+      healthPercentage = Math.floor(this.playerHealth / this.playerMaxHealth);
+      healthPercentage < 50
+        ? healthColor = rgb(128, healthPercentage*1.28, 0)
+        : healthColor = rgb(128-healthPercentage*1.28, 128, 0);
       return this.playerHealth == this.playerMaxHealth
         ? "health-full"
         : "health-damaged";
@@ -227,7 +231,7 @@ export default {
 }
 
 .health-damaged {
-  color: rgb(202, 80, 80);
+  color: healthColor;
 }
 .health-full {
   color: green;
