@@ -338,5 +338,4 @@ export const PURCHASES = {
 	...JOB_UPGRADES,
 	...CRATES,
 	...TICKETS
-
 }

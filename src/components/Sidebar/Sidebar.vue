@@ -64,7 +64,7 @@
       <sidebar-item
         id="chronosphere"
         text="Chronosphere"
-        :icon="require('@/assets/art/sidebar/chronohelmet.png')"
+        :icon="require('@/assets/art/chrono/icon.png')"
         :textColor="chronoSpeed != 1 ? '#3ac5ff' : ''"
       >
         <span style="color: '#3ac5ff'">{{chronoSpeed}}x</span>

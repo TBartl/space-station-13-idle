@@ -4,7 +4,7 @@
     <span>
       Your time offline has been converted for use at the
       <img
-        :src="require('@/assets/art/sidebar/chronohelmet.png')"
+        :src="require('@/assets/art/chrono/icon.png')"
         class="mx--1"
       />
       <b>Chronosphere</b>.

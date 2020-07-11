@@ -41,7 +41,7 @@
 
 <script>
 import ITEMS from "@/data/items";
-import { PURCHASES } from "@/data/shop";
+import PURCHASES from "@/data/purchases";
 import ItemPopover from "@/components/ItemPopover";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
 import { ALL_JOBS } from "@/data/jobs";
@@ -130,14 +130,14 @@ export default {
   font-size: 15px;
 }
 .dark-mode .requires {
-  color: rgb(121, 121, 121);
+  color: rgb(195, 195, 195);
 
 }
 .locked .requires {
   color: rgb(241, 241, 241);
 }
 .dark-mode .locked .requires {
-  color: rgb(199, 199, 199);
+  color: rgb(119, 119, 119);
 }
 .requires img {
   width: 32px;

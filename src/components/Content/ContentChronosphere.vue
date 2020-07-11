@@ -2,7 +2,7 @@
   <div class="content-settings">
     <content-header
       text="Settings"
-      :icon="require('@/assets/art/sidebar/chronohelmet.png')"
+      :icon="require('@/assets/art/chrono/icon.png')"
       color="#3ac5ff"
     />
     <div class="content-container">
@@ -12,17 +12,26 @@
         title="Kor Phaeron the Chrono Legionnaire says..."
         :options="[
 					{name: 'Back'},
-					{name: '???'}
+					{name: 'Time Bank?', icon: require('@/assets/art/chrono/icon.png'), iconClass:'mx--2'},
+					{name: 'Chrono Shop?', icon: require('@/assets/art/chrono/bluetime.png'), iconClass:'mx--1'},
+					{name: 'Recursion?', icon: require('@/assets/art/chrono/bluetime-empty.png'), iconClass:'mx--1'},
 				]"
       >
         <template slot="Back">
           <span>Listen, I don't know how to break this to you but...</span>
           <span>I have reasons to believe we may be trapped inside a simulation.</span>
         </template>
-        <template slot="???">
+        <template slot="Time Bank?">
           <span>When the simulation is closed, time will continue outside our reality in the "real world".</span>
+          <span>
+            All of the time that passes out there will get stored in this
+            <b>Time Bank</b>.
+          </span>
           <span>We can tap into this lost time, get back to where we should be.</span>
-          <span>While using lost time, everything in our simulation will run at an accelerated rate.</span>
+          <span>
+            While using the time stored in the
+            <b>Time Bank</b>, everything in our simulation will run at an accelerated rate.
+          </span>
           <span>
             And I mean everything:
             <img class="mx--1" :src="require('@/assets/art/mining/icon.png')" />
@@ -46,10 +55,34 @@
         </template>
       </job-info>
 
-      <div class="row">
+      <div class="row my-4">
+        <div class="col-12">
+          <div class="d-flex flex-row justify-content-center">
+            <div class="btn-group btn-group-toggle">
+              <button
+                class="btn btn-lg"
+                @click="tab='bank'"
+                :class="tab=='bank' ? 'btn-primary' : 'btn-outline-primary'"
+              >Time Bank</button>
+              <button
+                class="btn btn-lg"
+                @click="tab='shop'"
+                :class="tab=='shop' ? 'btn-primary' : 'btn-outline-primary'"
+              >Chrono Shop</button>
+              <button
+                class="btn btn-lg"
+                @click="tab='recursion'"
+                :class="tab=='recursion' ? 'btn-primary' : 'btn-outline-primary'"
+              >Recursion</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="tab=='bank'" class="row time-bank">
         <div class="col-12">
           <div class="content-block">
-            <h5>Chronosphere</h5>
+            <h5>Time Bank</h5>
             <hr />
             <div class="d-flex flex-column align-items-center">
               <h6 class="mb-2">Desired Speed:</h6>
@@ -63,7 +96,6 @@
                   @click="setDesiredChronoSpeed(speed)"
                 >{{speed}}x</button>
               </div>
-              <h6 class="mt-3 mb-2">Time Bank:</h6>
               <progress-bar
                 class="mt-1 black-background chrono-bar"
                 :progress="barPercent"
@@ -75,6 +107,21 @@
           </div>
         </div>
       </div>
+
+      <div v-if="tab=='shop'" class="row">
+        <div class="col-12">
+          <shop-section v-for="(section, index) in sections" :key="index" :section="section" />
+        </div>
+      </div>
+
+      <div v-if="tab=='recursion'" class="row">
+        <div class="col-12">
+          <div class="content-block">
+            <h5>Recursion</h5>
+            <hr />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -82,10 +129,17 @@
 <script>
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ProgressBar from "@/components/ProgressBar";
+import ShopSection from "@/components/Content/Shop/ShopSection";
+import { SECTIONS } from "@/data/chronoshop";
 
 export default {
   extends: ContentAbstract,
-  components: { ProgressBar },
+  components: { ProgressBar, ShopSection },
+  data() {
+    return {
+      tab: "bank"
+    };
+  },
   computed: {
     speeds(state, getters) {
       return this.$store.getters["chrono/speeds"];
@@ -115,6 +169,9 @@ export default {
     },
     infinite() {
       return this.$store.getters["cheats/infiniteChrono"];
+    },
+    sections() {
+      return SECTIONS;
     }
   },
   methods: {
@@ -126,7 +183,7 @@ export default {
 </script>
 
 <style scoped>
-.btn {
+.time-bank .btn {
   margin: 0.25rem;
 }
 

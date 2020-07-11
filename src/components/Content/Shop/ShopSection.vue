@@ -28,7 +28,7 @@
 
 <script>
 import ShopPurchase from "@/components/Content/Shop/ShopPurchase";
-import { PURCHASES } from "@/data/shop";
+import PURCHASES from "@/data/purchases";
 export default {
   components: { ShopPurchase },
   props: ["section"],
