@@ -85,7 +85,7 @@ const MBRUTE = {
 		}
 	},
 	meleeBlunt6: {
-		name: "Fire Extinquisher",
+		name: "Fire Extinguisher",
 		sellPrice: 480,
 		icon: require("@/assets/art/combat/items/melee_b6.png"),
 		overlay: require("@/assets/art/combat/items/melee_b6_overlay.png"),

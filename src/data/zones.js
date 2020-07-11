@@ -38,7 +38,7 @@ export default [
 	{
 		name: "Medical",
 		icon: require("@/assets/art/combat/zones/medical.png"),
-		enemies: ["runtime", "surgeon", "cluelessdoctor", "hulk"]
+		enemies: ["surgeon", "runtime", "cluelessdoctor", "hulk"]
 	},
 	{
 		name: "Bridge",
