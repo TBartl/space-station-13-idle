@@ -184,7 +184,7 @@ export default {
   components: { ProgressBar, ShopSection },
   data() {
     return {
-      tab: "recursion"
+      tab: "shop"
     };
   },
   computed: {
