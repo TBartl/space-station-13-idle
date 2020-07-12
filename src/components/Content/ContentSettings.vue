@@ -32,6 +32,19 @@
 
             <div class="custom-control custom-switch">
               <input
+                v-model="pocketsEmptyStop"
+                type="checkbox"
+                class="custom-control-input"
+                id="pocketsEmptyStop"
+              />
+              <label
+                class="custom-control-label"
+                for="pocketsEmptyStop"
+              >Stop Combat when Pockets Empty</label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input
                 v-model="darkMode"
                 type="checkbox"
                 class="custom-control-input"
@@ -226,6 +239,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setInventoryFullStop", value);
+      }
+    },
+    pocketsEmptyStop: {
+      get() {
+        return this.$store.getters["settings/pocketsEmptyStop"];
+      },
+      set(value) {
+        this.$store.commit("settings/setPocketsEmptyStop", value);
       }
     },
     chronoPanelEnabled: {
