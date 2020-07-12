@@ -102,6 +102,13 @@ export default [
 		boss: true,
 		purchases: ["bossTicket60"]
 	},
+	{
+		name: "Tear in the Fabric of Reality",
+		icon: require("@/assets/art/combat/zones/tear.gif"),
+		enemies: ["doppleganger"],
+		boss: true,
+		purchases: ["bossTicketReset"]
+	},
 	// {
 	// 	name: "Debug Land",
 	// 	icon: require("@/assets/art/debug/banner.png"),

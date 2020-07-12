@@ -18,7 +18,7 @@
               v-for="option in filteredOptions"
               :key="option.name"
               class="btn mt-1 mx-1"
-							:class="option.name == current ? 'btn-primary' : 'btn-outline-primary'"
+              :class="option.name == current ? 'btn-primary' : 'btn-outline-primary'"
               @click="current=option.name"
             >
               <img
@@ -88,10 +88,12 @@ export default {
 .option-icon {
   width: 32px;
 }
-.slot span {
+.slot span,
+.slot div * {
   margin-top: 0.5rem;
 }
-.slot span img {
+.slot span img,
+.slot div * img {
   width: 32px;
 }
 </style>

@@ -375,6 +375,17 @@ const TICKETS = {
 		},
 		fightZone: "Wizard Federation 'Diplomats'"
 	},
+	bossTicketReset: {
+		name: "Place bags of holdings inside each other",
+		description: "On purchase, starts a fight with this boss.",
+		icon: require("@/assets/art/shop/items/tickettear.gif"),
+		requiredItems: {
+			bluespace: 8,
+			tomatoBluespace: 8,
+			slimeBluespace: 8
+		},
+		fightZone: "Tear in the Fabric of Reality"
+	},
 }
 
 export const PURCHASES = {
@@ -386,5 +397,4 @@ export const PURCHASES = {
 	...JOB_UPGRADES,
 	...CRATES,
 	...TICKETS
-
 }

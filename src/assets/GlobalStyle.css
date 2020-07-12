@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #91999e;
 }
 
+.dark-mode hr {
+	background-color: rgb(102, 102, 102)
+}
+
 .dark-mode .text-muted {
 	color: #b0bac0 !important;
 }

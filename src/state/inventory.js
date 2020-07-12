@@ -159,6 +159,11 @@ const inventory = {
 						if (rootGetters[jobId + "/level"] < level) return false;
 					}
 				}
+				if (purchase.requiredUpgrades) {
+					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
+						if (rootGetters["upgrades/get"](upgradeId) != count) return false;
+					}
+				}
 				return true;
 			}
 		},
@@ -266,6 +271,10 @@ const inventory = {
 				for (let [itemId, count] of Object.entries(yieldedItems)) {
 					commit("changeItemCount", { itemId, count });
 				}
+			}
+
+			if (purchase.onPurchase) {
+				purchase.onPurchase({ commit, dispatch });
 			}
 
 			if (purchase.fightZone) {

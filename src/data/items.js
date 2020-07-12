@@ -9,6 +9,7 @@ import RESOURCE_MINING from "./items/resourceMining";
 import RESOURCE_SHITPOSTING from "./items/resourceShitposting";
 import RESOURCE_VALIDHUNTING from "./items/resourceValidhunting";
 import SHOP from "./items/shop";
+import CHRONO from "./items/chrono";
 import SLOT_CHEST from "./items/slotChest";
 import SLOT_COMPANION from "./items/slotCompanion";
 import SLOT_FACE from "./items/slotFace";
@@ -20,6 +21,7 @@ import SLOT_NECK from "./items/slotNeck";
 import SLOT_POCKET from "./items/slotPocket";
 
 const ITEMS = {
+	...CHRONO,
 	...SHOP,
 	...RESOURCE_VALIDHUNTING,
 	...RESOURCE_ENGINEERING,
