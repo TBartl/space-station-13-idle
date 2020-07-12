@@ -148,13 +148,16 @@ export default {
 					},
 					{
 						id: 'faceScience',
-						weight: 10
+						weight: 9
 					},
 					{
-						id: 'ticket2',
-						count: [1, 4],
+						id: 'slimeGreen',
 						weight: 5
-					}
+					},
+					{
+						id: 'slimeAddy',
+						weight: 5
+					},
 				]
 			},
 			{

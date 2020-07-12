@@ -101,7 +101,7 @@ const BOSSES = {
 		validhuntable: false,
 		stats: {
 			maxHealth: 1800,
-			attackSpeed: 7,
+			attackSpeed: .3,
 			precision: 53,
 			power: 121,
 			evasion: 62,
@@ -154,7 +154,7 @@ const BOSSES = {
 			power: 71,
 			evasion: 62,
 			damageType: "burn",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{

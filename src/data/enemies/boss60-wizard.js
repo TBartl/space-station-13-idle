@@ -6,9 +6,9 @@ const BOSSES = {
 		stats: {
 			maxHealth: 3000,
 			attackSpeed: 2.6,
-			precision: 100,
-			power: 100,
-			evasion: 100,
+			precision: 111,
+			power: 116,
+			evasion: 118,
 			damageType: "brute",
 			burnProtection: 90,
 		},
@@ -39,7 +39,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatZ',
+						id: 'foodMeatH',
 						weight: 1,
 						count: 25
 					},
@@ -53,10 +53,10 @@ const BOSSES = {
 		validhuntable: false,
 		stats: {
 			maxHealth: 3000,
-			attackSpeed: 2.9,
-			precision: 100,
-			power: 100,
-			evasion: 100,
+			attackSpeed: 0.9,
+			precision: 133,
+			power: 102,
+			evasion: 110,
 			damageType: "brute",
 			bruteProtection: 90
 		},
@@ -102,10 +102,10 @@ const BOSSES = {
 		stats: {
 			maxHealth: 3000,
 			attackSpeed: 9,
-			precision: 100,
-			power: 100,
-			evasion: 100,
-			damageType: "brute",
+			precision: 108,
+			power: 122,
+			evasion: 116,
+			damageType: "burn",
 		},
 		itemTables: [
 			{
@@ -134,7 +134,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatZ',
 						weight: 1,
 						count: 60
 					},
@@ -148,10 +148,10 @@ const BOSSES = {
 		validhuntable: false,
 		stats: {
 			maxHealth: 3600,
-			attackSpeed: 1.5,
-			precision: 110,
-			power: 110,
-			evasion: 110,
+			attackSpeed: 2.1,
+			precision: 120,
+			power: 126,
+			evasion: 131,
 			damageType: "burn",
 		},
 		itemTables: [
@@ -181,7 +181,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatA',
+						id: 'foodMeatH',
 						weight: 1,
 						count: 70
 					},
@@ -192,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 130;
+	boss.overrideRobustness = 175;
 })
 
 export default BOSSES;

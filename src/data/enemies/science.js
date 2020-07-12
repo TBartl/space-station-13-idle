@@ -29,8 +29,11 @@ export default {
 						weight: 20
 					},
 					{
-						id: 'ticket3',
-						count: [1, 3],
+						id: 'slimeMetal',
+						weight: 5
+					},
+					{
+						id: 'slimeSilver',
 						weight: 4
 					},
 				]

@@ -37,8 +37,7 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'ticket1',
-						count: [0, 2],
+						id: 'tomatoBluespace',
 						weight: 5
 					}
 				]
@@ -131,6 +130,54 @@ export default {
 					},
 					{
 						id: 'gunEnergy1',
+						weight: 1
+					},
+				]
+			}, {
+				chance: 1,
+				item: "foodMeatZ"
+			}
+		]
+	},
+	playershop: {
+		name: "Black Market Shopkeeper",
+		icon: require("@/assets/art/combat/enemies/shop.png"),
+		stats: {
+			maxHealth: 36,
+			attackSpeed: 3,
+			precision: 10,
+			power: 14,
+			evasion: 9,
+			protection: 10,
+			damageType: "burn",
+			burnProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'pillKrokodil',
+						weight: 35
+					},
+					{
+						id: 'mushroom',
+						weight: 24
+					},
+					{
+						id: 'meleeSharp2',
+						weight: 20
+					},
+					{
+						id: "meleeBlunt2",
+						weight: 20,
+					},
+					{
+						id: "supplyCrate",
+						weight: 2,
+					},
+					{
+						id: 'knifeCrate',
 						weight: 1
 					},
 				]
