@@ -162,6 +162,9 @@ export function createMobModule(mobType) {
 					if (pocket.count == 0) {
 						pocket.itemId = null;
 						EventBus.$emit("toast", { text: `Out of ammo!`, duration: 3000 });
+						if (rootGetters["settings/pocketsEmptyStop"]) {
+							dispatch("cancelAllActions", {}, { root: true });
+						}
 					}
 				}
 			},
