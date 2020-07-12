@@ -129,13 +129,13 @@ export default {
 		name: "Renault",
 		icon: require("@/assets/art/combat/enemies/renault.png"),
 		stats: {
-			maxHealth: 250,
+			maxHealth: 280,
 			attackSpeed: 1.9,
-			precision: 50,
-			power: 50,
-			evasion: 65,
+			precision: 57,
+			power: 47,
+			evasion: 53,
 			damageType: "brute",
-			burnProtection: 30,
+			bruteProtection: 30,
 		},
 		itemTables: [
 			{
