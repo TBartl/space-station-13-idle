@@ -145,6 +145,11 @@
 
       <div v-if="tab=='shop'" class="row">
         <div class="col-12">
+          <div class="content-block w-auto mb-3">
+            <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
+            x{{bluetimeCount}}
+          </div>
+
           <shop-section v-for="(section, index) in sections" :key="index" :section="section" />
         </div>
       </div>
@@ -216,6 +221,10 @@ export default {
     },
     infinite() {
       return this.$store.getters["cheats/infiniteChrono"];
+    },
+    bluetimeCount() {
+      let count = this.$store.getters["inventory/bank"]['bluetime'];
+      return count ? count : 0;
     },
     sections() {
       return SECTIONS;
