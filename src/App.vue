@@ -36,9 +36,9 @@ export default {
     ...mapMutations(["setWelcomeMessageSeen"])
   },
   mounted() {
-    if (!this.$store.state.update1Seen) {
+    if (!this.$store.state.update2Seen) {
       this.$modal.show(ModalUpdate, {}, { height: "auto", width: "360px" });
-      this.$store.state.update1Seen = true;
+      this.$store.state.update2Seen = true;
     } else if (this.$store.getters["chrono/lastGain"] > 30 * 1000) {
       this.$modal.show(
         ModalWelcomeBack,
