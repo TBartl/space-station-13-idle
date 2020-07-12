@@ -340,7 +340,7 @@ const TICKETS = {
 		fightZone: "Brutal Security"
 	},
 	bossTicket2: {
-		name: "Book Planetay Travel",
+		name: "Book Planetary Travel",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket30.png"),
 		requiredItems: {

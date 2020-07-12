@@ -96,7 +96,7 @@ const BOSSES = {
 		]
 	},
 	wizard3: {
-		name: "Weilder of True Light",
+		name: "Wielder of True Light",
 		icon: require("@/assets/art/combat/enemies/boss/wiz-moth_anim.gif"),
 		validhuntable: false,
 		stats: {
