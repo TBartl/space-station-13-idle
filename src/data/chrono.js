@@ -1,5 +1,6 @@
 import { ALL_JOBS } from "@/data/jobs";
 import { xpFromLevel } from '@/data/experience'
+import { EventBus } from "@/utils/eventBus.js";
 
 export const BASE_BONUS = 5;
 export const ITEM_INTERVALS = [40, 65, 85, 92, 97, 100];
@@ -25,6 +26,10 @@ const BASE_PURCHASES = {
 		icon: require('@/assets/art/chrono/bluetime.png'),
 		requiredItems: {
 			bluetime: 1
+		},
+		onPurchase(store) {
+			store.commit(`chrono/addTime`, 30 * 60 * 1000, { root: true });
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time Gained!`, duration: 2500 });
 		}
 	},
 	timeBankSize1: {
@@ -101,10 +106,14 @@ ALL_JOBS.forEach(job => {
 				bluetime: cost
 			},
 			upgrade: id,
-			requiredUpgrades: {}
+			requiredUpgrades: {},
+			onPurchase(store) {
+				store.commit(`${job.id}/addXP`, xp, { root: true });
+				EventBus.$emit("toast", { icon: job.icon, text: `XP Gained!.`, duration: 5000 });
+			}
 		}
 		upgrade.requiredUpgrades[id] = i;
-		JOB_PURCHASES[id+i] = upgrade;
+		JOB_PURCHASES[id + i] = upgrade;
 	}
 });
 

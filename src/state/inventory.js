@@ -260,6 +260,10 @@ const inventory = {
 				}
 			}
 
+			if (purchase.onPurchase) {
+				purchase.onPurchase({ commit, dispatch });
+			}
+
 			if (purchase.fightZone) {
 				let zone = ZONES.find(z => z.name == purchase.fightZone);
 				let enemyId = zone.enemies[Math.floor(Math.random() * zone.enemies.length)];

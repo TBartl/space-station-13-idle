@@ -83,8 +83,11 @@ const chrono = {
 		setDesiredSpeed(state, val) {
 			state.desiredSpeed = val;
 		},
-		_updateRemainingTime(state, val) {
-			state.remainingTime = Math.max(0, val);
+		addTime(state, val) {
+			state.remainingTime += val;
+			state.remainingTime = Math.max(state.remainingTime, 0);
+			state.remainingTime = Math.min(state.remainingTime, this.getters["chrono/maxDuration"]);
+
 		}
 	},
 	actions: {
@@ -117,9 +120,8 @@ const chrono = {
 		updateOfflineTime({ state, getters, commit }) {
 			if (!state.lastLogoutTime) return;
 			let elapsedTime = new Date().getTime() - state.lastLogoutTime;
-			let newVal = Math.min(state.remainingTime + elapsedTime, getters["maxDuration"]);
 			state.lastGain = elapsedTime;
-			commit("_updateRemainingTime", newVal);
+			commit("addTime", elapsedTime);
 		}
 	}
 }
