@@ -69,12 +69,12 @@
                 @click="tab='recursion'"
                 :class="tab=='recursion' ? 'btn-primary' : 'btn-outline-primary'"
               >Recursion</button>
-            </div>
               <button
                 class="btn btn-lg"
                 @click="tab='shop'"
                 :class="tab=='shop' ? 'btn-primary' : 'btn-outline-primary'"
               >Chrono Shop</button>
+            </div>
           </div>
         </div>
       </div>
