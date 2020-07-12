@@ -49,13 +49,21 @@ const ENEMIES = {
 	...BOSS_ENEMIES
 }
 
-Object.values(ENEMIES).forEach(enemy => {
+const TICKETS = ["ticket10", "ticket1", "ticket2", "ticket40", "ticket3", "ticket60"];
+const TICKET_MIN = .1;
+const TICKET_MAX_BONUS = .15;
+
+let enemyVals = Object.values(ENEMIES)
+	.filter(enemy => !enemy.boss)
+	.sort((a, b) => calcRobustness(a.stats, "enemy") - calcRobustness(b.stats, "enemy"));
+
+let enemyDivision = enemyVals.length / TICKETS.length;
+
+enemyVals.forEach((enemy, index) => {
 	let robustness = calcRobustness(enemy.stats, "enemy");
 
 	// Don't allow negative robustness for the purpose of calculations (I'm lookin' at you mouse)
 	robustness = Math.max(1, robustness);
-
-	if (enemy.boss) return;
 
 	enemy.itemTables.unshift({
 		chance: 1,
@@ -63,6 +71,17 @@ Object.values(ENEMIES).forEach(enemy => {
 			id: "money",
 			count: [0, robustness * 5]
 		}
+	});
+
+	let thisDivision = Math.floor(index / enemyDivision);
+
+	let chance = TICKET_MIN + (index % enemyDivision) / enemyDivision * TICKET_MAX_BONUS;
+	// Get rid of some zeroes
+	chance = Math.round(100 * chance) / 100;
+
+	enemy.itemTables.push({
+		chance: chance,
+		item: TICKETS[thisDivision]
 	});
 });
 
