@@ -12,7 +12,7 @@
         title="Kor Phaeron the Chrono Legionnaire says..."
         :options="[
 					{name: 'Back'},
-					{name: 'Time Bank?', icon: require('@/assets/art/chrono/icon.png'), iconClass:'mx--2'},
+					{name: 'Time Bank?', icon: require('@/assets/art/chrono/timebank.png'), iconClass:'mx--0'},
 					{name: 'Chrono Shop?', icon: require('@/assets/art/chrono/bluetime.png'), iconClass:'mx--1'},
 					{name: 'Recursion?', icon: require('@/assets/art/chrono/bluetime-empty.png'), iconClass:'mx--1'},
 				]"
