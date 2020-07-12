@@ -392,14 +392,14 @@
         Once you've collected enough
         <img
           class="mx--1"
-          :src="require('@/assets/art/validhunting/doceasy.png')"
+          :src="require('@/assets/art/validhunting/doc10.png')"
         />
         <b>Bounty Documents</b> from
         <img class="mx--1" :src="require('@/assets/art/combat/enemies/cargo_tech.png')" />
         <b>Enemies</b>, you'll be able to purchase a
         <img
           class="mx--0"
-          :src="require('@/assets/art/shop/items/ticketeasy.png')"
+          :src="require('@/assets/art/shop/items/ticket20.png')"
         />
         <b>Ticket</b> to fight a random
         <img

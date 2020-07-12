@@ -1,36 +1,36 @@
 const BOSSES = {
-	antag1: {
-		name: "Cultist of Nar'sie",
-		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
+	lava1: {
+		name: "Ash Drake",
+		icon: require("@/assets/art/combat/enemies/boss/ash-drake.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3000,
-			attackSpeed: 2.6,
-			precision: 86,
-			power: 78,
-			evasion: 80,
-			damageType: "brute",
-			burnProtection: 90,
+			maxHealth: 1200,
+			attackSpeed: 3.2,
+			precision: 63,
+			power: 51,
+			evasion: 36,
+			damageType: "burn",
+			burnProtection: 70
 		},
 		itemTables: [
 			{
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 30000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
-						count: [6, 10],
+						id: 'exoticParts',
+						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
-						count: [11, 12],
+						id: 'exoticParts',
+						count: [13, 14],
 						weight: 1
 					},
 				]
@@ -39,45 +39,45 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatZ',
+						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 10
 					},
 				]
 			}
 		]
 	},
-	antag2: {
-		name: "Cultist of Ratvar",
-		icon: require("@/assets/art/combat/enemies/boss/antag-clock.png"),
+	lava2: {
+		name: "Bubblegum",
+		icon: require("@/assets/art/combat/enemies/boss/bubblegum.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3000,
-			attackSpeed: 2.9,
-			precision: 82,
-			power: 86,
-			evasion: 84,
+			maxHealth: 1200,
+			attackSpeed: 2.1,
+			precision: 37,
+			power: 70,
+			evasion: 43,
 			damageType: "brute",
-			bruteProtection: 90
+			bruteProtection: 70
 		},
 		itemTables: [
 			{
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 30000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'exoticParts',
 						count: [10, 16],
 						weight: 12
 					},
 					{
-						id: 'telecrystal',
+						id: 'exoticParts',
 						count: [17, 18],
 						weight: 1
 					},
@@ -89,43 +89,44 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 10
 					},
 				]
 			}
 		]
 	},
-	antag3: {
-		name: "Syndicate Nuclear Operative",
-		icon: require("@/assets/art/combat/enemies/boss/antag-op.png"),
+	lava3: {
+		name: "Blood Drunk Miner",
+		icon: require("@/assets/art/combat/enemies/boss/miner.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3000,
-			attackSpeed: 9,
-			precision: 73,
-			power: 166,
-			evasion: 71,
-			damageType: "brute",
+			maxHealth: 1200,
+			attackSpeed: 6,
+			precision: 71,
+			power: 33,
+			evasion: 46,
+			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 40000]
+					count: [0, 30000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
-						count: [9, 12],
+						id: 'exoticParts',
+						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'telecrystal',
-						count: [13, 14],
+						id: 'exoticParts',
+						count: [11, 12],
 						weight: 1
 					},
 				]
@@ -136,23 +137,24 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 25
+						count: 30
 					},
 				]
 			}
 		]
 	},
-	antag4: {
-		name: "Wizard",
-		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
+	lava4: {
+		name: "Legion",
+		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3600,
-			attackSpeed: 1.5,
-			precision: 90,
-			power: 94,
-			evasion: 88,
+			maxHealth: 3000,
+			attackSpeed: 3.4,
+			precision: 56,
+			power: 55,
+			evasion: 51,
 			damageType: "burn",
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -166,12 +168,12 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'telecrystal',
+						id: 'exoticParts',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'telecrystal',
+						id: 'exoticParts',
 						count: [23, 24],
 						weight: 1
 					},
@@ -183,7 +185,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 25
+						count: 40
 					},
 				]
 			}
@@ -192,7 +194,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 180;
+	boss.overrideRobustness = 65;
 })
 
 export default BOSSES;

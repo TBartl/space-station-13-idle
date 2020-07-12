@@ -1,35 +1,35 @@
 const BOSSES = {
-	sec1: {
-		name: "Corrupt Security Officer",
-		icon: require("@/assets/art/combat/enemies/boss/sec-officer.png"),
+	cult1: {
+		name: "Proselytizing Cultist",
+		icon: require("@/assets/art/combat/enemies/boss/cult1_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
-			attackSpeed: 2.0,
-			precision: 31,
-			power: 37,
-			evasion: 32,
-			damageType: "burn",
-			burnProtection: 50
+			maxHealth: 3000,
+			attackSpeed: 2.6,
+			precision: 86,
+			power: 78,
+			evasion: 80,
+			damageType: "brute",
+			burnProtection: 90,
 		},
 		itemTables: [
 			{
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
 						count: [6, 10],
 						weight: 8
 					},
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
 						count: [11, 12],
 						weight: 1
 					},
@@ -39,45 +39,92 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatZ',
 						weight: 1,
-						count: 10
+						count: 50
 					},
 				]
 			}
 		]
 	},
-	sec2: {
-		name: "Meddling Detective",
-		icon: require("@/assets/art/combat/enemies/boss/sec-detective.png"),
+	cult2: {
+		name: "Devout Neophyte",
+		icon: require("@/assets/art/combat/enemies/boss/antag-cultist.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
-			attackSpeed: 2.1,
-			precision: 31,
-			power: 35,
-			evasion: 29,
+			maxHealth: 3000,
+			attackSpeed: 2.9,
+			precision: 82,
+			power: 86,
+			evasion: 84,
 			damageType: "brute",
-			bruteProtection: 50
+			bruteProtection: 90
 		},
 		itemTables: [
 			{
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
+						count: [10, 16],
+						weight: 12
+					},
+					{
+						id: 'cultParts',
+						count: [17, 18],
+						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'foodMeatA',
+						weight: 1,
+						count: 50
+					},
+				]
+			}
+		]
+	},
+	cult3: {
+		name: "Wraith Construct",
+		icon: require("@/assets/art/combat/enemies/boss/cultwraith_anim.gif"),
+		validhuntable: false,
+		stats: {
+			maxHealth: 3000,
+			attackSpeed: 8,
+			precision: 73,
+			power: 71,
+			evasion: 166,
+			damageType: "brute",
+		},
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: "money",
+					count: [0, 50000]
+				}
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'cultParts',
 						count: [9, 12],
 						weight: 8
 					},
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
 						count: [13, 14],
 						weight: 1
 					},
@@ -89,69 +136,22 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 10
+						count: 50
 					},
 				]
 			}
 		]
 	},
-	sec3: {
-		name: "Gulag Warden",
-		icon: require("@/assets/art/combat/enemies/boss/sec-warden.png"),
+	cult4: {
+		name: "Curate Of Blood",
+		icon: require("@/assets/art/combat/enemies/boss/cult4_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 500,
-			attackSpeed: 5,
-			precision: 23,
-			power: 76,
-			evasion: 33,
-			damageType: "brute",
-		},
-		itemTables: [
-			{
-				chance: 1,
-				items: {
-					id: "money",
-					count: [0, 5000]
-				}
-			},
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: 'boss1Parts',
-						count: [10, 16],
-						weight: 12
-					},
-					{
-						id: 'boss1Parts',
-						count: [17, 18],
-						weight: 1
-					},
-				]
-			},
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: 'foodMeatZ',
-						weight: 1,
-						count: 10
-					},
-				]
-			}
-		]
-	},
-	sec4: {
-		name: "Anime Inspired Head Of Security",
-		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
-		validhuntable: false,
-		stats: {
-			maxHealth: 1200,
-			attackSpeed: 2.4,
-			precision: 34,
-			power: 40,
-			evasion: 36,
+			maxHealth: 3600,
+			attackSpeed: 1.5,
+			precision: 90,
+			power: 94,
+			evasion: 88,
 			damageType: "burn",
 		},
 		itemTables: [
@@ -159,19 +159,19 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 50000]
 				}
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
 						count: [16, 22],
 						weight: 16
 					},
 					{
-						id: 'boss1Parts',
+						id: 'cultParts',
 						count: [23, 24],
 						weight: 1
 					},
@@ -181,9 +181,9 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 60
 					},
 				]
 			}
@@ -192,7 +192,7 @@ const BOSSES = {
 }
 
 Object.values(BOSSES).forEach(boss => {
-	boss.overrideRobustness = 60;
+	boss.overrideRobustness = 110;
 })
 
 export default BOSSES;
