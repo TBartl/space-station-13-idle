@@ -25,11 +25,19 @@
           <span>When the simulation is closed, time will continue outside our reality in the "real world".</span>
           <span>
             All of the time that passes out there will get stored in this
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/timebank.png')"
+            />
             <b>Time Bank</b>.
           </span>
           <span>We can tap into this lost time, get back to where we should be.</span>
           <span>
             While using the time stored in the
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/timebank.png')"
+            />
             <b>Time Bank</b>, everything in our simulation will run at an accelerated rate.
           </span>
           <span>
@@ -51,6 +59,70 @@
               :src="require('@/assets/art/combat/health.gif')"
             />
             <b>Health</b> regen was a mechanic, did you?
+          </span>
+        </template>
+        <template slot="Simulation Reset?">
+          <span>
+            With an
+            <img class="mx--0" :src="require('@/assets/art/chrono/bluetime-empty.png')" />
+            <b>Empty Bluespace Time Device</b>, we might just be able to reset this simulation back to where it all started.
+          </span>
+          <span>
+            Unfortunately, my evil
+            <img
+              class="mx--1"
+              :src="require('@/assets/art/combat/enemies/boss/doppleganger.png')"
+            />
+            <b>Doppelgänger</b> from another timeline is the only person I know that has that kind of
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/bluetime-empty.png')"
+            />
+            <b>Equipment</b>.
+          </span>
+          <span>
+            If you can manage to take him down and bring me the
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/bluetime-empty.png')"
+            />
+            <b>Device</b>... Well, we might be able to get our hands on some
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/bluetime.png')"
+            />
+            <b>Bluespace Time</b>.
+          </span>
+        </template>
+        <template slot="Chrono Shop?">
+          <span>
+            If you reset the simulation, you'll find yourself with some
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/bluetime.png')"
+            />
+            <b>Bluespace Time</b>.
+          </span>
+          <span>
+            You can use this for all sorts of stuff, like upgrading the
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/chrono/timebank.png')"
+            />
+            <b>Time Bank</b> or gaining progress towards certain
+            <img
+              class="mx--1"
+              :src="require('@/assets/art/mining/icon.png')"
+            />
+            <img class="mx--0" :src="require('@/assets/art/engineering/icon.png')" />
+            <img class="mx--0" :src="require('@/assets/art/botany/icon.png')" />
+            <b>Jobs</b>.
+          </span>
+          <span>
+            Something tells me the developers of this simulation might even add more options to this shop soon, so you may want to hold off on spending
+            <i>all</i> your
+            <img class="mx--0" :src="require('@/assets/art/chrono/bluetime.png')" />
+            <b>Bluespace Time</b> now.
           </span>
         </template>
       </job-info>

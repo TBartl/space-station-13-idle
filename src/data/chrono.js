@@ -10,7 +10,7 @@ export const JOB_INTERVALS = [40, 60, 80, 90, 95, 100];
 const BASE_PURCHASES = {
 	resetSimulation: {
 		name: "_simulation.Reset()",
-		description: "Reset your game, gaining the bonuses listed",
+		description: "Reset your game, gaining the Bluespace Time listed",
 		icon: require('@/assets/art/chrono/bluetime.png'),
 		requiredItems: {
 			bluetimeEmpty: 1
