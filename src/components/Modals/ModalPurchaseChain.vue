@@ -1,20 +1,23 @@
 <template>
   <div class="d-flex flex-column align-items-center m-3">
-    <ShopPurchase :purchaseId="purchaseId" />
+    <shop-purchase
+      class="w-100"
+      v-for="(purchaseId, index) in purchaseIds"
+      :key="index"
+      :purchaseId="purchaseId"
+      :hideChain="true"
+    />
   </div>
 </template>
 
 <script>
-import ShopPurchase from "@/components/Content/Shop/ShopPurchase";
-import PURCHASES from "@/data/purchases";
-
 export default {
-  props: ["purchaseId"],
-  components: { ShopPurchase },
-  computed: {
-    item() {
-      return PURCHASES[this.purchaseId];
-    }
+  name: "modal-purchase-chain",
+  props: ["purchaseIds"],
+  components: {},
+  beforeCreate: function() {
+    // Circular dependency, we gotta define this here
+    this.$options.components.ShopPurchase = require("@/components/Content/Shop/ShopPurchase").default;
   }
 };
 </script>

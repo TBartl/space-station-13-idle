@@ -19,7 +19,7 @@
       <div v-if="canOpen">
         <button class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
       </div>
-      <div v-if="hasUpgradeChain">
+      <div v-if="upgradeChain.length > 1 && upgradeChain.length < 99 && !hideChain">
         <button class="my-1 btn btn-primary btn-sm" @click.stop="viewChain">View Upgrade Chain</button>
       </div>
       <div class="requires d-flex flex-row align-items-center flex-wrap">
@@ -55,8 +55,9 @@ import ModalItemChance from "@/components/Modals/ModalItemChance";
 import ModalPurchaseChain from "@/components/Modals/ModalPurchaseChain";
 import { ALL_JOBS } from "@/data/jobs";
 export default {
+	name: "shop-purchase",
   components: { ItemPopover },
-  props: ["purchaseId"],
+  props: ["purchaseId", "hideChain"],
   computed: {
     id() {
       return this._uid.toString();
@@ -99,8 +100,11 @@ export default {
       if (!this.item.itemTable && !this.itemTables) return false;
       return true;
     },
-    hasUpgradeChain() {
-      return this.purchase.requiredUpgrades;
+    upgradeChain() {
+      if (!this.purchase.upgrade) return [];
+      return Object.entries(PURCHASES).filter(
+        entry => entry[1].upgrade == this.purchase.upgrade
+      );
     }
   },
   methods: {
@@ -118,7 +122,7 @@ export default {
     viewChain() {
       this.$modal.show(
         ModalPurchaseChain,
-        { itemId: this.purchaseId },
+        { purchaseIds: this.upgradeChain.map(entry => entry[0]) },
         { height: "auto", width: "420px" }
       );
     }
