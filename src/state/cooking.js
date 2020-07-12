@@ -23,7 +23,7 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potion = rootGetters["potions/get"]("cooking");
 			let potionItemId = potion ? potion.itemId : null;
 
-			if (upgradeCount || potionItemId) {
+			if (upgradeCount) {
 
 				let actionEntries = Object.values(actions);
 				actionEntries.forEach((action) => {
@@ -44,13 +44,16 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					]
 					delete action.item;
 
-					if (upgradeCount) {
-						action.itemTable.push({
-							weight: totalPercent,
-							id: "q_" + originalItem
-						})
-					}
+					action.itemTable.push({
+						weight: totalPercent,
+						id: "q_" + originalItem
+					})
 				})
+			} else {
+				let actionEntries = Object.values(actions);
+				actionEntries.forEach((action) => {
+					action.preservePotion = true;
+				});
 			}
 
 			return actions;
