@@ -266,7 +266,7 @@ const ILL_ADVISED_ACTIONS = {
 		xp: -50000,
 		requiredLevel: 50,
 		requiredItems: {
-			power: 500
+			power: 10
 		}
 	}
 }
