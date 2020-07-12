@@ -223,7 +223,7 @@ export default {
       return this.$store.getters["cheats/infiniteChrono"];
     },
     bluetimeCount() {
-      let count = this.$store.getters["inventory/bank"]['bluetime'];
+      let count = this.$store.getters["inventory/bank"]["bluetime"];
       return count ? count : 0;
     },
     sections() {

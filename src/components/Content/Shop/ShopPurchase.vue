@@ -6,13 +6,21 @@
   >
     <img :id="'purchase'+id" :src="icon" class="mr-2 purchase-icon" alt />
 
-    <item-popover v-if="purchase.item" :target="'purchase'+id" :itemId="purchase.item" placement="right" />
+    <item-popover
+      v-if="purchase.item"
+      :target="'purchase'+id"
+      :itemId="purchase.item"
+      placement="right"
+    />
 
     <div class="d-flex flex-column">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>
-      <div>
-        <button v-if="canOpen" class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
+      <div v-if="canOpen">
+        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
+      </div>
+      <div v-if="hasUpgradeChain">
+        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewChain">View Upgrade Chain</button>
       </div>
       <div class="requires d-flex flex-row align-items-center flex-wrap">
         <span class="requires mr-1">Requires:</span>
@@ -44,6 +52,7 @@ import ITEMS from "@/data/items";
 import PURCHASES from "@/data/purchases";
 import ItemPopover from "@/components/ItemPopover";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
+import ModalPurchaseChain from "@/components/Modals/ModalPurchaseChain";
 import { ALL_JOBS } from "@/data/jobs";
 export default {
   components: { ItemPopover },
@@ -89,6 +98,9 @@ export default {
       if (!this.item) return false;
       if (!this.item.itemTable && !this.itemTables) return false;
       return true;
+    },
+    hasUpgradeChain() {
+      return this.purchase.requiredUpgrades;
     }
   },
   methods: {
@@ -100,6 +112,13 @@ export default {
       this.$modal.show(
         ModalItemChance,
         { itemId: this.purchase.item },
+        { height: "auto", width: "420px" }
+      );
+    },
+    viewChain() {
+      this.$modal.show(
+        ModalPurchaseChain,
+        { itemId: this.purchaseId },
         { height: "auto", width: "420px" }
       );
     }
@@ -131,7 +150,6 @@ export default {
 }
 .dark-mode .requires {
   color: rgb(195, 195, 195);
-
 }
 .locked .requires {
   color: rgb(241, 241, 241);
