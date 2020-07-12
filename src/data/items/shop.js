@@ -206,32 +206,34 @@ export default {
 		icon: require("@/assets/art/shop/items/revcrate.png"),
 		itemTable: [
 			{
-				id: 'faceSecGlassess',
-				weight: 10
+				id: 'junk',
+				count: [1,25],
+				weight: 38
 			},
 			{
-				id: 'faceSec',
-				weight: 8
+				id: 'slimeBluespace',
+				weight: 25
 			},
 			{
-				id: 'gunEnergy6',
+				id: 'meleeSharp3',
+				count: [1,20],
+				weight: 13
+			},
+			{
+				id: 'gunEnergy2',
+				weight: 11
+			},
+			{
+				id: 'meleeBurn1',
+				weight: 9
+			},
+			{
+				id: 'companionPai',
 				weight: 5
 			},
 			{
-				id: 'jumpsuitSecurity',
-				weight: 5
-			},
-			{
-				id: 'armorSpecial1',
-				weight: 1
-			},
-			{
-				id: 'meleeBlunt9',
-				weight: 1
-			},
-			{
-				id: 'meleeBurn2',
-				weight: 1
+				id: 'headEpic5',
+				weight: .1
 			},
 		]
 		},
@@ -366,35 +368,36 @@ export default {
 		icon: require("@/assets/art/shop/items/cultcrate.png"),
 		itemTable: [
 			{
-				id: 'ammoBallistic4',
-				count: [0,100],
+				id: 'meleeBlunt3',
 				weight: 100
 			},
 			{
-				id: 'ammoEnergy4',
-				count: [0,100],
-				weight: 100
+				id: 'tomatoBluespace',
+				count: [1,50],
+				weight: 90
 			},
 			{
-				id: 'faceSyndicate',
-				weight: 80
+				id: 'foodHuman4',
+				count: [1,50],
+				weight: 75
 			},
 			{
-				id: 'meleeBurn4',
+				id: 'gunBallistic5',
+				weight: 71
+			},
+			{
+				id: 'unholywater',
 				weight: 70
 			},
 			{
-				id: 'armorBurn6',
-				weight: 49
-			},
-			{
-				id: 'darkGygax',
-				weight: 43
-			},
-			{
-				id: 'meleeBurn5',
+				id: 'gunEnergy7',
 				weight: 40
-			}
+			},
+			{
+				id: 'bossTicket60',
+				count: [1,2],
+				weight: 3
+			},
 		]
 	},
 	wizCrate: {
@@ -403,35 +406,36 @@ export default {
 		icon: require("@/assets/art/shop/items/wizcrate.png"),
 		itemTable: [
 			{
-				id: 'ammoBallistic4',
-				count: [0,100],
+				id: 'ticket10',
+				count: [1,20],
+				weight: 110
+			},
+			{
+				id: 'gunBallistic7',
+				count: [1,10],
 				weight: 100
 			},
 			{
-				id: 'ammoEnergy4',
-				count: [0,100],
+				id: 'ammoRocket1',
+				count: [0,5],
 				weight: 100
 			},
 			{
-				id: 'faceSyndicate',
+				id: 'rocketLauncher1',
 				weight: 80
 			},
 			{
-				id: 'meleeBurn4',
-				weight: 70
-			},
-			{
-				id: 'armorBurn6',
+				id: 'companionParasite',
 				weight: 49
 			},
 			{
-				id: 'darkGygax',
+				id: 'wizCrate',
 				weight: 43
 			},
 			{
-				id: 'meleeBurn5',
-				weight: 40
-			}
+				id: 'capeShitposting',
+				weight: 20
+			},
 		]
 	}
 }

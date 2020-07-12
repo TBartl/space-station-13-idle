@@ -1,15 +1,16 @@
 export default {
-	securitybot: {
-		name: "Security Bot",
-		icon: require("@/assets/art/combat/enemies/secbot.png"),
+	drone: {
+		name: "Unsynced Maintenance Drone",
+		icon: require("@/assets/art/combat/enemies/drone.png"),
 		stats: {
-			maxHealth: 380,
+			maxHealth: 370,
 			attackSpeed: 2.1,
-			precision: 84,
-			power: 80,
-			evasion: 72,
+			precision: 83,
+			power: 61,
+			evasion: 118,
 			damageType: "brute",
-			bruteProtection: 50
+			bruteProtection: 20,
+			burnProtection: -20
 		},
 		itemTables: [
 			{
@@ -24,13 +25,82 @@ export default {
 						weight: 4
 					},
 					{
-						id: 'meleeSharp1',
+						id: 'gunEnergy5',
 						weight: 2
 					},
 					{
-						id: 'ticket3',
-						count: [1, 4],
+						id: 'slimeGold',
 						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'spaceJunk',
+						weight: 14
+					},
+					{
+						id: 'armorJunk',
+						weight: 5
+					},
+					{
+						id: 'junk',
+						weight: 1
+					}
+				]
+			}
+		]
+	},
+	securitybot: {
+		name: "Security Bot",
+		icon: require("@/assets/art/combat/enemies/secbot.png"),
+		stats: {
+			maxHealth: 380,
+			attackSpeed: 2.1,
+			precision: 84,
+			power: 80,
+			evasion: 72,
+			damageType: "brute",
+			bruteProtection: 50
+		},
+		itemTables: [
+			{
+				chance: .99,
+				itemTable: [
+					{
+						id: 'titanium',
+						weight: 40
+					},
+					{
+						id: 'meleeSharp1',
+						weight: 37
+					},
+					{
+						id: 'criminal',
+						weight: 13
+					},
+					{
+						id: 'criminal',
+						count: [1, 2],
+						weight: 12
+					},
+					{
+						id: 'criminal',
+						count: [1, 3],
+						weight: 11
+					},
+					{
+						id: 'criminal',
+						count: [1, 4],
+						weight: 10
+					},
+
+					{
+						id: 'criminal',
+						count: [1, 99],
+						weight: 9
 					},
 				]
 			},

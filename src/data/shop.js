@@ -364,7 +364,7 @@ const TICKETS = {
 		requiredItems: {
 			ticket3: 5,
 		},
-		fightZone: "Subversive Individuals"
+		fightZone: "Bloodsworn Cultists"
 	},
 	bossTicket60: {
 		name: "Schedule Celebrity Tour",
@@ -373,7 +373,7 @@ const TICKETS = {
 		requiredItems: {
 			ticket60: 5,
 		},
-		fightZone: "Brutal Security"
+		fightZone: "Wizard Federation 'Diplomats'"
 	},
 }
 

@@ -129,11 +129,6 @@ export default {
 						id: 'foodMeatZ',
 						weight: 4
 					},
-					{
-						id: 'ticket2',
-						count: [1, 3],
-						weight: 1
-					}
 				]
 			},
 			{
@@ -143,6 +138,47 @@ export default {
 			{
 				chance: 1,
 				item: "foodMeatH"
+			}
+		]
+	},
+	bartender: {
+		name: "Shrell Bartender",
+		icon: require("@/assets/art/combat/enemies/shrellbartender.png"),
+		stats: {
+			maxHealth: 210,
+			attackSpeed: 3.5,
+			precision: 74,
+			power: 51,
+			evasion: 26,
+			damageType: "brute",
+			bruteProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'water',
+						count: [1, 5],
+						weight: 19
+					},
+					{
+						id: "ammoBallistic2",
+						weight: 10,
+						count: [1, 5]
+					},
+					{
+						id: "slimePink",
+						weight: 9,
+					},
+					{
+						id: "gunBallistic4",
+						weight: 5,
+					},
+				]
+			}, {
+				chance: 1,
+				item: "foodMeatZ"
 			}
 		]
 	},

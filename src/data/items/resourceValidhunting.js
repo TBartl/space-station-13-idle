@@ -18,7 +18,7 @@ export default {
 		icon: require("@/assets/art/validhunting/doc10.png")
 	},
 	ticket1: {
-		name: "Facist Propagandas",
+		name: "Facist Propaganda",
 		description: "This propaganda claims the security team is here for your protection.",
 		sellPrice: 250,
 		icon: require("@/assets/art/validhunting/doc20.png")

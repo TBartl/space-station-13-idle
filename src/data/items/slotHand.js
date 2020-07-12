@@ -745,10 +745,11 @@ const GBULLET = {
 		name: "Rocket Launcher",
 		sellPrice: 15000,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/rocket_launcher.png"),
+		icon: require("@/assets/art/combat/items/hand/rocket_launcher.png"),
+		overlay: require("@/assets/art/combat/items/hand/rocketlauncher_overlay.png"),
 		ammoType: "rocket",
 		stats: {
-			attackspeed: 44,
+			attackSpeed: 44,
 			evasion: -6,
 			power: 5,
 			precision: 1,

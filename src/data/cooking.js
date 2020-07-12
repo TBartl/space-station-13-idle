@@ -290,7 +290,7 @@ const ANIMAL_ACTIONS = {
 const ALIEN_ACTIONS = {
 	cookAlien1: {
 		time: 3,
-		name: "Fresh 'Sishi'",
+		name: "Fresh 'Shishi'",
 		item: "foodAlien1",
 		icon: require("@/assets/art/cooking/Alien1.png"),
 		xp: 5,
