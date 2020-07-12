@@ -63,7 +63,7 @@ const NA_BASIC = {
         requiredItems: {
             power: 1
         }
-    }, */
+    }, */ //use oranges from botany probably.
     synthCream: {
         item: "cream",
         icon: require("@/assets/art/combat/enemies/missing.png"),
