@@ -7,7 +7,7 @@
     />
     <div class="content-container">
       <job-info
-        infoId="chronosphere"
+        infoId="chronosphere1"
         :icon="require('@/assets/art/jobinfo/chronosphere.png')"
         title="Kor Phaeron the Chrono Legionnaire says..."
         :options="[
