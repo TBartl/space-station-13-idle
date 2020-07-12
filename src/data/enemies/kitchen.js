@@ -142,7 +142,7 @@ export default {
 		]
 	},
 	bartender: {
-		name: "Shrell Bartender",
+		name: "Skrell Bartender",
 		icon: require("@/assets/art/combat/enemies/shrellbartender.png"),
 		stats: {
 			maxHealth: 210,
