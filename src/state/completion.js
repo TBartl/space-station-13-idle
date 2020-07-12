@@ -21,7 +21,8 @@ const completion = {
 		enemies: {
 			// enemyId: count
 		},
-		jobTime: BASE_JOB_TIME
+		jobTime: BASE_JOB_TIME,
+		simulationResetCount: 0
 	},
 	getters: {
 		getItem(state) {
@@ -52,6 +53,9 @@ const completion = {
 			let sum = 0;
 			ALL_JOBS.forEach(job => (sum += Math.min(rootGetters[job.id + "/level"], MAX_LEVEL)));
 			return Math.floor(100 * sum / (ALL_JOBS.length * MAX_LEVEL));
+		},
+		simulationResetCount(state) {
+			return state.simulationResetCount;
 		}
 	},
 	mutations: {
@@ -72,6 +76,9 @@ const completion = {
 		},
 		trackJobTime(state, { jobId, time }) {
 			state.jobTime[jobId] += time;
+		},
+		trackReset(state) {
+			state.simulationResetCount += 1;
 		}
 	}
 }

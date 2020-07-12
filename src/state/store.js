@@ -74,15 +74,16 @@ function customMerge(obj, source, root = true, softReset = false) {
 
 	allKeys.forEach(key => {
 		if (key.toLowerCase().includes("coroutine")) return;
-		if (softReset && key == "settings") return;
-		if (softReset && key == "cheats") return;
+		if (softReset && root && key == "settings") return;
+		if (softReset && root && key == "cheats") return;
+		if (softReset && key == "simulationResetCount") return;
 
 		if (!root && obj[key] && obj[key].constructor == Object) {
 			Vue.set(obj, key, {});
 		}
 		if (source[key] && source[key].constructor == Object) {
 			if (!obj[key]) Vue.set(obj, key, {});
-			customMerge(obj[key], source[key], false);
+			customMerge(obj[key], source[key], false, softReset);
 		}
 		else if (Array.isArray(source[key])) {
 			Vue.set(obj, key, []);
