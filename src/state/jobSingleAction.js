@@ -25,6 +25,11 @@ export default {
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
 					let count = rootGetters["inventory/bank"][itemId];
 					count = count ? count : 0;
+					for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+						let equipmentItemId = equipment.itemId;
+						if (!equipmentItemId || equipmentItemId != itemId) continue;
+						count += equipment.count;
+					}
 					if (count < requiredCount) return false;
 				}
 				return true;
