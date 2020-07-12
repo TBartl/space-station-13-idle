@@ -36,15 +36,21 @@ export default {
 		icon: require("@/assets/art/validhunting/doc40.png")
 	},
 	ticket3: {
-		name: "Religious Propagana",
+		name: "Religious Propaganda",
 		description: "This propaganda claims the veil to the higher realms is stable.",
-		sellPrice: 1000,
+		sellPrice: 750,
 		icon: require("@/assets/art/validhunting/doc50.png")
+	},
+	ticket55: {
+		name: "Traitorous Propaganda",
+		description: "This propaganda claims there are no traitors in Nanotrasen ranks and all can be trusted.",
+		sellPrice: 750,
+		icon: require("@/assets/art/validhunting/doc55.png")
 	},
 	ticket60: {
 		name: "Casuality Propaganda",
 		description: "This propaganda claims magic isn't real and can't hurt you.",
-		sellPrice: 500,
+		sellPrice: 1000,
 		icon: require("@/assets/art/validhunting/doc60.png")
 	},
 }

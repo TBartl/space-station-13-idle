@@ -28,6 +28,11 @@ export default {
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/cultpart_anim.gif")
 	},
+	ertParts: {
+		name: "Nanotrasen Chip",
+		sellPrice: 500,
+		icon: require("@/assets/art/shop/items/ertpart.png")
+	},
 	wizParts: {
 		name: "Magical Scroll",
 		sellPrice: 500,
@@ -397,6 +402,36 @@ export default {
 				id: 'ticket60',
 				count: [1,2],
 				weight: 3
+			},
+		]
+	},
+	ertCrate: {
+		name: "Nanotrasen Droppod",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/ertdroppod.png"),
+		itemTable: [
+			{
+				id: 'meleeBurn4',
+				weight: 50
+			},
+			{
+				id: 'ammoEnergy4',
+				count: [1,50],
+				weight: 75
+			},
+			{
+				id: 'ammoEnergy3',
+				count: [1,100],
+				weight: 90
+			},
+			{
+				id: 'gunEnergy8',
+				weight: 10
+			},
+			{
+				id: 'ticket60',
+				count: [1,3],
+				weight: 5
 			},
 		]
 	},

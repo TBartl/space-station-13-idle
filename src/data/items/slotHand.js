@@ -618,6 +618,23 @@ const GENERGY = {
 		requires: {
 			rangedPower: 50
 		}
+	},
+	gunEnergy8: {
+		name: "Pulse Carbine",
+		sellPrice: 2500,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_pulsecarbine.png"),
+		overlay: require("@/assets/art/combat/items/gune_pulsecarbine_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			attackSpeed: 3,
+			evasion: 3,
+			power: 7,
+			precision: 9
+		},
+		requires: {
+			rangedPower: 60
+		}
 	}
 }
 
