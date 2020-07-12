@@ -208,6 +208,10 @@ const inventory = {
 				EventBus.$emit("toast", { icon: item.icon, text: "+" + count });
 			}
 		},
+		loseEquipment(state, { slot }) {
+			state.equipment[slot].itemId = null;
+			state.equipment[slot].count = 0;
+		},
 		moveEquipmentToBank(state, { slot }) {
 			if (!state.bank[state.equipment[slot].itemId]) {
 				Vue.set(state.bank, state.equipment[slot].itemId, state.equipment[slot].count);
@@ -303,7 +307,7 @@ const inventory = {
 			if (loseableEquipment.length) {
 				let slotToLose = loseableEquipment[Math.floor(Math.random() * loseableEquipment.length)];
 				lostItemId = equipment[slotToLose].itemId;
-				commit("setEquipment", { slot: slotToLose, itemId: null, count: 0 });
+				commit("loseEquipment", { slot: slotToLose });
 			}
 			this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 		}
