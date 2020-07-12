@@ -18,8 +18,14 @@
 				]"
       >
         <template slot="Back">
-          <span>Listen, I don't know how to break this to you but...</span>
-          <span>I have reasons to believe we may be trapped inside a simulation.</span>
+          <div v-if="!$store.getters['chrono/previousResetPotential']">
+            <p>Listen, I don't know how to break this to you but...</p>
+            <p>I have reasons to believe we may be trapped inside a simulation.</p>
+          </div>
+          <div v-else>
+            <p>It's nice to see you again, old friend.</p>
+            <p>I guess that means the reset worked?</p>
+          </div>
         </template>
         <template slot="Time Bank?">
           <span>When the simulation is closed, time will continue outside our reality in the "real world".</span>
