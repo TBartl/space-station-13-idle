@@ -179,7 +179,7 @@ const inventory = {
 
 			// Check if we can just stack this with what's equipped
 			let equipmentSlot = getEquipmentSlot(itemId);
-			if (count > 0 && getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
+			if (getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
 				state.equipment[equipmentSlot].count += count;
 			}
 
@@ -203,9 +203,22 @@ const inventory = {
 				EventBus.$emit("toast", { icon: item.icon, text: "+" + count });
 			}
 		},
-		setEquipment(state, { slot, itemId, count }) {
+		moveEquipmentToBank(state, { slot }) {
+			if (!state.bank[state.equipment[slot].itemId]) {
+				Vue.set(state.bank, state.equipment[slot].itemId, state.equipment[slot].count);
+			} else {
+				state.bank[state.equipment[slot].itemId] += state.equipment[slot].count;
+			}
+			state.equipment[slot].itemId = null;
+			state.equipment[slot].count = 0;
+		},
+		moveBankToEquipment(state, { slot, itemId, count }) {
 			state.equipment[slot].itemId = itemId;
 			state.equipment[slot].count = count;
+			state.bank[itemId] -= count;
+			if (state.bank[itemId] == 0) {
+				Vue.delete(state.bank, itemId);
+			}
 		},
 		quickSort(state) {
 			let allSortedKeys = Object.keys(ITEMS);
@@ -225,11 +238,7 @@ const inventory = {
 			let equippedItemId = state.equipment[slot].itemId;
 
 			let count = state.equipment[slot].count;
-			commit("setEquipment", { slot, itemId: null, count: 0 });
-
-			if (equippedItemId) {
-				commit("changeItemCount", { itemId: equippedItemId, count });
-			}
+			commit("moveEquipmentToBank", { slot });
 		},
 		equip({ state, commit, dispatch }, itemId) {
 			let slot = getEquipmentSlot(itemId);
@@ -238,8 +247,7 @@ const inventory = {
 			let prevCount = state.equipment[slot].count;
 
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
-			commit("setEquipment", { slot: slot, itemId, count });
-			commit("changeItemCount", { itemId, count: -count });
+			commit("moveBankToEquipment", { slot: slot, itemId, count });
 			dispatch("playerMob/clampHealth", {}, { root: true })
 
 			if (prevCount) {
