@@ -73,7 +73,7 @@ const chrono = {
 		lastGain(state) {
 			return state.lastGain;
 		},
-		recursionPotential(state, getters, rootState, rootGetters) {
+		resetPotential(state, getters, rootState, rootGetters) {
 			let sum = BASE_BONUS;
 			ITEM_INTERVALS.forEach(x => {
 				if (x <= rootGetters["completion/itemPercent"]) sum += 1;

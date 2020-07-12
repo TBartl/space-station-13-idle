@@ -8,6 +8,15 @@ export const ENEMY_INTERVALS = [60, 80, 100];
 export const JOB_INTERVALS = [40, 60, 80, 90, 95, 100];
 
 const BASE_PURCHASES = {
+	resetSimulation: {
+		name: "_simulation.Reset()",
+		description: "Reset your game, gaining the bonuses listed",
+		icon: require('@/assets/art/chrono/bluetime.png'),
+		requiredItems: {
+			bluetimeEmpty: 1
+		},
+
+	},
 	chronoToCash: {
 		name: "Chrono-To-Cash",
 		description: "Gain $100,000",

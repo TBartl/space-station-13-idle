@@ -13,7 +13,7 @@
         :options="[
 					{name: 'Back'},
 					{name: 'Time Bank?', icon: require('@/assets/art/chrono/timebank.png'), iconClass:'mx--0'},
-					{name: 'Recursion?', icon: require('@/assets/art/chrono/bluetime-empty.png'), iconClass:'mx--1'},
+					{name: 'Simulation Reset?', icon: require('@/assets/art/chrono/bluetime-empty.png'), iconClass:'mx--1'},
 					{name: 'Chrono Shop?', icon: require('@/assets/art/chrono/bluetime.png'), iconClass:'mx--1'},
 				]"
       >
@@ -66,9 +66,9 @@
               >Time Bank</button>
               <button
                 class="btn btn-lg"
-                @click="tab='recursion'"
-                :class="tab=='recursion' ? 'btn-primary' : 'btn-outline-primary'"
-              >Recursion</button>
+                @click="tab='reset'"
+                :class="tab=='reset' ? 'btn-primary' : 'btn-outline-primary'"
+              >Simulation Reset</button>
               <button
                 class="btn btn-lg"
                 @click="tab='shop'"
@@ -108,34 +108,44 @@
         </div>
       </div>
 
-      <div v-if="tab=='recursion'" class="row">
+      <div v-if="tab=='reset'" class="row">
         <div class="col-12">
           <div class="content-block">
-            <h5>Recursion</h5>
+            <h5>Simulation Reset</h5>
             <hr />
-            <div class="audit py-3 px-4">
-              <h5 class="text-center mb-2">Recursion Potential</h5>
-              <div v-for="(section, index) in auditSections" :key="index" class="mb-3">
-                <p class="description text-uppercase" v-if="section.name">{{section.name}}</p>
-                <div
-                  v-for="(threshold, thresholdIndex) in section.thresholds"
-                  :key="'t'+thresholdIndex"
-                  class="d-flex flex-row align-items-center justify-content-between my-1"
-                  :class="{'disabled': threshold.disabled}"
-                >
-                  <span>{{threshold.name}}</span>
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+              <div class="audit py-3 px-4 mr-md-5">
+                <h5 class="text-center mb-2">Reset Potential</h5>
+                <div v-for="(section, index) in auditSections" :key="index" class="mb-3">
+                  <p class="description text-uppercase" v-if="section.name">{{section.name}}</p>
+                  <div
+                    v-for="(threshold, thresholdIndex) in section.thresholds"
+                    :key="'t'+thresholdIndex"
+                    class="d-flex flex-row align-items-center justify-content-between my-1"
+                    :class="{'disabled': threshold.disabled || threshold.count == 0}"
+                  >
+                    <span>{{threshold.name}}</span>
+                    <div>
+                      <span class="mr-1">+{{threshold.count}}</span>
+                      <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row align-items-center justify-content-between">
+                  <span>TOTAL</span>
                   <div>
-                    <span class="mr-1">+{{threshold.count}}</span>
+                    <span class="mr-1">+{{$store.getters['chrono/resetPotential']}}</span>
                     <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
                   </div>
                 </div>
               </div>
-              <hr />
-              <div class="d-flex flex-row align-items-center justify-content-between">
-                <span>TOTAL</span>
-                <div>
-                  <span class="mr-1">+{{$store.getters['chrono/recursionPotential']}}</span>
-                  <img :src="require('@/assets/art/chrono/bluetime.png')" class="mx--1" />
+              <div class="my-2 my-md-0">
+                <p>By resetting the simulation, you'll gain the Bluespace Time listed</p>
+                <p class="my-1">This Bluespace Time can be used at the Chrono Shop in all future runs</p>
+                <p>Other than this Bluespace Time, your save data will be wiped clean</p>
+                <div class="reset-container my-2">
+                  <shop-purchase purchaseId="resetSimulation" />
                 </div>
               </div>
             </div>
@@ -161,6 +171,7 @@
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ProgressBar from "@/components/ProgressBar";
 import ShopSection from "@/components/Content/Shop/ShopSection";
+import ShopPurchase from "@/components/Content/Shop/ShopPurchase";
 import {
   SECTIONS,
   BASE_BONUS,
@@ -186,7 +197,7 @@ function createAuditSection(name, percent, intervals) {
 
 export default {
   extends: ContentAbstract,
-  components: { ProgressBar, ShopSection },
+  components: { ProgressBar, ShopSection, ShopPurchase },
   data() {
     return {
       tab: "shop"
@@ -245,6 +256,10 @@ export default {
             {
               name: "Base",
               count: BASE_BONUS
+            },
+            {
+              name: "Previous Resets",
+              count: 0
             }
           ]
         }
@@ -285,10 +300,14 @@ export default {
 .audit {
   background-color: rgba(128, 128, 128, 0.178);
   border-radius: 8px;
-  margin: auto;
-  max-width: 280px;
+  width: 280px;
 }
 .disabled {
   opacity: 0.4;
+}
+.reset-container {
+	background-color: rgba(119, 119, 119, 0.397);
+	padding: .25rem .5rem;
+	border-radius: 8px;
 }
 </style>
