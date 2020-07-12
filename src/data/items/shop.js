@@ -394,7 +394,7 @@ export default {
 				weight: 40
 			},
 			{
-				id: 'bossTicket60',
+				id: 'ticket60',
 				count: [1,2],
 				weight: 3
 			},
