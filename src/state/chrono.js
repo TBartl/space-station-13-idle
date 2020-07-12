@@ -137,6 +137,7 @@ const chrono = {
 		},
 		resetSimulation({ getters, commit, dispatch }) {
 			let resetPotential = getters["resetPotential"];
+			this.commit("completion/trackReset");
 			dispatch("resetData", true, { root: true })
 			commit("inventory/changeItemCount", { itemId: "bluetime", count: resetPotential }, { root: true });
 		}
