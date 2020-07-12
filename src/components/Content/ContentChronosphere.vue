@@ -142,7 +142,9 @@
               </div>
               <div class="my-2 my-md-0">
                 <p>By resetting the simulation, you'll gain the Bluespace Time listed</p>
-                <p class="my-1">This Bluespace Time can be used at the Chrono Shop in all future runs</p>
+                <p
+                  class="my-1"
+                >This Bluespace Time can be used at the Chrono Shop in all future runs</p>
                 <p>Other than this Bluespace Time, your save data will be wiped clean</p>
                 <div class="reset-container my-2">
                   <shop-purchase purchaseId="resetSimulation" />
@@ -200,7 +202,7 @@ export default {
   components: { ProgressBar, ShopSection, ShopPurchase },
   data() {
     return {
-      tab: "shop"
+      tab: "bank"
     };
   },
   computed: {
@@ -259,7 +261,7 @@ export default {
             },
             {
               name: "Previous Resets",
-              count: 0
+              count: this.$store.getters["chrono/previousResetPotential"]
             }
           ]
         }
@@ -306,8 +308,8 @@ export default {
   opacity: 0.4;
 }
 .reset-container {
-	background-color: rgba(119, 119, 119, 0.397);
-	padding: .25rem .5rem;
-	border-radius: 8px;
+  background-color: rgba(119, 119, 119, 0.397);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
 }
 </style>

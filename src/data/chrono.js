@@ -15,7 +15,9 @@ const BASE_PURCHASES = {
 		requiredItems: {
 			bluetimeEmpty: 1
 		},
-
+		onPurchase(store) {
+			store.dispatch(`chrono/resetSimulation`, {}, { root: true });
+		}
 	},
 	chronoToCash: {
 		name: "Chrono-To-Cash",

@@ -21,8 +21,8 @@ import SLOT_NECK from "./items/slotNeck";
 import SLOT_POCKET from "./items/slotPocket";
 
 const ITEMS = {
-	...SHOP,
 	...CHRONO,
+	...SHOP,
 	...RESOURCE_VALIDHUNTING,
 	...RESOURCE_ENGINEERING,
 	...FOOD_OTHER,

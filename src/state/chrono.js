@@ -73,8 +73,12 @@ const chrono = {
 		lastGain(state) {
 			return state.lastGain;
 		},
+		previousResetPotential(state, getters, rootState, rootGetters) {
+			return rootGetters["completion/getItem"]('bluetime') || 0;
+		},
 		resetPotential(state, getters, rootState, rootGetters) {
 			let sum = BASE_BONUS;
+			sum += getters["previousResetPotential"];
 			ITEM_INTERVALS.forEach(x => {
 				if (x <= rootGetters["completion/itemPercent"]) sum += 1;
 			});
@@ -130,6 +134,11 @@ const chrono = {
 			let elapsedTime = new Date().getTime() - state.lastLogoutTime;
 			state.lastGain = elapsedTime;
 			commit("addTime", elapsedTime);
+		},
+		resetSimulation({ getters, commit, dispatch }) {
+			let resetPotential = getters["resetPotential"];
+			dispatch("resetData", true, { root: true })
+			commit("inventory/changeItemCount", { itemId: "bluetime", count: resetPotential }, { root: true });
 		}
 	}
 }

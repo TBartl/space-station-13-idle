@@ -66,16 +66,16 @@ const modules = {
 }
 
 // Needed to Vue.set appropriately
-function customMerge(obj, source, root = true) {
+function customMerge(obj, source, root = true, softReset = false) {
 	let allKeys = Object.keys(source);
 	if (obj.constructor == Object) {
 		allKeys = union(allKeys, Object.keys(obj));
 	}
 
 	allKeys.forEach(key => {
-		if (key.toLowerCase().includes("coroutine")) {
-			return;
-		}
+		if (key.toLowerCase().includes("coroutine")) return;
+		if (softReset && key == "settings") return;
+		if (softReset && key == "cheats") return;
 
 		if (!root && obj[key] && obj[key].constructor == Object) {
 			Vue.set(obj, key, {});
@@ -149,8 +149,8 @@ const store = new Vuex.Store({
 		setVisibleSidebarItem(state, id) {
 			state.visibleSidebarItem = id;
 		},
-		_resetState(state) {
-			customMerge(state, initialState);
+		_resetState(state, softReset) {
+			customMerge(state, initialState, true, softReset);
 		},
 		_setState(state, newState) {
 			customMerge(state, newState);
@@ -180,9 +180,9 @@ const store = new Vuex.Store({
 				}
 			}
 		},
-		resetData({ commit, dispatch }) {
+		resetData({ commit, dispatch }, softReset) {
 			dispatch("cancelAllActions");
-			commit("_resetState");
+			commit("_resetState", softReset);
 		},
 		setData({ commit, dispatch }, newData) {
 			dispatch("cancelAllActions");
