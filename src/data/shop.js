@@ -313,7 +313,7 @@ const CRATES = {
 	},
 	wizCrate: {
 		item: "wizCrate",
-		description: "Syndicate forces have hijacked the droppod system to help you be the murderer you always knew you could be.",
+		description: "This magical vending machine is just too arcane to use. It looks like it has a slot to put scrolls in?.",
 		requiredItems: {
 			wizParts: 20,
 		}
