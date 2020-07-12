@@ -36,7 +36,7 @@ export default {
       return this.$store.getters["chrono/remainingTime"] > 0;
     },
     speeds() {
-      return this.$store.getters["chrono/defaultSpeeds"];
+      return this.$store.getters["chrono/speeds"].slice(0, 7);
     },
     desiredChronoSpeed() {
       return this.$store.getters["chrono/desiredSpeed"];

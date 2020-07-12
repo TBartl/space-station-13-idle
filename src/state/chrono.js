@@ -18,13 +18,17 @@ const chrono = {
 	},
 	getters: {
 		defaultSpeeds() {
-			return [1, 1.5, 2, 3, 5]
+			return
 		},
 		speeds(state, getters, rootState, rootGetters) {
 			if (rootGetters["cheats/extraChronoOptions"]) {
 				return [1, 1.5, 2, 3, 5, 10, 25, 100, 250, 500, 1000];
 			}
-			return getters["defaultSpeeds"];
+			let options = [1, 1.5, 2, 3, 5];
+			let upgradeCount = rootGetters["upgrades/get"]("timeBankOptions");
+			if (upgradeCount >= 1) options.push(7.5);
+			if (upgradeCount >= 2) options.push(10);
+			return options;
 		},
 
 		desiredSpeed(state) {
@@ -37,8 +41,12 @@ const chrono = {
 		remainingTime(state) {
 			return state.remainingTime;
 		},
-		maxHours() {
-			return 12;
+		maxHours(state, getters, rootState, rootGetters) {
+			let hours = 12;
+			let upgradeCount = rootGetters["upgrades/get"]("timeBankSize");
+			if (upgradeCount >= 1) hours += 12;
+			if (upgradeCount >= 2) hours += 24;
+			return hours;
 		},
 		maxDuration(state, getters) {
 			return getters["maxHours"] * 60 * 60 * 1000;
