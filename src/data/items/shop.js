@@ -3,6 +3,11 @@ export default {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
 	},
+	revParts: {
+		name: "Employement Law",
+		sellPrice: 100,
+		icon: require("@/assets/art/shop/items/revpart.png")
+	},
 	boss1Parts: {
 		name: "Shipment Logs",
 		sellPrice: 100,
@@ -18,7 +23,17 @@ export default {
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/telecrystal.png")
 	},
-
+	cultParts: {
+		name: "Occult Tome",
+		sellPrice: 500,
+		icon: require("@/assets/art/shop/items/cultpart_anim.gif")
+	},
+	wizParts: {
+		name: "Magical Scroll",
+		sellPrice: 500,
+		icon: require("@/assets/art/shop/items/wizpart.png")
+	},
+	//Crates
 	hatCrate: {
 		name: "Hat Crate",
 		description: "Can be opened",
@@ -185,6 +200,41 @@ export default {
 			},
 		]
 	},
+	revCrate:{
+		name: "Revolution Supply Cache",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/revcrate.png"),
+		itemTable: [
+			{
+				id: 'faceSecGlassess',
+				weight: 10
+			},
+			{
+				id: 'faceSec',
+				weight: 8
+			},
+			{
+				id: 'gunEnergy6',
+				weight: 5
+			},
+			{
+				id: 'jumpsuitSecurity',
+				weight: 5
+			},
+			{
+				id: 'armorSpecial1',
+				weight: 1
+			},
+			{
+				id: 'meleeBlunt9',
+				weight: 1
+			},
+			{
+				id: 'meleeBurn2',
+				weight: 1
+			},
+		]
+		},
 	secCrate:{
 	name: "Security Crate",
 	description: "Can be opened",
@@ -274,9 +324,83 @@ export default {
 		]
 	},
 	syndieCrate: {
-		name: "Hijacked Droppod",
+		name: "Syndicate Droppod",
 		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/syndiedroppod.png"),
+		itemTable: [
+			{
+				id: 'ammoBallistic4',
+				count: [0,100],
+				weight: 100
+			},
+			{
+				id: 'ammoEnergy4',
+				count: [0,100],
+				weight: 100
+			},
+			{
+				id: 'faceSyndicate',
+				weight: 80
+			},
+			{
+				id: 'meleeBurn4',
+				weight: 70
+			},
+			{
+				id: 'armorBurn6',
+				weight: 49
+			},
+			{
+				id: 'darkGygax',
+				weight: 43
+			},
+			{
+				id: 'meleeBurn5',
+				weight: 40
+			}
+		]
+	},
+	cultCrate: {
+		name: "Runed Ruined Droppod",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/cultcrate.png"),
+		itemTable: [
+			{
+				id: 'ammoBallistic4',
+				count: [0,100],
+				weight: 100
+			},
+			{
+				id: 'ammoEnergy4',
+				count: [0,100],
+				weight: 100
+			},
+			{
+				id: 'faceSyndicate',
+				weight: 80
+			},
+			{
+				id: 'meleeBurn4',
+				weight: 70
+			},
+			{
+				id: 'armorBurn6',
+				weight: 49
+			},
+			{
+				id: 'darkGygax',
+				weight: 43
+			},
+			{
+				id: 'meleeBurn5',
+				weight: 40
+			}
+		]
+	},
+	wizCrate: {
+		name: "Magical Crate",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/wizcrate.png"),
 		itemTable: [
 			{
 				id: 'ammoBallistic4',
