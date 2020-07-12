@@ -159,6 +159,11 @@ const inventory = {
 						if (rootGetters[jobId + "/level"] < level) return false;
 					}
 				}
+				if (purchase.requiredUpgrades) {
+					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
+						if (rootGetters["upgrades/getNoEquipment"](upgradeId) != count) return false;
+					}
+				}
 				return true;
 			}
 		},
@@ -179,7 +184,7 @@ const inventory = {
 
 			// Check if we can just stack this with what's equipped
 			let equipmentSlot = getEquipmentSlot(itemId);
-			if (count > 0 && getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
+			if (getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
 				state.equipment[equipmentSlot].count += count;
 			}
 
@@ -203,9 +208,26 @@ const inventory = {
 				EventBus.$emit("toast", { icon: item.icon, text: "+" + count });
 			}
 		},
-		setEquipment(state, { slot, itemId, count }) {
+		loseEquipment(state, { slot }) {
+			state.equipment[slot].itemId = null;
+			state.equipment[slot].count = 0;
+		},
+		moveEquipmentToBank(state, { slot }) {
+			if (!state.bank[state.equipment[slot].itemId]) {
+				Vue.set(state.bank, state.equipment[slot].itemId, state.equipment[slot].count);
+			} else {
+				state.bank[state.equipment[slot].itemId] += state.equipment[slot].count;
+			}
+			state.equipment[slot].itemId = null;
+			state.equipment[slot].count = 0;
+		},
+		moveBankToEquipment(state, { slot, itemId, count }) {
 			state.equipment[slot].itemId = itemId;
 			state.equipment[slot].count = count;
+			state.bank[itemId] -= count;
+			if (state.bank[itemId] == 0) {
+				Vue.delete(state.bank, itemId);
+			}
 		},
 		quickSort(state) {
 			let allSortedKeys = Object.keys(ITEMS);
@@ -225,11 +247,7 @@ const inventory = {
 			let equippedItemId = state.equipment[slot].itemId;
 
 			let count = state.equipment[slot].count;
-			commit("setEquipment", { slot, itemId: null, count: 0 });
-
-			if (equippedItemId) {
-				commit("changeItemCount", { itemId: equippedItemId, count });
-			}
+			commit("moveEquipmentToBank", { slot });
 		},
 		equip({ state, commit, dispatch }, itemId) {
 			let slot = getEquipmentSlot(itemId);
@@ -238,8 +256,19 @@ const inventory = {
 			let prevCount = state.equipment[slot].count;
 
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
-			commit("setEquipment", { slot: slot, itemId, count });
-			commit("changeItemCount", { itemId, count: -count });
+
+			//if an item is equipped, make sure you can unequip it while equippng a new one
+			if (prevItemId) {
+				if (this.getters["inventory/canUnequip"](prevItemId) ||
+						getEquipmentStackable(itemId) || state.bank[itemId] == 1) {
+					;
+				} else {
+					EventBus.$emit("toast", { icon: require('@/assets/art/sidebar/backpack.png'), text: "Your inventory is full!", duration: 4000 });
+					return;
+				}
+			}
+
+			commit("moveBankToEquipment", { slot: slot, itemId, count });
 			dispatch("playerMob/clampHealth", {}, { root: true })
 
 			if (prevCount) {
@@ -258,6 +287,10 @@ const inventory = {
 				for (let [itemId, count] of Object.entries(yieldedItems)) {
 					commit("changeItemCount", { itemId, count });
 				}
+			}
+
+			if (purchase.onPurchase) {
+				purchase.onPurchase({ commit, dispatch });
 			}
 
 			if (purchase.fightZone) {
@@ -286,7 +319,7 @@ const inventory = {
 			if (loseableEquipment.length) {
 				let slotToLose = loseableEquipment[Math.floor(Math.random() * loseableEquipment.length)];
 				lostItemId = equipment[slotToLose].itemId;
-				commit("setEquipment", { slot: slotToLose, itemId: null, count: 0 });
+				commit("loseEquipment", { slot: slotToLose });
 			}
 			this._vm.$modal.show(ModalDeath, { lostItemId }, { height: "auto", width: "320px" });
 		}

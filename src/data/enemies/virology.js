@@ -60,8 +60,12 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'ticket3',
-						count: [0, 3],
+						id: 'slimeLightPink',
+						weight: 4
+					},
+					{
+						id: 'pillHappy',
+						count: [1, 10],
 						weight: 1
 					},
 				]
@@ -100,6 +104,11 @@ export default {
 					},
 					{
 						id: 'pillSpacelube',
+						weight: 1
+					}
+					,
+					{
+						id: 'slimeBlack',
 						weight: 1
 					}
 				]

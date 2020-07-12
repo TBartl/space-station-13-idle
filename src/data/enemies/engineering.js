@@ -113,8 +113,8 @@ export default {
 						weight: 33
 					},
 					{
-						id: 'ticket2',
-						count: [0, 2],
+						id: 'titanium',
+						count: [1, 10],
 						weight: 27
 					}
 				]

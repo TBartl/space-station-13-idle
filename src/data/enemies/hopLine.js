@@ -53,8 +53,8 @@ export default {
 						weight: 32
 					},
 					{
-						id: 'ticket1',
-						count: [1, 3],
+						id: 'diamond',
+						count: [1, 10],
 						weight: 25
 					},
 				]
@@ -124,7 +124,7 @@ export default {
 			power: 30,
 			evasion: 27,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -140,7 +140,7 @@ export default {
 						weight: 15
 					},
 					{
-						id: 'meleeBlunt2',
+						id: 'meleeBlunt5',
 						weight: 5
 					},
 					{

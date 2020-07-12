@@ -39,7 +39,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatZ',
 						weight: 1,
 						count: 10
 					},
@@ -87,7 +87,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatZ',
 						weight: 1,
 						count: 10
 					},

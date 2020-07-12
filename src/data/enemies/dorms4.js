@@ -98,7 +98,7 @@ export default {
 		},
 		itemTables: [
 			{
-				chance: .8,
+				chance: .6,
 				itemTable: [
 					{
 						id: 'ammoEnergy2',
@@ -110,13 +110,16 @@ export default {
 						weight: 25
 					},
 					{
-						id: 'faceWrestle',
-						weight: 4
+						id: 'foodPasta3',
+						weight: 10
 					},
 					{
-						id: 'ticket1',
-						count: [1, 4],
-						weight: 3.5
+						id: 'faceWrestle',
+						weight: 2
+					},
+					{
+						id: 'cactus',
+						weight: 1
 					}
 				]
 			},

@@ -16,5 +16,11 @@ export default {
 		sellPrice: 50,
 		icon: require('@/assets/art/mining/cactus.png'),
 		healAmount: 25
+	},
+	unholywater: {
+		name: "Profane Sacrament",
+		sellPrice: 6666,
+		icon: require('@/assets/art/cooking/narsour_anim.gif'),
+		healAmount: 666
 	}
 }
