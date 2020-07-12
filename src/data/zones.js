@@ -103,8 +103,8 @@ export default [
 		purchases: ["bossTicket60"]
 	},
 	{
-		name: "Telescience",
-		icon: require("@/assets/art/combat/zones/telescience.gif"),
+		name: "Tear in the Fabric of Reality",
+		icon: require("@/assets/art/combat/zones/tear.gif"),
 		enemies: ["doppleganger"],
 		boss: true,
 		purchases: ["bossTicketReset"]

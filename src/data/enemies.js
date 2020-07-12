@@ -19,7 +19,7 @@ import boss30Lavaland from '@/data/enemies/boss30-lavaland';
 import boss40Nuke from '@/data/enemies/boss40-nuke';
 import boss50Cult from '@/data/enemies/boss50-cult';
 import boss60Wizard from '@/data/enemies/boss60-wizard';
-import bossResetTelescience from '@/data/enemies/boss-reset-telescience';
+import bossResetTear from '@/data/enemies/boss-reset-tear';
 
 const BOSS_ENEMIES = {
 	...boss10Rev,
@@ -28,7 +28,7 @@ const BOSS_ENEMIES = {
 	...boss40Nuke,
 	...boss50Cult,
 	...boss60Wizard,
-	...bossResetTelescience
+	...bossResetTear
 }
 
 Object.values(BOSS_ENEMIES).forEach(bossEnemy => {

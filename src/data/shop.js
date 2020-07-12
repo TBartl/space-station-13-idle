@@ -376,15 +376,15 @@ const TICKETS = {
 		fightZone: "Brutal Security"
 	},
 	bossTicketReset: {
-		name: "Enter parallel universe",
+		name: "Place bags of holdings inside each other",
 		description: "On purchase, starts a fight with this boss.",
-		icon: require("@/assets/art/shop/items/ticketReset.png"),
+		icon: require("@/assets/art/shop/items/tickettear.gif"),
 		requiredItems: {
 			bluespace: 8,
 			tomatoBluespace: 8,
 			slimeBluespace: 8
 		},
-		fightZone: "Telescience"
+		fightZone: "Tear in the Fabric of Reality"
 	},
 }
 
