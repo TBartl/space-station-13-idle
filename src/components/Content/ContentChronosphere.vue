@@ -13,8 +13,8 @@
         :options="[
 					{name: 'Back'},
 					{name: 'Time Bank?', icon: require('@/assets/art/chrono/timebank.png'), iconClass:'mx--0'},
-					{name: 'Chrono Shop?', icon: require('@/assets/art/chrono/bluetime.png'), iconClass:'mx--1'},
 					{name: 'Recursion?', icon: require('@/assets/art/chrono/bluetime-empty.png'), iconClass:'mx--1'},
+					{name: 'Chrono Shop?', icon: require('@/assets/art/chrono/bluetime.png'), iconClass:'mx--1'},
 				]"
       >
         <template slot="Back">
@@ -66,15 +66,15 @@
               >Time Bank</button>
               <button
                 class="btn btn-lg"
-                @click="tab='shop'"
-                :class="tab=='shop' ? 'btn-primary' : 'btn-outline-primary'"
-              >Chrono Shop</button>
-              <button
-                class="btn btn-lg"
                 @click="tab='recursion'"
                 :class="tab=='recursion' ? 'btn-primary' : 'btn-outline-primary'"
               >Recursion</button>
             </div>
+              <button
+                class="btn btn-lg"
+                @click="tab='shop'"
+                :class="tab=='shop' ? 'btn-primary' : 'btn-outline-primary'"
+              >Chrono Shop</button>
           </div>
         </div>
       </div>
@@ -105,12 +105,6 @@
               <span class="mt-1 max">MAX: {{maxHours}} HOURS</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div v-if="tab=='shop'" class="row">
-        <div class="col-12">
-          <shop-section v-for="(section, index) in sections" :key="index" :section="section" />
         </div>
       </div>
 
@@ -146,6 +140,12 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div v-if="tab=='shop'" class="row">
+        <div class="col-12">
+          <shop-section v-for="(section, index) in sections" :key="index" :section="section" />
         </div>
       </div>
     </div>
