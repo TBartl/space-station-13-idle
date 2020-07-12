@@ -161,7 +161,7 @@ const inventory = {
 				}
 				if (purchase.requiredUpgrades) {
 					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
-						if (rootGetters["upgrades/get"](upgradeId) != count) return false;
+						if (rootGetters["upgrades/getNoEquipment"](upgradeId) != count) return false;
 					}
 				}
 				return true;
