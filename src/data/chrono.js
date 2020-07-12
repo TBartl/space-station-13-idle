@@ -2,7 +2,7 @@ import { ALL_JOBS } from "@/data/jobs";
 import { xpFromLevel } from '@/data/experience'
 import { EventBus } from "@/utils/eventBus.js";
 
-export const BASE_BONUS = 5;
+export const BASE_BONUS = 4;
 export const ITEM_INTERVALS = [40, 65, 85, 92, 97, 100];
 export const ENEMY_INTERVALS = [60, 80, 100];
 export const JOB_INTERVALS = [40, 60, 80, 90, 95, 100];
