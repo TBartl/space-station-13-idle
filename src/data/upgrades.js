@@ -363,6 +363,28 @@ for (let i = 0; i < 5; i++) {
 	TINKERING_UPGRADES[`upgradeTinkering${i + 1}`] = upgrade;
 }
 
+export const BARTENDING_UPGRADE_PERCENT = .15;
+const BARTENDING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Booze Dispenser",
+		description: `Reduces the time it takes to synthesize bases by  ${BARTENDING_UPGRADE_PERCENT * 100}%`,
+		icon: require('@/assets/art/combat/enemies/missing.png'),
+		requiredItems: {},
+		requiredLevels: { bartending: (i + 1) * 10 },
+		upgrade: "boozeDispenser",
+		requiredUpgrades: { boozeDispenser: i }
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by another");
+		upgrade.description += `, to ${(BARTENDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	BARTENDING_UPGRADES[`upgradeBartending${i + 1}`] = upgrade;
+}
+
 
 const JOB_UPGRADES = {
 	...MINING_UPGRADES,
@@ -373,7 +395,8 @@ const JOB_UPGRADES = {
 	...BOTANY_UPGRADES,
 	...COOKING_UPGRADES,
 	...XENOBIO_UPGRADES,
-	...CHEMISTRY_UPGRADES
+	...CHEMISTRY_UPGRADES,
+	...BARTENDING_UPGRADES
 }
 
 // Add a required validhunting level

@@ -4,6 +4,7 @@ import { MAX_LEVEL } from "@/data/experience";
 const BASIC = {
     synthBeer: {
         item: "beer",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -14,6 +15,7 @@ const BASIC = {
     },
     synthAle: {
         item: "ale",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -24,6 +26,7 @@ const BASIC = {
     },
     synthWhiskey: {
         item: "whiskey",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -34,6 +37,7 @@ const BASIC = {
     },
     synthVodka: {
         item: "vodka",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -46,6 +50,7 @@ const BASIC = {
 const NA_BASIC = {
     synthLemon: {
         item: "lemonjuice",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -56,6 +61,7 @@ const NA_BASIC = {
     }, /*
     synthOrange: {
         item: "orangejuice",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -66,6 +72,7 @@ const NA_BASIC = {
     }, */ //use oranges from botany probably.
     synthCream: {
         item: "cream",
+        actionName: "SYNTHESIZE",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 1,
         xp: .1,
@@ -77,7 +84,7 @@ const NA_BASIC = {
 }
 
 const ALC_T1 = {
-    mixBlackRussian: { //t1
+    mixBlackRussian: {
         item: "blackrussian",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 2,
@@ -89,7 +96,7 @@ const ALC_T1 = {
     }
 }
 const ALC_T2 = {
-    mixWhiteRussian: { //t2
+    mixWhiteRussian: {
         item: "whiterussian",
         icon: require("@/assets/art/combat/enemies/missing.png"),
         time: 3,
@@ -102,7 +109,6 @@ const ALC_T2 = {
     }
 }
 
-// const MIN_LEVEL = 1;
 Object.values(BASIC).forEach(action => action.type = "ALCOHOLIC BASES");
 Object.values(NA_BASIC).forEach(action => action.type = "NON-ALCOHOLIC BASES");
 Object.values(ALC_T1).forEach(action => action.type = "TIER 1");
@@ -118,6 +124,6 @@ export const ACTIONS = {
 export const JOB = {
     id: "bartending",
     name: "Bartending",
-    icon: require("@/assets/art/combat/enemies/missing.png"),
-    color: "#3df000" //customize this later //todo
+    icon: require("@/assets/art/combat/enemies/missing.png"), //todo
+    color: "#3df000" //todo
 }
