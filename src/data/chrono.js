@@ -22,13 +22,13 @@ const BASE_PURCHASES = {
 	},
 	chronoToTime: {
 		name: "Buy Time",
-		description: "Add 30 minutes to the time bank",
+		description: "Add 20 minutes to the time bank",
 		icon: require('@/assets/art/chrono/bluetime.png'),
 		requiredItems: {
 			bluetime: 1
 		},
 		onPurchase(store) {
-			store.commit(`chrono/addTime`, 30 * 60 * 1000, { root: true });
+			store.commit(`chrono/addTime`, 20 * 60 * 1000, { root: true });
 			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time Gained!`, duration: 2500 });
 		}
 	},
