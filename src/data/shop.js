@@ -313,7 +313,7 @@ const CRATES = {
 	},
 	ertCrate: {
 		item: "ertCrate",
-		description: "If you avert your eyes from the sigils and just reach into the pod you can escape mostly intact.",
+		description: "A prize from Nanotrasen for stopping some internal problems, contains even more problems!",
 		requiredItems: {
 			ertParts: 20,
 		}

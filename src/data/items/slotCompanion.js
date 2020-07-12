@@ -264,7 +264,7 @@ const SLIMES = {
 			power: 2,
 		}
 	},
-/*	companionAicard: {
+	companionAicard: {
 		name: "Carded AI",
 		sellPrice: 2500,
 		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
@@ -276,7 +276,7 @@ const SLIMES = {
 			precision: 5,
 			evasion: 4,
 		}
-	} */
+	}
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";

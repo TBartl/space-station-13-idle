@@ -429,6 +429,14 @@ export default {
 				weight: 10
 			},
 			{
+				id: 'companionAicard',
+				weight: 10
+			},
+			{
+				id: 'meleeShield2',
+				weight: 10
+			},
+			{
 				id: 'ticket60',
 				count: [1,3],
 				weight: 5

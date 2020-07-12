@@ -496,6 +496,22 @@ const MSHIELD = {
 		requires: {
 			evasion: 36
 		}
+	},
+	meleeShield2: {
+		name: "Telescopic Shield",
+		sellPrice: 1920,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/melee_shield2.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_shield2_overlay.png"),
+		stats: {
+			attackSpeed: 4.5,
+			evasion: 10,
+			power: 5,
+			precision: 0
+		},
+		requires: {
+			evasion: 46
+		}
 	}
 }
 
@@ -630,10 +646,11 @@ const GENERGY = {
 			attackSpeed: 3,
 			evasion: 3,
 			power: 7,
-			precision: 9
+			precision: 10
 		},
 		requires: {
-			rangedPower: 60
+			rangedPower: 50,
+			command: 30
 		}
 	}
 }
