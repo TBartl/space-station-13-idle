@@ -102,6 +102,13 @@ export default [
 		boss: true,
 		purchases: ["bossTicket60"]
 	},
+	{
+		name: "Telescience",
+		icon: require("@/assets/art/combat/zones/telescience.gif"),
+		enemies: ["doppleganger"],
+		boss: true,
+		purchases: ["bossTicketReset"]
+	},
 	// {
 	// 	name: "Debug Land",
 	// 	icon: require("@/assets/art/debug/banner.png"),

@@ -375,6 +375,17 @@ const TICKETS = {
 		},
 		fightZone: "Brutal Security"
 	},
+	bossTicketReset: {
+		name: "Enter parallel universe",
+		description: "On purchase, starts a fight with this boss.",
+		icon: require("@/assets/art/shop/items/ticketReset.png"),
+		requiredItems: {
+			bluespace: 8,
+			tomatoBluespace: 8,
+			slimeBluespace: 8
+		},
+		fightZone: "Telescience"
+	},
 }
 
 export const PURCHASES = {
