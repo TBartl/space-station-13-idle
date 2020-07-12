@@ -252,6 +252,18 @@ const inventory = {
 			let prevCount = state.equipment[slot].count;
 
 			let count = getEquipmentStackable(itemId) ? state.bank[itemId] : 1;
+
+			//if an item is equipped, make sure you can unequip it while equippng a new one
+			if (prevItemId) {
+				if (this.getters["inventory/canUnequip"](prevItemId) ||
+						getEquipmentStackable(itemId) || state.bank[itemId] == 1) {
+					;
+				} else {
+					EventBus.$emit("toast", { icon: require('@/assets/art/sidebar/backpack.png'), text: "Your inventory is full!", duration: 4000 });
+					return;
+				}
+			}
+
 			commit("moveBankToEquipment", { slot: slot, itemId, count });
 			dispatch("playerMob/clampHealth", {}, { root: true })
 
