@@ -2,7 +2,7 @@
   <div v-if="shouldShow" class="chrono-panel">
     <div class="content-block d-flex flex-column align-items-center">
       <div class="d-flex flex-row align-items-center">
-        <img :src="require('@/assets/art/sidebar/chronohelmet.png')" alt />
+        <img :src="require('@/assets/art/chrono/icon.png')" alt />
         <span>CHRONO</span>
       </div>
       <div>
@@ -36,7 +36,7 @@ export default {
       return this.$store.getters["chrono/remainingTime"] > 0;
     },
     speeds() {
-      return this.$store.getters["chrono/defaultSpeeds"];
+      return this.$store.getters["chrono/speeds"].slice(0, 7);
     },
     desiredChronoSpeed() {
       return this.$store.getters["chrono/desiredSpeed"];

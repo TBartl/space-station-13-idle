@@ -255,7 +255,7 @@ const ILL_ADVISED_ACTIONS = {
 		}
 	},
 	engSingularity: {
-		time: 600,
+		time: 300,
 		actionName: "UNLEASH",
 		name: "Gravitational Singularity",
 		items: {

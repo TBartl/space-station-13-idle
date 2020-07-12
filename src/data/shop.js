@@ -313,7 +313,7 @@ const CRATES = {
 	},
 	wizCrate: {
 		item: "wizCrate",
-		description: "Syndicate forces have hijacked the droppod system to help you be the murderer you always knew you could be.",
+		description: "This magical vending machine is just too arcane to use. It looks like it has a slot to put scrolls in?.",
 		requiredItems: {
 			wizParts: 20,
 		}
@@ -340,7 +340,7 @@ const TICKETS = {
 		fightZone: "Brutal Security"
 	},
 	bossTicket2: {
-		name: "Book Planetay Travel",
+		name: "Book Planetary Travel",
 		description: "On purchase, starts a fight with a random boss in this zone.",
 		icon: require("@/assets/art/shop/items/ticket30.png"),
 		requiredItems: {
@@ -364,7 +364,7 @@ const TICKETS = {
 		requiredItems: {
 			ticket3: 5,
 		},
-		fightZone: "Subversive Individuals"
+		fightZone: "Bloodsworn Cultists"
 	},
 	bossTicket60: {
 		name: "Schedule Celebrity Tour",
@@ -373,7 +373,18 @@ const TICKETS = {
 		requiredItems: {
 			ticket60: 5,
 		},
-		fightZone: "Brutal Security"
+		fightZone: "Wizard Federation 'Diplomats'"
+	},
+	bossTicketReset: {
+		name: "Place bags of holdings inside each other",
+		description: "On purchase, starts a fight with this boss.",
+		icon: require("@/assets/art/shop/items/tickettear.gif"),
+		requiredItems: {
+			bluespace: 8,
+			tomatoBluespace: 8,
+			slimeBluespace: 8
+		},
+		fightZone: "Tear in the Fabric of Reality"
 	},
 }
 
@@ -386,5 +397,4 @@ export const PURCHASES = {
 	...JOB_UPGRADES,
 	...CRATES,
 	...TICKETS
-
 }

@@ -4,15 +4,28 @@
     :class="[canPurchase ? 'clickable' :'locked']"
     @click="buy"
   >
-    <img :id="'purchase'+id" :src="icon" class="mr-2 purchase-icon" alt />
+    <img
+      :id="'purchase'+id"
+      :src="icon"
+      class="mr-2 purchase-icon d-md-block"
+      :class="{'d-none': hideChain}"
+    />
 
-    <item-popover v-if="purchase.item" :target="'purchase'+id" :itemId="purchase.item" placement="right" />
+    <item-popover
+      v-if="purchase.item"
+      :target="'purchase'+id"
+      :itemId="purchase.item"
+      placement="right"
+    />
 
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column w-100">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>
-      <div>
-        <button v-if="canOpen" class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
+      <div v-if="canOpen">
+        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
+      </div>
+      <div v-if="upgradeChain.length > 1 && upgradeChain.length < 99 && !hideChain">
+        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewChain">View Upgrade Chain</button>
       </div>
       <div class="requires d-flex flex-row align-items-center flex-wrap">
         <span class="requires mr-1">Requires:</span>
@@ -41,13 +54,15 @@
 
 <script>
 import ITEMS from "@/data/items";
-import { PURCHASES } from "@/data/shop";
+import PURCHASES from "@/data/purchases";
 import ItemPopover from "@/components/ItemPopover";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
+import ModalPurchaseChain from "@/components/Modals/ModalPurchaseChain";
 import { ALL_JOBS } from "@/data/jobs";
 export default {
+  name: "shop-purchase",
   components: { ItemPopover },
-  props: ["purchaseId"],
+  props: ["purchaseId", "hideChain"],
   computed: {
     id() {
       return this._uid.toString();
@@ -89,6 +104,12 @@ export default {
       if (!this.item) return false;
       if (!this.item.itemTable && !this.itemTables) return false;
       return true;
+    },
+    upgradeChain() {
+      if (!this.purchase.upgrade) return [];
+      return Object.entries(PURCHASES).filter(
+        entry => entry[1].upgrade == this.purchase.upgrade
+      );
     }
   },
   methods: {
@@ -101,6 +122,13 @@ export default {
         ModalItemChance,
         { itemId: this.purchase.item },
         { height: "auto", width: "420px" }
+      );
+    },
+    viewChain() {
+      this.$modal.show(
+        ModalPurchaseChain,
+        { purchaseIds: this.upgradeChain.map(entry => entry[0]) },
+        { height: "auto", width: "350px" }
       );
     }
   }
@@ -130,14 +158,13 @@ export default {
   font-size: 15px;
 }
 .dark-mode .requires {
-  color: rgb(121, 121, 121);
-
+  color: rgb(195, 195, 195);
 }
 .locked .requires {
   color: rgb(241, 241, 241);
 }
 .dark-mode .locked .requires {
-  color: rgb(199, 199, 199);
+  color: rgb(119, 119, 119);
 }
 .requires img {
   width: 32px;

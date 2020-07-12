@@ -9,7 +9,7 @@ const BOSSES = {
 			precision: 86,
 			power: 78,
 			evasion: 80,
-			damageType: "brute",
+			damageType: "burn",
 			burnProtection: 90,
 		},
 		itemTables: [
@@ -39,7 +39,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatZ',
+						id: 'foodMeatH',
 						weight: 1,
 						count: 50
 					},
@@ -87,7 +87,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatA',
+						id: 'foodMeatZ',
 						weight: 1,
 						count: 50
 					},
@@ -134,7 +134,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatH',
+						id: 'foodMeatA',
 						weight: 1,
 						count: 50
 					},
@@ -181,7 +181,7 @@ const BOSSES = {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'foodMeatA',
+						id: 'foodMeatH',
 						weight: 1,
 						count: 60
 					},

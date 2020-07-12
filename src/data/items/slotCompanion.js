@@ -229,8 +229,9 @@ const SLIMES = {
 	companionParasite: {
 		name: "Holoparasite",
 		sellPrice: 10000,
-		icon: require("@/assets/art/combat/enemies/missing.png"), //todo
+		icon: require("@/assets/art/combat/enemies/boss/wiz-stand_anim.gif"),
 		tier: 0,
+		description: "Is your fighting spirit strong enough?",
 		stats: {
 			precision: 15,
 			power: 15,
@@ -250,7 +251,7 @@ const SLIMES = {
 			precision: -1,
 			power: 3,
 		},
-	} /*
+	},
 	companionPai: {
 		name: "Personal AI",
 		sellPrice: 1500,
@@ -263,7 +264,7 @@ const SLIMES = {
 			power: 2,
 		}
 	},
-	companionAicard: {
+/*	companionAicard: {
 		name: "Carded AI",
 		sellPrice: 2500,
 		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
@@ -321,14 +322,14 @@ Object.values(SLIMES).forEach((slime, index) => {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
-			attackSpeed: 2 - (slime.tier / 10)
+			attackSpeed: 2 - (slime.tier / 5)
 		}
 	}
 	else if (mod == 6) {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			maxHealth: (slime.tier) * 10,
-			attackSpeed: 3 + (slime.tier / 10)
+			attackSpeed: 3 + (slime.tier / 5)
 		}
 	}
 	else if (mod == 7) {

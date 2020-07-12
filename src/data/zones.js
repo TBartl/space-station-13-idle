@@ -2,12 +2,12 @@ export default [
 	{
 		name: "Arrival Lounge",
 		icon: require("@/assets/art/combat/zones/departures.png"),
-		enemies: ["janitor", "chaplain", "miner"]
+		enemies: ["janitor", "chaplain", "miner","playershop"]
 	},
 	{
 		name: "Maintenance",
 		icon: require("@/assets/art/combat/zones/maint.png"),
-		enemies: ["mouse", "lostscientist", "cargoTech"]
+		enemies: ["mouse", "lostscientist", "cargoTech","fugitive"]
 	},
 	{
 		name: "Head of Personnel Line",
@@ -32,7 +32,7 @@ export default [
 	{
 		name: "Kitchen",
 		icon: require("@/assets/art/combat/zones/kitchen.png"),
-		enemies: ["pete", "cannibal", "botanist"]
+		enemies: ["pete", "cannibal", "botanist","bartender"]
 	},
 
 	{
@@ -58,7 +58,7 @@ export default [
 	{
 		name: "AI Core",
 		icon: require("@/assets/art/combat/zones/core.png"),
-		enemies: ["securitybot", "turrets", "AI"]
+		enemies: ["drone","securitybot", "turrets", "AI"]
 	},
 	{
 		name: "Worker Strike",
@@ -90,7 +90,7 @@ export default [
 	},
 	{
 		name: "Bloodsworn Cultists",
-		icon: require("@/assets/art/combat/zones/cult.png"),
+		icon: require("@/assets/art/combat/zones/cult.gif"),
 		enemies: ["cult1", "cult2", "cult3", "cult4"],
 		boss: true,
 		purchases: ["bossTicket3"]
@@ -101,6 +101,13 @@ export default [
 		enemies: ["wizard1", "wizard2", "wizard3", "wizard4"],
 		boss: true,
 		purchases: ["bossTicket60"]
+	},
+	{
+		name: "Tear in the Fabric of Reality",
+		icon: require("@/assets/art/combat/zones/tear.gif"),
+		enemies: ["doppleganger"],
+		boss: true,
+		purchases: ["bossTicketReset"]
 	},
 	// {
 	// 	name: "Debug Land",

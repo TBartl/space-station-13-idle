@@ -88,7 +88,7 @@ export default {
 		name: "Rocket",
 		sellPrice: 700,
 		equipmentSlot: "pocket",
-		icon: require("@/assets/art/combat/items/rocket_anim.gif"),
+		icon: require("@/assets/art/combat/items/pocket/rocket_anim.gif"),
 		ammoType: "rocket",
 		stats: {
 			power: 15,

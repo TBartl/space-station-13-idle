@@ -138,8 +138,7 @@ export default {
 						weight: 15
 					},
 					{
-						id: 'ticket2',
-						count: [0, 3],
+						id: 'meleeBlunt4',
 						weight: 5
 					}
 				]

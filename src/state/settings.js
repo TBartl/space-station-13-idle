@@ -5,6 +5,7 @@ const settings = {
 	state: {
 		showVirtualLevels: false,
 		inventoryFullStop: true,
+		pocketsEmptyStop: false,
 		autoEatEnabled: true,
 		chronoPanelEnabled: false,
 		darkMode: false
@@ -15,6 +16,9 @@ const settings = {
 		},
 		inventoryFullStop(state) {
 			return state.inventoryFullStop;
+		},
+		pocketsEmptyStop(state) {
+			return state.pocketsEmptyStop;
 		},
 		autoEatEnabled(state) {
 			return state.autoEatEnabled;
@@ -35,6 +39,9 @@ const settings = {
 		},
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
+		},
+		setPocketsEmptyStop(state, val) {
+			state.pocketsEmptyStop = val;
 		},
 		setAutoEatEnabled(state, val) {
 			state.autoEatEnabled = val;

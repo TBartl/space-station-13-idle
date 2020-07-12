@@ -60,8 +60,24 @@ export default {
 						count: [1, 4]
 					},
 					{
+						id: 'slimeOrange',
+						weight: 8,
+					},
+					{
+						id: 'slimeBlue',
+						weight: 7,
+					},
+					{
+						id: 'slimePurple',
+						weight: 7,
+					},
+					{
+						id: 'slimeYellow',
+						weight: 7,
+					},
+					{
 						id: 'power',
-						weight: 10,
+						weight: 6,
 						count: [1, 5]
 					},
 					{
@@ -108,9 +124,13 @@ export default {
 						count: [1, 5]
 					},
 					{
-						id: 'ticket1',
-						count: [0, 3],
-						weight: 5
+						id: 'innocent',
+						weight: 8,
+					},
+					{
+						id: 'wire',
+						weight: 5,
+						count: [1, 20]
 					},
 
 				]
@@ -118,6 +138,60 @@ export default {
 			{
 				chance: .02,
 				item: "jumpsuitTinkering"
+			},
+			{
+				chance: 1,
+				item: "foodMeatH"
+			}
+		]
+	},
+	fugitive: {
+		name: "Fugitive",
+		icon: require("@/assets/art/combat/enemies/troublemaker.png"),
+		stats: {
+			maxHealth: 70,
+			attackSpeed: 2.0,
+			precision: 13,
+			power: 14,
+			evasion: 23,
+			damageType: "burn",
+			bruteProtection: 20
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'pillHappy',
+						weight: 10,
+						count: [1, 3]
+					},
+					{
+						id: 'pillMeth',
+						weight: 10,
+						count: [1, 3]
+					},
+					{
+						id: 'pillSpacedrugs',
+						weight: 10,
+						count: [1, 3]
+					},
+					{
+						id: 'pillPumpup',
+						weight: 10,
+						count: [1, 3]
+					},
+					{
+						id: 'pillKrokodil',
+						weight: 10,
+						count: [1, 3]
+					},
+					{
+						id: 'pillSpacelube',
+						weight: 10,
+						count: [1, 3]
+					},
+				]
 			},
 			{
 				chance: 1,
