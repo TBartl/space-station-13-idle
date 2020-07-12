@@ -426,15 +426,15 @@ export default {
 			},
 			{
 				id: 'gunEnergy8',
-				weight: 10
+				weight: 20
 			},
 			{
 				id: 'companionAicard',
-				weight: 10
+				weight: 20
 			},
 			{
 				id: 'meleeShield2',
-				weight: 10
+				weight: 20
 			},
 			{
 				id: 'ticket60',
