@@ -4,7 +4,12 @@
     :class="[canPurchase ? 'clickable' :'locked']"
     @click="buy"
   >
-    <img :id="'purchase'+id" :src="icon" class="mr-2 purchase-icon" alt />
+    <img
+      :id="'purchase'+id"
+      :src="icon"
+      class="mr-2 purchase-icon d-md-block"
+      :class="{'d-none': hideChain}"
+    />
 
     <item-popover
       v-if="purchase.item"
@@ -13,7 +18,7 @@
       placement="right"
     />
 
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column w-100">
       <span class="name">{{name}}</span>
       <span class="description">{{purchase.description}}</span>
       <div v-if="canOpen">
@@ -55,7 +60,7 @@ import ModalItemChance from "@/components/Modals/ModalItemChance";
 import ModalPurchaseChain from "@/components/Modals/ModalPurchaseChain";
 import { ALL_JOBS } from "@/data/jobs";
 export default {
-	name: "shop-purchase",
+  name: "shop-purchase",
   components: { ItemPopover },
   props: ["purchaseId", "hideChain"],
   computed: {
@@ -123,7 +128,7 @@ export default {
       this.$modal.show(
         ModalPurchaseChain,
         { purchaseIds: this.upgradeChain.map(entry => entry[0]) },
-        { height: "auto", width: "420px" }
+        { height: "auto", width: "350px" }
       );
     }
   }
