@@ -1,82 +1,149 @@
 const BASIC = {
-    synthBeer: {
+    /* synthBeer: {
         item: "beer",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/beer.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
+        requiredItems: { power: 1 }
     },
     synthAle: {
         item: "ale",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/ale.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
-    },
+        requiredItems: { power: 1 }
+    }, */
     synthWhiskey: {
         item: "whiskey",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/whiskey.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
+        requiredItems: { power: 1 }
     },
     synthVodka: {
         item: "vodka",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/vodka.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
+        requiredItems: { power: 1 }
+    },
+    /* synthAbsinthe: {
+        item: "absinthe",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/absinthe.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    },
+    synthCognac: {
+        item: "cognac",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/cognac.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    }, */
+    synthGin: {
+        item: "gin",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/gin.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    },
+    synthKahlua: {
+        item: "kahlua",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/kahlua.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    },
+    synthRum: {
+        item: "rum",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/rum.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    },
+    /* synthSake: {
+        item: "sake",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/sake.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    }, */
+    synthTequila: {
+        item: "tequila",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/tequila.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
     }
 }
 const NA_BASIC = {
     synthLemon: {
         item: "lemonJuice",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/lemonjuice.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
+        requiredItems: { power: 1 }
     }, /*
     synthOrange: {
         item: "orangeJuice",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/orangejuice.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
-    }, */ //use oranges from botany?
+        requiredItems: { power: 1 } //oranges from botany as synthOrange?
+    }, */ 
     synthCream: {
         item: "cream",
-        actionName: "SYNTHESIZE",
+        actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/cream.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: {
-            power: 1
-        }
+        requiredItems: { power: 1 }
+    },
+    synthTomato: {
+        item: "tomatoJuice",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/tomatojuice.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
+    },
+    synthOrange: {
+        item: "orangeJuice",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/orangejuice.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { power: 1 }
     }
 }
 
@@ -101,7 +168,7 @@ const ALC_T2 = {
         xp: 25,
         requiredLevel: 3,
         requiredItems: {
-            whiteRussian: 2,
+            blackRussian: 2,
             cream: 2
         }
     }
@@ -122,6 +189,6 @@ export const ACTIONS = {
 export const JOB = {
     id: "bartending",
     name: "Bartending",
-    icon: require("@/assets/art/combat/enemies/missing.png"), //todo
-    color: "#3df000" //todo
+    icon: require("@/assets/art/bartending/icon.png"),
+    color: "#808080" //todo
 }
