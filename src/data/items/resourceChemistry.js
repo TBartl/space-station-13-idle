@@ -119,6 +119,14 @@ const POTIONS = {
 		description: "Allows you to gain additional XP when completing ??? actions. Highly Toxic.",
 		potionJob: "shitposting",
 		potionCharges: 5
+	},
+	potionNewjob: {
+		name: "Caffeine",
+		sellPrice: 5,
+		icon: require("@/assets/art/chemistry/energy_drink.png"),
+		description: "Doubles the amount of code written per action.",
+		potionJob: "newjob",
+		potionCharges: 10
 	}
 }
 

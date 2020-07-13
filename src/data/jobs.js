@@ -9,6 +9,7 @@ import { JOB as GRAYTIDING_JOB } from "./graytiding";
 import { JOB as TINKERING_JOB } from "./tinkering";
 import { JOB as VALIDHUNTING_JOB } from "./validhunting";
 import { JOB as SHITPOSTING_JOB } from "./shitposting";
+import { JOB as TEMPLATE_JOB } from "./newjob";
 
 import { JOB as PRECISION_JOB } from "./precision";
 import { JOB as MELEE_POWER_JOB } from "./meleePower";
@@ -32,7 +33,8 @@ export const ALL_JOBS = [
 	RANGED_POWER_JOB,
 	EVASION_JOB,
 	COMMAND_JOB,
-	VALIDHUNTING_JOB
+	VALIDHUNTING_JOB,
+	TEMPLATE_JOB
 ]
 
 export const COMBAT_JOBS = ALL_JOBS.filter(job => job.isCombat);
