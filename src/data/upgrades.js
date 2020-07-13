@@ -173,7 +173,7 @@ for (let i = 0; i < 5; i++) {
 
 
 const XENOBIO_UPGRADES = {}
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Xenobiology Pens",
 		description: "", // set below
@@ -189,8 +189,7 @@ for (let i = 0; i < 3; i++) {
 		upgrade.description += `x${2 ** (i - j + 1)} tier ${j + 1} slime yield`
 	}
 
-	upgrade.requiredItems.money = calcCost(i, 3);
-
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
 }
@@ -223,7 +222,7 @@ const FABRICATION_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Matter Bins",
-		description: `Reduces fabrication ore costs to ${100-FABRICATION_UPGRADE_PERCENT * (i + 1) * 100}%`, // Expanded below
+		description: `Reduces fabrication ore costs to ${100 - FABRICATION_UPGRADE_PERCENT * (i + 1) * 100}%`, // Expanded below
 		icon: require('@/assets/art/fabrication/upgrade1.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { fabrication: (i + 1) * 10 },
@@ -233,7 +232,7 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, from ${(100-FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
+		upgrade.description += `, from ${(100 - FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
