@@ -35,11 +35,11 @@ export default {
         sellPrice: 1,
         icon: require("@/assets/art/bartending/gin.png")
     },
-    kahlua: {
+    /* kahlua: {
         name: "Kahlua",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/kahlua.png")
-    },
+    }, */
     rum: {
         name: "Rum",
         sellPrice: 1,
@@ -74,6 +74,11 @@ export default {
         name: "Cream",
         sellPrice: -1,
         icon: require("@/assets/art/bartending/cream.png")
+    },
+    spacecola: {
+        name: "Space Cola",
+        sellPrice: 1,
+        icon: require("@/assets/art/bartending/spacecola.png")
     },
     blackRussian: {
         name: "Black Russian",

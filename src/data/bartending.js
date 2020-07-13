@@ -1,4 +1,13 @@
 const BASIC = {
+    synthVodka: {
+        item: "vodka",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/vodka.png"),
+        time: 1,
+        xp: .1,
+        requiredLevel: 1,
+        requiredItems: { potato: 10 }
+    },
     /* synthBeer: {
         item: "beer",
         actionName: "DISPENSE",
@@ -21,15 +30,6 @@ const BASIC = {
         item: "whiskey",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/whiskey.png"),
-        time: 1,
-        xp: .1,
-        requiredLevel: 1,
-        requiredItems: { power: 1 }
-    },
-    synthVodka: {
-        item: "vodka",
-        actionName: "DISPENSE",
-        icon: require("@/assets/art/bartending/vodka.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
@@ -62,7 +62,7 @@ const BASIC = {
         requiredLevel: 1,
         requiredItems: { power: 1 }
     },
-    synthKahlua: {
+    /* synthKahlua: {
         item: "kahlua",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/kahlua.png"),
@@ -70,7 +70,7 @@ const BASIC = {
         xp: .1,
         requiredLevel: 1,
         requiredItems: { power: 1 }
-    },
+    }, */
     synthRum: {
         item: "rum",
         actionName: "DISPENSE",
@@ -100,6 +100,15 @@ const BASIC = {
     }
 }
 const NA_BASIC = {
+    synthTomato: {
+        item: "tomatoJuice",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/tomatojuice.png"),
+        time: 2,
+        xp: 1,
+        requiredLevel: 1,
+        requiredItems: { tomato: 10 } //tomatoes from botany as synthTomato?
+    },
     synthLemon: {
         item: "lemonJuice",
         actionName: "DISPENSE",
@@ -108,16 +117,7 @@ const NA_BASIC = {
         xp: .1,
         requiredLevel: 1,
         requiredItems: { power: 1 }
-    }, /*
-    synthOrange: {
-        item: "orangeJuice",
-        actionName: "DISPENSE",
-        icon: require("@/assets/art/bartending/orangejuice.png"),
-        time: 1,
-        xp: .1,
-        requiredLevel: 1,
-        requiredItems: { power: 1 } //oranges from botany as synthOrange?
-    }, */ 
+    }, 
     synthCream: {
         item: "cream",
         actionName: "DISPENSE",
@@ -127,10 +127,10 @@ const NA_BASIC = {
         requiredLevel: 1,
         requiredItems: { power: 1 }
     },
-    synthTomato: {
-        item: "tomatoJuice",
+    synthCola: {
+        item: "spacecola",
         actionName: "DISPENSE",
-        icon: require("@/assets/art/bartending/tomatojuice.png"),
+        icon: require("@/assets/art/bartending/spacecola.png"),
         time: 1,
         xp: .1,
         requiredLevel: 1,
@@ -143,7 +143,7 @@ const NA_BASIC = {
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: { power: 1 }
+        requiredItems: { orange: 10 }
     }
 }
 
@@ -168,22 +168,40 @@ const ALC_T2 = {
         xp: 25,
         requiredLevel: 3,
         requiredItems: {
-            blackRussian: 2,
+            blackRussian: 1,
             cream: 2
         }
     }
+}
+
+const ALC_T3 = {
+
+}
+
+const ALC_T4 = {
+
+}
+
+const ALC_T5 = {
+
 }
 
 Object.values(BASIC).forEach(action => action.type = "ALCOHOLIC BASES");
 Object.values(NA_BASIC).forEach(action => action.type = "NON-ALCOHOLIC BASES");
 Object.values(ALC_T1).forEach(action => action.type = "TIER 1");
 Object.values(ALC_T2).forEach(action => action.type = "TIER 2");
+Object.values(ALC_T3).forEach(action => action.type = "TIER 3");
+Object.values(ALC_T4).forEach(action => action.type = "TIER 4");
+Object.values(ALC_T5).forEach(action => action.type = "TIER 5");
 
 export const ACTIONS = {
     ...BASIC,
     ...NA_BASIC,
     ...ALC_T1,
-    ...ALC_T2
+    ...ALC_T2,
+    ...ALC_T3,
+    ...ALC_T4,
+    ...ALC_T5
 }
 
 export const JOB = {
