@@ -12,7 +12,7 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
-			let upgradeCount = rootGetters["upgrades/get"]("cableManagement");
+			let upgradeCount = rootGetters["upgrades/get"]("boozeDispenser");
 			let potion = rootGetters["potions/get"]("bartending");
 			let potionItemId = potion ? potion.itemId : null;
 
@@ -24,7 +24,7 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (potionItemId == "potionbartending") {
 					let originalItems = action.items;
 					if (!originalItems) continue;
-				    if (originalItems.id != " ") {
+				    if (originalItems.id != "") { //change this later
 						action.preservePotion = true;
 						continue;
 					};
@@ -44,7 +44,7 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							}
 						}
 					]
-				} // needs unique potion
+				}
 			}
 			return actions;
 		}

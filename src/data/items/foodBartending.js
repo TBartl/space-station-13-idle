@@ -1,93 +1,113 @@
 export default {
-    /* beer: {
+    /* drinkBeer: {
         name: "Space Beer",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/beer.png"),
         healAmount: 1
     },
-    ale: {
+    drinkAle: {
         name: "Mag-Ale",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/ale.png")        
     }, */
-    whiskey: {
+    drinkWhiskey: {
         name: "Whiskey",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/whiskey.png")
     },
-    vodka: {
+    drinkVodka: {
         name: "Vodka",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/vodka.png")
     },
-    /* absinthe: {
+    /* drinkAbsinthe: {
         name: "Absinthe",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/absinthe.png")
     },
-    cognac: {
+    drinkCognac: {
         name: "Cognac",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/cognac.png")
     }, */
-    gin: {
+    drinkGin: {
         name: "Gin",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/gin.png")
     },
-    /* kahlua: {
+    /* drinkKahlua: {
         name: "Kahlua",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/kahlua.png")
     }, */
-    rum: {
+    drinkRum: {
         name: "Rum",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/rum.png")
     },
-    /* sake: {
+    /* drinkSake: {
         name: "Sake",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/sake.png")
     }, */
-    tequila: {
+    drinkTequila: {
         name: "Tequila",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/tequila.png")
     },
-    lemonJuice: {
+    drinkLemonJuice: {
         name: "Lemon Juice",
         sellPrice: -1,
         icon: require("@/assets/art/bartending/lemonjuice.png")
     },
-    orangeJuice: {
+    drinkOrangeJuice: {
         name: "Orange Juice",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/orangejuice.png")
     },
-    tomatoJuice: {
+    drinkTomatoJuice: {
         name: "Tomato Juice",
         sellPrice: -2,
         icon: require("@/assets/art/bartending/tomatojuice.png")
     },
-    cream: {
+    drinkCream: {
         name: "Cream",
         sellPrice: -1,
         icon: require("@/assets/art/bartending/cream.png")
     },
-    spacecola: {
+    drinkSpacecola: {
         name: "Space Cola",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/spacecola.png")
     },
-    blackRussian: {
+    drinkBlackRussian: {
         name: "Black Russian",
         sellPrice: 10,
         icon: require("@/assets/art/bartending/blackrussian.png")
     },
-    whiteRussian: {
+    drinkWhiteRussian: {
         name: "White Russian",
         sellPrice: 35,
         icon: require("@/assets/art/bartending/whiterussian.png")
+    },
+    drinkBilk :{
+        name: "Bilk",
+        sellPrice: 5,
+        icon: require("@/assets/art/bartending/bilk.png")
+    },
+    drinkTripleSec: {
+        name: "Triple Sec",
+        sellPrice: 15,
+        icon: require("@/assets/art/bartending/triplesec.png")
+    },
+    drinkAtomicBomb: {
+        name: "Atomic Bomb",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/atomicbomb.gif")
+    },
+    drinkB52: {
+        name: "B-52",
+        sellPrice: 20,
+        icon: require("@/assets/art/bartending/anim/b52_flaming.gif")
     }
 }

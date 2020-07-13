@@ -1,6 +1,6 @@
 const BASIC = {
     synthVodka: {
-        item: "vodka",
+        item: "drinkVodka",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/vodka.png"),
         time: 1,
@@ -9,7 +9,7 @@ const BASIC = {
         requiredItems: { potato: 10 }
     },
     /* synthBeer: {
-        item: "beer",
+        item: "drinkBeer",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/beer.png"),
         time: 1,
@@ -18,7 +18,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     },
     synthAle: {
-        item: "ale",
+        item: "drinkAle",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/ale.png"),
         time: 1,
@@ -27,7 +27,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     }, */
     synthWhiskey: {
-        item: "whiskey",
+        item: "drinkWhiskey",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/whiskey.png"),
         time: 1,
@@ -36,7 +36,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     },
     /* synthAbsinthe: {
-        item: "absinthe",
+        item: "drinkAbsinthe",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/absinthe.png"),
         time: 1,
@@ -45,7 +45,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     },
     synthCognac: {
-        item: "cognac",
+        item: "drinkCognac",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/cognac.png"),
         time: 1,
@@ -54,7 +54,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     }, */
     synthGin: {
-        item: "gin",
+        item: "drinkGin",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/gin.png"),
         time: 1,
@@ -63,7 +63,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     },
     /* synthKahlua: {
-        item: "kahlua",
+        item: "drinkKahlua",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/kahlua.png"),
         time: 1,
@@ -72,7 +72,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     }, */
     synthRum: {
-        item: "rum",
+        item: "drinkRum",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/rum.png"),
         time: 1,
@@ -81,7 +81,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     },
     /* synthSake: {
-        item: "sake",
+        item: "drinkSake",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/sake.png"),
         time: 1,
@@ -90,7 +90,7 @@ const BASIC = {
         requiredItems: { power: 1 }
     }, */
     synthTequila: {
-        item: "tequila",
+        item: "drinkTequila",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/tequila.png"),
         time: 1,
@@ -101,7 +101,7 @@ const BASIC = {
 }
 const NA_BASIC = {
     synthTomato: {
-        item: "tomatoJuice",
+        item: "drinkTomatoJuice",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/tomatojuice.png"),
         time: 2,
@@ -110,7 +110,7 @@ const NA_BASIC = {
         requiredItems: { tomato: 10 } //tomatoes from botany as synthTomato?
     },
     synthLemon: {
-        item: "lemonJuice",
+        item: "drinkLemonJuice",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/lemonjuice.png"),
         time: 1,
@@ -119,7 +119,7 @@ const NA_BASIC = {
         requiredItems: { power: 1 }
     }, 
     synthCream: {
-        item: "cream",
+        item: "drinkCream",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/cream.png"),
         time: 1,
@@ -128,7 +128,7 @@ const NA_BASIC = {
         requiredItems: { power: 1 }
     },
     synthCola: {
-        item: "spacecola",
+        item: "drinkSpacecola",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/spacecola.png"),
         time: 1,
@@ -137,7 +137,7 @@ const NA_BASIC = {
         requiredItems: { power: 1 }
     },
     synthOrange: {
-        item: "orangeJuice",
+        item: "drinkOrangeJuice",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/orangejuice.png"),
         time: 1,
@@ -148,28 +148,28 @@ const NA_BASIC = {
 }
 
 const ALC_T1 = {
-    mixBlackRussian: {
-        item: "blackRussian",
+    mixBlackRussian: { //move up later
+        item: "drinkBlackRussian",
         icon: require("@/assets/art/bartending/blackrussian.png"),
         time: 2,
         xp: 15,
         requiredLevel: 1,
         requiredItems: {
-            vodka: 4
+            drinkVodka: 4
         }
     }
 }
 
 const ALC_T2 = {
-    mixWhiteRussian: {
-        item: "whiteRussian",
+    mixWhiteRussian: { //move up later
+        item: "drinkWhiteRussian",
         icon: require("@/assets/art/bartending/whiterussian.png"),
         time: 3,
         xp: 25,
         requiredLevel: 3,
         requiredItems: {
-            blackRussian: 1,
-            cream: 2
+            drinkBlackRussian: 1,
+            drinkCream: 2
         }
     }
 }
