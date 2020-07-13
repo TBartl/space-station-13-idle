@@ -1,16 +1,16 @@
 --- Drinks to Add ---
-!! Space Cola
+:.Space Cola
 Triple Sec
 Atomic Bomb
 B-52
-Bilk
+.Bilk
 Pan Gal Gar Bla
 Singulo
 Silencer
 Syndicate Bomb
 Manly Dorf
 Whiskey Cola
-...what? (-xp)
+what (-xp)
 Demon's Blood
 Irish Car Bomb
 Lizard Wine
@@ -25,3 +25,12 @@ Nuka Cola
 Neurotoxin
 Screwdriver
 Changeling Sting
+.Doctor's Delight
+
+--- General Todo ---
+Add job tutorial
+Verify upgrade works
+Verify balance
+Verify nonredundancy
+Create chem (shakers? wet rags?)
+Add chem to game
