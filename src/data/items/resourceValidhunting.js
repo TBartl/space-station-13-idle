@@ -36,7 +36,7 @@ export default {
 		icon: require("@/assets/art/validhunting/doc40.png")
 	},
 	ticket3: {
-		name: "Religious Propagana",
+		name: "Religious Propaganda",
 		description: "This propaganda claims the veil to the higher realms is stable.",
 		sellPrice: 1000,
 		icon: require("@/assets/art/validhunting/doc50.png")
