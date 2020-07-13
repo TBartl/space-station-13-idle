@@ -127,7 +127,7 @@ const combat = {
 					continue;
 				}
 				let stack = false;
-				
+
 				if (rootGetters["upgrades/get"]("lootDrops") >= 4) stack = true;
 				else if (itemId == "money") stack = true;
 				else if (itemId.toLowerCase().includes("meat") && rootGetters["upgrades/get"]("lootDrops") >= 2) stack = true;
@@ -152,10 +152,10 @@ const combat = {
 				dispatch("_startMove");
 			}
 		},
-		startCombat({ dispatch, commit }, enemyId) {
+		startCombat({ dispatch, commit }, { enemyId, keepLoot }) {
 			dispatch("cancelAllActions", {}, { root: true });
 			commit("_setTargetEnemy", enemyId);
-			commit("clearLoot");
+			if (!keepLoot) commit("clearLoot");
 			dispatch("playerMob/startCombat", {}, { root: true });
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},

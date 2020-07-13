@@ -260,7 +260,7 @@ const inventory = {
 			//if an item is equipped, make sure you can unequip it while equippng a new one
 			if (prevItemId) {
 				if (this.getters["inventory/canUnequip"](prevItemId) ||
-						getEquipmentStackable(itemId) || state.bank[itemId] == 1) {
+					getEquipmentStackable(itemId) || state.bank[itemId] == 1) {
 					;
 				} else {
 					EventBus.$emit("toast", { icon: require('@/assets/art/sidebar/backpack.png'), text: "Your inventory is full!", duration: 4000 });
@@ -275,7 +275,7 @@ const inventory = {
 				commit("changeItemCount", { itemId: prevItemId, count: prevCount });
 			}
 		},
-		purchase({ commit, dispatch }, purchase) {
+		purchase({ commit, dispatch, rootGetters }, purchase) {
 			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
 				commit("changeItemCount", { itemId, count: -count });
 			}
@@ -296,8 +296,8 @@ const inventory = {
 			if (purchase.fightZone) {
 				let zone = ZONES.find(z => z.name == purchase.fightZone);
 				let enemyId = zone.enemies[Math.floor(Math.random() * zone.enemies.length)];
-				console.log(enemyId);
-				dispatch("combat/startCombat", enemyId, { root: true });
+				let keepLoot = rootGetters["combat/targetEnemy"] != null; // We were fighting a boss
+				dispatch("combat/startCombat", { enemyId, keepLoot }, { root: true });
 			}
 		},
 		loseEquipmentPiece({ getters, commit }) {
