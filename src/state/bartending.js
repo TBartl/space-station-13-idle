@@ -12,40 +12,25 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
+
 			let upgradeCount = rootGetters["upgrades/get"]("boozeDispenser");
 			let potion = rootGetters["potions/get"]("bartending");
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				// Not on negative XP
-				if (action.xp > 0)
-					action.xp = (action.xp * (1 + upgradeCount * BARTENDING_UPGRADE_PERCENT));
+				if (action.type == "bases") {
+					action.time *= (1 - bartending_UPGRADE_PERCENT * upgradeCount);
+				}
 
 				if (potionItemId == "potionBartending") {
-					let originalItems = action.items;
-					if (!originalItems) continue;
-				    if (originalItems.id != "") { //change this later
+					if (getters["level"] < action.requiredLevel) {
+						action.requiredLevel = 1;
+					} else {
 						action.preservePotion = true;
-						continue;
-					};
-					delete action.items;
-					action.name = ITEMS[originalItem].name
-
-					action.itemTables = [
-						{
-							chance: 1,
-							items: originalItems
-						},
-						{
-							chance: 1,
-							items: {
-								id: "money",
-								count: originalItems.count * 4
-							}
-						}
-					]
+					}
 				}
 			}
+
 			return actions;
 		}
 	}
