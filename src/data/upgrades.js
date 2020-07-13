@@ -179,7 +179,7 @@ for (let i = 0; i < 5; i++) {
 		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
 		requiredItems: {}, // Filled out below
-		requiredLevels: { xenobiology: (i + 1) * 15 },
+		requiredLevels: { xenobiology: (i + 1) * 10 },
 		upgrade: "xenobiologyPens",
 		requiredUpgrades: { xenobiologyPens: i }
 
