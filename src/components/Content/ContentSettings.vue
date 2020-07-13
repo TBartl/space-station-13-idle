@@ -323,6 +323,7 @@ export default {
       }
 
       this.$store.dispatch("setData", JSON.parse(this.fileData));
+      this.$store.dispatch("chrono/updateOfflineTime");
       EventBus.$emit("toast", { text: "Data imported!", duration: 3000 });
     },
     resetDataClicked() {
