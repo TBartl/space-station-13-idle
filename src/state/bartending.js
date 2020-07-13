@@ -5,7 +5,7 @@ import jobSingleAction from '@/state/jobSingleAction';
 import { ACTIONS } from "@/data/bartending"
 import { BARTENDING_UPGRADE_PERCENT } from "@/data/upgrades";
 
-const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
+const BARTENDING = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
 		jobId() {
 			return "bartending";
@@ -19,7 +19,7 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let action of Object.values(actions)) {
 				if (action.type == "bases") {
-					action.time *= (1 - bartending_UPGRADE_PERCENT * upgradeCount);
+					action.time *= (1 - BARTENDING_UPGRADE_PERCENT * upgradeCount);
 				}
 
 				if (potionItemId == "potionBartending") {
@@ -36,4 +36,4 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	}
 });
 
-export default bartending;
+export default BARTENDING;
