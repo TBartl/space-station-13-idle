@@ -4,7 +4,7 @@ export default {
 		icon: require("@/assets/art/misc/coin-padded.png")
 	},
 	revParts: {
-		name: "Employement Law",
+		name: "Employment Law",
 		sellPrice: 100,
 		icon: require("@/assets/art/shop/items/revpart.png")
 	},
