@@ -48,7 +48,7 @@ export default {
   components: { GenericAction, ExperienceHeader, PotionHeader },
   computed: {
     jobId() {
-      return JOB.id;
+      return "bartending";
     },
     job() {
       return JOB;
@@ -64,15 +64,7 @@ export default {
       }
 
       return toReturn;
-		},
-    upgradeEnabled: {
-      get() {
-        return this.$store.getters["bartending/upgradeEnabled"];
-      },
-      set(value) {
-        this.$store.commit("bartending/setUpgradeEnabled", value);
-      }
-    },
+    }
   }
 };
 </script>
