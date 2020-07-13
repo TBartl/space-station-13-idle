@@ -18,7 +18,7 @@ const BARTENDING = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				if (action.type == "bases") {
+				if (action.type == "ALCOHOLIC BASES" || action.type == "NON-ALCOHOLIC BASES") {
 					action.time *= (1 - BARTENDING_UPGRADE_PERCENT * upgradeCount);
 				}
 
