@@ -7,7 +7,12 @@
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">
-          <robustness-badge class="mt-1" :stats="basedStats" mobType="enemy" :overrideRobustness="enemy.overrideRobustness" />
+          <robustness-badge
+            class="mt-1"
+            :stats="basedStats"
+            mobType="enemy"
+            :overrideRobustness="enemy.overrideRobustness"
+          />
         </div>
       </div>
     </div>
@@ -28,7 +33,13 @@
     </div>
     <div class="d-flex flex-column mr-2">
       <button type="button" :id="id" class="btn btn-primary btn-sm w-100">View Loot</button>
-      <b-popover :target="id" triggers="click blur" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
+      <b-popover
+        :target="id"
+        triggers="click blur"
+        placement="top"
+        delay="0"
+        :customClass="$store.getters['settings/darkModeClass']"
+      >
         <item-chance :data="enemy" />
       </b-popover>
       <button
@@ -76,7 +87,7 @@ export default {
   methods: {
     ...mapActions("combat", ["startCombat"]),
     fight() {
-      this.startCombat(this.enemyId);
+      this.startCombat({ enemyId: this.enemyId });
     }
   }
 };
