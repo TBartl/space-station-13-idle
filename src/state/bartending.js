@@ -21,7 +21,7 @@ const bartending = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (action.xp > 0)
 					action.xp = (action.xp * (1 + upgradeCount * BARTENDING_UPGRADE_PERCENT));
 
-				if (potionItemId == "potionbartending") {
+				if (potionItemId == "potionBartending") {
 					let originalItems = action.items;
 					if (!originalItems) continue;
 				    if (originalItems.id != "") { //change this later

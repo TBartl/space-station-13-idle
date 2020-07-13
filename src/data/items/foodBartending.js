@@ -109,5 +109,15 @@ export default {
         name: "B-52",
         sellPrice: 20,
         icon: require("@/assets/art/bartending/anim/b52_flaming.gif")
+    },
+    drinkGargleBlaster: {
+        name: "Pan-Galactic Gargle Blaster",
+        sellPrice: 35,
+        icon: require("@/assets/art/bartending/anim/gargleblaster.gif")
+    },
+    drinkSingulo: {
+        name: "Singulo",
+        sellPrice: 35,
+        icon: require("@/assets/art/bartending/anim/singulo.gif")
     }
 }
