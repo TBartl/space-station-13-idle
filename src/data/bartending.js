@@ -100,15 +100,6 @@ const BASIC = {
     }
 }
 const NA_BASIC = {
-    synthTomato: {
-        item: "drinkTomatoJuice",
-        actionName: "DISPENSE",
-        icon: require("@/assets/art/bartending/tomatojuice.png"),
-        time: 2,
-        xp: 1,
-        requiredLevel: 1,
-        requiredItems: { tomato: 5 } //tomatoes from botany as synthTomato?
-    },
     synthLemon: {
         item: "drinkLemonJuice",
         actionName: "DISPENSE",
@@ -136,13 +127,22 @@ const NA_BASIC = {
         requiredLevel: 1,
         requiredItems: { power: 1 }
     },
+    synthTomato: {
+        item: "drinkTomatoJuice",
+        actionName: "DISPENSE",
+        icon: require("@/assets/art/bartending/tomatojuice.png"),
+        time: 2,
+        xp: 1,
+        requiredLevel: 28,
+        requiredItems: { tomato: 5 }
+    },
     synthOrange: {
         item: "drinkOrangeJuice",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/orangejuice.png"),
         time: 1,
         xp: .1,
-        requiredLevel: 1,
+        requiredLevel: 42,
         requiredItems: { orange: 5 }
     }
 }
@@ -520,7 +520,7 @@ export const ACTIONS = {
 
 export const JOB = {
     id: "bartending",
-    name: "Bartending",
+    name: "Bartending (Beta)",
     icon: require("@/assets/art/bartending/icon.png"),
     color: "#808080" //gray
 }
