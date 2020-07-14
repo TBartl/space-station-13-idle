@@ -196,6 +196,18 @@ const PILLS = {
 			precision: 0,
 			power: 0,
 		}
+	},
+	pillPrecision: {
+		name: "Trifluoperazine",
+		sellPrice: 21,
+		icon: require("@/assets/art/combat/items/pill4.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: 15,
+			power: -10,
+		}
 	}
 }
 

@@ -46,7 +46,7 @@ export default {
 	},
 	bananium: {
 		name: "Bananium",
-		sellPrice: 325,
+		sellPrice: 300,
 		healAmount: 69,
 		stats: {
 			maxHealth: 0,

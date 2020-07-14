@@ -9,7 +9,7 @@ export default {
 			power: -1,
 			evasion: -1,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -48,7 +48,7 @@ export default {
 			power: 16,
 			evasion: 9,
 			damageType: "burn",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -85,6 +85,11 @@ export default {
 						weight: 5,
 						count: [1, 3]
 					},
+					{
+						id: 'faceScience',
+						weight: 3,
+					},
+
 				]
 			},
 			{

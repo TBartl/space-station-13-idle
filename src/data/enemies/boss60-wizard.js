@@ -41,7 +41,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatH',
 						weight: 1,
-						count: 25
+						count: 60
 					},
 				]
 			}

@@ -9,7 +9,7 @@ export default {
 			power: 35,
 			evasion: 15,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -53,7 +53,7 @@ export default {
 			power: 22,
 			evasion: 33,
 			damageType: "burn",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -94,7 +94,7 @@ export default {
 			power: 28,
 			evasion: 22,
 			damageType: "brute",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
@@ -139,7 +139,7 @@ chemist: {
 			power: 30,
 			evasion: 39,
 			damageType: "burn",
-			burnProtection: 20
+			bruteProtection: 20
 		},
 		itemTables: [
 			{
