@@ -111,6 +111,18 @@ const JOB_UNLOCKS = {
 			cookingUnlocked: 0
 		}
 	},
+	unlockBartending: {
+		name: "Unlock Bartending",
+		description: "Allows you to turn power and plants into delicious drinks",
+		icon: require("@/assets/art/bartending/icon.png"),
+		requiredItems: {
+			money: 15000
+		},
+		upgrade: "bartendingUnlocked",
+		requiredUpgrades: {
+			bartendingUnlocked: 0
+		}
+	},
 	unlockXenobiology: {
 		name: "Unlock Xenobiology",
 		description: "Allows you to raise slimes that can fight alongside you",
