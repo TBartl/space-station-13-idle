@@ -234,11 +234,11 @@ export const ACTIONS = {
 		xp: 0,
 		requiredLevel: 50,
 		requiredItems: {
-			slimeGray: 1,
-			slimeOrange: 1,
-			slimePurple: 1,
-			slimeBlue: 1,
-			slimeMetal: 1,
+		//	slimeGray: 1, You'll be back to clog up inventory someday
+		//	slimeOrange: 1,
+		//	slimePurple: 1,
+		//	slimeBlue: 1,
+		//	slimeMetal: 1,
 			slimeYellow: 1,
 			slimeDarkPurple: 1,
 			slimeDarkBlue: 1,

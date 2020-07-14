@@ -12,18 +12,18 @@ const potionDropTable = [
 		chance: .25,
 		itemTable: [
 			{
-				id: "foodMeatZ",
+				id: "foodMeatA",
 				count: 1,
 				weight: 35
 			},
 			{
 				id: "oil",
-				count: 1,
+				count: [1,50],
 				weight: 25
 			},
 			{
 				id: "cactus",
-				count: 1,
+				count: [1,3],
 				weight: 23
 			},
 			{

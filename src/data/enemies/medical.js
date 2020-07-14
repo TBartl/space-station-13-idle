@@ -9,7 +9,7 @@ export default {
 			power: 48,
 			evasion: 30,
 			damageType: "brute",
-			burnProtection: 40
+			bruteProtection: 25
 		},
 		itemTables: [
 			{
@@ -57,7 +57,7 @@ export default {
 			power: 53,
 			evasion: 44,
 			damageType: "burn",
-			burnProtection: 20
+			bruteProtection: 25
 		},
 		itemTables: [
 			{
@@ -85,7 +85,7 @@ export default {
 			power: 66,
 			evasion: 57,
 			damageType: "brute",
-			burnProtection: 30
+			bruteProtection: 25
 		},
 		itemTables: [
 			{
@@ -106,10 +106,14 @@ export default {
 						weight: 6
 					},
 					{
-						id: 'faceMedHud',
+						id: 'pillTrifluoperazine',
+						count: 10,
+						weight: 5
+					},
+					{
+						id: 'MouseCarcass',
 						weight: 4
 					},
-
 				]
 			},
 			{
@@ -128,7 +132,7 @@ export default {
 			power: 102,
 			evasion: 64,
 			damageType: "brute",
-			burnProtection: 30
+			bruteProtection: 25
 		},
 		itemTables: [
 			{
@@ -147,7 +151,7 @@ export default {
 						weight: 15
 					},
 					{
-						id: 'faceScience',
+						id: 'faceFox',
 						weight: 9
 					},
 					{
