@@ -14,7 +14,7 @@ export const SECTIONS = [
 	{
 		name: "Job Unlocks",
 		purchases: [
-			"unlockCooking", "unlockXenobiology", "unlockShitposting"
+			"unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting"
 		]
 	},
 	{

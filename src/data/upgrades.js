@@ -369,7 +369,7 @@ for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Booze Dispenser",
 		description: `Reduces the time it takes to synthesize bases by  ${BARTENDING_UPGRADE_PERCENT * 100}%`,
-		icon: require('@/assets/art/combat/enemies/missing.png'),
+		icon: require('@/assets/art/bartending/anim/upgrade1.gif'),
 		requiredItems: {},
 		requiredLevels: { bartending: (i + 1) * 10 },
 		upgrade: "boozeDispenser",
