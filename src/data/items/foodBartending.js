@@ -90,7 +90,7 @@ export default {
         sellPrice: 35,
         icon: require("@/assets/art/bartending/whiterussian.png")
     },
-    drinkBilk :{
+    drinkBilk: {
         name: "Bilk",
         sellPrice: 5,
         icon: require("@/assets/art/bartending/bilk.png")
@@ -119,5 +119,100 @@ export default {
         name: "Singulo",
         sellPrice: 35,
         icon: require("@/assets/art/bartending/anim/singulo.gif")
+    },
+    drinkSilencer: {
+        name: "Silencer",
+        sellPrice: 40,
+        icon: require("@/assets/art/bartending/silencer.png")
+    },
+    drinkSyndicateBomb: {
+        name: "Syndicate Bomb",
+        sellPrice: 40,
+        icon: require("@/assets/art/bartending/syndicatebomb.png")
+    },
+    drinkManlyDorf: {
+        name: "Manly Dorf",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/manlydorf.png")
+    },
+    drinkWhiskeyCola: {
+        name: "Whiskey Cola",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/whiskeycola.png")
+    },
+    drinkWhat: {
+        name: "Messed Up Drink",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/whatdrink.png")
+    },
+    drinkDemonsBlood: {
+        name: "Demon's Blood",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/demonsblood.gif")
+    },
+    drinkIrishCB: {
+        name: "Irish Car Bomb",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/irishcarbomb.png")
+    },
+    drinkLizardWine: {
+        name: "Lizard Wine",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/lizardwine.png")
+    },
+    drinkManhattan: {
+        name: "Manhattan",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/manhattan.png")
+    },
+    drinkManhattanProject: {
+        name: "Manhattan Project",
+        sellPrice: 40,
+        icon: require("@/assets/art/bartending/anim/manhattan_proj.gif")
+    },
+    drinkBeepskySmash: {
+        name: "Beepsky Smash",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/beepskysmash.gif")
+    },
+    drinkAcidSpit: {
+        name: "Acid Spit",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/acidspit.gif")
+    },
+    drinkAntiFreeze: {
+        name: "Anti-Freeze",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/antifreeze.png")
+    },
+    drinkNukaCola: {
+        name: "Nuka-Cola", //call it "spicy" in the description
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/nukacola.gif")
+    },
+    drinkNeurotoxin: {
+        name: "Neurotoxin",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/neurotoxin.gif")
+    },
+    drinkScrewdriver: {
+        name: "Screwdriver",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/screwdriver.png")
+    },
+    drinkChangelingSting: {
+        name: "Changeling Sting",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/changelingsting.gif")
+    },
+    drinkDoctorsDelight: {
+        name: "Doctor's Delight",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/anim/doctorsdelight.gif")
+    },
+    drinkQuicky: {
+        name: "Quicky",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/quicky.png")
     }
 }

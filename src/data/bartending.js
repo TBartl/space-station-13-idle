@@ -3,10 +3,10 @@ const BASIC = {
         item: "drinkVodka",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/vodka.png"),
-        time: 1,
+        time: 2,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: { potato: 10 }
+        requiredItems: { potato: 5 }
     },
     /* synthBeer: {
         item: "drinkBeer",
@@ -107,7 +107,7 @@ const NA_BASIC = {
         time: 2,
         xp: 1,
         requiredLevel: 1,
-        requiredItems: { tomato: 10 } //tomatoes from botany as synthTomato?
+        requiredItems: { tomato: 5 } //tomatoes from botany as synthTomato?
     },
     synthLemon: {
         item: "drinkLemonJuice",
@@ -143,11 +143,25 @@ const NA_BASIC = {
         time: 1,
         xp: .1,
         requiredLevel: 1,
-        requiredItems: { orange: 10 }
+        requiredItems: { orange: 5 }
     }
 }
 
 const ALC_T1 = {
+    mixBilk: {
+        item: "drinkBilk",
+        icon: require("@/assets/art/bartending/bilk.png"),
+        time: 2,
+        xp: 4,
+        requiredLevel: 1,
+        requiredItems: {
+            drinkRum: 2,
+            drinkCream: 1
+        }
+    }
+}
+
+const ALC_T2 = {
     mixBlackRussian: { //move up later
         item: "drinkBlackRussian",
         icon: require("@/assets/art/bartending/blackrussian.png"),
@@ -160,7 +174,7 @@ const ALC_T1 = {
     }
 }
 
-const ALC_T2 = {
+const ALC_T3 = {
     mixWhiteRussian: { //move up later
         item: "drinkWhiteRussian",
         icon: require("@/assets/art/bartending/whiterussian.png"),
@@ -172,10 +186,6 @@ const ALC_T2 = {
             drinkCream: 2
         }
     }
-}
-
-const ALC_T3 = {
-
 }
 
 const ALC_T4 = {
@@ -208,5 +218,5 @@ export const JOB = {
     id: "bartending",
     name: "Bartending",
     icon: require("@/assets/art/bartending/icon.png"),
-    color: "#808080" //todo
+    color: "#808080" //gray
 }
