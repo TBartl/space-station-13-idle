@@ -214,5 +214,10 @@ export default {
         name: "Quicky",
         sellPrice: 30,
         icon: require("@/assets/art/bartending/quicky.png")
+    },
+    drinkArnoldPalmer: {
+        name: "Arnold Palmer",
+        sellPrice: 30,
+        icon: require("@/assets/art/bartending/arnoldpalmer.png")
     }
 }
