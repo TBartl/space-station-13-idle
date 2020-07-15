@@ -41,7 +41,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 30
 					},
 				]
 			}
@@ -89,7 +89,7 @@ const BOSSES = {
 					{
 						id: 'foodMeatA',
 						weight: 1,
-						count: 10
+						count: 30
 					},
 				]
 			}

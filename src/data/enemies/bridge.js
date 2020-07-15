@@ -1,42 +1,4 @@
 export default {
-	locker: {
-		name: "Captain's Locker",
-		icon: require("@/assets/art/combat/enemies/locker.png"),
-		stats: {
-			maxHealth: 500,
-			attackSpeed: 45,
-			precision: 200,
-			power: 80,
-			evasion: -10,
-			damageType: "brute",
-			burnProtection: 25,
-			bruteProtection: 25
-		},
-		itemTables: [
-			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'ammoEnergy3',
-						count: 4,
-						weight: 21
-					},
-					{
-						id: 'armorBrute4',
-						weight: 4
-					},
-					{
-						id: 'faceSecGlassess',
-						weight: 1
-					},
-				]
-			},
-			{
-				chance: 1,
-				item: "titanium"
-			}
-		]
-	},
 	axeassistant: {
 		name: "Window Breaking Assistant",
 		icon: require("@/assets/art/combat/enemies/badassistant.png"),
@@ -47,7 +9,7 @@ export default {
 			power: 59,
 			evasion: 73,
 			damageType: "brute",
-			bruteProtection: 30
+			burnProtection: 30,
 		},
 		itemTables: [
 			{
@@ -134,7 +96,7 @@ export default {
 			power: 47,
 			evasion: 53,
 			damageType: "brute",
-			bruteProtection: 30,
+			burnProtection: 30,
 		},
 		itemTables: [
 			{
@@ -149,6 +111,44 @@ export default {
 						weight: 2
 					},
 				]
+			}
+		]
+	},
+	locker: {
+		name: "Captain's Locker",
+		icon: require("@/assets/art/combat/enemies/locker.png"),
+		stats: {
+			maxHealth: 500,
+			attackSpeed: 45,
+			precision: 200,
+			power: 80,
+			evasion: -10,
+			damageType: "brute",
+			burnProtection: 25,
+			bruteProtection: 25
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'ammoEnergy3',
+						count: 4,
+						weight: 21
+					},
+					{
+						id: 'armorBrute4',
+						weight: 4
+					},
+					{
+						id: 'faceSecGlassess',
+						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				item: "titanium"
 			}
 		]
 	},

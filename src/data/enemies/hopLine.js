@@ -10,7 +10,7 @@ export default {
 			power: 21,
 			evasion: 18,
 			damageType: "brute",
-			bruteProtection: 20
+			burnProtection: 20
 		},
 		itemTables: [
 			{
@@ -96,7 +96,7 @@ export default {
 						weight: 5
 					},
 					{
-						id: 'faceFox',
+						id: 'faceMedHud',
 						weight: 3
 					},
 					{
@@ -124,7 +124,7 @@ export default {
 			power: 30,
 			evasion: 27,
 			damageType: "brute",
-			bruteProtection: 20
+			burnProtection: 20
 		},
 		itemTables: [
 			{

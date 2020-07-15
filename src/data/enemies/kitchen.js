@@ -9,7 +9,7 @@ export default {
 			power: 61,
 			evasion: 67,
 			damageType: "burn",
-			burnProtection: 20
+			burnProtection: 25
 		},
 		itemTables: [
 			{
@@ -73,7 +73,7 @@ export default {
 			power: 49,
 			evasion: 44,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 25
 		},
 		itemTables: [
 			{
@@ -110,7 +110,7 @@ export default {
 			power: 63,
 			evasion: 42,
 			damageType: "brute",
-			burnProtection: 20
+			burnProtection: 25
 		},
 		itemTables: [
 			{
@@ -151,7 +151,7 @@ export default {
 			power: 51,
 			evasion: 26,
 			damageType: "brute",
-			bruteProtection: 20
+			burnProtection: 25
 		},
 		itemTables: [
 			{

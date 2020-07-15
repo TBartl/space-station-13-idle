@@ -176,7 +176,6 @@ const PILLS = {
 			id: "pillHappy",
 			count: PILL_COUNT*1.25
 		},
-		sellPrice: 50,
 		icon: require("@/assets/art/combat/items/pill5.png"),
 		time: 2,
 		requiredItems: {
@@ -189,7 +188,6 @@ const PILLS = {
 			id: "pillMeth",
 			count: PILL_COUNT
 		},
-		sellPrice: 50,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		time: 2,
 		requiredItems: {
@@ -203,7 +201,6 @@ const PILLS = {
 			id: "pillSpacedrugs",
 			count: PILL_COUNT
 		},
-		sellPrice: 40,
 		icon: require("@/assets/art/combat/items/pill2.png"),
 		time: 2,
 		requiredItems: {
@@ -217,7 +214,6 @@ const PILLS = {
 			id: "pillPumpup",
 			count: PILL_COUNT
 		},
-		sellPrice: 25,
 		icon: require("@/assets/art/combat/items/pill3.png"),
 		time: 2,
 		requiredItems: {
@@ -231,7 +227,6 @@ const PILLS = {
 			id: "pillKrokodil",
 			count: PILL_COUNT
 		},
-		sellPrice: 10,
 		icon: require("@/assets/art/combat/items/pill4.png"),
 		time: 2,
 		requiredItems: {
@@ -250,6 +245,19 @@ const PILLS = {
 		requiredItems: {
 			oil: 3,
 			water: 2,
+		}
+	},
+	sythnpillPrecision: {
+		items: {
+			id: "pillPrecision",
+			count: PILL_COUNT*.5
+		},
+		icon: require("@/assets/art/combat/items/pill6.png"),
+		time: 2,
+		requiredItems: {
+			pillHappy: 5,
+			sacid: 1,
+			lithium: 1
 		}
 	},
 }
