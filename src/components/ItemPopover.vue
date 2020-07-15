@@ -13,7 +13,6 @@
         <span class="equippable-name d-md-block text-uppercase ml-1">{{item.equipmentSlot}}</span>
       </div>
       <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
-      <span v-if="item.equipmentSlot" class="mt-1">Equippable</span>
       <div
         class="requirement p-1 mt-1 rounded d-flex flex-row align-items-center"
         :class="requirement.class"
