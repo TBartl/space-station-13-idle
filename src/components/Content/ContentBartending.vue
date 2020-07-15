@@ -13,7 +13,7 @@
 
       <job-info
         infoId="bartending"
-        :icon="require('@/assets/art/combat/enemies/missing.png')"
+        :icon="require('@/assets/art/jobinfo/bartending.png')"
         title="Naomi Teagarden the Bartender says..."
         :options="[
           {name: 'Back'},
