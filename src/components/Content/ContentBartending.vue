@@ -10,6 +10,55 @@
           <potion-header :jobId="jobId" />
         </div>
       </div>
+
+      <job-info
+        infoId="bartending"
+        :icon="require('@/assets/art/combat/enemies/missing.png')"
+        title="Naomi Teagarden the Bartender says..."
+        :options="[
+          {name: 'Back'},
+          {name: 'Drinks?', icon: require('@/assets/art/bartending/arnoldpalmer.png'), iconClass:'mx--2'},
+          {name: 'Mixing?', icon: require('@/assets/art/bartending/icon.png'), iconClass:'mx--1'},
+          {name: 'Getting Drunk?', icon: require('@/assets/art/bartending/anim/gargleblaster.gif'), iconClass:'mx--0'}
+        ]"
+      >
+        <template slot="Back">
+          <span>
+            <i>New here, huh</i>? It's time to mix a nice
+            <img
+              class="mx--2"
+              :src="require('@/assets/art/bartending/anim/singulo.gif')"
+            />
+            <b>
+              <i>
+                Singulo
+              </i>
+            </b>. If you aren't intimidated by the machinery, you're ready.
+          </span>
+        </template>
+        <template slot="Drinks?">
+          <span>
+            That's right, you can mix yourself up some strong-as-hell
+            <img class="mx--2" :src="require('@/assets/art/bartending/whiterussian.png')" />
+            <b>drinks</b> here. They can rejuvenate you just like food does.
+          </span>
+        </template>
+        <template slot="Mixing?">
+          <span>
+            Yeah. So as you get more skilled, you'll learn how to make more complicated things. I, for one, can make you just about anything. How's about a
+            <img class="mx--1" :src="require('@/assets/art/bartending/silencer.png')" />
+            <b>Silencer</b> for that mouth of yours?
+          </span>
+        </template>
+        <template slot="Getting Drunk?">
+          <span>
+            That's how alcohol works. The
+            <img class="mx--0" :src="require('@/assets/art/bartending/anim/changelingsting.gif')" />
+            <b>stronger the mix</b> you make, the more it'll affect you. Usually, you get more off-balance the stronger ya go. On the other hand, you get that drunken strength from it, too.
+          </span>
+        </template>
+      </job-info>
+
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"

@@ -520,7 +520,7 @@ export const ACTIONS = {
 
 export const JOB = {
     id: "bartending",
-    name: "Bartending (Beta)",
+    name: "Bartending",
     icon: require("@/assets/art/bartending/icon.png"),
     color: "#808080" //gray
 }
