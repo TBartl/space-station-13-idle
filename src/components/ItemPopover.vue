@@ -8,13 +8,10 @@
   >
     <div class="popup d-flex flex-column align-items-center">
       <h6 class="title">{{item.name}}</h6>
-      <p v-if="item.equipmentSlot" class="equipment-slot-name text-uppercase">{{item.equipmentSlot}}</p>
-      <equipment-slot
-        v-if="item.equipmentSlot"
-        class="equipment-slot-icon"
-        :equipmentSlot="item.equipmentSlot"
-        :icon="require(`@/assets/art/combat/equipment/${item.equipmentSlot}.png`)"
-      />
+      <div class="d-flex align-items-center mt-1" v-if="item.equipmentSlot">
+        <img class="equippable-icon" :src="require(`@/assets/art/combat/equipment/${item.equipmentSlot}.png`)" alt="" />
+        <span class="equippable-name d-md-block text-uppercase ml-1">{{item.equipmentSlot}}</span>
+      </div>
       <span v-if="item.healAmount" class="mt-1">Heals +{{item.healAmount}} HP</span>
       <span v-if="item.equipmentSlot" class="mt-1">Equippable</span>
       <div
@@ -132,14 +129,19 @@ export default {
   font-weight: bold;
   color: gray;
 }
-.equipment-slot-name {
+.equippable-name {
   font-size: 12px;
   font-weight: bold;
   color: rgb(152, 156, 165);
 }
-.equipment-slot-icon {
-  font-size: 12px;
-  font-weight: bold;
-  color: rgb(152, 156, 165);
+.equippable-icon {
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 768px) {
+  .equippable-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 </style>
