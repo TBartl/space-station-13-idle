@@ -77,6 +77,7 @@ function customMerge(obj, source, root = true, softReset = false) {
 		if (softReset && root && key == "settings") return;
 		if (softReset && root && key == "cheats") return;
 		if (softReset && key == "simulationResetCount") return;
+		if (softReset && key == "remainingTime") return;
 
 		if (!root && obj[key] && obj[key].constructor == Object) {
 			Vue.set(obj, key, {});
