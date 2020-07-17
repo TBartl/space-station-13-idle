@@ -18,6 +18,7 @@ import ContentCooking from "./ContentCooking";
 import ContentGraytiding from "./ContentGraytiding";
 import ContentTinkering from "./ContentTinkering";
 import ContentShitposting from "./ContentShitposting";
+import ContentNewjob from "./ContentNewjob";
 import ContentFabrication from "./ContentFabrication";
 import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
@@ -38,6 +39,7 @@ export default {
     ContentGraytiding,
     ContentTinkering,
     ContentShitposting,
+    ContentNewjob,
     ContentFabrication,
     ContentXenobiology,
     ContentBotany,

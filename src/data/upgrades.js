@@ -362,6 +362,29 @@ for (let i = 0; i < 5; i++) {
 	TINKERING_UPGRADES[`upgradeTinkering${i + 1}`] = upgrade;
 }
 
+export const NEWJOB_UPGRADE_PERCENT = .15;
+const NEWJOB_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Development PC",
+		description: `Increases development speed by +${NEWJOB_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/debug/B.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { newjob: (i + 1) * 10 },
+		upgrade: "newjobUpgrade",
+		requiredUpgrades: { newjobUpgrade: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(NEWJOB_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	NEWJOB_UPGRADES[`upgradeNewjob${i + 1}`] = upgrade;
+}
+
 
 const JOB_UPGRADES = {
 	...MINING_UPGRADES,
@@ -372,7 +395,8 @@ const JOB_UPGRADES = {
 	...BOTANY_UPGRADES,
 	...COOKING_UPGRADES,
 	...XENOBIO_UPGRADES,
-	...CHEMISTRY_UPGRADES
+	...CHEMISTRY_UPGRADES,
+	...NEWJOB_UPGRADES
 }
 
 // Add a required validhunting level

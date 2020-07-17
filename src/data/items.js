@@ -8,6 +8,7 @@ import RESOURCE_TINKERING from "./items/resourceTinkering";
 import RESOURCE_MINING from "./items/resourceMining";
 import RESOURCE_SHITPOSTING from "./items/resourceShitposting";
 import RESOURCE_VALIDHUNTING from "./items/resourceValidhunting";
+import RESOURCE_TEMPLATE from "./items/resourceNewjob";
 import SHOP from "./items/shop";
 import CHRONO from "./items/chrono";
 import SLOT_CHEST from "./items/slotChest";
@@ -33,6 +34,7 @@ const ITEMS = {
 	...RESOURCE_TINKERING,
 	...RESOURCE_CHEMISTRY,
 	...RESOURCE_SHITPOSTING,
+	...RESOURCE_TEMPLATE,
 	...SLOT_FACE,
 	...SLOT_HEAD,
 	...SLOT_NECK,
