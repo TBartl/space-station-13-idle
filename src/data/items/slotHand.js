@@ -757,7 +757,126 @@ const GBULLET = {
 		requires: {
 			rangedPower: 40
 		}
-	}
+	},
+	gunRifle1: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle2: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle3: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle4: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle5: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle6: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
+	gunRifle7: {
+		name: "Combat Shotgun",
+		sellPrice: 1520,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		ammoType: "rifle",
+		stats: {
+			attackSpeed: 1,
+			evasion: 9,
+			power: 4,
+			precision: 0
+		},
+		requires: {
+			rangedPower: 50
+		}
+	},
 }
 // 	mechGunEnergyRifle: {
 // 		name: "Mech Energy Rifle",

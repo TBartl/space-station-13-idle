@@ -84,6 +84,50 @@ export default {
 			precision: 30
 		}
 	},
+	ammoRifle1: {
+		name: "Beanbag Shell",
+		sellPrice: 4,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r1.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 3,
+			precision: 21
+		}
+	},
+	ammoRifle2: {
+		name: "Birdshot Shell",
+		sellPrice: 21,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r2.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 5,
+			precision: 24
+		}
+	},
+	ammoRifle3: {
+		name: "Buckshot Shell",
+		sellPrice: 43,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r3.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 7,
+			precision: 27
+		}
+	},
+	ammoRifle4: {
+		name: "Breaching Shell",
+		sellPrice: 65,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r4.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 9,
+			precision: 30
+		}
+	},
 	ammoRocket1: {
 		name: "Rocket",
 		sellPrice: 700,
