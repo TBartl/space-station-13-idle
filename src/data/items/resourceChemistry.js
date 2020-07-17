@@ -200,7 +200,7 @@ const PILLS = {
 	pillPrecision: {
 		name: "Trifluoperazine",
 		sellPrice: 21,
-		icon: require("@/assets/art/combat/items/pill4.png"),
+		icon: require("@/assets/art/combat/items/pill6.png"),
 		equipmentSlot: "pocket",
 		stats: {
 			maxHealth: 0,
