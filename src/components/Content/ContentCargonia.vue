@@ -12,8 +12,8 @@
       </div>
       <job-info
         infoId="cargonia"
-        :icon="require('@/assets/art/combat/enemies/ai_anim.gif')"
-        title="ATHENA the AI core says..."
+        :icon="require('@/assets/art/jobinfo/cargonia.png')"
+        title="Moffew the Quartermaster flutters..."
         :options="[
           {name: 'Back'},
           {name: 'New job?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'}
@@ -21,7 +21,7 @@
       >
         <template slot="Back">
           <span>
-            System initializing. New job procedures activated.
+          Just act like you are doing your duty bringing in shipments (mineral picture. Once we have enough (guns) we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds (valid token picture).
           </span>
         </template>
         <template slot="New job?">

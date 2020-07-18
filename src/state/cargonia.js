@@ -1,10 +1,34 @@
+import Vue from "vue";
 import { cloneDeep, merge } from 'lodash';
 import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
+import ITEMS from "@/data/items";
 
 import { ACTIONS } from "@/data/cargonia"
 import { CARGONIA_UPGRADE_PERCENT } from "@/data/upgrades";
 
+const potionDropTableCargonia = [
+	{
+		chance: .25,
+		itemTable: [
+			{
+				id: "foodMeatA",
+				count: 1,
+				weight: 35
+			},
+			{
+				id: "oil",
+				count: [1,50],
+				weight: 25
+			},
+			{
+				id: "cactus",
+				count: [1,3],
+				weight: 23
+			},
+		]
+	}
+]
 
 const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
@@ -15,7 +39,7 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			let actions = cloneDeep(ACTIONS);
 
 			let upgradeCount = rootGetters["upgrades/get"]("cargoniaUpgrade");
-			let potion = rootGetters["potions/get"]("cargonia");
+			let potion = rootGetters["potions/get"]("Cargonia");
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
@@ -26,16 +50,11 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (potionItemId == "potionCargonia") {
 					let originalItem = action.item;
 					delete action.item;
-					action.itemTables = [
-						{
-							chance: 1,
-							item: originalItem
-						},
-						{
-							chance: 1,
-							item: originalItem
-						}
-					]
+					action.name = ITEMS[originalItem].name
+
+					let newDropTable = cloneDeep(potionDropTableCargonia);
+					newDropTable.unshift({ chance: 1, item: originalItem })
+					action.itemTables = newDropTable;
 				}
 			}
 			return actions;
