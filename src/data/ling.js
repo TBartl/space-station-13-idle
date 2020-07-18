@@ -232,6 +232,6 @@ export const ACTIONS = {
 export const JOB = {
 	id: "ling",
 	name: "Changeling",
-	icon: require("@/assets/art/debug/A.png"),
+	icon: require("@/assets/art/ling/icon.png"),
 	color: "#9266cc"
 }

@@ -44,7 +44,7 @@
         >
           <generic-action
             :jobId="jobId"
-            :actionName="'WRITE'"
+            :actionName="'SMUGGLE'"
             :action="action"
             :actionId="actionId"
           />

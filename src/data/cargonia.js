@@ -2,7 +2,7 @@ const MOVECRATES = {
 	moveCrate1: {
 		time: 4,
 		name: "Move Crate",
-		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		icon: require("@/assets/art/cargonia/mineral1.png"),
 		xp: 5,
 		requiredLevel: 1,
 		itemTables: [
@@ -28,7 +28,7 @@ const MOVECRATES = {
 	moveCrate2: {
 		time: 4,
 		name: "Move Crate",
-		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		icon: require("@/assets/art/cargonia/mineral1.png"),
 		xp: 5,
 		requiredLevel: 10,
 		itemTables: [
@@ -54,7 +54,7 @@ const MOVECRATES = {
 	moveCrate3: {
 		time: 4,
 		name: "Move Crate",
-		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		icon: require("@/assets/art/cargonia/mineral3.png"),
 		xp: 5,
 		requiredLevel: 20,
 		itemTables: [
@@ -80,7 +80,7 @@ const MOVECRATES = {
 	moveCrate4: {
 		time: 4,
 		name: "Move Crate",
-		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		icon: require("@/assets/art/cargonia/mineral4.png"),
 		xp: 5,
 		requiredLevel: 30,
 		itemTables: [
@@ -106,7 +106,7 @@ const MOVECRATES = {
 	moveCrate5: {
 		time: 4,
 		name: "Move Crate",
-		icon: require("@/assets/art/combat/items/ammo_e1.png"),
+		icon: require("@/assets/art/cargonia/mineral5.png"),
 		xp: 5,
 		requiredLevel: 40,
 		itemTables: [
@@ -240,7 +240,6 @@ const RIFLE_AMMO = {
 const RIFLE_GUNS = {
 	buyRgun1: {
 		time: 4,
-		name: "Naggant",
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
 		xp: 5,
 		requiredLevel: 1,
@@ -255,7 +254,6 @@ const RIFLE_GUNS = {
 	},
 	buyRgun2: {
 		time: 4,
-		name: "WT-550 Autorifle",
 		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
 		xp: 5,
 		requiredLevel: 1,
@@ -270,7 +268,6 @@ const RIFLE_GUNS = {
 	},
 	buyRgun3: {
 		time: 4,
-		name: "Disabling Cell",
 		icon: require("@/assets/art/combat/items/hand/gunR_arg.png"),
 		xp: 5,
 		requiredLevel: 1,
@@ -300,10 +297,9 @@ const RIFLE_GUNS = {
 	},
 	buyRgun5: {
 		time: 4,
-		name: "Disabling Cell",
 		icon: require("@/assets/art/combat/items/hand/gunR_m90.png"),
 		xp: 5,
-		requiredLevel: 5,
+		requiredLevel: 26,
 		items:
 		{
 			id: "gunRifle5",
@@ -315,10 +311,9 @@ const RIFLE_GUNS = {
 	},
 	buyRgun6: {
 		time: 4,
-		name: "Disabling Cell",
 		icon: require("@/assets/art/combat/items/hand/gunR_sniper.png"),
 		xp: 5,
-		requiredLevel: 1,
+		requiredLevel: 34,
 		items:
 		{
 			id: "gunRifle6",
@@ -330,10 +325,9 @@ const RIFLE_GUNS = {
 	},
 	buyRgun7: {
 		time: 4,
-		name: "L6 SAW",
 		icon: require("@/assets/art/combat/items/hand/gunR_l6.png"),
 		xp: 5,
-		requiredLevel: 1,
+		requiredLevel: 46,
 		items:
 		{
 			id: "gunRifle7",

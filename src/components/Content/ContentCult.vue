@@ -12,16 +12,16 @@
       </div>
       <job-info
         infoId="cult"
-        :icon="require('@/assets/art/combat/enemies/ai_anim.gif')"
-        title="ATHENA the AI core says..."
+        :icon="require('@/assets/art/cult/narsie_anim.gif')"
+        title="A VOICE whispers..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'}
+          {name: 'New job?', icon: require('@/assets/art/cult/Rune_large.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>
-            System initializing. New job procedures activated.
+            I can feel it. The veil here is weak. Continue to weaken it (blood icon) and I will grant you my favor (rune picture) and loyal minions (picture of artificer)
           </span>
         </template>
         <template slot="New job?">
@@ -44,7 +44,7 @@
         >
           <generic-action
             :jobId="jobId"
-            :actionName="'WRITE'"
+            :actionName="'INVOKE'"
             :action="action"
             :actionId="actionId"
           />

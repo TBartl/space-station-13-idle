@@ -715,7 +715,7 @@ const GBULLET = {
 		overlay: require("@/assets/art/combat/items/gunb_shot6_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			attackSpeed: 2,
+			attackSpeed: 2.5,
 			evasion: 8,
 			power: 4,
 			precision: 0
@@ -732,7 +732,7 @@ const GBULLET = {
 		overlay: require("@/assets/art/combat/items/gunb_shot7_overlay.png"),
 		ammoType: "ballistic",
 		stats: {
-			attackSpeed: 1,
+			attackSpeed: 2,
 			evasion: 9,
 			power: 4,
 			precision: 0
@@ -759,118 +759,118 @@ const GBULLET = {
 		}
 	},
 	gunRifle1: {
-		name: "Combat Shotgun",
+		name: "Mosin-Nagant Rifle",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
-			precision: 0
+			attackSpeed: 5,
+			evasion: 2,
+			power: 1,
+			precision: 1
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle2: {
-		name: "Combat Shotgun",
+		name: "WT-550 Autorifle",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_wt5_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
-			precision: 0
+			attackSpeed: 5,
+			evasion: 4,
+			power: 2,
+			precision: 2
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle3: {
-		name: "Combat Shotgun",
+		name: "NT-ARG 'Boarder Rifle",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_arg.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_arg_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
-			precision: 0
+			attackSpeed: 5,
+			evasion: 6,
+			power: 3,
+			precision: 3
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle4: {
-		name: "Combat Shotgun",
+		name: "C20r Rifle",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_c20r.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_c20r_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
+			attackSpeed: 5,
+			evasion: 8,
 			power: 4,
-			precision: 0
+			precision: 4
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle5: {
-		name: "Combat Shotgun",
+		name: "M-90gl Carbine",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_m90.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_m90_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
-			precision: 0
+			attackSpeed: 5,
+			evasion: 10,
+			power: 5,
+			precision: 5
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle6: {
-		name: "Combat Shotgun",
+		name: "Sniper Rifle",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_sniper.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_sniper_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
-			precision: 0
+			attackSpeed: 10,
+			evasion: 0,
+			power: 10,
+			precision: 15
 		},
 		requires: {
 			rangedPower: 50
 		}
 	},
 	gunRifle7: {
-		name: "Combat Shotgun",
+		name: "Belt Fed L6 Saw",
 		sellPrice: 1520,
 		equipmentSlot: "hand",
-		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
-		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
+		icon: require("@/assets/art/combat/items/hand/gunR_l6.png"),
+		overlay: require("@/assets/art/combat/items/hand/gunR_l6_overlay.png"),
 		ammoType: "rifle",
 		stats: {
-			attackSpeed: 1,
-			evasion: 9,
-			power: 4,
+			attackSpeed: .3,
+			evasion: 0,
+			power: 25,
 			precision: 0
 		},
 		requires: {
