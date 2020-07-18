@@ -112,7 +112,7 @@ const BOSSES = {
 				chance: 1,
 				items: {
 					id: "money",
-					count: [0, 5000]
+					count: [0, 20000]
 				}
 			},
 			{

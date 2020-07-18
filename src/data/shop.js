@@ -27,7 +27,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "wizCrate",]
+		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "ertCrate", "wizCrate"]
 	},
 	{
 		name: "Clothes Vendo-Matic",
@@ -311,6 +311,13 @@ const CRATES = {
 			cultParts: 20,
 		}
 	},
+	ertCrate: {
+		item: "ertCrate",
+		description: "A prize from Nanotrasen for stopping some internal problems, contains even more problems!",
+		requiredItems: {
+			ertParts: 20,
+		}
+	},
 	wizCrate: {
 		item: "wizCrate",
 		description: "This magical vending machine is just too arcane to use. It looks like it has a slot to put scrolls in?.",
@@ -365,6 +372,15 @@ const TICKETS = {
 			ticket3: 5,
 		},
 		fightZone: "Bloodsworn Cultists"
+	},
+	bossTicket55: {
+		name: "Check Nanotrasen Reports",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticket55.png"),
+		requiredItems: {
+			ticket55: 5,
+		},
+		fightZone: "Rogue Nanotrasen Team"
 	},
 	bossTicket60: {
 		name: "Schedule Celebrity Tour",

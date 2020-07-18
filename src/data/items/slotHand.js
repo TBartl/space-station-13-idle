@@ -496,6 +496,22 @@ const MSHIELD = {
 		requires: {
 			evasion: 36
 		}
+	},
+	meleeShield2: {
+		name: "Telescopic Shield",
+		sellPrice: 1920,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/melee_shield2.png"),
+		overlay: require("@/assets/art/combat/items/hand/melee_shield2_overlay.png"),
+		stats: {
+			attackSpeed: 4.5,
+			evasion: 10,
+			power: 5,
+			precision: 0
+		},
+		requires: {
+			evasion: 46
+		}
 	}
 }
 
@@ -617,6 +633,24 @@ const GENERGY = {
 		},
 		requires: {
 			rangedPower: 50
+		}
+	},
+	gunEnergy8: {
+		name: "Pulse Carbine",
+		sellPrice: 2500,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/gune_pulsecarbine.png"),
+		overlay: require("@/assets/art/combat/items/gune_pulsecarbine_overlay.png"),
+		ammoType: "energized",
+		stats: {
+			attackSpeed: 3,
+			evasion: 3,
+			power: 7,
+			precision: 10
+		},
+		requires: {
+			rangedPower: 50,
+			command: 30
 		}
 	}
 }
