@@ -4,7 +4,7 @@
     class="d-flex flex-row align-items-center my-1"
     :class="{simplified: simplified}"
   >
-    <span v-if="chance" class="mr-2">{{cleanedChance}}</span>
+    <span v-if="chance" class="mr-1">{{cleanedChance}}</span>
     <img :src="item.icon" :id="id" class="mx--0" :class="{'mr-1': !simplified}" />
     <item-popover :itemId="itemId" :target="id" placement="right" />
     <span v-if="simplified">x</span>
@@ -52,7 +52,7 @@ export default {
       return 1;
     },
     cleanedChance() {
-      let chance = (this.chance * 100).toFixed(2);
+      let chance = (this.chance * 100).toFixed(2).replace(/[.,]00$/, "");
       if (chance.length <= 4) chance = "  " + chance;
       return chance + "%";
     },

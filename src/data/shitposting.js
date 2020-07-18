@@ -8,7 +8,7 @@ export const ACTIONS = {
 		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 100
+			power: 99
 		}
 	},
 	postDeadchat: {
@@ -20,7 +20,19 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
-			power: 100
+			power: 99
+		}
+	},
+	Cocacolagua: {
+		time: 1,
+		name: "	Cocacolagua's Choice",
+		item: "pillHappy",
+		icon: require("@/assets/art/shitposting/skub.png"),
+		xp: 1,
+		xpActivated: 5,
+		requiredLevel: 49,
+		requiredItems: {
+			power: 99
 		}
 	},
 }

@@ -173,13 +173,13 @@ for (let i = 0; i < 5; i++) {
 
 
 const XENOBIO_UPGRADES = {}
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Xenobiology Pens",
 		description: "", // set below
 		icon: require('@/assets/art/xenobio/upgrade1.png'),
 		requiredItems: {}, // Filled out below
-		requiredLevels: { xenobiology: (i + 1) * 15 },
+		requiredLevels: { xenobiology: (i + 1) * 10 },
 		upgrade: "xenobiologyPens",
 		requiredUpgrades: { xenobiologyPens: i }
 
@@ -189,8 +189,7 @@ for (let i = 0; i < 3; i++) {
 		upgrade.description += `x${2 ** (i - j + 1)} tier ${j + 1} slime yield`
 	}
 
-	upgrade.requiredItems.money = calcCost(i, 3);
-
+	upgrade.requiredItems.money = calcCost(i, 5);
 
 	XENOBIO_UPGRADES[`upgradeXenobio${i + 1}`] = upgrade;
 }
@@ -223,7 +222,7 @@ const FABRICATION_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Upgrade Matter Bins",
-		description: `Reduces fabrication ore costs to ${100-FABRICATION_UPGRADE_PERCENT * (i + 1) * 100}%`, // Expanded below
+		description: `Reduces fabrication ore costs to ${100 - FABRICATION_UPGRADE_PERCENT * (i + 1) * 100}%`, // Expanded below
 		icon: require('@/assets/art/fabrication/upgrade1.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { fabrication: (i + 1) * 10 },
@@ -233,7 +232,7 @@ for (let i = 0; i < 5; i++) {
 	}
 
 	if (i != 0) {
-		upgrade.description += `, from ${(100-FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
+		upgrade.description += `, from ${(100 - FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
 	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
@@ -363,7 +362,74 @@ for (let i = 0; i < 5; i++) {
 	TINKERING_UPGRADES[`upgradeTinkering${i + 1}`] = upgrade;
 }
 
+export const CARGONIA_UPGRADE_PERCENT = .15;
+const CARGONIA_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Development PC",
+		description: `Increases development speed by +${CARGONIA_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/debug/B.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { cult: (i + 1) * 10 },
+		upgrade: "cargoniaUpgrade",
+		requiredUpgrades: { cargoniaUpgrade: i }
 
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(CARGONIA_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	CARGONIA_UPGRADES[`upgradeCargonia${i + 1}`] = upgrade;
+}
+
+export const CULT_UPGRADE_PERCENT = .15;
+const CULT_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Development PC",
+		description: `Increases development speed by +${CULT_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/debug/B.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { cult: (i + 1) * 10 },
+		upgrade: "cultUpgrade",
+		requiredUpgrades: { cultUpgrade: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(CULT_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	CULT_UPGRADES[`upgradeCult${i + 1}`] = upgrade;
+}
+
+export const LING_UPGRADE_PERCENT = .15;
+const LING_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade Development PC",
+		description: `Increases development speed by +${LING_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/debug/B.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { cult: (i + 1) * 10 },
+		upgrade: "lingUpgrade",
+		requiredUpgrades: { lingUpgrade: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(LING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	LING_UPGRADES[`upgradeLing${i + 1}`] = upgrade;
+}
 const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
@@ -373,7 +439,10 @@ const JOB_UPGRADES = {
 	...BOTANY_UPGRADES,
 	...COOKING_UPGRADES,
 	...XENOBIO_UPGRADES,
-	...CHEMISTRY_UPGRADES
+	...CHEMISTRY_UPGRADES,
+	...CARGONIA_UPGRADES,
+	...CULT_UPGRADES,
+	...LING_UPGRADES
 }
 
 // Add a required validhunting level

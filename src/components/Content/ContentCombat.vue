@@ -28,6 +28,7 @@
         </div>
         <div class="col-12 col-xl-4" v-if="inCombat">
           <loot />
+          <repeat-boss />
         </div>
       </div>
       <div class="row" v-if="!inCombat">
@@ -65,6 +66,7 @@ import MobCard from "@/components/Content/Combat/MobCard";
 import Loot from "@/components/Content/Combat/Loot";
 import Validhunting from "@/components/Content/Combat/Validhunting";
 import ContentCombatJobInfo from "@/components/Content/ContentCombatJobInfo";
+import RepeatBoss from "@/components/Content/Combat/RepeatBoss";
 export default {
   extends: ContentAbstract,
   components: {
@@ -75,7 +77,8 @@ export default {
     MobCard,
     Loot,
     Validhunting,
-    ContentCombatJobInfo
+    ContentCombatJobInfo,
+    RepeatBoss
   },
   computed: {
     ...mapGetters("combat", ["targetEnemy"]),

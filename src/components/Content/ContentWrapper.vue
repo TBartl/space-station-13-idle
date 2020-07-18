@@ -19,6 +19,9 @@ import ContentGraytiding from "./ContentGraytiding";
 import ContentTinkering from "./ContentTinkering";
 import ContentShitposting from "./ContentShitposting";
 import ContentFabrication from "./ContentFabrication";
+import ContentCargonia from "./ContentCargonia";
+import ContentCult from "./ContentCult";
+import ContentLing from "./ContentLing";
 import ContentCombat from "./ContentCombat";
 import ContentSettings from "./ContentSettings";
 import ContentChronosphere from "./ContentChronosphere";
@@ -42,6 +45,9 @@ export default {
     ContentXenobiology,
     ContentBotany,
     ContentCooking,
+    ContentCargonia,
+    ContentCult,
+    ContentLing,
     ContentCombat,
     ContentSettings,
     ContentChronosphere,

@@ -119,6 +119,30 @@ const POTIONS = {
 		description: "Allows you to gain additional XP when completing ??? actions. Highly Toxic.",
 		potionJob: "shitposting",
 		potionCharges: 5
+	},
+	potionCargonia: {
+		name: "Cargonia Potion",
+		sellPrice: 66,
+		icon: require("@/assets/art/chemistry/brainjuice.png"),
+		description: "Increases the health cost and favor gained from sacrificing.",
+		potionJob: "cargonia",
+		potionCharges: 10
+	},
+	potionCult: {
+		name: "Cult Potion",
+		sellPrice: 66,
+		icon: require("@/assets/art/chemistry/brainjuice.png"),
+		description: "Increases the health cost and favor gained from sacrificing.",
+		potionJob: "cult",
+		potionCharges: 10
+	},
+	potionLing: {
+		name: "Changeling Potion",
+		sellPrice: 66,
+		icon: require("@/assets/art/chemistry/brainjuice.png"),
+		description: "Increases the health cost and favor gained from sacrificing.",
+		potionJob: "ling",
+		potionCharges: 10
 	}
 }
 
@@ -195,6 +219,18 @@ const PILLS = {
 			evasion: 5,
 			precision: 0,
 			power: 0,
+		}
+	},
+	pillPrecision: {
+		name: "Trifluoperazine",
+		sellPrice: 21,
+		icon: require("@/assets/art/combat/items/pill6.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: 15,
+			power: -10,
 		}
 	}
 }

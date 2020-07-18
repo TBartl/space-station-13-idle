@@ -18,6 +18,9 @@ import tinkering from "./tinkering";
 import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
+import cargonia from "./cargonia";
+import cult from "./cult";
+import ling from "./ling";
 import precision from "./precision";
 import meleePower from "./meleePower";
 import rangedPower from "./rangedPower";
@@ -47,6 +50,9 @@ const modules = {
 	command,
 	validhunting,
 	shitposting,
+	cargonia,
+	cult,
+	ling,
 	precision,
 	meleePower,
 	rangedPower,
@@ -74,15 +80,17 @@ function customMerge(obj, source, root = true, softReset = false) {
 
 	allKeys.forEach(key => {
 		if (key.toLowerCase().includes("coroutine")) return;
-		if (softReset && key == "settings") return;
-		if (softReset && key == "cheats") return;
+		if (softReset && root && key == "settings") return;
+		if (softReset && root && key == "cheats") return;
+		if (softReset && key == "simulationResetCount") return;
+		if (softReset && key == "remainingTime") return;
 
 		if (!root && obj[key] && obj[key].constructor == Object) {
 			Vue.set(obj, key, {});
 		}
 		if (source[key] && source[key].constructor == Object) {
 			if (!obj[key]) Vue.set(obj, key, {});
-			customMerge(obj[key], source[key], false);
+			customMerge(obj[key], source[key], false, softReset);
 		}
 		else if (Array.isArray(source[key])) {
 			Vue.set(obj, key, []);

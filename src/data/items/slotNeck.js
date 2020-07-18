@@ -225,4 +225,164 @@ export default {
 			evasion: 30
 		},
 	},
+	runeN1: {
+		name: "Manifest Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Manifest_rune.png"),
+		overlay: require("@/assets/art/cult/Manifest_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 8,
+			evasion: 0,
+			precision:30,
+			power: 1,
+		},
+		requires: {
+			evasion: 7
+		},
+	},
+	runeN2: {
+		name: "Boil Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Boil_rune.png"),
+		overlay: require("@/assets/art/cult/Boil_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 16,
+			evasion: 0,
+			precision: 6,
+			power: 2,
+		},
+		requires: {
+			evasion: 17
+		},
+	},
+	runeN3: {
+		name: "RaiseDead Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Raisedead_rune.png"),
+		overlay: require("@/assets/art/cult/Raisedead_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 24,
+			evasion: 0,
+			precision: 9,
+			power: 3,
+		},
+		requires: {
+			evasion: 27
+		},
+	},
+	runeN4: {
+		name: "Apocalypse Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Apocalypse.png"),
+		overlay: require("@/assets/art/cult/Apocalypse_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 32,
+			evasion: 0,
+			precision: 12,
+			power: 4,
+		},
+		requires: {
+			evasion: 37
+		},
+	},
+	runeN5: {
+		name: "Large Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Rune_large.png"),
+		overlay: require("@/assets/art/cult/Rune_large_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 40,
+			evasion: 0,
+			precision: 15,
+			power: 5,
+		},
+		requires: {
+			evasion: 47
+		},
+	},
+	runeB1: {
+		name: "Offer Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Empower_rune.png"),
+		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 8,
+			evasion: 0,
+			precision: 1,
+			power: 3,
+		},
+		requires: {
+			evasion: 7
+		},
+	},
+	runeB2: {
+		name: "Empower Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Empower_rune.png"),
+		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 16,
+			evasion: 0,
+			precision: 2,
+			power: 6,
+		},
+		requires: {
+			evasion: 17
+		},
+	},
+	runeB3: {
+		name: "Teleport Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Teleport_rune.png"),
+		overlay: require("@/assets/art/cult/Teleport_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 24,
+			evasion: 0,
+			precision: 3,
+			power: 9,
+		},
+		requires: {
+			evasion: 27
+		},
+	},
+	runeB4: {
+		name: "Summon Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Summon_rune.png"),
+		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 32,
+			evasion: 0,
+			precision: 4,
+			power: 12,
+		},
+		requires: {
+			evasion: 37
+		},
+	},
+	runeB5: {
+		name: "Huge Rune",
+		sellPrice: 2500,
+		icon: require("@/assets/art/cult/Huge_rune.png"),
+		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 40,
+			evasion: 0,
+			precision: 5,
+			power: 15,
+		},
+		requires: {
+			evasion: 47
+		},
+	},
 }

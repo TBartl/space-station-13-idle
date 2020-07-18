@@ -7,6 +7,12 @@
     />
     <div class="content-container">
       <div class="row">
+        <div class="col-12 mb-3" v-if="resets > 0">
+          <div class="content-block content-block-top">
+            <img :src="require('@/assets/art/chrono/bluetime.png')" class="mr-2" />
+            <span class="mr-1">Reset Count: {{resets}}</span>
+          </div>
+        </div>
         <div class="col-12">
           <div
             class="content-block content-block-top clickable"
@@ -183,6 +189,9 @@ export default {
     },
     maxLevel() {
       return MAX_LEVEL;
+    },
+    resets() {
+      return this.$store.getters["completion/simulationResetCount"];
     }
   },
   filters: {
