@@ -203,5 +203,106 @@ export default {
 			evasion: 25,
 		}
 	},
-
+	faceLing0: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling1_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	faceLing1: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling2_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	faceLing2: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling3_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	faceLing3: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling4_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	faceLing4: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling5_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
+	faceLing5: {
+		name: "Disguise",
+		sellPrice: 1200,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling6_overlay.png"),
+		stats: {
+			maxHealth: 20,
+			evasion: 3,
+			protection: -6,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 10,
+		}
+	},
 }
