@@ -1,4 +1,8 @@
 export default {
+	antag: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/antag_anim.gif")
+	},
 	money: {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")

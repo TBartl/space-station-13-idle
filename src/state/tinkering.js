@@ -70,6 +70,9 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			}
 			return actions;
 		},
+	locked(state, getters, rootState, rootGetters) {
+		return !rootGetters["upgrades/get"]("tinkeringUnlocked");
+	}
 	},
 	mutations: {
 		addXP(state, xp) {
