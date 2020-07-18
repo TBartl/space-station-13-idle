@@ -39,6 +39,9 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				}
 			}
 			return actions;
+		},
+		locked(state, getters, rootState, rootGetters) {
+			return !rootGetters["upgrades/get"]("lingUnlocked");
 		}
 	}
 });

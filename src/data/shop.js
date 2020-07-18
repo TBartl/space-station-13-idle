@@ -14,7 +14,7 @@ export const SECTIONS = [
 	{
 		name: "Job Unlocks",
 		purchases: [
-			"unlockCooking", "unlockXenobiology", "unlockShitposting"
+			"unlockFabrication", "unlockTinkering", "unlockCooking",, "unlockXenobiology", "unlockShitposting", "unlockCargonia", "unlockCult", "unlockLing",
 		]
 	},
 	{
@@ -111,6 +111,31 @@ const JOB_UNLOCKS = {
 			cookingUnlocked: 0
 		}
 	},
+	unlockFabrication: {
+		name: "Unlock Fabrication",
+		description: "Allows you to turn raw minerals into ranged weapons and exosuits",
+		icon: require('@/assets/art/fabrication/icon.png'),
+		requiredItems: {
+			glass: 20,
+			power: 20,
+		},
+		upgrade: "fabricationUnlocked",
+		requiredUpgrades: {
+			fabricationUnlocked: 0
+		}
+	},
+	unlockTinkering: {
+		name: "Unlock Tinkering",
+		description: "Allows you to turn junk into weapons and armor.",
+		icon: require('@/assets/art/tinkering/icon.png'),
+		requiredItems: {
+			junk: 5
+		},
+		upgrade: "tinkeringUnlocked",
+		requiredUpgrades: {
+			tinkeringUnlocked: 0
+		}
+	},
 	unlockXenobiology: {
 		name: "Unlock Xenobiology",
 		description: "Allows you to raise slimes that can fight alongside you",
@@ -134,7 +159,46 @@ const JOB_UNLOCKS = {
 		requiredUpgrades: {
 			shitpostingUnlocked: 0
 		}
-	}
+	},
+	unlockCargonia: {
+		name: "Unlock Cargonia",
+		description: "Allows you to spend money for minerals and guns",
+		icon: require('@/assets/art/jobinfo/cargo_banner.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "cargoniaUnlocked",
+		requiredUpgrades: {
+			cargoniaUnlocked: 0
+		}
+	},
+	unlockCult: {
+		name: "Unlock Cult",
+		description: "Allows you to sacrifice health for dark runes and minions",
+		icon: require("@/assets/art/cult/Sacrifice_rune.png"),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "tinkeringUnlocked",
+		requiredUpgrades: {
+			cultUnlocked: 0
+		}
+	},
+	unlockLing: {
+		name: "Unlock Changeling",
+		description: "Allows you to shape meat into regenerative armor",
+		icon: require('@/assets/art/ling/icon.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "lingUnlocked",
+		requiredUpgrades: {
+			lingUnlocked: 0
+		}
+	},
 }
 
 const CAPES = {
