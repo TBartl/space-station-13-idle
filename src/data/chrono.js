@@ -43,6 +43,25 @@ const BASE_PURCHASES = {
 			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time Gained!`, duration: 2500 });
 		}
 	},
+	antagRoll: {
+		name: "Antag Roll",
+		description: "Aquire aid from a random nefarious faction.",
+		icon: require('@/assets/art/chrono/timebank.png'),
+		requiredItems: {
+			bluetime: 10
+		},
+		onPurchase(store) {
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
+		},
+		items: {
+			id: "money",
+			count: 100000
+		},
+		upgrade: "antagRoll",
+		requiredUpgrades: {
+			antagRoll: 0
+		}
+	},
 	timeBankSize1: {
 		name: "Expand Time Bank I",
 		description: "Increases the maximum capacity of the time bank from 12 hours, to 24 hours",
@@ -131,7 +150,7 @@ ALL_JOBS.forEach(job => {
 export const SECTIONS = [
 	{
 		name: "Chrono Exchange",
-		purchases: ["chronoToCash", "chronoToTime"]
+		purchases: ["chronoToCash", "chronoToTime","antagRoll"]
 	},
 	{
 		name: "Time Bank Upgrades",

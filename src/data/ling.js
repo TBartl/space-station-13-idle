@@ -1,10 +1,26 @@
 const ACTIONS_LINGBASE = {
 	ling0: {
 		time: 60,
+		actionName: "INGEST",
+		name: "ALIEN ORGAN",
 		item: "foodMeatZ",
 		icon: require("@/assets/art/ling/headcrab.png"),
 		xp: 864,
 		requiredLevel: 1
+	},
+	ling0: {
+		time: 60,
+		item: "foodMeatZ",
+		icon: require("@/assets/art/ling/headcrab.png"),
+		xp: 864,
+		requiredLevel: 1
+	},
+	renounceLing: {
+		time: 1,
+		item: "antag",
+		icon: require("@/assets/art/ling/renounce.png"),
+		xp: -200000,
+		requiredLevel: 1,
 	},
 }
 const ACTIONS_LINGAIM = {

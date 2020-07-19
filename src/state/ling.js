@@ -3,7 +3,7 @@ import jobBase from '@/state/jobBase';
 import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/ling"
-import { LING_UPGRADE_PERCENT } from "@/data/upgrades";
+import { ANTAG_UPGRADE_PERCENT } from "@/data/upgrades";
 
 
 const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
@@ -14,13 +14,13 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
 
-			let upgradeCount = rootGetters["upgrades/get"]("lingUpgrade");
+			let upgradeCount = rootGetters["upgrades/get"]("antagUpgrade");
 			let potion = rootGetters["potions/get"]("ling");
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
 				// Apply upgrades
-				action.time *= 1 / (1 + LING_UPGRADE_PERCENT * upgradeCount);
+				action.time *= 1 / (1 + ANTAG_UPGRADE_PERCENT * upgradeCount);
 
 				// Apply potion, current idea "synthetic meat, reduces meat cost by 1? half? IDK"
 				if (potionItemId == "potionLing") {

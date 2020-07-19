@@ -1,4 +1,21 @@
 const MOVECRATES = {
+	hailCargonia1: {
+		time: 1,
+		actionName: "HAIL",
+		name: "Cargonia",
+		item: "supplyCrate",
+		icon: require("@/assets/art/jobinfo/cargo_banner.png"),
+		xp: 864,
+		requiredLevel: 1,
+		requiredItems: { startCargonia: 1 }
+	},
+	renounceCargonia: {
+		time: 1,
+		item: "antag",
+		icon: require("@/assets/art/cargonia/renounce_anim.gif"),
+		xp: -200000,
+		requiredLevel: 1,
+	},
 	moveCrate1: {
 		time: 6,
 		name: "Move Crate",
