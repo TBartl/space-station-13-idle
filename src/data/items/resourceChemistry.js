@@ -107,7 +107,7 @@ const POTIONS = {
 	potionBartending: {
 		name: "Powerful Shaker",
 		sellPrice: 180,
-		icon: require("@/assets/art/combat/enemies/missing.png"),
+		icon: require("@/assets/art/bartending/icon.png"),
 		description: `Remove the level requirement from Bartending actions.`,
 		potionJob: "bartending",
 		potionCharges: 5
