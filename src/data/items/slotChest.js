@@ -353,79 +353,73 @@ const LINGAIM = {
 	lingAim1: {
 		name: "Core Enhancements",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 181,
 		icon: require("@/assets/art/combat/items/chest/arm_la1.png"), overlay: require("@/assets/art/combat/items/chest/arm_la1_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 1
 		}
 	},
 	lingAim2: {
 		name: "Enhanced Nerves",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 308,
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"), overlay: require("@/assets/art/combat/items/chest/arm_la2_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 10
 		}
 	},
 	lingAim3: {
 		name: "Leg Enhancements",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 435,
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"), overlay: require("@/assets/art/combat/items/chest/arm_la3_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 20
 		}
 	},
 	lingAim4: {
 		name: "Enhanced Reactions",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 562,
 		icon: require("@/assets/art/combat/items/chest/arm_la4.png"), overlay: require("@/assets/art/combat/items/chest/arm_la4_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 30
 		}
 	},
 	lingAim5: {
 		name: "Arm Enhancement",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 689,
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"), overlay: require("@/assets/art/combat/items/chest/arm_la5_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 40
 		}
 	},
 	lingAim6: {
 		name: "Enhanced Flesh",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 798,
 		icon: require("@/assets/art/combat/items/chest/arm_la6.png"), overlay: require("@/assets/art/combat/items/chest/arm_la6_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 50,
-			validhunting: 50
+			command: 50
 		}
 	},
 }
@@ -434,79 +428,73 @@ const LINGPOWER = {
 	lingPower1: {
 		name: "Reinforced Ribs",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 253,
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp1_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 1,
-			validhunting: 1
+			command: 1
 		}
 	},
 	lingPower2: {
 		name: "Reinforced Chest",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 344,
 		icon: require("@/assets/art/combat/items/chest/arm_lp2.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp2_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 5,
-			validhunting: 10
+			command: 10
 		}
 	},
 	lingPower3: {
 		name: "Reinforced Core",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 507,
 		icon: require("@/assets/art/combat/items/chest/arm_lp3.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp3_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 10,
-			validhunting: 20
+			command: 20
 		}
 	},
 	lingPower4: {
 		name: "Reinforced Torso",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 598,
 		icon: require("@/assets/art/combat/items/chest/arm_lp4.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp4_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 15,
-			validhunting: 30
+			command: 30
 		}
 	},
 	lingPower5: {
 		name: "Reinforced Legs",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 725,
 		icon: require("@/assets/art/combat/items/chest/arm_lp5.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp5_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 20,
-			validhunting: 40
+			command: 40
 		}
 	},
 	lingPower6: {
 		name: "Reinforced Body",
 		equipmentSlot: "chest",
-		sellPrice: 170,
+		sellPrice: 834,
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp6_overlay.png"),
 		stats: {
 			maxHealth: 150,
 		},
 		requires: {
-			xenobiology: 25,
-			validhunting: 50
+			command: 50
 		}
 	},
 }
@@ -564,22 +552,22 @@ Object.values(ASSAULTMECHS).forEach(assaultmech => {
 
 Object.values(LINGAIM).forEach(lingaim => {
 	lingaim.equipmentSlot = "chest";
-	let bruteConstant = Math.max(5, lingaim.requires.validhunting);
+	let bruteConstant = Math.max(5, lingaim.requires.command);
 
 	lingaim.stats.maxHealth = Math.trunc(bruteConstant * 20);
-	lingaim.stats.power = Math.ceil(bruteConstant * .0);
 	lingaim.stats.precision = Math.ceil(bruteConstant * 0.7);
+	lingaim.stats.power = Math.ceil(bruteConstant * 0.1);
 	lingaim.stats.bruteProtection = Math.round(bruteConstant * .2) + 2;
 });
 
 Object.values(LINGPOWER).forEach(lingpower => {
 	lingpower.equipmentSlot = "chest";
-	let bruteConstant = Math.max(5, lingpower.requires.validhunting);
+	let bruteConstant = Math.max(5, lingpower.requires.command);
 
 	lingpower.stats.maxHealth = Math.trunc(bruteConstant * 20);
-//	lingpower.stats.power = Math.ceil(bruteConstant * .7);
+	lingpower.stats.precision = Math.ceil(bruteConstant * 0.1);
 	lingpower.stats.power = Math.ceil(bruteConstant * 0.7);
-	lingpower.stats.protection = Math.round(bruteConstant * .2) + 2;
+	lingpower.stats.burnProtection = Math.round(bruteConstant * .2) + 2;
 });
 
 

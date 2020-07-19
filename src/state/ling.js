@@ -22,7 +22,7 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				// Apply upgrades
 				action.time *= 1 / (1 + LING_UPGRADE_PERCENT * upgradeCount);
 
-				// Apply potion
+				// Apply potion, current idea "synthetic meat, reduces meat cost by 1? half? IDK"
 				if (potionItemId == "potionLing") {
 					let originalItem = action.item;
 					delete action.item;
