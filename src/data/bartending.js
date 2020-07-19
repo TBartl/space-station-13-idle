@@ -40,7 +40,7 @@ const POWER = {
         icon: require("@/assets/art/bartending/manlydorf.png"),
         time: 3,
         xp: 8.5,
-        requiredLevel: 4,
+        requiredLevel: 17,
         requiredItems: { power: 5 }
     },
     mixWhiskeyCola: {
@@ -71,7 +71,7 @@ const POWER = {
         icon: require("@/assets/art/bartending/anim/manhattan_proj.gif"),
         time: 3,
         xp: 16.5,
-        requiredLevel: 26,
+        requiredLevel: 30,
         requiredItems: { power: 9 }
     },
     mixChangelingSting: {
@@ -79,7 +79,7 @@ const POWER = {
         icon: require("@/assets/art/bartending/anim/changelingsting.gif"),
         time: 3,
         xp: 17.5,
-        requiredLevel: 28,
+        requiredLevel: 35,
         requiredItems: { power: 10 }
     },
     mixBeepskySmash: {
@@ -87,7 +87,7 @@ const POWER = {
         icon: require("@/assets/art/bartending/anim/beepskysmash.gif"),
         time: 3,
         xp: 18.5,
-        requiredLevel: 30,
+        requiredLevel: 37,
         requiredItems: { power: 11 }
     },
     mixSingulo: {
@@ -95,7 +95,7 @@ const POWER = {
         icon: require("@/assets/art/bartending/anim/singulo.gif"),
         time: 3,
         xp: 19.5,
-        requiredLevel: 32,
+        requiredLevel: 39,
         requiredItems: { power: 12 }
     },
 }
@@ -141,7 +141,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/silencer.png"),
         time: 3,
         xp: 14.4,
-        requiredLevel: 14,
+        requiredLevel: 18,
         requiredItems: { slimeBlue: 1 }
     },
     mixAcidSpit: {
@@ -149,7 +149,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/anim/acidspit.gif"),
         time: 3,
         xp: 16,
-        requiredLevel: 16,
+        requiredLevel: 20,
         requiredItems: { slimeBlue: 2 }
     },
     mixArnoldPalmer: {
@@ -157,7 +157,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/arnoldpalmer.png"),
         time: 3,
         xp: 17.6,
-        requiredLevel: 18,
+        requiredLevel: 22,
         requiredItems: { slimeMetal: 1 }
     },
     mixWhiteRussian: {
@@ -165,7 +165,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/whiterussian.png"),
         time: 3,
         xp: 19.2,
-        requiredLevel: 20,
+        requiredLevel: 24,
         requiredItems: { slimeMetal: 2 }
     },
     mixSyndicateBomb: {
@@ -173,7 +173,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/syndicatebomb.png"),
         time: 3,
         xp: 27.2,
-        requiredLevel: 38,
+        requiredLevel: 32,
         requiredItems: { slimeDarkPurple: 1 }
     },
     mixDemonsBlood: {
@@ -181,7 +181,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/anim/demonsblood.gif"),
         time: 3,
         xp: 28.8,
-        requiredLevel: 40,
+        requiredLevel: 36,
         requiredItems: { slimeDarkPurple: 2 }
     },
     mixNeurotoxin: {
@@ -189,7 +189,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/anim/neurotoxin.gif"),
         time: 3,
         xp: 30.4,
-        requiredLevel: 42,
+        requiredLevel: 38,
         requiredItems: { slimeDarkBlue: 1 }
     },
     mixWhat: {
@@ -197,7 +197,7 @@ const SLIME = {
         icon: require("@/assets/art/bartending/whatdrink.png"),
         time: 3,
         xp: 32,
-        requiredLevel: 44,
+        requiredLevel: 40,
         requiredItems: { slimeDarkBlue: 2 }
     }
 }
@@ -225,7 +225,7 @@ const POWERPLUS = {
         icon: require("@/assets/art/bartending/manhattan.png"),
         time: 3,
         xp: 12.5,
-        requiredLevel: 10,
+        requiredLevel: 25,
         requiredItems: { power: 8, silver: 1 }
     },
     mixAntiFreeze: {
@@ -233,7 +233,7 @@ const POWERPLUS = {
         icon: require("@/assets/art/bartending/antifreeze.png"),
         time: 3,
         xp: 13.5,
-        requiredLevel: 12,
+        requiredLevel: 27,
         requiredItems: { power: 9, gold: 1 }
     },
     mixGargleBlaster: {
@@ -241,7 +241,7 @@ const POWERPLUS = {
         icon: require("@/assets/art/bartending/anim/gargleblaster.gif"),
         time: 3,
         xp: 20.5,
-        requiredLevel: 34,
+        requiredLevel: 41,
         requiredItems: { power: 12, titanium: 1 }
     },
     mixB52: {
@@ -249,7 +249,7 @@ const POWERPLUS = {
         icon: require("@/assets/art/bartending/anim/b52_flaming.gif"),
         time: 3,
         xp: 21.5,
-        requiredLevel: 36,
+        requiredLevel: 43,
         requiredItems: { power: 13, uranium: 1 }
     },
     mixNukaCola: {
@@ -283,7 +283,7 @@ const SLIMEPLUS = {
         icon: require("@/assets/art/bartending/irishcarbomb.png"),
         time: 3,
         xp: 20.8,
-        requiredLevel: 22,
+        requiredLevel: 26,
         requiredItems: { slimeYellow: 1, silver: 2 }
     },
     mixLizardWine: {
@@ -291,7 +291,7 @@ const SLIMEPLUS = {
         icon: require("@/assets/art/bartending/lizardwine.png"),
         time: 3,
         xp: 22.4,
-        requiredLevel: 24,
+        requiredLevel: 28,
         requiredItems: { slimeYellow: 2, gold: 2 }
     },
     mixQuicky: {
@@ -299,7 +299,7 @@ const SLIMEPLUS = {
         icon: require("@/assets/art/bartending/quicky.png"),
         time: 3,
         xp: 33.6,
-        requiredLevel: 46,
+        requiredLevel: 42,
         requiredItems: { slimeSilver: 1, titanium: 2}
     },
     mixDoctorsDelight: {
@@ -307,7 +307,7 @@ const SLIMEPLUS = {
         icon: require("@/assets/art/bartending/anim/doctorsdelight.gif"),
         time: 3,
         xp: 35.2,
-        requiredLevel: 48,
+        requiredLevel: 44,
         requiredItems: { slimeSilver: 2, uranium: 2 }
     },
     mixAtomicBomb: {
