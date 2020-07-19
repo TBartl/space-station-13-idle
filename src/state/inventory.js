@@ -186,6 +186,9 @@ const inventory = {
 			let equipmentSlot = getEquipmentSlot(itemId);
 			if (getEquipmentStackable(itemId) && state.equipment[equipmentSlot].itemId == itemId) {
 				state.equipment[equipmentSlot].count += count;
+				if (state.equipment[equipmentSlot].count == 0) {
+					state.equipment[equipmentSlot].itemId = null;
+				}
 			}
 
 			else if (!state.bank[itemId]) { // Not in the bank
