@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const ACTIONS_LINGBASE = {
 	ling0: {
 		time: 60,
 		item: "foodMeatZ",
@@ -6,11 +6,13 @@ export const ACTIONS = {
 		xp: 864,
 		requiredLevel: 1
 	},
+}
+const ACTIONS_LINGAIM = {
 	lingAim1: {
-		time: 1,
+		time: 9,
 		name: "Core Enhancements",
 		icon: require("@/assets/art/combat/items/chest/arm_la1.png"),
-		xp: 5,
+		xp: 9,
 		requiredLevel: 10,
 		requiredItems: {
 			foodMeatH: 1
@@ -37,11 +39,11 @@ export const ACTIONS = {
 		]
 	},
 	lingAim2: {
-		time: 1,
+		time: 9,
 		name: "Enhanced Nerves",
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"),
-		xp: 5,
-		requiredLevel: 10,
+		xp: 15,
+		requiredLevel: 17,
 		requiredItems: {
 			foodMeatH: 2,
 			lingAim1: 1
@@ -68,11 +70,11 @@ export const ACTIONS = {
 		]
 	},
 	lingAim3: {
-		time: 1,
+		time: 9,
 		item: "lingAim3",
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"),
-		xp: 5,
-		requiredLevel: 20,
+		xp: 21,
+		requiredLevel: 24,
 		requiredItems: {
 			foodMeatH: 3
 		}
@@ -81,8 +83,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingAim4",
 		icon: require("@/assets/art/combat/items/chest/arm_la4.png"),
-		xp: 5,
-		requiredLevel: 30,
+		xp: 28,
+		requiredLevel: 31,
 		requiredItems: {
 			foodMeatH: 4
 		}
@@ -91,8 +93,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingAim5",
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"),
-		xp: 5,
-		requiredLevel: 40,
+		xp: 34,
+		requiredLevel: 38,
 		requiredItems: {
 			foodMeatH: 5
 		}
@@ -101,18 +103,20 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingAim6",
 		icon: require("@/assets/art/combat/items/chest/arm_la6.png"),
-		xp: 50,
-		requiredLevel: 50,
+		xp: 40,
+		requiredLevel: 44,
 		requiredItems: {
 			foodMeatH: 6
 		}
 	},
+}
+const ACTIONS_LINGPOWER = {
 	lingPower0: {
 		time: 9,
 		item: "lingPower1",
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"),
-		xp: 5,
-		requiredLevel: 1,
+		xp: 10,
+		requiredLevel: 12,
 		requiredItems: {
 			foodMeatA: 1
 		}
@@ -121,8 +125,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingPower2",
 		icon: require("@/assets/art/combat/items/chest/arm_lp2.png"),
-		xp: 5,
-		requiredLevel: 10,
+		xp: 17,
+		requiredLevel: 19,
 		requiredItems: {
 			foodMeatA: 2
 		}
@@ -131,8 +135,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingPower3",
 		icon: require("@/assets/art/combat/items/chest/arm_lp3.png"),
-		xp: 5,
-		requiredLevel: 20,
+		xp: 23,
+		requiredLevel: 26,
 		requiredItems: {
 			foodMeatA: 3
 		}
@@ -141,8 +145,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingPower4",
 		icon: require("@/assets/art/combat/items/chest/arm_lp4.png"),
-		xp: 5,
-		requiredLevel: 30,
+		xp: 29,
+		requiredLevel: 33,
 		requiredItems: {
 			foodMeatA: 4
 		}
@@ -151,7 +155,7 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingPower5",
 		icon: require("@/assets/art/combat/items/chest/arm_lp5.png"),
-		xp: 5,
+		xp: 36,
 		requiredLevel: 40,
 		requiredItems: {
 			foodMeatA: 5
@@ -161,18 +165,20 @@ export const ACTIONS = {
 		time: 9,
 		item: "lingPower6",
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"),
-		xp: 5,
-		requiredLevel: 50,
+		xp: 41,
+		requiredLevel: 46,
 		requiredItems: {
 			foodMeatA: 6
 		}
 	},
+}
+const ACTIONS_LINGFACE = {
 	lingFace0: {
 		time: 9,
 		item: "faceLing0",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 10,
+		xp: 12,
+		requiredLevel: 14,
 		requiredItems: {
 			foodMeatZ: 1
 		}
@@ -181,8 +187,8 @@ export const ACTIONS = {
 		time: 9,
 		item: "faceLing1",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 10,
+		xp: 18,
+		requiredLevel: 21,
 		requiredItems: {
 			foodMeatZ: 2
 		}
@@ -191,42 +197,54 @@ export const ACTIONS = {
 		time: 9,
 		item: "faceLing2",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 20,
+		xp: 25,
+		requiredLevel: 28,
 		requiredItems: {
 			foodMeatZ: 3
 		}
 	},	
 	lingFace3: {
-		time: 9,
+		time: 31,
 		item: "faceLing3",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 30,
+		xp: 31,
+		requiredLevel: 35,
 		requiredItems: {
 			foodMeatZ: 4
 		}
 	},	
 	lingFace4: {
-		time: 9,
+		time: 37,
 		item: "faceLing4",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 40,
+		xp: 37,
+		requiredLevel: 42,
 		requiredItems: {
 			foodMeatZ: 5
 		}
 	},	
 	lingFace5: {
-		time: 9,
+		time: 48,
 		item: "faceLing5",
 		icon: require("@/assets/art/ling/lingface.png"),
-		xp: 5,
-		requiredLevel: 50,
+		xp: 48,
+		requiredLevel: 48,
 		requiredItems: {
 			foodMeatZ: 6
 		}
 	},	
+}
+
+Object.values(ACTIONS_LINGBASE).forEach(action => action.type = "recycling");
+Object.values(ACTIONS_LINGAIM).forEach(action => action.type = "sharp weapons");
+Object.values(ACTIONS_LINGPOWER).forEach(action => action.type = "armor");
+Object.values(ACTIONS_LINGFACE).forEach(action => action.type = "space suits");
+
+export const ACTIONS = {
+	...ACTIONS_LINGBASE,
+	...ACTIONS_LINGAIM,
+	...ACTIONS_LINGPOWER,
+	...ACTIONS_LINGFACE,
 }
 
 export const JOB = {
