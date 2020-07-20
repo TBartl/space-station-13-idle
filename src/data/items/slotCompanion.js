@@ -204,6 +204,7 @@ const SLIMES = {
 			maxHealth: 0
 		}
 	},
+	
 	companionMining: {
 		name: "Mine Bot",
 		sellPrice: 300,
@@ -270,13 +271,75 @@ const SLIMES = {
 		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
 		tier: 5,
 		stats: {
-			maxHealth: 80,
-			burnProtection: 0,
-			bruteProtection: -2,
-			precision: 5,
-			evasion: 4,
+			maxHealth: 0,
+			protection: -5,
+			precision: 20,
+			evasion: -5,
 		}
-	}
+	},
+	companionMousecult: {
+		name: "Proteon",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/proteon_anim.gif"),
+		tier: 1,
+		stats: {
+			evasion: 10,
+			maxHealth: 50
+		}
+	},
+	companionDogcult: {
+		name: "Narsian",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/narsian.png"),
+		tier: 1,
+		stats: {
+			bruteProtection: 14,
+			maxHealth: 50
+		}
+	},
+	companionCatcult: {
+		name: "Wraith",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/floating_anim.gif"),
+		tier: 1,
+		stats: {
+			burnProtection: 14,
+			maxHealth: 50
+		}
+	},
+	companionFoxcult: {
+		name: "Artificer",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/artificer_anim.gif"),
+		tier: 1,
+		stats: {
+			precision: 10,
+			maxHealth: 50
+		} 
+	},
+	companionGoatcult: {
+		name: "Behemoth",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/behemoth_anim.gif"),
+		tier: 1,
+		stats: {
+			power: 10,
+			maxHealth: 50
+		}
+	},
+	companionBeecult: {
+		name: "Harvester",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/harvester_anim.gif"),
+		tier: 1,
+		stats: {
+			protection: 2,
+			precision: 2,
+			evasion: 2,
+			power: 2,
+			maxHealth: 50
+		}
+	},
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";

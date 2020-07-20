@@ -3,6 +3,18 @@ export default {
 		name: "Black Operations Communicator",
 		icon: require("@/assets/art/shop/items/antag_anim.gif")
 	},
+	startCargonia: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startcargonia.png")
+	},
+	startCult: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startcult.png")
+	},
+	startLing: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startling.png")
+	},
 	money: {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")

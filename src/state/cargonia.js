@@ -5,7 +5,7 @@ import jobSingleAction from '@/state/jobSingleAction';
 import ITEMS from "@/data/items";
 
 import { ACTIONS } from "@/data/cargonia"
-import { CARGONIA_UPGRADE_PERCENT } from "@/data/upgrades";
+import { ANTAG_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const potionDropTableCargonia = [
 	{
@@ -38,13 +38,13 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
 
-			let upgradeCount = rootGetters["upgrades/get"]("cargoniaUpgrade");
+			let upgradeCount = rootGetters["upgrades/get"]("antagUpgrade");
 			let potion = rootGetters["potions/get"]("Cargonia");
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
 				// Apply upgrades
-				action.time *= 1 / (1 + CARGONIA_UPGRADE_PERCENT * upgradeCount);
+				action.time *= 1 / (1 + ANTAG_UPGRADE_PERCENT * upgradeCount);
 
 				// Apply potion
 				if (potionItemId == "potionCargonia") {

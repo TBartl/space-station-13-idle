@@ -181,7 +181,7 @@ const JOB_UNLOCKS = {
 			money: 25000,
 			antag: 1
 		},
-		upgrade: "tinkeringUnlocked",
+		upgrade: "cultUnlocked",
 		requiredUpgrades: {
 			cultUnlocked: 0
 		}
