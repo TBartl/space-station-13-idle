@@ -254,6 +254,25 @@ const ILL_ADVISED_ACTIONS = {
 			power: 11
 		}
 	},
+	engSuperMatter: {
+		time: 5,
+		actionName: "THROW COIN AT",
+		name: "Supermatter Crystal",
+		failure: {
+			chance : 0.1,
+			damage: 1000
+		},
+		items: {
+			id: "power",
+			count: 100
+		},
+		icon: require("@/assets/art/engineering/supermatter.png"),
+		xp: 10,
+		requiredLevel: 50,
+		requiredItems: {
+			money: 1
+		}
+	},
 	engSingularity: {
 		time: 300,
 		actionName: "UNLEASH",
