@@ -260,7 +260,8 @@ const ILL_ADVISED_ACTIONS = {
 		name: "Supermatter Crystal",
 		failure: {
 			chance : 0.1,
-			damage: 1000
+			damage: 1000,
+			message: "Dusted"
 		},
 		items: {
 			id: "power",

@@ -129,7 +129,7 @@ export default {
 			if (action.failure) {
 				if (Math.random() < action.failure.chance) {
 					// At least try again
-					EventBus.$emit("toast", { text: "Apprehended!" });
+					EventBus.$emit("toast", { text: action.failure.message });
 					dispatch("_startCoroutine", { actionId, action })
 					dispatch("playerMob/getHit", action.failure.damage, { root: true });
 
