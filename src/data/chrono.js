@@ -5,12 +5,12 @@ import { EventBus } from "@/utils/eventBus.js";
 export const BASE_BONUS = 5;
 export const ITEM_INTERVALS = [40, 65, 85, 92, 97, 100];
 export const ENEMY_INTERVALS = [60, 80, 100];
-export const JOB_INTERVALS = [40, 60, 80, 90, 95, 100];
+export const JOB_INTERVALS = [40, 60, 80, 90, 95, 97, 99, 100];
 
 const BASE_PURCHASES = {
 	resetSimulation: {
 		name: "_simulation.Reset()",
-		description: "Reset your game, gaining the Bluespace Time listed",
+		description: "Reset your game, gaining the Bluespace Time listed at the start of all future playthroughs",
 		icon: require('@/assets/art/chrono/bluetime.png'),
 		requiredItems: {
 			bluetimeEmpty: 1
@@ -91,6 +91,18 @@ const BASE_PURCHASES = {
 			timeBankOptions: 1
 		}
 	},
+	timeBankAutoPause: {
+		name: "Auto-Pause Chrono Acceleration",
+		description: "Time is no longer drained when you aren't doing a job or in combat",
+		icon: require('@/assets/art/chrono/timebank-octo.png'),
+		requiredItems: {
+			bluetime: 1
+		},
+		upgrade: "timeBankAutoPause",
+		requiredUpgrades: {
+			timeBankAutoPause: 0
+		}
+	}
 }
 
 const JOB_PURCHASES = {}
@@ -135,7 +147,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Time Bank Upgrades",
-		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2"]
+		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2", "timeBankAutoPause"]
 	},
 	{
 		name: "Job Blitz",

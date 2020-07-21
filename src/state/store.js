@@ -145,6 +145,16 @@ const store = new Vuex.Store({
 		},
 		welcomeMessageSeen(state) {
 			return state.welcomeMessageSeen;
+		},
+		isAnyAction(state, getters) {
+			let isCombat = getters["combat/targetEnemy"];
+			if (isCombat) return true;
+			for (let [moduleName, module] of Object.entries(modules)) {
+				let isActiveFunc = getters[`${moduleName}/currentActionId`];
+				if (isActiveFunc) return true;
+			}
+
+			return false;
 		}
 	},
 	mutations: {
