@@ -1,4 +1,4 @@
-export const ACTIONS = {
+const ACTIONS_CULTBASE = {
 	blood1: {
 		time: 1,
 		actionName: "Worship",
@@ -22,6 +22,9 @@ export const ACTIONS = {
 		xp: -200000,
 		requiredLevel: 1,
 	},
+}
+
+const ACTIONS_NRUNE = {
 	runeN1: {
 		time: 10,
 		item: "runeN1",
@@ -57,6 +60,8 @@ export const ACTIONS = {
 		requiredLevel: 50,
 		requiredItems: { unholyfavor: 1 }
 	},
+}
+const ACTIONS_BRUNE = {
 	runeB1: {
 		time: 10,
 		item: "runeB1",
@@ -92,6 +97,8 @@ export const ACTIONS = {
 		requiredLevel: 50,
 		requiredItems: { unholyfavor: 1 }
 	},
+}
+const ACTIONS_CULTPANION = {
 	sac1: {
 		time: 20,
 		item: "companionMousecult",
@@ -134,6 +141,18 @@ export const ACTIONS = {
 		requiredLevel: 50,
 		requiredItems: { unholyfavor: 1, companionBee: 1  }
 	},
+}
+
+Object.values(ACTIONS_CULTBASE).forEach(action => action.type = "RITUALS");
+Object.values(ACTIONS_BRUNE).forEach(action => action.type = "MATERIAL RUNES");
+Object.values(ACTIONS_NRUNE).forEach(action => action.type = "BLOOD RUNES");
+Object.values(ACTIONS_CULTPANION).forEach(action => action.type = "SACRIFICES");
+
+export const ACTIONS = {
+	...ACTIONS_CULTBASE,
+	...ACTIONS_BRUNE,
+	...ACTIONS_NRUNE,
+	...ACTIONS_CULTPANION,
 }
 
 export const JOB = {
