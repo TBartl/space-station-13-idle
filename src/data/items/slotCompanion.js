@@ -130,7 +130,7 @@ const SLIMES = {
 	},
 	slimeRainbow: {
 		name: "Rainbow Slime",
-		sellPrice: 500,
+		sellPrice: 2000,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
 		tier: 7,
 		stats: {

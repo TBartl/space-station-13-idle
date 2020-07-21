@@ -18,7 +18,7 @@ const MOVECRATES = {
 	},
 	moveCrate1: {
 		time: 6,
-		name: "Move Crate",
+		name: "Basic Ore",
 		icon: require("@/assets/art/cargonia/mineral1.png"),
 		xp: 6,
 		requiredLevel: 12,
@@ -45,7 +45,7 @@ const MOVECRATES = {
 	},
 	moveCrate2: {
 		time: 6,
-		name: "Move Crate",
+		name: "Precious Metal",
 		icon: require("@/assets/art/cargonia/mineral2.png"),
 		xp: 12,
 		requiredLevel: 20,
@@ -72,7 +72,7 @@ const MOVECRATES = {
 	},
 	moveCrate3: {
 		time: 6,
-		name: "Move Crate",
+		name: "Industrial Materials",
 		icon: require("@/assets/art/cargonia/mineral3.png"),
 		xp: 17,
 		requiredLevel: 28,
@@ -99,7 +99,7 @@ const MOVECRATES = {
 	},
 	moveCrate4: {
 		time: 6,
-		name: "Move Crate",
+		name: "Confounding Crystals",
 		icon: require("@/assets/art/cargonia/mineral4.png"),
 		xp: 22,
 		requiredLevel: 36,
@@ -126,7 +126,7 @@ const MOVECRATES = {
 	},
 	moveCrate5: {
 		time: 6,
-		name: "Move Crate",
+		name: "Biochemical Beryls",
 		icon: require("@/assets/art/cargonia/mineral5.png"),
 		xp: 26,
 		requiredLevel: 44,
@@ -255,7 +255,7 @@ const RIFLE_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 32
 		}
 	},
 	buyRammo2: {
@@ -269,7 +269,7 @@ const RIFLE_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 168
 		}
 	},
 	buyRammo3: {
@@ -283,7 +283,7 @@ const RIFLE_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 344
 		}
 	},
 	buyRammo4: {
@@ -297,7 +297,7 @@ const RIFLE_AMMO = {
 			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 520
 		}
 	}
 }
@@ -311,10 +311,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle1",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 210
 		}
 	},
 	buyRgun2: {
@@ -325,10 +324,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle2",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 420
 		}
 	},
 	buyRgun3: {
@@ -339,10 +337,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle3",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 630
 		}
 	},
 	buyRgun4: {
@@ -354,10 +351,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle4",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 840
 		}
 	},
 	buyRgun5: {
@@ -368,10 +364,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle5",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 1050
 		}
 	},
 	buyRgun6: {
@@ -382,10 +377,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle6",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 1260
 		}
 	},
 	buyRgun7: {
@@ -396,10 +390,9 @@ const RIFLE_GUNS = {
 		items:
 		{
 			id: "gunRifle7",
-			count: 8,
 		},
 		requiredItems: {
-			money: 1
+			money: 1470
 		}
 	}
 }
