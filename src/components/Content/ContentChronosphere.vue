@@ -389,5 +389,6 @@ export default {
   background-color: rgba(119, 119, 119, 0.397);
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
+	max-width: 520px;
 }
 </style>
