@@ -5,6 +5,7 @@
 		<br>
     <p>power: {{stats.power | stat}}</p>
     <p>atkSpeed: {{stats.attackSpeed | stat}}</p>
+    <p>luck: {{stats.power | stat}}</p>
     <p v-if="targetProtection">targetProtection: {{targetProtection}}%</p>
     <br />
     <p>dps = BASE_DPS + POWER_RATIO * power</p>
@@ -14,6 +15,10 @@
     <p>maxHit = dps * atkSpeed{{targetProtection ? " * (1-targetProtection)" : ""}}</p>
     <p class="pl-3">= {{dps | stat}} * {{stats.attackSpeed | stat}}{{targetProtection ? " * (100%-"+targetProtection+"%)" : ""}}</p>
     <p class="pl-3">= {{maxHit | stat}}</p>
+    <br />
+    <p>minHit = maxHit * luck</p>
+    <p class="pl-3">= {{maxHit | stat}} * {{stats.luck}}%</p>
+    <p class="pl-3">= {{minHit | stat}}</p>
   </b-popover>
 </template>
 
@@ -38,6 +43,9 @@ export default {
     },
     maxHit() {
       return this.$store.getters[this.mobType + "Mob/maxHit"];
+    },
+    minHit() {
+      return this.$store.getters[this.mobType + "Mob/minHit"];
     }
   }
 };

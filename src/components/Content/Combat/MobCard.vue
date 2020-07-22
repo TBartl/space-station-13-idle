@@ -39,7 +39,7 @@
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
         <span class="stat-desc">Hit:</span>
-        <span>{{Math.round(maxHit)}}</span>
+        <span>{{Math.round(minHit)}} - {{Math.round(maxHit)}}</span>
         <img class="ml-1 damage-type" :src="damageTypeImage" />
       </div>
       <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
@@ -133,6 +133,9 @@ export default {
     },
     maxHit() {
       return this.$store.getters[this.mobType + "Mob/maxHit"];
+    },
+    minHit() {
+      return this.$store.getters[this.mobType + "Mob/minHit"];
     },
     hitChance() {
       return this.$store.getters[this.mobType + "Mob/hitChance"];

@@ -82,6 +82,9 @@ export function createMobModule(mobType) {
 				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetProtection / 100);
 				return hit;
 			},
+			minHit(state, getters) {
+				return getters.maxHit * getters.stats.luck / 100;
+			},
 			hitSigma() {
 				return 40;
 			},
@@ -151,7 +154,7 @@ export function createMobModule(mobType) {
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() <= getters.hitChance) {
-					let damage = Math.random() * getters.maxHit;
+					let damage = getters.minHit + (getters.maxHit - getters.minHit) * Math.random();
 					let noOverkillDamage = Math.min(rootGetters[inverseMobType + "Mob/health"], damage);
 					dispatch(inverseMobType + "Mob/getHit", damage, { root: true });
 					if (state.mobType == "player") {
