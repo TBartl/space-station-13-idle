@@ -1,7 +1,7 @@
 
 export const PLAYER_BASE_STATS = {
 	maxHealth: 100,
-	regen: .2,
+	regen: .5,
 	attackSpeed: 3,
 	precision: 0,
 	power: 0,
@@ -12,11 +12,12 @@ export const PLAYER_BASE_STATS = {
 	bruteProtection: 0,
 	burnProtection: 0,
 	damageType: "brute",
-	luck: 0
+	luck: 5
 }
 
 export const ENEMY_BASE_STATS = {
 	maxHealth: 10,
+	regen: 0,
 	attackSpeed: 2.5,
 	precision: 1,
 	power: 1,
