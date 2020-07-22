@@ -120,7 +120,7 @@
       </job-info>
 
       <div class="row food my-2">
-        <div class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xl-2 offset-xl-5">
+        <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
           <div class="content-block">
             <progress-bar
               class="mb-2 black-background"
