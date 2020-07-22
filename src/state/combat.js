@@ -9,8 +9,7 @@ const combat = {
 	namespaced: true,
 	modules: {
 		moveCoroutine: createCoroutineModule(),
-		foodCoroutine: createCoroutineModule(),
-		regenCoroutine: createCoroutineModule()
+		foodCoroutine: createCoroutineModule()
 	},
 	state: {
 		targetEnemy: null,
@@ -26,11 +25,6 @@ const combat = {
 			if (upgradeCount >= 3) return 64;
 			if (upgradeCount >= 1) return 32;
 			return 16;
-		},
-		regenTime(state, getters, rootState, rootGetters) {
-			let baseRegenTime = 5;
-			let ratio = 100 / rootGetters["playerMob/stats"].maxHealth;
-			return baseRegenTime * ratio;
 		},
 		baseFoodCooldown() {
 			return 10;
@@ -144,7 +138,6 @@ const combat = {
 			commit("_setTargetEnemy", null);
 		},
 		_resume({ state, dispatch, getters, rootGetters }) {
-			dispatch("_startRegen");
 			if (!state.targetEnemy) return;
 
 			if (rootGetters["enemyMob/health"] == 0) {
@@ -160,6 +153,7 @@ const combat = {
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
 		pauseCombat({ dispatch, getters }) {
+			if (!getters["targetEnemy"]) return;
 			dispatch("playerMob/pauseCombat", {}, { root: true });
 			dispatch("enemyMob/pauseCombat", {}, { root: true });
 			if (ENEMIES[getters["targetEnemy"]].boss) return;
@@ -178,16 +172,6 @@ const combat = {
 					onFinish: () => {
 						dispatch("continueCombat");
 						dispatch("trackTime", duration);
-					}
-				});
-		},
-		_startRegen({ dispatch, getters }) {
-			dispatch("regenCoroutine/start",
-				{
-					duration: getters["regenTime"],
-					onFinish: () => {
-						dispatch("_startRegen");
-						dispatch("playerMob/addHealth", 1, { root: true });
 					}
 				});
 		},

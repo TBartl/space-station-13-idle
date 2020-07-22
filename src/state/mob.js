@@ -13,7 +13,8 @@ export function createMobModule(mobType) {
 	return {
 		namespaced: true,
 		modules: {
-			swingCoroutine: createCoroutineModule()
+			swingCoroutine: createCoroutineModule(),
+			regenCoroutine: createCoroutineModule()
 		},
 		state: {
 			mobType,
@@ -52,6 +53,7 @@ export function createMobModule(mobType) {
 					fullStats = Object.assign({}, ENEMY_BASE_STATS, ENEMIES[targetEnemy].stats);
 				}
 				fixProtection(fullStats);
+				if (state.health > fullStats.maxHealth) state.health = fullStats.maxHealth;
 				return fullStats;
 			},
 			targetStats(state, getters, rootState, rootGetters) {
@@ -80,6 +82,9 @@ export function createMobModule(mobType) {
 				let hit = getters.dps * getters.stats.attackSpeed * (1 - getters.targetProtection / 100);
 				return hit;
 			},
+			minHit(state, getters) {
+				return getters.maxHit * getters.stats.luck / 100;
+			},
 			hitSigma() {
 				return 40;
 			},
@@ -102,7 +107,12 @@ export function createMobModule(mobType) {
 			},
 			fleeChance(state, getters) {
 				return Math.max(getters["baseFleeChance"] - getters["commandReduction"], 0);
-			}
+			},
+			regenTime(state, getters) {
+				let regen = getters["stats"].regen;
+				if (regen == 0) return 5;
+				return 1 / Math.abs(regen);
+			},
 		},
 		mutations: {
 			_setHealth(state, health) {
@@ -123,6 +133,7 @@ export function createMobModule(mobType) {
 				dispatch("swingCoroutine/cancel");
 			},
 			_resume({ rootGetters, dispatch }) {
+				dispatch("_startRegen");
 				if (!rootGetters["combat/targetEnemy"]) return;
 				if (rootGetters["enemyMob/health"] == 0) return;
 				dispatch("_startSwing");
@@ -143,7 +154,7 @@ export function createMobModule(mobType) {
 				dispatch("_startSwing", getters.stats.attackSpeed)
 
 				if (Math.random() <= getters.hitChance) {
-					let damage = Math.random() * getters.maxHit;
+					let damage = getters.minHit + (getters.maxHit - getters.minHit) * Math.random();
 					let noOverkillDamage = Math.min(rootGetters[inverseMobType + "Mob/health"], damage);
 					dispatch(inverseMobType + "Mob/getHit", damage, { root: true });
 					if (state.mobType == "player") {
@@ -198,6 +209,22 @@ export function createMobModule(mobType) {
 				}
 
 				EventBus.$emit("getHit", state.mobType);
+			},
+			_startRegen({ dispatch, getters, rootGetters, state }) {
+				dispatch("regenCoroutine/start",
+					{
+						duration: getters["regenTime"],
+						onFinish: () => {
+							dispatch("_startRegen");
+							let regen = getters["stats"].regen;
+							if (regen == 0) return;
+							let gain = Math.sign(regen);
+							if (gain > 0)
+								dispatch("addHealth", 1);
+							else if (gain < 0)
+								dispatch("getHit", 1);
+						}
+					});
 			},
 			_handleSlimeFlee({ rootGetters }) {
 				var companion = rootGetters["inventory/equipment"].companion;
