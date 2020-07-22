@@ -40,7 +40,7 @@
             />
             <b>weaponsss</b> and
             <img class="mx--2" :src="require('@/assets/art/combat/items/arm_b2.png')" />
-            <b>armor</b> jussst asss robussst using only the
+            <b>armor</b> jussst asss robussst usssing only the
             <img
               class="mx--0"
               :src="require('@/assets/art/graytiding/junk.png')"
