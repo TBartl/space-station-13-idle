@@ -1,12 +1,18 @@
 <template>
   <div class="d-flex flex-column align-items-center">
-    <stat-panel-item
-      name="Max Health"
-      description="Increases total health pool and regeneration"
-      :icon="require('@/assets/art/combat/health.gif')"
-      :value="fixedStats.maxHealth"
-    />
     <div class="stats-panel d-flex flex-row flex-wrap justify-content-center">
+      <stat-panel-item
+        name="Max Health"
+        description="Increases total health pool"
+        :icon="require('@/assets/art/combat/health.gif')"
+        :value="fixedStats.maxHealth"
+      />
+      <stat-panel-item
+        name="Regen"
+        description="How much health is restored each second"
+        :icon="require('@/assets/art/combat/regen.gif')"
+        :value="fixedStats.regen"
+      />
       <stat-panel-item
         name="Evasion"
         description="Increases dodge chance"
@@ -45,14 +51,21 @@
         :icon="require('@/assets/art/combat/skull.png')"
         :value="fixedStats.power"
       />
-    </div>
-    <div
-      v-if="stats.damageType"
-      :id="id+'-damage-type'"
-      class="attack-type stat-detail d-flex flex-row align-items-center"
-    >
-      <span class="mr-1">Type:</span>
-      <img class="attack-type-image mr-1" :src="damageTypeImage" />
+      <stat-panel-item
+        name="Luck"
+        description="Increases your minimum hit"
+        :icon="require('@/assets/art/combat/luck.png')"
+        :value="fixedStats.luck"
+        :showPercent="true"
+      />
+      <div
+        v-if="stats.damageType"
+        :id="id+'-damage-type'"
+        class="attack-type stat-detail d-flex flex-row align-items-center"
+      >
+        <span class="mr-1">Type:</span>
+        <img class="attack-type-image mr-1" :src="damageTypeImage" />
+      </div>
     </div>
     <b-popover
       v-if="stats.damageType"
