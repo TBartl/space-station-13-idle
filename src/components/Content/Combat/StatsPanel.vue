@@ -53,7 +53,7 @@
       />
       <stat-panel-item
         name="Luck"
-        description="Increases your minimum hit"
+        description="Increases your minimum hit to a percent of your max hit"
         :icon="require('@/assets/art/combat/luck.png')"
         :value="fixedStats.luck"
         :showPercent="true"

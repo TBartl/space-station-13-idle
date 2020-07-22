@@ -132,10 +132,22 @@
       </li>
       <li>
         <span>
+          <img class="mx--0" :src="require('@/assets/art/combat/regen.gif')" />
+          <b>Regen</b> will restore some of your health every second.
+        </span>
+      </li>
+      <li>
+        <span>
           <img class="mx--1" :src="require('@/assets/art/combat/armor-brute.png')" />
           <b>Brute Protection</b> and
           <img class="mx--1" :src="require('@/assets/art/combat/armor-burn.png')" />
           <b>Burn Protection</b> reduce damage taken by their respective source.
+        </span>
+      </li>
+      <li>
+        <span>
+          <img class="mx--0" :src="require('@/assets/art/combat/luck.png')" />
+          <b>Luck</b> will raise your minimum hit to some percentage of your maximum hit.
         </span>
       </li>
     </template>
