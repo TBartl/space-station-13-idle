@@ -449,7 +449,7 @@ const MENERGY = {
 		overlay: require("@/assets/art/combat/items/melee_e4_overlay_anim.gif"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 5,
+			maxHealth: 40,
 			evasion: -5,
 			precision: 5,
 			attackSpeed: 2,
@@ -467,7 +467,7 @@ const MENERGY = {
 		overlay: require("@/assets/art/combat/items/melee_e5_overlay.gif"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: 5,
+			maxHealth: 50,
 			evasion: -5,
 			precision: 5,
 			attackSpeed: 2,
@@ -476,6 +476,66 @@ const MENERGY = {
 		},
 		requires: {
 			precision: 48
+		}
+	}
+}
+
+const MTOT = {
+	meleeBurn3T: {
+		name: "Energy Dagger",
+		sellPrice: 380,
+		icon: require("@/assets/art/combat/items/melee_e3_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e3_anim_overlay.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 30,
+			evasion: -4,
+			command: -2,
+			precision: 12,
+			attackSpeed: 2,
+			power: 14,
+			damageType: "burn"
+		},
+		requires: {
+			precision: 1
+		}
+	},
+	meleeBurn4T: {
+		name: "Energy Sword",
+		sellPrice: 580,
+		icon: require("@/assets/art/combat/items/melee_e4_animt.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e4_overlay_animt.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 40,
+			evasion: -6,
+			command: -3,
+			precision: 16,
+			attackSpeed: 2,
+			power: 18,
+			damageType: "burn"
+		},
+		requires: {
+			precision: 1
+		}
+	},
+	meleeBurn5T: {
+		name: "Dual Energy Sword",
+		sellPrice: 780,
+		icon: require("@/assets/art/combat/items/melee_e5t_anim.gif"),
+		overlay: require("@/assets/art/combat/items/melee_e5t_overlay.gif"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 50,
+			evasion: -7,
+			command: -4,
+			precision: 20,
+			attackSpeed: 23,
+			power: 14,
+			damageType: "burn"
+		},
+		requires: {
+			precision: 1
 		}
 	}
 }
@@ -1045,6 +1105,7 @@ const WEAPONS = {
 	...MCUT,
 	...MTOOLBOX,
 	...MENERGY,
+	...MTOT,
 	...MSHIELD,
 	...GENERGY,
 	...GBULLET

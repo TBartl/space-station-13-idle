@@ -503,6 +503,7 @@ Object.values(BRUTEARMOR).forEach(brutearmor => {
 	brutearmor.equipmentSlot = "chest";
 	let bruteConstant = Math.max(10, brutearmor.requires.evasion);
 
+	brutearmor.stats.regen = Math.trunc(bruteConstant * 1)/25;
 	brutearmor.stats.maxHealth = Math.trunc(bruteConstant * 4) + 10;
 	brutearmor.stats.power = Math.ceil(bruteConstant * .05);
 	brutearmor.stats.evasion = Math.ceil(bruteConstant * 0.45);
@@ -513,6 +514,7 @@ Object.values(BURNARMOR).forEach(burnarmor => {
 	burnarmor.equipmentSlot = "chest";
 	let burnConstant = Math.max(5, burnarmor.requires.evasion);
 
+	burnarmor.stats.regen = Math.trunc(burnConstant * 1)/25;
 	burnarmor.stats.maxHealth = Math.trunc(burnConstant * 4) + 10;
 	burnarmor.stats.precision = Math.ceil(burnConstant * .05);
 	burnarmor.stats.evasion = Math.ceil(burnConstant * 0.4);
@@ -555,6 +557,7 @@ Object.values(LINGAIM).forEach(lingaim => {
 	let bruteConstant = Math.max(5, lingaim.requires.command);
 
 	lingaim.stats.maxHealth = Math.trunc(bruteConstant * 20);
+	lingaim.stats.regen = Math.trunc(bruteConstant * 1)/10;
 	lingaim.stats.precision = Math.ceil(bruteConstant * 0.7);
 	lingaim.stats.power = Math.ceil(bruteConstant * 0.1);
 	lingaim.stats.bruteProtection = Math.round(bruteConstant * .2) + 2;
@@ -565,6 +568,7 @@ Object.values(LINGPOWER).forEach(lingpower => {
 	let bruteConstant = Math.max(5, lingpower.requires.command);
 
 	lingpower.stats.maxHealth = Math.trunc(bruteConstant * 20);
+	lingpower.stats.regen = Math.trunc(bruteConstant * 1)/10;
 	lingpower.stats.precision = Math.ceil(bruteConstant * 0.1);
 	lingpower.stats.power = Math.ceil(bruteConstant * 0.7);
 	lingpower.stats.burnProtection = Math.round(bruteConstant * .2) + 2;

@@ -122,6 +122,61 @@ export default {
 			},
 		]
 	},
+	hatCrate2: {
+		name: "Hat Crate, Winter Edition",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/hatcrateS2.png"),
+		itemTable: [
+			{
+				id: 'S2headCommon1',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon2',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon3',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon4',
+				weight: 14
+			},
+			{
+				id: 'S2headRare1',
+				weight: 5
+			},
+			{
+				id: 'S2headRare2',
+				weight: 5
+			},
+			{
+				id: 'S2headRare3',
+				weight: 5
+			},
+			{
+				id: 'S2headRare4',
+				weight: 5
+			},
+			{
+				id: 'S2headEpic1',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic2',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic3',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic4',
+				weight: 1
+			},
+		]
+	},
 	knifeCrate: {
 		name: "Weapon Crate",
 		description: "Can be opened",

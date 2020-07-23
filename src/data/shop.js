@@ -27,7 +27,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "ertCrate", "wizCrate"]
+		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "hatCrate2", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "ertCrate", "wizCrate"]
 	},
 	{
 		name: "Clothes Vendo-Matic",
@@ -349,6 +349,13 @@ const CRATES = {
 	hatCrate: {
 		item: "hatCrate",
 		description: `No Key Required. Hats can not be refunded for scrap. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
+		requiredItems: {
+			money: 10000
+		}
+	},
+	hatCrate2: {
+		item: "hatCrate2",
+		description: `Christmas In July. I hope you asked for hats. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
 		requiredItems: {
 			money: 10000
 		}

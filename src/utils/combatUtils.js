@@ -1,7 +1,7 @@
 
 export const PLAYER_BASE_STATS = {
 	maxHealth: 100,
-	regen: .5,
+	regen: .2,
 	attackSpeed: 3,
 	precision: 0,
 	power: 0,
