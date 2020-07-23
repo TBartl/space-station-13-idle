@@ -260,15 +260,15 @@ const ILL_ADVISED_ACTIONS = {
 		name: "Supermatter Crystal",
 		failure: {
 			chance : 0.1,
-			damage: 1000,
+			damage: 9999,
 			message: "Dusted"
 		},
 		items: {
 			id: "power",
-			count: 100
+			count: 30
 		},
 		icon: require("@/assets/art/engineering/supermatter.png"),
-		xp: 10,
+		xp: -100,
 		requiredLevel: 50,
 		requiredItems: {
 			money: 1
