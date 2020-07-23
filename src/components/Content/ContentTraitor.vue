@@ -11,31 +11,32 @@
         </div>
       </div>
       <job-info
-        infoId="ling"
-        :icon="require('@/assets/art/jobinfo/ling_anim.gif')"
-        title="MONKEY(413) the totally normal monkey chimpers..."
+        infoId="traitor"
+        :icon="require('@/assets/art/jobinfo/traitor.png')"
+        title="Moffew the Quartermaster flutters..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
+          {name: 'New job?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>
-           Ook?
+          Just act like you are doing your duty bringing in shipments (mineral picture. Once we have enough (guns) we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds (valid token picture).
           </span>
         </template>
         <template slot="New job?">
-          <span>Want to know what it feels like to be the best example your species could be?</span>
-          <span>Just let that slug
-                        <img
-              :src="require('@/assets/art/ling/headcrab.png')"
-            />
-             into your body.</span>
+          <span>The administration has requested the creation of a new job.</span>
+          <span>I have created a simple, minimalistic template with which to build off of.</span>
           <span>
-           Any orifice will do, just don't bite down.
+            In order to continue, you're going to have to write the rest of the
+            <img
+              :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
+            />
+            <b>Code</b>.
           </span>
         </template>
       </job-info>
+ 
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
@@ -51,7 +52,7 @@
         >
           <generic-action
             :jobId="jobId"
-            :actionName="'FORM'"
+            :actionName="'PURCHASE'"
             :action="action"
             :actionId="actionId"
           />
@@ -64,7 +65,7 @@
 
 <script>
 import { findLastIndex } from "lodash";
-import { JOB } from "@/data/ling";
+import { JOB } from "@/data/traitor";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
@@ -75,7 +76,7 @@ export default {
   components: { GenericAction, ExperienceHeader, PotionHeader },
   computed: {
     jobId() {
-      return "ling";
+      return "traitor";
     },
     job() {
       return JOB;

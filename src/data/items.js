@@ -9,6 +9,7 @@ import RESOURCE_MINING from "./items/resourceMining";
 import RESOURCE_SHITPOSTING from "./items/resourceShitposting";
 import RESOURCE_VALIDHUNTING from "./items/resourceValidhunting";
 import RESOURCE_CARGONIA from "./items/resourceCargonia";
+import RESOURCE_TRAITOR from "./items/resourceTraitor";
 import RESOURCE_CULT from "./items/resourceCult";
 import RESOURCE_LING from "./items/resourceLing";
 import SHOP from "./items/shop";
@@ -37,6 +38,7 @@ const ITEMS = {
 	...RESOURCE_CHEMISTRY,
 	...RESOURCE_SHITPOSTING,
 	...RESOURCE_CARGONIA,
+	...RESOURCE_TRAITOR,
 	...RESOURCE_CULT,
 	...RESOURCE_LING,
 	...SLOT_FACE,
