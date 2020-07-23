@@ -14,7 +14,7 @@ export const SECTIONS = [
 	{
 		name: "Job Unlocks",
 		purchases: [
-			"unlockFabrication", "unlockTinkering", "unlockCooking",, "unlockXenobiology", "unlockShitposting", "unlockCargonia", "unlockCult", "unlockLing",
+			"unlockFabrication", "unlockTinkering", "unlockCooking",, "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor",, "unlockCult", "unlockLing",
 		]
 	},
 	{
@@ -171,6 +171,19 @@ const JOB_UNLOCKS = {
 		upgrade: "cargoniaUnlocked",
 		requiredUpgrades: {
 			cargoniaUnlocked: 0
+		}
+	},
+	unlockTraitor: {
+		name: "Unlock Traitor",
+		description: "Allows you to spend use 20 special Telecrystals to kickstart your action.",
+		icon: require('@/assets/art/traitor/icon.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "traitorUnlocked",
+		requiredUpgrades: {
+			traitorUnlocked: 0
 		}
 	},
 	unlockCult: {

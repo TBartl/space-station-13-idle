@@ -48,7 +48,7 @@ export default {
 		icon: require("@/assets/art/validhunting/doc55.png")
 	},
 	ticket60: {
-		name: "Casuality Propaganda",
+		name: "Causality Propaganda",
 		description: "This propaganda claims magic isn't real and can't hurt you.",
 		sellPrice: 1000,
 		icon: require("@/assets/art/validhunting/doc60.png")

@@ -20,6 +20,7 @@ import ContentTinkering from "./ContentTinkering";
 import ContentShitposting from "./ContentShitposting";
 import ContentFabrication from "./ContentFabrication";
 import ContentCargonia from "./ContentCargonia";
+import ContentTraitor from "./ContentTraitor";
 import ContentCult from "./ContentCult";
 import ContentLing from "./ContentLing";
 import ContentCombat from "./ContentCombat";
@@ -46,6 +47,7 @@ export default {
     ContentBotany,
     ContentCooking,
     ContentCargonia,
+    ContentTraitor,
     ContentCult,
     ContentLing,
     ContentCombat,

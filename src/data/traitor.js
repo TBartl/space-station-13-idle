@@ -180,130 +180,8 @@ const MOVECRATES = {
 	},
 }
 
-const SELLSTUFF = {
-	fence1: {
-		time: 6,
-		name: "Collector's Item",
-		icon: require("@/assets/art/cargonia/smuggle1.png"),
-		xp: 9,
-		requiredLevel: 16,
-		items:
-		{
-			id: "money",
-			count: 8,
-		},
-		requiredItems: {
-			innocent: 1
-		}
-	},
-	fence2: {
-		time: 6,
-		name: "Stolen Valor",
-		icon: require("@/assets/art/cargonia/smuggle2.png"),
-		xp: 14,
-		requiredLevel: 24,
-		items:
-		{
-			id: "money",
-			count: 8,
-		},
-		requiredItems: {
-			criminal: 1
-		}
-	},
-	fence3: {
-		time: 6,
-		name: "Contraband",
-		icon: require("@/assets/art/cargonia/smuggle3.png"),
-		xp: 19,
-		requiredLevel: 32,
-		items:
-		{
-			id: "money",
-			count: 8,
-		},
-		requiredItems: {
-			burnJunk: 1
-		}
-	},
-	fence4: {
-		time: 6,
-		name: "Obscure Recipe",
-		icon: require("@/assets/art/cargonia/smuggle4.png"),
-		xp: 24,
-		requiredLevel: 40,
-		items:
-		{
-			id: "money",
-			count: 8,
-		},
-		requiredItems: {
-			q_foodPasta6: 1
-		}
-	},
-}
-
-const RIFLE_AMMO = {
-	buyRammo1: {
-		time: 6,
-		icon: require("@/assets/art/combat/items/pocket/ammo_r1.png"),
-		xp: 8,
-		requiredLevel: 14,
-		items:
-		{
-			id: "ammoRifle1",
-			count: 8,
-		},
-		requiredItems: {
-			money: 32
-		}
-	},
-	buyRammo2: {
-		time: 6,
-		icon: require("@/assets/art/combat/items/pocket/ammo_r2.png"),
-		xp: 13,
-		requiredLevel: 22,
-		items:
-		{
-			id: "ammoRifle2",
-			count: 8,
-		},
-		requiredItems: {
-			money: 168
-		}
-	},
-	buyRammo3: {
-		time: 6,
-		icon: require("@/assets/art/combat/items/pocket/ammo_r3.png"),
-		xp: 18,
-		requiredLevel: 30,
-		items:
-		{
-			id: "ammoRifle3",
-			count: 8,
-		},
-		requiredItems: {
-			money: 344
-		}
-	},
-	buyRammo4: {
-		time: 6,
-		icon: require("@/assets/art/combat/items/pocket/ammo_r4.png"),
-		xp: 23,
-		requiredLevel: 38,
-		items:
-		{
-			id: "ammoRifle4",
-			count: 8,
-		},
-		requiredItems: {
-			money: 520
-		}
-	}
-}
-
-const RIFLE_GUNS = {
-	buyRgun1: {
+const TWOTC = {
+	TwoSword: {
 		time: 6,
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
 		xp: 6,
@@ -313,7 +191,7 @@ const RIFLE_GUNS = {
 			money: 210
 		}
 	},
-	buyRgun2: {
+	TwoFace: {
 		time: 6,
 		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
 		xp: 18,
@@ -323,83 +201,71 @@ const RIFLE_GUNS = {
 			money: 420
 		}
 	},
-	buyRgun3: {
+}
+
+const THREETC = {
+	ThreeSword: {
 		time: 6,
-		icon: require("@/assets/art/combat/items/hand/gunR_arg.png"),
-		xp: 16,
-		requiredLevel: 26,
-		items: "gunRifle3",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		xp: 6,
+		requiredLevel: 10,
+		items: "gunRifle1",
 		requiredItems: {
-			money: 630
+			money: 210
 		}
 	},
-	buyRgun4: {
+	ThreeSuit: {
 		time: 6,
-		name: "C-20r SMG",
-		icon: require("@/assets/art/combat/items/hand/gunR_c20r.png"),
-		xp: 20,
-		requiredLevel: 34,
-		item:"gunRifle4",
+		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
+		xp: 18,
+		requiredLevel: 11,
+		items: "gunRifle2",
 		requiredItems: {
-			money: 840
+			money: 420
 		}
 	},
-	buyRgun5: {
+}
+
+const FOURTC = {
+	FourSword: {
 		time: 6,
-		icon: require("@/assets/art/combat/items/hand/gunR_m90.png"),
-		xp: 25,
-		requiredLevel: 42,
-		item:"gunRifle5",
+		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
+		xp: 6,
+		requiredLevel: 10,
+		items: "gunRifle1",
 		requiredItems: {
-			money: 1050
+			money: 210
 		}
 	},
-	buyRgun6: {
+	FourSuit: {
 		time: 6,
-		icon: require("@/assets/art/combat/items/hand/gunR_sniper.png"),
-		xp: 28,
-		requiredLevel: 46,
-		item:"gunRifle6",
+		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
+		xp: 18,
+		requiredLevel: 11,
+		items: "gunRifle2",
 		requiredItems: {
-			money: 1260
+			money: 420
 		}
-	},
-	buyRgun7: {
-		time: 6,
-		icon: require("@/assets/art/combat/items/hand/gunR_l6.png"),
-		xp: 30,
-		requiredLevel: 50,
-		item:"gunRifle7",
-		requiredItems: {
-			money: 1470
-		}
-	},
-	mineBananiums: {
-		time: 6,
-		item: "bananium",
-		icon: require("@/assets/art/mining/OreBanana.png"),
-		xp: 30,
-		requiredLevel: 50
 	},
 }
 
 Object.values(MOVECRATES).forEach(action => action.type = "Move Freight");
-Object.values(SELLSTUFF).forEach(action => action.type = "Find Buyers");
-Object.values(RIFLE_AMMO).forEach(action => action.type = "Smuggle Ammo");
-Object.values(RIFLE_GUNS).forEach(action => action.type = "Smuggle Arms");
+Object.values(TWOTC).forEach(action => action.type = "2 TeleCrystals");
+Object.values(THREETC).forEach(action => action.type = "3 TeleCrystals");
+Object.values(FOURTC).forEach(action => action.type = "4 TeleCrystals");
 
 const ACTIONS = {
 	...MOVECRATES,
-	...SELLSTUFF,
-	...RIFLE_AMMO,
-	...RIFLE_GUNS,
+	...TWOTC,
+	...THREETC,
+	...FOURTC,
 }
 
 export { ACTIONS };
 
 export const JOB = {
-	id: "cargonia",
-	name: "Cargonia",
-	icon: require("@/assets/art/jobinfo/cargo_banner.png"),
+	id: "traitor",
+	name: "Traitor",
+	icon: require("@/assets/art/traitor/icon.png"),
 	color: "#704610"
 }

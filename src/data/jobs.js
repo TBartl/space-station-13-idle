@@ -10,6 +10,7 @@ import { JOB as TINKERING_JOB } from "./tinkering";
 import { JOB as VALIDHUNTING_JOB } from "./validhunting";
 import { JOB as SHITPOSTING_JOB } from "./shitposting";
 import { JOB as CARGONIA_JOB } from "./cargonia";
+import { JOB as TRAITOR_JOB } from "./traitor";
 import { JOB as CULT_JOB } from "./cult";
 import { JOB as LING_JOB } from "./ling";
 
@@ -31,6 +32,7 @@ export const ALL_JOBS = [
 	CHEMISTRY_JOB,
 	SHITPOSTING_JOB,
 	CARGONIA_JOB,
+	TRAITOR_JOB,
 	CULT_JOB,
 	LING_JOB,
 	PRECISION_JOB,

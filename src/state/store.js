@@ -19,6 +19,7 @@ import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
 import cargonia from "./cargonia";
+import traitor from "./traitor";
 import cult from "./cult";
 import ling from "./ling";
 import precision from "./precision";
@@ -51,6 +52,7 @@ const modules = {
 	validhunting,
 	shitposting,
 	cargonia,
+	traitor,
 	cult,
 	ling,
 	precision,
