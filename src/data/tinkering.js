@@ -306,6 +306,16 @@ export const ACTIONS_SPACE_SUITS = {
 			spaceJunk: 3
 		}
 	},
+	tinkerArmS5: {
+		time: 10,
+		item: "armorBurn5",
+		icon: require("@/assets/art/combat/items/arm_s5.png"),
+		xp: 47,
+		requiredLevel: 47,
+		requiredItems: {
+			spaceJunk: 3
+		}
+	},
 }
 
 Object.values(ACTIONS_RECYCLING).forEach(action => action.type = "recycling");

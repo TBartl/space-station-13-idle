@@ -5,7 +5,7 @@ const SLIMES = {
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		tier: 1,
 		stats: {
-			maxHealth: 15
+			regen: .5
 		}
 	},
 	slimeOrange: {
@@ -283,8 +283,8 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/proteon_anim.gif"),
 		tier: 1,
 		stats: {
-			evasion: 10,
-			maxHealth: 50
+			evasion: 25,
+			regen: -1
 		}
 	},
 	companionDogcult: {
@@ -293,8 +293,8 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/narsian.png"),
 		tier: 1,
 		stats: {
-			bruteProtection: 14,
-			maxHealth: 50
+			bruteProtection: 28,
+			regen: -1
 		}
 	},
 	companionCatcult: {
@@ -303,8 +303,8 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/floating_anim.gif"),
 		tier: 1,
 		stats: {
-			burnProtection: 14,
-			maxHealth: 50
+			burnProtection: 28,
+			regen: -1
 		}
 	},
 	companionFoxcult: {
@@ -313,8 +313,8 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/artificer_anim.gif"),
 		tier: 1,
 		stats: {
-			precision: 10,
-			maxHealth: 50
+			precision: 25,
+			regen: -1
 		} 
 	},
 	companionGoatcult: {
@@ -323,8 +323,8 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/behemoth_anim.gif"),
 		tier: 1,
 		stats: {
-			power: 10,
-			maxHealth: 50
+			power: 25,
+			regen: -1
 		}
 	},
 	companionBeecult: {
@@ -333,11 +333,11 @@ const SLIMES = {
 		icon: require("@/assets/art/cult/harvester_anim.gif"),
 		tier: 1,
 		stats: {
-			protection: 2,
-			precision: 2,
-			evasion: 2,
-			power: 2,
-			maxHealth: 50
+			protection: 5,
+			precision: 5,
+			evasion: 5,
+			power: 5,
+			regen: -1
 		}
 	},
 }
@@ -352,53 +352,57 @@ Object.values(SLIMES).forEach((slime, index) => {
 
 	if (mod == 0) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 15,
+			regen: (slime.tier) * 1.5 / 10,
 			burnProtection: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 1) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 5,
+			regen: (slime.tier) * 1.5 / 10,
 			moveTime: -1,
 		}
 	}
 	else if (mod == 2) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 25,
-			moveTime: 1,
+			regen: (slime.tier) * 2 / 10,
+			moveTime: 3,
 		}
 	}
 	else if (mod == 3) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 15,
+			regen: (slime.tier) * 1.5 / 10,
 			bruteProtection: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 4) {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			damageType: "burn"
 		}
 	}
 	else if (mod == 5) {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			attackSpeed: 2 - (slime.tier / 5)
 		}
 	}
 	else if (mod == 6) {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			attackSpeed: 3 + (slime.tier / 5)
 		}
 	}
 	else if (mod == 7) {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			damageType: "brute"
 		}
 	}
