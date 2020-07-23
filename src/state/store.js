@@ -161,6 +161,18 @@ const store = new Vuex.Store({
 			}
 
 			return false;
+		},
+		isActionChronoProhibited(state, getters) {
+			let isCombat = getters["combat/targetEnemy"];
+			if (isCombat) return false;
+			for (let [moduleName, module] of Object.entries(modules)) {
+				let activeActionName = getters[`${moduleName}/currentActionId`];
+				if (activeActionName) {
+					let activeAction = getters[`${moduleName}/baseActions`][activeActionName]
+					return !!activeAction.chronoProhibited;
+				}
+			}
+			
 		}
 	},
 	mutations: {

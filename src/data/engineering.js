@@ -267,6 +267,7 @@ const ILL_ADVISED_ACTIONS = {
 			id: "power",
 			count: 30
 		},
+		chronoProhibited: true,
 		icon: require("@/assets/art/engineering/supermatter.png"),
 		xp: -100,
 		requiredLevel: 50,

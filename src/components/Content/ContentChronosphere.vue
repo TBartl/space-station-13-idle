@@ -66,6 +66,9 @@
             />
             <b>Health</b> regen was a mechanic, did you?
           </span>
+          <span>
+			Oh, one more thing.  It seems certain exotic forms of matter will interfere with the time acceleration.
+          </span>
         </template>
         <template slot="Simulation Reset?">
           <span>
