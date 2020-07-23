@@ -26,7 +26,8 @@ export const ENEMY_BASE_STATS = {
 	moveTime: 3,
 	bruteProtection: 0,
 	burnProtection: 0,
-	damageType: "brute"
+	damageType: "brute",
+	luck: 0
 }
 
 // This adds to a, so it should only be used on a fresh object
