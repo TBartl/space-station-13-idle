@@ -794,7 +794,7 @@ const GBULLET = {
 	},
 	gunRifle1: {
 		name: "Mosin-Nagant Rifle",
-		sellPrice: 1520,
+		sellPrice: 140,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_naggant_overlay.png"),
@@ -811,7 +811,7 @@ const GBULLET = {
 	},
 	gunRifle2: {
 		name: "WT-550 Autorifle",
-		sellPrice: 1520,
+		sellPrice: 280,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_wt5_overlay.png"),
@@ -827,8 +827,8 @@ const GBULLET = {
 		}
 	},
 	gunRifle3: {
-		name: "NT-ARG 'Boarder Rifle",
-		sellPrice: 1520,
+		name: "NT-ARG 'Boarder' Rifle",
+		sellPrice: 420,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_arg.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_arg_overlay.png"),
@@ -845,7 +845,7 @@ const GBULLET = {
 	},
 	gunRifle4: {
 		name: "C20r Rifle",
-		sellPrice: 1520,
+		sellPrice: 560,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_c20r.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_c20r_overlay.png"),
@@ -862,7 +862,7 @@ const GBULLET = {
 	},
 	gunRifle5: {
 		name: "M-90gl Carbine",
-		sellPrice: 1520,
+		sellPrice: 700,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_m90.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_m90_overlay.png"),
@@ -879,7 +879,7 @@ const GBULLET = {
 	},
 	gunRifle6: {
 		name: "Sniper Rifle",
-		sellPrice: 1520,
+		sellPrice: 840,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_sniper.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_sniper_overlay.png"),
@@ -896,7 +896,7 @@ const GBULLET = {
 	},
 	gunRifle7: {
 		name: "Belt Fed L6 Saw",
-		sellPrice: 1520,
+		sellPrice: 980,
 		equipmentSlot: "hand",
 		icon: require("@/assets/art/combat/items/hand/gunR_l6.png"),
 		overlay: require("@/assets/art/combat/items/hand/gunR_l6_overlay.png"),

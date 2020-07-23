@@ -251,10 +251,10 @@ const ACTIONS_LINGFACE = {
 	},	
 }
 
-Object.values(ACTIONS_LINGBASE).forEach(action => action.type = "recycling");
-Object.values(ACTIONS_LINGAIM).forEach(action => action.type = "sharp weapons");
-Object.values(ACTIONS_LINGPOWER).forEach(action => action.type = "armor");
-Object.values(ACTIONS_LINGFACE).forEach(action => action.type = "space suits");
+Object.values(ACTIONS_LINGBASE).forEach(action => action.type = "ACCLIMATION");
+Object.values(ACTIONS_LINGAIM).forEach(action => action.type = "FLESH ARMOR");
+Object.values(ACTIONS_LINGPOWER).forEach(action => action.type = "BONE ARMOR");
+Object.values(ACTIONS_LINGFACE).forEach(action => action.type = "DISGUISES");
 
 export const ACTIONS = {
 	...ACTIONS_LINGBASE,

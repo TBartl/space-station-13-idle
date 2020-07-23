@@ -24,6 +24,7 @@
           <span v-else class="description">Already Equipped</span>
         </div>
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
+        <button v-if="canOpen && !bankFull" class="mt-1 btn btn-primary btn-sm" @click="openAll">Open All {{count}}!</button>
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="viewOdds">View Odds</button>
         <div v-if="item.sellPrice" class="mt-1">
           <inventory-sell :itemId="itemId" :count="1" :totalCount="count" />
@@ -85,7 +86,13 @@ export default {
         this.item.itemTable ||
         this.item.itemTables
       );
-    }
+		},
+		itemCount() {
+			return this.$store.getters["inventory/bank"][this.itemId]
+		},
+		bankFull(){
+			return this.$store.getters["inventory/bankFull"]
+		}
   },
   methods: {
     open() {
@@ -101,6 +108,12 @@ export default {
         if (count == 0) continue;
         this.$store.commit("inventory/changeItemCount", { itemId, count });
       }
+		},
+    openAll() {
+			if (!this.canOpen) return;
+			while (this.itemCount > 0 && !this.bankFull) {
+				this.open();
+			}
     },
     viewOdds() {
       this.$modal.show(

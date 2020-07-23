@@ -36,15 +36,23 @@
           </span>
         </template>
       </job-info>
-      <div class="row">
+
+      <div
+        class="tier row"
+        v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
+        :key="tier"
+      >
+        <div class="col-12">
+          <span class="type-text text-uppercase">{{typedEntry[0]}}</span>
+        </div>
         <div
           class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
-          v-for="[actionId, action] in viewableActions"
+          v-for="[actionId, action] in typedEntry[1]"
           :key="actionId"
         >
           <generic-action
             :jobId="jobId"
-            :actionName="'INVOKE'"
+            :actionName="'SYNTHESIZE'"
             :action="action"
             :actionId="actionId"
           />
@@ -53,6 +61,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import { findLastIndex } from "lodash";
@@ -72,15 +81,26 @@ export default {
     job() {
       return JOB;
     },
-    viewableActions() {
-      return this.$store.getters[this.jobId + "/filteredActionEntries"];
+    viewableTypedActionEntries() {
+      let entries = this.$store.getters[this.jobId + "/filteredActionEntries"];
+
+      let toReturn = {}; // type: [entries]
+      for (let entry of entries) {
+        let type = entry[1].type;
+        if (!toReturn[type]) toReturn[type] = [entry];
+        else toReturn[type].push(entry);
+      }
+
+      return toReturn;
     }
   }
 };
 </script>
 
 <style scoped>
-img {
-  width: 32px;
+.type-text {
+  font-size: 20;
+  font-weight: bold;
+  color: rgba(245, 245, 245, 0.555);
 }
 </style>

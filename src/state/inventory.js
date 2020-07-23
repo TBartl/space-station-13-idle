@@ -172,10 +172,13 @@ const inventory = {
 				if (!itemId) return false;
 				if (state.bank[itemId]) return true;
 
-				if (getters.bankItemIds.length >= getters.bankSlots) return false;
+				if (getters.bankFull) return false;
 
 				return true;
 			}
+		},
+		bankFull(state, getters) {
+			return getters.bankItemIds.length >= getters.bankSlots;
 		}
 	},
 	mutations: {
