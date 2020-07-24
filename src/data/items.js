@@ -1,6 +1,7 @@
 import FOOD_BOTANY from "./items/foodBotany";
 import FOOD_COOKING from "./items/foodCooking";
 import FOOD_OTHER from "./items/foodOther";
+import FOOD_BARTENDING from "./items/foodBartending";
 import { RESOURCE_CHEMISTRY } from "./items/resourceChemistry";
 import RESOURCE_ENGINEERING from "./items/resourceEngineering";
 import RESOURCE_GRAYTIDING from "./items/resourceGraytiding";
@@ -32,6 +33,7 @@ const ITEMS = {
 	...FOOD_OTHER,
 	...FOOD_BOTANY,
 	...FOOD_COOKING,
+	...FOOD_BARTENDING,
 	...RESOURCE_MINING,
 	...RESOURCE_GRAYTIDING,
 	...RESOURCE_TINKERING,

@@ -104,6 +104,14 @@ const POTIONS = {
 		potionJob: "cooking",
 		potionCharges: 10
 	},
+	potionBartending: {
+		name: "Powerful Shaker",
+		sellPrice: 180,
+		icon: require("@/assets/art/bartending/icon.png"),
+		description: `Remove the level requirement from Bartending actions.`,
+		potionJob: "bartending",
+		potionCharges: 5
+	},
 	potionFabrication: {
 		name: "Bluespace Acid",
 		sellPrice: 208,

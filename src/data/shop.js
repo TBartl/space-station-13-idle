@@ -14,7 +14,7 @@ export const SECTIONS = [
 	{
 		name: "Job Unlocks",
 		purchases: [
-			"unlockFabrication", "unlockTinkering", "unlockCooking",, "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor",, "unlockCult", "unlockLing",
+			"unlockFabrication", "unlockTinkering", "unlockCooking","unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor",, "unlockCult", "unlockLing",
 		]
 	},
 	{
@@ -111,6 +111,16 @@ const JOB_UNLOCKS = {
 			cookingUnlocked: 0
 		}
 	},
+	unlockBartending: {
+		name: "Unlock Bartending",
+		description: "Allows you to turn power and plants into delicious drinks",
+		icon: require("@/assets/art/bartending/icon.png"),
+		requiredItems: {
+			money: 15000
+		},
+		upgrade: "bartendingUnlocked",
+		requiredUpgrades: {
+			bartendingUnlocked: 0
 	unlockFabrication: {
 		name: "Unlock Fabrication",
 		description: "Allows you to turn raw minerals into ranged weapons and exosuits",

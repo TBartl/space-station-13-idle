@@ -15,6 +15,7 @@ import ContentMining from "./ContentMining";
 import ContentXenobiology from "./ContentXenobiology";
 import ContentBotany from "./ContentBotany";
 import ContentCooking from "./ContentCooking";
+import ContentBartending from "./ContentBartending";
 import ContentGraytiding from "./ContentGraytiding";
 import ContentTinkering from "./ContentTinkering";
 import ContentShitposting from "./ContentShitposting";
@@ -42,6 +43,7 @@ export default {
     ContentGraytiding,
     ContentTinkering,
     ContentShitposting,
+    ContentBartending,
     ContentFabrication,
     ContentXenobiology,
     ContentBotany,

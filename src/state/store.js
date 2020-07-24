@@ -18,10 +18,12 @@ import tinkering from "./tinkering";
 import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
+import bartending from "./bartending";
 import cargonia from "./cargonia";
 import traitor from "./traitor";
 import cult from "./cult";
 import ling from "./ling";
+
 import precision from "./precision";
 import meleePower from "./meleePower";
 import rangedPower from "./rangedPower";
@@ -51,10 +53,12 @@ const modules = {
 	command,
 	validhunting,
 	shitposting,
+	bartending,
 	cargonia,
 	traitor,
 	cult,
 	ling,
+  
 	precision,
 	meleePower,
 	rangedPower,

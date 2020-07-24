@@ -140,6 +140,15 @@ const POTIONS = {
 			foodPasta1: 1
 		}
 	},
+	synthPotionBartending: {
+		item: "potionBartending",
+		time: 2,
+		requiredItems: {
+			water: 2,
+			oil: 2,
+			sacid: 2
+		}
+	},
 	synthPotionFabrication: {
 		item: "potionFabrication",
 		time: 2,
