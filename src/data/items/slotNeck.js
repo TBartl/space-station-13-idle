@@ -133,6 +133,25 @@ export default {
 		description: "+1 Cooking Upgrade",
 		providesUpgrade: "fryCooking"
 	},
+	capeBartending: {
+		name: "Bartending Mastery Tie",
+		sellPrice: 500000,
+		icon: require("@/assets/art/combat/items/cloak/barcloak.png"),
+		overlay: require("@/assets/art/combat/items/cloak/barcloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 60,
+			luck: 4,
+			protection: 0,
+			precision: 0,
+			power: 0,
+		},
+		requires: {
+			bartending: MAX_LEVEL
+		},
+		description: "+1 Bartending Upgrade",
+		providesUpgrade: "boozeDispenser"
+	},
 	capeXenobiology: {
 		name: "Xenobiology Mastery Cloak",
 		sellPrice: 500000,

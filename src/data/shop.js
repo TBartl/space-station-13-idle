@@ -13,9 +13,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Job Unlocks",
-		purchases: [
-			"unlockFabrication", "unlockTinkering", "unlockCooking","unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor",, "unlockCult", "unlockLing",
-		]
+		purchases: ["unlockFabrication", "unlockTinkering", "unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor", "unlockCult", "unlockLing"]
 	},
 	{
 		name: "Job Upgrades",
@@ -121,6 +119,8 @@ const JOB_UNLOCKS = {
 		upgrade: "bartendingUnlocked",
 		requiredUpgrades: {
 			bartendingUnlocked: 0
+		}
+	},
 	unlockFabrication: {
 		name: "Unlock Fabrication",
 		description: "Allows you to turn raw minerals into ranged weapons and exosuits",
@@ -290,6 +290,16 @@ const CAPES = {
 		description: "Requires max Cooking to wear.",
 		requiredLevels: {
 			cooking: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeCooking: {
+		item: "capeBartending",
+		description: "Requires max Bartending to wear.",
+		requiredLevels: {
+			bartending: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000

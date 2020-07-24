@@ -8,7 +8,7 @@ export const ACTIONS = {
 		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 97
+			power: 96
 		}
 	},
 	postDeadchat: {
@@ -20,7 +20,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
-			power: 97
+			power: 96
 		}
 	},
 	Cocacolagua: {
@@ -32,7 +32,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 49,
 		requiredItems: {
-			power: 97
+			power: 96
 		}
 	},
 	Uristqwerty: {
@@ -44,7 +44,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 48,
 		requiredItems: {
-			power: 97
+			power: 96
 		},
 	},
 	SkyCinnamon: {
@@ -56,7 +56,19 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 47,
 		requiredItems: {
-			power: 97
+			power: 96
+		},
+	},
+	Kolbaska: {
+		time: 1,
+		name: "Kolbaska's Speed",
+		item: "q_foodMeatA",
+		icon: require("@/assets/art/shitposting/sausage.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 46,
+		requiredItems: {
+			power: 96
 		},
 	},
 	wut: {

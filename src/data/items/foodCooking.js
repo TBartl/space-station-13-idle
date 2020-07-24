@@ -8,9 +8,9 @@ let FOOD = {
 		healAmount: 15,
 		stats: {
 			maxHealth: 0,
-			evasion: -1,
+			evasion: 0,
 			precision: 2,
-			power: -1,
+			power: 0,
 		},
 	},
 	foodMeatZ: {
@@ -21,8 +21,8 @@ let FOOD = {
 		stats: {
 			maxHealth: 0,
 			evasion: 2,
-			precision: -1,
-			power: -1,
+			precision: 0,
+			power: 0,
 		},
 	},
 	foodMeatA: {
@@ -32,8 +32,8 @@ let FOOD = {
 		healAmount: 15,
 		stats: {
 			maxHealth: 0,
-			evasion: -1,
-			precision: -1,
+			evasion: 0,
+			precision: 0,
 			power: 2,
 		},
 	},
@@ -116,9 +116,10 @@ let FOOD = {
 		healAmount: 30,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: 10,
-			power: -5,
+			evasion: 0,
+			precision: 4,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodPrecision2: {
@@ -128,9 +129,10 @@ let FOOD = {
 		healAmount: 40,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: 10,
-			power: -5,
+			evasion: 0,
+			precision: 6,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodPrecision3: {
@@ -140,9 +142,10 @@ let FOOD = {
 		healAmount: 50,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: 10,
-			power: -5,
+			evasion: 0,
+			precision: 8,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodPower1: {
@@ -152,9 +155,10 @@ let FOOD = {
 		healAmount: 30,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: -5,
-			power: 10,
+			evasion: 0,
+			precision: 0,
+			power: 4,
+			protection: 5
 		},
 	},
 	foodPower2: {
@@ -164,9 +168,10 @@ let FOOD = {
 		healAmount: 40,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: -5,
-			power: 10,
+			evasion: 0,
+			precision: 0,
+			power: 6,
+			protection: 5
 		},
 	},
 	foodPower3: {
@@ -176,9 +181,10 @@ let FOOD = {
 		healAmount: 50,
 		stats: {
 			maxHealth: 0,
-			evasion: -5,
-			precision: -5,
-			power: 10,
+			evasion: 0,
+			precision: 0,
+			power: 8,
+			protection: 5
 		},
 	},
 	foodEvasion1: {
@@ -188,9 +194,10 @@ let FOOD = {
 		healAmount: 30,
 		stats: {
 			maxHealth: 0,
-			evasion: 10,
-			precision: -5,
-			power: -5,
+			evasion: 4,
+			precision: 0,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodEvasion2: {
@@ -200,9 +207,10 @@ let FOOD = {
 		healAmount: 40,
 		stats: {
 			maxHealth: 0,
-			evasion: 10,
-			precision: -5,
-			power: -5,
+			evasion: 6,
+			precision: 0,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodEvasion3: {
@@ -212,20 +220,21 @@ let FOOD = {
 		healAmount: 50,
 		stats: {
 			maxHealth: 0,
-			evasion: 10,
-			precision: -5,
-			power: -5,
+			evasion: 8,
+			precision: 0,
+			power: 0,
+			protection: 5
 		},
 	},
 	foodHuman1: {
 		name: "Spicy Burger",
 		sellPrice: 48,
 		icon: require("@/assets/art/cooking/burger1.png"),
-		healAmount: 25,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
-			precision: 5,
+			precision: 6,
 			power: 0,
 		},
 	},
@@ -237,7 +246,7 @@ let FOOD = {
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
-			precision: 10,
+			precision: 8,
 			power: 0,
 		},
 	},
@@ -259,9 +268,9 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/burger4_anim.gif"),
 		healAmount: 55,
 		stats: {
-			maxHealth: 0,
+			maxHealth: 50,
 			evasion: 0,
-			precision: 8,
+			precision: 10,
 			power: 0,
 		},
 	},
@@ -269,12 +278,12 @@ let FOOD = {
 		name: "Pizza",
 		sellPrice: 63,
 		icon: require("@/assets/art/cooking/animal1.png"),
-		healAmount: 25,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
 			precision: 0,
-			power: 5,
+			power: 6,
 		},
 	},
 	foodAnimal2: {
@@ -286,7 +295,7 @@ let FOOD = {
 			maxHealth: 0,
 			evasion: 0,
 			precision: 0,
-			power: 10,
+			power: 8,
 		},
 	},
 	foodAnimal3: {
@@ -307,20 +316,20 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/animal4.png"),
 		healAmount: 55,
 		stats: {
-			maxHealth: 0,
+			maxHealth: 50,
 			evasion: 0,
 			precision: 0,
-			power: 8,
+			power: 10,
 		},
 	},
 	foodAlien1: {
 		name: "Fresh 'Shishi'",
 		sellPrice: 69,
 		icon: require("@/assets/art/cooking/Alien1.png"),
-		healAmount: 25,
+		healAmount: 30,
 		stats: {
 			maxHealth: 0,
-			evasion: 5,
+			evasion: 6,
 			precision: 0,
 			power: 0,
 		},
@@ -332,7 +341,7 @@ let FOOD = {
 		healAmount: 40,
 		stats: {
 			maxHealth: 0,
-			evasion: 10,
+			evasion: 8,
 			precision: 0,
 			power: 0,
 		},
@@ -355,8 +364,8 @@ let FOOD = {
 		icon: require("@/assets/art/cooking/Alien4.png"),
 		healAmount: 55,
 		stats: {
-			maxHealth: 0,
-			evasion: 8,
+			maxHealth: 50,
+			evasion: 10,
 			precision: 0,
 			power: 0,
 		},
@@ -373,7 +382,8 @@ let premiumFoodEntries = Object.entries(FOOD).map(entry => {
 	newFood.sellPrice *= 2;
 	for (let statId of Object.keys(newFood.stats)) {
 		if (newFood.stats[statId] > 0)
-			newFood.stats[statId] = Math.round(newFood.stats[statId] * 1.5);
+			newFood.stats[statId] = Math.round(newFood.stats[statId])
+			newFood.stats.luck = 5;
 	}
 	return ["q_" + originalId, newFood];
 });
