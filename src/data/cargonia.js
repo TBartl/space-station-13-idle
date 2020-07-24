@@ -308,7 +308,7 @@ const RIFLE_GUNS = {
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),
 		xp: 6,
 		requiredLevel: 10,
-		items: "gunRifle1",
+		item: "gunRifle1",
 		requiredItems: {
 			money: 210
 		}
@@ -318,7 +318,7 @@ const RIFLE_GUNS = {
 		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
 		xp: 18,
 		requiredLevel: 11,
-		items: "gunRifle2",
+		item: "gunRifle2",
 		requiredItems: {
 			money: 420
 		}
@@ -328,7 +328,7 @@ const RIFLE_GUNS = {
 		icon: require("@/assets/art/combat/items/hand/gunR_arg.png"),
 		xp: 16,
 		requiredLevel: 26,
-		items: "gunRifle3",
+		item: "gunRifle3",
 		requiredItems: {
 			money: 630
 		}
@@ -373,13 +373,6 @@ const RIFLE_GUNS = {
 		requiredItems: {
 			money: 1470
 		}
-	},
-	mineBananiums: {
-		time: 6,
-		item: "bananium",
-		icon: require("@/assets/art/mining/OreBanana.png"),
-		xp: 30,
-		requiredLevel: 50
 	},
 }
 

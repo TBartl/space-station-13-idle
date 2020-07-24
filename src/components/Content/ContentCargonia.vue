@@ -16,23 +16,29 @@
         title="Moffew the Quartermaster flutters..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'}
+          {name: 'Money?', icon: require('@/assets/art/misc/coin.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>
-          Just act like you are doing your duty bringing in shipments (mineral picture. Once we have enough (guns) we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds (valid token picture).
+          Just act like you are doing your duty bringing in shipments             <img
+              :src="require('@/assets/art/cargonia/mineral2.png')"
+            />. Once we have enough arms             <img
+              :src="require('@/assets/art/combat/items/hand/gunR_naggant.png')"
+            /> we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds<img
+              :src="require('@/assets/art/validhunting/guilty.png')"
+            />.
           </span>
         </template>
-        <template slot="New job?">
-          <span>The administration has requested the creation of a new job.</span>
-          <span>I have created a simple, minimalistic template with which to build off of.</span>
+        <template slot="Money?">
+          <span>I'm gonna pop some tags.</span>
+          <span>Only got twenty dollars in my pocket.</span>
           <span>
-            In order to continue, you're going to have to write the rest of the
+            Wait you're still here? What are you doing go move freight!
             <img
-              :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
+              :src="require('@/assets/art/shop/items/droppod.png')"
             />
-            <b>Code</b>.
+            <b>NOW!</b>.
           </span>
         </template>
       </job-info>

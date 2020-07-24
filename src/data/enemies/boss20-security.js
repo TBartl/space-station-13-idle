@@ -105,6 +105,7 @@ const BOSSES = {
 			precision: 30,
 			power: 41,
 			evasion: 30,
+			luck: 5,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -147,11 +148,12 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/sec-HOS.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 1750,
+			maxHealth: 700,
 			attackSpeed: 2.4,
 			precision: 34,
 			power: 40,
 			evasion: 36,
+			regen: .4,
 			damageType: "burn",
 		},
 		itemTables: [

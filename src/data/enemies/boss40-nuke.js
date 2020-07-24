@@ -105,6 +105,7 @@ const BOSSES = {
 			precision: 53,
 			power: 121,
 			evasion: 62,
+			luck: 5,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -148,11 +149,12 @@ const BOSSES = {
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3600,
+			maxHealth: 3000,
 			attackSpeed: 3.4,
 			precision: 59,
 			power: 71,
 			evasion: 62,
+			regen: .8,
 			damageType: "burn",
 			bruteProtection: 20
 		},
