@@ -105,6 +105,7 @@ const BOSSES = {
 			precision: 71,
 			power: 33,
 			evasion: 46,
+			luck: 5,
 			damageType: "burn",
 			burnProtection: 20
 		},
@@ -148,11 +149,12 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/legion3_anim.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3000,
+			maxHealth: 1200,
 			attackSpeed: 3.4,
 			precision: 56,
 			power: 55,
 			evasion: 51,
+			regen: .6,
 			damageType: "burn",
 			burnProtection: 20
 		},

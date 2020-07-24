@@ -84,6 +84,50 @@ export default {
 			precision: 30
 		}
 	},
+	ammoRifle1: {
+		name: "Training Round",
+		sellPrice: 4,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r1.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 3,
+			precision: 8
+		}
+	},
+	ammoRifle2: {
+		name: "Flechette Round",
+		sellPrice: 21,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r2.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 6,
+			precision: 16
+		}
+	},
+	ammoRifle3: {
+		name: "Tracer Round",
+		sellPrice: 43,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r3.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 9,
+			precision: 24
+		}
+	},
+	ammoRifle4: {
+		name: "Meteor Round",
+		sellPrice: 65,
+		equipmentSlot: "pocket",
+		icon: require("@/assets/art/combat/items/pocket/ammo_r4.png"),
+		ammoType: "rifle",
+		stats: {
+			power: 12,
+			precision: 32
+		}
+	},
 	ammoRocket1: {
 		name: "Rocket",
 		sellPrice: 700,

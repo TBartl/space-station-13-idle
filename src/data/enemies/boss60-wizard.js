@@ -105,6 +105,7 @@ const BOSSES = {
 			precision: 108,
 			power: 122,
 			evasion: 116,
+			luck: 5,
 			damageType: "burn",
 		},
 		itemTables: [
@@ -147,11 +148,12 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/antag-wizard.png"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3600,
+			maxHealth: 3000,
 			attackSpeed: 2.1,
 			precision: 120,
 			power: 126,
 			evasion: 131,
+			regen: 1.2,
 			damageType: "burn",
 		},
 		itemTables: [

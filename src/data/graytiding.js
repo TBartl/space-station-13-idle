@@ -520,6 +520,7 @@ const ACTIONS = {
 Object.values(ACTIONS).forEach((action, index) => {
 	action.requiredLevel = 1 + index * 2
 	action.failure = {
+		message: "Apprehended!",
 		chance: .75,
 		damage: Math.floor(5 + index * 1.5)
 	}

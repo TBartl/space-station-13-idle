@@ -19,6 +19,11 @@ import command from "./command";
 import validhunting from "./validhunting";
 import shitposting from "./shitposting";
 import bartending from "./bartending";
+import cargonia from "./cargonia";
+import traitor from "./traitor";
+import cult from "./cult";
+import ling from "./ling";
+
 import precision from "./precision";
 import meleePower from "./meleePower";
 import rangedPower from "./rangedPower";
@@ -49,6 +54,11 @@ const modules = {
 	validhunting,
 	shitposting,
 	bartending,
+	cargonia,
+	traitor,
+	cult,
+	ling,
+  
 	precision,
 	meleePower,
 	rangedPower,
@@ -79,6 +89,7 @@ function customMerge(obj, source, root = true, softReset = false) {
 		if (softReset && root && key == "settings") return;
 		if (softReset && root && key == "cheats") return;
 		if (softReset && key == "simulationResetCount") return;
+		if (softReset && key == "remainingTime") return;
 
 		if (!root && obj[key] && obj[key].constructor == Object) {
 			Vue.set(obj, key, {});
@@ -146,6 +157,28 @@ const store = new Vuex.Store({
 		},
 		welcomeMessageSeen(state) {
 			return state.welcomeMessageSeen;
+		},
+		isAnyAction(state, getters) {
+			let isCombat = getters["combat/targetEnemy"];
+			if (isCombat) return true;
+			for (let [moduleName, module] of Object.entries(modules)) {
+				let isActiveFunc = getters[`${moduleName}/currentActionId`];
+				if (isActiveFunc) return true;
+			}
+
+			return false;
+		},
+		isActionChronoProhibited(state, getters) {
+			let isCombat = getters["combat/targetEnemy"];
+			if (isCombat) return false;
+			for (let [moduleName, module] of Object.entries(modules)) {
+				let activeActionName = getters[`${moduleName}/currentActionId`];
+				if (activeActionName) {
+					let activeAction = getters[`${moduleName}/baseActions`][activeActionName]
+					return !!activeAction.chronoProhibited;
+				}
+			}
+			
 		}
 	},
 	mutations: {

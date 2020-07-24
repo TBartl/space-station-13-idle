@@ -35,14 +35,16 @@
     />
 
     <div v-if="moveProgress && mobType == 'enemy'" class="fake-bar mt-2"></div>
-    <div v-if="targetEnemy" class="w-100 mt-2">
+		<div class="w-100 mt-2">
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
-        <span class="stat-desc">Max Hit:</span>
-        <span>{{Math.round(maxHit)}}</span>
+        <span class="stat-desc">Hit Range:</span>
+        <span>{{Math.round(minHit)}} - {{Math.round(maxHit)}}</span>
         <img class="ml-1 damage-type" :src="damageTypeImage" />
       </div>
       <stat-explain-max-hit :target="`${mobType}-stat-max-hit`" :mobType="mobType" />
+		</div>
+    <div v-if="targetEnemy" class="w-100">
       <div class="stat" :id="`${mobType}-stat-hit-chance`">
         <img :src="require('@/assets/art/combat/precision.png')" />
         <span class="stat-desc">Hit Chance:</span>
@@ -51,7 +53,7 @@
       <stat-explain-hit-chance :target="`${mobType}-stat-hit-chance`" :mobType="mobType" />
     </div>
 
-    <div v-if="mobType == 'player' && companion" class="w-100" :class="{ 'mt-2': !targetEnemy}">
+    <div v-if="mobType == 'player' && companion" class="w-100">
       <div class="stat" :id="`${mobType}-stat-flee-chance`">
         <img :src="require('@/assets/art/combat/command.png')" />
         <span class="stat-desc">Flee Chance:</span>
@@ -131,6 +133,9 @@ export default {
     },
     maxHit() {
       return this.$store.getters[this.mobType + "Mob/maxHit"];
+    },
+    minHit() {
+      return this.$store.getters[this.mobType + "Mob/minHit"];
     },
     hitChance() {
       return this.$store.getters[this.mobType + "Mob/hitChance"];

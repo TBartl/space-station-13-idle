@@ -5,7 +5,7 @@ const SLIMES = {
 		icon: require("@/assets/art/xenobio/SlimeGrey.gif"),
 		tier: 1,
 		stats: {
-			maxHealth: 15
+			regen: .5
 		}
 	},
 	slimeOrange: {
@@ -130,7 +130,7 @@ const SLIMES = {
 	},
 	slimeRainbow: {
 		name: "Rainbow Slime",
-		sellPrice: 500,
+		sellPrice: 2000,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
 		tier: 7,
 		stats: {
@@ -204,6 +204,7 @@ const SLIMES = {
 			maxHealth: 0
 		}
 	},
+	
 	companionMining: {
 		name: "Mine Bot",
 		sellPrice: 300,
@@ -264,19 +265,81 @@ const SLIMES = {
 			power: 2,
 		}
 	},
-/*	companionAicard: {
+	companionAicard: {
 		name: "Carded AI",
 		sellPrice: 2500,
 		icon: require("@/assets/art/combat/items/aicard_anim.gif"),
 		tier: 5,
 		stats: {
-			maxHealth: 80,
-			burnProtection: 0,
-			bruteProtection: -2,
-			precision: 5,
-			evasion: 4,
+			maxHealth: 0,
+			protection: -5,
+			precision: 20,
+			evasion: -5,
 		}
-	} */
+	},
+	companionMousecult: {
+		name: "Proteon",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/proteon_anim.gif"),
+		tier: 1,
+		stats: {
+			evasion: 25,
+			regen: -1
+		}
+	},
+	companionDogcult: {
+		name: "Narsian",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/narsian.png"),
+		tier: 1,
+		stats: {
+			bruteProtection: 28,
+			regen: -1
+		}
+	},
+	companionCatcult: {
+		name: "Wraith",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/floating_anim.gif"),
+		tier: 1,
+		stats: {
+			burnProtection: 28,
+			regen: -1
+		}
+	},
+	companionFoxcult: {
+		name: "Artificer",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/artificer_anim.gif"),
+		tier: 1,
+		stats: {
+			precision: 25,
+			regen: -1
+		} 
+	},
+	companionGoatcult: {
+		name: "Behemoth",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/behemoth_anim.gif"),
+		tier: 1,
+		stats: {
+			power: 25,
+			regen: -1
+		}
+	},
+	companionBeecult: {
+		name: "Harvester",
+		sellPrice: 1000,
+		icon: require("@/assets/art/cult/harvester_anim.gif"),
+		tier: 1,
+		stats: {
+			protection: 5,
+			precision: 5,
+			evasion: 5,
+			power: 5,
+			regen: -1
+		}
+	},
 }
 Object.values(SLIMES).forEach((slime, index) => {
 	slime.equipmentSlot = "companion";
@@ -289,53 +352,57 @@ Object.values(SLIMES).forEach((slime, index) => {
 
 	if (mod == 0) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 15,
+			regen: (slime.tier) * 1.5 / 10,
 			burnProtection: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 1) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 5,
+			regen: (slime.tier) * 1.5 / 10,
 			moveTime: -1,
 		}
 	}
 	else if (mod == 2) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 25,
-			moveTime: 1,
+			regen: (slime.tier) * 2 / 10,
+			moveTime: 3,
 		}
 	}
 	else if (mod == 3) {
 		slime.stats = {
-			maxHealth: (slime.tier) * 15,
+			regen: (slime.tier) * 1.5 / 10,
 			bruteProtection: (slime.tier - 1) * 4
 		}
 	}
 	else if (mod == 4) {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			damageType: "burn"
 		}
 	}
 	else if (mod == 5) {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			attackSpeed: 2 - (slime.tier / 5)
 		}
 	}
 	else if (mod == 6) {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			attackSpeed: 3 + (slime.tier / 5)
 		}
 	}
 	else if (mod == 7) {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
-			maxHealth: (slime.tier) * 10,
+			regen: (slime.tier) * 1.5 / 10,
+			luck: (slime.tier) * 2,
 			damageType: "brute"
 		}
 	}

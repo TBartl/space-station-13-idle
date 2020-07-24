@@ -203,5 +203,100 @@ export default {
 			evasion: 25,
 		}
 	},
-
+	faceLing0: {
+		name: "Ashen Disguise",
+		sellPrice: 253,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling1_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 2,
+			precision: 0,
+			power: 2,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
+	faceLing1: {
+		name: "Smokey Disguise",
+		sellPrice: 380,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling2_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 2,
+			precision: 2,
+			power: 0,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
+	faceLing2: {
+		name: "Kind Disguise",
+		sellPrice: 507,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling3_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			precision: 2,
+			power: 2,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
+	faceLing3: {
+		name: "Popular Disguise",
+		sellPrice: 634,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling4_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			precision: 4,
+			power: 0,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
+	faceLing4: {
+		name: "Efficient Disguise",
+		sellPrice: 761,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling5_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			precision: 0,
+			power: 4,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
+	faceLing5: {
+		name: "Soft Disguise",
+		sellPrice: 870,
+		icon: require("@/assets/art/ling/lingface.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/ling6_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 4,
+			precision: 0,
+			power: 0,
+		},
+		requires: {
+			evasion: 1,
+		}
+	},
 }

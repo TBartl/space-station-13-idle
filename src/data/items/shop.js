@@ -1,4 +1,20 @@
 export default {
+	antag: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/antag_anim.gif")
+	},
+	startCargonia: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startcargonia.png")
+	},
+	startCult: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startcult.png")
+	},
+	startLing: {
+		name: "Black Operations Communicator",
+		icon: require("@/assets/art/shop/items/startling.png")
+	},
 	money: {
 		name: "Space Coins",
 		icon: require("@/assets/art/misc/coin-padded.png")
@@ -27,6 +43,11 @@ export default {
 		name: "Occult Tome",
 		sellPrice: 500,
 		icon: require("@/assets/art/shop/items/cultpart_anim.gif")
+	},
+	ertParts: {
+		name: "Nanotrasen Chip",
+		sellPrice: 500,
+		icon: require("@/assets/art/shop/items/ertpart.png")
 	},
 	wizParts: {
 		name: "Magical Scroll",
@@ -97,6 +118,61 @@ export default {
 			},
 			{
 				id: 'headEpic5',
+				weight: 1
+			},
+		]
+	},
+	hatCrate2: {
+		name: "Hat Crate, Winter Edition",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/hatcrateS2.png"),
+		itemTable: [
+			{
+				id: 'S2headCommon1',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon2',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon3',
+				weight: 14
+			},
+			{
+				id: 'S2headCommon4',
+				weight: 14
+			},
+			{
+				id: 'S2headRare1',
+				weight: 5
+			},
+			{
+				id: 'S2headRare2',
+				weight: 5
+			},
+			{
+				id: 'S2headRare3',
+				weight: 5
+			},
+			{
+				id: 'S2headRare4',
+				weight: 5
+			},
+			{
+				id: 'S2headEpic1',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic2',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic3',
+				weight: 1
+			},
+			{
+				id: 'S2headEpic4',
 				weight: 1
 			},
 		]
@@ -397,6 +473,44 @@ export default {
 				id: 'ticket60',
 				count: [1,2],
 				weight: 3
+			},
+		]
+	},
+	ertCrate: {
+		name: "Nanotrasen Droppod",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/ertdroppod.png"),
+		itemTable: [
+			{
+				id: 'meleeBurn4',
+				weight: 50
+			},
+			{
+				id: 'ammoEnergy4',
+				count: [1,50],
+				weight: 75
+			},
+			{
+				id: 'ammoEnergy3',
+				count: [1,100],
+				weight: 90
+			},
+			{
+				id: 'gunEnergy8',
+				weight: 20
+			},
+			{
+				id: 'companionAicard',
+				weight: 20
+			},
+			{
+				id: 'meleeShield2',
+				weight: 20
+			},
+			{
+				id: 'ticket60',
+				count: [1,3],
+				weight: 5
 			},
 		]
 	},

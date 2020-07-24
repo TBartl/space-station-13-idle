@@ -14,7 +14,7 @@ export const SECTIONS = [
 	{
 		name: "Job Unlocks",
 		purchases: [
-			"unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting"
+			"unlockFabrication", "unlockTinkering", "unlockCooking","unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor",, "unlockCult", "unlockLing",
 		]
 	},
 	{
@@ -27,7 +27,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Gamble-O-Tron",
-		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "wizCrate",]
+		purchases: ["supplyCrate", "knifeCrate", "hatCrate", "hatCrate2", "revCrate", "secCrate", "lavaCrate", "syndieCrate",  "cultCrate", "ertCrate", "wizCrate"]
 	},
 	{
 		name: "Clothes Vendo-Matic",
@@ -121,6 +121,29 @@ const JOB_UNLOCKS = {
 		upgrade: "bartendingUnlocked",
 		requiredUpgrades: {
 			bartendingUnlocked: 0
+	unlockFabrication: {
+		name: "Unlock Fabrication",
+		description: "Allows you to turn raw minerals into ranged weapons and exosuits",
+		icon: require('@/assets/art/fabrication/icon.png'),
+		requiredItems: {
+			glass: 20,
+			power: 20,
+		},
+		upgrade: "fabricationUnlocked",
+		requiredUpgrades: {
+			fabricationUnlocked: 0
+		}
+	},
+	unlockTinkering: {
+		name: "Unlock Tinkering",
+		description: "Allows you to turn junk into weapons and armor.",
+		icon: require('@/assets/art/tinkering/icon.png'),
+		requiredItems: {
+			junk: 5
+		},
+		upgrade: "tinkeringUnlocked",
+		requiredUpgrades: {
+			tinkeringUnlocked: 0
 		}
 	},
 	unlockXenobiology: {
@@ -146,7 +169,59 @@ const JOB_UNLOCKS = {
 		requiredUpgrades: {
 			shitpostingUnlocked: 0
 		}
-	}
+	},
+	unlockCargonia: {
+		name: "Unlock Cargonia",
+		description: "Allows you to spend money for minerals and guns",
+		icon: require('@/assets/art/jobinfo/cargo_banner.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "cargoniaUnlocked",
+		requiredUpgrades: {
+			cargoniaUnlocked: 0
+		}
+	},
+	unlockTraitor: {
+		name: "Unlock Traitor",
+		description: "Allows you to spend use 20 special Telecrystals to kickstart your action.",
+		icon: require('@/assets/art/traitor/icon.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "traitorUnlocked",
+		requiredUpgrades: {
+			traitorUnlocked: 0
+		}
+	},
+	unlockCult: {
+		name: "Unlock Cult",
+		description: "Allows you to sacrifice health for dark runes and minions",
+		icon: require("@/assets/art/cult/Sacrifice_rune.png"),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "cultUnlocked",
+		requiredUpgrades: {
+			cultUnlocked: 0
+		}
+	},
+	unlockLing: {
+		name: "Unlock Changeling",
+		description: "Allows you to shape meat into regenerative armor",
+		icon: require('@/assets/art/ling/icon.png'),
+		requiredItems: {
+			money: 25000,
+			antag: 1
+		},
+		upgrade: "lingUnlocked",
+		requiredUpgrades: {
+			lingUnlocked: 0
+		}
+	},
 }
 
 const CAPES = {
@@ -288,6 +363,13 @@ const CRATES = {
 			money: 10000
 		}
 	},
+	hatCrate2: {
+		item: "hatCrate2",
+		description: `Christmas In July. I hope you asked for hats. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
+		requiredItems: {
+			money: 10000
+		}
+	},
 	revCrate: {
 		item: "revCrate",
 		description: "Workers fighting for equal pay have stashed supplies for the next time they inevitably need them. Finders Keepers.",
@@ -321,6 +403,13 @@ const CRATES = {
 		description: "If you avert your eyes from the sigils and just reach into the pod you can escape mostly intact.",
 		requiredItems: {
 			cultParts: 20,
+		}
+	},
+	ertCrate: {
+		item: "ertCrate",
+		description: "A prize from Nanotrasen for stopping some internal problems, contains even more problems!",
+		requiredItems: {
+			ertParts: 20,
 		}
 	},
 	wizCrate: {
@@ -377,6 +466,15 @@ const TICKETS = {
 			ticket3: 5,
 		},
 		fightZone: "Bloodsworn Cultists"
+	},
+	bossTicket55: {
+		name: "Check Nanotrasen Reports",
+		description: "On purchase, starts a fight with a random boss in this zone.",
+		icon: require("@/assets/art/shop/items/ticket55.png"),
+		requiredItems: {
+			ticket55: 5,
+		},
+		fightZone: "Rogue Nanotrasen Team"
 	},
 	bossTicket60: {
 		name: "Schedule Celebrity Tour",

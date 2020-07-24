@@ -362,6 +362,7 @@ for (let i = 0; i < 5; i++) {
 	TINKERING_UPGRADES[`upgradeTinkering${i + 1}`] = upgrade;
 }
 
+
 export const BARTENDING_UPGRADE_PERCENT = .15;
 const BARTENDING_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
@@ -385,6 +386,27 @@ for (let i = 0; i < 5; i++) {
 }
 
 
+export const ANTAG_UPGRADE_PERCENT = .05;
+const ANTAG_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Black Operations Efficiency",
+		description: `Increases mining speed by +${ANTAG_UPGRADE_PERCENT * 100}%`, // Expanded below
+		icon: require('@/assets/art/debug/B.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { validhunting: (i + 1) * 10 },
+		upgrade: "antagUpgrade",
+		requiredUpgrades: { antagUpgrade: i }
+	}
+
+	if (i != 0) {
+		upgrade.description = upgrade.description.replace("by", "by an additional");
+		upgrade.description += `, to +${(ANTAG_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	ANTAG_UPGRADES[`upgradeAntag${i + 1}`] = upgrade;
+}
 const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
@@ -396,6 +418,7 @@ const JOB_UPGRADES = {
 	...XENOBIO_UPGRADES,
 	...CHEMISTRY_UPGRADES,
 	...BARTENDING_UPGRADES
+	...ANTAG_UPGRADES,
 }
 
 // Add a required validhunting level

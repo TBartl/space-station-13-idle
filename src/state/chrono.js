@@ -53,6 +53,8 @@ const chrono = {
 		},
 		active(state, getters, rootState, rootGetters) {
 			if (getters["desiredSpeed"] == 1) return false;
+			if (rootGetters["isActionChronoProhibited"]) return false;
+			if (rootGetters["upgrades/get"]("timeBankAutoPause") && !rootGetters["isAnyAction"]) return false;
 
 			return getters["remainingTime"] > 0 || rootGetters["cheats/infiniteChrono"];
 		},

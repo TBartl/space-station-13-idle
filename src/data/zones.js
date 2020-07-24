@@ -96,6 +96,13 @@ export default [
 		purchases: ["bossTicket3"]
 	},
 	{
+		name: "Rogue Nanotrasen Team",
+		icon: require("@/assets/art/combat/zones/ert.png"),
+		enemies: ["ert1", "ert2", "ert3", "ert4"],
+		boss: true,
+		purchases: ["bossTicket55"]
+	},
+	{
 		name: "Wizard Federation 'Diplomats'",
 		icon: require("@/assets/art/combat/zones/traitor.gif"),
 		enemies: ["wizard1", "wizard2", "wizard3", "wizard4"],
