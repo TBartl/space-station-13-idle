@@ -10,10 +10,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantPotato.png"),
 		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 0,
-			power: 5,
+			power: 2,
+			bruteProtection: 5,
 		},
 	},
 	tomato: {
@@ -22,10 +20,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantTomato.png"),
 		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: 5,
-			power: -5,
+			precision: 2,
+			bruteProtection: 5,
 		},
 	},
 	banana: {
@@ -34,10 +30,9 @@ export default {
 		icon: require("@/assets/art/botany/PlantBanana.png"),
 		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: 5,
-			precision: -5,
-			power: 0,
+
+			evasion: 2,
+			bruteProtection: 5,
 		},
 	},
 	flowerSun: {
@@ -47,9 +42,8 @@ export default {
 		healAmount: 10,
 		stats: {
 			maxHealth: 0,
-			evasion: 5,
-			precision: 0,
-			power: -5,
+			evasion: 2,
+			burnProtection: 5,
 		},
 	},
 	mushroom: {
@@ -58,10 +52,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantShroomglow.png"),
 		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 5,
-			power: 0,
+			precision: 2,
+			burnProtection: 5,
 		},
 	},
 	pepper: {
@@ -70,10 +62,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantPepperhot.png"),
 		healAmount: 10,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: -5,
-			power: 5,
+			power: 2,
+			burnProtection: 5,
 		},
 	},
 	potatoBattery: {
@@ -82,10 +72,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantPotatobattery.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 0,
-			power: 10,
+			power: 3,
+			bruteProtection: 5,
 		},
 	},
 	tomatoBlue: {
@@ -94,10 +82,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantTomatoblue.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: 10,
-			power: -5,
+			precision: 3,
+			bruteProtection: 5,
 		},
 	},
 	bananaMime: {
@@ -106,10 +92,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantBananamime.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			precision: -5,
-			power: 0,
+			evasion: 3,
+			bruteProtection: 5,
 		},
 	},
 	flowerMoon: {
@@ -118,10 +102,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantFlowermoon.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			precision: 0,
-			power: -5,
+			evasion: 3,
+			burnProtection: 5,
 		},
 	},
 	mushroomRed: {
@@ -130,10 +112,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantShroomred.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 10,
-			power: 0,
+			precision: 3,
+			burnProtection: 5,
 		},
 	},
 	peppercold: {
@@ -142,10 +122,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantPeppercold.png"),
 		healAmount: 20,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: -5,
-			power: 10,
+			power: 3,
+			burnProtection: 5,
 		},
 	},
 	orange: {
@@ -154,10 +132,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantOrange.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 0,
-			power: 10,
+			power: 4,
+			bruteProtection: 5,
 		},
 	},
 	tomatoBluespace: {
@@ -166,10 +142,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantTomatobluespace_anim.gif"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: 10,
-			power: -5,
+			precision: 4,
+			bruteProtection: 5
 		},
 	},
 	bananaBlue: {
@@ -178,10 +152,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantBananablue.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			precision: -5,
-			power: 0,
+			evasion: 4,
+			bruteProtection: 5
 		},
 	},
 	flowerNova: {
@@ -190,10 +162,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantFlowernova.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: 10,
-			precision: 0,
-			power: -5,
+			evasion: 4,
+			burnProtection: 5
 		},
 	},
 	mushroomShadow: {
@@ -202,10 +172,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantShroomshadow.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: -5,
-			precision: 10,
-			power: 0,
+			precision: 4,
+			burnProtection: 5
 		},
 	},
 	pepperGhost: {
@@ -214,10 +182,8 @@ export default {
 		icon: require("@/assets/art/botany/PlantPepperghost.png"),
 		healAmount: 30,
 		stats: {
-			maxHealth: 0,
-			evasion: 0,
-			precision: -5,
-			power: 10,
+			power: 4,
+			burnProtection: 5
 		},
 	},
 	orange3d: {
@@ -227,10 +193,11 @@ export default {
 		icon: require("@/assets/art/botany/PlantOrange3d_anim.gif"),
 		healAmount: 40,
 		stats: {
-			maxHealth: -50,
+			regen: -.5,
 			evasion: 5,
 			precision: 5,
 			power: 5,
+			protection: 5
 		},
 	}
 }
