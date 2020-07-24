@@ -497,7 +497,7 @@ const MTOT = {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 1
+			precision: 8
 		}
 	},
 	meleeBurn4T: {
@@ -516,7 +516,7 @@ const MTOT = {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 1
+			precision: 18
 		}
 	},
 	meleeBurn5T: {
@@ -535,7 +535,7 @@ const MTOT = {
 			damageType: "burn"
 		},
 		requires: {
-			precision: 1
+			precision: 28
 		}
 	}
 }

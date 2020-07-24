@@ -9,10 +9,10 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			protection: 0,
 			precision: 0,
-			power: 1,
+			power: 2,
 		},
 		requires: {
 			mining: MAX_LEVEL
@@ -28,9 +28,8 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 6,
 			protection: 0,
-			precision: 1,
 			power: 0,
 		},
 		requires: {
@@ -47,9 +46,9 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			protection: 0,
-			precision: 1,
+			precision: 2,
 			power: 0,
 		},
 		requires: {
@@ -66,10 +65,11 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 5,
+			evasion: 2,
 			protection: 0,
 			precision: 0,
 			power: 0,
+			luck: 4
 		},
 		requires: {
 			graytiding: MAX_LEVEL
@@ -85,7 +85,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			bruteProtection: 2,
 			precision: 0,
 			power: 0,
@@ -103,11 +103,12 @@ export default {
 		overlay: require("@/assets/art/combat/items/cloak/hopcloak_overlay.png"),
 		equipmentSlot: "neck",
 		stats: {
-			maxHealth: 30,
-			evasion: 4,
+			maxHealth: 20,
+			luck: 4,
 			protection: 0,
 			precision: 0,
 			power: 0,
+			regen: .1
 		},
 		requires: {
 			botany: MAX_LEVEL
@@ -121,7 +122,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			burnProtection: 2,
 			precision: 0,
 			power: 0,
@@ -140,7 +141,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -160,7 +161,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			evasion: 4,
+			luck: 4,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -219,7 +220,7 @@ export default {
 			maxHealth: 10,
 			evasion: 0,
 			precision: 0,
-			power: 3,
+			luck: 4,
 		},
 		requires: {
 			evasion: 30
@@ -316,6 +317,7 @@ export default {
 			evasion: 0,
 			precision: 1,
 			power: 3,
+			luck: 1
 		},
 		requires: {
 			evasion: 7
@@ -332,6 +334,7 @@ export default {
 			evasion: 0,
 			precision: 2,
 			power: 6,
+			luck: 2
 		},
 		requires: {
 			evasion: 17

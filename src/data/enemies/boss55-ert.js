@@ -105,6 +105,7 @@ const BOSSES = {
 			precision: 73,
 			power: 133,
 			evasion: 65,
+			luck: 5,
 			damageType: "brute",
 		},
 		itemTables: [
@@ -147,11 +148,12 @@ const BOSSES = {
 		icon: require("@/assets/art/combat/enemies/boss/ertcom.gif"),
 		validhuntable: false,
 		stats: {
-			maxHealth: 3600,
+			maxHealth: 3000,
 			attackSpeed: 1,
 			precision: 101,
 			power: 110,
 			evasion: 109,
+			regen: 1.1,
 			damageType: "burn",
 		},
 		itemTables: [

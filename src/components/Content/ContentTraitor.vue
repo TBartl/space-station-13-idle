@@ -13,26 +13,30 @@
       <job-info
         infoId="traitor"
         :icon="require('@/assets/art/jobinfo/traitor.png')"
-        title="Moffew the Quartermaster flutters..."
+        title="Syndicate Ansible crackles..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/mining/icon.png'), iconClass:'mx--0'}
+          {name: 'Telecrystal?', icon: require('@/assets/art/traitor/telecrystal.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>
-          Just act like you are doing your duty bringing in shipments (mineral picture. Once we have enough (guns) we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds (valid token picture).
+          Some idiot left their communicator open and now there's Telecrystals            <img
+              :src="require('@/assets/art/shop/items/telecrystal.png')"
+            /> all over this station. The syndicate isn't sending you unlimited gear to you so you get these instead.            <img
+              :src="require('@/assets/art/traitor/telecrystal.png')"
+            />
           </span>
         </template>
-        <template slot="New job?">
-          <span>The administration has requested the creation of a new job.</span>
-          <span>I have created a simple, minimalistic template with which to build off of.</span>
+        <template slot="Telecrystal?">
+          <span>You get twenty of them.</span>
+          <span>Spend them however you want in your uplink below, because you're not getting more.</span>
           <span>
-            In order to continue, you're going to have to write the rest of the
+            I know they are ugly but you have to use
             <img
-              :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
+              :src="require('@/assets/art/traitor/telecrystal.png')"
             />
-            <b>Code</b>.
+            rather than the normal pure red ones.
           </span>
         </template>
       </job-info>

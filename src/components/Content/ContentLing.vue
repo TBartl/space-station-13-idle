@@ -16,7 +16,7 @@
         title="MONKEY(413) the totally normal monkey chimpers..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
+          {name: 'Slug?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
@@ -24,7 +24,7 @@
            Ook?
           </span>
         </template>
-        <template slot="New job?">
+        <template slot="Slug">
           <span>Want to know what it feels like to be the best example your species could be?</span>
           <span>Just let that slug
                         <img
