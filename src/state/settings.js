@@ -4,6 +4,7 @@ const settings = {
 	namespaced: true,
 	state: {
 		showVirtualLevels: false,
+		showFullValues: false,
 		inventoryFullStop: true,
 		pocketsEmptyStop: false,
 		autoEatEnabled: true,
