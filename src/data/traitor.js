@@ -92,7 +92,21 @@ const TWOTC = {
 		time: 30,
 		xp: 10000,
 		requiredLevel: 10,
-		item: "deathRipley",
+		item: "totsuit1",
+		requiredItems: {
+			spendTC: 2
+		}
+	},
+	TwoConsume: {
+		time: 30,
+		xp: 10000,
+		requiredLevel: 10,
+		icon: require("@/assets/art/cooking/pasta1.png"),
+		items:
+		{
+			id: "foodPasta1",
+			count: 8888,
+		},
 		requiredItems: {
 			spendTC: 2
 		}
@@ -122,7 +136,21 @@ const THREETC = {
 		time: 30,
 		xp: 15000,
 		requiredLevel: 10,
-		item: "deathRipley",
+		item: "totsuit2",
+		requiredItems: {
+			spendTC: 3
+		}
+	},
+	ThreeConsume: {
+		time: 30,
+		xp: 10000,
+		requiredLevel: 10,
+        icon: require("@/assets/art/bartending/syndicatebomb.png"),
+		items:
+		{
+			id: "drinkSyndicateBomb",
+			count: 8888,
+		},
 		requiredItems: {
 			spendTC: 3
 		}
@@ -152,7 +180,21 @@ const FOURTC = {
 		time: 30,
 		xp: 20000,
 		requiredLevel: 10,
-		item: "deathRipley",
+		item: "totsuit3",
+		requiredItems: {
+			spendTC: 4
+		}
+	},
+	FourConsume: {
+		time: 30,
+		xp: 10000,
+		requiredLevel: 10,
+		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
+		items:
+		{
+			id: "slimeRainbow",
+			count: 888,
+		},
 		requiredItems: {
 			spendTC: 4
 		}
