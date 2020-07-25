@@ -480,66 +480,6 @@ const MENERGY = {
 	}
 }
 
-const MTOT = {
-	meleeBurn3T: {
-		name: "Energy Dagger",
-		sellPrice: 380,
-		icon: require("@/assets/art/combat/items/melee_e3_anim.gif"),
-		overlay: require("@/assets/art/combat/items/melee_e3_anim_overlay.gif"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: 30,
-			evasion: -4,
-			command: -2,
-			precision: 12,
-			attackSpeed: 2,
-			power: 14,
-			damageType: "burn"
-		},
-		requires: {
-			precision: 8
-		}
-	},
-	meleeBurn4T: {
-		name: "Energy Sword",
-		sellPrice: 580,
-		icon: require("@/assets/art/combat/items/melee_e4_animt.gif"),
-		overlay: require("@/assets/art/combat/items/melee_e4_overlay_animt.gif"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: 40,
-			evasion: -6,
-			command: -3,
-			precision: 16,
-			attackSpeed: 2,
-			power: 18,
-			damageType: "burn"
-		},
-		requires: {
-			precision: 18
-		}
-	},
-	meleeBurn5T: {
-		name: "Dual Energy Sword",
-		sellPrice: 780,
-		icon: require("@/assets/art/combat/items/melee_e5t_anim.gif"),
-		overlay: require("@/assets/art/combat/items/melee_e5t_overlay.gif"),
-		equipmentSlot: "hand",
-		stats: {
-			maxHealth: 50,
-			evasion: -7,
-			command: -4,
-			precision: 20,
-			attackSpeed: 23,
-			power: 14,
-			damageType: "burn"
-		},
-		requires: {
-			precision: 28
-		}
-	}
-}
-
 const MSHIELD = {
 	meleeShield1: {
 		name: "Handcrafted Shield",
@@ -1105,7 +1045,6 @@ const WEAPONS = {
 	...MCUT,
 	...MTOOLBOX,
 	...MENERGY,
-	...MTOT,
 	...MSHIELD,
 	...GENERGY,
 	...GBULLET
