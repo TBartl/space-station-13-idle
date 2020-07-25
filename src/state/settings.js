@@ -14,6 +14,9 @@ const settings = {
 		showVirtualLevels(state) {
 			return state.showVirtualLevels;
 		},
+		showFullValues(state) {
+			return state.showFullValues;
+		},
 		inventoryFullStop(state) {
 			return state.inventoryFullStop;
 		},
@@ -36,6 +39,9 @@ const settings = {
 	mutations: {
 		setShowVirtualLevels(state, val) {
 			state.showVirtualLevels = val;
+		},
+		showFullValues(state, val) {
+			state.showFullValues = val;
 		},
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
