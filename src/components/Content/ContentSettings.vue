@@ -80,6 +80,19 @@
                 for="showVirtualLevels"
               >Show Virtual Levels Beyond {{maxLevel}}</label>
             </div>
+            
+            <div class="custom-control custom-switch">
+              <input
+                v-model="showFullValues"
+                type="checkbox"
+                class="custom-control-input"
+                id="showFullValues"
+              />
+              <label
+                class="custom-control-label"
+                for="showVirtualLevels"
+              >Show Full Values for Item Counts (can look ugly with huge numbers)</label>
+            </div>
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
