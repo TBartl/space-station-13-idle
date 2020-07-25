@@ -90,8 +90,9 @@
               />
               <label
                 class="custom-control-label"
-                for="showVirtualLevels"
-              >Show Full Values for Item Counts (can look ugly with huge numbers)</label>
+                for="showFullValues"
+
+              >Display Full Item Counts in Jobs (may look ugly with huge numbers)</label>
             </div>
             <button
               type="button"
