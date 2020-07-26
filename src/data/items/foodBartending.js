@@ -70,7 +70,7 @@ export default {
 		},
         healAmount: 10
     },
-    drinkSpacecola: {
+    drinkSpaceCola: {
         name: "Space Cola",
         sellPrice: 1,
         icon: require("@/assets/art/bartending/spacecola.png"),

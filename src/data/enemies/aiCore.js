@@ -18,7 +18,11 @@ export default {
 				itemTable: [
 					{
 						id: 'criminal',
-						weight: 13
+						weight: 8
+					},
+					{
+						id: 'drinkAtomicBomb',
+						weight: 6
 					},
 					{
 						id: 'titanium',
