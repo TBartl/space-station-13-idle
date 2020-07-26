@@ -17,23 +17,27 @@ export default {
 				itemTable: [
 					{
 						id: 'foodEvasion1',
-						weight: 9
+						weight: 12
 					},
 					{
 						id: 'q_foodPower1',
-						weight: 7
+						weight: 12
+					},
+					{
+						id: 'drinkCream',
+						weight: 9
 					},
 					{
 						id: 'meleeToolbox3',
-						weight: 4
+						weight: 8
 					},
 					{
 						id: 'faceSec',
-						weight: 1
+						weight: 2
 					},
 					{
 						id: 'neckFanny1',
-						weight: 1
+						weight: 2
 					}
 				]
 			},

@@ -168,12 +168,28 @@ export default {
 						count: [1, 5]
 					},
 					{
-						id: "slimePink",
+						id: "gunBallistic4",
 						weight: 9,
 					},
 					{
-						id: "gunBallistic4",
-						weight: 5,
+						id: "drinkWhiskey",
+						weight: 2,
+					},
+					{
+						id: "drinkVodka",
+						weight: 2,
+					},
+					{
+						id: "drinkGin",
+						weight: 2,
+					},
+					{
+						id: "drinkRum",
+						weight: 2,
+					},
+					{
+						id: "drinkLemonJuice",
+						weight: 2,
 					},
 				]
 			}, {

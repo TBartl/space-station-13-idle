@@ -6,9 +6,9 @@ export default {
 			maxHealth: 400,
 			attackSpeed: 4.2,
 			precision: 86,
-			power: 86,
-			evasion: 86,
-			regen: 1,
+			power: 103,
+			evasion: 69,
+			regen: 2,
 			damageType: "brute",
 			burnProtection: 50
 		},
@@ -17,19 +17,19 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'criminal',
-						weight: 13
+						id: 'gunBallistic3',
+						weight: 12
 					},
 					{
-						id: 'titanium',
+						id: 'armorBrute5',
 						weight: 4
 					},
 					{
-						id: 'gunEnergy5',
+						id: 'neckFanny2',
 						weight: 2
 					},
 					{
-						id: 'slimeGold',
+						id: 'foot',
 						weight: 1
 					},
 				]
@@ -38,16 +38,8 @@ export default {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'spaceJunk',
-						weight: 14
-					},
-					{
-						id: 'armorJunk',
-						weight: 5
-					},
-					{
-						id: 'junk',
-						weight: 1
+						chance: 1,
+						item: "foodMeatZ"
 					}
 				]
 			}
@@ -59,49 +51,44 @@ export default {
 		stats: {
 			maxHealth: 410,
 			attackSpeed: 4.5,
-			precision: 87,
-			power: 88,
-			evasion: 88,
-			regen: 1,
+			precision: 94,
+			power: 96,
+			evasion: 73,
+			regen: 2,
 			damageType: "brute",
 			burnProtection: 50
 		},
 		itemTables: [
 			{
-				chance: .99,
+				chance: .5,
 				itemTable: [
 					{
-						id: 'titanium',
+						id: 'meleeBlunt9',
 						weight: 40
 					},
 					{
-						id: 'meleeSharp1',
+						id: 'drinkBeepskySmash',
 						weight: 37
 					},
 					{
-						id: 'criminal',
+						id: 'drinkTripleSec',
+						weight: 14
+					},
+					{
+						id: 'faceSecGlasses',
 						weight: 13
 					},
 					{
-						id: 'criminal',
-						count: [1, 2],
+						id: 'armorBrute3',
 						weight: 12
 					},
 					{
-						id: 'criminal',
-						count: [1, 3],
+						id: 'drinkIrishCB',
 						weight: 11
 					},
 					{
 						id: 'criminal',
-						count: [1, 4],
 						weight: 10
-					},
-
-					{
-						id: 'criminal',
-						count: [1, 99],
-						weight: 9
 					},
 				]
 			},
@@ -109,16 +96,8 @@ export default {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'diamond',
-						weight: 14
-					},
-					{
-						id: 'armorJunk',
-						weight: 5
-					},
-					{
-						id: 'bluespace',
-						weight: 1
+						chance: 1,
+						item: "foodMeatZ"
 					}
 				]
 			}
@@ -130,10 +109,10 @@ export default {
 		stats: {
 			maxHealth: 420,
 			attackSpeed: 5.6,
-			precision: 89,
+			precision: 104,
 			power: 90,
-			evasion: 90,
-			regen: 1,
+			evasion: 75,
+			regen: 2,
 			damageType: "burn",
 			burnProtection: 50
 		},
@@ -142,28 +121,25 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'ammoEnergy4',
-						count: [1, 3],
+						id: 'gunBallistic6',
 						weight: 9
 					},
 					{
-						id: 'ammoEnergy3',
-						count: [1, 3],
+						id: 'armorBurn4',
 						weight: 8
 					},
 					{
-						id: 'ammoEnergy2',
-						count: [1, 3],
+						id: 'ammoEnergy4',
+						count: [4, 8],
 						weight: 7
 					},
 					{
-						id: 'ammoEnergy1',
-						count: [4, 8],
+						id: 'drinkAntiFreeze',
+						count: [1, 3],
 						weight: 6
 					},
 					{
-						id: 'ammoEnergy4',
-						count: [8, 12],
+						id: 'armorBurn5',
 						weight: 2
 					},
 				]
@@ -172,16 +148,8 @@ export default {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'plasma',
-						weight: 14
-					},
-					{
-						id: 'junk',
-						weight: 5
-					},
-					{
-						id: 'uranium',
-						weight: 1
+						chance: 1,
+						item: "foodMeatZ"
 					}
 				]
 			}
@@ -193,10 +161,10 @@ export default {
 		stats: {
 			maxHealth: 430,
 			attackSpeed: 6,
-			precision: 91,
-			power: 91,
-			evasion: 91,
-			regen: 1,
+			precision: 87,
+			power: 89,
+			evasion: 97,
+			regen: 2,
 			damageType: "burn",
 			burnProtection: 50,
 		},
@@ -205,44 +173,34 @@ export default {
 				chance: 0.5,
 				itemTable: [
 					{
-						id: 'glass',
-						count: [1,7],
-						weight: 80
+						id: 'slimeRed',
+						weight: 20
 					},
 					{
-						id: 'gold',
-						count: [1,3],
-						weight: 32
+						id: 'slimeGreen',
+						weight: 20
 					},
 					{
-						id: 'power',
-						count: [50,250],
-						weight: 28
+						id: 'slimePink',
+						weight: 20
 					},
 					{
-						id: 'potionShitposting',
-						weight: 4
+						id: 'slimeGold',
+						weight: 20
 					},
 					{
-						id: 'boss1Parts',
-						weight: 1
-					}
+						id: 'pillSpacelube',
+						count: [50,75],
+						weight: 10
+					},
 				]
 			},
 			{
 				chance: 1,
 				itemTable: [
 					{
-						id: 'uranium',
-						weight: 14
-					},
-					{
-						id: 'spaceJunk',
-						weight: 5
-					},
-					{
-						id: 'bananium',
-						weight: 1
+						chance: 1,
+						item: "foodMeatZ"
 					}
 				]
 			}

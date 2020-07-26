@@ -245,6 +245,22 @@ export default {
 			evasion: 30
 		},
 	},
+	neckFanny2: {
+		name: "Zombie Fanny Pack",
+		sellPrice: 2500,
+		icon: require("@/assets/art/combat/items/cloak/neck_green.png"),
+		overlay: require("@/assets/art/combat/items/cloak/neck_green_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 10,
+			evasion: 0,
+			precision: 0,
+			regen: .2,
+		},
+		requires: {
+			evasion: 30
+		},
+	},
 	runeN1: {
 		name: "Manifest Rune",
 		sellPrice: 2500,

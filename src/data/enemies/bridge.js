@@ -21,16 +21,21 @@ export default {
 						weight: 7
 					},
 					{
+						id: 'drinkQuicky',
+						count: [1,3],
+						weight: 6
+					},
+					{
 						id: 'pillSpacedrugs',
-						weight: 4
+						weight: 5
 					},
 					{
 						id: 'meleeSharp5',
-						weight: 2
+						weight: 4
 					},
 					{
 						id: 'faceGas',
-						weight: 1
+						weight: 3
 					},
 				]
 			},
@@ -67,16 +72,21 @@ export default {
 						weight: 14
 					},
 					{
+						id: 'drinkGargleBlaster',
+						count: [1,3],
+						weight: 6
+					},
+					{
 						id: 'titanium',
-						weight: 3
+						weight: 4
 					},
 					{
 						id: 'meleeBlunt8',
-						weight: 2
+						weight: 3
 					},
 					{
 						id: 'slimeRainbow',
-						weight: 1
+						weight: 2
 					},
 				]
 			},
@@ -134,7 +144,11 @@ export default {
 					{
 						id: 'ammoEnergy3',
 						count: 4,
-						weight: 21
+						weight: 16
+					},
+					{
+						id: 'drinkLizardWine',
+						weight: 4
 					},
 					{
 						id: 'armorBrute4',

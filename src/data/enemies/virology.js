@@ -64,6 +64,10 @@ export default {
 						weight: 4
 					},
 					{
+						id: 'drinkWhiteRussian',
+						weight: 4
+					},
+					{
 						id: 'pillHappy',
 						count: [1, 10],
 						weight: 1
@@ -105,8 +109,11 @@ export default {
 					{
 						id: 'pillSpacelube',
 						weight: 1
-					}
-					,
+					},
+					{
+						id: 'drinkBlackRussian',
+						weight: 4
+					},
 					{
 						id: 'slimeBlack',
 						weight: 1

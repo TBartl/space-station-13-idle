@@ -132,7 +132,7 @@ const SLIME = {
         requiredItems: { slimeOrange: 1 }
     },
     synthCola: {
-        item: "drinkSpacecola",
+        item: "drinkSpaceCola",
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/spacecola.png"),
         time: 8,

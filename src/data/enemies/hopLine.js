@@ -46,7 +46,7 @@ export default {
 				itemTable: [
 					{
 						id: 'armorBrute1',
-						weight: 43
+						weight: 37
 					},
 					{
 						id: 'meleeToolbox2',
@@ -56,6 +56,14 @@ export default {
 						id: 'diamond',
 						count: [1, 10],
 						weight: 25
+					},
+					{
+						id: 'drinkAcidSpit',
+						weight: 6
+					},
+					{
+						id: 'diamond',
+						weight: 5
 					},
 				]
 			},
@@ -132,7 +140,7 @@ export default {
 				itemTable: [
 					{
 						id: 'plasma',
-						weight: 20
+						weight: 16
 					},
 					{
 						id: 'potatoBattery',
@@ -142,6 +150,14 @@ export default {
 					{
 						id: 'meleeBlunt5',
 						weight: 5
+					},
+					{
+						id: 'drinkScrewdriver',
+						weight: 3
+					},
+					{
+						id: 'drinkTequila',
+						weight: 3
 					},
 					{
 						id: 'potionFabrication',

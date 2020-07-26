@@ -17,11 +17,15 @@ export default {
 				itemTable: [
 					{
 						id: 'foot',
-						weight: 25
+						weight: 18
 					},
 					{
 						id: 'innocent',
 						weight: 14
+					},
+					{
+						id: 'drinkDoctorsDelight',
+						weight: 2
 					},
 					{
 						id: 'q_foodMeatA',
