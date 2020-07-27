@@ -56,12 +56,16 @@ export default {
 					{
 						id: 'oil',
 						count: [1,10],
-						weight: 29
+						weight: 22
 					},
 
 					{
 						id: 'burnJunk',
-						weight: 24
+						weight: 20
+					},
+					{
+						id: 'drinkB52',
+						weight: 20
 					},
 					{
 						id: 'armorBrute2',
@@ -73,6 +77,7 @@ export default {
 					},
 					{
 						id: 'wire',
+						count: [1,10],
 						weight: 1
 					}
 				]
@@ -102,20 +107,29 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 60
+						count: [1,10],
+						weight: 30
 					},
 					{
 						id: 'innocent',
-						weight: 34
+						weight: 24
 					},
 					{
 						id: 'meleeToolbox4',
-						weight: 33
+						weight: 23
+					},
+					{
+						id: 'drinkChangelingSting',
+						weight: 22
+					},
+					{
+						id: 'drinkSpaceCola',
+						weight: 21
 					},
 					{
 						id: 'titanium',
 						count: [1, 10],
-						weight: 27
+						weight: 20
 					}
 				]
 			},

@@ -129,6 +129,11 @@ export default {
 						count: [1, 5]
 					},
 					{
+						id: 'drinkWhiskeyCola',
+						weight: 30,
+						count: [1, 5]
+					},
+					{
 						id: 'innocent',
 						weight: 8,
 					},

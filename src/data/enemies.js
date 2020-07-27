@@ -12,6 +12,7 @@ import medical from "./enemies/medical.js";
 import science from "./enemies/science.js";
 import showroom from "./enemies/showroom.js";
 import virology from "./enemies/virology.js";
+import zombies from "./enemies/zombies.js";
 
 import boss10Rev from '@/data/enemies/boss10-rev';
 import boss20Security from '@/data/enemies/boss20-security';
@@ -50,6 +51,7 @@ const ENEMIES = {
 	...virology,
 	...science,
 	...aiCore,
+	...zombies,
 	...BOSS_ENEMIES
 }
 

@@ -58,6 +58,10 @@ export default {
 						weight: 6
 					},
 					{
+						id: 'drinkSilencer',
+						weight: 6
+					},
+					{
 						id: 'foodHuman2',
 						weight: 4
 					},
