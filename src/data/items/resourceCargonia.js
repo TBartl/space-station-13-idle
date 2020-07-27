@@ -1,12 +1,3 @@
 export default {
-	pushcrate: {
-		name: "Code",
-		sellPrice: -5,
-		icon: require("@/assets/art/combat/enemies/ai_anim.gif")
-	},
-	pullcrate: {
-		name: "Nar'sie's Favor",
-		sellPrice: -5,
-		icon: require("@/assets/art/combat/enemies/ai_anim.gif")
-	}
+//This is actually empty. I was going to do stuff with crates being moved but it didn't play out fun.
 }

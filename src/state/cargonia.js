@@ -46,13 +46,28 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				
 				// Apply potion
 				if (potionItemId == "potionCargonia") {
-					let originalItem = action.item;
-					delete action.item;
+					let originalItems = action.items;
+					if (!originalItems) continue;
+					if (originalItems.id != "money") {
+						action.preservePotion = true;
+						continue;
+					};
+					delete action.items;
+					// action.name = ITEMS[originalItem].name
 
-
-					let newDropTable = cloneDeep(potionDropTableCargonia);
-					newDropTable.unshift({ chance: 1, item: originalItem })
-					action.itemTables = newDropTable;
+					action.itemTables = [
+						{
+							chance: 1,
+							items: originalItems
+						},
+						{
+							chance: 1,
+							items: {
+								id: "power",
+								count: originalItems.count * 4
+							}
+						}
+					]
 				}
 			}
 			return actions;

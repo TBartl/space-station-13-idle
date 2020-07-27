@@ -5,7 +5,7 @@ export default {
 		icon: require("@/assets/art/combat/enemies/ai_anim.gif")
 	},
 	DNA: {
-		name: "Nar'sie's Favor",
+		name: "Polynucleotide Chains",
 		sellPrice: -5,
 		icon: require("@/assets/art/combat/enemies/ai_anim.gif")
 	}

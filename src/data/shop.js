@@ -175,7 +175,6 @@ const JOB_UNLOCKS = {
 		description: "Allows you to spend money for minerals and guns",
 		icon: require('@/assets/art/jobinfo/cargo_banner.png'),
 		requiredItems: {
-			money: 25000,
 			antag: 1
 		},
 		upgrade: "cargoniaUnlocked",
@@ -188,7 +187,6 @@ const JOB_UNLOCKS = {
 		description: "Allows you to spend use 20 special Telecrystals to kickstart your action.",
 		icon: require('@/assets/art/traitor/icon.png'),
 		requiredItems: {
-			money: 25000,
 			antag: 1
 		},
 		upgrade: "traitorUnlocked",
@@ -201,7 +199,6 @@ const JOB_UNLOCKS = {
 		description: "Allows you to sacrifice health for dark runes and minions",
 		icon: require("@/assets/art/cult/Sacrifice_rune.png"),
 		requiredItems: {
-			money: 25000,
 			antag: 1
 		},
 		upgrade: "cultUnlocked",
@@ -214,7 +211,6 @@ const JOB_UNLOCKS = {
 		description: "Allows you to shape meat into regenerative armor",
 		icon: require('@/assets/art/ling/icon.png'),
 		requiredItems: {
-			money: 25000,
 			antag: 1
 		},
 		upgrade: "lingUnlocked",
