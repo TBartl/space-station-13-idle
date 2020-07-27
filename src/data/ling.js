@@ -33,6 +33,7 @@ const ACTIONS_LINGAIM = {
 		requiredItems: {
 			foodMeatH: 1
 		},
+		healthCost: 3,
 		itemTables: [
 			{
 				chance: 1,

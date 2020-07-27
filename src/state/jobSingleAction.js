@@ -139,6 +139,10 @@ export default {
 					return;
 				}
 			}
+			
+			if (action.healthCost) {
+				dispatch("playerMob/getHit", action.healthCost, { root: true });
+			}
 
 			if (action.requiredItems) {
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
