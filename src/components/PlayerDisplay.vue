@@ -37,7 +37,7 @@
       v-for="(overlay, index) in playerOverlayIcons"
       :key="index"
       :src="overlay.icon"
-      :class="{'appear-in-back': overlay.appearInBack}"
+      :class="{'appear-in-back': overlay.appearInBack, 'blurry': overlay.blurry, 'rune': overlay.rune}"
     />
     <img v-if="companion && showEquipment" :src="companion.icon" alt class="companion-overlay" />
   </div>
@@ -75,10 +75,10 @@ export default {
       let jumpsuit =
         ITEMS[this.$store.getters["inventory/equipment"].jumpsuit.itemId];
       return jumpsuit ? jumpsuit.overlay : BASE_CLOTHING;
-		},
-		baseShoes() {
-			return BASE_SHOES;
-		},
+    },
+    baseShoes() {
+      return BASE_SHOES;
+    },
     hair() {
       let hairId = this.$store.getters["customization/hair"];
       return HAIR[hairId];
@@ -118,7 +118,9 @@ export default {
           if (item.equipmentSlot == "jumpsuit") continue;
           icons.push({
             icon: item.overlay,
-            appearInBack: item.overlayAppearInBack
+            appearInBack: item.overlayAppearInBack,
+            blurry: item.overlayBlurry,
+            rune: item.overlayRune
           });
         }
       }
@@ -157,6 +159,11 @@ export default {
 
 .appear-in-back {
   z-index: 0;
+}
+.blurry {
   filter: blur(3px);
+}
+.rune {
+  transform: translate(0px, 10px);
 }
 </style>

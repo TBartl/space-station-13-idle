@@ -525,6 +525,7 @@ Object.values(MECHS).forEach(mech => {
 	mech.equipmentSlot = "chest";
 	// mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
+	mech.overlayBlurry = true;
 	mech.overlay = mech.icon;
 	mech.requires.evasion = Math.trunc(mech.requires.fabrication / 5 * 3);
 	if (Object.values(mech.stats).length > 0) return;
@@ -540,6 +541,7 @@ Object.values(ASSAULTMECHS).forEach(assaultmech => {
 	assaultmech.equipmentSlot = "chest";
 	// assaultmech.liftsRestrictions= ["mech"];
 	assaultmech.overlayAppearInBack = true;
+	assaultmech.overlayBlurry = true;
 	assaultmech.overlay = assaultmech.icon;
 	assaultmech.requires.evasion = Math.trunc(assaultmech.requires.fabrication / 5 * 3);
 	if (Object.values(assaultmech.stats).length > 0) return;
