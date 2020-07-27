@@ -20,22 +20,32 @@
         ]"
       >
         <template slot="Back">
-          <span>
-           Ook?
-          </span>
+          <span>Ook?</span>
         </template>
         <template slot="Slug">
           <span>Want to know what it feels like to be the best example your species could be?</span>
-          <span>Just let that slug
-                        <img
-              :src="require('@/assets/art/ling/headcrab.png')"
-            />
-             into your body.</span>
           <span>
-           Any orifice will do, just don't bite down.
+            Just let that slug
+            <img :src="require('@/assets/art/ling/headcrab.png')" />
+            into your body.
           </span>
+          <span>Any orifice will do, just don't bite down.</span>
         </template>
       </job-info>
+
+      <div class="row food my-2">
+        <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+          <div class="content-block">
+            <progress-bar
+              class="mb-2 black-background"
+              :progress="health / maxHealth"
+              :text="`${Math.round(health)}/${maxHealth}`"
+              :customClass="'bg-danger'"
+            />
+            <food-panel />
+          </div>
+        </div>
+      </div>
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
@@ -69,10 +79,18 @@ import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
+import ProgressBar from "@/components/ProgressBar";
+import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader },
+  components: {
+    GenericAction,
+    ExperienceHeader,
+    PotionHeader,
+    ProgressBar,
+    FoodPanel
+  },
   computed: {
     jobId() {
       return "ling";
@@ -91,6 +109,12 @@ export default {
       }
 
       return toReturn;
+    },
+    health() {
+      return this.$store.getters["playerMob/health"];
+    },
+    maxHealth() {
+      return this.$store.getters["playerMob/stats"].maxHealth;
     }
   }
 };
