@@ -20,6 +20,11 @@
         v-if="action.failure"
       >{{action.failure.chance*100 | cleanNum}}% chance to fail and lose {{action.failure.damage}} health</p>
 
+      <p
+        class="failure text-center mt-1"
+        v-if="action.healthCost"
+      >Costs {{action.healthCost}} health</p>
+
       <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
 
       <div class="d-flex flex-row align-items-center mt-2">

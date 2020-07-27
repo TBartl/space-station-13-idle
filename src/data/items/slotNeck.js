@@ -266,6 +266,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Manifest_rune.png"),
 		overlay: require("@/assets/art/cult/Manifest_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 8,
@@ -282,6 +284,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Boil_rune.png"),
 		overlay: require("@/assets/art/cult/Boil_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 16,
@@ -298,6 +302,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Raisedead_rune.png"),
 		overlay: require("@/assets/art/cult/Raisedead_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 24,
@@ -314,6 +320,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Apocalypse.png"),
 		overlay: require("@/assets/art/cult/Apocalypse_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 32,
@@ -330,6 +338,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Rune_large.png"),
 		overlay: require("@/assets/art/cult/Rune_large_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 40,
@@ -346,6 +356,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Empower_rune.png"),
 		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 8,
@@ -363,6 +375,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Empower_rune.png"),
 		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 16,
@@ -380,6 +394,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Teleport_rune.png"),
 		overlay: require("@/assets/art/cult/Teleport_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 24,
@@ -396,6 +412,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Summon_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 32,
@@ -412,6 +430,8 @@ export default {
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Huge_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
+		overlayAppearInBack: true,
+		overlayRune: true,
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 40,
