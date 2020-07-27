@@ -131,8 +131,8 @@ const POTIONS = {
 	potionCargonia: {
 		name: "Cargonia Potion",
 		sellPrice: 66,
-		icon: require("@/assets/art/chemistry/brainjuice.png"),
-		description: "Increases the health cost and favor gained from sacrificing.",
+		icon: require("@/assets/art/chemistry/cargonia.png"),
+		description: "Whenever you get money from cargonia, also get that much power.",
 		potionJob: "cargonia",
 		potionCharges: 10
 	},

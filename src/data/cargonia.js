@@ -190,7 +190,7 @@ const SELLSTUFF = {
 		items:
 		{
 			id: "money",
-			count: 8,
+			count: 606,
 		},
 		requiredItems: {
 			innocent: 1
@@ -205,7 +205,7 @@ const SELLSTUFF = {
 		items:
 		{
 			id: "money",
-			count: 8,
+			count: 707,
 		},
 		requiredItems: {
 			criminal: 1
@@ -220,10 +220,10 @@ const SELLSTUFF = {
 		items:
 		{
 			id: "money",
-			count: 8,
+			count: 1010,
 		},
 		requiredItems: {
-			burnJunk: 1
+			burnJunk: 2001
 		}
 	},
 	fence4: {
@@ -235,7 +235,7 @@ const SELLSTUFF = {
 		items:
 		{
 			id: "money",
-			count: 8,
+			count: 1989,
 		},
 		requiredItems: {
 			q_foodPasta6: 1
