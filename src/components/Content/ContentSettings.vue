@@ -138,6 +138,15 @@
               </div>
               <div class="custom-control custom-switch">
                 <input
+                  v-model="unlockAllJobs"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="unlockAllJobs"
+                />
+                <label class="custom-control-label" for="unlockAllJobs">Unlock All Jobs</label>
+              </div>
+              <div class="custom-control custom-switch">
+                <input
                   v-model="infiniteChrono"
                   type="checkbox"
                   class="custom-control-input"
@@ -207,6 +216,14 @@ export default {
       },
       set(value) {
         this.$store.commit("cheats/setShowAllActions", value);
+      }
+    },
+    unlockAllJobs: {
+      get() {
+        return this.$store.getters["cheats/unlockAllJobs"];
+      },
+      set(value) {
+        this.$store.commit("cheats/setUnlockAllJobs", value);
       }
     },
     infiniteChrono: {

@@ -4,6 +4,7 @@ const cheats = {
 	namespaced: true,
 	state: {
 		showAllActions: false,
+		unlockAllJobs: false,
 		cheatsEnabled: false,
 		infiniteChrono: false,
 		extraChronoOptions: false
@@ -11,6 +12,9 @@ const cheats = {
 	getters: {
 		showAllActions(state) {
 			return state.showAllActions;
+		},
+		unlockAllJobs(state) {
+			return state.unlockAllJobs;
 		},
 		cheatsEnabled(state) {
 			return state.cheatsEnabled;
@@ -25,6 +29,9 @@ const cheats = {
 	mutations: {
 		setShowAllActions(state, val) {
 			state.showAllActions = val;
+		},
+		setUnlockAllJobs(state, val) {
+			state.unlockAllJobs = val;
 		},
 		enableCheats(state) {
 			state.cheatsEnabled = true;

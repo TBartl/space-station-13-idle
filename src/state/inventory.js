@@ -289,11 +289,10 @@ const inventory = {
 
 			if (purchase.upgrade) {
 				commit("upgrades/set", purchase.upgrade, { root: true });
-			} else {
-				let yieldedItems = acquireItemFrom(purchase);
-				for (let [itemId, count] of Object.entries(yieldedItems)) {
-					commit("changeItemCount", { itemId, count });
-				}
+			}
+			let yieldedItems = acquireItemFrom(purchase);
+			for (let [itemId, count] of Object.entries(yieldedItems)) {
+				commit("changeItemCount", { itemId, count });
 			}
 
 			if (purchase.onPurchase) {

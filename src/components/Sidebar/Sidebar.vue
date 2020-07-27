@@ -153,6 +153,8 @@ export default {
       }
     },
     checkJobLocked(job) {
+			if (this.$store.getters["cheats/unlockAllJobs"]) return false;
+			if (this.$store.getters[job.id + "/xp"]) return false;
       return this.$store.getters[job.id + "/locked"];
     }
   }
