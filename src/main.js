@@ -25,7 +25,7 @@ Vue.filter('stat', function (value) {
 })
 Vue.filter('aggressive', function (value) {
 	if (value == undefined) return 0;
-	if (value >= 1000 && !store.rootGetters["settings/showFullValues"]) {
+	if (value >= 1000 && !store.getters["settings/showFullValues"]) {
 		value = Math.min(Math.floor(value / 1000), 9);
 		return `>${value}k`;
 	}

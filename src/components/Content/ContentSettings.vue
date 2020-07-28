@@ -247,6 +247,14 @@ export default {
         this.$store.commit("settings/setShowVirtualLevels", value);
       }
     },
+	showFullValues: {
+      get() {
+        return this.$store.getters["settings/showFullValues"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowFullValues", value);
+      }
+    },
     inventoryFullStop: {
       get() {
         return this.$store.getters["settings/inventoryFullStop"];

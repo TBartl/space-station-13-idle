@@ -41,7 +41,7 @@ const settings = {
 		setShowVirtualLevels(state, val) {
 			state.showVirtualLevels = val;
 		},
-		showFullValues(state, val) {
+		setShowFullValues(state, val) {
 			state.showFullValues = val;
 		},
 		setInventoryFullStop(state, val) {
