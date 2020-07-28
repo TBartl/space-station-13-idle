@@ -352,10 +352,10 @@ export default {
 		},
 	},
 	runeB1: {
-		name: "Offer Rune",
+		name: "Sacrifice Rune",
 		sellPrice: 2500,
-		icon: require("@/assets/art/cult/Empower_rune.png"),
-		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
+		icon: require("@/assets/art/cult/Sacrifice_rune.png"),
+		overlay: require("@/assets/art/cult/Sacrifice_rune_overlay.png"),
 		overlayAppearInBack: true,
 		overlayRune: true,
 		equipmentSlot: "neck",

@@ -16,6 +16,7 @@
         title="Moffew the Quartermaster flutters..."
         :options="[
           {name: 'Back'},
+          {name: 'Join', icon: require('@/assets/art/jobinfo/cargonia.png'), iconClass:'mx--0'},
           {name: 'Money?', icon: require('@/assets/art/misc/coin.png'), iconClass:'mx--0'}
         ]"
       >
@@ -30,15 +31,28 @@
             />.
           </span>
         </template>
+        <template slot="Join">
+          <span>We're having a bit of an employeement dispute with Nanotrasen <img
+              :src="require('@/assets/art/jobinfo/nanotrasen.png')"
+            /> right now. If you want to prove what side you are on you'll need to prove it.</span>
+          <span>There are some <b>Flashes</b>            <img
+              :src="require('@/assets/art/shop/items/startcargonia.png')"
+            />
+            laying around in supply caches
+                        <img
+              :src="require('@/assets/art/shop/items/droppod.png')"
+            /> across the station. Get me one.
+          </span>
+        </template>
+
         <template slot="Money?">
           <span>I'm gonna pop some tags.</span>
           <span>Only got twenty dollars in my pocket.</span>
           <span>
             Wait you're still here? What are you doing go move freight!
             <img
-              :src="require('@/assets/art/shop/items/droppod.png')"
+              :src="require('@/assets/art/shop/items/hatcrate.png')"
             />
-            <b>NOW!</b>.
           </span>
         </template>
       </job-info>

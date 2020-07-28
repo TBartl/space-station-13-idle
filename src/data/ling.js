@@ -1,26 +1,13 @@
 const ACTIONS_LINGBASE = {
 	ling0: {
-		time: 60,
+		time: 800,
 		actionName: "INGEST",
 		name: "ALIEN ORGAN",
-		item: "foodMeatZ",
+		items: "lingPower0",
 		icon: require("@/assets/art/ling/headcrab.png"),
 		xp: 864,
+		requiredItems: { startLing: 1 },
 		requiredLevel: 1
-	},
-	ling0: {
-		time: 60,
-		item: "foodMeatZ",
-		icon: require("@/assets/art/ling/headcrab.png"),
-		xp: 864,
-		requiredLevel: 1
-	},
-	renounceLing: {
-		time: 1,
-		item: "antag",
-		icon: require("@/assets/art/ling/renounce.png"),
-		xp: -200000,
-		requiredLevel: 1,
 	},
 }
 const ACTIONS_LINGAIM = {
@@ -57,7 +44,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim2: {
 		time: 9,
-		name: "Enhanced Nerves",
+		name: "Leg Enhancements",
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"),
 		xp: 15,
 		requiredLevel: 17,
@@ -88,13 +75,34 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim3: {
 		time: 9,
-		item: "lingAim3",
+		name: "Enhanced Nerves",
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"),
 		xp: 21,
 		requiredLevel: 24,
 		requiredItems: {
-			foodMeatH: 3
-		}
+			foodMeatH: 3,
+			lingAim2: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingAim2",
+						weight: 75
+					},
+					{
+						id: "lingAim2",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingAim3",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingAim4: {
 		time: 9,
@@ -103,8 +111,29 @@ const ACTIONS_LINGAIM = {
 		xp: 28,
 		requiredLevel: 31,
 		requiredItems: {
-			foodMeatH: 4
-		}
+			foodMeatH: 4,
+			lingAim3: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingAim3",
+						weight: 75
+					},
+					{
+						id: "lingAim3",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingAim4",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingAim5: {
 		time: 9,
@@ -113,8 +142,29 @@ const ACTIONS_LINGAIM = {
 		xp: 34,
 		requiredLevel: 38,
 		requiredItems: {
-			foodMeatH: 5
-		}
+			foodMeatH: 5,
+			lingAim4: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingAim4",
+						weight: 75
+					},
+					{
+						id: "lingAim4",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingAim5",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingAim6: {
 		time: 9,
@@ -123,70 +173,216 @@ const ACTIONS_LINGAIM = {
 		xp: 40,
 		requiredLevel: 44,
 		requiredItems: {
-			foodMeatH: 6
-		}
+			foodMeatH: 6,
+			lingAim5: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingAim5",
+						weight: 75
+					},
+					{
+						id: "lingAim5",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingAim6",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 }
 const ACTIONS_LINGPOWER = {
 	lingPower0: {
 		time: 9,
-		item: "lingPower1",
+		name: "Reinforced Ribs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"),
 		xp: 10,
 		requiredLevel: 12,
 		requiredItems: {
 			foodMeatA: 1
-		}
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 75
+					},
+					{
+						id: "foodMeatA",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower1",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingPower1: {
 		time: 9,
-		item: "lingPower2",
+		name: "Reinforced Chest",
 		icon: require("@/assets/art/combat/items/chest/arm_lp2.png"),
 		xp: 17,
 		requiredLevel: 19,
 		requiredItems: {
-			foodMeatA: 2
-		}
+			foodMeatA: 2,
+			lingPower1: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingPower1",
+						weight: 75
+					},
+					{
+						id: "lingPower1",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower2",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingPower2: {
 		time: 9,
-		item: "lingPower3",
+		name: "Reinforced Core",
 		icon: require("@/assets/art/combat/items/chest/arm_lp3.png"),
 		xp: 23,
 		requiredLevel: 26,
 		requiredItems: {
-			foodMeatA: 3
-		}
+			foodMeatA: 3,
+			lingPower2: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingPower2",
+						weight: 75
+					},
+					{
+						id: "lingPower2",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower3",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingPower3: {
 		time: 9,
-		item: "lingPower4",
+		name: "Reinforced Torso",
 		icon: require("@/assets/art/combat/items/chest/arm_lp4.png"),
 		xp: 29,
 		requiredLevel: 33,
 		requiredItems: {
-			foodMeatA: 4
-		}
+			foodMeatA: 4,
+			lingPower3: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingPower3",
+						weight: 75
+					},
+					{
+						id: "lingPower3",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower4",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingPower4: {
 		time: 9,
-		item: "lingPower5",
+		name: "Reinforced Legs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp5.png"),
 		xp: 36,
 		requiredLevel: 40,
 		requiredItems: {
-			foodMeatA: 5
-		}
+			foodMeatA: 5,
+			lingPower4: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingPower4",
+						weight: 75
+					},
+					{
+						id: "lingPower4",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower5",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 	lingPower5: {
 		time: 9,
-		item: "lingPower6",
+		name: "Reinforced Body",
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"),
 		xp: 41,
 		requiredLevel: 46,
 		requiredItems: {
-			foodMeatA: 6
-		}
+			foodMeatA: 6,
+			lingPower5: 1
+		},
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "lingPower5",
+						weight: 75
+					},
+					{
+						id: "lingPower5",
+						count: 2,
+						weight: 20
+					},
+					{
+						id: "lingPower6",
+						weight: 5
+					}
+				]
+			},
+		]
 	},
 }
 const ACTIONS_LINGFACE = {

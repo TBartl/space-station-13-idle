@@ -4,12 +4,23 @@ export default {
 		icon: require("@/assets/art/shop/items/antag_anim.gif")
 	},
 	startCargonia: {
-		name: "Black Operations Communicator",
-		icon: require("@/assets/art/shop/items/startcargonia.png")
+		name: "Handheld Flash",
+		sellPrice: 33,
+		icon: require("@/assets/art/shop/items/startcargonia.png"),
+		description: "Depending on the timeline, someone in cargo may want this.",
+		equipmentSlot: "pocket",
+		stats: {
+			luck: 50,
+		}
 	},
 	startCult: {
 		name: "Black Operations Communicator",
-		icon: require("@/assets/art/shop/items/startcult.png")
+		icon: require("@/assets/art/shop/items/startcult.png"),
+		description: "Depending on the timeline, someone in cargo may want this.",
+		equipmentSlot: "pocket",
+		stats: {
+			luck: 100,
+		}
 	},
 	startLing: {
 		name: "Black Operations Communicator",
@@ -284,7 +295,7 @@ export default {
 			{
 				id: 'junk',
 				count: [1,25],
-				weight: 38
+				weight: 20
 			},
 			{
 				id: 'slimeBluespace',
@@ -296,6 +307,11 @@ export default {
 				weight: 13
 			},
 			{
+				id: 'startCargonia',
+				count: [1,10],
+				weight: 12
+			},
+						{
 				id: 'gunEnergy2',
 				weight: 11
 			},

@@ -9,13 +9,6 @@ const ONETC = {
 		requiredLevel: 1,
 		requiredItems: { startCargonia: 1 }
 	},
-	renounceCargonia: {
-		time: 1,
-		item: "antag",
-		icon: require("@/assets/art/cargonia/renounce_anim.gif"),
-		xp: -200000,
-		requiredLevel: 1,
-	},
 	OneSword: {
 		time: 30,
 		xp: 5000,

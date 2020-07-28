@@ -8,7 +8,7 @@ export const ACTIONS = {
 		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 96
+			power: 94
 		}
 	},
 	postDeadchat: {
@@ -20,7 +20,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
-			power: 96
+			power: 94
 		}
 	},
 	Cocacolagua: {
@@ -32,7 +32,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 49,
 		requiredItems: {
-			power: 96
+			power: 94
 		}
 	},
 	Uristqwerty: {
@@ -44,7 +44,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 48,
 		requiredItems: {
-			power: 96
+			power: 94
 		},
 	},
 	SkyCinnamon: {
@@ -56,7 +56,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 47,
 		requiredItems: {
-			power: 96
+			power: 94
 		},
 	},
 	Kolbaska: {
@@ -68,7 +68,31 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 46,
 		requiredItems: {
-			power: 96
+			power: 94
+		},
+	},
+	Kaostico: {
+		time: 1,
+		name: "Kaostico's Bot",
+		item: "titanium",
+		icon: require("@/assets/art/shitposting/brobot.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 45,
+		requiredItems: {
+			power: 94
+		},
+	},
+	Dopamine: {
+		time: 1,
+		name: "Dopamine's Growth",
+		item: "plantSeed",
+		icon: require("@/assets/art/shitposting/dopamine.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 44,
+		requiredItems: {
+			power: 94
 		},
 	},
 	wut: {

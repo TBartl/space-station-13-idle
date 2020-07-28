@@ -391,7 +391,7 @@ const ANTAG_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Black Operations Efficiency",
-		description: `Increases mining speed by +${ANTAG_UPGRADE_PERCENT * 100}%`, // Expanded below
+		description: `Increases the speed of ALL Black Operations by +${ANTAG_UPGRADE_PERCENT * 100}%`, // Expanded below
 		icon: require('@/assets/art/debug/B.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { validhunting: (i + 1) * 10 },

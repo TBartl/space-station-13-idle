@@ -64,7 +64,7 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							chance: 1,
 							items: {
 								id: "power",
-								count: originalItems.count * 4
+								count: originalItems.count
 							}
 						}
 					]

@@ -16,7 +16,8 @@
         title="MONKEY(413) the totally normal monkey chimpers..."
         :options="[
           {name: 'Back'},
-          {name: 'Slug?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
+          {name: 'Slug?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'},
+          {name: 'Cultivate', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
@@ -30,6 +31,15 @@
             into your body.
           </span>
           <span>Any orifice will do, just don't bite down.</span>
+        </template>
+        <template slot="Cultivate">
+          <span>Find your center and Focus inward.</span>
+          <span>
+            You can use foreign biomatter
+            <img :src="require('@/assets/art/ling/headcrab.png')" />
+            to assist you. Focus on the tone of the muscle fiber and the twitch of your nerves.
+          </span>
+          <span>It will take a while but you can eventually break through to the next level of physical perfection. Don't be discouraged if you don't get it right away.</span>
         </template>
       </job-info>
 
