@@ -806,7 +806,7 @@ const GBULLET = {
 			precision: 1
 		},
 		requires: {
-			rangedPower: 50
+			rangedPower: 1
 		}
 	},
 	gunRifle2: {
@@ -823,7 +823,7 @@ const GBULLET = {
 			precision: 2
 		},
 		requires: {
-			rangedPower: 50
+			rangedPower: 10
 		}
 	},
 	gunRifle3: {
@@ -840,7 +840,7 @@ const GBULLET = {
 			precision: 3
 		},
 		requires: {
-			rangedPower: 50
+			rangedPower: 20
 		}
 	},
 	gunRifle4: {
@@ -857,7 +857,7 @@ const GBULLET = {
 			precision: 4
 		},
 		requires: {
-			rangedPower: 50
+			rangedPower: 30
 		}
 	},
 	gunRifle5: {
@@ -874,7 +874,7 @@ const GBULLET = {
 			precision: 5
 		},
 		requires: {
-			rangedPower: 50
+			rangedPower: 40
 		}
 	},
 	gunRifle6: {

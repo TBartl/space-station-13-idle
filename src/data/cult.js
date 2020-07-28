@@ -5,22 +5,16 @@ const ACTIONS_CULTBASE = {
 		item: "unholyfavor",
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 864,
-		requiredLevel: 1,
+		requiredLevel: 800,
 		requiredItems: { startCult: 1 }
 	},
 	blood2: {
-		time: 1,
+		time: 10,
 		item: "unholyfavor",
+		healthCost: 10,
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 5,
 		requiredLevel: 10,
-	},
-	renounceCult: {
-		time: 1,
-		item: "antag",
-		icon: require("@/assets/art/cult/bible.png"),
-		xp: -200000,
-		requiredLevel: 1,
 	},
 }
 
@@ -37,28 +31,28 @@ const ACTIONS_NRUNE = {
 		item: "runeN2",
 		xp: 22,
 		requiredLevel: 21,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 2 }
 	},
 	runeN3: {
 		time: 10,
 		item: "runeN3",
 		xp: 32,
 		requiredLevel: 31,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 4 }
 	},
 	runeN4: {
 		time: 10,
 		item: "runeN4",
 		xp: 42,
 		requiredLevel: 41,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 8 }
 	},
 	runeN5: {
 		time: 10,
 		item: "runeN5",
 		xp: 50,
 		requiredLevel: 50,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 16 }
 	},
 }
 const ACTIONS_BRUNE = {
@@ -74,28 +68,28 @@ const ACTIONS_BRUNE = {
 		item: "runeB2",
 		xp: 22,
 		requiredLevel: 22,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 2 }
 	},
 	runeB3: {
 		time: 10,
 		item: "runeB3",
 		xp: 32,
 		requiredLevel: 32,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 4 }
 	},
 	runeB4: {
 		time: 10,
 		item: "runeB4",
 		xp: 42,
 		requiredLevel: 42,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 8 }
 	},
 	runeB5: {
 		time: 10,
 		item: "runeB5",
 		xp: 50,
 		requiredLevel: 50,
-		requiredItems: { unholyfavor: 1 }
+		requiredItems: { unholyfavor: 16 }
 	},
 }
 const ACTIONS_CULTPANION = {
@@ -111,35 +105,35 @@ const ACTIONS_CULTPANION = {
 		item: "companionDogcult",
 		xp: 430,
 		requiredLevel: 23,
-		requiredItems: { unholyfavor: 1 , companionDog: 1 }
+		requiredItems: { unholyfavor: 2 , companionDog: 1 }
 	},
 	sac3: {
 		time: 20,
 		item: "companionCatcult",
 		xp: 430,
 		requiredLevel: 23,
-		requiredItems: { unholyfavor: 1 , companionCat: 1 }
+		requiredItems: { unholyfavor: 4 , companionCat: 1 }
 	},
 	sac4: {
 		time: 20,
 		item: "companionFoxcult",
 		xp: 63,
 		requiredLevel: 33,
-		requiredItems: { unholyfavor: 1 , companionFox: 1 }
+		requiredItems: { unholyfavor: 8 , companionFox: 1 }
 	},
 	sac5: {
 		time: 20,
 		item: "companionGoatcult",
 		xp: 830,
 		requiredLevel: 43,
-		requiredItems: { unholyfavor: 1, companionGoat: 1  }
+		requiredItems: { unholyfavor: 16, companionGoat: 1  }
 	},
 	sac6: {
 		time: 20,
 		item: "companionBeecult",
 		xp: 500,
 		requiredLevel: 50,
-		requiredItems: { unholyfavor: 1, companionBee: 1  }
+		requiredItems: { unholyfavor: 32, companionBee: 1  }
 	},
 }
 

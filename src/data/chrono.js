@@ -43,9 +43,9 @@ const BASE_PURCHASES = {
 			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time Gained!`, duration: 2500 });
 		}
 	},
-	antagRoll: {
+	antagRoll1: {
 		name: "Antag Roll",
-		description: "Aquire aid from a random nefarious faction.",
+		description: "Aquire aid from a nefarious faction.",
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 10
@@ -54,12 +54,65 @@ const BASE_PURCHASES = {
 			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
-			id: "money",
-			count: 100000
+			id: "antag",
 		},
 		upgrade: "antagRoll",
 		requiredUpgrades: {
 			antagRoll: 0
+		}
+	},
+	antagRoll2: {
+		name: "Antag Roll",
+		description: "Aquire aid from a nefarious faction.",
+		icon: require('@/assets/art/chrono/timebank.png'),
+		requiredItems: {
+			bluetime: 50
+		},
+		onPurchase(store) {
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
+		},
+		items: {
+			id: "antag",
+		},
+		upgrade: "antagRoll",
+		requiredUpgrades: {
+			antagRoll: 1
+		}
+	},
+	antagRoll3: {
+		name: "Antag Roll",
+		description: "Aquire aid from a nefarious faction.",
+		icon: require('@/assets/art/chrono/timebank.png'),
+		requiredItems: {
+			bluetime: 100
+		},
+		onPurchase(store) {
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
+		},
+		items: {
+			id: "antag",
+		},
+		upgrade: "antagRoll",
+		requiredUpgrades: {
+			antagRoll: 2
+		}
+	},
+	antagRoll4: {
+		name: "Antag Roll",
+		description: "Aquire aid from a nefarious faction.",
+		icon: require('@/assets/art/chrono/timebank.png'),
+		requiredItems: {
+			bluetime: 200
+		},
+		onPurchase(store) {
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
+		},
+		items: {
+			id: "antag",
+		},
+		upgrade: "antagRoll",
+		requiredUpgrades: {
+			antagRoll: 3
 		}
 	},
 	timeBankSize1: {
@@ -162,7 +215,7 @@ ALL_JOBS.forEach(job => {
 export const SECTIONS = [
 	{
 		name: "Chrono Exchange",
-		purchases: ["chronoToCash", "chronoToTime","antagRoll"]
+		purchases: ["chronoToCash", "chronoToTime","antagRoll1","antagRoll2","antagRoll3","antagRoll4"]
 	},
 	{
 		name: "Time Bank Upgrades",

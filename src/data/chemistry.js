@@ -158,6 +158,14 @@ const POTIONS = {
 			pillSpacelube: 1
 		}
 	},
+	synthPotionCargonia: {
+		item: "potionCargonia",
+		time: 2,
+		requiredItems: {
+			potionEngineering: 1,
+			water: 6
+		}
+	},
 	synthPotionShitposting: {
 		item: "potionShitposting",
 		time: 2,
