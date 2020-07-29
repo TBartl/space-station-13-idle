@@ -353,7 +353,7 @@ const LINGAIM = {
 	lingAim1: {
 		name: "Core Enhancements",
 		equipmentSlot: "chest",
-		sellPrice: 181,
+		sellPrice: 3215,
 		icon: require("@/assets/art/combat/items/chest/arm_la1.png"), overlay: require("@/assets/art/combat/items/chest/arm_la1_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -365,7 +365,7 @@ const LINGAIM = {
 	lingAim2: {
 		name: "Enhanced Nerves",
 		equipmentSlot: "chest",
-		sellPrice: 308,
+		sellPrice: 6250,
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"), overlay: require("@/assets/art/combat/items/chest/arm_la2_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -377,7 +377,7 @@ const LINGAIM = {
 	lingAim3: {
 		name: "Leg Enhancements",
 		equipmentSlot: "chest",
-		sellPrice: 435,
+		sellPrice: 9375,
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"), overlay: require("@/assets/art/combat/items/chest/arm_la3_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -389,7 +389,7 @@ const LINGAIM = {
 	lingAim4: {
 		name: "Enhanced Reactions",
 		equipmentSlot: "chest",
-		sellPrice: 562,
+		sellPrice: 12500,
 		icon: require("@/assets/art/combat/items/chest/arm_la4.png"), overlay: require("@/assets/art/combat/items/chest/arm_la4_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -404,7 +404,7 @@ const LINGAIM = {
 		sellPrice: 689,
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"), overlay: require("@/assets/art/combat/items/chest/arm_la5_overlay.png"),
 		stats: {
-			maxHealth: 150,
+			maxHealth: 15625,
 		},
 		requires: {
 			command: 40
@@ -413,7 +413,7 @@ const LINGAIM = {
 	lingAim6: {
 		name: "Enhanced Flesh",
 		equipmentSlot: "chest",
-		sellPrice: 798,
+		sellPrice: 18750,
 		icon: require("@/assets/art/combat/items/chest/arm_la6.png"), overlay: require("@/assets/art/combat/items/chest/arm_la6_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -428,7 +428,7 @@ const LINGPOWER = {
 	lingPower1: {
 		name: "Reinforced Ribs",
 		equipmentSlot: "chest",
-		sellPrice: 253,
+		sellPrice: 3125,
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp1_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -440,7 +440,7 @@ const LINGPOWER = {
 	lingPower2: {
 		name: "Reinforced Chest",
 		equipmentSlot: "chest",
-		sellPrice: 344,
+		sellPrice: 6250,
 		icon: require("@/assets/art/combat/items/chest/arm_lp2.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp2_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -452,7 +452,7 @@ const LINGPOWER = {
 	lingPower3: {
 		name: "Reinforced Core",
 		equipmentSlot: "chest",
-		sellPrice: 507,
+		sellPrice: 9375,
 		icon: require("@/assets/art/combat/items/chest/arm_lp3.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp3_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -464,7 +464,7 @@ const LINGPOWER = {
 	lingPower4: {
 		name: "Reinforced Torso",
 		equipmentSlot: "chest",
-		sellPrice: 598,
+		sellPrice: 12500,
 		icon: require("@/assets/art/combat/items/chest/arm_lp4.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp4_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -476,7 +476,7 @@ const LINGPOWER = {
 	lingPower5: {
 		name: "Reinforced Legs",
 		equipmentSlot: "chest",
-		sellPrice: 725,
+		sellPrice: 15625,
 		icon: require("@/assets/art/combat/items/chest/arm_lp5.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp5_overlay.png"),
 		stats: {
 			maxHealth: 150,
@@ -491,7 +491,7 @@ const LINGPOWER = {
 		sellPrice: 834,
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp6_overlay.png"),
 		stats: {
-			maxHealth: 150,
+			maxHealth: 18750,
 		},
 		requires: {
 			command: 50

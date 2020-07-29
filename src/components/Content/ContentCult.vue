@@ -16,7 +16,7 @@
         title="A VOICE whispers..."
         :options="[
           {name: 'Back'},
-          {name: 'New job?', icon: require('@/assets/art/cult/Rune_large.png'), iconClass:'mx--0'}
+          {name: 'Join', icon: require('@/assets/art/cult/Rune_large.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
@@ -24,7 +24,7 @@
             I can feel it. The veil here is weak. Continue to weaken it (blood icon) and I will grant you my favor (rune picture) and loyal minions (picture of artificer)
           </span>
         </template>
-        <template slot="New job?">
+        <template slot="Join">
           <span>The administration has requested the creation of a new job.</span>
           <span>I have created a simple, minimalistic template with which to build off of.</span>
           <span>

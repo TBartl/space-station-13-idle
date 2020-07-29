@@ -1,18 +1,8 @@
 const ONETC = {
-	hailCargonia1: {
-		time: 1,
-		actionName: "HAIL",
-		name: "Cargonia",
-		item: "supplyCrate",
-		icon: require("@/assets/art/jobinfo/cargo_banner.png"),
-		xp: 1043,
-		requiredLevel: 1,
-		requiredItems: { startCargonia: 1 }
-	},
 	OneSword: {
 		time: 30,
-		xp: 5000,
-		requiredLevel: 10,
+		xp: 5025,
+		requiredLevel: 1,
 		item: "jumpsuitSecurity",
 		requiredItems: {
 			spendTC: 1
@@ -20,8 +10,8 @@ const ONETC = {
 	},
 	METH: {
 		time: 30,
-		xp: 5000,
-		requiredLevel: 10,
+		xp: 5025,
+		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/pill1.png"),
 		items:
 		{
@@ -34,8 +24,8 @@ const ONETC = {
 	},
 	BULLET: {
 		time: 30,
-		xp: 5000,
-		requiredLevel: 10,
+		xp: 5025,
+		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
 		items:
 		{
@@ -48,8 +38,8 @@ const ONETC = {
 	},
 	CELL: {
 		time: 30,
-		xp: 18,
-		requiredLevel: 10,
+		xp: 5025,
+		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
 		items:
 		{
@@ -65,8 +55,8 @@ const ONETC = {
 const TWOTC = {
 	TwoJump: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 10050,
+		requiredLevel: 1,
 		item: "jumpsuitSecurity",
 		requiredItems: {
 			spendTC: 2
@@ -74,8 +64,8 @@ const TWOTC = {
 	},
 	TwoSword: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 10050,
+		requiredLevel: 1,
 		item: "meleeBurn3T",
 		requiredItems: {
 			spendTC: 2
@@ -83,8 +73,8 @@ const TWOTC = {
 	},
 	TwoSuit: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 10050,
+		requiredLevel: 1,
 		item: "totsuit1",
 		requiredItems: {
 			spendTC: 2
@@ -92,8 +82,8 @@ const TWOTC = {
 	},
 	TwoConsume: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 10050,
+		requiredLevel: 1,
 		icon: require("@/assets/art/cooking/pasta1.png"),
 		items:
 		{
@@ -109,7 +99,7 @@ const TWOTC = {
 const THREETC = {
 	ThreeJump: {
 		time: 30,
-		xp: 15000,
+		xp: 15075,
 		requiredLevel: 10,
 		item: "jumpsuitChameleon",
 		requiredItems: {
@@ -118,8 +108,8 @@ const THREETC = {
 	},
 	ThreeSword: {
 		time: 30,
-		xp: 15000,
-		requiredLevel: 10,
+		xp: 15075,
+		requiredLevel: 1,
 		item: "meleeBurn4T",
 		requiredItems: {
 			spendTC: 3
@@ -127,8 +117,8 @@ const THREETC = {
 	},
 	ThreeSuit: {
 		time: 30,
-		xp: 15000,
-		requiredLevel: 10,
+		xp: 15075,
+		requiredLevel: 1,
 		item: "totsuit2",
 		requiredItems: {
 			spendTC: 3
@@ -136,8 +126,8 @@ const THREETC = {
 	},
 	ThreeConsume: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 15075,
+		requiredLevel: 1,
         icon: require("@/assets/art/bartending/syndicatebomb.png"),
 		items:
 		{
@@ -153,8 +143,8 @@ const THREETC = {
 const FOURTC = {
 	FourJump: {
 		time: 30,
-		xp: 20000,
-		requiredLevel: 10,
+		xp: 20100,
+		requiredLevel: 1,
 		item: "jumpsuitTactical",
 		requiredItems: {
 			spendTC: 4
@@ -162,8 +152,8 @@ const FOURTC = {
 	},
 	FourSword: {
 		time: 30,
-		xp: 20000,
-		requiredLevel: 10,
+		xp: 20100,
+		requiredLevel: 1,
 		item: "meleeBurn5T",
 		requiredItems: {
 			spendTC: 4
@@ -171,8 +161,8 @@ const FOURTC = {
 	},
 	FourSuit: {
 		time: 30,
-		xp: 20000,
-		requiredLevel: 10,
+		xp: 20100,
+		requiredLevel: 1,
 		item: "totsuit3",
 		requiredItems: {
 			spendTC: 4
@@ -180,8 +170,8 @@ const FOURTC = {
 	},
 	FourConsume: {
 		time: 30,
-		xp: 10000,
-		requiredLevel: 10,
+		xp: 20100,
+		requiredLevel: 1,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
 		items:
 		{

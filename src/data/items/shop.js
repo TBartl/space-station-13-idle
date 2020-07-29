@@ -7,23 +7,40 @@ export default {
 		name: "Handheld Flash",
 		sellPrice: 33,
 		icon: require("@/assets/art/shop/items/startcargonia.png"),
-		description: "Depending on the timeline, someone in cargo may want this.",
+		description: "Depending on the timeline, you can use this to join cargonia.",
 		equipmentSlot: "pocket",
 		stats: {
 			luck: 50,
 		}
 	},
 	startCult: {
-		name: "Black Operations Communicator",
+		name: "Cursed Touch",
 		icon: require("@/assets/art/shop/items/startcult.png"),
-		description: "Depending on the timeline, someone in cargo may want this.",
-		equipmentSlot: "pocket",
+		overlay: require("@/assets/art/shop/items/startcult_overlay.png"),
+		description: "Depending on the timeline, you can use this to join a cult.",
+		sellPrice: 30,
+		overlayAppearInBack: true,
+		overlayRune: true,
+		equipmentSlot: "neck",
 		stats: {
-			luck: 100,
-		}
+			maxHealth: 10,
+			regen: -.2,
+			protection: 1,
+			evasion: 1,
+			precision: 1,
+			power: 1,
+			luck: 1,
+			command: 1
+		},
+		requires: {
+			evasion: 1
+		},
 	},
 	startLing: {
-		name: "Black Operations Communicator",
+		name: "Harmless Red Slug",
+		description: "Depending on the timeline, you can use this to become a changeling.",
+		sellPrice: 50000,
+		heal: -200,
 		icon: require("@/assets/art/shop/items/startling.png")
 	},
 	money: {
@@ -347,21 +364,26 @@ export default {
 			weight: 5
 		},
 		{
+			id: 'startLing',
+			weight: 5
+		},
+		{
 			id: 'jumpsuitSecurity',
 			weight: 5
 		},
 		{
+			id: 'meleeBurn2',
+			weight: 4
+		},
+		{
 			id: 'armorSpecial1',
-			weight: 1
+			weight: 3
 		},
 		{
 			id: 'meleeBlunt9',
 			weight: 1
 		},
-		{
-			id: 'meleeBurn2',
-			weight: 1
-		},
+
 	]
 	},
 	lavaCrate: {

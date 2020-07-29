@@ -33,7 +33,7 @@
         </template>
         <template slot="Join">
           <span>We're having a bit of an employeement dispute with Nanotrasen <img
-              :src="require('@/assets/art/jobinfo/nanotrasen.png')"
+              :src="require('@/assets/art/misc/logo-square.png')"
             /> right now. If you want to prove what side you are on you'll need to prove it.</span>
           <span>There are some <b>Flashes</b>            <img
               :src="require('@/assets/art/shop/items/startcargonia.png')"

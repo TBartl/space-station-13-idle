@@ -77,6 +77,10 @@ export default {
 						weight: 5
 					},
 					{
+						id: 'startCult',
+						weight: 4
+					},
+					{
 						id: 'meleeBlunt3',
 						weight: .5
 					},
