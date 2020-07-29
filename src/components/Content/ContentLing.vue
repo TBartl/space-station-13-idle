@@ -16,30 +16,37 @@
         title="MONKEY(413) the totally normal monkey chimpers..."
         :options="[
           {name: 'Back'},
-          {name: 'Slug?', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'},
-          {name: 'Cultivate', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
+          {name: 'Ook?', icon: require('@/assets/art/jobinfo/ling_anim.gif'), iconClass:'mx--0'},
+          {name: 'Cultivate', icon: require('@/assets/art/jobinfo/heart_anim.gif'), iconClass:'mx--0'},
+          {name: 'Parasite', icon: require('@/assets/art/ling/headcrab.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>Ook?</span>
         </template>
-        <template slot="Slug">
-          <span>Want to know what it feels like to be the best example your species could be?</span>
+        <template slot="Ook?">
+          <span>Not convinced huh? You want ultimate control over your body too? All it takes is some cultivation<img :src="require('@/assets/art/jobinfo/heart_anim.gif')" />, and one tiny alien parasite.           <img :src="require('@/assets/art/ling/headcrab.png')" /></span>
           <span>
-            Just let that slug
-            <img :src="require('@/assets/art/ling/headcrab.png')" />
-            into your body.
+           You can let it in you however you want, but I would advise the mouth or anus. I'd advise you pick one and just go for it. Don't start in one place then give up halfway. You'll regret it.
           </span>
-          <span>Any orifice will do, just don't bite down.</span>
         </template>
         <template slot="Cultivate">
           <span>Find your center and Focus inward.</span>
           <span>
             You can use foreign biomatter
-            <img :src="require('@/assets/art/ling/headcrab.png')" />
+            <img :src="require('@/assets/art/cooking/meatAnimal.png')" />
             to assist you. Focus on the tone of the muscle fiber and the twitch of your nerves.
           </span>
           <span>It will take a while but you can eventually break through to the next level of physical perfection. Don't be discouraged if you don't get it right away.</span>
+        </template>
+                <template slot="Parasite">
+          <span>They are a little red slug, about the size of your forearm.</span>
+          <span>
+            Security tends to keep a pretty tight lid. They are worth alot of money to the right buyer.
+            <img :src="require('@/assets/art/shop/items/seccrate.png')" />
+            on them.
+          </span>
+          <span>Just keep checking crates until you find one, and remember <B>DON'T EAT IT!</B> </span>
         </template>
       </job-info>
 

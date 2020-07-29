@@ -8,7 +8,7 @@ export const ACTIONS = {
 		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 94
+			power: 93
 		}
 	},
 	postDeadchat: {
@@ -20,7 +20,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
-			power: 94
+			power: 93
 		}
 	},
 	Cocacolagua: {
@@ -32,7 +32,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 49,
 		requiredItems: {
-			power: 94
+			power: 93
 		}
 	},
 	Uristqwerty: {
@@ -44,7 +44,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 48,
 		requiredItems: {
-			power: 94
+			power: 93
 		},
 	},
 	SkyCinnamon: {
@@ -56,7 +56,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 47,
 		requiredItems: {
-			power: 94
+			power: 93
 		},
 	},
 	Kolbaska: {
@@ -68,7 +68,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 46,
 		requiredItems: {
-			power: 94
+			power: 93
 		},
 	},
 	Kaostico: {
@@ -80,7 +80,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 45,
 		requiredItems: {
-			power: 94
+			power: 93
 		},
 	},
 	Dopamine: {
@@ -92,7 +92,19 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 44,
 		requiredItems: {
-			power: 94
+			power: 93
+		},
+	},
+	Boris: {
+		time: 1,
+		name: "Boris's Pain",
+		item: "drinkVodka",
+		icon: require("@/assets/art/shitposting/boris.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 43,
+		requiredItems: {
+			power: 93
 		},
 	},
 	wut: {
