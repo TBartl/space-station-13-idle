@@ -298,7 +298,7 @@ export default {
 		},
 	},
 	runeN3: {
-		name: "RaiseDead Rune",
+		name: "Reanimation Rune",
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Raisedead_rune.png"),
 		overlay: require("@/assets/art/cult/Raisedead_rune_overlay.png"),
@@ -334,7 +334,7 @@ export default {
 		},
 	},
 	runeN5: {
-		name: "Large Rune",
+		name: "Rune of Nar-Sie",
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Rune_large.png"),
 		overlay: require("@/assets/art/cult/Rune_large_overlay.png"),
@@ -426,7 +426,7 @@ export default {
 		},
 	},
 	runeB5: {
-		name: "Huge Rune",
+		name: "Sonnenrad Rune",
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Huge_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),

@@ -1,20 +1,56 @@
 const ACTIONS_CULTBASE = {
 	blood1: {
-		time: 1,
+		time: 800,
 		actionName: "Worship",
 		item: "unholyfavor",
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 864,
-		requiredLevel: 800,
+		requiredLevel: 1,
 		requiredItems: { startCult: 1 }
 	},
 	blood2: {
 		time: 10,
-		item: "unholyfavor",
+		items: {
+			id: 'unholyfavor',
+			count: 2
+		},
 		healthCost: 10,
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 5,
+		requiredLevel: 20,
+	},
+	blood3: {
+		time: 10,
+		items: {
+			id: 'unholyfavor',
+			count: 4
+		},
+		healthCost: 25,
+		icon: require("@/assets/art/cult/blood.png"),
+		xp: 5,
+		requiredLevel: 30,
+	},
+	blood4: {
+		time: 10,
+		items: {
+			id: 'unholyfavor',
+			count: 6
+		},
+		healthCost: 40,
+		icon: require("@/assets/art/cult/blood.png"),
+		xp: 5,
 		requiredLevel: 10,
+	},
+	blood5: {
+		time: 10,
+		items: {
+			id: 'unholyfavor',
+			count: 8
+		},
+		healthCost: 50,
+		icon: require("@/assets/art/cult/blood.png"),
+		xp: 5,
+		requiredLevel: 40,
 	},
 }
 

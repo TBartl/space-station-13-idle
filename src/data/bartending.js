@@ -75,7 +75,7 @@ const POWER = {
         time: 5,
         xp: 13.5,
         requiredLevel: 31,
-        requiredItems: { power: 9, gold: 1 }
+        requiredItems: { power: 9 }
     },
     mixChangelingSting: {
         item: "drinkChangelingSting",
@@ -228,6 +228,7 @@ const POWERPLUS = {
     },
     mixManhattan: {
         item: "drinkManhattan",
+        count: 2,
         icon: require("@/assets/art/bartending/manhattan.png"),
         time: 10,
         xp: 12.5,
@@ -240,7 +241,7 @@ const POWERPLUS = {
         time: 10,
         xp: 16.5,
         requiredLevel: 24,
-        requiredItems: { power: 9 }
+        requiredItems: { power: 9, gold: 1 }
     },
     mixGargleBlaster: {
         item: "drinkGargleBlaster",

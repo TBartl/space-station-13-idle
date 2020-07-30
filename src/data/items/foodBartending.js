@@ -161,7 +161,7 @@ export default {
         sellPrice: 95,
         icon: require("@/assets/art/bartending/whiterussian.png"),
         stats: {
-            regen: .25
+            regen: .45
 		},
         healAmount: 20
     },

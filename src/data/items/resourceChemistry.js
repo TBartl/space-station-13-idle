@@ -137,18 +137,18 @@ const POTIONS = {
 		potionCharges: 10
 	},
 	potionCult: {
-		name: "Cult Potion",
-		sellPrice: 66,
-		icon: require("@/assets/art/chemistry/brainjuice.png"),
-		description: "Increases the health cost and favor gained from sacrificing.",
+		name: "Heparin",
+		sellPrice: 42,
+		icon: require("@/assets/art/chemistry/chemCult.png"),
+		description: "You can sacrifice twice as quickly.",
 		potionJob: "cult",
 		potionCharges: 10
 	},
 	potionLing: {
-		name: "Changeling Potion",
-		sellPrice: 66,
-		icon: require("@/assets/art/chemistry/brainjuice.png"),
-		description: "Increases the health cost and favor gained from sacrificing.",
+		name: "Tofurky",
+		sellPrice: 132,
+		icon: require("@/assets/art/chemistry/chemLing.png"),
+		description: "Forming requires one less meat.",
 		potionJob: "ling",
 		potionCharges: 10
 	}

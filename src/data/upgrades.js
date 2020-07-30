@@ -392,7 +392,7 @@ for (let i = 0; i < 5; i++) {
 	let upgrade = {
 		name: "Black Operations Efficiency",
 		description: `Increases the speed of ALL Black Operations by +${ANTAG_UPGRADE_PERCENT * 100}%`, // Expanded below
-		icon: require('@/assets/art/debug/B.png'),
+		icon: require('@/assets/art/shop/antagupgrade.png'),
 		requiredItems: {}, // Filled out below
 		requiredLevels: { validhunting: (i + 1) * 10 },
 		upgrade: "antagUpgrade",
