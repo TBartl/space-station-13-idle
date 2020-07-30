@@ -77,6 +77,14 @@ const POTIONS = {
 			burnJunk: 1
 		}
 	},
+	synthPotionCult: {
+		item: "potionCult",
+		time: 2,
+		requiredItems: {
+			water: 3,
+			oxyen: 1,
+		}
+	},
 	synthPotionChem: {
 		item: "potionChemistry",
 		time: 2,
@@ -106,6 +114,15 @@ const POTIONS = {
 			sacid: 1,
 			lithium: 1,
 			power: 1
+		}
+	},
+	synthPotionLing: {
+		item: "potionCult",
+		time: 2,
+		requiredItems: {
+			water: 3,
+			oxyen: 1,
+			potionCult: 1
 		}
 	},
 	synthPotionTinkering: {

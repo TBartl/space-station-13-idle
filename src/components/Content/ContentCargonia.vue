@@ -12,8 +12,8 @@
       </div>
       <job-info
         infoId="cargonia"
-        :icon="require('@/assets/art/jobinfo/cargonia.png')"
-        title="Moffew the Quartermaster flutters..."
+        :icon="require('@/assets/art/jobinfo/shop.png')"
+        title="Brick Carr the Quartermaster says..."
         :options="[
           {name: 'Back'},
           {name: 'Join', icon: require('@/assets/art/jobinfo/cargonia.png'), iconClass:'mx--0'},
@@ -22,7 +22,7 @@
       >
         <template slot="Back">
           <span>
-          Just act like you are doing your duty bringing in shipments             <img
+          So you're here to actually join the resistance? Just act like you are doing your duty bringing in shipments             <img
               :src="require('@/assets/art/cargonia/mineral2.png')"
             />. Once we have enough arms             <img
               :src="require('@/assets/art/combat/items/hand/gunR_naggant.png')"

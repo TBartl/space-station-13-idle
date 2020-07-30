@@ -8,7 +8,7 @@ export const ACTIONS = {
 		xpActivated: 2,
 		requiredLevel: 1,
 		requiredItems: {
-			power: 93
+			power: 90
 		}
 	},
 	postDeadchat: {
@@ -20,7 +20,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 10,
 		requiredItems: {
-			power: 93
+			power: 90
 		}
 	},
 	Cocacolagua: {
@@ -32,7 +32,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 49,
 		requiredItems: {
-			power: 93
+			power: 90
 		}
 	},
 	Uristqwerty: {
@@ -44,7 +44,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 48,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
 	SkyCinnamon: {
@@ -56,7 +56,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 47,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
 	Kolbaska: {
@@ -68,7 +68,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 46,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
 	Kaostico: {
@@ -80,7 +80,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 45,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
 	Dopamine: {
@@ -92,7 +92,7 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 44,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
 	Boris: {
@@ -104,9 +104,46 @@ export const ACTIONS = {
 		xpActivated: 5,
 		requiredLevel: 43,
 		requiredItems: {
-			power: 93
+			power: 90
 		},
 	},
+	NotPickles: {
+		time: 1,
+		name: "NotPickles's Freedom",
+		item: "drinkNukaCola",
+		icon: require("@/assets/art/shitposting/pickles.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 42,
+		requiredItems: {
+			power: 90
+		},
+	},
+	Fursoner: {
+		time: 1,
+		name: "Fursoners's Sin",
+		item: "meleeSharp3",
+		icon: require("@/assets/art/combat/items/head/s2/head_c1.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 41,
+		requiredItems: {
+			power: 90
+		},
+	},
+	MrJWhit: {
+		time: 1,
+		name: "MrJWhit's Gas",
+		item: "meleeBlunt5",
+		icon: require("@/assets/art/shitposting/MrJWhit.png"),
+		xp: 0,
+		xpActivated: 5,
+		requiredLevel: 40,
+		requiredItems: {
+			power: 90
+		},
+	},
+
 	wut: {
 		time: 1,
 		name: "wut",

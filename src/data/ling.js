@@ -389,7 +389,7 @@ const ACTIONS_LINGFACE = {
 	lingFace0: {
 		time: 9,
 		item: "faceLing0",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling1.png"),
 		xp: 12,
 		requiredLevel: 14,
 		requiredItems: {
@@ -399,7 +399,7 @@ const ACTIONS_LINGFACE = {
 	lingFace1: {
 		time: 9,
 		item: "faceLing1",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling2.png"),
 		xp: 18,
 		requiredLevel: 21,
 		requiredItems: {
@@ -409,7 +409,7 @@ const ACTIONS_LINGFACE = {
 	lingFace2: {
 		time: 9,
 		item: "faceLing2",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling3.png"),
 		xp: 25,
 		requiredLevel: 28,
 		requiredItems: {
@@ -419,7 +419,7 @@ const ACTIONS_LINGFACE = {
 	lingFace3: {
 		time: 31,
 		item: "faceLing3",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling4.png"),
 		xp: 31,
 		requiredLevel: 35,
 		requiredItems: {
@@ -429,7 +429,7 @@ const ACTIONS_LINGFACE = {
 	lingFace4: {
 		time: 37,
 		item: "faceLing4",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling5.png"),
 		xp: 37,
 		requiredLevel: 42,
 		requiredItems: {
@@ -439,7 +439,7 @@ const ACTIONS_LINGFACE = {
 	lingFace5: {
 		time: 48,
 		item: "faceLing5",
-		icon: require("@/assets/art/ling/lingface.png"),
+		icon: require("@/assets/art/ling/ling6.png"),
 		xp: 48,
 		requiredLevel: 48,
 		requiredItems: {

@@ -52,7 +52,7 @@
         >
           <generic-action
             :jobId="jobId"
-            :actionName="'SYNTHESIZE'"
+            :actionName="'INVOKE'"
             :action="action"
             :actionId="actionId"
           />
