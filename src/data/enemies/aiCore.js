@@ -1,62 +1,4 @@
 export default {
-	drone: {
-		name: "Unsynced Maintenance Drone",
-		icon: require("@/assets/art/combat/enemies/drone.png"),
-		stats: {
-			maxHealth: 370,
-			attackSpeed: 2.1,
-			precision: 83,
-			power: 61,
-			evasion: 118,
-			damageType: "brute",
-			bruteProtection: 20,
-			burnProtection: -20
-		},
-		itemTables: [
-			{
-				chance: 0.5,
-				itemTable: [
-					{
-						id: 'criminal',
-						weight: 8
-					},
-					{
-						id: 'drinkAtomicBomb',
-						weight: 6
-					},
-					{
-						id: 'titanium',
-						weight: 4
-					},
-					{
-						id: 'gunEnergy5',
-						weight: 2
-					},
-					{
-						id: 'slimeGold',
-						weight: 1
-					},
-				]
-			},
-			{
-				chance: 1,
-				itemTable: [
-					{
-						id: 'spaceJunk',
-						weight: 14
-					},
-					{
-						id: 'armorJunk',
-						weight: 5
-					},
-					{
-						id: 'junk',
-						weight: 1
-					}
-				]
-			}
-		]
-	},
 	securitybot: {
 		name: "Security Bot",
 		icon: require("@/assets/art/combat/enemies/secbot.png"),
@@ -121,6 +63,64 @@ export default {
 					},
 					{
 						id: 'bluespace',
+						weight: 1
+					}
+				]
+			}
+		]
+	},
+	drone: {
+		name: "Unsynced Maintenance Drone",
+		icon: require("@/assets/art/combat/enemies/drone.png"),
+		stats: {
+			maxHealth: 370,
+			attackSpeed: 2.1,
+			precision: 83,
+			power: 61,
+			evasion: 118,
+			damageType: "brute",
+			bruteProtection: 20,
+			burnProtection: -20
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: 'criminal',
+						weight: 8
+					},
+					{
+						id: 'drinkAtomicBomb',
+						weight: 6
+					},
+					{
+						id: 'titanium',
+						weight: 4
+					},
+					{
+						id: 'gunEnergy5',
+						weight: 2
+					},
+					{
+						id: 'slimeGold',
+						weight: 1
+					},
+				]
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: 'spaceJunk',
+						weight: 14
+					},
+					{
+						id: 'armorJunk',
+						weight: 5
+					},
+					{
+						id: 'junk',
 						weight: 1
 					}
 				]

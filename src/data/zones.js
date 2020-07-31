@@ -32,7 +32,7 @@ export default [
 	{
 		name: "Kitchen",
 		icon: require("@/assets/art/combat/zones/kitchen.png"),
-		enemies: ["pete", "cannibal", "botanist","bartender"]
+		enemies: ["pete", "cannibal","bartender", "botanist"]
 	},
 
 	{
@@ -58,7 +58,7 @@ export default [
 	{
 		name: "AI Core",
 		icon: require("@/assets/art/combat/zones/core.png"),
-		enemies: ["drone","securitybot", "turrets", "AI"]
+		enemies: ["securitybot","drone","turrets", "AI"]
 	},
 	{
 		name: "Biohazard Outbreak",

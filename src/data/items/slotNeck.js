@@ -426,7 +426,7 @@ export default {
 		},
 	},
 	runeB5: {
-		name: "Sonnenrad Rune",
+		name: "Rune of Attor",
 		sellPrice: 2500,
 		icon: require("@/assets/art/cult/Huge_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),

@@ -63,11 +63,11 @@ export function calcRobustness(stats, mobType) {
 	robustness += stats.power / 3;
 	robustness += stats.evasion / 3;
 
-	// Health should matter, but only a little
-	robustness += stats.maxHealth / 35;
+	// Health should matter, but only a little, protection got moved into this
+	robustness += (stats.maxHealth / 35 *(1 + Math.min(stats.burnProtection, stats.bruteProtection) / 100));
 
 	// Protection is a survivability multiplier
-	robustness *= 1 + Math.min(stats.burnProtection, stats.bruteProtection) / 100;
+	//robustness *= 1 + Math.min(stats.burnProtection, stats.bruteProtection) / 100;
 
 	return Math.round(robustness);
 }

@@ -146,12 +146,12 @@ export const ACTIONS = {
 
 	wut: {
 		time: 1,
-		name: "wut",
+		name: "Excuse me, what do you think you are doing you brat.",
 		item: "money",
 		icon: require("@/assets/art/shitposting/icon.png"),
 		xp: 10,
 		xpActivated: -500,
-		requiredLevel: 46,
+		requiredLevel: 51,
 		requiredItems: {
 			power: 404,
 			revParts: 1,

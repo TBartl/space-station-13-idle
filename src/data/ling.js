@@ -204,6 +204,7 @@ const ACTIONS_LINGPOWER = {
 		name: "Reinforced Ribs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"),
 		xp: 10,
+		healthCost: 3,
 		requiredLevel: 12,
 		requiredItems: {
 			foodMeatA: 1
@@ -464,5 +465,5 @@ export const JOB = {
 	id: "ling",
 	name: "Changeling",
 	icon: require("@/assets/art/ling/icon.png"),
-	color: "#9266cc"
+	color: "#f8b680"
 }
