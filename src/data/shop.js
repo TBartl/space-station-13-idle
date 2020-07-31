@@ -184,7 +184,7 @@ const JOB_UNLOCKS = {
 	},
 	unlockTraitor: {
 		name: "Unlock Traitor",
-		description: "Allows you to spend 20 special Telecrystals to kickstart your action.",
+		description: "Allows you to spend 20 special Telecrystals to kickstart your progression",
 		icon: require('@/assets/art/traitor/icon.png'),
 		requiredItems: {
 			antag: 1
