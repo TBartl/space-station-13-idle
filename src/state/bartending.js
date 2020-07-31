@@ -34,6 +34,14 @@ const BARTENDING = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let action of Object.values(actions)) {
 				action.time *= 1 / (1 + getters["drinkTableBonus"]);
+
+				if (potionItemId == "potionBartending") {
+					if (getters["level"] < action.requiredLevel) {
+						action.requiredLevel -= 10;
+					} else {
+						action.preservePotion = true;
+					}
+				}
 			}
 
 			return actions;

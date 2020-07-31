@@ -38,6 +38,7 @@ export const GRAYTIDING_POTION_PERCENT = .15;
 export const TINKERING_POTION_PERCENT = .30;
 export const BOTANY_POTION_PERCENT = .3;
 export const COOKING_POTION_PERCENT = .25;
+export const BARTENDING_POTION_LEVELS = 10;
 
 const POTIONS = {
 	potionMining: {
@@ -108,9 +109,9 @@ const POTIONS = {
 		name: "Powerful Shaker",
 		sellPrice: 180,
 		icon: require("@/assets/art/bartending/icon.png"),
-		description: `Remove the level requirement from Bartending actions.`,
+		description: `Reduces the level requirement of Bartending actions by ${BARTENDING_POTION_LEVELS}.`,
 		potionJob: "bartending",
-		potionCharges: 5
+		potionCharges: 20
 	},
 	potionFabrication: {
 		name: "Bluespace Acid",
