@@ -75,7 +75,7 @@ enemyVals.forEach((enemy, index) => {
 		chance: 1,
 		items: {
 			id: "money",
-			count: [0, robustness * 5]
+			count: [0, robustness * 10]
 		}
 	});
 
