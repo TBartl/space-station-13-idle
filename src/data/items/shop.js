@@ -588,6 +588,10 @@ export default {
 				id: 'capeShitposting',
 				weight: 20
 			},
+			{
+				id: 'spendTC',
+				weight: 3
+			},
 		]
 	}
 }
