@@ -50,9 +50,6 @@ const BASE_PURCHASES = {
 		requiredItems: {
 			bluetime: 10
 		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
-		},
 		items: {
 			id: "antag",
 		},
@@ -67,9 +64,6 @@ const BASE_PURCHASES = {
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 50
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -86,9 +80,6 @@ const BASE_PURCHASES = {
 		requiredItems: {
 			bluetime: 100
 		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
-		},
 		items: {
 			id: "antag",
 		},
@@ -103,9 +94,6 @@ const BASE_PURCHASES = {
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 200
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
