@@ -106,7 +106,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim4: {
 		time: 9,
-		item: "lingAim4",
+		name: "Enhanced Reactions",
 		icon: require("@/assets/art/combat/items/chest/arm_la4.png"),
 		xp: 28,
 		requiredLevel: 31,
@@ -137,7 +137,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim5: {
 		time: 9,
-		item: "lingAim5",
+		name: "Arm Enhancement",
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"),
 		xp: 34,
 		requiredLevel: 38,
@@ -168,7 +168,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim6: {
 		time: 9,
-		item: "lingAim6",
+		name: "Enhanced Flesh",
 		icon: require("@/assets/art/combat/items/chest/arm_la6.png"),
 		xp: 40,
 		requiredLevel: 44,
@@ -204,7 +204,7 @@ const ACTIONS_LINGPOWER = {
 		name: "Reinforced Ribs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"),
 		xp: 10,
-		healthCost: 3,
+//		healthCost: 3,
 		requiredLevel: 12,
 		requiredItems: {
 			foodMeatA: 1
