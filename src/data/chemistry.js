@@ -82,7 +82,7 @@ const POTIONS = {
 		time: 2,
 		requiredItems: {
 			water: 3,
-			oxyen: 1,
+			oxygen: 1,
 		}
 	},
 	synthPotionChem: {
