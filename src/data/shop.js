@@ -1,6 +1,6 @@
 import { MAX_LEVEL } from "@/data/experience";
 import { INVENTORY_UPGRADES, COMBAT_UPGRADES, JOB_UPGRADES } from "@/data/upgrades";
-import HEAD_ITEMS from '@/data/items/slotHead'
+import {HEAD_SEASON_ONE, HEAD_SEASON_TWO} from '@/data/items/slotHead'
 
 export const SECTIONS = [
 	{
@@ -364,14 +364,14 @@ const CRATES = {
 	},
 	hatCrate: {
 		item: "hatCrate",
-		description: `No Key Required. Hats can not be refunded for scrap. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
+		description: `No Key Required. Hats can not be refunded for scrap. Collect all ${Object.keys(HEAD_SEASON_ONE).length}!`,
 		requiredItems: {
 			money: 10000
 		}
 	},
 	hatCrate2: {
 		item: "hatCrate2",
-		description: `Christmas In July. I hope you asked for hats. Collect all ${Object.keys(HEAD_ITEMS).length}!`,
+		description: `Christmas In July. I hope you asked for hats. Collect all ${Object.keys(HEAD_SEASON_TWO).length}!`,
 		requiredItems: {
 			money: 10000
 		}
