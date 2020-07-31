@@ -62,6 +62,10 @@ export function calcRobustness(stats, mobType) {
 	robustness += stats.precision / 3;
 	robustness += stats.power / 3;
 	robustness += stats.evasion / 3;
+	
+	// wtf do I do with these new stats
+	robustness += stats.luck / 6
+	robustness += stats.regen * 6
 
 	// Health should matter, but only a little, protection got moved into this
 	robustness += (stats.maxHealth / 35 *(1 + Math.min(stats.burnProtection, stats.bruteProtection) / 100));
