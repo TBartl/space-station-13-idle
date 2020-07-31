@@ -22,26 +22,25 @@
       >
         <template slot="Back">
           <span>
-          So you're here to actually join the resistance? Just act like you are doing your duty bringing in shipments             <img
+          So you're here to actually join the resistance? Just act like you are doing your duty bringing in<img
               :src="require('@/assets/art/cargonia/mineral2.png')"
-            />. Once we have enough arms             <img
+            /><b>shipments</b>. Once we have enough arms             <img
               :src="require('@/assets/art/combat/items/hand/gunR_naggant.png')"
-            /> we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute funds<img
+            /> <b>arms</b> we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute<img
               :src="require('@/assets/art/validhunting/guilty.png')"
-            />.
+            /><b>funds</b>.
           </span>
         </template>
         <template slot="Join">
-          <span>We're having a bit of an employeement dispute with Nanotrasen <img
+          <span>We're having a bit of an employeement dispute with<img
               :src="require('@/assets/art/misc/logo-square.png')"
-            /> right now. If you want to prove what side you are on you'll need to prove it.</span>
-          <span>There are some <b>Flashes</b>            <img
+            /><b>Nanotrasen</b> right now. If you want to prove what side you are on you'll need to prove it.</span>
+          <span>There are some<img
               :src="require('@/assets/art/shop/items/startcargonia.png')"
-            />
-            laying around in supply caches
+            /><b>flashes</b> laying around in 
                         <img
               :src="require('@/assets/art/shop/items/droppod.png')"
-            /> across the station. Get me one.
+            /><b>supply caches</b> across the station. Get me one.
           </span>
         </template>
 
@@ -49,10 +48,10 @@
           <span>I'm gonna pop some tags.</span>
           <span>Only got twenty dollars in my pocket.</span>
           <span>
-            Wait you're still here? What are you doing go move freight!
+            Wait you're still here? What are you doing go move
             <img
               :src="require('@/assets/art/shop/items/hatcrate.png')"
-            />
+            /><b> freight!</b>
           </span>
         </template>
       </job-info>

@@ -110,12 +110,12 @@ export default {
 						weight: 6
 					},
 					{
-						id: 'pillTrifluoperazine',
+						id: 'pillPrecision',
 						count: 10,
 						weight: 5
 					},
 					{
-						id: 'MouseCarcass',
+						id: 'mouseCarcass',
 						weight: 4
 					},
 				]

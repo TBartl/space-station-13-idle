@@ -128,7 +128,7 @@ export default {
 						count: [1, 4]
 					},
 					{
-						id: "drinkManyDorf",
+						id: "drinkManlyDorf",
 						weight: 7,
 					},
 					{

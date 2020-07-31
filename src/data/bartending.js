@@ -1,6 +1,11 @@
 const POWER = {
     synthWhiskey: {
-        item: "drinkWhiskey",
+		name: "Whiskey",
+		items:
+		{
+			id: "drinkWhiskey",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/whiskey.png"),
         time: 5,
@@ -9,95 +14,151 @@ const POWER = {
         requiredItems: { power: 1 }
     },
     synthVodka: {
-        item: "drinkVodka",
+        name: "Vodka",
+		items:
+		{
+			id: "drinkVodka",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/vodka.png"),
         time: 5,
-        xp: 1.5,
+        xp: 1,
         requiredLevel: 2,
         requiredItems: { power: 2 }
     },
     synthGin: {
-        item: "drinkGin",
+        name: "Gin",
+		items:
+		{
+			id: "drinkGin",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/gin.png"),
         time: 5,
-        xp: 2.5,
+        xp: 2,
         requiredLevel: 3,
         requiredItems: { power: 3 }
     },
     synthRum: {
-        item: "drinkRum",
+        name: "Rum",
+		items:
+		{
+			id: "drinkRum",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/rum.png"),
         time: 5,
-        xp: 3.5,
+        xp: 3,
         requiredLevel: 4,
         requiredItems: { power: 4 }
     },
     //t2
     mixManlyDorf: {
-        item: "drinkManlyDorf",
+        name: "Manly Dorf",
+		items:
+		{
+			id: "drinkManlyDorf",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/manlydorf.png"),
         time: 5,
-        xp: 8.5,
+        xp: 4,
         requiredLevel: 11,
         requiredItems: { power: 5 }
     },
     mixWhiskeyCola: {
-        item: "drinkWhiskeyCola",
+        name: "Whiskey Cola",
+		items:
+		{
+			id: "drinkWhiskeyCola",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/whiskeycola.png"),
         time: 5,
-        xp: 9.5,
+        xp: 5,
         requiredLevel: 12,
         requiredItems: { power: 6 }
     },
     mixScrewdriver: {
-        item: "drinkScrewdriver",
+        name: "Screwdriver",
+		items:
+		{
+			id: "drinkScrewdriver",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/screwdriver.png"),
         time: 5,
-        xp: 10.5,
+        xp: 6,
         requiredLevel: 13,
         requiredItems: { power: 7 }
     },
     mixBlackRussian: {
-        item: "drinkBlackRussian",
+        name: "Black Russian",
+		items:
+		{
+			id: "drinkBlackRussian",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/blackrussian.png"),
         time: 5,
-        xp: 11.5,
+        xp: 7,
         requiredLevel: 14,
         requiredItems: { power: 8 }
     },
     //t3
     mixAntiFreeze: {
+        name: "Anti-Freeze",
+		items:
+		{
+			id: "drinkAntiFreeze",
+			count: 3,
+		},
         item: "drinkAntiFreeze",
         icon: require("@/assets/art/bartending/antifreeze.png"),
         time: 5,
-        xp: 13.5,
+        xp: 15,
         requiredLevel: 31,
         requiredItems: { power: 9 }
     },
     mixChangelingSting: {
-        item: "drinkChangelingSting",
+        name: "Changeling Sting",
+		items:
+		{
+			id: "drinkChangelingSting",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/changelingsting.gif"),
         time: 5,
-        xp: 17.5,
+        xp: 18,
         requiredLevel: 32,
         requiredItems: { power: 10 }
     },
     mixBeepskySmash: {
-        item: "drinkBeepskySmash",
+        name: "Beepsky Smash",
+		items:
+		{
+			id: "drinkBeepskySmash",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/beepskysmash.gif"),
         time: 5,
-        xp: 18.5,
+        xp: 19,
         requiredLevel: 33,
         requiredItems: { power: 11 }
     },
     mixSingulo: {
-        item: "drinkSingulo",
+        name: "Singulo",
+		items:
+		{
+			id: "drinkSingulo",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/singulo.gif"),
         time: 5,
-        xp: 19.5,
+        xp: 20,
         requiredLevel: 34,
         requiredItems: { power: 12 }
     },
@@ -105,52 +166,82 @@ const POWER = {
 const SLIME = {
     //t1
     synthOrange: {
-        item: "drinkOrangeJuice",
+        name: "Orange Juice",
+		items:
+		{
+			id: "drinkOrangeJuice",
+			count: 5,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/orangejuice.png"),
         time: 8,
-        xp: 1.6,
+        xp: 5,
         requiredLevel: 6,
         requiredItems: { slimeGray: 1 }
     },
     synthTomato: {
-        item: "drinkTomatoJuice",
+        name: "Tomato Juice",
+		items:
+		{
+			id: "drinkSingulo",
+			count: 5,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/tomatojuice.png"),
         time: 8,
-        xp: 3.2,
+        xp: 6,
         requiredLevel: 7,
         requiredItems: { slimeGray: 2 }
     },
     synthCream: {
-        item: "drinkCream",
+        name: "Cream",
+		items:
+		{
+			id: "drinkCream",
+			count: 5,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/cream.png"),
         time: 8,
-        xp: 4.8,
+        xp: 7,
         requiredLevel: 8,
         requiredItems: { slimeOrange: 1 }
     },
     synthCola: {
-        item: "drinkSpaceCola",
+        name: "Space Cola",
+		items:
+		{
+			id: "drinkSpaceCola",
+			count: 5,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/spacecola.png"),
         time: 8,
-        xp: 6.4,
+        xp: 8,
         requiredLevel: 9,
         requiredItems: { slimeOrange: 2 }
     },
     //t2
     mixSilencer: {
-        item: "drinkSilencer",
+        name: "Silencer",
+		items:
+		{
+			id: "drinkSilencer",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/silencer.png"),
         time: 8,
-        xp: 14.4,
+        xp: 14,
         requiredLevel: 16,
         requiredItems: { slimeBlue: 1 }
     },
     mixAcidSpit: {
-        item: "drinkAcidSpit",
+        name: "Acid Spit",
+		items:
+		{
+			id: "drinkAcidSpit",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/anim/acidspit.gif"),
         time: 8,
         xp: 16,
@@ -158,40 +249,65 @@ const SLIME = {
         requiredItems: { slimeBlue: 2 }
     },
     mixArnoldPalmer: {
-        item: "drinkArnoldPalmer",
+        name: "Arnold Palmer",
+		items:
+		{
+			id: "drinkArnoldPalmer",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/arnoldpalmer.png"),
         time: 8,
-        xp: 17.6,
+        xp: 18,
         requiredLevel: 18,
         requiredItems: { slimeMetal: 1 }
     },
     mixWhiteRussian: {
-        item: "drinkWhiteRussian",
+        name: "White Russian",
+		items:
+		{
+			id: "drinkWhiteRussian",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/whiterussian.png"),
         time: 8,
-        xp: 19.2,
+        xp: 19,
         requiredLevel: 19,
         requiredItems: { slimeMetal: 2 }
     },
     //t3
     mixSyndicateBomb: {
-        item: "drinkSyndicateBomb",
+        name: "Syndicate Bomb",
+		items:
+		{
+			id: "drinkSyndicateBomb",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/syndicatebomb.png"),
         time: 8,
-        xp: 27.2,
+        xp: 27,
         requiredLevel: 40,
         requiredItems: { slimeDarkPurple: 1 }
     },
     mixDemonsBlood: {
-        item: "drinkDemonsBlood",
+        name: "Demon's Blood",
+		items:
+		{
+			id: "drinkDemonsBlood",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/anim/demonsblood.gif"),
         time: 8,
-        xp: 28.8,
+        xp: 29,
         requiredLevel: 41,
         requiredItems: { slimeDarkPurple: 2 }
     },
     mixNeurotoxin: {
-        item: "drinkNeurotoxin",
+        name: "Neurotoxin",
+		items:
+		{
+			id: "drinkNeurotoxin",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/anim/neurotoxin.gif"),
         time: 8,
         xp: 30.4,
@@ -199,7 +315,12 @@ const SLIME = {
         requiredItems: { slimeDarkBlue: 1 }
     },
     mixWhat: {
-        item: "drinkWhat",
+        name: "Mistake",
+		items:
+		{
+			id: "drinkWhat",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/whatdrink.png"),
         time: 8,
         xp: 32,
@@ -209,7 +330,12 @@ const SLIME = {
 }
 const POWERPLUS = {
     synthTequila: {
-        item: "drinkTequila",
+        name: "Tequila",
+		items:
+		{
+			id: "drinkTequila",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/tequila.png"),
         time: 10,
@@ -218,7 +344,12 @@ const POWERPLUS = {
         requiredItems: { power: 4, glass: 1 }
     },
     synthLemon: {
-        item: "drinkLemonJuice",
+        name: "Lemon Juice",
+		items:
+		{
+			id: "drinkLemonJuice",
+			count: 3,
+		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/lemonjuice.png"),
         time: 10,
@@ -227,7 +358,12 @@ const POWERPLUS = {
         requiredItems: { power: 5, iron: 1 }
     },
     mixManhattan: {
-        item: "drinkManhattan",
+        name: "Manhattan",
+		items:
+		{
+			id: "drinkManhattan",
+			count: 3,
+		},
         count: 2,
         icon: require("@/assets/art/bartending/manhattan.png"),
         time: 10,
@@ -236,7 +372,12 @@ const POWERPLUS = {
         requiredItems: { power: 8, silver: 1 }
     },
     mixManhattanProject: {
-        item: "drinkManhattanProject",
+        name: "Manhattan Project",
+		items:
+		{
+			id: "drinkManhattanProject",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/manhattan_proj.gif"),
         time: 10,
         xp: 16.5,
@@ -244,23 +385,38 @@ const POWERPLUS = {
         requiredItems: { power: 9, gold: 1 }
     },
     mixGargleBlaster: {
-        item: "drinkGargleBlaster",
+        name: "Pan-Galactic Gargle Blaster",
+		items:
+		{
+			id: "drinkGargleBlaster",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/gargleblaster.gif"),
         time: 10,
         xp: 20.5,
-        requiredLevel: 36,
+        requiredLevel: 45,
         requiredItems: { power: 12, titanium: 1 }
     },
     mixB52: {
-        item: "drinkB52",
+        name: "B-52",
+		items:
+		{
+			id: "drinkB52",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/b52_flaming.gif"),
         time: 10,
         xp: 21.5,
-        requiredLevel: 37,
+        requiredLevel: 46,
         requiredItems: { power: 13, uranium: 1 }
     },
     mixNukaCola: {
-        item: "drinkNukaCola",
+        name: "Nuka-Cola",
+		items:
+		{
+			id: "drinkNukaCola",
+			count: 3,
+		},
         icon: require("@/assets/art/bartending/anim/nukacola.gif"),
         time: 10,
         xp: 25,
@@ -270,55 +426,90 @@ const POWERPLUS = {
 }
 const SLIMEPLUS = {
     mixBilk: {
-        item: "drinkBilk",
+        name: "Bilk",
+		items:
+		{
+			id: "drinkBilk",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/bilk.png"),
         time: 16,
-        xp: 8,
+        xp: 42,
         requiredLevel: 26,
         requiredItems: { slimePurple: 1, glass: 2 }
     },
     mixTripleSec: {
-        item: "drinkTripleSec",
+        name: "Triple Sec",
+		items:
+		{
+			id: "drinkTripleSec",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/triplesec.png"),
         time: 16,
-        xp: 9.6,
+        xp: 44,
         requiredLevel: 27,
         requiredItems: { slimePurple: 2, iron: 2 }
     },
     mixIrishCB: {
-        item: "drinkIrishCB",
+        name: "Irish Car Bomb",
+		items:
+		{
+			id: "drinkIrishCB",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/irishcarbomb.png"),
         time: 16,
-        xp: 20.8,
+        xp: 45,
         requiredLevel: 28,
         requiredItems: { slimeYellow: 1, silver: 2 }
     },
     mixLizardWine: {
-        item: "drinkLizardWine",
+        name: "Lizard Wine",
+		items:
+		{
+			id: "drinkLizardWine",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/lizardwine.png"),
         time: 16,
-        xp: 22.4,
+        xp: 46,
         requiredLevel: 29,
         requiredItems: { slimeYellow: 2, gold: 2 }
     },
     mixQuicky: {
-        item: "drinkQuicky",
+        name: "Quickly",
+		items:
+		{
+			id: "drinkQuicky",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/quicky.png"),
         time: 16,
-        xp: 33.6,
-        requiredLevel: 46,
+        xp: 77,
+        requiredLevel: 48,
         requiredItems: { slimeSilver: 1, titanium: 2}
     },
     mixDoctorsDelight: {
-        item: "drinkDoctorsDelight",
+        name: "Doctor's Delight",
+		items:
+		{
+			id: "drinkDoctorsDelight",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/anim/doctorsdelight.gif"),
         time: 16,
-        xp: 35.2,
-        requiredLevel: 47,
+        xp: 78,
+        requiredLevel: 49,
         requiredItems: { slimeSilver: 2, uranium: 2 }
     },
     mixAtomicBomb: {
-        item: "drinkAtomicBomb",
+        name: "Atomic Bomb",
+		items:
+		{
+			id: "drinkAtomicBomb",
+			count: 5,
+		},
         icon: require("@/assets/art/bartending/anim/atomicbomb.gif"),
         time: 16,
         xp: -50,

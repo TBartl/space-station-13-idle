@@ -16,16 +16,16 @@
         title="Syndicate Ansible crackles..."
         :options="[
           {name: 'Back'},
-          {name: 'Telecrystal?', icon: require('@/assets/art/traitor/telecrystal.png'), iconClass:'mx--0'}
+          {name: 'Telecrystal?', icon: require('@/assets/art/shop/items/telecrystal.png'), iconClass:'mx--0'},
+          {name: 'Extra?', icon: require('@/assets/art/traitor/telecrystal.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
           <span>
-          Some idiot left their communicator open and now there's Telecrystals            <img
-              :src="require('@/assets/art/shop/items/telecrystal.png')"
-            /> all over this station. The syndicate isn't sending you unlimited gear to you so you get these instead.            <img
-              :src="require('@/assets/art/traitor/telecrystal.png')"
-            />
+          Some idiot left their communicator open and now there are<img :src="require('@/assets/art/shop/items/telecrystal.png')"/><b>Telecrystals</b>
+            all over this station. The syndicate isn't sending you unlimited gear to you so you get
+            <img :src="require('@/assets/art/traitor/telecrystal.png')" />
+            <b>these</b> instead.            
           </span>
         </template>
         <template slot="Telecrystal?">
@@ -33,12 +33,18 @@
           <span>Spend them however you want in your uplink below, because you're not getting more.</span>
           <span>
             I know they are ugly but you have to use
-            <img
-              :src="require('@/assets/art/traitor/telecrystal.png')"
-            />
-            rather than the normal pure red ones.
+            <img :src="require('@/assets/art/traitor/telecrystal.png')" />
+            <b>Imprinted Telecrystals</b> rather than the normal red ones.
           </span>
         </template>
+
+        <template slot="Extra?">
+          <span>Complete your assigned mission first and we can discuss promotions again later. Maybe you can get in with the 
+            <img :src="require('@/assets/art/combat/enemies/boss/OPl6.png')" />
+            <b>big boys</b>.
+          </span>
+        </template>
+        
       </job-info>
  
       <div
