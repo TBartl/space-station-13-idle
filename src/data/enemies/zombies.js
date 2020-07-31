@@ -36,12 +36,7 @@ export default {
 			},
 			{
 				chance: 1,
-				itemTable: [
-					{
-						chance: 1,
-						item: "foodMeatZ"
-					}
-				]
+				item: "foodMeatZ",
 			}
 		]
 	},
@@ -75,7 +70,7 @@ export default {
 						weight: 14
 					},
 					{
-						id: 'faceSecGlasses',
+						id: 'faceSecGlassess',
 						weight: 13
 					},
 					{
@@ -94,12 +89,7 @@ export default {
 			},
 			{
 				chance: 1,
-				itemTable: [
-					{
-						chance: 1,
-						item: "foodMeatZ"
-					}
-				]
+				item: "foodMeatZ",
 			}
 		]
 	},
@@ -146,12 +136,7 @@ export default {
 			},
 			{
 				chance: 1,
-				itemTable: [
-					{
-						chance: 1,
-						item: "foodMeatZ"
-					}
-				]
+				item: "foodMeatZ",
 			}
 		]
 	},
@@ -197,12 +182,7 @@ export default {
 			},
 			{
 				chance: 1,
-				itemTable: [
-					{
-						chance: 1,
-						item: "foodMeatZ"
-					}
-				]
+				item: "foodMeatA",
 			}
 		]
 	},

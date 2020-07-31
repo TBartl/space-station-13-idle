@@ -82,7 +82,7 @@ const POTIONS = {
 		time: 2,
 		requiredItems: {
 			water: 3,
-			oxyen: 1,
+			oxygen: 1,
 		}
 	},
 	synthPotionChem: {
@@ -117,11 +117,11 @@ const POTIONS = {
 		}
 	},
 	synthPotionLing: {
-		item: "potionCult",
+		item: "potionLing",
 		time: 2,
 		requiredItems: {
-			water: 3,
-			oxyen: 1,
+			lithium: 1,
+			oxygen: 2,
 			potionCult: 1
 		}
 	},
@@ -180,7 +180,7 @@ const POTIONS = {
 		time: 2,
 		requiredItems: {
 			potionEngineering: 1,
-			water: 6
+			mercury: 6
 		}
 	},
 	synthPotionShitposting: {

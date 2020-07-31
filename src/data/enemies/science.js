@@ -70,7 +70,7 @@ export default {
 						weight: 4
 					},
 					{
-						id: 'drinkManhatten',
+						id: 'drinkManhattan',
 						weight: 4
 					},
 					{
