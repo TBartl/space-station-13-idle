@@ -202,5 +202,5 @@ export const JOB = {
 	id: "traitor",
 	name: "Traitor",
 	icon: require("@/assets/art/traitor/icon.png"),
-	color: "#704610"
+	color: "#a90d0d"
 }

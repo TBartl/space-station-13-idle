@@ -13,26 +13,65 @@
       <job-info
         infoId="cult"
         :icon="require('@/assets/art/cult/narsie_anim.gif')"
-        title="A VOICE whispers..."
+        title="An intrusive thought..."
         :options="[
           {name: 'Back'},
-          {name: 'Join', icon: require('@/assets/art/cult/Rune_large.png'), iconClass:'mx--0'}
+          {name: '...', icon: require('@/assets/art/combat/items/pill5.png'), iconClass:'mx--0'},
+          {name: 'Self Care', icon: require('@/assets/art/botany/PlantBanana.png'), iconClass:'mx--0'},
+          {name: 'Something Nice', icon: require('@/assets/art/combat/items/cloak/capcloak.png'), iconClass:'mx--0'},
+          {name: 'Cuddly Pets', icon: require('@/assets/art/combat/enemies/runtime.png'), iconClass:'mx--0'},
         ]"
       >
         <template slot="Back">
           <span>
-            I can feel it. The veil here is weak. Continue to weaken it (blood icon) and I will grant you my favor (rune picture) and loyal minions (picture of artificer)
+            <img :src="require('@/assets/art/shop/items/cultpart_anim.gif')"/>
           </span>
         </template>
-        <template slot="Join">
-          <span>The administration has requested the creation of a new job.</span>
-          <span>I have created a simple, minimalistic template with which to build off of.</span>
+
+        <template slot="...">
           <span>
-            In order to continue, you're going to have to write the rest of the
-            <img
-              :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
-            />
-            <b>Code</b>.
+            <img :src="require('@/assets/art/combat/enemies/boss/cult4_anim.gif')"/>
+            <img :src="require('@/assets/art/cult/blood.png')"/>
+            <img :src="require('@/assets/art/combat/enemies/chaplain.png')"/>
+            <img :src="require('@/assets/art/shop/items/startcult.png')"/>
+          </span>
+        </template>
+
+        <template slot="Self Care">
+          <span>
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+          </span>
+        </template>
+
+        <template slot="Something Nice">
+          <span>
+            <img :src="require('@/assets/art/cult/Raisedead_rune.png')"/>
+            <img :src="require('@/assets/art/cult/Manifest_rune.png')"/>
+            <img :src="require('@/assets/art/cult/Sacrifice_rune.png')"/>
+            <img :src="require('@/assets/art/cult/Apocalypse.png')"/>
+          </span>
+        </template>
+
+        <template slot="Cuddly Pets">
+          <span>
+            <img :src="require('@/assets/art/combat/enemies/Ian.png')"/>              
+            <img :src="require('@/assets/art/combat/enemies/pete.png')"/>
+            <img :src="require('@/assets/art/combat/enemies/bee_anim.gif')"/>
+          </span>          
+
+          <span>
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+          </span>
+
+          <span>
+            <img :src="require('@/assets/art/cult/narsian.png')"/>              
+            <img :src="require('@/assets/art/cult/behemoth_anim.gif')"/>
+            <img :src="require('@/assets/art/cult/harvester_anim.gif')"/>
           </span>
         </template>
       </job-info>

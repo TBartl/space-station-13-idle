@@ -27,7 +27,7 @@ const ACTIONS_CULTBASE = {
 		},
 		healthCost: 25,
 		icon: require("@/assets/art/cult/blood.png"),
-		xp: 5,
+		xp: 12,
 		requiredLevel: 30,
 	},
 	blood4: {
@@ -38,7 +38,7 @@ const ACTIONS_CULTBASE = {
 		},
 		healthCost: 40,
 		icon: require("@/assets/art/cult/blood.png"),
-		xp: 5,
+		xp: 20,
 		requiredLevel: 10,
 	},
 	blood5: {
@@ -49,7 +49,7 @@ const ACTIONS_CULTBASE = {
 		},
 		healthCost: 50,
 		icon: require("@/assets/art/cult/blood.png"),
-		xp: 5,
+		xp: 25,
 		requiredLevel: 40,
 	},
 }
@@ -189,5 +189,5 @@ export const JOB = {
 	id: "cult",
 	name: "Cult",
 	icon: require("@/assets/art/cult/Sacrifice_rune.png"),
-	color: "#9266cc"
+	color: "#220000"
 }
