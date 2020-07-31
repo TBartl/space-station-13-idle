@@ -111,7 +111,7 @@ const JOB_UNLOCKS = {
 	},
 	unlockBartending: {
 		name: "Unlock Bartending",
-		description: "Allows you to turn power and plants into delicious drinks",
+		description: "Allows you to turn power, slimes, and ore into delicious drinks",
 		icon: require("@/assets/art/bartending/icon.png"),
 		requiredItems: {
 			money: 15000
