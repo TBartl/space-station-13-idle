@@ -25,44 +25,40 @@
           <span>Ook?</span>
         </template>
         <template slot="Ook?">
-          <span>Not convinced huh? You want ultimate control over your body too? All it takes is some <img :src="require('@/assets/art/jobinfo/heart_anim.gif')" /><b>cultivation</b>, and one tiny<img :src="require('@/assets/art/ling/headcrab.png')" /><b>alien parasite</b>.</span>
           <span>
-           You can let it in you however you want, but I would advise the mouth or anus. I'd advise you pick one and just go for it. Don't start in one place then give up halfway. You'll regret it.
+            Not convinced huh? You want ultimate control over your body too? All it takes is some
+            <img :src="require('@/assets/art/jobinfo/heart_anim.gif')" />
+            <b>cultivation</b>, and one tiny
+            <img :src="require('@/assets/art/ling/headcrab.png')" />
+            <b>alien parasite</b>.
           </span>
+          <span>You can let it in you however you want, but I would advise the mouth or anus. I'd advise you pick one and just go for it. Don't start in one place then give up halfway. You'll regret it.</span>
         </template>
         <template slot="Cultivate">
           <span>Find your center and Focus inward.</span>
           <span>
-            You can use foreign 
-            <img :src="require('@/assets/art/cooking/meatAnimal.png')" /><b>biomatter</b>
+            You can use foreign
+            <img :src="require('@/assets/art/cooking/meatAnimal.png')" />
+            <b>biomatter</b>
             to assist you. Focus on the tone of the muscle fiber and the twitch of your nerves.
           </span>
           <span>It will take a while but you can eventually break through to the next level of physical perfection. Don't be discouraged if you don't get it right away.</span>
         </template>
-                <template slot="Parasite">
+        <template slot="Parasite">
           <span>They are a little red slug, about the size of your forearm.</span>
           <span>
-            Security tends to keep a pretty<img :src="require('@/assets/art/shop/items/seccrate.png')" /><b>tight lid</b>. They are worth alot of money to the right buyer.
-
+            Security tends to keep a pretty
+            <img :src="require('@/assets/art/shop/items/seccrate.png')" />
+            <b>tight lid</b>. They are worth alot of money to the right buyer.
             on them.
           </span>
-          <span>Just keep checking crates until you find one, and remember <B>DON'T EAT IT!</B> </span>
+          <span>
+            Just keep checking crates until you find one, and remember
+            <B>DON'T EAT IT!</B>
+          </span>
         </template>
       </job-info>
 
-      <div class="row food my-2">
-        <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
-          <div class="content-block">
-            <progress-bar
-              class="mb-2 black-background"
-              :progress="health / maxHealth"
-              :text="`${Math.round(health)}/${maxHealth}`"
-              :customClass="'bg-danger'"
-            />
-            <food-panel />
-          </div>
-        </div>
-      </div>
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
@@ -96,17 +92,13 @@ import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
-import ProgressBar from "@/components/ProgressBar";
-import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
   components: {
     GenericAction,
     ExperienceHeader,
-    PotionHeader,
-    ProgressBar,
-    FoodPanel
+    PotionHeader
   },
   computed: {
     jobId() {
@@ -126,12 +118,6 @@ export default {
       }
 
       return toReturn;
-    },
-    health() {
-      return this.$store.getters["playerMob/health"];
-    },
-    maxHealth() {
-      return this.$store.getters["playerMob/stats"].maxHealth;
     }
   }
 };

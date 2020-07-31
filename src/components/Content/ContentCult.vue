@@ -24,58 +24,71 @@
       >
         <template slot="Back">
           <span>
-            <img :src="require('@/assets/art/shop/items/cultpart_anim.gif')"/>
+            <img :src="require('@/assets/art/shop/items/cultpart_anim.gif')" />
           </span>
         </template>
 
         <template slot="...">
           <span>
-            <img :src="require('@/assets/art/combat/enemies/boss/cult4_anim.gif')"/>
-            <img :src="require('@/assets/art/cult/blood.png')"/>
-            <img :src="require('@/assets/art/combat/enemies/chaplain.png')"/>
-            <img :src="require('@/assets/art/shop/items/startcult.png')"/>
+            <img :src="require('@/assets/art/combat/enemies/boss/cult4_anim.gif')" />
+            <img :src="require('@/assets/art/cult/blood.png')" />
+            <img :src="require('@/assets/art/combat/enemies/chaplain.png')" />
+            <img :src="require('@/assets/art/shop/items/startcult.png')" />
           </span>
         </template>
 
         <template slot="Self Care">
           <span>
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+            <img :src="require('@/assets/art/cult/blood1.png')" />
           </span>
         </template>
 
         <template slot="Something Nice">
           <span>
-            <img :src="require('@/assets/art/cult/Raisedead_rune.png')"/>
-            <img :src="require('@/assets/art/cult/Manifest_rune.png')"/>
-            <img :src="require('@/assets/art/cult/Sacrifice_rune.png')"/>
-            <img :src="require('@/assets/art/cult/Apocalypse.png')"/>
+            <img :src="require('@/assets/art/cult/Raisedead_rune.png')" />
+            <img :src="require('@/assets/art/cult/Manifest_rune.png')" />
+            <img :src="require('@/assets/art/cult/Sacrifice_rune.png')" />
+            <img :src="require('@/assets/art/cult/Apocalypse.png')" />
           </span>
         </template>
 
         <template slot="Cuddly Pets">
           <span>
-            <img :src="require('@/assets/art/combat/enemies/Ian.png')"/>              
-            <img :src="require('@/assets/art/combat/enemies/pete.png')"/>
-            <img :src="require('@/assets/art/combat/enemies/bee_anim.gif')"/>
-          </span>          
-
-          <span>
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
-           <img :src="require('@/assets/art/cult/blood1.png')"/> 
+            <img :src="require('@/assets/art/combat/enemies/Ian.png')" />
+            <img :src="require('@/assets/art/combat/enemies/pete.png')" />
+            <img :src="require('@/assets/art/combat/enemies/bee_anim.gif')" />
           </span>
 
           <span>
-            <img :src="require('@/assets/art/cult/narsian.png')"/>              
-            <img :src="require('@/assets/art/cult/behemoth_anim.gif')"/>
-            <img :src="require('@/assets/art/cult/harvester_anim.gif')"/>
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+            <img :src="require('@/assets/art/cult/blood1.png')" />
+          </span>
+
+          <span>
+            <img :src="require('@/assets/art/cult/narsian.png')" />
+            <img :src="require('@/assets/art/cult/behemoth_anim.gif')" />
+            <img :src="require('@/assets/art/cult/harvester_anim.gif')" />
           </span>
         </template>
       </job-info>
 
+      <div class="row food my-2">
+        <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+          <div class="content-block">
+            <progress-bar
+              class="mb-2 black-background"
+              :progress="health / maxHealth"
+              :text="`${Math.round(health)}/${maxHealth}`"
+              :customClass="'bg-danger'"
+            />
+            <food-panel />
+          </div>
+        </div>
+      </div>
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
@@ -109,10 +122,18 @@ import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
+import ProgressBar from "@/components/ProgressBar";
+import FoodPanel from "@/components/Content/Combat/FoodPanel";
 import { mapState } from "vuex";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader },
+  components: {
+    GenericAction,
+    ExperienceHeader,
+    PotionHeader,
+    ProgressBar,
+    FoodPanel
+  },
   computed: {
     jobId() {
       return "cult";
@@ -131,6 +152,12 @@ export default {
       }
 
       return toReturn;
+    },
+    health() {
+      return this.$store.getters["playerMob/health"];
+    },
+    maxHealth() {
+      return this.$store.getters["playerMob/stats"].maxHealth;
     }
   }
 };
