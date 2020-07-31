@@ -46,12 +46,9 @@ const BASE_PURCHASES = {
 	antagRoll1: {
 		name: "Antag Roll",
 		description: "Aquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 10
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -64,12 +61,9 @@ const BASE_PURCHASES = {
 	antagRoll2: {
 		name: "Antag Roll",
 		description: "Aquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 50
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -82,12 +76,9 @@ const BASE_PURCHASES = {
 	antagRoll3: {
 		name: "Antag Roll",
 		description: "Aquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 100
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -100,12 +91,9 @@ const BASE_PURCHASES = {
 	antagRoll4: {
 		name: "Antag Roll",
 		description: "Aquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 200
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -184,7 +172,7 @@ ALL_JOBS.forEach(job => {
 	for (let i = 0; i < 5; i++) {
 		let isValidhunting = job.id == "validhunting";
 		if (job.isCombat && !isValidhunting) return;
-		if (job.id == "shitposting") return;
+		if (job.noJobBlitz) return;
 
 		let id = `level${job.id}`;
 		let from = Math.max(1, i * 10);

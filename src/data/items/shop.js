@@ -1,13 +1,14 @@
 export default {
 	antag: {
 		name: "Black Operations Communicator",
-		icon: require("@/assets/art/shop/items/antag_anim.gif")
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
+		description: "Can be exchanged to unlock a black market job"
 	},
 	startCargonia: {
 		name: "Handheld Flash",
 		sellPrice: 33,
 		icon: require("@/assets/art/shop/items/startcargonia.png"),
-		description: "Depending on the timeline, you can use this to join cargonia.",
+		description: "Depending on the timeline, you can use this to join cargonia",
 		equipmentSlot: "pocket",
 		stats: {
 			luck: 50,
@@ -17,7 +18,7 @@ export default {
 		name: "Cursed Touch",
 		icon: require("@/assets/art/shop/items/startcult.png"),
 		overlay: require("@/assets/art/shop/items/startcult_overlay.png"),
-		description: "Depending on the timeline, you can use this to join a cult.",
+		description: "Depending on the timeline, you can use this to join a cult",
 		sellPrice: 30,
 		overlayAppearInBack: true,
 		overlayRune: true,
@@ -38,7 +39,7 @@ export default {
 	},
 	startLing: {
 		name: "Harmless Red Slug",
-		description: "Depending on the timeline, you can use this to become a changeling.",
+		description: "Depending on the timeline, you can use this to become a changeling",
 		sellPrice: 50000,
 		heal: -200,
 		icon: require("@/assets/art/shop/items/startling.png")

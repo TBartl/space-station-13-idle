@@ -25,7 +25,7 @@
         <button class="my-1 btn btn-primary btn-sm" @click.stop="viewOdds">View Odds</button>
       </div>
       <div v-if="upgradeChain.length > 1 && upgradeChain.length < 99 && !hideChain">
-        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewChain">View Upgrade Chain</button>
+        <button class="my-1 btn btn-primary btn-sm" @click.stop="viewChain">View Chain</button>
       </div>
       <div class="requires d-flex flex-row align-items-center flex-wrap">
         <span class="requires mr-1">Requires:</span>

@@ -189,6 +189,10 @@ const JOB_UNLOCKS = {
 		requiredItems: {
 			antag: 1
 		},
+		items: {
+			id: "spendTC",
+			count: 20
+		},
 		upgrade: "traitorUnlocked",
 		requiredUpgrades: {
 			traitorUnlocked: 0

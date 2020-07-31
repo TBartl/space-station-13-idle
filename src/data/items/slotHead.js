@@ -264,7 +264,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_c1_overlay.png"),
 		stats: {
 			maxHealth: 40,
-			luck: 3,
+			luck: 6,
 			protection: 0,
 			precision: 1,
 			command: 3
@@ -281,7 +281,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_c2_overlay.png"),
 		stats: {
 			maxHealth: 40,
-			luck: 3,
+			luck: 6,
 			protection: 1,
 			precision: 0,
 			command: 3
@@ -298,7 +298,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_c3_overlay.png"),
 		stats: {
 			maxHealth: 50,
-			luck: 3,
+			luck: 6,
 			protection: 0,
 			precision: 0,
 			command: 3
@@ -315,7 +315,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_c4_overlay.png"),
 		stats: {
 			maxHealth: 40,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			command: 3
@@ -333,7 +333,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_r1_overlay.png"),
 		stats: {
 			maxHealth: 60,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 2,
 			command: 4
@@ -351,7 +351,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_r2_overlay.png"),
 		stats: {
 			maxHealth: 60,
-			luck: 4,
+			luck: 8,
 			protection: 2,
 			precision: 0,
 			command: 4
@@ -369,7 +369,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_r3_overlay.png"),
 		stats: {
 			maxHealth: 80,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			command: 4
@@ -387,7 +387,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_r4_overlay.png"),
 		stats: {
 			maxHealth: 60,
-			luck: 6,
+			luck: 12,
 			protection: 0,
 			precision: 0,
 			command: 4
@@ -405,7 +405,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_e1_overlay.png"),
 		stats: {
 			maxHealth: 90,
-			luck: 6,
+			luck: 12,
 			protection: 0,
 			precision: 2,
 			command: 6
@@ -423,7 +423,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_e2_overlay.png"),
 		stats: {
 			maxHealth: 90,
-			luck: 6,
+			luck: 12,
 			protection: 2,
 			precision: 0,
 			command: 6
@@ -441,7 +441,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_e3_overlay.png"),
 		stats: {
 			maxHealth: 110,
-			luck: 6,
+			luck: 12,
 			protection: 0,
 			precision: 0,
 			command: 6
@@ -459,7 +459,7 @@ const HEAD_SEASON_TWO = {
 		overlay: require("@/assets/art/combat/items/head/s2/head_e4_overlay.png"),
 		stats: {
 			maxHealth: 90,
-			luck: 8,
+			luck: 16,
 			protection: 0,
 			precision: 0,
 		},

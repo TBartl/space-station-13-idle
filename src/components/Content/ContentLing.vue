@@ -27,19 +27,25 @@
         <template slot="Ook?">
           <span>
             Not convinced huh? You want ultimate control over your body too? All it takes is some
-            <img :src="require('@/assets/art/jobinfo/heart_anim.gif')" />
-            <b>cultivation</b>, and one tiny
-            <img :src="require('@/assets/art/ling/headcrab.png')" />
-            <b>alien parasite</b>.
+            <img
+              :src="require('@/assets/art/jobinfo/heart_anim.gif')"
+              class="mx--2"
+            />
+            <b>Cultivation</b>, and one tiny
+            <img :src="require('@/assets/art/ling/headcrab.png')" class="mx--1" />
+            <b>Alien Parasite</b>.
           </span>
           <span>You can let it in you however you want, but I would advise the mouth or anus. I'd advise you pick one and just go for it. Don't start in one place then give up halfway. You'll regret it.</span>
         </template>
         <template slot="Cultivate">
-          <span>Find your center and Focus inward.</span>
+          <span>Find your center and focus inward.</span>
           <span>
             You can use foreign
-            <img :src="require('@/assets/art/cooking/meatAnimal.png')" />
-            <b>biomatter</b>
+            <img
+              :src="require('@/assets/art/cooking/meatAnimal.png')"
+              class="mx--0"
+            />
+            <b>Biomatter</b>
             to assist you. Focus on the tone of the muscle fiber and the twitch of your nerves.
           </span>
           <span>It will take a while but you can eventually break through to the next level of physical perfection. Don't be discouraged if you don't get it right away.</span>
@@ -48,9 +54,11 @@
           <span>They are a little red slug, about the size of your forearm.</span>
           <span>
             Security tends to keep a pretty
-            <img :src="require('@/assets/art/shop/items/seccrate.png')" />
-            <b>tight lid</b>. They are worth alot of money to the right buyer.
-            on them.
+            <img
+              :src="require('@/assets/art/shop/items/seccrate.png')"
+              class="mx--0"
+            />
+            <b>Tight Lid</b>. They are worth alot of money to the right buyer.
           </span>
           <span>
             Just keep checking crates until you find one, and remember

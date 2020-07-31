@@ -202,5 +202,6 @@ export const JOB = {
 	id: "traitor",
 	name: "Traitor",
 	icon: require("@/assets/art/traitor/icon.png"),
-	color: "#a90d0d"
+	color: "#a90d0d",
+	noJobBlitz: true
 }

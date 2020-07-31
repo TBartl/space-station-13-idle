@@ -181,5 +181,6 @@ export const JOB = {
 	id: "shitposting",
 	name: "Shitposting",
 	icon: require("@/assets/art/shitposting/icon.png"),
-	color: "#7A5901"
+	color: "#7A5901",
+	noJobBlitz: true
 }
