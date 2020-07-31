@@ -1,7 +1,7 @@
 const ACTIONS_CULTBASE = {
 	blood1: {
 		time: 800,
-		actionName: "Worship",
+		actionName: "WORSHIP",
 		item: "unholyfavor",
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 864,
