@@ -80,6 +80,20 @@
                 for="showVirtualLevels"
               >Show Virtual Levels Beyond {{maxLevel}}</label>
             </div>
+            
+            <div class="custom-control custom-switch">
+              <input
+                v-model="showFullValues"
+                type="checkbox"
+                class="custom-control-input"
+                id="showFullValues"
+              />
+              <label
+                class="custom-control-label"
+                for="showFullValues"
+
+              >Display Full Item Counts in Jobs (may look ugly with huge numbers)</label>
+            </div>
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -248,6 +262,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowVirtualLevels", value);
+      }
+    },
+	showFullValues: {
+      get() {
+        return this.$store.getters["settings/showFullValues"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowFullValues", value);
       }
     },
     inventoryFullStop: {
