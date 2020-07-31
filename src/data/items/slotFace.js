@@ -238,7 +238,7 @@ export default {
 	faceLing2: {
 		name: "Kind Disguise",
 		sellPrice: 507,
-		icon: require("@/assets/art/ling/ling1.png"),
+		icon: require("@/assets/art/ling/ling3.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling3_overlay.png"),
 		stats: {
@@ -254,7 +254,7 @@ export default {
 	faceLing3: {
 		name: "Popular Disguise",
 		sellPrice: 634,
-		icon: require("@/assets/art/ling/ling2.png"),
+		icon: require("@/assets/art/ling/ling4.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling4_overlay.png"),
 		stats: {
@@ -270,7 +270,7 @@ export default {
 	faceLing4: {
 		name: "Efficient Disguise",
 		sellPrice: 761,
-		icon: require("@/assets/art/ling/ling3.png"),
+		icon: require("@/assets/art/ling/ling5.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling5_overlay.png"),
 		stats: {
@@ -286,7 +286,7 @@ export default {
 	faceLing5: {
 		name: "Soft Disguise",
 		sellPrice: 870,
-		icon: require("@/assets/art/ling/ling4.png"),
+		icon: require("@/assets/art/ling/ling6.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling6_overlay.png"),
 		stats: {
