@@ -9,7 +9,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			power: 2,
@@ -28,7 +28,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 6,
+			luck: 12,
 			protection: 0,
 			power: 0,
 		},
@@ -46,7 +46,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 2,
 			power: 0,
@@ -69,7 +69,7 @@ export default {
 			protection: 0,
 			precision: 0,
 			power: 0,
-			luck: 4
+			luck: 8
 		},
 		requires: {
 			graytiding: MAX_LEVEL
@@ -85,7 +85,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			bruteProtection: 2,
 			precision: 0,
 			power: 0,
@@ -104,7 +104,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -122,7 +122,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			burnProtection: 2,
 			precision: 0,
 			power: 0,
@@ -141,7 +141,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 60,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -160,7 +160,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -180,7 +180,7 @@ export default {
 		equipmentSlot: "neck",
 		stats: {
 			maxHealth: 20,
-			luck: 4,
+			luck: 8,
 			protection: 0,
 			precision: 0,
 			power: 0,
@@ -239,7 +239,7 @@ export default {
 			maxHealth: 10,
 			evasion: 0,
 			precision: 0,
-			luck: 4,
+			luck: 8,
 		},
 		requires: {
 			evasion: 30
@@ -364,7 +364,7 @@ export default {
 			evasion: 0,
 			precision: 1,
 			power: 3,
-			luck: 1
+			luck: 2
 		},
 		requires: {
 			evasion: 7
@@ -383,7 +383,7 @@ export default {
 			evasion: 0,
 			precision: 2,
 			power: 6,
-			luck: 2
+			luck: 4
 		},
 		requires: {
 			evasion: 17

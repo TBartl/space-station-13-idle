@@ -105,7 +105,7 @@ const BOSSES = {
 			precision: 73,
 			power: 71,
 			evasion: 166,
-			luck: 5,
+			luck: 10,
 			damageType: "brute",
 			protection: -30
 		},

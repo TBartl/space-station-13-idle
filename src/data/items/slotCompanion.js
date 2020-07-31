@@ -138,7 +138,8 @@ const SLIMES = {
 			power: 10,
 			protection: 10,
 			evasion: 10,
-			maxHealth: 100
+			maxHealth: 100,
+			luck: 20
 		}
 	},
 	companionMouse: {
@@ -378,7 +379,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
 			regen: (slime.tier) * 1.5 / 10,
-			luck: (slime.tier) * 2,
+			luck: (slime.tier) * 4,
 			damageType: "burn"
 		}
 	}
@@ -386,7 +387,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			regen: (slime.tier) * 1.5 / 10,
-			luck: (slime.tier) * 2,
+			luck: (slime.tier) * 4,
 			attackSpeed: 2 - (slime.tier / 5)
 		}
 	}
@@ -394,7 +395,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 		slime.description = "Changes your weapon's attack speed"
 		slime.stats = {
 			regen: (slime.tier) * 1.5 / 10,
-			luck: (slime.tier) * 2,
+			luck: (slime.tier) * 4,
 			attackSpeed: 3 + (slime.tier / 5)
 		}
 	}
@@ -402,7 +403,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 		slime.description = "Changes your weapon's damage type"
 		slime.stats = {
 			regen: (slime.tier) * 1.5 / 10,
-			luck: (slime.tier) * 2,
+			luck: (slime.tier) * 4,
 			damageType: "brute"
 		}
 	}
