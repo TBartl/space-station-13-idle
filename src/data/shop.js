@@ -136,7 +136,7 @@ const JOB_UNLOCKS = {
 	},
 	unlockTinkering: {
 		name: "Unlock Tinkering",
-		description: "Allows you to turn junk into weapons and armor.",
+		description: "Allows you to turn junk into weapons and armor",
 		icon: require('@/assets/art/tinkering/icon.png'),
 		requiredItems: {
 			junk: 5
