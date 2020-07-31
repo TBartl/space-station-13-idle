@@ -363,23 +363,20 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-export const BARTENDING_UPGRADE_PERCENT = .15;
+export const BARTENDING_UPGRADE_INCREMENT = .05;
+export const BARTENDING_UPGRADE_CAP = 5;
 const BARTENDING_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
-		name: "Upgrade Booze Dispenser",
-		description: `Reduces the time it takes to synthesize bases by  ${BARTENDING_UPGRADE_PERCENT * 100}%`,
-		icon: require('@/assets/art/bartending/anim/upgrade1.gif'),
+		name: "Expand Drink Table",
+		description: `Each unique drink in your inventory increases bartending speed by ${BARTENDING_UPGRADE_INCREMENT * 100}%. This effect caps at ${(i + 1) * BARTENDING_UPGRADE_CAP} unique drinks`, // Expanded below
+		icon: require('@/assets/art/bartending/upgrade1.png'),
 		requiredItems: {},
 		requiredLevels: { bartending: (i + 1) * 10 },
-		upgrade: "boozeDispenser",
-		requiredUpgrades: { boozeDispenser: i }
+		upgrade: "drinkTable",
+		requiredUpgrades: { drinkTable: i }
 	}
 
-	if (i != 0) {
-		upgrade.description = upgrade.description.replace("by", "by another");
-		upgrade.description += `, to ${(BARTENDING_UPGRADE_PERCENT * (i + 1) * 100).toFixed()}% total`;
-	}
 	upgrade.requiredItems.money = calcCost(i, 5);
 
 	BARTENDING_UPGRADES[`upgradeBartending${i + 1}`] = upgrade;

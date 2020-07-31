@@ -1,4 +1,4 @@
-export default {
+const DRINKS = {
     //t1power
     drinkWhiskey: {
         name: "Whiskey",
@@ -420,3 +420,8 @@ export default {
         icon: require("@/assets/art/bartending/sake.png")
     }, */
 }
+Object.values(DRINKS).forEach(drink => {
+	drink.isDrink = true;
+});
+
+export default DRINKS;

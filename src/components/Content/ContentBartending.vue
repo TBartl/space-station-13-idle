@@ -71,6 +71,25 @@
         </template>
       </job-info>
 
+      <div class="row my-3" v-if="this.$store.getters['upgrades/get']('drinkTable')">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <div class="content-block">
+            <div class="d-flex flex-row align-items-center">
+              <img :src="require('@/assets/art/bartending/upgrade1.png')" />
+              <h5 class="mb-1">Upgrades</h5>
+            </div>
+            <p>
+              <b>Unique Drinks:</b>
+              {{$store.getters['bartending/drinkTableCount']}}/{{$store.getters['bartending/drinkTableMax']}}
+            </p>
+            <p>
+              <b>Bonus:</b>
+              {{(100*$store.getters["bartending/drinkTableBonus"]).toFixed()}}%
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
