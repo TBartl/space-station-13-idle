@@ -189,5 +189,6 @@ export const JOB = {
 	id: "cult",
 	name: "Cult",
 	icon: require("@/assets/art/cult/Sacrifice_rune.png"),
-	color: "#220000"
+	color: "#220000",
+	noJobBlitz: true
 }

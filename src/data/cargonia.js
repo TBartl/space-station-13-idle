@@ -387,5 +387,6 @@ export const JOB = {
 	id: "cargonia",
 	name: "Cargonia",
 	icon: require("@/assets/art/jobinfo/cargo_banner.png"),
-	color: "#704610"
+	color: "#704610",
+	noJobBlitz: true
 }

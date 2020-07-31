@@ -172,7 +172,7 @@ ALL_JOBS.forEach(job => {
 	for (let i = 0; i < 5; i++) {
 		let isValidhunting = job.id == "validhunting";
 		if (job.isCombat && !isValidhunting) return;
-		if (job.id == "shitposting") return;
+		if (job.noJobBlitz) return;
 
 		let id = `level${job.id}`;
 		let from = Math.max(1, i * 10);

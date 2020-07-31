@@ -464,5 +464,6 @@ export const JOB = {
 	id: "ling",
 	name: "Changeling",
 	icon: require("@/assets/art/ling/icon.png"),
-	color: "#f8b680"
+	color: "#f8b680",
+	noJobBlitz: true
 }
