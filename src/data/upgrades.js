@@ -344,7 +344,7 @@ export const TINKERING_UPGRADE_CAP = .25;
 const TINKERING_UPGRADES = {}
 for (let i = 0; i < 5; i++) {
 	let upgrade = {
-		name: "Buy Balmer Spirits",
+		name: "Buy Well-Laid Plans",
 		description: `Each consecutive tinkering craft of the same item increases future crafting speeds by ${TINKERING_UPGRADE_INCREMENT * 100}%. This effect caps at ${(i + 1) * TINKERING_UPGRADE_CAP * 100}%`, // Expanded below
 		icon: require('@/assets/art/tinkering/upgrade1.png'),
 		requiredItems: {}, // Filled out below
