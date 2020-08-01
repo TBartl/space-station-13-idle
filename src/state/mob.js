@@ -216,6 +216,7 @@ export function createMobModule(mobType) {
 						duration: getters["regenTime"],
 						onFinish: () => {
 							dispatch("_startRegen");
+							if (getters.health <= 0) return;
 							let regen = getters["stats"].regen;
 							if (regen == 0) return;
 							let gain = Math.sign(regen);
