@@ -478,7 +478,7 @@ const SLIMEPLUS = {
         requiredItems: { slimeYellow: 2, gold: 2 }
     },
     mixQuicky: {
-        name: "Quickly",
+        name: "Quicky",
 		items:
 		{
 			id: "drinkQuicky",
