@@ -1,8 +1,8 @@
 export default {
 	antag: {
 		name: "Black Operations Communicator",
-		icon: require("@/assets/art/shop/items/antag_anim.gif"),
-		description: "Can be exchanged to unlock a black market job"
+		description: "Can be exchanged to unlock a black market job, maybe you will pick the right one this timeline.",
+		icon: require("@/assets/art/shop/items/antag_anim.gif")
 	},
 	startCargonia: {
 		name: "Handheld Flash",

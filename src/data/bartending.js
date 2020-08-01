@@ -23,7 +23,7 @@ const POWER = {
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/vodka.png"),
         time: 5,
-        xp: 1,
+        xp: 1.7,
         requiredLevel: 2,
         requiredItems: { power: 2 }
     },
@@ -183,7 +183,7 @@ const SLIME = {
         name: "Tomato Juice",
 		items:
 		{
-			id: "drinkSingulo",
+			id: "drinkTomatoJuice",
 			count: 5,
 		},
         actionName: "DISPENSE",
@@ -478,7 +478,7 @@ const SLIMEPLUS = {
         requiredItems: { slimeYellow: 2, gold: 2 }
     },
     mixQuicky: {
-        name: "Quickly",
+        name: "Quicky",
 		items:
 		{
 			id: "drinkQuicky",
