@@ -6,7 +6,8 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_medical.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_medical_overlay.png"),
 		stats: {
-			maxHealth: 130
+			maxHealth: 100,
+			regen: .2
 		},
 		requires: {
 			evasion: 5
