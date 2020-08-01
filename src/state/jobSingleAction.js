@@ -139,10 +139,6 @@ export default {
 					return;
 				}
 			}
-			
-			if (action.healthCost) {
-				dispatch("playerMob/getHit", action.healthCost, { root: true });
-			}
 
 			if (action.requiredItems) {
 				for (let [itemId, requiredCount] of Object.entries(action.requiredItems)) {
@@ -187,6 +183,11 @@ export default {
 				dispatch("_startCoroutine", { actionId, action })
 			} else {
 				commit("_setAction", null);
+			}
+			
+			// Place this here, so the new instance of the action gets cancelled
+			if (action.healthCost) {
+				dispatch("playerMob/getHit", action.healthCost, { root: true });
 			}
 		},
 		_resume({ state, dispatch }) {
