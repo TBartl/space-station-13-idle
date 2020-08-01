@@ -364,7 +364,6 @@ export default {
 			evasion: 0,
 			precision: 1,
 			power: 3,
-			luck: 2
 		},
 		requires: {
 			evasion: 7
@@ -383,7 +382,6 @@ export default {
 			evasion: 0,
 			precision: 2,
 			power: 6,
-			luck: 4
 		},
 		requires: {
 			evasion: 17
@@ -429,7 +427,7 @@ export default {
 		name: "Rune of Attor",
 		sellPrice: 1500,
 		icon: require("@/assets/art/cult/Huge_rune.png"),
-		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
+		overlay: require("@/assets/art/cult/Huge_rune_overlay.png"),
 		overlayAppearInBack: true,
 		overlayRune: true,
 		equipmentSlot: "neck",

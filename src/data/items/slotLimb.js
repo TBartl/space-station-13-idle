@@ -145,6 +145,7 @@ export default {
 		overlay: require("@/assets/art/combat/items/limb/shoe_magboots_overlay.png"),
 		stats: {
 			maxHealth: 120,
+			regen: .3,
 			precision: 0,
 			power: 2,
 			evasion: 2,
