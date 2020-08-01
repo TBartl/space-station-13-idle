@@ -38,7 +38,7 @@
 		<div class="w-100 mt-2">
       <div class="stat" :id="`${mobType}-stat-max-hit`">
         <img :src="require('@/assets/art/combat/skull.png')" />
-        <span class="stat-desc">Hit Range:</span>
+        <span class="stat-desc">Damage:</span>
         <span>{{Math.round(minHit)}} - {{Math.round(maxHit)}}</span>
         <img class="ml-1 damage-type" :src="damageTypeImage" />
       </div>
