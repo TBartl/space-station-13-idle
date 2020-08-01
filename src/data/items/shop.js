@@ -1,6 +1,7 @@
 export default {
 	antag: {
 		name: "Black Operations Communicator",
+		description: "Making connections you couldn't in past timelines.",
 		icon: require("@/assets/art/shop/items/antag_anim.gif")
 	},
 	startCargonia: {

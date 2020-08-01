@@ -45,7 +45,7 @@ const BASE_PURCHASES = {
 	},
 	antagRoll1: {
 		name: "Antag Roll",
-		description: "Aquire aid from a nefarious faction.",
+		description: "Acquire aid from a nefarious faction.",
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 10
@@ -63,7 +63,7 @@ const BASE_PURCHASES = {
 	},
 	antagRoll2: {
 		name: "Antag Roll",
-		description: "Aquire aid from a nefarious faction.",
+		description: "Acquire aid from a nefarious faction.",
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 50
@@ -81,7 +81,7 @@ const BASE_PURCHASES = {
 	},
 	antagRoll3: {
 		name: "Antag Roll",
-		description: "Aquire aid from a nefarious faction.",
+		description: "Acquire aid from a nefarious faction.",
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 100
@@ -99,7 +99,7 @@ const BASE_PURCHASES = {
 	},
 	antagRoll4: {
 		name: "Antag Roll",
-		description: "Aquire aid from a nefarious faction.",
+		description: "Acquire aid from a nefarious faction.",
 		icon: require('@/assets/art/chrono/timebank.png'),
 		requiredItems: {
 			bluetime: 200
