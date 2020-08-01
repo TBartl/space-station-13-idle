@@ -111,7 +111,7 @@ const POTIONS = {
 		icon: require("@/assets/art/bartending/icon.png"),
 		description: `Reduces the level requirement of Bartending actions by ${BARTENDING_POTION_LEVELS}.`,
 		potionJob: "bartending",
-		potionCharges: 20
+		potionCharges: 10
 	},
 	potionFabrication: {
 		name: "Bluespace Acid",
@@ -135,7 +135,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/cargonia.png"),
 		description: "Whenever you get money from cargonia, also get that much power.",
 		potionJob: "cargonia",
-		potionCharges: 10
+		potionCharges: 1
 	},
 	potionCult: {
 		name: "Heparin",
