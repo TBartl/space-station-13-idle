@@ -263,7 +263,7 @@ export default {
 	},
 	runeN1: {
 		name: "Manifest Rune",
-		sellPrice: 2500,
+		sellPrice: 180,
 		icon: require("@/assets/art/cult/Manifest_rune.png"),
 		overlay: require("@/assets/art/cult/Manifest_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -281,7 +281,7 @@ export default {
 	},
 	runeN2: {
 		name: "Boil Rune",
-		sellPrice: 2500,
+		sellPrice: 400,
 		icon: require("@/assets/art/cult/Boil_rune.png"),
 		overlay: require("@/assets/art/cult/Boil_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -299,7 +299,7 @@ export default {
 	},
 	runeN3: {
 		name: "Reanimation Rune",
-		sellPrice: 2500,
+		sellPrice: 660,
 		icon: require("@/assets/art/cult/Raisedead_rune.png"),
 		overlay: require("@/assets/art/cult/Raisedead_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -317,7 +317,7 @@ export default {
 	},
 	runeN4: {
 		name: "Apocalypse Rune",
-		sellPrice: 2500,
+		sellPrice: 1000,
 		icon: require("@/assets/art/cult/Apocalypse.png"),
 		overlay: require("@/assets/art/cult/Apocalypse_overlay.png"),
 		overlayAppearInBack: true,
@@ -335,7 +335,7 @@ export default {
 	},
 	runeN5: {
 		name: "Rune of Nar-Sie",
-		sellPrice: 2500,
+		sellPrice: 1500,
 		icon: require("@/assets/art/cult/Rune_large.png"),
 		overlay: require("@/assets/art/cult/Rune_large_overlay.png"),
 		overlayAppearInBack: true,
@@ -353,7 +353,7 @@ export default {
 	},
 	runeB1: {
 		name: "Sacrifice Rune",
-		sellPrice: 2500,
+		sellPrice: 180,
 		icon: require("@/assets/art/cult/Sacrifice_rune.png"),
 		overlay: require("@/assets/art/cult/Sacrifice_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -372,7 +372,7 @@ export default {
 	},
 	runeB2: {
 		name: "Empower Rune",
-		sellPrice: 2500,
+		sellPrice: 400,
 		icon: require("@/assets/art/cult/Empower_rune.png"),
 		overlay: require("@/assets/art/cult/Empower_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -391,7 +391,7 @@ export default {
 	},
 	runeB3: {
 		name: "Teleport Rune",
-		sellPrice: 2500,
+		sellPrice: 660,
 		icon: require("@/assets/art/cult/Teleport_rune.png"),
 		overlay: require("@/assets/art/cult/Teleport_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -409,7 +409,7 @@ export default {
 	},
 	runeB4: {
 		name: "Summon Rune",
-		sellPrice: 2500,
+		sellPrice: 1000,
 		icon: require("@/assets/art/cult/Summon_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
 		overlayAppearInBack: true,
@@ -427,7 +427,7 @@ export default {
 	},
 	runeB5: {
 		name: "Rune of Attor",
-		sellPrice: 2500,
+		sellPrice: 1500,
 		icon: require("@/assets/art/cult/Huge_rune.png"),
 		overlay: require("@/assets/art/cult/Summon_rune_overlay.png"),
 		overlayAppearInBack: true,
