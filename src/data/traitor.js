@@ -3,7 +3,7 @@ const ONETC = {
 		time: 30,
 		xp: 5025,
 		requiredLevel: 1,
-		item: "jumpsuitSecurity",
+		item: "jumpsuitClown",
 		requiredItems: {
 			spendTC: 1
 		}
@@ -100,7 +100,7 @@ const THREETC = {
 	ThreeJump: {
 		time: 30,
 		xp: 15075,
-		requiredLevel: 10,
+		requiredLevel: 1,
 		item: "jumpsuitChameleon",
 		requiredItems: {
 			spendTC: 3
