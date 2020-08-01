@@ -38,7 +38,7 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let actionEntry of Object.entries(actions)) {
 				let action = actionEntry[1];
-				
+
 				if (actionEntry[0] == state.streakActionId)
 					action.time *= 1 / (1 + getters.streakBonus);
 
@@ -70,9 +70,9 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			}
 			return actions;
 		},
-	locked(state, getters, rootState, rootGetters) {
-		return !rootGetters["upgrades/get"]("tinkeringUnlocked");
-	}
+		locked(state, getters, rootState, rootGetters) {
+			return !rootGetters["upgrades/get"]("tinkeringUnlocked");
+		}
 	},
 	mutations: {
 		addXP(state, xp) {

@@ -52,17 +52,14 @@
             <b>Ore</b>.
           </span>
           <span>
-            Beginners start by pounding 
+            Beginners should get started by pounding some
             <img
               class="mx--0"
-
               :src="require('@/assets/art/mining/OreGlass.png')"
             />
-            <b>Sand</b> to make some
-            <img
-              class="mx--2"
-              :src="require('@/assets/art/mining/SheetGlass.png')"
-            /> <b>Glass</b>.
+            <b>Sand</b> to make
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetGlass.png')" />
+            <b>Glass</b>.
           </span>
           <span>
             Of course, you're probably going to need to build some experience up before you go after some of the
@@ -89,12 +86,29 @@
               class="mx--0"
               :src="require('@/assets/art/fabrication/icon.png')"
             />
-            <b>Fabrication</b> might turn it into weapons or something, or you could just sell it straight for
+            <b>Fabrication</b> might turn it into
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/combat/items/gune_energy.png')"
+            />
+            <b>Weapons</b> or something. I think they're shut down right now until someone orders supplies for it from
+            <img
+              class="mx--0"
+              :src="require('@/assets/art/sidebar/cargo.png')"
+            />
+            <b>Cargo</b>
+          </span>
+          <span>
+            Alternatively,
+            <img class="mx--2" :src="require('@/assets/art/mining/SheetIron.png')" />
+            <b>Ore</b> can be sold straight for
             <img
               class="mx--2"
               :src="require('@/assets/art/misc/coin-padded.png')"
             />
-            <b>Money</b>.
+            <b>Money</b> from your
+            <img class="mx--2" :src="require('@/assets/art/sidebar/backpack.png')" />
+            <b>Inventory</b>.
           </span>
           <span>
             Don't really know. And as long as my tools are getting

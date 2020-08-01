@@ -41,7 +41,7 @@
         <div
           v-for="(pair, index) in Object.entries(requiredItems)"
           :key="'item'+index"
-          class="d-flex flex-row align-items-center"
+          class="d-flex flex-row align-items-center mr-1"
         >
           <img :id="id+index" :src="items[pair[0]].icon" />
           <item-popover :target="id+index" :itemId="pair[0]" />

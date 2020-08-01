@@ -3,9 +3,9 @@ import { xpFromLevel } from '@/data/experience'
 import { EventBus } from "@/utils/eventBus.js";
 
 export const BASE_BONUS = 5;
-export const ITEM_INTERVALS = [40, 65, 85, 92, 97, 100];
+export const ITEM_INTERVALS = [20, 35, 50, 65, 75, 85, 92, 97, 100];
 export const ENEMY_INTERVALS = [60, 80, 100];
-export const JOB_INTERVALS = [40, 60, 80, 90, 95, 97, 99, 100];
+export const JOB_INTERVALS = [25, 45, 60, 70, 80, 90, 95, 97, 99, 100];
 
 const BASE_PURCHASES = {
 	resetSimulation: {
@@ -203,7 +203,7 @@ ALL_JOBS.forEach(job => {
 export const SECTIONS = [
 	{
 		name: "Chrono Exchange",
-		purchases: ["chronoToCash", "chronoToTime","antagRoll1","antagRoll2","antagRoll3","antagRoll4"]
+		purchases: ["chronoToCash", "chronoToTime", "antagRoll1", "antagRoll2", "antagRoll3", "antagRoll4"]
 	},
 	{
 		name: "Time Bank Upgrades",
