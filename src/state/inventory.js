@@ -139,6 +139,9 @@ const inventory = {
 		},
 		shouldShowPurchase(state, getters, rootState, rootGetters) {
 			return (purchase) => {
+				if (purchase.hideIfXP) {
+					if (rootGetters[`${purchase.hideIfXP}/xp`]) return false;
+				}
 				if (purchase.requiredUpgrades) {
 					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
 						if (rootGetters["upgrades/getNoEquipment"](upgradeId) != count) return false;
