@@ -87,7 +87,7 @@
               class="mx--2"
               :src="require('@/assets/art/combat/items/ammo_b1.png')"
             />
-            <b>ammo</b> to use. Thankfully you can fabricate more of it here.
+            <b>Ammo</b> to use. Thankfully you can fabricate more of it here.
           </span>
         </template>
         <template slot="Ammo?">
