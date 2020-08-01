@@ -153,7 +153,7 @@ const BOSSES = {
 			precision: 120,
 			power: 126,
 			evasion: 131,
-			regen: 1.2,
+	//		regen: 1.2,
 			damageType: "burn",
 		},
 		itemTables: [
