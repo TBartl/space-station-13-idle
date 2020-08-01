@@ -2,7 +2,7 @@ const DRINKS = {
 	//t1power
 	drinkWhiskey: {
 		name: "Whiskey",
-		sellPrice: 5,
+		sellPrice: 4,
 		icon: require("@/assets/art/bartending/whiskey.png"),
 		stats: {
 			precision: 3,
@@ -12,7 +12,7 @@ const DRINKS = {
 	},
 	drinkVodka: {
 		name: "Vodka",
-		sellPrice: 10,
+		sellPrice: 8,
 		icon: require("@/assets/art/bartending/vodka.png"),
 		stats: {
 			power: 3,
@@ -22,7 +22,7 @@ const DRINKS = {
 	},
 	drinkGin: {
 		name: "Gin",
-		sellPrice: 15,
+		sellPrice: 13,
 		icon: require("@/assets/art/bartending/gin.png"),
 		stats: {
 			evasion: 3,
@@ -32,7 +32,7 @@ const DRINKS = {
 	},
 	drinkRum: {
 		name: "Rum",
-		sellPrice: 20,
+		sellPrice: 17,
 		icon: require("@/assets/art/bartending/rum.png"),
 		stats: {
 			luck: 16,
@@ -42,7 +42,7 @@ const DRINKS = {
 	//t1slime
 	drinkOrangeJuice: {
 		name: "Orange Juice",
-		sellPrice: 29,
+		sellPrice: 24,
 		icon: require("@/assets/art/bartending/orangejuice.png"),
 		stats: {
 			precision: 3,
@@ -52,7 +52,7 @@ const DRINKS = {
 	},
 	drinkTomatoJuice: {
 		name: "Tomato Juice",
-		sellPrice: 34,
+		sellPrice: 28,
 		icon: require("@/assets/art/bartending/tomatojuice.png"),
 		stats: {
 			power: 3,
@@ -62,7 +62,7 @@ const DRINKS = {
 	},
 	drinkCream: {
 		name: "Cream",
-		sellPrice: 38,
+		sellPrice: 32,
 		icon: require("@/assets/art/bartending/cream.png"),
 		stats: {
 			evasion: 3,
@@ -72,7 +72,7 @@ const DRINKS = {
 	},
 	drinkSpaceCola: {
 		name: "Space Cola",
-		sellPrice: 43,
+		sellPrice: 36,
 		icon: require("@/assets/art/bartending/spacecola.png"),
 		stats: {
 			regen: .4
@@ -82,7 +82,7 @@ const DRINKS = {
 	//t2
 	drinkManlyDorf: {
 		name: "Manly Dorf",
-		sellPrice: 55,
+		sellPrice: 46,
 		icon: require("@/assets/art/bartending/manlydorf.png"),
 		healAmount: 10,
 		stats: {
@@ -93,7 +93,7 @@ const DRINKS = {
 	},
 	drinkWhiskeyCola: {
 		name: "Whiskey Cola",
-		sellPrice: 60,
+		sellPrice: 50,
 		icon: require("@/assets/art/bartending/whiskeycola.png"),
 		healAmount: 10,
 		stats: {
@@ -104,7 +104,7 @@ const DRINKS = {
 	},
 	drinkScrewdriver: {
 		name: "Screwdriver",
-		sellPrice: 65,
+		sellPrice: 54,
 		icon: require("@/assets/art/bartending/screwdriver.png"),
 		healAmount: 10,
 		stats: {
@@ -115,7 +115,7 @@ const DRINKS = {
 	},
 	drinkBlackRussian: {
 		name: "Black Russian",
-		sellPrice: 70,
+		sellPrice: 58,
 		icon: require("@/assets/art/bartending/blackrussian.png"),
 		stats: {
 			luck: 18,
@@ -125,7 +125,7 @@ const DRINKS = {
 	//t2slime
 	drinkSilencer: {
 		name: "Silencer",
-		sellPrice: 77,
+		sellPrice: 64,
 		icon: require("@/assets/art/bartending/silencer.png"),
 		healAmount: 20,
 		stats: {
@@ -136,7 +136,7 @@ const DRINKS = {
 	},
 	drinkAcidSpit: {
 		name: "Acid Spit",
-		sellPrice: 82,
+		sellPrice: 68,
 		icon: require("@/assets/art/bartending/anim/acidspit.gif"),
 		healAmount: 20,
 		stats: {
@@ -147,7 +147,7 @@ const DRINKS = {
 	},
 	drinkArnoldPalmer: {
 		name: "Arnold Palmer",
-		sellPrice: 86,
+		sellPrice: 72,
 		icon: require("@/assets/art/bartending/arnoldpalmer.png"),
 		healAmount: 20,
 		stats: {
@@ -158,7 +158,7 @@ const DRINKS = {
 	},
 	drinkWhiteRussian: {
 		name: "White Russian",
-		sellPrice: 91,
+		sellPrice: 76,
 		icon: require("@/assets/art/bartending/whiterussian.png"),
 		stats: {
 			regen: .45
@@ -168,7 +168,7 @@ const DRINKS = {
 	//t3power
 	drinkTequila: {
 		name: "Tequila",
-		sellPrice: 210,
+		sellPrice: 175,
 		icon: require("@/assets/art/bartending/tequila.png"),
 		stats: {
 			precision: 5,
@@ -178,7 +178,7 @@ const DRINKS = {
 	},
 	drinkLemonJuice: {
 		name: "Lemon Juice",
-		sellPrice: 220,
+		sellPrice: 183,
 		icon: require("@/assets/art/bartending/lemonjuice.png"),
 		stats: {
 			power: 5,
@@ -188,7 +188,7 @@ const DRINKS = {
 	},
 	drinkManhattan: {
 		name: "Manhattan",
-		sellPrice: 230,
+		sellPrice: 192,
 		icon: require("@/assets/art/bartending/manhattan.png"),
 		stats: {
 			evasion: 5,
@@ -198,7 +198,7 @@ const DRINKS = {
 	},
 	drinkManhattanProject: {
 		name: "Manhattan Project",
-		sellPrice: 240,
+		sellPrice: 200,
 		icon: require("@/assets/art/bartending/anim/manhattan_proj.gif"),
 		stats: {
 			luck: 20,
@@ -208,7 +208,7 @@ const DRINKS = {
 	//t3slime
 	drinkBilk: {
 		name: "Bilk",
-		sellPrice: 250,
+		sellPrice: 208,
 		icon: require("@/assets/art/bartending/bilk.png"),
 		stats: {
 			precision: 5,
@@ -218,7 +218,7 @@ const DRINKS = {
 	},
 	drinkTripleSec: {
 		name: "TripleSec",
-		sellPrice: 259,
+		sellPrice: 216,
 		icon: require("@/assets/art/bartending/triplesec.png"),
 		stats: {
 			power: 5,
@@ -228,7 +228,7 @@ const DRINKS = {
 	},
 	drinkIrishCB: {
 		name: "Irish Car Bomb",
-		sellPrice: 269,
+		sellPrice: 224,
 		icon: require("@/assets/art/bartending/irishcarbomb.png"),
 		stats: {
 			evasion: 5,
@@ -238,7 +238,7 @@ const DRINKS = {
 	},
 	drinkLizardWine: {
 		name: "Lizard Wine",
-		sellPrice: 278,
+		sellPrice: 232,
 		icon: require("@/assets/art/bartending/lizardwine.png"),
 		stats: {
 			regen: .5
@@ -248,7 +248,7 @@ const DRINKS = {
 	//t4power
 	drinkAntiFreeze: {
 		name: "Anti-Freeze",
-		sellPrice: 155,
+		sellPrice: 129,
 		icon: require("@/assets/art/bartending/antifreeze.png"),
 		stats: {
 			precision: 6,
@@ -258,7 +258,7 @@ const DRINKS = {
 	},
 	drinkChangelingSting: {
 		name: "Changeling Sting",
-		sellPrice: 160,
+		sellPrice: 133,
 		icon: require("@/assets/art/bartending/anim/changelingsting.gif"),
 		stats: {
 			power: 6,
@@ -268,7 +268,7 @@ const DRINKS = {
 	},
 	drinkBeepskySmash: {
 		name: "Beepsky Smash",
-		sellPrice: 165,
+		sellPrice: 138,
 		icon: require("@/assets/art/bartending/anim/beepskysmash.gif"),
 		stats: {
 			evasion: 6,
@@ -278,7 +278,7 @@ const DRINKS = {
 	},
 	drinkSingulo: {
 		name: "Singulo",
-		sellPrice: 170,
+		sellPrice: 142,
 		icon: require("@/assets/art/bartending/anim/singulo.gif"),
 		stats: {
 			luck: 22,
@@ -288,7 +288,7 @@ const DRINKS = {
 	//t4slime
 	drinkSyndicateBomb: {
 		name: "Syndicate Bomb",
-		sellPrice: 192,
+		sellPrice: 160,
 		icon: require("@/assets/art/bartending/syndicatebomb.png"),
 		stats: {
 			precision: 6,
@@ -298,7 +298,7 @@ const DRINKS = {
 	},
 	drinkDemonsBlood: {
 		name: "Demon's Blood",
-		sellPrice: 197,
+		sellPrice: 164,
 		icon: require("@/assets/art/bartending/anim/demonsblood.gif"),
 		stats: {
 			power: 6,
@@ -308,7 +308,7 @@ const DRINKS = {
 	},
 	drinkNeurotoxin: {
 		name: "Neurotoxin",
-		sellPrice: 202,
+		sellPrice: 168,
 		icon: require("@/assets/art/bartending/anim/neurotoxin.gif"),
 		stats: {
 			evasion: 6,
@@ -318,7 +318,7 @@ const DRINKS = {
 	},
 	drinkWhat: {
 		name: "Mistake",
-		sellPrice: 206,
+		sellPrice: 172,
 		icon: require("@/assets/art/bartending/whatdrink.png"),
 		stats: {
 			regen: .55
@@ -328,7 +328,7 @@ const DRINKS = {
 	//t5
 	drinkGargleBlaster: {
 		name: "Pan-Galactic Gargle Blaster",
-		sellPrice: 450,
+		sellPrice: 375,
 		icon: require("@/assets/art/bartending/anim/gargleblaster.gif"),
 		healAmount: 40,
 		stats: {
@@ -338,7 +338,7 @@ const DRINKS = {
 	},
 	drinkB52: {
 		name: "B-52",
-		sellPrice: 460,
+		sellPrice: 383,
 		icon: require("@/assets/art/bartending/anim/b52_flaming.gif"),
 		healAmount: 40,
 		stats: {
@@ -348,7 +348,7 @@ const DRINKS = {
 	},
 	drinkNukaCola: {
 		name: "Nuka-Cola", //call it "spicy" in the description
-		sellPrice: 500,
+		sellPrice: 417,
 		icon: require("@/assets/art/bartending/anim/nukacola.gif"),
 		healAmount: 40,
 		stats: {
@@ -359,7 +359,7 @@ const DRINKS = {
 	},
 	drinkQuicky: {
 		name: "Quicky",
-		sellPrice: 461,
+		sellPrice: 384,
 		icon: require("@/assets/art/bartending/quicky.png"),
 		healAmount: 40,
 		stats: {
@@ -369,7 +369,7 @@ const DRINKS = {
 	},
 	drinkDoctorsDelight: {
 		name: "Doctor's Delight",
-		sellPrice: 470,
+		sellPrice: 392,
 		icon: require("@/assets/art/bartending/anim/doctorsdelight.gif"),
 		healAmount: 40,
 		stats: {
@@ -379,7 +379,7 @@ const DRINKS = {
 	},
 	drinkAtomicBomb: {
 		name: "Atomic Bomb",
-		sellPrice: 480,
+		sellPrice: 400,
 		icon: require("@/assets/art/bartending/anim/atomicbomb.gif"),
 		healAmount: 40,
 		stats: {

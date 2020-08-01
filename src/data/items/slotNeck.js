@@ -272,7 +272,7 @@ export default {
 		stats: {
 			maxHealth: 8,
 			evasion: 0,
-			precision:30,
+			precision:3,
 			power: 1,
 		},
 		requires: {

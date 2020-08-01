@@ -17,7 +17,7 @@ const ACTIONS_CULTBASE = {
 		healthCost: 10,
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 5,
-		requiredLevel: 20,
+		requiredLevel: 10,
 	},
 	blood3: {
 		time: 10,
@@ -28,7 +28,7 @@ const ACTIONS_CULTBASE = {
 		healthCost: 25,
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 12,
-		requiredLevel: 30,
+		requiredLevel: 20,
 	},
 	blood4: {
 		time: 10,
@@ -39,7 +39,7 @@ const ACTIONS_CULTBASE = {
 		healthCost: 40,
 		icon: require("@/assets/art/cult/blood.png"),
 		xp: 20,
-		requiredLevel: 10,
+		requiredLevel: 30,
 	},
 	blood5: {
 		time: 10,
