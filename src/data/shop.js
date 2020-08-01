@@ -107,7 +107,8 @@ const JOB_UNLOCKS = {
 		upgrade: "cookingUnlocked",
 		requiredUpgrades: {
 			cookingUnlocked: 0
-		}
+		},
+		hideIfXP: "cooking"
 	},
 	unlockBartending: {
 		name: "Unlock Bartending",
@@ -119,7 +120,8 @@ const JOB_UNLOCKS = {
 		upgrade: "bartendingUnlocked",
 		requiredUpgrades: {
 			bartendingUnlocked: 0
-		}
+		},
+		hideIfXP: "bartending"
 	},
 	unlockFabrication: {
 		name: "Unlock Fabrication",
@@ -132,7 +134,8 @@ const JOB_UNLOCKS = {
 		upgrade: "fabricationUnlocked",
 		requiredUpgrades: {
 			fabricationUnlocked: 0
-		}
+		},
+		hideIfXP: "fabrication"
 	},
 	unlockTinkering: {
 		name: "Unlock Tinkering",
@@ -144,7 +147,8 @@ const JOB_UNLOCKS = {
 		upgrade: "tinkeringUnlocked",
 		requiredUpgrades: {
 			tinkeringUnlocked: 0
-		}
+		},
+		hideIfXP: "tinkering"
 	},
 	unlockChemistry: {
 		name: "Unlock Chemistry",
@@ -156,7 +160,8 @@ const JOB_UNLOCKS = {
 		upgrade: "chemistryUnlocked",
 		requiredUpgrades: {
 			chemistryUnlocked: 0
-		}
+		},
+		hideIfXP: "chemistry"
 	},
 	unlockXenobiology: {
 		name: "Unlock Xenobiology",
@@ -168,7 +173,8 @@ const JOB_UNLOCKS = {
 		upgrade: "xenobiologyUnlocked",
 		requiredUpgrades: {
 			xenobiologyUnlocked: 0
-		}
+		},
+		hideIfXP: "xenobiology"
 	},
 	unlockShitposting: {
 		name: "Unlock ???",
@@ -180,7 +186,8 @@ const JOB_UNLOCKS = {
 		upgrade: "shitpostingUnlocked",
 		requiredUpgrades: {
 			shitpostingUnlocked: 0
-		}
+		},
+		hideIfXP: "shitposting"
 	},
 	unlockCargonia: {
 		name: "Unlock Cargonia",
@@ -192,7 +199,8 @@ const JOB_UNLOCKS = {
 		upgrade: "cargoniaUnlocked",
 		requiredUpgrades: {
 			cargoniaUnlocked: 0
-		}
+		},
+		hideIfXP: "cargonia"
 	},
 	unlockTraitor: {
 		name: "Unlock Traitor",
@@ -208,7 +216,8 @@ const JOB_UNLOCKS = {
 		upgrade: "traitorUnlocked",
 		requiredUpgrades: {
 			traitorUnlocked: 0
-		}
+		},
+		hideIfXP: "traitor"
 	},
 	unlockCult: {
 		name: "Unlock Cult",
@@ -220,7 +229,8 @@ const JOB_UNLOCKS = {
 		upgrade: "cultUnlocked",
 		requiredUpgrades: {
 			cultUnlocked: 0
-		}
+		},
+		hideIfXP: "cult"
 	},
 	unlockLing: {
 		name: "Unlock Changeling",
@@ -232,7 +242,8 @@ const JOB_UNLOCKS = {
 		upgrade: "lingUnlocked",
 		requiredUpgrades: {
 			lingUnlocked: 0
-		}
+		},
+		hideIfXP: "ling"
 	},
 }
 
