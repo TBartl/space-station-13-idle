@@ -2,8 +2,8 @@ const ACTIONS_LINGBASE = {
 	ling0: {
 		time: 800,
 		actionName: "INGEST",
+		item: 'foodMeatH',
 		name: "ALIEN ORGAN",
-		items: "lingPower0",
 		icon: require("@/assets/art/ling/headcrab.png"),
 		xp: 864,
 		requiredItems: { startLing: 1 },
@@ -464,5 +464,6 @@ export const JOB = {
 	id: "ling",
 	name: "Changeling",
 	icon: require("@/assets/art/ling/icon.png"),
-	color: "#f8b680"
+	color: "#f8b680",
+	noJobBlitz: true
 }

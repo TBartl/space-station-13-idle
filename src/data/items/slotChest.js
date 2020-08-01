@@ -341,6 +341,7 @@ const SPECIALARMOR = {
 			protection: 9,
 			precision: 8,
 			power: 8,
+			regen: .5
 		},
 		requires: {
 			xenobiology: 10,

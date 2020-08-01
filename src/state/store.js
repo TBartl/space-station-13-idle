@@ -58,7 +58,6 @@ const modules = {
 	traitor,
 	cult,
 	ling,
-  
 	precision,
 	meleePower,
 	rangedPower,
@@ -105,6 +104,7 @@ function customMerge(obj, source, root = true, softReset = false) {
 			}
 		}
 		else {
+			if (root && !source[key]) return;
 			Vue.set(obj, key, source[key]);
 		}
 	});
@@ -136,7 +136,7 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	update2Seen: false
+	update3Seen: false
 }
 
 let initialState = cloneDeep(state);
@@ -178,7 +178,6 @@ const store = new Vuex.Store({
 					return !!activeAction.chronoProhibited;
 				}
 			}
-			
 		}
 	},
 	mutations: {

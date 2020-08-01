@@ -63,8 +63,12 @@ export default {
 	},
 	totsuit1: {
 		name: "Custom Mauler",
+		equipmentSlot: "chest",
+		overlayAppearInBack: true,
+		overlayBlurry: true,
 		sellPrice: 47465,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
+		overlay: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		stats: {
 			moveTime: 6.5,
 			maxHealth: 195,
@@ -80,6 +84,7 @@ export default {
 	},
 	totsuit2: {
 		name: "Custom Syndicate Hardsuit",
+		equipmentSlot: "chest",
 		sellPrice: 1240,
 		icon: require("@/assets/art/combat/items/arm_syndi.png"), overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
 		stats: {
@@ -97,6 +102,7 @@ export default {
 		name: "Elite Syndicate Hardsuit",
 		sellPrice: 1240,
 		icon: require("@/assets/art/combat/items/arm_syndiTOT.png"), overlay: require("@/assets/art/combat/items/arm_syndiTOT_overlay.png"),
+		equipmentSlot: "chest",
 		stats: {
 			regen: 2,
 			maxHealth: 270,

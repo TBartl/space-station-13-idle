@@ -110,8 +110,8 @@ export default {
 		equipmentSlot: "limb",
 		overlay: require("@/assets/art/combat/items/limb/shoe_clown_overlay.png"),
 		stats: {
-			maxHealth: 200,
-			precision: -14,
+			maxHealth: 300,
+			precision: -10,
 			power: 5,
 			evasion: 5,
 			protection: 0,

@@ -141,15 +141,15 @@ const POTIONS = {
 		name: "Heparin",
 		sellPrice: 42,
 		icon: require("@/assets/art/chemistry/chemCult.png"),
-		description: "You can sacrifice twice as quickly.",
+		description: "Your cult sacrifices are twice as fast.",
 		potionJob: "cult",
 		potionCharges: 10
 	},
 	potionLing: {
-		name: "Tofurky",
+		name: "Tofurky Proteins",
 		sellPrice: 132,
 		icon: require("@/assets/art/chemistry/chemLing.png"),
-		description: "Forming requires one less meat.",
+		description: "Changeling actions require one less meat.",
 		potionJob: "ling",
 		potionCharges: 10
 	}

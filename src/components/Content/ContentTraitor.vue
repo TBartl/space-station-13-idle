@@ -22,10 +22,21 @@
       >
         <template slot="Back">
           <span>
-          Some idiot left their communicator open and now there are<img :src="require('@/assets/art/shop/items/telecrystal.png')"/><b>Telecrystals</b>
-            all over this station. The syndicate isn't sending you unlimited gear to you so you get
-            <img :src="require('@/assets/art/traitor/telecrystal.png')" />
-            <b>these</b> instead.            
+            Some idiot left their communicator open and now there are
+            <img
+              :src="require('@/assets/art/shop/items/telecrystal.png')"
+              class="mx--2"
+            />
+            <b>Telecrystals</b>
+            all over this station.
+          </span>
+          <span>
+            The syndicate isn't sending you unlimited gear so you get
+            <img
+              :src="require('@/assets/art/traitor/telecrystal.png')"
+              class="mx--2"
+            />
+            <b>These</b> instead.
           </span>
         </template>
         <template slot="Telecrystal?">
@@ -33,20 +44,25 @@
           <span>Spend them however you want in your uplink below, because you're not getting more.</span>
           <span>
             I know they are ugly but you have to use
-            <img :src="require('@/assets/art/traitor/telecrystal.png')" />
+            <img
+              :src="require('@/assets/art/traitor/telecrystal.png')"
+              class="mx--2"
+            />
             <b>Imprinted Telecrystals</b> rather than the normal red ones.
           </span>
         </template>
 
         <template slot="Extra?">
-          <span>Complete your assigned mission first and we can discuss promotions again later. Maybe you can get in with the 
-            <img :src="require('@/assets/art/combat/enemies/boss/OPl6.png')" />
-            <b>big boys</b>.
+          <span>
+            Complete your assigned mission first and we can discuss promotions again later. Maybe you can get in with the
+            <img
+              :src="require('@/assets/art/combat/enemies/boss/OPl6.png')"
+            />
+            <b>Big Boys</b>.
           </span>
         </template>
-        
       </job-info>
- 
+
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"

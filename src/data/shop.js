@@ -13,7 +13,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Job Unlocks",
-		purchases: ["unlockFabrication", "unlockTinkering", "unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor", "unlockCult", "unlockLing"]
+		purchases: ["unlockFabrication", "unlockTinkering", "unlockChemistry", "unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor", "unlockCult", "unlockLing"]
 	},
 	{
 		name: "Job Upgrades",
@@ -126,8 +126,8 @@ const JOB_UNLOCKS = {
 		description: "Allows you to turn raw minerals into ranged weapons and exosuits",
 		icon: require('@/assets/art/fabrication/icon.png'),
 		requiredItems: {
-			glass: 20,
-			power: 20,
+			glass: 10,
+			power: 10,
 		},
 		upgrade: "fabricationUnlocked",
 		requiredUpgrades: {
@@ -139,11 +139,23 @@ const JOB_UNLOCKS = {
 		description: "Allows you to turn junk into weapons and armor",
 		icon: require('@/assets/art/tinkering/icon.png'),
 		requiredItems: {
-			junk: 5
+			junk: 3
 		},
 		upgrade: "tinkeringUnlocked",
 		requiredUpgrades: {
 			tinkeringUnlocked: 0
+		}
+	},
+	unlockChemistry: {
+		name: "Unlock Chemistry",
+		description: "Allows you to turn energy into job-boosting CHEMs and combat-boosting pills",
+		icon: require('@/assets/art/chemistry/icon.png'),
+		requiredItems: {
+			power: 20
+		},
+		upgrade: "chemistryUnlocked",
+		requiredUpgrades: {
+			chemistryUnlocked: 0
 		}
 	},
 	unlockXenobiology: {
@@ -188,6 +200,10 @@ const JOB_UNLOCKS = {
 		icon: require('@/assets/art/traitor/icon.png'),
 		requiredItems: {
 			antag: 1
+		},
+		items: {
+			id: "spendTC",
+			count: 20
 		},
 		upgrade: "traitorUnlocked",
 		requiredUpgrades: {

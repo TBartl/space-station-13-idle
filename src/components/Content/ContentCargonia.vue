@@ -22,25 +22,41 @@
       >
         <template slot="Back">
           <span>
-          So you're here to actually join the resistance? Just act like you are doing your duty bringing in<img
+            So you're here to actually join the resistance? Just act like you're doing your duty bringing in
+            <img
               :src="require('@/assets/art/cargonia/mineral2.png')"
-            /><b>shipments</b>. Once we have enough arms             <img
+              class="mx--0"
+            />
+            <b>Shipments</b>.
+          </span>
+          <span>
+            Once we have enough
+            <img
               :src="require('@/assets/art/combat/items/hand/gunR_naggant.png')"
-            /> <b>arms</b> we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute<img
+              class="mx--0"
+            />
+            <b>Arms</b> we can declare our independence for good. Keep an eye out for anyone that might support the cause or be willing to contribute
+            <img
               :src="require('@/assets/art/validhunting/guilty.png')"
-            /><b>funds</b>.
+              class="mx--2"
+            />
+            <b>Funds</b>.
           </span>
         </template>
         <template slot="Join">
-          <span>We're having a bit of an employeement dispute with<img
+          <span>
+            We're having a bit of an employeement dispute with
+            <img
               :src="require('@/assets/art/misc/logo-square.png')"
-            /><b>Nanotrasen</b> right now. If you want to prove what side you are on you'll need to prove it.</span>
-          <span>There are some<img
-              :src="require('@/assets/art/shop/items/startcargonia.png')"
-            /><b>flashes</b> laying around in 
-                        <img
-              :src="require('@/assets/art/shop/items/droppod.png')"
-            /><b>supply caches</b> across the station. Get me one.
+            />
+            <b>Nanotrasen</b> right now. If you want to prove what side you are on you'll need to prove it.
+          </span>
+          <span>
+            There are some
+            <img :src="require('@/assets/art/shop/items/startcargonia.png')" class="mx--0" />
+            <b>Flashes</b> laying around in
+            <img :src="require('@/assets/art/shop/items/droppod.png')" class="mx--0"/>
+            <b>Supply Caches</b> across the station. Get me one.
           </span>
         </template>
 
@@ -51,11 +67,12 @@
             Wait you're still here? What are you doing go move
             <img
               :src="require('@/assets/art/shop/items/hatcrate.png')"
-            /><b> freight!</b>
+            />
+            <b>Freight!</b>
           </span>
         </template>
       </job-info>
- 
+
       <div
         class="tier row"
         v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"

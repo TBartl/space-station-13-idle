@@ -196,7 +196,7 @@ export default {
 			maxHealth: 170,
 			evasion: 0,
 			protection: 0,
-			precision: -10,
+			precision: 0,
 			power: 0,
 		},
 		requires: {

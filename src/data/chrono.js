@@ -3,9 +3,9 @@ import { xpFromLevel } from '@/data/experience'
 import { EventBus } from "@/utils/eventBus.js";
 
 export const BASE_BONUS = 5;
-export const ITEM_INTERVALS = [40, 65, 85, 92, 97, 100];
+export const ITEM_INTERVALS = [20, 35, 50, 65, 75, 85, 92, 97, 100];
 export const ENEMY_INTERVALS = [60, 80, 100];
-export const JOB_INTERVALS = [40, 60, 80, 90, 95, 97, 99, 100];
+export const JOB_INTERVALS = [25, 45, 60, 70, 80, 90, 95, 97, 99, 100];
 
 const BASE_PURCHASES = {
 	resetSimulation: {
@@ -46,12 +46,9 @@ const BASE_PURCHASES = {
 	antagRoll1: {
 		name: "Antag Roll",
 		description: "Acquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 10
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -64,12 +61,9 @@ const BASE_PURCHASES = {
 	antagRoll2: {
 		name: "Antag Roll",
 		description: "Acquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 50
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -82,12 +76,9 @@ const BASE_PURCHASES = {
 	antagRoll3: {
 		name: "Antag Roll",
 		description: "Acquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 100
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -100,12 +91,9 @@ const BASE_PURCHASES = {
 	antagRoll4: {
 		name: "Antag Roll",
 		description: "Acquire aid from a nefarious faction.",
-		icon: require('@/assets/art/chrono/timebank.png'),
+		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
 			bluetime: 200
-		},
-		onPurchase(store) {
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `DEBUG`, duration: 2500 });
 		},
 		items: {
 			id: "antag",
@@ -184,7 +172,7 @@ ALL_JOBS.forEach(job => {
 	for (let i = 0; i < 5; i++) {
 		let isValidhunting = job.id == "validhunting";
 		if (job.isCombat && !isValidhunting) return;
-		if (job.id == "shitposting") return;
+		if (job.noJobBlitz) return;
 
 		let id = `level${job.id}`;
 		let from = Math.max(1, i * 10);
@@ -215,7 +203,7 @@ ALL_JOBS.forEach(job => {
 export const SECTIONS = [
 	{
 		name: "Chrono Exchange",
-		purchases: ["chronoToCash", "chronoToTime","antagRoll1","antagRoll2","antagRoll3","antagRoll4"]
+		purchases: ["chronoToCash", "chronoToTime", "antagRoll1", "antagRoll2", "antagRoll3", "antagRoll4"]
 	},
 	{
 		name: "Time Bank Upgrades",

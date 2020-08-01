@@ -23,18 +23,6 @@ const traitor = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				// Apply upgrades
 				action.time *= 1 / (1 + ANTAG_UPGRADE_PERCENT * upgradeCount);
-
-				
-				// Apply potion
-				// if (potionItemId == "potionTraitor") {
-				// 	let originalItem = action.item;
-				// 	delete action.item;
-
-
-				// 	let newDropTable = cloneDeep(potionDropTableCargonia);
-				// 	newDropTable.unshift({ chance: 1, item: originalItem })
-				// 	action.itemTables = newDropTable;
-				// }
 			}
 			return actions;
 		},

@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex flex-column align-items-center m-3 text-center">
-    <h3 class="text-center mb-3">Update 1.2 Released!</h3>
+    <h3 class="text-center mb-3">Update 1.3 Released!</h3>
 
-    <img :src="require('@/assets/art/misc/changelog2.png')" />
+    <img :src="require('@/assets/art/misc/changelog3.png')" />
 
     <span
       class="my-3"
