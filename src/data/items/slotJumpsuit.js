@@ -210,7 +210,7 @@ export default {
 		icon: require("@/assets/art/combat/items/jumpsuit_clown.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_clown_overlay.png"),
 		stats: {
-			maxHealth: 100,
+			maxHealth: 200,
 			precision: -5,
 			power: 0,
 			evasion: 8
