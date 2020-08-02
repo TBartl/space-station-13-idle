@@ -309,8 +309,8 @@ const RIFLE_GUNS = {
 	buyRgun2: {
 		time: 6,
 		icon: require("@/assets/art/combat/items/hand/gunR_wt5.png"),
-		xp: 18,
-		requiredLevel: 11,
+		xp: 8,
+		requiredLevel: 12,
 		item: "gunRifle2",
 		requiredItems: {
 			money: 420

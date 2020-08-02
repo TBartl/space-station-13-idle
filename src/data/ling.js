@@ -417,7 +417,7 @@ const ACTIONS_LINGFACE = {
 		}
 	},	
 	lingFace3: {
-		time: 31,
+		time: 9,
 		item: "faceLing3",
 		icon: require("@/assets/art/ling/ling4.png"),
 		xp: 31,
@@ -427,7 +427,7 @@ const ACTIONS_LINGFACE = {
 		}
 	},	
 	lingFace4: {
-		time: 37,
+		time: 9,
 		item: "faceLing4",
 		icon: require("@/assets/art/ling/ling5.png"),
 		xp: 37,
@@ -437,7 +437,7 @@ const ACTIONS_LINGFACE = {
 		}
 	},	
 	lingFace5: {
-		time: 48,
+		time: 9,
 		item: "faceLing5",
 		icon: require("@/assets/art/ling/ling6.png"),
 		xp: 48,
