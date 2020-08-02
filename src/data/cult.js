@@ -130,46 +130,46 @@ const ACTIONS_BRUNE = {
 }
 const ACTIONS_CULTPANION = {
 	sac1: {
-		time: 20,
+		time: 200,
 		item: "companionMousecult",
-		xp: 230,
+		xp: 390,
 		requiredLevel: 13,
-		requiredItems: { unholyfavor: 1 , companionMouse: 1 }
+		requiredItems: { unholyfavor: 12 , companionMouse: 1 }
 	},
 	sac2: {
-		time: 20,
+		time: 200,
 		item: "companionDogcult",
-		xp: 430,
+		xp: 690,
 		requiredLevel: 23,
-		requiredItems: { unholyfavor: 2 , companionDog: 1 }
+		requiredItems: { unholyfavor: 24 , companionDog: 1 }
 	},
 	sac3: {
-		time: 20,
+		time: 200,
 		item: "companionCatcult",
-		xp: 430,
+		xp: 690,
 		requiredLevel: 23,
-		requiredItems: { unholyfavor: 4 , companionCat: 1 }
+		requiredItems: { unholyfavor: 36 , companionCat: 1 }
 	},
 	sac4: {
-		time: 20,
+		time: 200,
 		item: "companionFoxcult",
-		xp: 63,
+		xp: 990,
 		requiredLevel: 33,
-		requiredItems: { unholyfavor: 8 , companionFox: 1 }
+		requiredItems: { unholyfavor: 48 , companionFox: 1 }
 	},
 	sac5: {
-		time: 20,
+		time: 200,
 		item: "companionGoatcult",
-		xp: 830,
+		xp: 1290,
 		requiredLevel: 43,
-		requiredItems: { unholyfavor: 16, companionGoat: 1  }
+		requiredItems: { unholyfavor: 56, companionGoat: 1  }
 	},
 	sac6: {
-		time: 20,
+		time: 200,
 		item: "companionBeecult",
-		xp: 500,
+		xp: 1500,
 		requiredLevel: 50,
-		requiredItems: { unholyfavor: 32, companionBee: 1  }
+		requiredItems: { unholyfavor: 64, companionBee: 1  }
 	},
 }
 
