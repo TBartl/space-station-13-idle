@@ -184,6 +184,25 @@ export default {
 			evasion: 5
 		}
 	},
+	jumpsuitBartending: {
+		name: "Bartending Jumpsuit",
+		sellPrice: 300,
+		equipmentSlot: "jumpsuit",
+		icon: require("@/assets/art/combat/items/jumpsuit_bartender.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_bartender_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 3,
+			precision:5
+		},
+		description: "+20% Bartending XP",
+		xpBonuses: {
+			bartending: 20
+		},
+		requires: {
+			evasion: 5
+		}
+	},
 	jumpsuitSecurity: {
 		name: "Security Officer Jumpsuit",
 		sellPrice: 300,
@@ -245,6 +264,7 @@ export default {
 			tinkering: 50,
 			botany: 50,
 			cooking: 50,
+			bartending: 50,
 			xenobiology: 50,
 			chemistry: 50,
 			shitposting: 50,

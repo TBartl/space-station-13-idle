@@ -87,7 +87,12 @@ export default {
 						weight: 2,
 					},
 				]
-			}, {
+			},
+			{
+				chance: .02,
+				item: "jumpsuitBartending"
+			},
+			{
 				chance: 1,
 				item: "foodMeatZ"
 			}
