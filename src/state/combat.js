@@ -57,6 +57,15 @@ const combat = {
 				skill = getters.isRanged ? "rangedPower" : "meleePower";
 			}
 			return skill;
+		},
+		isActive(state, getters, rootState, rootGetters) {
+			let targetEnemy = getters["targetEnemy"];
+			if (!targetEnemy) return false;
+
+			let isBoss = ENEMIES[targetEnemy].boss;
+			if (isBoss && rootGetters["enemyMob/health"] <= 0) return false;
+
+			return true;
 		}
 	},
 	mutations: {

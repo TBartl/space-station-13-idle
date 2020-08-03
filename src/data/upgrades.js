@@ -363,7 +363,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-export const BARTENDING_UPGRADE_INCREMENT = .05;
+export const BARTENDING_UPGRADE_INCREMENT = .04;
 export const BARTENDING_UPGRADE_CAP = 5;
 const BARTENDING_UPGRADES = {}
 for (let i = 0; i < 5; i++) {

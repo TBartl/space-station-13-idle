@@ -159,8 +159,8 @@ const store = new Vuex.Store({
 			return state.welcomeMessageSeen;
 		},
 		isAnyAction(state, getters) {
-			let isCombat = getters["combat/targetEnemy"];
-			if (isCombat) return true;
+			if (getters["combat/isActive"]) return true;
+
 			for (let [moduleName, module] of Object.entries(modules)) {
 				let isActiveFunc = getters[`${moduleName}/currentActionId`];
 				if (isActiveFunc) return true;
@@ -169,8 +169,8 @@ const store = new Vuex.Store({
 			return false;
 		},
 		isActionChronoProhibited(state, getters) {
-			let isCombat = getters["combat/targetEnemy"];
-			if (isCombat) return false;
+			if (getters["combat/isActive"]) return false;
+
 			for (let [moduleName, module] of Object.entries(modules)) {
 				let activeActionName = getters[`${moduleName}/currentActionId`];
 				if (activeActionName) {
