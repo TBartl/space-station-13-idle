@@ -54,7 +54,7 @@ export default {
 			command: -4,
 			precision: 20,
 			attackSpeed: 2.3,
-			power: 14,
+			power: 23,
 			damageType: "burn"
 		},
 		requires: {

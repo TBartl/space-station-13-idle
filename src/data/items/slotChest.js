@@ -402,7 +402,7 @@ const LINGAIM = {
 	lingAim5: {
 		name: "Arm Enhancement",
 		equipmentSlot: "chest",
-		sellPrice: 689,
+		sellPrice: 15300,
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"), overlay: require("@/assets/art/combat/items/chest/arm_la5_overlay.png"),
 		stats: {
 			maxHealth: 15625,
@@ -489,7 +489,7 @@ const LINGPOWER = {
 	lingPower6: {
 		name: "Reinforced Body",
 		equipmentSlot: "chest",
-		sellPrice: 834,
+		sellPrice: 18750,
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"), overlay: require("@/assets/art/combat/items/chest/arm_lp6_overlay.png"),
 		stats: {
 			maxHealth: 18750,
