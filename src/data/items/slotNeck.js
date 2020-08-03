@@ -150,7 +150,7 @@ export default {
 			bartending: MAX_LEVEL
 		},
 		description: "+1 Bartending Upgrade",
-		providesUpgrade: "boozeDispenser"
+		providesUpgrade: "drinkTable"
 	},
 	capeXenobiology: {
 		name: "Xenobiology Mastery Cloak",
