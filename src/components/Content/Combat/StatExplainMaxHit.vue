@@ -5,7 +5,7 @@
 		<br>
     <p>power: {{stats.power | stat}}</p>
     <p>atkSpeed: {{stats.attackSpeed | stat}}</p>
-    <p>luck: {{stats.power | stat}}</p>
+    <p>luck: {{stats.luck | stat}}%</p>
     <p v-if="targetProtection">targetProtection: {{targetProtection}}%</p>
     <br />
     <p>dps = BASE_DPS + POWER_RATIO * power</p>
