@@ -383,7 +383,7 @@ export default {
 .audit {
   background-color: rgba(128, 128, 128, 0.178);
   border-radius: 8px;
-  width: 280px;
+  min-width: 280px;
 }
 .disabled {
   opacity: 0.4;
