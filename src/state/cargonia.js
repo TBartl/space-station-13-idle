@@ -47,7 +47,10 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				// Apply potion
 				if (potionItemId == "potionCargonia") {
 					let originalItems = action.items;
-					if (!originalItems) continue;
+					if (!originalItems) {
+						action.preservePotion = true;
+						continue;
+					}
 					if (originalItems.id != "money") {
 						action.preservePotion = true;
 						continue;

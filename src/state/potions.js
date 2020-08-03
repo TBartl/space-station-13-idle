@@ -48,7 +48,6 @@ const upgrades = {
 			if (state.potions[jobId].charges <= 0) {
 				let itemId = state.potions[jobId].itemId;
 				if (rootGetters["inventory/bank"][itemId]) {
-					console.log("Set");
 					dispatch("set", state.potions[jobId].itemId);
 				} else {
 					commit("_remove", jobId);
