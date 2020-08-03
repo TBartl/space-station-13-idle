@@ -912,6 +912,28 @@ const GBULLET = {
 		}
 	},
 }
+const LINGBRUTE = {
+	lingBrute1: {
+		name: "Armblade",
+		sellPrice: 2500,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/ling/lingbrute1.png"),
+		overlay: require("@/assets/art/ling/lingbrute1_overlay.png"),
+		stats: {
+			attackSpeed: 3,
+			maxHealth: 200,
+			evasion: -15,
+			command: -5,
+			precision: 15,
+			power: 20
+		},
+		requires: {
+			meleePower: 25,
+			precision: 25,
+			evasion: 25
+		}
+	},
+}
 // 	mechGunEnergyRifle: {
 // 		name: "Mech Energy Rifle",
 // 		sellPrice: 0,
@@ -1047,7 +1069,8 @@ const WEAPONS = {
 	...MENERGY,
 	...MSHIELD,
 	...GENERGY,
-	...GBULLET
+	...GBULLET,
+	...LINGBRUTE
 }
 
 Object.values(WEAPONS).forEach(weapon => {
