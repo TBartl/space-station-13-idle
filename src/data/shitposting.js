@@ -171,7 +171,7 @@ export const ACTIONS = {
 			oil: 1,
 			headEpic1: 1,
 			capeChemistry: 1,
-			neckFanny: 1,
+			neckFanny1: 1,
 			jumpsuitMedical: 1
 		}
 	}
