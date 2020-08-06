@@ -116,7 +116,6 @@ const POWER = {
 			id: "drinkAntiFreeze",
 			count: 3,
 		},
-        item: "drinkAntiFreeze",
         icon: require("@/assets/art/bartending/antifreeze.png"),
         time: 5,
         xp: 15,

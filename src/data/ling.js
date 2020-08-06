@@ -43,7 +43,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim2: {
 		time: 9,
-		name: "Leg Enhancements",
+		name: "Enhanced Nerves",
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"),
 		xp: 15,
 		requiredLevel: 17,
@@ -74,7 +74,7 @@ const ACTIONS_LINGAIM = {
 	},
 	lingAim3: {
 		time: 9,
-		name: "Enhanced Nerves",
+		name: "Leg Enhancements",
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"),
 		xp: 21,
 		requiredLevel: 24,
