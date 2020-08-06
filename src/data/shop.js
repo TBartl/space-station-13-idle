@@ -447,7 +447,7 @@ const CRATES = {
 	},
 	wizCrate: {
 		item: "wizCrate",
-		description: "This magical vending machine is just too arcane to use. It looks like it has a slot to put scrolls in?.",
+		description: "This magical vending machine is just too arcane to use. It looks like it has a slot to put scrolls in?",
 		requiredItems: {
 			wizParts: 20,
 		}
