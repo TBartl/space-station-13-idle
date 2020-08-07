@@ -133,7 +133,7 @@ const POTIONS = {
 		name: "Social Lubricant",
 		sellPrice: 66,
 		icon: require("@/assets/art/chemistry/cargonia.png"),
-		description: "Whenever you get money from cargonia, also get that much power.",
+		description: "Whenever you get money from cargonia, you may also get that much power.",
 		potionJob: "cargonia",
 		potionCharges: 1
 	},
