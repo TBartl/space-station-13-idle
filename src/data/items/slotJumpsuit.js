@@ -257,18 +257,18 @@ export default {
 		},
 		description: "+50% XP to all default jobs",
 		xpBonuses: {
-			mining: 50,
-			engineering: 50,
-			fabrication: 50,
-			graytiding: 50,
-			tinkering: 50,
-			botany: 50,
-			cooking: 50,
-			bartending: 50,
-			xenobiology: 50,
-			chemistry: 50,
-			shitposting: 50,
-			validhunting: 50
+			mining: 30,
+			engineering: 30,
+			fabrication: 30,
+			graytiding: 30,
+			tinkering: 30,
+			botany: 30,
+			cooking: 30,
+			bartending: 30,
+			xenobiology: 30,
+			chemistry: 30,
+			shitposting: 30,
+			validhunting: 30
 		},
 		requires: {
 			evasion: 1
@@ -276,20 +276,20 @@ export default {
 	},
 	jumpsuitTactical: {
 		name: "Syndicate Jumpsuit",
-		sellPrice: 7777,
+		sellPrice: 4444,
 		equipmentSlot: "jumpsuit",
 		icon: require("@/assets/art/combat/items/jumpsuit_syndicate.png"),
 		overlay: require("@/assets/art/combat/items/jumpsuit_syndicate_overlay.png"),
 		stats: {
-			maxHealth: 77,
-			precision: 7,
-			command: 7,
-			power: 7,
-			evasion: 7,
-			luck: 7
+			maxHealth: 44,
+			precision: 4,
+			command: 4,
+			power: 4,
+			evasion: 4,
+			luck: 4
 		},
 		requires: {
-			evasion: 1
+			command: 4
 		}
 	},
 }

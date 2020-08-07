@@ -16,7 +16,7 @@ const ONETC = {
 		items:
 		{
 			id: "pillMeth",
-			count: 8888,
+			count: 888,
 		},
 		requiredItems: {
 			spendTC: 1
@@ -30,7 +30,7 @@ const ONETC = {
 		items:
 		{
 			id: "ammoBallistic2",
-			count: 8888,
+			count: 888,
 		},
 		requiredItems: {
 			spendTC: 1
@@ -44,7 +44,7 @@ const ONETC = {
 		items:
 		{
 			id: "ammoEnergy2",
-			count: 8888,
+			count: 888,
 		},
 		requiredItems: {
 			spendTC: 1
@@ -88,7 +88,7 @@ const TWOTC = {
 		items:
 		{
 			id: "foodPasta1",
-			count: 8888,
+			count: 888,
 		},
 		requiredItems: {
 			spendTC: 2
@@ -132,7 +132,7 @@ const THREETC = {
 		items:
 		{
 			id: "drinkSyndicateBomb",
-			count: 8888,
+			count: 888,
 		},
 		requiredItems: {
 			spendTC: 3
@@ -176,7 +176,7 @@ const FOURTC = {
 		items:
 		{
 			id: "slimeRainbow",
-			count: 888,
+			count: 88,
 		},
 		requiredItems: {
 			spendTC: 4
