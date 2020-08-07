@@ -17,7 +17,7 @@ export default {
 		}
 	},
 	limbMagkrava: {
-		name: "Mag Krava Gloves",
+		name: "Krav Maga Gloves",
 		sellPrice: 800,
 		icon: require("@/assets/art/combat/items/limb/glove_fightgloves.png"),
 		equipmentSlot: "limb",
