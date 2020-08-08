@@ -2,7 +2,7 @@ const ACTIONS_LINGBASE = {
 	ling0: {
 		time: 800,
 		actionName: "INGEST",
-		item: 'foodMeatH',
+		item: 'lingBrute1',
 		name: "ALIEN ORGAN",
 		icon: require("@/assets/art/ling/headcrab.png"),
 		xp: 864,
