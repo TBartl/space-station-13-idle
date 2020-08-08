@@ -255,7 +255,7 @@ export default {
 			power: 0,
 			evasion: 0,
 		},
-		description: "+50% XP to all default jobs",
+		description: "+30% XP to all default jobs",
 		xpBonuses: {
 			mining: 30,
 			engineering: 30,
