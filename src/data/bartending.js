@@ -169,7 +169,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkOrangeJuice",
-			count: 5,
+			count: 4,
 		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/orangejuice.png"),
@@ -197,7 +197,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkCream",
-			count: 5,
+			count: 4,
 		},
         actionName: "DISPENSE",
         icon: require("@/assets/art/bartending/cream.png"),
@@ -226,7 +226,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkSilencer",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/silencer.png"),
         time: 8,
@@ -252,7 +252,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkArnoldPalmer",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/arnoldpalmer.png"),
         time: 8,
@@ -279,7 +279,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkSyndicateBomb",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/syndicatebomb.png"),
         time: 8,
@@ -305,7 +305,7 @@ const SLIME = {
 		items:
 		{
 			id: "drinkNeurotoxin",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/anim/neurotoxin.gif"),
         time: 8,
@@ -429,7 +429,7 @@ const SLIMEPLUS = {
 		items:
 		{
 			id: "drinkBilk",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/bilk.png"),
         time: 16,
@@ -455,7 +455,7 @@ const SLIMEPLUS = {
 		items:
 		{
 			id: "drinkIrishCB",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/irishcarbomb.png"),
         time: 16,
@@ -481,7 +481,7 @@ const SLIMEPLUS = {
 		items:
 		{
 			id: "drinkQuicky",
-			count: 5,
+			count: 4,
 		},
         icon: require("@/assets/art/bartending/quicky.png"),
         time: 16,
