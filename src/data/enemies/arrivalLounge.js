@@ -38,7 +38,7 @@ export default {
 					},
 					{
 						id: 'tomatoBluespace',
-						weight: 5
+						weight: 1
 					}
 				]
 			},

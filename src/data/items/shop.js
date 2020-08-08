@@ -313,37 +313,37 @@ export default {
 			{
 				id: 'junk',
 				count: [1,25],
-				weight: 20
+				weight: 25
 			},
 			{
 				id: 'slimeBluespace',
-				weight: 25
+				weight: 15
 			},
 			{
 				id: 'meleeSharp3',
 				count: [1,20],
-				weight: 13
+				weight: 9
+			},
+			{
+				id: 'headEpic5',
+				weight: 1
 			},
 			{
 				id: 'startCargonia',
 				count: [1,10],
-				weight: 12
+				weight: 15
 			},
 						{
 				id: 'gunEnergy2',
-				weight: 11
+				weight: 13
 			},
 			{
 				id: 'meleeBurn1',
-				weight: 9
+				weight: 12
 			},
 			{
 				id: 'companionPai',
-				weight: 5
-			},
-			{
-				id: 'headEpic5',
-				weight: .1
+				weight: 10
 			},
 		]
 		},
@@ -354,37 +354,36 @@ export default {
 	itemTable: [
 		{
 			id: 'faceSecGlassess',
-			weight: 10
+			weight: 21
 		},
 		{
 			id: 'faceSec',
-			weight: 8
+			weight: 17
 		},
 		{
 			id: 'gunEnergy6',
-			weight: 5
-		},
-		{
-			id: 'startLing',
-			weight: 5
-		},
-		{
-			id: 'jumpsuitSecurity',
-			weight: 5
-		},
-		{
-			id: 'meleeBurn2',
-			weight: 4
-		},
-		{
-			id: 'armorSpecial1',
-			weight: 3
+			weight: 11
 		},
 		{
 			id: 'meleeBlunt9',
 			weight: 1
 		},
-
+		{
+			id: 'startLing',
+			weight: 19
+		},
+		{
+			id: 'jumpsuitSecurity',
+			weight: 13
+		},
+		{
+			id: 'meleeBurn2',
+			weight: 10
+		},
+		{
+			id: 'armorSpecial1',
+			weight: 8
+		},
 	]
 	},
 	lavaCrate: {
@@ -404,35 +403,34 @@ export default {
 			},
 			{
 				id: 'oxygen',
-				count: [0,500],
+				count: [0,1000],
 				weight: 5
 			},
 			{
 				id: 'mercury',
-				count: [0,500],
+				count: [0,1000],
 				weight: 5
 			},
 			{
 				id: 'slimeOil',
 				count: [0,50],
-				weight: 4
+				weight: 3
 			},
 			{
 				id: 'jumpsuitClown',
+				weight: 11
+			},
+			{
+				id: 'companionLava',
+				weight: 6
+			},
+			{
+				id: 'lingBrute1',
 				weight: 4
 			},
 			{
 				id: 'meleeShield1',
 				weight: 3
-			},
-			{
-				id: 'companionLava',
-				weight: 3
-			},
-			{
-				id: 'gold',
-				count: [50,250],
-				weight: 2
 			},
 			{
 				id: 'foot',
@@ -448,32 +446,32 @@ export default {
 			{
 				id: 'ammoBallistic4',
 				count: [0,100],
-				weight: 100
+				weight: 18
 			},
 			{
 				id: 'ammoEnergy4',
 				count: [0,100],
-				weight: 100
+				weight: 18
 			},
 			{
 				id: 'faceSyndicate',
-				weight: 80
-			},
-			{
-				id: 'meleeBurn4',
-				weight: 70
-			},
-			{
-				id: 'armorBurn6',
-				weight: 49
+				weight: 8
 			},
 			{
 				id: 'darkGygax',
-				weight: 43
+				weight: 6
+			},
+			{
+				id: 'meleeBurn4',
+				weight: 21
 			},
 			{
 				id: 'meleeBurn5',
-				weight: 40
+				weight: 16
+			},
+			{
+				id: 'armorBurn6',
+				weight: 13
 			}
 		]
 	},
@@ -484,35 +482,40 @@ export default {
 		itemTable: [
 			{
 				id: 'meleeBlunt3',
-				weight: 100
+				weight: 50
 			},
 			{
 				id: 'tomatoBluespace',
 				count: [1,50],
-				weight: 90
+				weight: 25
 			},
 			{
 				id: 'foodHuman4',
-				count: [1,50],
-				weight: 75
+				count: [1,250],
+				weight: 20
+			},
+			{
+				id: 'drinkDemonsBlood',
+				count: [1,250],
+				weight: 5
 			},
 			{
 				id: 'gunBallistic5',
-				weight: 71
-			},
-			{
-				id: 'unholywater',
-				weight: 70
+				weight: 50
 			},
 			{
 				id: 'gunEnergy7',
-				weight: 40
+				weight: 25
 			},
 			{
-				id: 'ticket60',
-				count: [1,2],
-				weight: 3
+				id: 'unholywater',
+				weight: 15
 			},
+			{
+				id: 'runeN1',
+				weight: 10
+			},
+
 		]
 	},
 	ertCrate: {
