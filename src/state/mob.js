@@ -18,7 +18,8 @@ export function createMobModule(mobType) {
 		},
 		state: {
 			mobType,
-			health: 100
+			health: 100,
+			ammoStreak: 0
 		},
 		getters: {
 			health(state) {
@@ -169,7 +170,16 @@ export function createMobModule(mobType) {
 				// Use ammo
 				var pocket = rootGetters["inventory/equipment"].pocket;
 				if (state.mobType == "player" && pocket.itemId && !rootGetters["inventory/checkRestricted"](pocket.itemId)) {
-					pocket.count -= 1;
+					if(rootGetters["upgrades/get"]("ammoSaver") > 0 && rootGetters["combat/isRanged"]) {
+						state.ammoStreak += 1;
+						if(state.ammoStreak == 5){
+							state.ammoStreak = 0;
+						} else {
+							pocket.count -= 1;
+						}
+					} else {
+						pocket.count -= 1;
+					}
 					if (pocket.count == 0) {
 						pocket.itemId = null;
 						EventBus.$emit("toast", { text: `Out of ammo!`, duration: 3000 });

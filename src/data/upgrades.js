@@ -121,7 +121,8 @@ export const COMBAT_UPGRADES = {
 		description: "Teaches you the art of eating only the parts of food that you need. Food has a 5% chance to not consumed when eaten.",
 		icon: require('@/assets/art/combat/upgrades/redbook.png'),
 		requiredItems: {
-			revParts: 5
+			revParts: 5,
+			money: 5000
 		},
 		upgrade: "foodSavingRoll",
 		requiredUpgrades: {
@@ -136,7 +137,8 @@ export const COMBAT_UPGRADES = {
 		description: "Perfectly efficient, allowing for more energy from less food. Food has an additional 5% chance to not be consumed when eaten.",
 		icon: require('@/assets/art/combat/upgrades/cyberstomach.png'),
 		requiredItems: {
-			telecrystal: 5
+			telecrystal: 5,
+			money: 25000
 		},
 		upgrade: "foodSavingRoll",
 		requiredUpgrades: {
@@ -144,6 +146,24 @@ export const COMBAT_UPGRADES = {
 		},
 		requiredLevels: {
 			validhunting: 25
+		}
+	},
+	ammoSaver: {
+		name: "Ammo Reclaimer",
+		description: "A lightweight device that can teleport fired bullets back into your gun. It will make every 5th bullet free.",
+		icon: require('@/assets/art/combat/upgrades/bluespace_core.png'),
+		requiredItems: {
+			bluespace: 50,
+			tomatoBluespace: 50,
+			slimeBluespace: 50,
+			money: 30000
+		},
+		upgrade: "ammoSaver",
+		requiredUpgrades: {
+			ammoSaver: 0
+		},
+		requiredLevels: {
+			validhunting: 20
 		}
 	},
 	lootDrops1: {
