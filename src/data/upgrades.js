@@ -116,6 +116,36 @@ export const COMBAT_UPGRADES = {
 			validhunting: 20
 		}
 	},
+	foodSavingRoll1: {
+		name: "Book on Rationing",
+		description: "Teaches you the art of eating only the parts of food that you need. Food has a 5% chance to not consumed when eaten.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			revParts: 5
+		},
+		upgrade: "foodSavingRoll",
+		requiredUpgrades: {
+			foodSavingRoll: 0
+		},
+		requiredLevels: {
+			validhunting: 10
+		}
+	},
+	foodSavingRoll12: {
+		name: "Cybernetic Stomach",
+		description: "Perfectly efficient, allowing for more energy from less food. Food has an additional 5% chance to not be consumed when eaten.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			telecrystal: 5
+		},
+		upgrade: "foodSavingRoll",
+		requiredUpgrades: {
+			foodSavingRoll: 1
+		},
+		requiredLevels: {
+			validhunting: 25
+		}
+	},
 	lootDrops1: {
 		name: "Extended Looting Tier I",
 		description: "Increases the number of loot drop slots from 16 to 32.",
