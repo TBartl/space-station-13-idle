@@ -89,7 +89,7 @@ export const COMBAT_UPGRADES = {
 	combatXPBoost1: {
 		name: "Combat Learning Tier I",
 		description: "Increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
-		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		icon: require('@/assets/art/combat/upgrades/bigbrain.png'),
 		requiredItems: {
 			money: 25000
 		},
@@ -104,7 +104,7 @@ export const COMBAT_UPGRADES = {
 	combatXPBoost2: {
 		name: "Combat Learning Tier II",
 		description: "Further increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
-		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		icon: require('@/assets/art/combat/upgrades/bigbrain.png'),
 		requiredItems: {
 			money: 50000
 		},
@@ -119,7 +119,7 @@ export const COMBAT_UPGRADES = {
 	foodSavingRoll1: {
 		name: "Book on Rationing",
 		description: "Teaches you the art of eating only the parts of food that you need. Food has a 5% chance to not consumed when eaten.",
-		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		icon: require('@/assets/art/combat/upgrades/redbook.png'),
 		requiredItems: {
 			revParts: 5
 		},
@@ -134,7 +134,7 @@ export const COMBAT_UPGRADES = {
 	foodSavingRoll12: {
 		name: "Cybernetic Stomach",
 		description: "Perfectly efficient, allowing for more energy from less food. Food has an additional 5% chance to not be consumed when eaten.",
-		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		icon: require('@/assets/art/combat/upgrades/cyberstomach.png'),
 		requiredItems: {
 			telecrystal: 5
 		},
