@@ -211,7 +211,11 @@ const combat = {
 			dispatch("playerMob/addHealth", ITEMS[food.itemId].healAmount, { root: true });
 
 			var food = rootState["inventory"].equipment.food;
-			if(Math.random()*100 > rootGetters["upgrades/get"]("foodSavingRoll")*5) food.count -= 1;
+			if(Math.random()*100 > rootGetters["upgrades/get"]("foodSavingRoll")*5){ 
+				food.count -= 1;
+			} else {
+				EventBus.$emit("toast", { icon: ITEMS[food.itemId].icon, text: `Food preserved!` });
+			}
 			if (food.count == 0) {
 				food.itemId = null;
 				EventBus.$emit("toast", { text: `Out of food!`, duration: 3000 });
