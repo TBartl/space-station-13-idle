@@ -86,6 +86,36 @@ export const COMBAT_UPGRADES = {
 			validhunting: 5
 		}
 	},
+	combatXPBoost1: {
+		name: "Combat Learning Tier I",
+		description: "Increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 25000
+		},
+		upgrade: "combatXPBoost",
+		requiredUpgrades: {
+			combatXPBoost: 0
+		},
+		requiredLevels: {
+			validhunting: 10
+		}
+	},
+	combatXPBoost2: {
+		name: "Combat Learning Tier II",
+		description: "Further increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
+		icon: require('@/assets/art/combat/upgrades/loot.png'),
+		requiredItems: {
+			money: 50000
+		},
+		upgrade: "combatXPBoost",
+		requiredUpgrades: {
+			combatXPBoost: 1
+		},
+		requiredLevels: {
+			validhunting: 20
+		}
+	},
 	lootDrops1: {
 		name: "Extended Looting Tier I",
 		description: "Increases the number of loot drop slots from 16 to 32.",

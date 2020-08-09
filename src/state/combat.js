@@ -48,8 +48,10 @@ const combat = {
 			}
 			return false;
 		},
-		xpRatio() {
-			return .33;
+		xpRatio(state, getters, rootState, rootGetters) {
+			let upgradeCount = rootGetters["upgrades/get"]("combatXPBoost");
+			let xpBonus = (upgradeCount*0.01)*8.5;
+			return .33 + xpBonus;
 		},
 		xpSkill(state, getters) {
 			let skill = getters.focus;
