@@ -102,8 +102,8 @@ export default {
     },
     canOpen() {
       if (!this.item) return false;
-      if (!this.item.itemTable && !this.itemTables) return false;
-      return true;
+      if (this.item.itemTable || this.item.itemTables) return true;
+      return false;
     },
     upgradeChain() {
       if (!this.purchase.upgrade) return [];
