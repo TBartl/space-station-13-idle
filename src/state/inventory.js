@@ -7,6 +7,7 @@ import ZONES from "@/data/zones";
 import { getEquipmentSlot, getEquipmentStackable } from '@/utils/equipmentUtils';
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 import { BASE_INVENTORY_SIZE } from '@/data/upgrades'
+import { without } from "lodash";
 
 const inventory = {
 	namespaced: true,
@@ -243,6 +244,22 @@ const inventory = {
 			let allSortedKeys = Object.keys(ITEMS);
 			let newBank = {};
 			allSortedKeys.forEach(itemId => {
+				let val = state.bank[itemId];
+				if (val) {
+					newBank[itemId] = val;
+				}
+			});
+			Vue.set(state, "bank", newBank);
+		},
+		orderItem(state, { itemId, index }) {
+			let keys = this.getters["inventory/bankItemIds"];
+			keys = without(keys, itemId);
+			keys.splice(index, 0, itemId);
+
+			let newBank = {};
+			if (state.bank.money)
+				newBank.money = state.bank.money;
+			keys.forEach(itemId => {
 				let val = state.bank[itemId];
 				if (val) {
 					newBank[itemId] = val;

@@ -1,11 +1,11 @@
 <template>
   <div>
-    <button class="inventory-item" :id="id">
-      <img :src="item.icon" />
+    <div class="inventory-item" :id="id">
+      <img class="no-pointer-events" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
-    </button>
-    <item-popover :target="id" :itemId="itemId" />
-    <b-popover ref="popover" :target="id" triggers="click blur" placement="bottom" delay="30" :customClass="$store.getters['settings/darkModeClass']">
+    </div>
+    <item-popover v-if="!popoversDisabled" :target="id" :itemId="itemId" />
+    <b-popover v-if="!popoversDisabled" ref="popover" :target="id" triggers="click blur" placement="bottom" delay="30" :customClass="$store.getters['settings/darkModeClass']">
       <div class="popup d-flex flex-column align-items-center">
         <h6 class="title">{{item.name}}</h6>
         <button
@@ -53,7 +53,7 @@ import ModalItemChance from "@/components/Modals/ModalItemChance";
 import { acquireItemFrom } from "@/utils/itemChanceUtils";
 
 export default {
-  props: ["itemId"],
+  props: ["itemId", "popoversDisabled"],
   components: { InventorySell, ItemPopover },
   computed: {
     bank() {
@@ -127,4 +127,7 @@ export default {
 </script>
 
 <style scoped>
+.no-pointer-events {
+	pointer-events: none;
+}
 </style>

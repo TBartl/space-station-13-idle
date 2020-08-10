@@ -46,7 +46,9 @@
           <div class="content-block d-flex flex-row justify-content-around">
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Space Used:</span>
-              <span :class="fakeItemCount ? 'primary-bubble' : 'danger-bubble' ">{{bankItemIds.length}}/{{bankSlots}}</span>
+              <span
+                :class="fakeItemCount ? 'primary-bubble' : 'danger-bubble' "
+              >{{bankItemIds.length}}/{{bankSlots}}</span>
             </div>
             <div class="d-flex flex-row align-items-center">
               <span class="mr-1">Bank Value:</span>
@@ -60,8 +62,17 @@
           <button class="btn btn-primary" @click="quickSort">Sort Bank</button>
         </div>
         <div class="col-12 items d-flex flex-row flex-wrap">
-          <inventory-item v-for="itemId in bankItemIds" :key="itemId" :itemId="itemId" />
-          <div class="fake-inventory-item" v-for="index in fakeItemCount" :key="index" div>
+          <div
+            v-for="(itemId, index) in draggableItemIds"
+            :key="itemId"
+            draggable="true"
+            @dragstart="onDragStart($event, itemId)"
+            @dragover="onDragOver($event, index)"
+            @dragend="onDragEnd"
+          >
+            <inventory-item :itemId="itemId" :popoversDisabled="draggingItem" />
+          </div>
+          <div class="fake-inventory-item" v-for="index in fakeItemCount" :key="index">
             <div />
             <span>&#8203;</span>
           </div>
@@ -72,6 +83,7 @@
 </template>
 
 <script>
+import { without } from "lodash";
 import { mapGetters } from "vuex";
 import ITEMS from "@/data/items";
 import ContentAbstract from "@/components/Content/ContentAbstract";
@@ -79,9 +91,23 @@ import InventoryItem from "@/components/Content/Inventory/InventoryItem";
 export default {
   extends: ContentAbstract,
   components: { InventoryItem },
+  data() {
+    return {
+      draggingItem: null,
+      dragOverIndex: null
+    };
+  },
   computed: {
     bankItemIds() {
       return this.$store.getters["inventory/bankItemIds"];
+    },
+    draggableItemIds() {
+      let ids = this.bankItemIds;
+      if (this.draggingItem && this.dragOverIndex !== null) {
+        ids = without(ids, this.draggingItem);
+        ids.splice(this.dragOverIndex, 0, this.draggingItem);
+      }
+      return ids;
     },
     bankValue() {
       let total = 0;
@@ -103,6 +129,24 @@ export default {
   methods: {
     quickSort() {
       this.$store.commit("inventory/quickSort");
+    },
+    onDragStart(event, itemId) {
+      this.draggingItem = itemId;
+      // Some browsers need the data transfer set, even if we're doing data ourselves
+      event.dataTransfer.setData("text/plain", null);
+    },
+    onDragOver(event, index) {
+      this.dragOverIndex = index;
+    },
+    onDragEnd(event) {
+      if (this.draggingItem && this.dragOverIndex !== null) {
+        this.$store.commit("inventory/orderItem", {
+          itemId: this.draggingItem,
+          index: this.dragOverIndex
+        });
+      }
+      this.draggingItem = null;
+      this.dragOverIndex = null;
     }
   }
 };
