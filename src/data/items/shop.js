@@ -309,81 +309,95 @@ export default {
 		name: "Revolution Supply Cache",
 		description: "Can be opened",
 		icon: require("@/assets/art/shop/items/revcrate.png"),
-		itemTable: [
+		itemTables: [
 			{
-				id: 'junk',
-				count: [1,25],
-				weight: 25
-			},
-			{
-				id: 'slimeBluespace',
-				weight: 15
+				chance: 0.25,
+				items: {
+					id: 'startCargonia',
+					count: [1,5],
+				}
 			},
 			{
-				id: 'meleeSharp3',
-				count: [1,20],
-				weight: 9
-			},
-			{
-				id: 'headEpic5',
-				weight: 1
-			},
-			{
-				id: 'startCargonia',
-				count: [1,10],
-				weight: 15
-			},
-						{
-				id: 'gunEnergy2',
-				weight: 13
-			},
-			{
-				id: 'meleeBurn1',
-				weight: 12
-			},
-			{
-				id: 'companionPai',
-				weight: 10
-			},
+				chance: 1,
+				itemTable: [
+					{
+						id: 'junk',
+						count: [1,25],
+						weight: 25
+					},
+					{
+						id: 'slimeBluespace',
+						weight: 15
+					},
+					{
+						id: 'meleeSharp3',
+						count: [1,20],
+						weight: 9
+					},
+					{
+						id: 'headEpic5',
+						weight: 1
+					},
+					{
+						id: 'gunEnergy2',
+						weight: 13
+					},
+					{
+						id: 'meleeBurn1',
+						weight: 12
+					},
+					{
+						id: 'companionPai',
+						weight: 10
+					},
+				]
+			}
 		]
 		},
 	secCrate:{
 	name: "Security Crate",
 	description: "Can be opened",
 	icon: require("@/assets/art/shop/items/seccrate.png"),
-	itemTable: [
+	itemTables: [
 		{
-			id: 'faceSecGlassess',
-			weight: 21
+			chance: 0.25,
+			items: {
+				id: 'startLing',
+			}
 		},
 		{
-			id: 'faceSec',
-			weight: 17
-		},
-		{
-			id: 'gunEnergy6',
-			weight: 11
-		},
-		{
-			id: 'meleeBlunt9',
-			weight: 1
-		},
-		{
-			id: 'startLing',
-			weight: 19
-		},
-		{
-			id: 'jumpsuitSecurity',
-			weight: 13
-		},
-		{
-			id: 'meleeBurn2',
-			weight: 10
-		},
-		{
-			id: 'armorSpecial1',
-			weight: 8
-		},
+			chance: 1,
+			itemTable: [
+				{
+					id: 'faceSecGlassess',
+					weight: 21
+				},
+				{
+					id: 'faceSec',
+					weight: 17
+				},
+				{
+					id: 'gunEnergy6',
+					weight: 11
+				},
+				{
+					id: 'meleeBlunt9',
+					weight: 1
+				},
+				{
+					id: 'jumpsuitSecurity',
+					weight: 13
+				},
+				{
+					id: 'meleeBurn2',
+					weight: 10
+				},
+				{
+					id: 'armorSpecial1',
+					weight: 8
+				},
+			]
+		}
 	]
 	},
 	lavaCrate: {
