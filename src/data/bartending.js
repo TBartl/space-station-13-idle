@@ -574,10 +574,10 @@ const SLIMEPLUS = {
         requiredItems: { power: 1 }
     }, */
     
-Object.values(POWER).forEach(action => action.type = "Virgin");
-Object.values(SLIME).forEach(action => action.type = "Alcoholic");
-Object.values(POWERPLUS).forEach(action => action.type = "Super Virgin");
-Object.values(SLIMEPLUS).forEach(action => action.type = "Super Alcoholic");
+Object.values(POWER).forEach(action => action.type = "Basic Drinks");
+Object.values(SLIME).forEach(action => action.type = "Complex Drinks");
+Object.values(POWERPLUS).forEach(action => action.type = "Super Basic Drinks");
+Object.values(SLIMEPLUS).forEach(action => action.type = "Super Complex Drinks");
 
 export const ACTIONS = {
     ...POWER,
