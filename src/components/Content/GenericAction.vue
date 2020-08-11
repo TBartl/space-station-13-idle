@@ -59,7 +59,7 @@
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
       <img :src="require('@/assets/art/misc/airlock.png')" alt class="mt-2 mb-2" />
-      <span class="danger-bubble">LEVEL {{action.requiredLevel}}</span>
+      <span class="danger-bubble">LEVEL {{action.requiredLevel}}{{action.levelReduced ? " (CHEM REDUCED) " : ""}}</span>
     </div>
   </div>
 </template>

@@ -17,83 +17,99 @@
               @click="resetInfoClicked"
             >Reset Dismissed Tutorials</button>
 
-            <div class="custom-control custom-switch">
-              <input
-                v-model="inventoryFullStop"
-                type="checkbox"
-                class="custom-control-input"
-                id="inventoryFullStop"
-              />
-              <label
-                class="custom-control-label"
-                for="inventoryFullStop"
-              >Stop Actions when Full Inventory</label>
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/sidebar/backpack.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="inventoryFullStop"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="inventoryFullStop"
+                />
+                <label
+                  class="custom-control-label"
+                  for="inventoryFullStop"
+                >Stop Actions when Full Inventory</label>
+              </div>
             </div>
 
-            <div class="custom-control custom-switch">
-              <input
-                v-model="pocketsEmptyStop"
-                type="checkbox"
-                class="custom-control-input"
-                id="pocketsEmptyStop"
-              />
-              <label
-                class="custom-control-label"
-                for="pocketsEmptyStop"
-              >Stop Combat when Pockets Empty</label>
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/combat/items/ammo_b1.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="pocketsEmptyStop"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="pocketsEmptyStop"
+                />
+                <label
+                  class="custom-control-label"
+                  for="pocketsEmptyStop"
+                >Stop Combat when Pockets Empty</label>
+              </div>
             </div>
 
-            <div class="custom-control custom-switch">
-              <input
-                v-model="darkMode"
-                type="checkbox"
-                class="custom-control-input"
-                id="darkMode"
-              />
-              <label
-                class="custom-control-label"
-                for="darkMode"
-              >Dark Mode [EXPERIMENTAL!]</label>
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/misc/shadowling.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="darkMode"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="darkMode"
+                />
+                <label class="custom-control-label" for="darkMode">Dark Mode [EXPERIMENTAL!]</label>
+              </div>
             </div>
 
-            <div class="custom-control custom-switch">
-              <input
-                v-model="chronoPanelEnabled"
-                type="checkbox"
-                class="custom-control-input"
-                id="chronoPanelEnabled"
-              />
-              <label
-                class="custom-control-label"
-                for="chronoPanelEnabled"
-              >Show Mini Chrono Panel when Time is Banked</label>
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/chrono/icon.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="chronoPanelEnabled"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="chronoPanelEnabled"
+                />
+                <label
+                  class="custom-control-label"
+                  for="chronoPanelEnabled"
+                >Show Mini Chrono Panel when Time is Banked</label>
+              </div>
             </div>
-            <div class="custom-control custom-switch">
-              <input
-                v-model="showVirtualLevels"
-                type="checkbox"
-                class="custom-control-input"
-                id="showVirtualLevels"
-              />
-              <label
-                class="custom-control-label"
-                for="showVirtualLevels"
-              >Show Virtual Levels Beyond {{maxLevel}}</label>
-            </div>
-            
-            <div class="custom-control custom-switch">
-              <input
-                v-model="showFullValues"
-                type="checkbox"
-                class="custom-control-input"
-                id="showFullValues"
-              />
-              <label
-                class="custom-control-label"
-                for="showFullValues"
 
-              >Display Full Item Counts in Jobs (may look ugly with huge numbers)</label>
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/engineering/icon.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="showVirtualLevels"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="showVirtualLevels"
+                />
+                <label
+                  class="custom-control-label"
+                  for="showVirtualLevels"
+                >Show Virtual Levels Beyond {{maxLevel}}</label>
+              </div>
             </div>
+
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/botany/seed.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="showFullValues"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="showFullValues"
+                />
+                <label
+                  class="custom-control-label"
+                  for="showFullValues"
+                >Display Full Item Counts in Jobs (may look ugly with huge numbers)</label>
+              </div>
+            </div>
+
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -264,7 +280,7 @@ export default {
         this.$store.commit("settings/setShowVirtualLevels", value);
       }
     },
-	showFullValues: {
+    showFullValues: {
       get() {
         return this.$store.getters["settings/showFullValues"];
       },

@@ -38,6 +38,7 @@ const BARTENDING = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if (potionItemId == "potionBartending") {
 					if (getters["level"] < action.requiredLevel) {
 						action.requiredLevel -= 10;
+						action.levelReduced = true;
 					} else {
 						action.preservePotion = true;
 					}

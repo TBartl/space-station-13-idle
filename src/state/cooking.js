@@ -27,6 +27,7 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			if (potionItemId == "potionCooking") {
 				totalPercent += COOKING_POTION_PERCENT;
 			}
+			totalPercent = Math.min(totalPercent, 1);
 
 			if (totalPercent > 0) {
 				let actionEntries = Object.values(actions);
