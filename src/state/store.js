@@ -162,7 +162,7 @@ const store = new Vuex.Store({
 			if (getters["combat/isActive"]) return true;
 
 			for (let [moduleName, module] of Object.entries(modules)) {
-				let isActiveFunc = getters[`${moduleName}/currentActionId`];
+				let isActiveFunc = getters[`${moduleName}/active`];
 				if (isActiveFunc) return true;
 			}
 
