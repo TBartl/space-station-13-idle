@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="inventory-item" :id="id">
+    <div class="inventory-item" tabindex="1" :id="id">
       <img class="no-pointer-events" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </div>
