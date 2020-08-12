@@ -15,7 +15,7 @@ export default {
 	},
 	getters: {
 		active(state, getters) {
-			return state.currentActionId && getters["actionCoroutine/isActive"];
+			return state.currentActionId;
 		},
 		currentActionId(state) { return state.currentActionId },
 		hasActionRequiredItems(state, getters, rootState, rootGetters) {
