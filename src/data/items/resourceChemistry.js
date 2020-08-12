@@ -87,7 +87,14 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/superglue.png"),
 		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
-		potionCharges: 5
+		potionCharges: 5,
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -90,
+			evasion: -10,
+			precision: -10,
+			power: -10,
+		}
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",
