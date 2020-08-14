@@ -145,6 +145,86 @@ export const COMBAT_UPGRADES = {
 		requiredLevels: {
 			validhunting: 25
 		}
+	},
+	foodSavingRoll1: {
+		name: "Book on Rationing",
+		description: "Teaches you the art of eating only the parts of food that you need. Food has a 5% chance to not be consumed when eaten.",
+		icon: require('@/assets/art/combat/upgrades/redbook.png'),
+		requiredItems: {
+			revParts: 5,
+			money: 5000
+		},
+		upgrade: "foodSavingRoll",
+		requiredUpgrades: {
+			foodSavingRoll: 0
+		},
+		requiredLevels: {
+			validhunting: 10
+		}
+	},
+	foodSavingRoll12: {
+		name: "Cybernetic Stomach",
+		description: "Perfectly efficient, allowing for more energy from less food. Food has an additional 5% chance to not be consumed when eaten.",
+		icon: require('@/assets/art/combat/upgrades/cyberstomach.png'),
+		requiredItems: {
+			telecrystal: 5,
+			money: 25000
+		},
+		upgrade: "foodSavingRoll",
+		requiredUpgrades: {
+			foodSavingRoll: 1
+		},
+		requiredLevels: {
+			validhunting: 25
+		}
+	},
+	ammoSaver: {
+		name: "Ammo Reclaimer",
+		description: "A lightweight device that can teleport fired bullets back into your gun. It will make every 5th bullet free.",
+		icon: require('@/assets/art/combat/upgrades/bluespace_core.png'),
+		requiredItems: {
+			bluespace: 50,
+			tomatoBluespace: 50,
+			slimeBluespace: 50,
+			money: 30000
+		},
+		upgrade: "ammoSaver",
+		requiredUpgrades: {
+			ammoSaver: 0
+		},
+		requiredLevels: {
+			validhunting: 20
+		}
+	},
+	combatXPBoost1: {
+		name: "Combat Learning Tier I",
+		description: "Increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
+		icon: require('@/assets/art/combat/upgrades/bigbrain.png'),
+		requiredItems: {
+			money: 25000
+		},
+		upgrade: "combatXPBoost",
+		requiredUpgrades: {
+			combatXPBoost: 0
+		},
+		requiredLevels: {
+			validhunting: 25
+		}
+	},
+	combatXPBoost2: {
+		name: "Combat Learning Tier II",
+		description: "Further increases the percentage of combat skill experience you get from damage you deal by 8.5%.",
+		icon: require('@/assets/art/combat/upgrades/bigbrain.png'),
+		requiredItems: {
+			money: 50000
+		},
+		upgrade: "combatXPBoost",
+		requiredUpgrades: {
+			combatXPBoost: 1
+		},
+		requiredLevels: {
+			validhunting: 35
+		}
 	}
 }
 
