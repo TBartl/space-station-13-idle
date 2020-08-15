@@ -97,6 +97,14 @@ const POTIONS = {
 			lithium: 2,
 		}
 	},
+	synthPotionResearch: {
+		item: "potionResearch",
+		time: 2,
+		requiredItems: {
+			drinkVodka: 2,
+			water: 1,
+		}
+	},
 	synthPotionBotany: {
 		item: "potionBotany",
 		time: 2,

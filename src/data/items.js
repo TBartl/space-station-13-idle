@@ -5,6 +5,7 @@ import FOOD_BARTENDING from "./items/foodBartending";
 import { RESOURCE_CHEMISTRY } from "./items/resourceChemistry";
 import RESOURCE_ENGINEERING from "./items/resourceEngineering";
 import RESOURCE_GRAYTIDING from "./items/resourceGraytiding";
+import RESOURCE_RESEARCH from "./items/resourceResearch";
 import RESOURCE_TINKERING from "./items/resourceTinkering";
 import RESOURCE_MINING from "./items/resourceMining";
 import RESOURCE_SHITPOSTING from "./items/resourceShitposting";
@@ -36,6 +37,7 @@ const ITEMS = {
 	...FOOD_BARTENDING,
 	...RESOURCE_MINING,
 	...RESOURCE_GRAYTIDING,
+	...RESOURCE_RESEARCH,
 	...RESOURCE_TINKERING,
 	...RESOURCE_CHEMISTRY,
 	...RESOURCE_SHITPOSTING,

@@ -10,6 +10,7 @@ import engineering from "./engineering";
 import chemistry from "./chemistry";
 import mining from "./mining";
 import fabrication from "./fabrication";
+import research from "./research";
 import xenobiology from "./xenobiology";
 import botany from "./botany";
 import cooking from "./cooking";
@@ -45,6 +46,7 @@ const modules = {
 	chemistry,
 	mining,
 	fabrication,
+	research,
 	xenobiology,
 	botany,
 	cooking,
