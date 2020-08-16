@@ -468,7 +468,7 @@
 <script>
 import JobInfo from "@/components/Content/JobInfo";
 export default {
-  components: { JobInfo },
+  components: { JobInfo }
 };
 </script>
 
