@@ -1,7 +1,13 @@
 <template>
   <div>
+
+    <!-- Top bar with job icon/name (values loaded from src/data/research.js) -->
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
+
+
     <div class="content-container">
+
+      <!-- XP bar and chem slot -->
       <div class="row mb-2">
         <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
@@ -10,6 +16,8 @@
           <potion-header :jobId="jobId" />
         </div>
       </div>
+
+      <!-- Tutorial box -->
       <job-info
         infoId="research"
         :icon="require('@/assets/art/jobinfo/research.png')"
@@ -17,9 +25,9 @@
         :options="[
           {name: 'Back'},
           {name: 'Research?', icon: require('@/assets/art/research/researchIcon.png'), iconClass:'mx--0'},
-		  {name: 'Development?', icon: require('@/assets/art/research/protolathe.png'), iconClass:'mx--0'},
-		  {name: 'Tools?', icon: require('@/assets/art/research/tools/multitool.png'), iconClass:'mx--0'},
-		  {name: 'Mech equipment?', icon: require('@/assets/art/fabrication/mechripleymkii.png'), iconClass:'mx--0'}
+		      {name: 'Development?', icon: require('@/assets/art/research/protolathe.png'), iconClass:'mx--0'},
+		      {name: 'Tools?', icon: require('@/assets/art/research/tools/multitool.png'), iconClass:'mx--0'},
+		      {name: 'Mech equipment?', icon: require('@/assets/art/fabrication/mechripleymkii.png'), iconClass:'mx--0'}
         ]"
       >
         <template slot="Back">
@@ -52,6 +60,8 @@
           <span>When it's ready, we'll let you know.</span>
         </template>
       </job-info>
+
+      <!-- Actions (generated from actions defined in src/data/research.js) -->
       <div class="row">
         <div
           class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
@@ -66,6 +76,14 @@
           />
         </div>
       </div>
+
+      <!-- Shop sections -->
+      <div class="row">
+        <div class="col-12">
+          <shop-section v-for="(section, index) in sections" :key="index" :section="section" />
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -78,9 +96,11 @@ import ExperienceHeader from "@/components/Content/ExperienceHeader";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
+import ShopSection from "@/components/Content/Shop/ShopSection";
+import { SECTIONS } from "@/data/recipesShop";//Dictates which file to load shop sections from
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader },
+  components: { GenericAction, ExperienceHeader, PotionHeader, ShopSection },
   computed: {
     jobId() {
       return "research";
@@ -90,6 +110,9 @@ export default {
     },
     viewableActions() {
       return this.$store.getters[this.jobId + "/filteredActionEntries"];
+    },
+    sections() {//Enables shop sections to load properly
+      return SECTIONS;
     }
   }
 };
