@@ -73,7 +73,7 @@
       triggers="hover"
       placement="top"
       delay="0"
-      :customClass="$store.getters['settings/darkModeClass']"
+      :customClass="`${$store.getters['settings/darkModeClass']} no-pointer-events`"
     >
       <div class="d-flex flex-column align-items-center">
         <h6>Damage Type: {{stats.damageType.toUpperCase()}}</h6>
@@ -104,12 +104,15 @@ export default {
     },
     damageTypeImage() {
       return this.stats.damageType == "brute" ? BRUTE_ICON : BURN_ICON;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
+.no-pointer-events {
+  pointer-events: none;
+}
 .stats-panel {
   max-width: 160px;
   min-width: 130px;
