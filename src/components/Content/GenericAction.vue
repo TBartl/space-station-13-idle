@@ -27,7 +27,9 @@
 
 			<p class="chrono" v-if="action.chronoProhibited">Chrono Prohibited</p>
 
-      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}</span>
+      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}
+        {{action.requiredUpgrade ? " (NEEDS RESEARCH) " : ""}}
+      </span>
 
       <div class="d-flex flex-row align-items-center mt-2">
         <div v-if="action.requiredItems" class="requirements d-flex flex-column align-items-center">
@@ -59,7 +61,9 @@
     <div v-else class="d-flex flex-column align-items-center">
       <span>LOCKED</span>
       <img :src="require('@/assets/art/misc/airlock.png')" alt class="mt-2 mb-2" />
-      <span class="danger-bubble">LEVEL {{action.requiredLevel}}{{action.levelReduced ? " (CHEM REDUCED) " : ""}}</span>
+      <span class="danger-bubble">LEVEL {{action.requiredLevel}}
+        {{action.levelReduced ? " (CHEM REDUCED) " : ""}}
+        {{action.requiredUpgrade ? " (NEEDS RESEARCH) " : ""}}</span>
     </div>
   </div>
 </template>
@@ -96,11 +100,13 @@ export default {
       return ITEMS[this.action.item];
     },
     visualLocked() {
-      if (this.$store.getters["cheats/showAllActions"]) return false;
+      if (this.$store.getters["cheats/showAllActions"] || this.action.requiredUpgrade) return false;
       return this.locked;
     },
-    locked() {
-      return this.level < this.action.requiredLevel;
+    locked(state, getters, rootState, rootGetters) {
+      if(this.level < this.action.requiredLevel) return true;
+      if(this.action.requiredUpgrade && !this.$store.getters['upgrades/get'](this.action.requiredUpgrade)) return true;
+      return false;
     },
     hasItems() {
       return this.hasActionRequiredItems(this.actionId);

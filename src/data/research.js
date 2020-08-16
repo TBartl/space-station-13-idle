@@ -8,7 +8,8 @@ export const ACTIONS = {
 			iron: 3,
 			glass: 1
 		},
-		requiredLevel: 1
+		requiredLevel: 8,
+		requiredUpgrade: "recipeMultitool",
 	},
 }
 

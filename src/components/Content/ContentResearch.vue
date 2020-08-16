@@ -61,7 +61,23 @@
         </template>
       </job-info>
 
+      <!-- Bounty Box -->
+      <div class="content-block d-flex flex-column align-items-center">
+        <h5>Validhunting Target</h5>
+        <div class="enemies w-100 mt-2">
+          <zone-enemy
+            :enemyId="targetEnemyId"
+            :showValidhunting="true"
+          />
+        </div>
+      </div>
+
       <!-- Actions (generated from actions defined in src/data/research.js) -->
+      <div
+        class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
+      >
+      cool grey line
+      </div>
       <div class="row">
         <div
           class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
@@ -98,9 +114,10 @@ import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
 import ShopSection from "@/components/Content/Shop/ShopSection";
 import { SECTIONS } from "@/data/recipesShop";//Dictates which file to load shop sections from
+import ZoneEnemy from "@/components/Content/Combat/ZoneEnemy";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader, ShopSection },
+  components: { GenericAction, ExperienceHeader, PotionHeader, ShopSection, ZoneEnemy },
   computed: {
     jobId() {
       return "research";
@@ -113,6 +130,9 @@ export default {
     },
     sections() {//Enables shop sections to load properly
       return SECTIONS;
+    },
+    targetEnemyId() {
+      return this.$store.getters["validhunting/targetEnemyId"];
     }
   }
 };

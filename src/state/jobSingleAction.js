@@ -100,9 +100,10 @@ export default {
 			commit("_setAction", null);
 			dispatch("actionCoroutine/cancel");
 		},
-		tryStartAction({ commit, state, getters, dispatch }, actionId) {
+		tryStartAction({ commit, state, getters, rootState, rootGetters, dispatch }, actionId) {
 			let action = getters.completeActions[actionId];
 			if (getters["level"] < action.requiredLevel) return;
+			if (action.requiredUpgrade && !rootGetters["upgrades/get"](action.requiredUpgrade)) return;
 
 			let previousActionId = state.currentActionId;
 			dispatch("cancelAllActions", {}, { root: true });

@@ -1,16 +1,16 @@
 import ITEMS from "@/data/items";
 
 export const RESEARCH_RECIPES_I = {
-	autoeatTest: {
-		name: "Unlock Auto-Eat DEBUG",
-		description: "Allows food to automatically be consumed when missing more health than the food's heal amount. DEBUG SHOP TEST",
-		icon: require('@/assets/art/combat/upgrades/autoeat.png'),
+	recipeMultitool: {
+		name: "RECIPE: Multitool",
+		description: "Enables the development of a tool that can speed up engineering.",
+		icon: require('@/assets/art/research/tools/multitool.png'),
 		requiredItems: {
-			money: 10000
+			money: 1
 		},
-		upgrade: "autoeat",
+		upgrade: "recipeMultitool",
 		requiredUpgrades: {
-			autoeatTest: 0
+			recipeMultitool: 0
 		}
 	},
 	lootDrops1: {
