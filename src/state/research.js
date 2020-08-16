@@ -7,7 +7,29 @@ import { RESEARCH_UPGRADE_PERCENT } from "@/data/upgrades";
 
 
 const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
+	state: {
+		rndPoint: 0,
+		rndPointsMax: 500,
+		researchBountyItems: {'money': 1},//list of item IDs to fetch
+		xpReward: 80,
+		pointsReward: 50
+	},
 	getters: {
+		rndPoint(state){
+			return state.rndPoint;
+		},
+		rndPointsMax(state){//later we can make this return a value modified by a cargo upgrade
+			return state.rndPointsMax;
+		},
+		researchBountyItems(state){
+			return state.researchBountyItems;
+		},
+		xpReward(state) {
+			return state.xpReward;
+		},
+		pointsReward(state) {
+			return state.pointsReward;
+		},
 		jobId() {
 			return "research";
 		},
@@ -39,6 +61,20 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				}
 			}
 			return actions;
+		}
+	},
+	mutations: {
+		gainPoints(state, points){
+			state.rndPoint = Math.min(state.rndPointsMax, state.rndPoint+points);
+		}
+	},
+	actions: {
+		destructiveAnalysis({ state, dispatch, commit }){
+			commit("gainPoints", state.pointsReward);
+			console.log("tried to loot bounty");
+		},
+		rollNewBounty(){
+			console.log("tried to roll up a new bounty");
 		}
 	}
 });

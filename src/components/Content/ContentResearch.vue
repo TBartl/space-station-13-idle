@@ -17,6 +17,13 @@
         </div>
       </div>
 
+      <!-- Research bank bar -->
+      <div class="row mb-2">
+        <div class="col-md-8 col-lg-9 col-xl-12">
+          <research-bank :color="job.color" :jobId="jobId" />
+        </div>
+      </div>
+
       <!-- Tutorial box -->
       <job-info
         infoId="research"
@@ -26,7 +33,8 @@
           {name: 'Back'},
           {name: 'Research?', icon: require('@/assets/art/research/researchIcon.png'), iconClass:'mx--0'},
 		      {name: 'Development?', icon: require('@/assets/art/research/protolathe.png'), iconClass:'mx--0'},
-		      {name: 'Tools?', icon: require('@/assets/art/research/tools/multitool.png'), iconClass:'mx--0'},
+		      {name: 'Tools?', icon: require('@/assets/art/research/tools/toolFabrication.png'), iconClass:'mx--0'},
+          {name: 'Destructive Analyzer?', icon: require('@/assets/art/research/destructive_analyzer.gif'), iconClass:'mx--0'},
 		      {name: 'Mech equipment?', icon: require('@/assets/art/fabrication/mechripleymkii.png'), iconClass:'mx--0'}
         ]"
       >
@@ -38,13 +46,13 @@
         <template slot="Research?">
           <span>Here at R&D, we strive to create new technologies that have never been seen before.</span>
           <span>The computers basically do all the research work for us, so in here we're mostly doing development.</span>
-		  <span>That said, there are some ideas we've been stuck on. If you can bring us some stuff to research, we can unlock new recipes in other departments.</span>
+		      <span>That said, there are some ideas we've been stuck on. If you can bring us some stuff to research, we can unlock new recipes in other departments.</span>
           <span>
-            In order to continue, you're going to have to write the rest of the
+            TODO add images like this one
             <img
               :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
             />
-            <b>Code</b>.
+            <b>asdf asdf asdf</b>.
           </span>
         </template>
         <template slot="Development?">
@@ -55,6 +63,10 @@
           <span>I'm sure you've heard of potions from chemistry, right? Those are great and all, but our tools can give you cool temporary job upgrades without getting you addicted to meth.</span>
           <span>Just remember that operating machinery while under the influence is not advised. You can't use a tool and a potion at the same time.</span>
         </template>
+        <template slot="Destructive Analyzer?">
+          <span>Our method to get research points is to feed the computer stuff that it can learn from. That stuff can be almost anything, because science is about experimenting.</span>
+          <span>The Destructive Analyzer (image) is like the mouth of the computer, so to speak. It asks for things to eat, and you feed them to it. In return, you get research points.</span>
+        </template>
         <template slot="Mech equipment?">
           <span>We've had the computer doing overtime on mech equipment research.</span>
           <span>When it's ready, we'll let you know.</span>
@@ -63,20 +75,29 @@
 
       <!-- Bounty Box -->
       <div class="content-block d-flex flex-column align-items-center">
-        <h5>Validhunting Target</h5>
+        <h5>
+          <img
+            :src="require('@/assets/art/research/destructive_analyzer.gif')"
+          />
+          <b> Destructive Analyzer </b>
+          <img
+            :src="require('@/assets/art/research/destructive_analyzer.gif')"
+          />
+        </h5>
+
         <div class="enemies w-100 mt-2">
-          <zone-enemy
+          <research-bounty
             :enemyId="targetEnemyId"
             :showValidhunting="true"
           />
         </div>
+
       </div>
 
       <!-- Actions (generated from actions defined in src/data/research.js) -->
       <div
         class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
       >
-      cool grey line
       </div>
       <div class="row">
         <div
@@ -109,15 +130,16 @@ import { findLastIndex } from "lodash";
 import { JOB } from "@/data/research";
 import ContentAbstract from "@/components/Content/ContentAbstract";
 import ExperienceHeader from "@/components/Content/ExperienceHeader";
+import ResearchBank from "@/components/Content/ResearchBank";
 import PotionHeader from "@/components/Content/PotionHeader";
 import GenericAction from "@/components/Content/GenericAction";
 import { mapState } from "vuex";
 import ShopSection from "@/components/Content/Shop/ShopSection";
 import { SECTIONS } from "@/data/recipesShop";//Dictates which file to load shop sections from
-import ZoneEnemy from "@/components/Content/Combat/ZoneEnemy";
+import ResearchBounty from "@/components/Content/ResearchBounty";
 export default {
   extends: ContentAbstract,
-  components: { GenericAction, ExperienceHeader, PotionHeader, ShopSection, ZoneEnemy },
+  components: { GenericAction, ExperienceHeader, ResearchBank, PotionHeader, ShopSection, ResearchBounty },
   computed: {
     jobId() {
       return "research";
@@ -133,7 +155,10 @@ export default {
     },
     targetEnemyId() {
       return this.$store.getters["validhunting/targetEnemyId"];
-    }
+    },
+    rndPoint() {
+      return this.$store.getters["research/rndPoint"];
+    },
   }
 };
 </script>

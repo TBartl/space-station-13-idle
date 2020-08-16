@@ -4,7 +4,7 @@ export const RESEARCH_RECIPES_I = {
 	recipeMultitool: {
 		name: "RECIPE: Multitool",
 		description: "Enables the development of a tool that can speed up engineering.",
-		icon: require('@/assets/art/research/tools/multitool.png'),
+		icon: require('@/assets/art/research/tools/toolFabrication.png'),
 		requiredItems: {
 			money: 1
 		},

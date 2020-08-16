@@ -2,13 +2,13 @@ export const ACTIONS = {
 	makeToolEngineering: {
 		time: 5,
 		item: "toolEngineering",
-		icon: require("@/assets/art/research/tools/multitool.png"),
+		icon: require("@/assets/art/research/tools/toolEngineering.png"),
 		xp: 5,
 		requiredItems: {
 			iron: 3,
 			glass: 1
 		},
-		requiredLevel: 8,
+		requiredLevel: 1,
 		requiredUpgrade: "recipeMultitool",
 	},
 }
