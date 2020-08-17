@@ -9,7 +9,7 @@
       triggers="hover"
       placement="top"
       delay="0"
-      :customClass="$store.getters['settings/darkModeClass']"
+      :customClass="`${$store.getters['settings/darkModeClass']} no-pointer-events`"
     >
       <div class="d-flex flex-column align-items-center">
         <h6>{{name}}</h6>
@@ -29,14 +29,18 @@ export default {
     valueClass() {
       if (!this.value || this.value == 0) return "empty";
       return this.value > 0 ? "positive" : "negative";
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 img {
   width: 32px;
+}
+
+.no-pointer-events {
+  pointer-events: none;
 }
 
 .positive {

@@ -5,11 +5,11 @@
       :target="id"
       triggers="hover"
       placement="top"
-      delay="0"
-      :customClass="$store.getters['settings/darkModeClass']"
+      delay="50"
+      :customClass="`${$store.getters['settings/darkModeClass']} no-pointer-events`"
     >
       <div class="d-flex flex-column align-items-center">
-				<span class="mb-1 description">Attack Speed: {{getBasedStats.attackSpeed}}</span>
+        <span class="mb-1 description">Attack Speed: {{getBasedStats.attackSpeed}}</span>
         <stats-panel :stats="getBasedStats" />
       </div>
     </b-popover>
@@ -21,7 +21,7 @@ import StatsPanel from "@/components/Content/Combat/StatsPanel";
 import {
   getBasedStats,
   calcRobustness,
-  getRobustnessCssClass
+  getRobustnessCssClass,
 } from "@/utils/combatUtils";
 export default {
   components: { StatsPanel },
@@ -42,8 +42,8 @@ export default {
         calcRobustness(this.$store.getters["playerMob/stats"], "player"),
         this.robustness
       );
-    }
-  }
+    },
+  },
 };
 </script>
 
