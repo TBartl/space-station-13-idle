@@ -152,7 +152,7 @@
       </li>
     </template>
     <template slot="Robustness?">
-      <div>
+      <span>
         <span>
           <img class="mx--0" :src="require('@/assets/art/jobinfo/robustness.png')" />
           <b>Robustness</b> is a general term for how effective someone or something is in combat, based on their
@@ -164,15 +164,15 @@
           <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
           <b>Stats</b>.
         </span>
-        <span>
-          As a general rule, you shouldn't try to fight enemies that are more
-          <img
-            class="mx--0"
-            :src="require('@/assets/art/jobinfo/robustness.png')"
-          />
-          <b>Robust</b> than you are.
-        </span>
-      </div>
+      </span>
+      <span>
+        As a general rule, you shouldn't try to fight enemies that are more
+        <img
+          class="mx--0"
+          :src="require('@/assets/art/jobinfo/robustness.png')"
+        />
+        <b>Robust</b> than you are.
+      </span>
     </template>
     <template slot="Health?">
       <span>
