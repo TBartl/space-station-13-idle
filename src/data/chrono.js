@@ -192,7 +192,7 @@ ALL_JOBS.forEach(job => {
 			requiredUpgrades: {},
 			onPurchase(store) {
 				store.commit(`${job.id}/addXP`, xp, { root: true });
-				EventBus.$emit("toast", { icon: job.icon, text: `XP Gained!.`, duration: 5000 });
+				EventBus.$emit("toast", { icon: job.icon, text: `XP Gained!`, duration: 5000 });
 			}
 		}
 		upgrade.requiredUpgrades[id] = i;
