@@ -191,7 +191,7 @@ export default {
       return MAX_LEVEL;
     },
     resets() {
-      return this.$store.getters["completion/simulationResetCount"];
+simulationResetCount
     }
   },
   filters: {

@@ -78,7 +78,7 @@ const BASE_PURCHASES = {
 		description: "Acquire aid from a nefarious faction.",
 		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
-			bluetime: 100
+			bluetime: 75
 		},
 		items: {
 			id: "antag",
@@ -93,7 +93,7 @@ const BASE_PURCHASES = {
 		description: "Acquire aid from a nefarious faction.",
 		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
-			bluetime: 200
+			bluetime: 100
 		},
 		items: {
 			id: "antag",
