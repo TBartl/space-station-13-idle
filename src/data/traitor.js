@@ -1,6 +1,6 @@
 const ONETC = {
 	OneSword: {
-		time: 30,
+		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
 		item: "jumpsuitClown",
@@ -9,7 +9,7 @@ const ONETC = {
 		}
 	},
 	METH: {
-		time: 30,
+		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/pill1.png"),
@@ -23,7 +23,7 @@ const ONETC = {
 		}
 	},
 	BULLET: {
-		time: 30,
+		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/ammo_b2.png"),
@@ -37,7 +37,7 @@ const ONETC = {
 		}
 	},
 	CELL: {
-		time: 30,
+		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
 		icon: require("@/assets/art/combat/items/ammo_e2.png"),
@@ -54,7 +54,7 @@ const ONETC = {
 
 const TWOTC = {
 	TwoJump: {
-		time: 30,
+		time: 360,
 		xp: 10050,
 		requiredLevel: 1,
 		item: "jumpsuitSecurity",
@@ -63,7 +63,7 @@ const TWOTC = {
 		}
 	},
 	TwoSword: {
-		time: 30,
+		time: 360,
 		xp: 10050,
 		requiredLevel: 1,
 		item: "meleeBurn3T",
@@ -72,7 +72,7 @@ const TWOTC = {
 		}
 	},
 	TwoSuit: {
-		time: 30,
+		time: 360,
 		xp: 10050,
 		requiredLevel: 1,
 		item: "totsuit1",
@@ -81,7 +81,7 @@ const TWOTC = {
 		}
 	},
 	TwoConsume: {
-		time: 30,
+		time: 360,
 		xp: 10050,
 		requiredLevel: 1,
 		icon: require("@/assets/art/cooking/pasta1.png"),
@@ -98,7 +98,7 @@ const TWOTC = {
 
 const THREETC = {
 	ThreeJump: {
-		time: 30,
+		time: 540,
 		xp: 15075,
 		requiredLevel: 1,
 		item: "jumpsuitChameleon",
@@ -107,7 +107,7 @@ const THREETC = {
 		}
 	},
 	ThreeSword: {
-		time: 30,
+		time: 540,
 		xp: 15075,
 		requiredLevel: 1,
 		item: "meleeBurn4T",
@@ -116,7 +116,7 @@ const THREETC = {
 		}
 	},
 	ThreeSuit: {
-		time: 30,
+		time: 540,
 		xp: 15075,
 		requiredLevel: 1,
 		item: "totsuit2",
@@ -125,7 +125,7 @@ const THREETC = {
 		}
 	},
 	ThreeConsume: {
-		time: 30,
+		time: 540,
 		xp: 15075,
 		requiredLevel: 1,
         icon: require("@/assets/art/bartending/syndicatebomb.png"),
@@ -142,7 +142,7 @@ const THREETC = {
 
 const FOURTC = {
 	FourJump: {
-		time: 30,
+		time: 720,
 		xp: 20100,
 		requiredLevel: 1,
 		item: "jumpsuitTactical",
@@ -151,7 +151,7 @@ const FOURTC = {
 		}
 	},
 	FourSword: {
-		time: 30,
+		time: 720,
 		xp: 20100,
 		requiredLevel: 1,
 		item: "meleeBurn5T",
@@ -160,7 +160,7 @@ const FOURTC = {
 		}
 	},
 	FourSuit: {
-		time: 30,
+		time: 720,
 		xp: 20100,
 		requiredLevel: 1,
 		item: "totsuit3",
@@ -169,7 +169,7 @@ const FOURTC = {
 		}
 	},
 	FourConsume: {
-		time: 30,
+		time: 720,
 		xp: 20100,
 		requiredLevel: 1,
 		icon: require("@/assets/art/xenobio/SlimeRainbow.gif"),
