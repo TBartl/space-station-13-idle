@@ -13,6 +13,18 @@ export const RESEARCH_RECIPES_I = {
 			recipeMultitool: 0
 		}
 	},
+	recipePills: {
+		name: "RECIPE: Pills",
+		description: "Enables the simple fabrication of edible chemicals. Chemistry can now make pills.",
+		icon: require('@/assets/art/combat/items/pill1.png'),
+		requiredItems: {
+			money: 1
+		},
+		upgrade: "recipePills",
+		requiredUpgrades: {
+			recipePills: 0
+		}
+	},
 	lootDrops1: {
 		name: "Extended Looting Tier I DEBUG",
 		description: "Increases the number of loot drop slots from 16 to 32. DEBUG SHOP TEST",

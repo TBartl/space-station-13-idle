@@ -214,7 +214,8 @@ const PILLS = {
 		requiredItems: {
 			lithium: 2,
 			power: 1
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	synthPillMeth: {
 		items: {
@@ -227,7 +228,8 @@ const PILLS = {
 			oxygen: 1,
 			water: 1,
 			sacid: 1
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	synthPillSpacedrugs: {
 		items: {
@@ -240,7 +242,8 @@ const PILLS = {
 			water: 1,
 			mercury: 1,
 			lithium: 1,
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	sythnPillPumpup: {
 		items: {
@@ -253,7 +256,8 @@ const PILLS = {
 			oxygen: 1,
 			oil: 1,
 			sacid: 2,
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	sythnPillKrokodil: {
 		items: {
@@ -264,8 +268,8 @@ const PILLS = {
 		time: 2,
 		requiredItems: {
 			sacid: 4
-
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	sythnPillSpacelube: {
 		items: {
@@ -278,7 +282,8 @@ const PILLS = {
 		requiredItems: {
 			oil: 3,
 			water: 2,
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	sythnpillPrecision: {
 		items: {
@@ -291,7 +296,8 @@ const PILLS = {
 			pillHappy: 5,
 			sacid: 1,
 			lithium: 1
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 }
 
