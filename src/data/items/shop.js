@@ -538,34 +538,29 @@ export default {
 		icon: require("@/assets/art/shop/items/ertdroppod.png"),
 		itemTable: [
 			{
-				id: 'meleeBurn4',
+				id: 'meleeBurn4T',
 				weight: 50
 			},
 			{
 				id: 'ammoEnergy4',
-				count: [1,50],
-				weight: 75
-			},
-			{
-				id: 'ammoEnergy3',
-				count: [1,100],
-				weight: 90
+				count: [1000,1500],
+				weight: 50
 			},
 			{
 				id: 'gunEnergy8',
-				weight: 20
+				weight: 15
 			},
 			{
 				id: 'companionAicard',
-				weight: 20
+				weight: 15
 			},
 			{
 				id: 'meleeShield2',
-				weight: 20
+				weight: 15
 			},
 			{
 				id: 'ticket60',
-				count: [1,3],
+				count: [3,5],
 				weight: 5
 			},
 		]
@@ -608,7 +603,7 @@ export default {
 			},
 			{
 				id: 'spendTC',
-				weight: 3
+				weight: 6
 			},
 		]
 	}
