@@ -53,7 +53,7 @@ export default {
 						weight: 32
 					},
 					{
-						id: 'diamond',
+						id: 'gold',
 						count: [1, 10],
 						weight: 25
 					},
