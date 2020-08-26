@@ -48,6 +48,8 @@ const validhunting = merge(cloneDeep(jobBase), {
 			let xpFactor = 1;
 			if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitSecurity') {
 				xpFactor = 1.2;
+			} else if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitChameleon') {
+				xpFactor = 1.33;
 			}
 			console.log(xpFactor);
 			commit("addXP", state.xpReward * xpFactor);
