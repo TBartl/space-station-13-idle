@@ -69,6 +69,7 @@ export default {
 		equipmentSlot: "chest",
 		overlayAppearInBack: true,
 		overlayBlurry: true,
+		liftsRestrictions: ["mech"],
 		sellPrice: 47465,
 		icon: require("@/assets/art/fabrication/mechmauler_anim.gif"),
 		overlay: require("@/assets/art/fabrication/mechmauler_anim.gif"),
