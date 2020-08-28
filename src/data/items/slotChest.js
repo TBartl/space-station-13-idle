@@ -524,7 +524,7 @@ Object.values(BURNARMOR).forEach(burnarmor => {
 
 Object.values(MECHS).forEach(mech => {
 	mech.equipmentSlot = "chest";
-	// mech.liftsRestrictions= ["mech"];
+	mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
 	mech.overlayBlurry = true;
 	mech.overlay = mech.icon;
