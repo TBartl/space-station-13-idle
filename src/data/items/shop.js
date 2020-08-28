@@ -559,8 +559,7 @@ export default {
 				weight: 15
 			},
 			{
-				id: 'ticket60',
-				count: [3,5],
+				id: 'mechSpecial1',
 				weight: 5
 			},
 		]
