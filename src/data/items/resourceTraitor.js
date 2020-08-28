@@ -6,6 +6,7 @@ export default {
 	},
 	meleeBurn3T: {
 		name: "Energy Dagger",
+		description: "This one has an adaptive grip, making it easier to wield.",
 		sellPrice: 380,
 		icon: require("@/assets/art/combat/items/melee_e3_animt.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e3_anim_overlayt.gif"),
@@ -25,6 +26,7 @@ export default {
 	},
 	meleeBurn4T: {
 		name: "Energy Sword",
+		description: "This one has an adaptive grip, making it easier to wield.",
 		sellPrice: 580,
 		icon: require("@/assets/art/combat/items/melee_e4_animt.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e4_overlay_animt.gif"),
@@ -44,6 +46,7 @@ export default {
 	},
 	meleeBurn5T: {
 		name: "Dual Energy Sword",
+		description: "This one has an adaptive grip, making it easier to wield.",
 		sellPrice: 780,
 		icon: require("@/assets/art/combat/items/melee_e5t_anim.gif"),
 		overlay: require("@/assets/art/combat/items/melee_e5t_overlay.gif"),
