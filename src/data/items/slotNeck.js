@@ -229,6 +229,8 @@ export default {
 			shitposting: MAX_LEVEL
 		},
 	},
+
+//misc items
 	neckFanny1: {
 		name: "Fruity Fanny Pack",
 		sellPrice: 2500,
@@ -261,6 +263,26 @@ export default {
 			evasion: 30
 		},
 	},
+	mechSpecial1: {
+		name: "Mech Mounted Teleporter",
+		restrictions: ["mech"],
+		sellPrice: 2500,
+		icon: require("@/assets/art/fabrication/mecha_teleport.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 0,
+			evasion: 5,
+			precision: 0,
+			regen: 0,
+			protection: -5,
+			moveTime: -6
+		},
+		requires: {
+			fabrication: 25
+		},
+	},
+
+//cult items
 	runeN1: {
 		name: "Manifest Rune",
 		sellPrice: 180,
