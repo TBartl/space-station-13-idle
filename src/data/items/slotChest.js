@@ -540,7 +540,7 @@ Object.values(MECHS).forEach(mech => {
 });
 Object.values(ASSAULTMECHS).forEach(assaultmech => {
 	assaultmech.equipmentSlot = "chest";
-	// assaultmech.liftsRestrictions= ["mech"];
+	assaultmech.liftsRestrictions= ["mech"];
 	assaultmech.overlayAppearInBack = true;
 	assaultmech.overlayBlurry = true;
 	assaultmech.overlay = assaultmech.icon;
