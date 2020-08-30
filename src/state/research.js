@@ -8,15 +8,15 @@ import { RESEARCH_UPGRADE_PERCENT } from "@/data/upgrades";
 
 const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	state: {
-		rndPoint: 0,
+		rndPoints: 0,
 		rndPointsMax: 500,
-		researchBountyItems: {'money': 1},//list of item IDs to fetch
-		xpReward: 80,
+		researchBountyItems: {'money': 100, 'glass': 25},//list of item IDs for the player to fetch
+		xpReward: 100,
 		pointsReward: 50
 	},
 	getters: {
-		rndPoint(state){
-			return state.rndPoint;
+		rndPoints(state){
+			return state.rndPoints;
 		},
 		rndPointsMax(state){//later we can make this return a value modified by a cargo upgrade
 			return state.rndPointsMax;
@@ -32,6 +32,20 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		jobId() {
 			return "research";
+		},
+		hasBountyItems(state, getters, rootState, rootGetters) {
+			for (let [itemId, requiredCount] of Object.entries(state.researchBountyItems)) {
+				let count = rootGetters["inventory/bank"][itemId];
+				count = count ? count : 0;
+				/* code to count worn items
+				for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+					let equipmentItemId = equipment.itemId;
+					if (!equipmentItemId || equipmentItemId != itemId) continue;
+					count += equipment.count;
+				}*/
+				if (count < requiredCount) return false;
+			}
+			return true;
 		},
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
@@ -64,13 +78,21 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		}
 	},
 	mutations: {
-		gainPoints(state, points){
-			state.rndPoint = Math.min(state.rndPointsMax, state.rndPoint+points);
+		addToPoints(state, points){
+			state.rndPoints = Math.max(0, Math.min(state.rndPointsMax, state.rndPoints+points));
 		}
 	},
 	actions: {
-		destructiveAnalysis({ state, dispatch, commit }){
-			commit("gainPoints", state.pointsReward);
+		/*addToPoints(points){
+			commit("addToPoints", points);
+		},*/
+		destructiveAnalysis({ state, getters, dispatch, commit }) {
+			if (!getters.hasBountyItems) return false;
+			for (let [itemId, amountToRemove] of Object.entries(state.researchBountyItems)) {
+				commit("inventory/changeItemCount", { itemId, count: -amountToRemove }, { root: true });
+			}
+			commit("addToPoints", state.pointsReward);
+			commit("research/addXP", state.xpReward, { root: true });
 			console.log("tried to loot bounty");
 		},
 		rollNewBounty(){

@@ -156,8 +156,8 @@ export default {
     targetEnemyId() {
       return this.$store.getters["validhunting/targetEnemyId"];
     },
-    rndPoint() {
-      return this.$store.getters["research/rndPoint"];
+    rndPoints() {
+      return this.$store.getters["research/rndPoints"];
     },
   }
 };

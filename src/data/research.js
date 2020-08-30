@@ -9,7 +9,7 @@ export const ACTIONS = {
 			glass: 1
 		},
 		requiredLevel: 1,
-		requiredUpgrade: "recipeMultitool",
+		requiredUpgrade: "toolEngineering",
 	},
 }
 

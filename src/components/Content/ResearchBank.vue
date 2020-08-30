@@ -8,7 +8,7 @@
         <span class="mr-1">RESEARCH POINTS BANKED:</span>
       </div>
       <div class="d-flex align-items-center">
-        <span class="p-1 rndPoint rounded">{{rndPoint | cleanNum}}/{{rndPointsMax | cleanNum}}</span>
+        <span class="p-1 rndPoints rounded">{{rndPoints | cleanNum}}/{{rndPointsMax | cleanNum}}</span>
       </div>
     </div>
     <progress-bar style="border-radius: 0 !important" :progress="progress" />
@@ -24,14 +24,14 @@ export default {
   props: ["jobId", "color"],
   computed: {
     ...mapState({
-      rndPoint(){
-        return this.$store.getters["research/rndPoint"];
+      rndPoints(){
+        return this.$store.getters["research/rndPoints"];
       },
       rndPointsMax(){
         return this.$store.getters["research/rndPointsMax"];
       },
       progress() {
-        return (this.rndPoint / this.rndPointsMax);
+        return (this.rndPoints / this.rndPointsMax);
       }
     })
   }
@@ -43,11 +43,11 @@ export default {
   border-top: 4px solid red;
   border-radius: 4px 4px 0 0;
 }
-.rndPoint {
+.rndPoints {
   background-color: #449fe9;
 }
 
-.dark-mode .rndPoint {
+.dark-mode .rndPoints {
   color: white !important;
 }
 </style>

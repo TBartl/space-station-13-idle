@@ -5,13 +5,18 @@
 
     <div>
       <span class="mr-1 bounty-desc">Items needed:</span>
-      <span>TODO Items go here</span>
+        <item-requirement
+            v-for="(entry, index) in Object.entries(bountyItemsList)"
+            :key="index"
+            :itemId="entry[0]"
+            :count="entry[1]"
+        />
     </div>
     <div>
       <span class="mr-1 bounty-desc">Reward:</span>
       <span>{{researchXPReward | cleanNum}}</span>
       <img :src="researchIcon" />
-      <span>XP, and </span>
+      <span> XP, and </span>
       <span>{{researchPointsReward | cleanNum}}</span>
       <img :src="require('@/assets/art/research/researchIcon.png')" />
       <span>research points</span>
@@ -36,9 +41,10 @@
 <script>
 import { mapActions } from "vuex";
 import { JOB as RESEARCH_JOB } from "@/data/research";
+import ItemRequirement from "@/components/ItemRequirement";
 
 export default {
-  components: {},
+  components: {ItemRequirement},
   props: [],
   computed: {
     researchIcon() {

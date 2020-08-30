@@ -1,16 +1,17 @@
 import ITEMS from "@/data/items";
 
 export const RESEARCH_RECIPES_I = {
-	recipeMultitool: {
-		name: "RECIPE: Multitool",
+	toolEngineering: {
+		name: "RECIPE: Geiger Counter",
 		description: "Enables the development of a tool that can speed up engineering.",
-		icon: require('@/assets/art/research/tools/toolFabrication.png'),
+		icon: require('@/assets/art/research/tools/toolEngineering.png'),
+		requiredResearchPoints: 100,
 		requiredItems: {
 			money: 1
 		},
-		upgrade: "recipeMultitool",
+		upgrade: "toolEngineering",
 		requiredUpgrades: {
-			recipeMultitool: 0
+			toolEngineering: 0
 		}
 	},
 	recipePills: {

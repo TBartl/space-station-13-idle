@@ -168,6 +168,9 @@ const inventory = {
 						if (rootGetters["upgrades/getNoEquipment"](upgradeId) != count) return false;
 					}
 				}
+				if(purchase.requiredResearchPoints) {
+					if(rootGetters["research/rndPoints"] < purchase.requiredResearchPoints) return false;
+				}
 				return true;
 			}
 		},
@@ -305,6 +308,10 @@ const inventory = {
 		purchase({ commit, dispatch, rootGetters }, purchase) {
 			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
 				commit("changeItemCount", { itemId, count: -count });
+			}
+
+			if(purchase.requiredResearchPoints){
+				commit("research/addToPoints", purchase.requiredResearchPoints*-1, { root: true });
 			}
 
 			if (purchase.upgrade) {

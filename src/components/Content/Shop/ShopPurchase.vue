@@ -47,6 +47,11 @@
           <item-popover :target="id+index" :itemId="pair[0]" />
           <span>x{{pair[1] | cleanNum}}</span>
         </div>
+        <div 
+        v-if=purchase.requiredResearchPoints
+        class="d-flex flex-row align-items-center mr-1">
+          <span><img :src="require('@/assets/art/research/researchIcon.png')" />x{{purchase.requiredResearchPoints}}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -99,6 +104,9 @@ export default {
     requiredLevels() {
       if (!this.purchase.requiredLevels) return {};
       return this.purchase.requiredLevels;
+    },
+    requiredResearchPoints(){
+      return this.purchase.requiredResearchPoints;
     },
     canOpen() {
       if (!this.item) return false;
