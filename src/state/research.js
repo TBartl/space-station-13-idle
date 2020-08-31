@@ -83,9 +83,6 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		}
 	},
 	actions: {
-		/*addToPoints(points){
-			commit("addToPoints", points);
-		},*/
 		destructiveAnalysis({ state, getters, dispatch, commit }) {
 			if (!getters.hasBountyItems) return false;
 			for (let [itemId, amountToRemove] of Object.entries(state.researchBountyItems)) {

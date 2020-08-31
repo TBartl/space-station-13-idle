@@ -1,11 +1,3 @@
-const POINTS = {
-	rndpoints: {
-		name: "Research Points",
-		sellPrice: 1,
-		icon: require("@/assets/art/research/researchIcon.png")
-	},
-}
-
 const TOOLS = {
 	toolMining: {
 		name: "Mining Scanner",
@@ -122,6 +114,5 @@ const TOOLS = {
 }
 
 export const RESOURCE_RESEARCH = {
-	...POINTS,
 	...TOOLS
 }
