@@ -306,10 +306,11 @@ const inventory = {
 			}
 		},
 		purchase({ commit, dispatch, rootGetters }, purchase) {
-			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
-				commit("changeItemCount", { itemId, count: -count });
+			if(purchase.requiredItems){
+				for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
+					commit("changeItemCount", { itemId, count: -count });
+				}
 			}
-
 			if(purchase.requiredResearchPoints){
 				commit("research/addToPoints", purchase.requiredResearchPoints*-1, { root: true });
 			}

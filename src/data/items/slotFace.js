@@ -1,4 +1,18 @@
 export default {
+	facePrescription: {
+		name: "Prescription Glasses",
+		sellPrice: 5,
+		icon: require("@/assets/art/combat/items/face/prescription_glasses.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/prescription_glasses_overlay.png"),
+		stats: {
+			precision: 1,
+			protection: -1,
+		},
+		requires: {
+			precision: 1
+		}
+	},
 	faceMeson: {
 		name: "Meson Goggles",
 		sellPrice: 1200,

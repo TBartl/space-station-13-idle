@@ -3,9 +3,9 @@ const TOOLS = {
 		name: "Mining Scanner",
 		sellPrice: 9,
 		icon: require("@/assets/art/research/tools/toolMining.png"),
-		description: "TODO",
+		description: "All mining actions give double XP.",
 		potionJob: "mining",
-		potionCharges: 8
+		potionCharges: 10
     },
     toolEngineering: {
 		name: "Geiger Counter",

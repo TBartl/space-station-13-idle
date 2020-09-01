@@ -17,13 +17,6 @@
         </div>
       </div>
 
-      <!-- Research bank bar -->
-      <div class="row mb-2">
-        <div class="col-md-8 col-lg-9 col-xl-12">
-          <research-bank :color="job.color" :jobId="jobId" />
-        </div>
-      </div>
-
       <!-- Tutorial box -->
       <job-info
         infoId="research"
@@ -73,6 +66,13 @@
         </template>
       </job-info>
 
+      <!-- Research bank bar -->
+      <div class="row mb-2">
+        <div class="col-md-8 col-lg-9 col-xl-12">
+          <research-bank :color="job.color" :jobId="jobId" />
+        </div>
+      </div>
+
       <!-- Bounty Box -->
       <div class="content-block d-flex flex-column align-items-center">
         <h5>
@@ -95,14 +95,23 @@
       </div>
 
       <!-- Actions (generated from actions defined in src/data/research.js) -->
+      <!-- this one div is the cool grey line -->
       <div
         class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
       >
       </div>
-      <div class="row">
+
+      <div
+        class="tier row"
+        v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
+        :key="tier"
+      >
+        <div class="col-12">
+          <span class="type-text text-uppercase">{{typedEntry[0]}}</span>
+        </div>
         <div
           class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
-          v-for="[actionId, action] in viewableActions"
+          v-for="[actionId, action] in typedEntry[1]"
           :key="actionId"
         >
           <generic-action
@@ -158,6 +167,18 @@ export default {
     },
     rndPoints() {
       return this.$store.getters["research/rndPoints"];
+    },
+    viewableTypedActionEntries() {
+      let entries = this.$store.getters[this.jobId + "/filteredActionEntries"];
+
+      let toReturn = {}; // type: [entries]
+      for (let entry of entries) {
+        let type = entry[1].type;
+        if (!toReturn[type]) toReturn[type] = [entry];
+        else toReturn[type].push(entry);
+      }
+
+      return toReturn;
     },
   }
 };
