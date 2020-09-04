@@ -538,13 +538,13 @@ export default {
 		icon: require("@/assets/art/shop/items/ertdroppod.png"),
 		itemTable: [
 			{
-				id: 'meleeBurn4T',
-				weight: 50
-			},
-			{
 				id: 'ammoEnergy4',
 				count: [1000,1500],
 				weight: 50
+			},
+			{
+				id: 'meleeBurn4T',
+				weight: 40
 			},
 			{
 				id: 'gunEnergy8',
@@ -560,8 +560,13 @@ export default {
 			},
 			{
 				id: 'mechSpecial1',
-				weight: 5
+				weight: 10
 			},
+			{
+				id: 'companionPositronic',
+				weight: 10
+			},
+			
 		]
 	},
 	wizCrate: {

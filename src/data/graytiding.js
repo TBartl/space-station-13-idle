@@ -174,7 +174,7 @@ const ACTIONS = {
 		name: "Space",
 		icon: require("@/assets/art/graytiding/space_anim.gif"),
 		time: 6,
-		xp: 26,
+		xp: 30,
 		itemTables: [
 			{
 				chance: 1,

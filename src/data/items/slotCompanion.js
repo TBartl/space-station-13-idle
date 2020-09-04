@@ -278,6 +278,19 @@ const SLIMES = {
 			evasion: -5,
 		}
 	},
+	companionPositronic: {
+		name: "Elusive Positronic Upgrade",
+		restrictions: ["mech"],
+		sellPrice: 5757,
+		icon: require("@/assets/art/combat/items/positronic_anim.gif"),
+		tier: 1,
+		stats: {
+			maxHealth: 0,
+			protection: 0,
+			precision: 0,
+			evasion: 25,
+		}
+	},
 	companionMousecult: {
 		name: "Proteon",
 		sellPrice: 1000,

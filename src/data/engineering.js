@@ -1,3 +1,5 @@
+import { MAX_LEVEL } from "@/data/experience";
+
 const RENEWABLE_ACTIONS = {
 	engBike: {
 		time: 5,
@@ -205,7 +207,21 @@ const RESOURCE_CONSUMING_ACTIONS = {
 		requiredItems: {
 			bananium: 1
 		}
-	}
+	},
+	engdrinkSingulo: {
+		time: 5,
+		name: "Singulo Conductance",
+		items: {
+			id: "power",
+			count: 26
+		},
+		icon: require("@/assets/art/bartending/anim/singulo.gif"),
+		xp: 23,
+		requiredLevel: 50,
+		requiredItems: {
+			drinkSingulo: 2
+		}
+	},
 }
 
 const ILL_ADVISED_ACTIONS = {
@@ -291,12 +307,18 @@ const ILL_ADVISED_ACTIONS = {
 		}
 	}
 }
-
+const MIN_LEVEL = 4;
 Object.values(RENEWABLE_ACTIONS).forEach(action => {
 	action.type = "RENEWABLE";
 });
-Object.values(RESOURCE_CONSUMING_ACTIONS).forEach(action => {
+Object.values(RESOURCE_CONSUMING_ACTIONS).forEach((action, index) => {
 	action.type = "RESOURCE-CONSUMING";
+
+	let level = Math.round(MIN_LEVEL + index / (Object.values(RESOURCE_CONSUMING_ACTIONS).length - 1) * (MAX_LEVEL - MIN_LEVEL));
+
+	action.requiredLevel = level;
+	action.xp = Math.max(2, 5 * level / 10);
+
 });
 Object.values(ILL_ADVISED_ACTIONS).forEach(action => {
 	action.type = "ILL-ADVISED";
