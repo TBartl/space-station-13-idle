@@ -1,4 +1,5 @@
 export default {
+	//original face items
 	faceMeson: {
 		name: "Meson Goggles",
 		sellPrice: 1200,
@@ -203,6 +204,213 @@ export default {
 			evasion: 25,
 		}
 	},
+//round 2 face items
+	faceMeson2: {
+		name: "T-Ray Meson Goggles",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_tray.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_tray_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 4,
+			protection: -6,
+			precision: 4,
+			power: 4,
+		},
+		requires: {
+			evasion: 20,
+		}
+	},
+	faceMedHud2: {
+		name: "Health-Science HUD",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_medsci.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_medsci_overlay_anim.gif"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			protection: 0,
+			precision: 5,
+			power: 0,
+		},
+		requires: {
+			evasion: 20,
+		}
+	},
+	faceSecGlasssesss: {
+		name: "SecurityHUD Garglasses",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_secgar.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_secgar_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			protection: 5,
+			precision: 0,
+			power: 0,
+		},
+		requires: {
+			evasion: 20,
+		}
+	},
+	faceScience2: {
+		name: "Night Vision Goggles",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_nvg.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_nvg_anim_overlay.gif"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			protection: -6,
+			precision: 11,
+			power: 0,
+		},
+		requires: {
+			evasion: 20,
+		}
+	},
+	faceTiki2: {
+		name: "Rangi Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_tiki2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_tiki2_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 3,
+			protection: 0,
+			precision: 0,
+			power: 3,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceWrestle2: {
+		name: "Luchador Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_wrestle2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_wrestle2_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 3,
+			protection: 0,
+			precision: 3,
+			power: 0,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceGas2: {
+		name: "Captain's Gas Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_gas2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_gas2_overlay.png"),
+		stats: {
+			maxHealth: 30,
+			evasion: 0,
+			protection: 0,
+			precision: 3,
+			power: 3,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceFox2: {
+		name: "Bee Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_fox2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_fox2_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 0,
+			protection: 0,
+			precision: 6,
+			power: 0,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceSec2: {
+		name: "SWAT Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_sec2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_sec2_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 0,
+			protection: 0,
+			precision: 0,
+			power: 6,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceSyndicate2: {
+		name: "Syndicate Balaclava",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_syndicate2.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_syndicate2_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 6,
+			protection: 0,
+			precision: 0,
+			power: 0,
+		},
+		requires: {
+			evasion: 40,
+		}
+	},
+	faceMime2: {
+		name: "Sexy Mime Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_mimesexy.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_mimesexy_overlay.png"),
+		stats: {
+			maxHealth: -120,
+			evasion: 12,
+			protection: -15,
+			precision: 12,
+			power: 12,
+		},
+		requires: {
+			evasion: 35,
+		}
+	},
+	faceClown2: {
+		name: "Sexy Clown Mask",
+		sellPrice: 1848,
+		icon: require("@/assets/art/combat/items/face/face_clownsexy.png"),
+		equipmentSlot: "face",
+		overlay: require("@/assets/art/combat/items/face/face_clownsexy_overlay.png"),
+		stats: {
+			maxHealth: 240,
+			evasion: 0,
+			protection: 0,
+			precision: 0,
+			power: 0,
+		},
+		requires: {
+			evasion: 35,
+		}
+	},
+
+	//changeling face items
 	faceLing0: {
 		name: "Ashen Disguise",
 		sellPrice: 253,
