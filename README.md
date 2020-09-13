@@ -33,6 +33,8 @@ To prepare a local version of the game for testing, type the following:
 npm install
 ```
 
+Again, if it appears frozen, let it run. It can take from just a minute to tens of minutes, depending on your system.
+
 To launch a hot-reloading copy of your repo, type the following: (You will also only need to run this command on subsequent launches of the live edit page.)
 
 ```
