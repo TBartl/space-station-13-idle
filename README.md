@@ -51,6 +51,11 @@ Then, run the following to deploy to the `gh-pages` branch of your repo.
 ```
 ! This requires admin access to the repository in your `deployGit.sh` file.
 
+### Deploy to AWS
+```
+./deployAws.sh
+```
+! Requires a signed in AWS account, `aws configure`
 ___
 
 ## Implementation Information
