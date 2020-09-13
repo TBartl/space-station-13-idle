@@ -2,35 +2,54 @@
 
 Space Station Idle is a web-based idle game based on Melvor Idle, and set in the Space Station 13 universe.
 
-This repository has not been set up well for community contribution. In addition there's very little public documentation on implementation right now...
+There's very little public documentation on implementation right now.
 
-BUT, if you want to contribute anyway, pull requests are open!
+If you want to contribute anyway, pull requests are open!
 
 ___
 
-## Setup and Deployal
+## Setup and Deployment
+
+### Prerequsites
+
+You will need Git Bash as well as Node.js installed.
+
+If you do not already have Vue CLI installed, continue reading, otherwise skip to the next header.
+
+To install Vue CLI, type the following into Git Bash:
+
+```
+npm install -g @vue/cli
+```
+
+If it appears frozen, let it run. It can take from just a minute to tens of minutes, depending on your system.
+
 
 ### Project setup
+
+To prepare a local version of the game for testing, type the following:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+To launch a hot-reloading copy of your repo, type the following: (You will also only need to run this command on subsequent launches of the live edit page.)
+
 ```
 npm run serve
 ```
 
+
 ### Deploy To Github
+
+First, edit `deployGit.sh` as well as `vue.config.js` with your repo address (You will only need to edit `vue.config.js` if you modify the name of the repo, such as cloning vs forking.)
+
+Then, run the following to deploy to the `gh-pages` branch of your repo.
+
 ```
 ./deployGit.sh
 ```
-! Requires admin access to the repository
-
-### Deploy to AWS
-```
-./deployAws.sh
-```
-! Requires signed in AWS account, `aws configure`
+! This requires admin access to the repository in your `deployGit.sh` file.
 
 ___
 
