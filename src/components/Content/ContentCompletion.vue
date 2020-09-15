@@ -168,7 +168,7 @@ export default {
       return this._uid.toString();
     },
     items() {
-      return ITEMS;
+      return Object.values(ITEMS).filter(itemId => !itemId.nocomplete);
     },
     enemies() {
       return ENEMIES;
