@@ -16,7 +16,7 @@ export default {
 	},
 	mechCore2U: {
 		name: "Mech Core",
-		sellPrice: 200,
+		sellPrice: 2000,
 		icon: require("@/assets/art/fabrication/UtilityA_Chassis.png")
 	},
 	mechCore1A: {
