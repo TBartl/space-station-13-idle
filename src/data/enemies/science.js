@@ -116,14 +116,26 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 54
+						weight: 40
 					},
 					{
 						id: 'meleeToolbox6',
 						weight: 8
 					},
 					{
-						id: 'ripley',
+						id: 'mechCore1U',
+						weight: 5
+					},
+					{
+						id: 'mechCore2U',
+						weight: 5
+					},
+					{
+						id: 'mechCore1A',
+						weight: 5
+					},
+					{
+						id: 'mechCore2A',
 						weight: 5
 					},
 				]
