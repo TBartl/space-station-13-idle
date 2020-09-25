@@ -254,6 +254,22 @@ const SLIMES = {
 			power: 3,
 		},
 	},
+	companionSkub: {
+		name: "Skub",
+		sellPrice: 0,
+		icon: require("@/assets/art/shitposting/skub.png"),
+		tier: 0,
+		description: "Are you pro-skub or anti-skub?",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: 0,
+			power: 0,
+			protection: 0,
+			luck: 0,
+			regen: 0,
+		},
+	},
 	companionPai: {
 		name: "Personal AI",
 		sellPrice: 1500,

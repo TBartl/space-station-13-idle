@@ -335,7 +335,7 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'headEpic5',
+						id: 'companionSkub',
 						weight: 1
 					},
 					{
