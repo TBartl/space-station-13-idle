@@ -260,6 +260,7 @@ const SLIMES = {
 		icon: require("@/assets/art/shitposting/skub.png"),
 		tier: 0,
 		description: "Are you pro-skub or anti-skub?",
+		nocomplete: true,
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
