@@ -65,6 +65,14 @@ const POTIONS = {
 		potionJob: "chemistry",
 		potionCharges: 5
 	},
+	potionResearch: {
+		name: "Ballmer Fluid",
+		sellPrice: 55,
+		icon: require("@/assets/art/chemistry/volatile.png"),//todo: art
+		description: "Does nothing yet",//todo: functionality
+		potionJob: "research",
+		potionCharges: 5
+	},
 	potionBotany: {
 		name: "Unstable Mutagen",
 		sellPrice: 67,

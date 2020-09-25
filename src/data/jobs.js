@@ -5,6 +5,7 @@ import { JOB as XENOBIO_JOB } from "./xenobiology";
 import { JOB as BOTANY_JOB } from "./botany";
 import { JOB as COOKING_JOB } from "./cooking";
 import { JOB as FABRICATION_JOB } from "./fabrication";
+import { JOB as RESEARCH_JOB } from "./research";
 import { JOB as GRAYTIDING_JOB } from "./graytiding";
 import { JOB as TINKERING_JOB } from "./tinkering";
 import { JOB as VALIDHUNTING_JOB } from "./validhunting";
@@ -25,6 +26,7 @@ export const ALL_JOBS = [
 	MINING_JOB,
 	ENGINEERING_JOB,
 	FABRICATION_JOB,
+	RESEARCH_JOB,
 	GRAYTIDING_JOB,
 	TINKERING_JOB,
 	BOTANY_JOB,

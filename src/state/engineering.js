@@ -44,6 +44,8 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							}
 						}
 					]
+				} else if (potionItemId == "toolEngineering") {
+					action.time -= 1;
 				}
 			}
 			return actions;

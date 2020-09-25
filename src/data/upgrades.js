@@ -319,6 +319,28 @@ for (let i = 0; i < 5; i++) {
 	FABRICATION_UPGRADES[`upgradeFabrication${i + 1}`] = upgrade;
 }
 
+export const RESEARCH_UPGRADE_PERCENT = .1;
+const RESEARCH_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Upgrade R&D",
+		description: `Does nothing yet`, //todo: functionality
+		icon: require('@/assets/art/fabrication/upgrade1.png'),//todo: new art
+		requiredItems: {}, // Filled out below
+		requiredLevels: { research: (i + 1) * 10 },
+		upgrade: "researchUpgrade",
+		requiredUpgrades: { researchUpgrade: i }
+
+	}
+
+	if (i != 0) {
+		upgrade.description += `, from ${(100 - FABRICATION_UPGRADE_PERCENT * i * 100).toFixed()}%`;
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	FABRICATION_UPGRADES[`upgradeFabrication${i + 1}`] = upgrade;
+}
+
 const BOTANY_UPGRADES = {
 	upgradeBotany1: {
 		name: "Add Second Botany Tray",
@@ -488,6 +510,7 @@ const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
+	...RESEARCH_UPGRADES,
 	...GRAYTIDING_UPGRADES,
 	...TINKERING_UPGRADES,
 	...BOTANY_UPGRADES,
