@@ -168,7 +168,17 @@ export default {
       return this._uid.toString();
     },
     items() {
-      return ITEMS;
+      Object.filter = function(obj, predicate) {
+      let result = {}, key;
+      for (key in obj) {
+        if (obj.hasOwnProperty(key) && !predicate(obj[key])) {
+            result[key] = obj[key];
+        }
+      }
+        return result;
+      };
+      const nocomexclude = Object.filter(ITEMS, itemId => itemId.nocomplete);
+      return nocomexclude;
     },
     enemies() {
       return ENEMIES;
