@@ -2,7 +2,8 @@ export default {
 	bluetime: {
 		name: "Bluespace Time",
 		description: "Can be exchanged at the Chronosphere",
-		icon: require("@/assets/art/chrono/bluetime.png")
+		icon: require("@/assets/art/chrono/bluetime.png"),
+		nocomplete: true
 	},
 	bluetimeEmpty: {
 		name: "Empty Bluespace Time Device",

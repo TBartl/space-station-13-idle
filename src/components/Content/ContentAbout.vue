@@ -32,7 +32,7 @@
             </p>
             <p>
               Also, check out our
-              <a href="https://discord.gg/HwbK9XQ">
+              <a href="https://discord.com/invite/HwbK9XQ">
                 <img class="no-pixel mx--1" :src="require('@/assets/art/misc/discord.png')" />
                 <b>Discord Server</b>
               </a>.

@@ -384,6 +384,7 @@ let premiumFoodEntries = Object.entries(FOOD).map(entry => {
 		if (newFood.stats[statId] > 0)
 			newFood.stats[statId] = Math.round(newFood.stats[statId])
 			newFood.stats.luck = 5;
+			newFood.stats.nocomplete = true;
 	}
 	return ["q_" + originalId, newFood];
 });
