@@ -8,7 +8,7 @@
       class="my-3"
     >Full changelog of features, balance changes, and more are available on the Discord:</span>
 
-    <a class="discord" href="https://discord.gg/HwbK9XQ" target="_blank">
+    <a class="discord" href="https://discord.com/invite/HwbK9XQ" target="_blank">
       <img :src="require('@/assets/art/misc/fake_discord.png')" />
     </a>
     <button class="btn btn-primary mt-3" @click="confirmationClicked">Close</button>
