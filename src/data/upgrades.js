@@ -473,7 +473,7 @@ for (let i = 0; i < 5; i++) {
 		requiredItems: {}, // Filled out below
 		requiredLevels: { validhunting: (i + 1) * 10 },
 		upgrade: "antagUpgrade",
-		requiredUpgrades: { antagUpgrade: i }
+		requiredUpgrades: { antagUpgrade: i, antagRoll: 1 }
 	}
 
 	if (i != 0) {
