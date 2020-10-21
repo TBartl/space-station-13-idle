@@ -2,7 +2,7 @@ import ITEMS from "@/data/items";
 
 //IDs for bounties should end with a number indicative of their tier
 
-export const TIER_I_BOUNTIES = { //bounties that appear at levels 1-10
+export const TIER_1_BOUNTIES = { //bounties that appear at levels 1-10, requires 5ish minutes per. 50 to 100 points
 	miningBounty1: {
 		requiredItems: { //ETA 3 minutes to acquire
 			glass: 50,
@@ -72,7 +72,7 @@ export const TIER_I_BOUNTIES = { //bounties that appear at levels 1-10
 	}
 }
 
-export const TIER_II_BOUNTIES = { //bounties that appear at levels 11-20
+export const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires 10ish minutes per. 75 to 200 points
 	miningBounty2: {
 		requiredItems: { //ETA 8 minutes at 1 mining upgrade
 			silver: 100,
@@ -102,7 +102,7 @@ export const TIER_II_BOUNTIES = { //bounties that appear at levels 11-20
 	tinkeringBounty2: {
 		requiredItems: { //ETA 13 levels in tinkering + 2~ minutes
 			meleeBlunt2: 10,
-			armorBlunt2: 5
+			armorBrute2: 5
 		},
 		pointsReward: 150
 	},
@@ -148,5 +148,278 @@ export const TIER_II_BOUNTIES = { //bounties that appear at levels 11-20
 			cactus: 10
 		},
 		pointsReward: 100
+	}
+}
+
+export const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, requires 10 minutes per of high level skills 100 to 250 points
+	miningBounty3: {
+		requiredItems: {
+			titanium: 100,
+			uranium: 100
+		},
+		pointsReward: 200
+	},
+	engineeringBounty3: {
+		requiredItems: {
+			power: 750,
+			burnJunk: 25
+		},
+		pointsReward: 225
+	},
+	fabricationBounty3: {
+		requiredItems: {
+			gunBallistic4: 1,
+			ammoBallistic3: 100
+		},
+		pointsReward: 250
+	},
+	graytideBounty3: {
+		requiredItems: {
+			armorjunk: 100
+		},
+		pointsReward: 150
+	},
+	tinkeringBounty3: {
+		requiredItems: {
+			meleeSharp3: 10,
+			armorBurn3: 5
+		},
+		pointsReward: 100
+	},
+	botanyBounty3: {
+		requiredItems: {
+			Orange: 160,
+			plantSeed: 100
+		},
+		pointsReward: 200
+	},
+	cookingBounty3: {
+		requiredItems: {
+			foodPasta1: 50,
+			q_foodPasta1: 5,
+			foodPrecision1: 5
+		},
+		pointsReward: 225
+	},
+
+	bartendingBounty3: {
+		requiredItems: {
+			drinkTequila: 100,
+			drinkLemonJuice: 5
+		},
+		pointsReward: 250
+	},
+	xenobiologyBounty3: {
+		requiredItems: {
+			slimeRainbow: 10
+		},
+		pointsReward: 200
+	},
+
+	chemistryBounty3: {
+		requiredItems: { //ETA 2 minutes in chem + 2 minutes in engineering
+			mercury: 100,
+			potionCooking: 5
+		},
+		pointsReward: 175
+	},
+	combatBounty3: {
+		requiredItems: { //ETA varies too much
+			companionFox: 1,
+			criminal: 5
+		},
+		pointsReward: 150
+	},
+	lootcrateBounty3: {
+		requiredItems: { //ETA 6~ minutes with simple mining to sell ores
+			S2headCommon1: 5
+		},
+		pointsReward: 75
+	},
+	mysteriousBounty3: { //named such because it may not be immediately obvious how to obtain these items
+		requiredItems: { //ETA 4~ minutes if you know where cactuses are found
+			faceTiki: 10
+		},
+		pointsReward: 175
+	}
+
+}
+
+export const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, requires 10 minutes per of unlocked recipes or low boss items 150 to 300 points
+	miningBounty4: {
+		requiredItems: {
+			plasma: 100,
+			diamond: 100
+		},
+		pointsReward: 150
+	},
+	engineeringBounty4: {
+		requiredItems: {
+			power: 10000,
+		},
+		pointsReward: 250
+	},
+	fabricationBounty4: {
+		requiredItems: { //ETA 13 minutes + mining/fab levels
+			ripley: 1
+		},
+		pointsReward: 175
+	},
+	graytideBounty4: {
+		requiredItems: { //ETA <20 minutes avg with 2 upgrades+chem
+			junk: 50
+		},
+		pointsReward: 175
+	},
+	tinkeringBounty4: {
+		requiredItems: { //ETA 13 levels in tinkering + 2~ minutes
+			meleeBlunt4: 10,
+			armorBrute4: 5
+		},
+		pointsReward: 150
+	},
+	botanyBounty4: {
+		requiredItems: { //ETA 22 levels in botany OR mutagen with rng
+			bananaMime: 160,
+			plantSeed: 500
+		},
+		pointsReward: 200
+	},
+	cookingBounty4: {
+		requiredItems: {
+			foodPasta1: 50,
+			q_foodPasta1: 5,
+			foodPrecision1: 5
+		},
+		pointsReward: 175
+	},
+
+	bartendingBounty4: {
+		requiredItems: {
+			drinkTequila: 100,
+			drinkLemonJuice: 5
+		},
+		pointsReward: 250
+	},
+	xenobiologyBounty4: {
+		requiredItems: {
+			slimeRainbow: 10
+		},
+		pointsReward: 200
+	},
+
+	chemistryBounty4: {
+		requiredItems: { //ETA 2 minutes in chem + 2 minutes in engineering
+			sacid: 100,
+			potionMining: 5
+		},
+		pointsReward: 200
+	},
+	combatBounty4: {
+		requiredItems: { //ETA varies too much
+			mouseCarcass: 10,
+			wire: 5
+		},
+		pointsReward: 300
+	},
+	lootcrateBounty4: {
+		requiredItems: { //ETA 6~ minutes with simple mining to sell ores
+			supplyCrate: 2
+		},
+		pointsReward: 275
+	},
+	mysteriousBounty4: { //named such because it may not be immediately obvious how to obtain these items
+		requiredItems: { //ETA 4~ minutes if you know where cactuses are found
+			cactus: 10
+		},
+		pointsReward: 250
+	}
+}
+
+export const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires 10 minutes per of unlocked recipes, antag jobs, and high boss items 200 to 350 points
+	miningBounty5: {
+		requiredItems: {
+			bananium: 100
+		},
+		pointsReward: 250
+	},
+	engineeringBounty5: {
+		requiredItems: { //ETA 8-10? minutes to acquire
+			power: 100000,
+		},
+		pointsReward: 350
+	},
+	fabricationBounty5: {
+		requiredItems: { //ETA 13 minutes + mining/fab levels
+			ripley: 1
+		},
+		pointsReward: 275
+	},
+	graytideBounty5: {
+		requiredItems: { //ETA <20 minutes avg with 2 upgrades+chem
+			junk: 50
+		},
+		pointsReward: 225
+	},
+	tinkeringBounty5: {
+		requiredItems: { //ETA 13 levels in tinkering + 2~ minutes
+			meleeBlunt6: 10,
+			armorBurn5: 5
+		},
+		pointsReward: 300
+	},
+	botanyBounty5: {
+		requiredItems: { //ETA 22 levels in botany OR mutagen with rng
+			orange3d: 160,
+			plantSeed: 1000
+		},
+		pointsReward: 375
+	},
+	cookingBounty5: {
+		requiredItems: {
+			foodPasta1: 50,
+			q_foodPasta1: 5,
+			foodPrecision1: 5
+		},
+		pointsReward: 225
+	},
+	bartendingBounty5: {
+		requiredItems: {
+			drinkTequila: 100,
+			drinkLemonJuice: 5
+		},
+		pointsReward: 250
+	},
+	xenobiologyBounty5: {
+		requiredItems: {
+			slimeRainbow: 10
+		},
+		pointsReward: 300
+	},
+	chemistryBounty5: {
+		requiredItems: { //ETA 2 minutes in chem + 2 minutes in engineering
+			sacid: 100,
+			potionMining: 5
+		},
+		pointsReward: 200
+	},
+	combatBounty5: {
+		requiredItems: { //ETA varies too much
+			mouseCarcass: 10,
+			wire: 5
+		},
+		pointsReward: 250
+	},
+	lootcrateBounty5: {
+		requiredItems: { //ETA 6~ minutes with simple mining to sell ores
+			supplyCrate: 2
+		},
+		pointsReward: 250
+	},
+	mysteriousBounty5: { //named such because it may not be immediately obvious how to obtain these items
+		requiredItems: { //ETA 4~ minutes if you know where cactuses are found
+			cactus: 10
+		},
+		pointsReward: 300
 	}
 }
