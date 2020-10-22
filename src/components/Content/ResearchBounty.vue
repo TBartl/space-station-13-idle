@@ -15,10 +15,10 @@
     <div>
       <span class="mr-1 bounty-desc">Reward:</span>
       <span>{{researchXPReward | cleanNum}}</span>
-      <img :src="researchIcon" />
+      <img :src="researchIcon" class="importantimg"/>
       <span> XP, and </span>
       <span>{{researchPointsReward | cleanNum}}</span>
-      <img :src="require('@/assets/art/research/researchIcon.png')" />
+      <img :src="require('@/assets/art/research/researchIcon.png')" class="importantimg"/>
       <span>research points</span>
     </div>
 
@@ -85,5 +85,8 @@ img {
 }
 .name {
   font-size: 18px;
+}
+.importantimg {
+  width: 32px !important;
 }
 </style>
