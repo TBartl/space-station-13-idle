@@ -24,10 +24,16 @@
 
     <div class="d-flex flex-column mr-2">
       <button
+        :id="reroll+reroll.id"
         type="button"
         class="btn btn-primary btn-sm w-100"
         @click="reroll"
       >Reroll</button>
+      <b-popover :target="reroll+reroll.id" triggers="hover" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
+        <div class="focus-text d-flex flex-column align-items-center">
+          <p class="text-center" style="color:red">Rerolling will cost you 1 level of R&D XP!</p>
+        </div>
+      </b-popover>
       <button
         type="button"
         class="btn btn-danger btn-sm w-100 mt-1"
