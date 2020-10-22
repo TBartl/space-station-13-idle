@@ -4,14 +4,16 @@ import jobSingleAction from '@/state/jobSingleAction';
 
 import { ACTIONS } from "@/data/research"
 import { RESEARCH_UPGRADE_PERCENT } from "@/data/upgrades";
+import { RESEARCH_BOUNTIES } from "@/data/researchBounties";
+import { xpFromLevel } from '@/data/experience'
 
 
 const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	state: {
 		rndPoints: 0,
 		rndPointsMax: 500,
-		researchBountyItems: {'money': 100, 'glass': 25},//list of item IDs for the player to fetch
-		xpReward: 100,
+		researchBountyItems: {},//list of item IDs for the player to fetch
+		xpReward: 100, //todo: remove this, bounties all give 2 levels and rerolls take 1
 		pointsReward: 50
 	},
 	getters: {
@@ -80,6 +82,10 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	mutations: {
 		addToPoints(state, points){
 			state.rndPoints = Math.max(0, Math.min(state.rndPointsMax, state.rndPoints+points));
+		},
+		changeBounty(state, newBounty){
+			state.researchBountyItems = newBounty.requiredItems;
+			state.pointsReward = newBounty.pointsReward;
 		}
 	},
 	actions: {
@@ -89,11 +95,23 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				commit("inventory/changeItemCount", { itemId, count: -amountToRemove }, { root: true });
 			}
 			commit("addToPoints", state.pointsReward);
-			commit("research/addXP", state.xpReward, { root: true });
+			dispatch("changeLevel", 2);
 			console.log("tried to loot bounty");
+			dispatch("rollNewBounty");
 		},
-		rollNewBounty(){
-			console.log("tried to roll up a new bounty");
+		rollNewBounty({ state, getters, dispatch, commit, rootGetters }){
+			let bountyTier = Math.min(5, Math.floor(rootGetters["research/level"]/10 % 10)+1);//get our bounty tier (10s place digit + 1)
+			let thisTierOfBounties = Object.values(RESEARCH_BOUNTIES).filter(everyBounty => everyBounty.tier == bountyTier);//get only bounties in our tier
+			console.log(bountyTier + " is our tier.");
+			thisTierOfBounties = thisTierOfBounties.filter(everyBounty => everyBounty.requiredItems != state.researchBountyItems);//don't get the same bounty twice
+			let chosenBounty = thisTierOfBounties[Math.floor(Math.random() * thisTierOfBounties.length)];//pick a bounty from the bounties remaining
+			commit("changeBounty", chosenBounty);
+			console.log("tried to roll up a new bounty of tier: "+chosenBounty.tier);
+		},
+		changeLevel({ state, getters, dispatch, commit, rootGetters }, levelAddition){
+			let currentLevel = rootGetters["research/level"];
+			let xp = xpFromLevel(currentLevel + levelAddition) - xpFromLevel(currentLevel)
+			commit("research/addXP", xp, { root: true });
 		}
 	}
 });

@@ -2,7 +2,7 @@ import ITEMS from "@/data/items";
 
 //IDs for bounties should end with a number indicative of their tier
 
-export const TIER_1_BOUNTIES = { //bounties that appear at levels 1-10, requires 5ish minutes per. 50 to 100 points
+const TIER_1_BOUNTIES = { //bounties that appear at levels 1-10, requires 5ish minutes per. 50 to 100 points
 	miningBounty1: {
 		requiredItems: { //ETA 3 minutes to acquire
 			glass: 50,
@@ -72,7 +72,7 @@ export const TIER_1_BOUNTIES = { //bounties that appear at levels 1-10, requires
 	}
 }
 
-export const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires 10ish minutes per. 75 to 200 points
+const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires 10ish minutes per. 75 to 200 points
 	miningBounty2: {
 		requiredItems: { //ETA 8 minutes at 1 mining upgrade
 			silver: 100,
@@ -121,8 +121,7 @@ export const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires
 		},
 		pointsReward: 175
 	},
-	//needs bartending and xenobio bounties
-	//code unfinished below this line
+	//needs bartending and xenobio bounties in t2?
 	chemistryBounty2: {
 		requiredItems: { //ETA 2 minutes in chem + 2 minutes in engineering
 			sacid: 100,
@@ -151,7 +150,7 @@ export const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires
 	}
 }
 
-export const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, requires 10 minutes per of high level skills 100 to 250 points
+const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, requires 10 minutes per of high level skills 100 to 250 points
 	miningBounty3: {
 		requiredItems: {
 			titanium: 100,
@@ -175,7 +174,7 @@ export const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, require
 	},
 	graytideBounty3: {
 		requiredItems: {
-			armorjunk: 100
+			armorJunk: 100
 		},
 		pointsReward: 150
 	},
@@ -188,7 +187,7 @@ export const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, require
 	},
 	botanyBounty3: {
 		requiredItems: {
-			Orange: 160,
+			orange: 160,
 			plantSeed: 100
 		},
 		pointsReward: 200
@@ -245,7 +244,7 @@ export const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, require
 
 }
 
-export const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, requires 10 minutes per of unlocked recipes or low boss items 150 to 300 points
+const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, requires 10 minutes per of unlocked recipes or low boss items 150 to 300 points
 	miningBounty4: {
 		requiredItems: {
 			plasma: 100,
@@ -336,7 +335,7 @@ export const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, require
 	}
 }
 
-export const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires 10 minutes per of unlocked recipes, antag jobs, and high boss items 200 to 350 points
+const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires 10 minutes per of unlocked recipes, antag jobs, and high boss items 200 to 350 points
 	miningBounty5: {
 		requiredItems: {
 			bananium: 100
@@ -422,4 +421,18 @@ export const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires
 		},
 		pointsReward: 300
 	}
+}
+
+Object.values(TIER_1_BOUNTIES).forEach(bounty => bounty.tier = 1);
+Object.values(TIER_2_BOUNTIES).forEach(bounty => bounty.tier = 2);
+Object.values(TIER_3_BOUNTIES).forEach(bounty => bounty.tier = 3);
+Object.values(TIER_4_BOUNTIES).forEach(bounty => bounty.tier = 4);
+Object.values(TIER_5_BOUNTIES).forEach(bounty => bounty.tier = 5);
+
+export const RESEARCH_BOUNTIES = {
+	...TIER_1_BOUNTIES,
+	...TIER_2_BOUNTIES,
+	...TIER_3_BOUNTIES,
+	...TIER_4_BOUNTIES,
+	...TIER_5_BOUNTIES
 }
