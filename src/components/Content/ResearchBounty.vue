@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content-block p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
+    class="p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
   >
 
     <div>
