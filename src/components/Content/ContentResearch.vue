@@ -95,11 +95,6 @@
       </div>
 
       <!-- Actions (generated from actions defined in src/data/research.js) -->
-      <!-- this one div is the cool grey line -->
-      <div
-        class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
-      >
-      </div>
 
       <div
         class="tier row"

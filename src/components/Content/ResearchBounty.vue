@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content-block p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
+    class="p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
   >
 
     <div>
@@ -13,12 +13,11 @@
         />
     </div>
     <div>
-      <span class="mr-1 bounty-desc">Reward:</span>
-      <span>2 levels worth of </span>
-      <img :src="researchIcon" />
+      <span class="mr-1 bounty-desc">Reward: 2 levels worth of</span>
+      <img :src="researchIcon" class="importantimg"/>
       <span> XP, and </span>
       <span>{{researchPointsReward | cleanNum}}</span>
-      <img :src="require('@/assets/art/research/researchIcon.png')" />
+      <img :src="require('@/assets/art/research/researchIcon.png')" class="importantimg"/>
       <span>research points</span>
     </div>
 
@@ -87,5 +86,8 @@ img {
 }
 .name {
   font-size: 18px;
+}
+.importantimg {
+  width: 32px !important;
 }
 </style>
