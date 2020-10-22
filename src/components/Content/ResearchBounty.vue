@@ -14,7 +14,7 @@
     </div>
     <div>
       <span class="mr-1 bounty-desc">Reward:</span>
-      <span>{{researchXPReward | cleanNum}}</span>
+      <span>2 levels worth of </span>
       <img :src="researchIcon" />
       <span> XP, and </span>
       <span>{{researchPointsReward | cleanNum}}</span>
@@ -69,10 +69,12 @@ export default {
   methods: {
     ...mapActions("research", ["destructiveAnalysis"]),
     ...mapActions("research", ["rollNewBounty"]),
+    ...mapActions("research", ["changeLevel"]),
     analyze() {
       this.destructiveAnalysis();
     },
     reroll() {
+      this.changeLevel(-1);
       this.rollNewBounty();
     }
   }
