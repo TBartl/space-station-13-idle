@@ -13,9 +13,9 @@
         />
     </div>
     <div>
-      <span class="mr-1 bounty-desc">Reward: 2 levels worth of</span>
+      <span class="mr-1 bounty-desc">Reward: 2 levels of</span>
       <img :src="researchIcon" class="importantimg"/>
-      <span> XP, and </span>
+      <span>XP + </span>
       <span>{{researchPointsReward | cleanNum}}</span>
       <img :src="require('@/assets/art/research/researchIcon.png')" class="importantimg"/>
       <span>research points</span>
@@ -74,7 +74,7 @@ export default {
     },
     reroll() {
       this.changeLevel(-1);
-      this.rollNewBounty();
+      this.rollNewBounty(true);
     }
   }
 };

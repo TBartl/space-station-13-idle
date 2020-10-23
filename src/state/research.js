@@ -6,6 +6,7 @@ import { ACTIONS } from "@/data/research"
 import { RESEARCH_UPGRADE_PERCENT } from "@/data/upgrades";
 import { RESEARCH_BOUNTIES } from "@/data/researchBounties";
 import { xpFromLevel } from '@/data/experience'
+import { EventBus } from "@/utils/eventBus.js";
 
 
 const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
@@ -13,8 +14,7 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		rndPoints: 0,
 		rndPointsMax: 500,
 		researchBountyItems: {},//list of item IDs for the player to fetch
-		xpReward: 100, //todo: remove this, bounties all give 2 levels and rerolls take 1
-		pointsReward: 50
+		pointsReward: 0
 	},
 	getters: {
 		rndPoints(state){
@@ -25,9 +25,6 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		researchBountyItems(state){
 			return state.researchBountyItems;
-		},
-		xpReward(state) {
-			return state.xpReward;
 		},
 		pointsReward(state) {
 			return state.pointsReward;
@@ -81,6 +78,9 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	},
 	mutations: {
 		addToPoints(state, points){
+			if(points + state.rndPoints > state.rndPointsMax){
+				EventBus.$emit("toast", { text: `Research Points Bank overflow! ${(points + state.rndPoints) - state.rndPointsMax} points were lost.`, duration: 7500 });
+			}
 			state.rndPoints = Math.max(0, Math.min(state.rndPointsMax, state.rndPoints+points));
 		},
 		changeBounty(state, newBounty){
@@ -99,8 +99,23 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			console.log("tried to loot bounty");
 			dispatch("rollNewBounty");
 		},
-		rollNewBounty({ state, getters, dispatch, commit, rootGetters }){
-			let bountyTier = Math.min(5, Math.floor(rootGetters["research/level"]/10 % 10)+1);//get our bounty tier (10s place digit + 1)
+		startupRoll({ state, dispatch }){
+			console.log("Startup roll called. state.researchBountyItems: "+state.researchBountyItems);
+			if(state.pointsReward != 0){
+				console.log("Returning");
+				return;
+
+			} 
+			dispatch("rollNewBounty", false);
+		},
+		rollNewBounty({ state, getters, dispatch, commit, rootGetters }, manual){
+			let currentLevel = rootGetters["research/level"];
+			if(manual && currentLevel <= 1){
+				EventBus.$emit("toast", { text: `Your R&D level is too low to reroll!`, duration: 3000 });
+				return;
+			}
+			if(manual) EventBus.$emit("toast", { text: `Rerolled research bounty!`, duration: 3000 });
+			let bountyTier = Math.min(5, Math.floor(currentLevel/10 % 10)+1);//get our bounty tier (10s place digit + 1)
 			let thisTierOfBounties = Object.values(RESEARCH_BOUNTIES).filter(everyBounty => everyBounty.tier == bountyTier);//get only bounties in our tier
 			console.log(bountyTier + " is our tier.");
 			thisTierOfBounties = thisTierOfBounties.filter(everyBounty => everyBounty.requiredItems != state.researchBountyItems);//don't get the same bounty twice

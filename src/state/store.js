@@ -220,6 +220,7 @@ const store = new Vuex.Store({
 		resetData({ commit, dispatch }, softReset) {
 			dispatch("cancelAllActions");
 			commit("_resetState", softReset);
+			dispatch('research/startupRoll');
 		},
 		setData({ commit, dispatch }, newData) {
 			dispatch("cancelAllActions");
