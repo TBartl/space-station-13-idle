@@ -211,6 +211,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_tray.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_tray_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 4,
@@ -228,6 +229,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_medsci.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_medsci_overlay_anim.gif"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -245,6 +247,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_secgar.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_secgar_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -262,6 +265,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_nvg.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_nvg_anim_overlay.gif"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -279,6 +283,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_tiki2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_tiki2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 50,
 			evasion: 3,
@@ -296,6 +301,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_wrestle2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_wrestle2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 50,
 			evasion: 3,
@@ -313,6 +319,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_gas2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_gas2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -330,6 +337,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_fox2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_fox2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 50,
 			evasion: 0,
@@ -347,6 +355,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_sec2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_sec2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 50,
 			evasion: 0,
@@ -364,6 +373,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_syndicate2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_syndicate2_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 50,
 			evasion: 6,
@@ -381,6 +391,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_mimesexy.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_mimesexy_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: -120,
 			evasion: 12,
@@ -398,6 +409,7 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_clownsexy.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_clownsexy_overlay.png"),
+		nocomplete: true,
 		stats: {
 			maxHealth: 240,
 			evasion: 0,

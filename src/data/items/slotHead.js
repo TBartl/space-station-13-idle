@@ -472,7 +472,6 @@ const HEAD_SEASON_TWO = {
 const HEAD_SEASON_HOLIDAY = {
 	holidayhat: {
 		name: "Jack O Hattern",
-		healAmount: 60,
 		isHat: true,
 		sellPrice: 2000,
 		icon: require("@/assets/art/combat/items/head/holiday_pumpkin.png"),
