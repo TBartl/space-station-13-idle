@@ -65,11 +65,11 @@ export default [
 		icon: require("@/assets/art/combat/zones/zombies.png"),
 		enemies: ["zombie1","zombie2", "zombie3", "zombie4"]
 	},
-	{
-		name: "Haunted Holiday Hallway",
-		icon: require("@/assets/art/combat/zones/holiday.png"),
-		enemies: ["holiday1","holiday2", "holiday3", "holiday4"]
-	},
+//eventonly	{
+//		name: "Haunted Holiday Hallway",
+//		icon: require("@/assets/art/combat/zones/holiday.png"),
+//		enemies: ["holiday1","holiday2", "holiday3", "holiday4"]
+//	},
 	{
 		name: "Worker Strike",
 		icon: require("@/assets/art/combat/zones/revolution.png"),

@@ -473,7 +473,7 @@ for (let i = 0; i < 5; i++) {
 		requiredItems: {}, // Filled out below
 		requiredLevels: { validhunting: (i + 1) * 10 },
 		upgrade: "antagUpgrade",
-		requiredUpgrades: { antagUpgrade: i, antagRoll: 1 }
+		requiredUpgrades: { antagUpgrade: i, antagRoll: 1, antagRoll: 2, antagRoll: 3, antagRoll: 4 } //up the antagRoll amount if there are more antag jobs added
 	}
 
 	if (i != 0) {
