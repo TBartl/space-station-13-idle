@@ -1,7 +1,11 @@
 export default {
 	holiday1: {
-		name: "Floating Skullbot",
-		icon: require("@/assets/art/combat/enemies/holiday/curseskull.gif"),
+//	Halloween		
+//		name: "Floating Skullbot",
+//		icon: require("@/assets/art/combat/enemies/holiday/curseskull.gif"),
+
+		name: "Egg",
+		icon: require("@/assets/art/combat/enemies/holiday/egg.png"),
 		stats: {
 			maxHealth: 40,
 			attackSpeed: 2.1,
@@ -45,8 +49,12 @@ export default {
 		]
 	},
 	holiday2: {
-		name: "Dancing Skeleton",
-		icon: require("@/assets/art/combat/enemies/holiday/skeleton.gif"),
+//	Halloween
+//		name: "Dancing Skeleton",
+//		icon: require("@/assets/art/combat/enemies/holiday/skeleton.gif"),
+
+	name: "Chick",
+	icon: require("@/assets/art/combat/enemies/holiday/chick.png"),
 		stats: {
 			maxHealth: 100,
 			attackSpeed: 2.1,
@@ -93,8 +101,13 @@ export default {
 		]
 	},
 	holiday3: {
-		name: "Bandage Mummy",
-		icon: require("@/assets/art/combat/enemies/holiday/mummy.png"),
+		//	Halloween	
+//		name: "Bandage Mummy",
+//		icon: require("@/assets/art/combat/enemies/holiday/mummy.png"),
+
+	name: "Chicken",
+	icon: require("@/assets/art/combat/enemies/holiday/chicken.gif"),
+
 		stats: {
 			maxHealth: 200,
 			attackSpeed: 1,
@@ -139,8 +152,11 @@ export default {
 		]
 	},
 	holiday4: {
-		name: "Clown Job",
-		icon: require("@/assets/art/combat/enemies/holiday/clown.png"),
+		//	Halloween	
+//		name: "Clown Job",
+//		icon: require("@/assets/art/combat/enemies/holiday/clown.png"), 
+	name: "ChickenMan",
+	icon: require("@/assets/art/combat/enemies/holiday/chickenman.png"),
 		stats: {
 			maxHealth: 300,
 			attackSpeed: 1.9,
