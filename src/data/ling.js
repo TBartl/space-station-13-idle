@@ -15,7 +15,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Core Enhancements",
 		icon: require("@/assets/art/combat/items/chest/arm_la1.png"),
-		xp: 9,
+		xp: 12,
 		requiredLevel: 10,
 		requiredItems: {
 			foodMeatH: 1
@@ -45,7 +45,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Enhanced Nerves",
 		icon: require("@/assets/art/combat/items/chest/arm_la2.png"),
-		xp: 15,
+		xp: 20,
 		requiredLevel: 17,
 		requiredItems: {
 			foodMeatH: 2,
@@ -76,7 +76,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Leg Enhancements",
 		icon: require("@/assets/art/combat/items/chest/arm_la3.png"),
-		xp: 21,
+		xp: 28,
 		requiredLevel: 24,
 		requiredItems: {
 			foodMeatH: 3,
@@ -107,7 +107,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Enhanced Reactions",
 		icon: require("@/assets/art/combat/items/chest/arm_la4.png"),
-		xp: 28,
+		xp: 34,
 		requiredLevel: 31,
 		requiredItems: {
 			foodMeatH: 4,
@@ -138,7 +138,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Arm Enhancement",
 		icon: require("@/assets/art/combat/items/chest/arm_la5.png"),
-		xp: 34,
+		xp: 40,
 		requiredLevel: 38,
 		requiredItems: {
 			foodMeatH: 5,
@@ -169,7 +169,7 @@ const ACTIONS_LINGAIM = {
 		time: 9,
 		name: "Enhanced Flesh",
 		icon: require("@/assets/art/combat/items/chest/arm_la6.png"),
-		xp: 40,
+		xp: 45,
 		requiredLevel: 44,
 		requiredItems: {
 			foodMeatH: 6,
@@ -202,7 +202,7 @@ const ACTIONS_LINGPOWER = {
 		time: 9,
 		name: "Reinforced Ribs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp1.png"),
-		xp: 10,
+		xp: 17,
 //		healthCost: 3,
 		requiredLevel: 12,
 		requiredItems: {
@@ -264,7 +264,7 @@ const ACTIONS_LINGPOWER = {
 		time: 9,
 		name: "Reinforced Core",
 		icon: require("@/assets/art/combat/items/chest/arm_lp3.png"),
-		xp: 23,
+		xp: 29,
 		requiredLevel: 26,
 		requiredItems: {
 			foodMeatA: 3,
@@ -295,7 +295,7 @@ const ACTIONS_LINGPOWER = {
 		time: 9,
 		name: "Reinforced Torso",
 		icon: require("@/assets/art/combat/items/chest/arm_lp4.png"),
-		xp: 29,
+		xp: 36,
 		requiredLevel: 33,
 		requiredItems: {
 			foodMeatA: 4,
@@ -326,7 +326,7 @@ const ACTIONS_LINGPOWER = {
 		time: 9,
 		name: "Reinforced Legs",
 		icon: require("@/assets/art/combat/items/chest/arm_lp5.png"),
-		xp: 36,
+		xp: 41,
 		requiredLevel: 40,
 		requiredItems: {
 			foodMeatA: 5,
@@ -357,7 +357,7 @@ const ACTIONS_LINGPOWER = {
 		time: 9,
 		name: "Reinforced Body",
 		icon: require("@/assets/art/combat/items/chest/arm_lp6.png"),
-		xp: 41,
+		xp: 52,
 		requiredLevel: 46,
 		requiredItems: {
 			foodMeatA: 6,
@@ -390,7 +390,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing0",
 		icon: require("@/assets/art/ling/ling1.png"),
-		xp: 12,
+		xp: 18,
 		requiredLevel: 14,
 		requiredItems: {
 			foodMeatZ: 1
@@ -400,7 +400,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing1",
 		icon: require("@/assets/art/ling/ling2.png"),
-		xp: 18,
+		xp: 25,
 		requiredLevel: 21,
 		requiredItems: {
 			foodMeatZ: 2
@@ -410,7 +410,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing2",
 		icon: require("@/assets/art/ling/ling3.png"),
-		xp: 25,
+		xp: 31,
 		requiredLevel: 28,
 		requiredItems: {
 			foodMeatZ: 3
@@ -420,7 +420,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing3",
 		icon: require("@/assets/art/ling/ling4.png"),
-		xp: 31,
+		xp: 37,
 		requiredLevel: 35,
 		requiredItems: {
 			foodMeatZ: 4
@@ -430,7 +430,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing4",
 		icon: require("@/assets/art/ling/ling5.png"),
-		xp: 37,
+		xp: 48,
 		requiredLevel: 42,
 		requiredItems: {
 			foodMeatZ: 5
@@ -440,7 +440,7 @@ const ACTIONS_LINGFACE = {
 		time: 9,
 		item: "faceLing5",
 		icon: require("@/assets/art/ling/ling6.png"),
-		xp: 48,
+		xp: 59,
 		requiredLevel: 48,
 		requiredItems: {
 			foodMeatZ: 6
