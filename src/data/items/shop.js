@@ -8,7 +8,7 @@ export default {
 		name: "Handheld Flash",
 		sellPrice: 33,
 		icon: require("@/assets/art/shop/items/startcargonia.png"),
-		description: "Depending on the timeline, you can use this to join cargonia",
+		description: "If you've used a black ops communicator, you can use this to join cargonia",
 		equipmentSlot: "pocket",
 		stats: {
 			luck: 50,
@@ -18,7 +18,7 @@ export default {
 		name: "Cursed Touch",
 		icon: require("@/assets/art/shop/items/startcult.png"),
 		overlay: require("@/assets/art/shop/items/startcult_overlay.png"),
-		description: "Depending on the timeline, you can use this to join a cult",
+		description: "If you've used a black ops communicator, you can use this to join the cult",
 		sellPrice: 30,
 		overlayAppearInBack: true,
 		overlayRune: true,
@@ -39,7 +39,7 @@ export default {
 	},
 	startLing: {
 		name: "Harmless Red Slug",
-		description: "Depending on the timeline, you can use this to become a changeling",
+		description: "If you've used a black ops communicator, you can use this to become a changeling",
 		sellPrice: 50000,
 		heal: -200,
 		icon: require("@/assets/art/shop/items/startling.png")
