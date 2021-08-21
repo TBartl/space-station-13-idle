@@ -26,8 +26,15 @@ Vue.filter('stat', function (value) {
 Vue.filter('aggressive', function (value) {
 	if (value == undefined) return 0;
 	if (value >= 1000 && !store.getters["settings/showFullValues"]) {
-		value = Math.min(Math.floor(value / 1000), 9);
-		return `>${value}k`;
+		let e = 0;
+		while (value >= 1000) {
+			e++;
+			value /= 1000;
+		}
+		value = Math.floor(value * 10) / 10;
+		let symbols = ['', 'k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
+		let symbol = symbols.length < e ? `e${e * 3}` : symbols[e];
+		return `>${value}${symbol}`;
 	}
 	return value.toLocaleString();
 })
