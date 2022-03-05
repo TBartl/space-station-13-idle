@@ -297,7 +297,8 @@ const PILLS = {
 			water: 2,
 			oxygen: 2,
 			oil: 4
-		}
+		},
+		requiredUpgrade: "recipePills",
 	},
 	sythnpillPrecision: {
 		items: {

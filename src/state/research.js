@@ -99,6 +99,9 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			console.log("tried to loot bounty");
 			dispatch("rollNewBounty");
 		},
+		cheatPoints({ state, getters, dispatch, commit }){ // used for a cheat button for debugging
+			commit("addToPoints", 100);
+		},
 		startupRoll({ state, dispatch }){
 			console.log("Startup roll called. state.researchBountyItems: "+state.researchBountyItems);
 			if(state.pointsReward != 0){

@@ -134,7 +134,7 @@ export default {
 					dispatch("_startCoroutine", { actionId, action })
 					dispatch("playerMob/getHit", action.failure.damage, { root: true });
 
-					if (!action.preservePotion) {
+					if (!action.preservePotion && !action.preservePotionOnFail) {
 						dispatch("potions/useCharge", getters["jobId"], { root: true });
 					}
 					return;

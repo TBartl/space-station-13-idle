@@ -1,16 +1,4 @@
 export const TOOLS = {
-	makeToolEngineering: {
-		time: 5,
-		item: "toolEngineering",
-		icon: require("@/assets/art/research/tools/toolEngineering.png"),
-		xp: 5,
-		requiredItems: {
-			iron: 3,
-			glass: 1
-		},
-		requiredLevel: 1,
-		requiredUpgrade: "toolEngineering",
-	},
 	makeToolMining: {
 		time: 5,
 		item: "toolMining",
@@ -22,6 +10,66 @@ export const TOOLS = {
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolMining",
+	},
+	makeToolEngineering: {
+		time: 1.5,
+		item: "toolEngineering",
+		icon: require("@/assets/art/research/tools/toolEngineering.png"),
+		xp: 1.5,
+		requiredItems: {
+			glass: 1,
+			power: 4
+		},
+		requiredLevel: 1,
+		requiredUpgrade: "toolEngineering",
+	},
+	makeToolFabrication: {
+		time: 5,
+		item: "toolFabrication",
+		icon: require("@/assets/art/research/tools/toolFabrication.png"),
+		xp: 5,
+		requiredItems: {
+			wire: 2,
+			iron: 2
+		},
+		requiredLevel: 1,
+		requiredUpgrade: "toolFabrication",
+	},
+	makeToolGraytiding: {
+		time: 5,
+		item: "toolGraytiding",
+		icon: require("@/assets/art/research/tools/toolGraytiding.png"),
+		xp: 5,
+		requiredItems: {
+			junk: 2,
+			silver: 2
+		},
+		requiredLevel: 1,
+		requiredUpgrade: "toolGraytiding",
+	},
+	makeToolTinkering: {
+		time: 2.5,
+		item: "toolTinkering",
+		icon: require("@/assets/art/research/tools/toolTinkering.png"),
+		xp: 2.5,
+		requiredItems: {
+			gold: 1,
+			power: 4
+		},
+		requiredLevel: 1,
+		requiredUpgrade: "toolTinkering",
+	},
+	makeToolBotany: {
+		time: 5,
+		item: "toolBotany",
+		icon: require("@/assets/art/research/tools/toolBotany.png"),
+		xp: 5,
+		requiredItems: {
+			plantSeed: 10,
+			uranium: 1
+		},
+		requiredLevel: 1,
+		requiredUpgrade: "toolTinkering",
 	},
 }
 

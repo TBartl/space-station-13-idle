@@ -33,13 +33,13 @@
       >
         <template slot="Back">
           <span>
-            Who let you in here? You're not a scientist. Oh, well... I suppose as long as you bring us precious ores, I'll let you use our facilities.
+            Who let you in here? You're not a scientist. Oh, well... I suppose as long as you bring us precious ores, I'll let you use our Research and Development facilities.
           </span>
         </template>
         <template slot="Research?">
           <span>Here at R&D, we strive to create new technologies that have never been seen before.</span>
-          <span>The computers basically do all the research work for us, so in here we're mostly doing development.</span>
-		      <span>That said, there are some ideas we've been stuck on. If you can bring us some stuff to research, we can unlock new recipes in other departments.</span>
+          <span>The Destructive Analyzer basically does all the research work for us, so people usually come here to do development.</span>
+		      <span>That said, there are some research projects we've been stuck on. If you can bring us some stuff to research by feeding it into the Destructive Analyzer, we can unlock new recipes here and in other departments.</span>
           <span>
             TODO add images like this one
             <img
@@ -49,16 +49,20 @@
           </span>
         </template>
         <template slot="Development?">
-          <span>Actually making stuff here usually requires something with unique functionality to make it out of, as well as some sweet, sweet ore.</span>
+          <span>Aside from tools, developing stuff here usually requires something with unique functionality to make it out of, as well as some sweet, sweet ore.</span>
           <span>For example, x-ray goggles might require some meson goggles and uranium. Radioactivity makes things more scientific, you know.</span>
+          <span>It's pretty simple, a lot like Fabrication, just with recipes that are harder to find the ingredients for.</span>
         </template>
         <template slot="Tools?">
-          <span>I'm sure you've heard of potions from chemistry, right? Those are great and all, but our tools can give you cool temporary job upgrades without getting you addicted to meth.</span>
-          <span>Just remember that operating machinery while under the influence is not advised. You can't use a tool and a potion at the same time.</span>
+          <span>I'm sure you've heard of CHEMs from chemistry, right? Those are great and all, but our tools can also give you cool temporary job upgrades without getting you addicted to meth.</span>
+          <span>To use a tool, craft it and then equip it either from your inventory or with the BOOST slot at the top right of every job screen, just like you would with a CHEM.</span>
+          <span>Just remember that operating machinery while under the influence is not advised. You can't use a tool and a CHEM at the same time, so it's up to you to decide which is best for the job.</span>
         </template>
         <template slot="Destructive Analyzer?">
           <span>Our method to get research points is to feed the computer stuff that it can learn from. That stuff can be almost anything, because science is about experimenting.</span>
           <span>The Destructive Analyzer (image) is like the mouth of the computer, so to speak. It asks for things to eat, and you feed them to it. In return, you get research points.</span>
+          <span>If you can't get what the Destructive Analyzer is asking for, you can recalibrate it with the Reroll button, but doing so will cost you some experience.</span>
+          <span>Research points are used to unlock RECIPEs, which you can see a list of below. RECIPEs are what will unlock those tasks that say they NEED RESEARCH, so you'll want to research them all!</span>
         </template>
         <template slot="Mech equipment?">
           <span>We've had the computer doing overtime on mech equipment research.</span>

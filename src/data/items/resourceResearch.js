@@ -1,3 +1,5 @@
+export const GRAYTIDING_TOOL_PERCENT = .1;
+
 const TOOLS = {
 	toolMining: {
 		name: "Mining Scanner",
@@ -13,37 +15,37 @@ const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolEngineering.png"),
 		description: "All engineering jobs are exactly 1 second faster.",
 		potionJob: "engineering",
-		potionCharges: 10
+		potionCharges: 25
     },
     toolFabrication: {
 		name: "Multitool",
 		sellPrice: 208,
 		icon: require("@/assets/art/research/tools/toolFabrication.png"),
-		description: "TODO",
+		description: "Fabrication of ammo is now multiplied by 0x-3x.",
 		potionJob: "fabrication",
 		potionCharges: 15
 	},
 	toolGraytiding: {
-		name: "Hacking Tools",
+		name: "Door Hacking Kit",
 		sellPrice: 31,
 		icon: require("@/assets/art/research/tools/toolGraytiding.png"),
-		description: "TODO",
+		description: "Reduces graytiding failure chance by 10%, and does not consume a charge when apprehended.",
 		potionJob: "graytiding",
-		potionCharges: 25
+		potionCharges: 20
     },
     toolTinkering: {
-		name: "Automated Wiring",
+		name: "Wire Ripper",
 		sellPrice: 99,
 		icon: require("@/assets/art/research/tools/toolTinkering.png"),
-		description: "TODO",
+		description: "Multiplies tinkering XP by 1.5x and makes tinkering give wire, but doubles junk cost.",
 		potionJob: "tinkering",
-		potionCharges: 5
+		potionCharges: 20
     },
     toolBotany: {
 		name: "Botanical Scanner",
 		sellPrice: 67,
 		icon: require("@/assets/art/research/tools/toolBotany.png"),
-		description: "TODO",
+		description: "Botany jobs now also grow additional chemicals and meats.",
 		potionJob: "botany",
 		potionCharges: 8
 	},

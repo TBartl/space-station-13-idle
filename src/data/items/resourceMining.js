@@ -39,6 +39,11 @@ export default {
 		sellPrice: 175,
 		icon: require("@/assets/art/mining/SheetDiamond.png")
 	},
+	alienalloy: {
+		name: "Alien Alloy",
+		sellPrice: 500,
+		icon: require("@/assets/art/mining/SheetAlien.png")
+	},
 	bluespace: {
 		name: "Bluespace Crystal",
 		sellPrice: 220,
