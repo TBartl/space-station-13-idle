@@ -8,7 +8,7 @@ export default {
 		name: "Handheld Flash",
 		sellPrice: 33,
 		icon: require("@/assets/art/shop/items/startcargonia.png"),
-		description: "Depending on the timeline, you can use this to join cargonia",
+		description: "If you've used a black ops communicator, you can use this to join cargonia",
 		equipmentSlot: "pocket",
 		stats: {
 			luck: 50,
@@ -18,7 +18,7 @@ export default {
 		name: "Cursed Touch",
 		icon: require("@/assets/art/shop/items/startcult.png"),
 		overlay: require("@/assets/art/shop/items/startcult_overlay.png"),
-		description: "Depending on the timeline, you can use this to join a cult",
+		description: "If you've used a black ops communicator, you can use this to join the cult",
 		sellPrice: 30,
 		overlayAppearInBack: true,
 		overlayRune: true,
@@ -39,7 +39,7 @@ export default {
 	},
 	startLing: {
 		name: "Harmless Red Slug",
-		description: "Depending on the timeline, you can use this to become a changeling",
+		description: "If you've used a black ops communicator, you can use this to become a changeling",
 		sellPrice: 50000,
 		heal: -200,
 		icon: require("@/assets/art/shop/items/startling.png")
@@ -335,7 +335,7 @@ export default {
 						weight: 9
 					},
 					{
-						id: 'headEpic5',
+						id: 'companionSkub',
 						weight: 1
 					},
 					{
@@ -538,36 +538,35 @@ export default {
 		icon: require("@/assets/art/shop/items/ertdroppod.png"),
 		itemTable: [
 			{
-				id: 'meleeBurn4',
+				id: 'ammoEnergy4',
+				count: [1000,1500],
 				weight: 50
 			},
 			{
-				id: 'ammoEnergy4',
-				count: [1,50],
-				weight: 75
-			},
-			{
-				id: 'ammoEnergy3',
-				count: [1,100],
-				weight: 90
+				id: 'meleeBurn4T',
+				weight: 40
 			},
 			{
 				id: 'gunEnergy8',
-				weight: 20
+				weight: 15
 			},
 			{
 				id: 'companionAicard',
-				weight: 20
+				weight: 15
 			},
 			{
 				id: 'meleeShield2',
-				weight: 20
+				weight: 15
 			},
 			{
-				id: 'ticket60',
-				count: [1,3],
-				weight: 5
+				id: 'mechSpecial1',
+				weight: 10
 			},
+			{
+				id: 'companionPositronic',
+				weight: 10
+			},
+			
 		]
 	},
 	wizCrate: {
@@ -608,7 +607,7 @@ export default {
 			},
 			{
 				id: 'spendTC',
-				weight: 3
+				weight: 6
 			},
 		]
 	}

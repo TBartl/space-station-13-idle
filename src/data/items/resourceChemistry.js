@@ -238,6 +238,19 @@ const PILLS = {
 			power: 0,
 		}
 	},
+	pillRegen: {
+		name: "Synthflesh",
+		sellPrice: 10,
+		icon: require("@/assets/art/chemistry/synthflesh.png"),
+		equipmentSlot: "pocket",
+		stats: {
+			maxHealth: -100,
+			evasion: 0,
+			precision: 0,
+			power: 0,
+			regen: 1.5,
+		}
+	},
 	pillPrecision: {
 		name: "Trifluoperazine",
 		sellPrice: 21,

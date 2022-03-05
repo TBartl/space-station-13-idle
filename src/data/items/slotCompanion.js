@@ -254,6 +254,23 @@ const SLIMES = {
 			power: 3,
 		},
 	},
+	companionSkub: {
+		name: "Skub",
+		sellPrice: 0,
+		icon: require("@/assets/art/shitposting/skub.png"),
+		tier: 0,
+		description: "Are you pro-skub or anti-skub?",
+		nocomplete: true,
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			precision: 0,
+			power: 0,
+			protection: 0,
+			luck: 0,
+			regen: 0,
+		},
+	},
 	companionPai: {
 		name: "Personal AI",
 		sellPrice: 1500,
@@ -276,6 +293,19 @@ const SLIMES = {
 			protection: -5,
 			precision: 20,
 			evasion: -5,
+		}
+	},
+	companionPositronic: {
+		name: "Elusive Positronic Upgrade",
+		restrictions: ["mech"],
+		sellPrice: 5757,
+		icon: require("@/assets/art/combat/items/positronic_anim.gif"),
+		tier: 1,
+		stats: {
+			maxHealth: 0,
+			protection: 0,
+			precision: 0,
+			evasion: 25,
 		}
 	},
 	companionMousecult: {

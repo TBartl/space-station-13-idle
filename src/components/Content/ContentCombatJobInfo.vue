@@ -153,15 +153,17 @@
     </template>
     <template slot="Robustness?">
       <span>
-        <img class="mx--0" :src="require('@/assets/art/jobinfo/robustness.png')" />
-        <b>Robustness</b> is a general term for how effective someone or something is in combat, based on their
-        <img
-          class="mx--0"
-          :src="require('@/assets/art/combat/precision.png')"
-        />
-        <img class="mx--1" :src="require('@/assets/art/combat/skull.png')" />
-        <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
-        <b>Stats</b>.
+        <span>
+          <img class="mx--0" :src="require('@/assets/art/jobinfo/robustness.png')" />
+          <b>Robustness</b> is a general term for how effective someone or something is in combat, based on their
+          <img
+            class="mx--0"
+            :src="require('@/assets/art/combat/precision.png')"
+          />
+          <img class="mx--1" :src="require('@/assets/art/combat/skull.png')" />
+          <img class="mx--2" :src="require('@/assets/art/combat/black_shoes.png')" />
+          <b>Stats</b>.
+        </span>
       </span>
       <span>
         As a general rule, you shouldn't try to fight enemies that are more

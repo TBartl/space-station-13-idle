@@ -179,7 +179,7 @@ const SELLSTUFF = {
 		name: "Collector's Item",
 		icon: require("@/assets/art/cargonia/smuggle1.png"),
 		xp: 9,
-		requiredLevel: 16,
+		requiredLevel: 14,
 		items:
 		{
 			id: "money",
@@ -194,7 +194,7 @@ const SELLSTUFF = {
 		name: "Stolen Valor",
 		icon: require("@/assets/art/cargonia/smuggle2.png"),
 		xp: 14,
-		requiredLevel: 24,
+		requiredLevel: 20,
 		items:
 		{
 			id: "money",
@@ -209,7 +209,7 @@ const SELLSTUFF = {
 		name: "Contraband",
 		icon: require("@/assets/art/cargonia/smuggle3.png"),
 		xp: 19,
-		requiredLevel: 32,
+		requiredLevel: 26,
 		items:
 		{
 			id: "money",
@@ -224,7 +224,7 @@ const SELLSTUFF = {
 		name: "Obscure Recipe",
 		icon: require("@/assets/art/cargonia/smuggle4.png"),
 		xp: 24,
-		requiredLevel: 40,
+		requiredLevel: 32,
 		items:
 		{
 			id: "money",
@@ -232,6 +232,36 @@ const SELLSTUFF = {
 		},
 		requiredItems: {
 			q_foodPasta6: 1
+		}
+	},
+	fence7: {
+		time: 6,
+		name: "Customized Weapon",
+		icon: require("@/assets/art/cargonia/smuggle7.png"),
+		xp: 24,
+		requiredLevel: 38,
+		items:
+		{
+			id: "money",
+			count: 6715,
+		},
+		requiredItems: {
+			gunEnergy2: 1
+		}
+	},
+	fence8: {
+		time: 6,
+		name: "Exotic Animal",
+		icon: require("@/assets/art/cargonia/smuggle8.png"),
+		xp: 24,
+		requiredLevel: 44,
+		items:
+		{
+			id: "money",
+			count: 2850,
+		},
+		requiredItems: {
+			companionFox: 1
 		}
 	},
 }

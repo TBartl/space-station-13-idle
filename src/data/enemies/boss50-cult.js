@@ -103,11 +103,11 @@ const BOSSES = {
 			maxHealth: 3000,
 			attackSpeed: 8,
 			precision: 73,
-			power: 71,
-			evasion: 166,
+			power: 76,
+			evasion: 161,
 			luck: 10,
 			damageType: "brute",
-			protection: -30
+			protection: -40
 		},
 		itemTables: [
 			{

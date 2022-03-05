@@ -66,6 +66,11 @@ export default [
 		enemies: ["zombie1","zombie2", "zombie3", "zombie4"]
 	},
 	{
+		name: "Delicious Holiday Hallway",
+		icon: require("@/assets/art/combat/zones/holiday.png"),
+		enemies: ["holiday1","holiday2", "holiday3", "holiday4"]
+	},
+	{
 		name: "Worker Strike",
 		icon: require("@/assets/art/combat/zones/revolution.png"),
 		enemies: ["rev1", "rev2", "rev3", "rev4"],

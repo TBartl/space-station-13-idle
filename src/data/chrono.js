@@ -78,7 +78,7 @@ const BASE_PURCHASES = {
 		description: "Acquire aid from a nefarious faction.",
 		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
-			bluetime: 100
+			bluetime: 75
 		},
 		items: {
 			id: "antag",
@@ -93,7 +93,7 @@ const BASE_PURCHASES = {
 		description: "Acquire aid from a nefarious faction.",
 		icon: require("@/assets/art/shop/items/antag_anim.gif"),
 		requiredItems: {
-			bluetime: 200
+			bluetime: 100
 		},
 		items: {
 			id: "antag",
@@ -192,7 +192,7 @@ ALL_JOBS.forEach(job => {
 			requiredUpgrades: {},
 			onPurchase(store) {
 				store.commit(`${job.id}/addXP`, xp, { root: true });
-				EventBus.$emit("toast", { icon: job.icon, text: `XP Gained!.`, duration: 5000 });
+				EventBus.$emit("toast", { icon: job.icon, text: `XP Gained!`, duration: 5000 });
 			}
 		}
 		upgrade.requiredUpgrades[id] = i;

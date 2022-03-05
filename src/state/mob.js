@@ -170,7 +170,8 @@ export function createMobModule(mobType) {
 				// Use ammo
 				var pocket = rootGetters["inventory/equipment"].pocket;
 				if (state.mobType == "player" && pocket.itemId && !rootGetters["inventory/checkRestricted"](pocket.itemId)) {
-					if(rootGetters["upgrades/get"]("ammoSaver") > 0 && rootGetters["combat/isRanged"]) {
+					if (ITEMS[pocket.itemId].preserve == true) { }
+					else if(rootGetters["upgrades/get"]("ammoSaver") > 0 && rootGetters["combat/isRanged"]) {
 						state.ammoStreak += 1;
 						if(state.ammoStreak == 5){
 							state.ammoStreak = 0;

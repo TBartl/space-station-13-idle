@@ -285,6 +285,20 @@ const PILLS = {
 		},
 		requiredUpgrade: "recipePills",
 	},
+	sythnPillRegen: {
+		items: {
+			id: "pillRegen",
+			count: PILL_COUNT
+		},
+		icon: require("@/assets/art/chemistry/synthflesh.png"),
+		time: 2,
+		requiredItems: {
+			potionCult: 2,
+			water: 2,
+			oxygen: 2,
+			oil: 4
+		}
+	},
 	sythnpillPrecision: {
 		items: {
 			id: "pillPrecision",

@@ -13,6 +13,7 @@ import science from "./enemies/science.js";
 import showroom from "./enemies/showroom.js";
 import virology from "./enemies/virology.js";
 import zombies from "./enemies/zombies.js";
+import holiday from "./enemies/holiday.js";
 
 import boss10Rev from '@/data/enemies/boss10-rev';
 import boss20Security from '@/data/enemies/boss20-security';
@@ -52,6 +53,7 @@ const ENEMIES = {
 	...science,
 	...aiCore,
 	...zombies,
+	...holiday,
 	...BOSS_ENEMIES
 }
 

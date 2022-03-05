@@ -524,7 +524,7 @@ Object.values(BURNARMOR).forEach(burnarmor => {
 
 Object.values(MECHS).forEach(mech => {
 	mech.equipmentSlot = "chest";
-	// mech.liftsRestrictions= ["mech"];
+	mech.liftsRestrictions= ["mech"];
 	mech.overlayAppearInBack = true;
 	mech.overlayBlurry = true;
 	mech.overlay = mech.icon;
@@ -540,7 +540,7 @@ Object.values(MECHS).forEach(mech => {
 });
 Object.values(ASSAULTMECHS).forEach(assaultmech => {
 	assaultmech.equipmentSlot = "chest";
-	// assaultmech.liftsRestrictions= ["mech"];
+	assaultmech.liftsRestrictions= ["mech"];
 	assaultmech.overlayAppearInBack = true;
 	assaultmech.overlayBlurry = true;
 	assaultmech.overlay = assaultmech.icon;

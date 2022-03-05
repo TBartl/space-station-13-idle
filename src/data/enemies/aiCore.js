@@ -235,17 +235,13 @@ export default {
 				chance: 1,
 				itemTable: [
 					{
-						id: 'uranium',
+						id: 'mechPlating4',
 						weight: 14
 					},
 					{
 						id: 'spaceJunk',
 						weight: 5
 					},
-					{
-						id: 'bananium',
-						weight: 1
-					}
 				]
 			}
 		]

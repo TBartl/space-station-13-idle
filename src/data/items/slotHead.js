@@ -469,9 +469,30 @@ const HEAD_SEASON_TWO = {
 	}
 }
 
+const HEAD_SEASON_HOLIDAY = {
+	holidayhat: {
+		name: "Jack O Hattern",
+		isHat: true,
+		sellPrice: 2000,
+		icon: require("@/assets/art/combat/items/head/holiday_pumpkin.png"),
+		equipmentSlot: "head",
+		overlay: require("@/assets/art/combat/items/head/holiday_pumpkin_overlay.png"),
+		stats: {
+			maxHealth: 40,
+			regen: .25,
+			protection: 0,
+			precision: 4,
+		},
+		requires: {
+			evasion: 15,
+		}
+	},
+}
+
 export { HEAD_SEASON_ONE, HEAD_SEASON_TWO }
 
 export default {
 	...HEAD_SEASON_ONE,
-	...HEAD_SEASON_TWO
+	...HEAD_SEASON_TWO,
+	...HEAD_SEASON_HOLIDAY,
 }
