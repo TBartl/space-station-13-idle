@@ -90,6 +90,76 @@ export const RESEARCH_RECIPES_I = {
 			toolBotany: 0
 		}
 	},
+	toolCooking: {
+		name: "RECIPE: Microwave",
+		description: "Enables the development of a space microwave that cooks small amounts of things quickly.",
+		icon: require('@/assets/art/research/tools/toolCooking.png'),
+		requiredResearchPoints: 75,
+		upgrade: "toolCooking",
+		requiredUpgrades: {
+			toolCooking: 0
+		}
+	},
+	toolBartending: {
+		name: "RECIPE: Ethereal Disco",
+		description: "Enables the development of a disco ball that will entertain bargoers, convincing them to give out tips.",
+		icon: require('@/assets/art/research/tools/toolBartending.png'),
+		requiredResearchPoints: 75,
+		upgrade: "toolBartending",
+		requiredUpgrades: {
+			toolBartending: 0
+		}
+	},
+	toolXenobiology: {
+		name: "RECIPE: Slime Scanner",
+		description: "Enables the development of a tool that allows Xenobiology to produce potent slime cores.",
+		icon: require('@/assets/art/research/tools/toolXenobiology_anim.gif'),
+		requiredResearchPoints: 75,
+		upgrade: "toolXenobiology",
+		requiredUpgrades: {
+			toolXenobiology: 0
+		}
+	},
+	toolChemistry: {
+		name: "RECIPE: Microdoser",
+		description: "Enables the development of a tool doubles pill production in Chemistry.",
+		icon: require('@/assets/art/research/tools/toolChemistry.png'),
+		requiredResearchPoints: 75,
+		upgrade: "toolChemistry",
+		requiredUpgrades: {
+			toolChemistry: 0
+		}
+	},
+	toolCargonia: {
+		name: "RECIPE: Poking Stick",
+		description: "Enables the development of a tool that will finds hidden Cargonia shipping crates.",
+		icon: require('@/assets/art/research/tools/toolCargonia.png'),
+		requiredResearchPoints: 150,
+		upgrade: "toolCargonia",
+		requiredUpgrades: {
+			toolCargonia: 0
+		}
+	},
+	toolCult: {
+		name: "RECIPE: Rune Assistance Crayons",
+		description: "Enables the development of a tool that will make drawing cult runes more potent.",
+		icon: require('@/assets/art/research/tools/toolCult.png'),
+		requiredResearchPoints: 150,
+		upgrade: "toolCult",
+		requiredUpgrades: {
+			toolCult: 0
+		}
+	},
+	toolLing: {
+		name: "RECIPE: Medical Wrench",
+		description: "Enables the development of a tool that would allow a Changeling to precisely shape themself.",
+		icon: require('@/assets/art/research/tools/toolLing.png'),
+		requiredResearchPoints: 150,
+		upgrade: "toolLing",
+		requiredUpgrades: {
+			toolCult: 0
+		}
+	},
 }
 
 export const RESEARCH_RECIPES_II = {
@@ -124,6 +194,32 @@ export const RESEARCH_RECIPES_II = {
 		},
 		requiredLevels: {
 			research: 30//tentative
+		}
+	},
+	toolShitposting: {
+		name: "RECIPE: Tube Plunger",
+		description: "Enables the development of a strange tool. The computer only displays \"???\" when asked about it.",
+		icon: require('@/assets/art/research/tools/toolShitposting.png'),
+		requiredResearchPoints: 750,
+		upgrade: "toolShitposting",
+		requiredUpgrades: {
+			toolShitposting: 0
+		},
+		requiredLevels: {
+			shitposting: 10
+		}
+	},
+	cultblade: {
+		name: "RECIPE: Unholy Blade",
+		description: "Discover how a cultist can corrupt a null rod. The Cult can now make Unholy Blades.",
+		icon: require('@/assets/art/combat/items/cultblade.gif'),
+		requiredResearchPoints: 300,
+		upgrade: "cultblade",
+		requiredUpgrades: {
+			cultblade: 0
+		},
+		requiredLevels: {
+			research: 25
 		}
 	},
 }

@@ -27,6 +27,7 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				if(potionItemId == "toolGraytiding") {
 					action.preservePotionOnFail = true;
 					action.failure.chance -= GRAYTIDING_TOOL_PERCENT;
+					action.failure.damage -= 3;
 				}
 			}
 			return actions;

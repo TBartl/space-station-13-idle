@@ -83,7 +83,7 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							itemTable: [
 								{
 									id: "wire",
-									count: [1, 2],
+									count: [10, 20],
 									weight: 100,
 								},
 							]

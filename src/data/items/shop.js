@@ -610,5 +610,63 @@ export default {
 				weight: 6
 			},
 		]
+	},
+	contrabandCrate: {
+		name: "Contraband Crate",
+		description: "Can be opened",
+		icon: require("@/assets/art/shop/items/contrabandcrate.png"),
+		itemTable: [
+			{
+				id: 'ticket10',
+				count: [20,40],
+				weight: 100
+			},
+			{
+				id: 'ticket1',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'ticket2',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'ticket40',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'ticket3',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'ticket55',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'ticket60',
+				count: [5,10],
+				weight: 100
+			},
+			{
+				id: 'limbAdvancedMagboots',
+				weight: 50
+			},
+			{
+				id: 'limbBlack',
+				weight: 50
+			},
+			{
+				id: 'limbJackboots',
+				weight: 50
+			},
+			{
+				id: 'meleeBurn3T',
+				weight: 25
+			},
+		]
 	}
 }

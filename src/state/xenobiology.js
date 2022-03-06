@@ -54,7 +54,21 @@ const xenobio = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					action.items = newBaseItems;
 				}
 
-				if (tier == 1) {
+				if(potionItemId == "toolXenobiology"){
+					delete action.item;
+					action.items = {
+						id: "core_" + originalItem,
+						count: 15
+					};
+
+					if(action.requiredItems){
+						for (let itemId of Object.keys(action.requiredItems)) {
+							action.requiredItems[itemId] = action.requiredItems[itemId] * 10;
+						}
+					}
+				}
+
+				else if (tier == 1) {
 					action.preservePotion = true;
 				}
 			}

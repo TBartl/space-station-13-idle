@@ -42,6 +42,22 @@ const BARTENDING = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					} else {
 						action.preservePotion = true;
 					}
+				} else if (potionItemId == "toolBartending") {
+					let originalItems = action.items;
+					delete action.items;
+					action.itemTables = [
+						{
+							chance: 1,
+							items: originalItems
+						},
+						{
+							chance: 1,
+							items: {
+								id: "money",
+								count: ITEMS[originalItems.id].sellPrice * 2
+							}
+						}
+					]
 				}
 			}
 

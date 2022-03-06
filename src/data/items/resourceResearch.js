@@ -29,7 +29,7 @@ const TOOLS = {
 		name: "Door Hacking Kit",
 		sellPrice: 31,
 		icon: require("@/assets/art/research/tools/toolGraytiding.png"),
-		description: "Reduces graytiding failure chance by 10%, and does not consume a charge when apprehended.",
+		description: "Reduces graytiding failure chance by 10%. Being apprehended does not consume a charge and deals 3 less damage.",
 		potionJob: "graytiding",
 		potionCharges: 20
     },
@@ -53,31 +53,31 @@ const TOOLS = {
 		name: "Microwave",
 		sellPrice: 168,
 		icon: require("@/assets/art/research/tools/toolCooking.png"),
-		description: "TODO",
+		description: "Cooking a dish that you have less than 100 of is 3x faster, or 1.5x faster with less than 250.",
 		potionJob: "cooking",
-		potionCharges: 10
+		potionCharges: 30
     },
     toolBartending: {
-		name: "Etheral Disco",
+		name: "Ethereal Disco Ball",
 		sellPrice: 180,
 		icon: require("@/assets/art/research/tools/toolBartending.png"),
-		description: "TODO",
+		description: "Mixing drinks also yields 2x the sell value of that drink.",
 		potionJob: "bartending",
-		potionCharges: 10
+		potionCharges: 50
 	},
 	toolXenobiology: {
 		name: "Slime Scanner",
 		sellPrice: 114,
 		icon: require("@/assets/art/research/tools/toolXenobiology_anim.gif"),
-		description: "TODO",
+		description: "Xenobiology tasks now take several slimes and produce slime cores.",
 		potionJob: "xenobiology",
-		potionCharges: 30
+		potionCharges: 20
 	},
 	toolChemistry: {
-		name: "Electrical Inducer",
+		name: "Microdoser",
 		sellPrice: 55,
 		icon: require("@/assets/art/research/tools/toolChemistry.png"),
-		description: "TODO",
+		description: "Doubles chemistry pill production. ",
 		potionJob: "chemistry",
 		potionCharges: 5
 	},
@@ -85,33 +85,33 @@ const TOOLS = {
 		name: "Tube Plunger",
 		sellPrice: -37,
 		icon: require("@/assets/art/research/tools/toolShitposting.png"),
-		description: "TODO",
+		description: "Further increases XP gain from ??? actions. Strongly inadvised.",
 		potionJob: "shitposting",
-		potionCharges: 5
+		potionCharges: 10
 	},
 	toolCargonia: {
 		name: "Poking Stick",
 		sellPrice: 66,
 		icon: require("@/assets/art/research/tools/toolCargonia.png"),
-		description: "TODO",
+		description: "Whenever you get money from Cargonia, you may also get a complimentary crate.",
 		potionJob: "cargonia",
-		potionCharges: 1
+		potionCharges: 30
 	},
 	toolCult: {
 		name: "Rune Assistance Crayons",
 		sellPrice: 42,
 		icon: require("@/assets/art/research/tools/toolCult.png"),
-		description: "TODO",
+		description: "Non-blood sacrifice tasks give double Cult XP, but cost health.",
 		potionJob: "cult",
-		potionCharges: 10
+		potionCharges: 25
 	},
 	toolLing: {
 		name: "Medical Wrench",
 		sellPrice: 132,
 		icon: require("@/assets/art/research/tools/toolLing.png"),
-		description: "TODO",
+		description: "Guarantees Changeling armor of the next tier up.",
 		potionJob: "ling",
-		potionCharges: 10
+		potionCharges: 1
 	}
 }
 

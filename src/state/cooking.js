@@ -51,6 +51,34 @@ const cooking = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				})
 			}
 
+			if (potionItemId == "toolCooking"){
+				let actionEntries = Object.values(actions);
+				actionEntries.forEach((action) => {
+					let originalItem;
+					if(action.item){
+						originalItem = action.item;
+					} else {
+						originalItem = action.itemTable[0].id;
+					}
+					let countFood = rootGetters["inventory/bank"][originalItem];
+					if(!countFood){
+						countFood = 0;
+					}
+					for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+						let equipmentItemId = equipment.itemId;
+						if (!equipmentItemId || equipmentItemId != originalItem) continue;
+						countFood += equipment.count;
+					}
+					if(countFood < 100 || !countFood){
+						action.time = action.time/3;
+					} else if (countFood >= 100 && countFood < 250){
+						action.time = action.time/1.5
+					} else {
+						action.preservePotion = true;
+					}
+				});
+			}
+
 			return actions;
 		},
 		locked(state, getters, rootState, rootGetters) {

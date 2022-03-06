@@ -26,11 +26,23 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					Object.keys(action.requiredItems).forEach(key => {
 						if (key.toLowerCase().includes('meat')) {
 							action.requiredItems[key] -= 1;
-							if (action.requiredItems[key] == 0) delete action.requiredItems[key];
+							if (action.requiredItems[key] == 0) delete action.requiredItems[key]; // todo ask about this for xenobio tool
 						}
 					});
 					if (Object.values(action.requiredItems).length == 0) {
 						delete action.requiredItems;
+					}
+				} else if(potionItemId == "toolLing"){
+					if(action.itemTables){
+						if(action.itemTables[0].itemTable[2]){
+							let newOutput = action.itemTables[0].itemTable[2].id;
+							delete action.itemTables;
+							action.item = newOutput;
+						} else {
+							action.preservePotion;
+						}
+					} else{
+						action.preservePotion;
 					}
 				}
 			}

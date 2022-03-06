@@ -18,6 +18,8 @@ const shitposting = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				if (potionItemId == "potionShitposting") {
 					action.xp = action.xpActivated;
+				} else if (potionItemId == "toolShitposting") {
+					action.xp = action.xpActivated*1.5
 				}
 			}
 
