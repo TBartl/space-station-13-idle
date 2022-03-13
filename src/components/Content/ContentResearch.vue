@@ -26,47 +26,65 @@
           {name: 'Back'},
           {name: 'Research?', icon: require('@/assets/art/research/researchIcon.png'), iconClass:'mx--0'},
 		      {name: 'Development?', icon: require('@/assets/art/research/protolathe.png'), iconClass:'mx--0'},
-		      {name: 'Tools?', icon: require('@/assets/art/research/tools/toolFabrication.png'), iconClass:'mx--0'},
+		      {name: 'TOOLs?', icon: require('@/assets/art/research/tools/toolGraytiding.png'), iconClass:'mx--0'},
           {name: 'Destructive Analyzer?', icon: require('@/assets/art/research/destructive_analyzer.gif'), iconClass:'mx--0'},
-		      {name: 'Mech equipment?', icon: require('@/assets/art/fabrication/mechripleymkii.png'), iconClass:'mx--0'}
+          {name: 'Points Bank?', icon: require('@/assets/art/research/points_bank.gif'), iconClass:'mx--0'},
         ]"
       >
         <template slot="Back">
           <span>
-            Who let you in here? You're not a scientist. Oh, well... I suppose as long as you bring us precious ores, I'll let you use our Research and Development facilities.
+            Who let you in here? You're not a scientist. Oh, well... I suppose as long as you bring us 
+            <img
+              :src="require('@/assets/art/mining/SheetDiamond.png')"
+            />
+            <b>precious ores,</b> I'll let you use our Research and Development facilities.
           </span>
         </template>
         <template slot="Research?">
           <span>Here at R&D, we strive to create new technologies that have never been seen before.</span>
-          <span>The Destructive Analyzer basically does all the research work for us, so people usually come here to do development.</span>
-		      <span>That said, there are some research projects we've been stuck on. If you can bring us some stuff to research by feeding it into the Destructive Analyzer, we can unlock new recipes here and in other departments.</span>
-          <span>
-            TODO add images like this one
+          <span>The 
             <img
-              :src="require('@/assets/art/combat/enemies/ai_anim.gif')"
+              :src="require('@/assets/art/research/destructive_analyzer.gif')"
             />
-            <b>asdf asdf asdf</b>.
-          </span>
+            <b>Destructive Analyzer</b> basically does all the research work for us, so people usually come here to do development.</span>
+		      <span>That said, there are some research projects we've been stuck on. If you can bring us some stuff to research by feeding it into the Destructive Analyzer, we can unlock new RECIPEs here and in other departments.</span>
         </template>
         <template slot="Development?">
-          <span>Aside from tools, developing stuff here usually requires something with unique functionality to make it out of, as well as some sweet, sweet ore.</span>
-          <span>For example, x-ray goggles might require some meson goggles and uranium. Radioactivity makes things more scientific, you know.</span>
-          <span>It's pretty simple, a lot like Fabrication, just with recipes that are harder to find the ingredients for.</span>
+          <span>Aside from 
+            <img
+              :src="require('@/assets/art/research/tools/toolGraytiding.png')"
+            />
+            <b>TOOLs,</b> developing stuff here usually requires something with unique functionality to make it out of, as well as some sweet, sweet ore.</span>
+          <span>For example, night vision goggles might require some meson goggles and uranium. Radioactivity makes things more scientific, and night vision itself is really scientific, so it only makes sense.</span>
         </template>
-        <template slot="Tools?">
-          <span>I'm sure you've heard of CHEMs from chemistry, right? Those are great and all, but our tools can also give you cool temporary job upgrades without getting you addicted to meth.</span>
-          <span>To use a tool, craft it and then equip it either from your inventory or with the BOOST slot at the top right of every job screen, just like you would with a CHEM.</span>
-          <span>Just remember that operating machinery while under the influence is not advised. You can't use a tool and a CHEM at the same time, so it's up to you to decide which is best for the job.</span>
+        <template slot="TOOLs?">
+          <span>I'm sure you've heard of 
+            <img
+               class="mx--2" :src="require('@/assets/art/chemistry/faunaPerfume.png')" 
+            />
+            <b>CHEMs</b> from chemistry, right? Those are great and all, but our TOOLs can also give you cool temporary job upgrades without getting you addicted to meth.</span>
+          <span>To use a TOOL, craft it and then equip it either from your inventory or with the BOOST slot at the top right of every job screen, just like you would with a CHEM.</span>
+          <span>Just remember that operating machinery while under the influence is not advised. You can't use a TOOL and a CHEM at the same time, so it's up to you to decide which is best for the job.</span>
         </template>
         <template slot="Destructive Analyzer?">
           <span>Our method to get research points is to feed the computer stuff that it can learn from. That stuff can be almost anything, because science is about experimenting.</span>
-          <span>The Destructive Analyzer (image) is like the mouth of the computer, so to speak. It asks for things to eat, and you feed them to it. In return, you get research points.</span>
+          <span>The 
+            <img
+              :src="require('@/assets/art/research/destructive_analyzer.gif')"
+            />
+            <b>Destructive Analyzer</b> is like the mouth of the computer, so to speak. It asks for things to eat, and you feed them to it. In return, you get research points.</span>
           <span>If you can't get what the Destructive Analyzer is asking for, you can recalibrate it with the Reroll button, but doing so will cost you some experience.</span>
           <span>Research points are used to unlock RECIPEs, which you can see a list of below. RECIPEs are what will unlock those tasks that say they NEED RESEARCH, so you'll want to research them all!</span>
         </template>
-        <template slot="Mech equipment?">
-          <span>We've had the computer doing overtime on mech equipment research.</span>
-          <span>When it's ready, we'll let you know.</span>
+        <template slot="Points Bank?">
+          <span>Research data generated by the Destructive Analyzer is given to you in the form of 
+            <img
+              :src="require('@/assets/art/research/researchIcon.png')"
+            />
+            <b>Research Points.</b> Since you can't actually hold raw data with your hands, we store Research Points in the Points Bank server.</span>
+          <span>The Points Bank can only hold so much data, though. If a RECIPE is asking for more points than you can store, you'll have to ask <img class="mx--0" :src="require('@/assets/art/sidebar/cargo.png')" />
+            <b>Cargo</b> to upgrade our server.</span>
+          <span>As you level up in R&D, the Destructive Analyzer will ask for harder-to-get things, but in return you'll get a lot more Research Points. Make sure to upgrade the Points Bank so that those points don't go to waste!</span>
         </template>
       </job-info>
 

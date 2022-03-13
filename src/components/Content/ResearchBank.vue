@@ -5,7 +5,11 @@
       :style="{'border-color': color}"
     >
       <div class="d-flex align-items-center">
-        <span class="mr-1">RESEARCH POINTS BANKED:</span>
+        <span class="mr-1">
+          <img
+              :src="require('@/assets/art/research/researchIcon.png')"
+          />
+          RESEARCH POINTS BANKED:</span>
       </div>
       <div class="d-flex align-items-center">
         <span class="p-1 rndPoints rounded">{{rndPoints | cleanNum}}/{{rndPointsMax | cleanNum}}</span>

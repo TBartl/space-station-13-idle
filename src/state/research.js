@@ -20,7 +20,7 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		rndPoints(state){
 			return state.rndPoints;
 		},
-		rndPointsMax(state, getters, rootState, rootGetters){//later we can make this return a value modified by a cargo upgrade
+		rndPointsMax(state, getters, rootState, rootGetters){
 			let newMax = state.rndPointsMax;
 			if(rootGetters["upgrades/get"]("researchUpgrade")){
 				newMax += 100 * rootGetters["upgrades/get"]("researchUpgrade")
