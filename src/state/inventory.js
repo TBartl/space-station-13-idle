@@ -312,7 +312,7 @@ const inventory = {
 				}
 			}
 			if(purchase.requiredResearchPoints){
-				commit("research/addToPoints", purchase.requiredResearchPoints*-1, { root: true });
+				dispatch("research/addToPoints", purchase.requiredResearchPoints*-1, { root: true });
 			}
 
 			if (purchase.upgrade) {

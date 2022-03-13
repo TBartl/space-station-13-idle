@@ -20,8 +20,12 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		rndPoints(state){
 			return state.rndPoints;
 		},
-		rndPointsMax(state){//later we can make this return a value modified by a cargo upgrade
-			return state.rndPointsMax;
+		rndPointsMax(state, getters, rootState, rootGetters){//later we can make this return a value modified by a cargo upgrade
+			let newMax = state.rndPointsMax;
+			if(rootGetters["upgrades/get"]("researchUpgrade")){
+				newMax += 100 * rootGetters["upgrades/get"]("researchUpgrade")
+			}
+			return newMax;
 		},
 		researchBountyItems(state){
 			return state.researchBountyItems;
@@ -74,21 +78,24 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				}
 			}
 			return actions;
+		},
+		locked(state, getters, rootState, rootGetters) {
+			return !rootGetters["upgrades/get"]("researchUnlocked");
 		}
 	},
 	mutations: {
-		addToPoints(state, points){
-			if(points + state.rndPoints > state.rndPointsMax){
-				EventBus.$emit("toast", { text: `Research Points Bank overflow! ${(points + state.rndPoints) - state.rndPointsMax} points were lost.`, duration: 7500 });
-			}
-			state.rndPoints = Math.max(0, Math.min(state.rndPointsMax, state.rndPoints+points));
-		},
 		changeBounty(state, newBounty){
 			state.researchBountyItems = newBounty.requiredItems;
 			state.pointsReward = newBounty.pointsReward;
 		}
 	},
 	actions: {
+		addToPoints({ state, getters, dispatch, commit, rootGetters }, points){
+			if(points + state.rndPoints > getters["rndPointsMax"]){
+				EventBus.$emit("toast", { text: `Research Points Bank overflow! ${(points + state.rndPoints) - getters["rndPointsMax"]} points were lost.`, duration: 7500 });
+			}
+			state.rndPoints = Math.max(0, Math.min(getters["rndPointsMax"], state.rndPoints+points));
+		},
 		destructiveAnalysis({ state, getters, dispatch, commit }) {
 			if (!getters.hasBountyItems){
 				EventBus.$emit("toast", { text: `You don't have the required items!`, duration: 3000 });
@@ -97,14 +104,14 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let [itemId, amountToRemove] of Object.entries(state.researchBountyItems)) {
 				commit("inventory/changeItemCount", { itemId, count: -amountToRemove }, { root: true });
 			}
-			commit("addToPoints", state.pointsReward);
+			dispatch("addToPoints", state.pointsReward);
 			dispatch("changeLevel", 2);
 			EventBus.$emit("toast", { text: `Analysis successful!`, duration: 3000 });
 			console.log("tried to loot bounty");
 			dispatch("rollNewBounty");
 		},
 		cheatPoints({ state, getters, dispatch, commit }){ // used for a cheat button for debugging
-			commit("addToPoints", 100);
+			dispatch("addToPoints", 100);
 		},
 		startupRoll({ state, dispatch }){
 			console.log("Startup roll called. state.researchBountyItems: "+state.researchBountyItems);
