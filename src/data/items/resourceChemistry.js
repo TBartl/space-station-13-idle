@@ -85,9 +85,9 @@ const POTIONS = {
 		name: "Energy Drink",
 		sellPrice: 79,
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
-		description: "Whenever you get energy from engineering, also get four times that amount of money.",
+		description: "Whenever you get energy from engineering, also get ten times that amount of money.",
 		potionJob: "engineering",
-		potionCharges: 10
+		potionCharges: 50
 	},
 	potionTinkering: {
 		name: "Super Glue",
