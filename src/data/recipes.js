@@ -14,20 +14,7 @@ export const RESEARCH_RECIPES_I = {
 			recipePills: 0
 		},
 		requiredLevels: {
-			chemistry: 8
-		}
-	},
-	facePrescription: {
-		name: "RECIPE: Prescription Glasses",
-		description: "Enables facewear development facilities, and allows you to develop the most basic facewear around.",
-		icon: require('@/assets/art/combat/items/face/prescription_glasses.png'),
-		requiredResearchPoints: 100,
-		upgrade: "facePrescription",
-		requiredUpgrades: {
-			facePrescription: 0
-		},
-		requiredLevels: {
-			research: 4
+			chemistry: 2
 		}
 	},
 	toolEngineering: {
@@ -163,6 +150,178 @@ export const RESEARCH_RECIPES_I = {
 }
 
 export const RESEARCH_RECIPES_II = {
+	facePrescription: {
+		name: "RECIPE: Prescription Glasses",
+		description: "Enables simple facewear development, allowing you to develop the most basic facewear around.",
+		icon: require('@/assets/art/combat/items/face/prescription_glasses.png'),
+		requiredResearchPoints: 100,
+		upgrade: "facePrescription",
+		requiredUpgrades: {
+			facePrescription: 0
+		},
+		requiredLevels: {
+			research: 5
+		}
+	},
+	faceMeson2: {
+		name: "RECIPE: T-Ray Mesons",
+		description: "Allows you to upgrade Meson goggles with T-Ray vision capabilities.",
+		icon: require('@/assets/art/combat/items/face/face_tray.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceMeson2",
+		requiredUpgrades: {
+			faceMeson2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceMedHud2: {
+		name: "RECIPE: Health-Science HUD",
+		description: "Allows you to upgrade a medical HUD to also have science goggle capabilities.",
+		icon: require('@/assets/art/combat/items/face/face_medsci.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceMedHud2",
+		requiredUpgrades: {
+			faceMedHud2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceSecGlasssesss: {
+		name: "RECIPE: SecHUD Gar Glasses",
+		description: "Enables you to use an upgrade that will make a security HUD look sharper.",
+		icon: require('@/assets/art/combat/items/face/face_secgar.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceSecGlasssesss",
+		requiredUpgrades: {
+			faceSecGlasssesss: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceScience2: {
+		name: "RECIPE: Night Vision Goggles",
+		description: "Allows you to tune science goggles to enable night vision, which is also scientific.",
+		icon: require('@/assets/art/combat/items/face/face_nvg.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceScience2",
+		requiredUpgrades: {
+			faceScience2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceTiki2: {
+		name: "RECIPE: Rangi Mask",
+		description: "Enables an upgrade for the tiki mask that will better intimidate enemies.",
+		icon: require('@/assets/art/combat/items/face/face_tiki2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceTiki2",
+		requiredUpgrades: {
+			faceTiki2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceWrestle2: {
+		name: "RECIPE: Luchador Mask",
+		description: "Allows you to upgrade a wrestling mask to represent a different fighting style.",
+		icon: require('@/assets/art/combat/items/face/face_wrestle2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceWrestle2",
+		requiredUpgrades: {
+			faceWrestle2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceGas2: {
+		name: "RECIPE: Captain's Gas Mask",
+		description: "Lets you upgrade a standard gas mask to one fit for a station captain.",
+		icon: require('@/assets/art/combat/items/face/face_gas2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceGas2",
+		requiredUpgrades: {
+			faceGas2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceFox2: {
+		name: "RECIPE: Bee Mask",
+		description: "Enables an upgrade that will let you tweak a fox mask to repesent a different kind of animal.",
+		icon: require('@/assets/art/combat/items/face/face_fox2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceFox2",
+		requiredUpgrades: {
+			faceFox2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceSec2: {
+		name: "RECIPE: SWAT Mask",
+		description: "Enables you to upgrade a standard security hailer to a more heavy-duty version.",
+		icon: require('@/assets/art/combat/items/face/face_sec2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceSec2",
+		requiredUpgrades: {
+			faceSec2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceSyndicate2: {
+		name: "RECIPE: Syndicate Balaclava",
+		description: "Lets you upgrade a syndicate mask into a full head-covering balaclava.",
+		icon: require('@/assets/art/combat/items/face/face_syndicate2.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceSyndicate2",
+		requiredUpgrades: {
+			faceSyndicate2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceMime2: {
+		name: "RECIPE: Sexy Mime Mask",
+		description: "Lets you upgrade a mime mask to a more unconventional version.",
+		icon: require('@/assets/art/combat/items/face/face_mimesexy.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceMime2",
+		requiredUpgrades: {
+			faceMime2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+	faceClown2: {
+		name: "RECIPE: Sexy Clown Mask",
+		description: "Lets you upgrade a clown mask to a much more horrifying version.",
+		icon: require('@/assets/art/combat/items/face/face_clownsexy.png'),
+		requiredResearchPoints: 100,
+		upgrade: "faceClown2",
+		requiredUpgrades: {
+			faceClown2: 0
+		},
+		requiredLevels: {
+			research: 25
+		}
+	},
+}
+
+export const RESEARCH_RECIPES_III = {
 	alienMining: {
 		name: "RECIPE: Alien Alloy Mining",
 		description: "Mining can now detect and mine for alien alloys.",

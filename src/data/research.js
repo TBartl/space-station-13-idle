@@ -177,13 +177,145 @@ export const FACEWEAR = {
 		time: 60,
 		item: "facePrescription",
 		icon: require("@/assets/art/combat/items/face/prescription_glasses.png"),
-		xp: 50,
+		xp: 60,
 		requiredItems: {
 			glass: 2
 		},
-		requiredLevel: 1,
+		requiredLevel: 5,
 		requiredUpgrade: "facePrescription",
 	},
+	makeFaceMeson2: {
+		time: 60,
+		item: "faceMeson2",
+		icon: require("@/assets/art/combat/items/face/face_tray.png"),
+		xp: 60,
+		requiredItems: {
+			faceMeson: 2
+		},
+		requiredLevel: 25,
+		requiredUpgrade: "faceMeson2",
+	},
+	makeFaceMedHud2: {
+		time: 60,
+		item: "faceMedHud2",
+		icon: require("@/assets/art/combat/items/face/face_medsci.png"),
+		xp: 60,
+		requiredItems: {
+			faceMedHud: 2
+		},
+		requiredLevel: 26,
+		requiredUpgrade: "faceMedHud2",
+	},
+	makeFaceSecGlasssesss: {
+		time: 60,
+		item: "faceSecGlasssesss",
+		icon: require("@/assets/art/combat/items/face/face_secgar.png"),
+		xp: 60,
+		requiredItems: {
+			faceSecGlassess: 2
+		},
+		requiredLevel: 27,
+		requiredUpgrade: "faceSecGlasssesss",
+	},
+	makeFaceScience2: {
+		time: 60,
+		item: "faceScience2",
+		icon: require("@/assets/art/combat/items/face/face_nvg.png"),
+		xp: 60,
+		requiredItems: {
+			faceScience: 2
+		},
+		requiredLevel: 28,
+		requiredUpgrade: "faceScience2",
+	},
+	makeFaceTiki2: {
+		time: 60,
+		item: "faceTiki2",
+		icon: require("@/assets/art/combat/items/face/face_tiki2.png"),
+		xp: 60,
+		requiredItems: {
+			faceTiki: 2
+		},
+		requiredLevel: 29,
+		requiredUpgrade: "faceTiki2",
+	},
+	makeFaceWrestle2: {
+		time: 60,
+		item: "faceWrestle2",
+		icon: require("@/assets/art/combat/items/face/face_wrestle2.png"),
+		xp: 60,
+		requiredItems: {
+			faceWrestle: 2
+		},
+		requiredLevel: 30,
+		requiredUpgrade: "faceWrestle2",
+	},
+	makeFaceGas2: {
+		time: 60,
+		item: "faceGas2",
+		icon: require("@/assets/art/combat/items/face/face_gas2.png"),
+		xp: 60,
+		requiredItems: {
+			faceGas: 2
+		},
+		requiredLevel: 31,
+		requiredUpgrade: "faceGas2",
+	},
+	makeFaceFox2: {
+		time: 60,
+		item: "faceFox2",
+		icon: require("@/assets/art/combat/items/face/face_fox2.png"),
+		xp: 60,
+		requiredItems: {
+			faceFox: 2
+		},
+		requiredLevel: 32,
+		requiredUpgrade: "faceFox2",
+	},
+	makeFaceSec2: {
+		time: 60,
+		item: "faceSec2",
+		icon: require("@/assets/art/combat/items/face/face_sec2.png"),
+		xp: 60,
+		requiredItems: {
+			faceSec: 2
+		},
+		requiredLevel: 33,
+		requiredUpgrade: "faceSec2",
+	},
+	makeFaceSyndicate2: {
+		time: 60,
+		item: "faceSyndicate2",
+		icon: require("@/assets/art/combat/items/face/face_syndicate2.png"),
+		xp: 60,
+		requiredItems: {
+			faceSyndicate: 2
+		},
+		requiredLevel: 34,
+		requiredUpgrade: "faceSyndicate2",
+	},
+	makeFaceMime2: {
+		time: 60,
+		item: "faceMime2",
+		icon: require("@/assets/art/combat/items/face/face_mimesexy.png"),
+		xp: 60,
+		requiredItems: {
+			faceMime: 2
+		},
+		requiredLevel: 35,
+		requiredUpgrade: "faceMime2",
+	},
+	makeFaceClown2: {
+		time: 60,
+		item: "faceClown2",
+		icon: require("@/assets/art/combat/items/face/face_clownsexy.png"),
+		xp: 60,
+		requiredItems: {
+			faceClown: 2
+		},
+		requiredLevel: 36,
+		requiredUpgrade: "faceClown2",
+	}
 }
 
 Object.values(TOOLS).forEach(action => { action.type = "tools" });

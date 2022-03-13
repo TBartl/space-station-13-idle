@@ -225,7 +225,6 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_tray.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_tray_overlay.png"),
-		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 4,
@@ -243,7 +242,6 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_medsci.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_medsci_overlay_anim.gif"),
-		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -256,16 +254,15 @@ export default {
 		}
 	},
 	faceSecGlasssesss: {
-		name: "SecurityHUD Garglasses",
+		name: "SecHUD Gar Glasses",
 		sellPrice: 1848,
 		icon: require("@/assets/art/combat/items/face/face_secgar.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_secgar_overlay.png"),
-		nocomplete: true,
 		stats: {
-			maxHealth: 30,
+			maxHealth: 40,
 			evasion: 0,
-			protection: 5,
+			protection: 6,
 			precision: 0,
 			power: 0,
 		},
@@ -279,7 +276,6 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_nvg.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_nvg_anim_overlay.gif"),
-		nocomplete: true,
 		stats: {
 			maxHealth: 30,
 			evasion: 0,
@@ -297,13 +293,12 @@ export default {
 		icon: require("@/assets/art/combat/items/face/face_tiki2.png"),
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_tiki2_overlay.png"),
-		nocomplete: true,
 		stats: {
-			maxHealth: 50,
-			evasion: 3,
+			maxHealth: 60,
+			evasion: 4,
 			protection: 0,
 			precision: 0,
-			power: 3,
+			power: 4,
 		},
 		requires: {
 			evasion: 40,
@@ -317,10 +312,10 @@ export default {
 		overlay: require("@/assets/art/combat/items/face/face_wrestle2_overlay.png"),
 		nocomplete: true,
 		stats: {
-			maxHealth: 50,
-			evasion: 3,
+			maxHealth: 60,
+			evasion: 4,
 			protection: 0,
-			precision: 3,
+			precision: 4,
 			power: 0,
 		},
 		requires: {
@@ -335,11 +330,11 @@ export default {
 		overlay: require("@/assets/art/combat/items/face/face_gas2_overlay.png"),
 		nocomplete: true,
 		stats: {
-			maxHealth: 30,
+			maxHealth: 60,
 			evasion: 0,
 			protection: 0,
-			precision: 3,
-			power: 3,
+			precision: 4,
+			power: 4,
 		},
 		requires: {
 			evasion: 40,
