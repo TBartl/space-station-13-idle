@@ -31,6 +31,8 @@ const chemistry = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				} else if(potionItemId == "toolChemistry"){
 					if(action.items){
 						action.items.count *= 2;	
+					} else {
+						action.preservePotion = true;
 					}
 				}
 			}

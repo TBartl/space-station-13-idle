@@ -25,9 +25,13 @@ const cult = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				} else {
 					action.preservePotion = true;
 				}
-				if(potionItemId == "toolCult" && !action.healthCost){
-					action.xp *= 2;
-					action.healthCost = action.requiredLevel*1.5;
+				if(potionItemId == "toolCult"){
+					if(!action.healthCost){
+						action.xp *= 2;
+						action.healthCost = action.requiredLevel*1.5;
+					} else {
+						action.preservePotion = true;
+					}
 				}
 				action.time *= 1 / speedIncrease;;
 
