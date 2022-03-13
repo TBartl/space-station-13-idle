@@ -42,7 +42,7 @@ export const RESEARCH_RECIPES_I = {
 	},
 	toolMining: {
 		name: "RECIPE: Mining Scanner",
-		description: "Enables the development of a tool that doubles mining XP.",
+		description: "Enables the development of a tool that reveals nearby ores, doubling mining XP.",
 		icon: require('@/assets/art/research/tools/toolMining.png'),
 		requiredResearchPoints: 75,
 		upgrade: "toolMining",
@@ -72,7 +72,7 @@ export const RESEARCH_RECIPES_I = {
 	},
 	toolTinkering: {
 		name: "RECIPE: Wire Ripper",
-		description: "Enables the development of a tool that rapidly remakes junk, yielding wire in the process.",
+		description: "Enables the development of a Tinkering tool that rapidly remakes junk, yielding wire in the process.",
 		icon: require('@/assets/art/research/tools/toolTinkering.png'),
 		requiredResearchPoints: 75,
 		upgrade: "toolTinkering",
@@ -132,7 +132,7 @@ export const RESEARCH_RECIPES_I = {
 	},
 	toolCargonia: {
 		name: "RECIPE: Poking Stick",
-		description: "Enables the development of a tool that will finds hidden Cargonia shipping crates.",
+		description: "Enables the development of a tool that can find hidden Cargonia shipping crates.",
 		icon: require('@/assets/art/research/tools/toolCargonia.png'),
 		requiredResearchPoints: 150,
 		upgrade: "toolCargonia",
