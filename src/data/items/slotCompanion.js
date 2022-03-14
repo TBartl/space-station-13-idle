@@ -1,3 +1,5 @@
+import { _ } from "core-js";
+
 const SLIMES = {
 	slimeGray: {
 		name: "Gray Slime",
@@ -142,6 +144,9 @@ const SLIMES = {
 			luck: 20
 		}
 	},
+}
+
+const COMPANIONS = {
 	companionMouse: {
 		name: "Pet Mouse",
 		sellPrice: 1000,
@@ -439,4 +444,13 @@ Object.values(SLIMES).forEach((slime, index) => {
 	}
 
 });
-export default SLIMES;
+
+// goes unused, see resourceXenobiology.js
+Object.values(COMPANIONS).forEach((companion) => {
+	companion.noCore = true;
+});
+
+export default {
+	...SLIMES,
+	...COMPANIONS,
+}

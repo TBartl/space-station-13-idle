@@ -55,7 +55,7 @@
               :src="require('@/assets/art/research/tools/toolGraytiding.png')"
             />
             <b>TOOLs,</b> developing stuff here usually requires something with unique functionality to make it out of, as well as some sweet, sweet ore.</span>
-          <span>For example, night vision goggles might require some meson goggles and uranium. Radioactivity makes things more scientific, and night vision itself is really scientific, so it only makes sense.</span>
+          <span>For example, night vision goggles might require some science goggles and uranium. Radioactivity makes things more scientific, and night vision itself is really scientific, so it only makes sense.</span>
         </template>
         <template slot="TOOLs?">
           <span>I'm sure you've heard of 

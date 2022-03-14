@@ -17,6 +17,7 @@ const inventory = {
 		},
 		equipment: {
 			// Order here matters, later items will be displayed on top
+			// The last item on this list takes top priority for binary values like damage type/attack speed
 			food: {
 				itemId: null,
 				count: 0
@@ -45,11 +46,11 @@ const inventory = {
 				itemId: null,
 				count: 0
 			},
-			pocket: {
+			hand: {
 				itemId: null,
 				count: 0
 			},
-			hand: {
+			pocket: {
 				itemId: null,
 				count: 0
 			},

@@ -322,11 +322,24 @@ export const RESEARCH_RECIPES_II = {
 }
 
 export const RESEARCH_RECIPES_III = {
+	recipeEngineeringProd: {
+		name: "RECIPE: Cattle Prod",
+		description: "Engineering can now make homebrewed stun batons.",
+		icon: require('@/assets/art/combat/items/meleeEngi.gif'),
+		requiredResearchPoints: 500,
+		upgrade: "recipeEngineeringProd",
+		requiredUpgrades: {
+			recipeEngineeringProd: 0
+		},
+		requiredLevels: {
+			research: 5
+		}
+	},
 	alienMining: {
 		name: "RECIPE: Alien Alloy Mining",
 		description: "Mining can now detect and mine for alien alloys.",
 		icon: require('@/assets/art/mining/OreAlien.gif'),
-		requiredResearchPoints: 500,
+		requiredResearchPoints: 600,
 		requiredItems: {
 			bluespace: 1
 		},

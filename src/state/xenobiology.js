@@ -62,9 +62,14 @@ const xenobio = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					};
 
 					if(action.requiredItems){
-						for (let itemId of Object.keys(action.requiredItems)) {
-							action.requiredItems[itemId] = action.requiredItems[itemId] * 10;
-						}
+						Object.keys(action.requiredItems).forEach(key => {
+							delete action.requiredItems[key];
+						});
+						action.requiredItems[originalItem] = 10;
+					} else {
+						action.requiredItems = {
+							slimeGray: 10
+						};
 					}
 				}
 
