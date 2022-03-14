@@ -29,8 +29,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolFabrication.png"),
 		xp: 5,
 		requiredItems: {
+			iron: 2,
 			wire: 2,
-			iron: 2
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolFabrication",
@@ -41,8 +41,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolGraytiding.png"),
 		xp: 5,
 		requiredItems: {
+			silver: 2,
 			junk: 2,
-			silver: 2
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolGraytiding",
@@ -65,8 +65,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolBotany.png"),
 		xp: 5,
 		requiredItems: {
+			uranium: 1,
 			plantSeed: 10,
-			uranium: 1
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolBotany",
@@ -77,8 +77,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolCooking.png"),
 		xp: 5,
 		requiredItems: {
+			glass: 2,
 			toolEngineering: 2,
-			glass: 2
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolCooking",
@@ -89,9 +89,9 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolBartending.png"),
 		xp: 7.5,
 		requiredItems: {
+			titanium: 1,
 			slimeMetal: 8,
 			wire: 10,
-			titanium: 1
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolBartending",
@@ -102,8 +102,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolXenobiology_anim.gif"),
 		xp: 5,
 		requiredItems: {
+			plasma: 3,
 			potionBotany: 1,
-			plasma: 3
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolXenobiology",
@@ -127,9 +127,9 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolShitposting.png"),
 		xp: 5,
 		requiredItems: {
+			bananium: 1,
 			potionShitposting: 1,
 			money: 5000,
-			bananium: 1
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolShitposting",
@@ -152,8 +152,8 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolCult.png"),
 		xp: 5,
 		requiredItems: {
+			iron: 10,
 			foodMeatH: 5,
-			iron: 10
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolCult",
@@ -164,8 +164,9 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolLing.png"),
 		xp: 45,
 		requiredItems: {
-			uranium: 20,
-			tomatoBluespace: 20
+			bluespace: 20,
+			tomatoBluespace: 20,
+			foodMeatZ: 20
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolLing",
@@ -190,7 +191,9 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_tray.png"),
 		xp: 60,
 		requiredItems: {
-			faceMeson: 2
+			faceMeson: 1,
+			wire: 100,
+			silver: 50
 		},
 		requiredLevel: 25,
 		requiredUpgrade: "faceMeson2",
@@ -201,7 +204,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_medsci.png"),
 		xp: 60,
 		requiredItems: {
-			faceMedHud: 2
+			faceMedHud: 1,
+			pillRegen: 100,
+			potionFabrication: 10,
+			iron: 100
 		},
 		requiredLevel: 26,
 		requiredUpgrade: "faceMedHud2",
@@ -212,7 +218,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_secgar.png"),
 		xp: 60,
 		requiredItems: {
-			faceSecGlassess: 2
+			faceSecGlassess: 1,
+			meleeSharp4: 1,
+			gunBallistic4: 1,
+			titanium: 30
 		},
 		requiredLevel: 27,
 		requiredUpgrade: "faceSecGlasssesss",
@@ -223,7 +232,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_nvg.png"),
 		xp: 60,
 		requiredItems: {
-			faceScience: 2
+			faceScience: 2,
+			wire: 250,
+			plasma: 25,
+			uranium: 50
 		},
 		requiredLevel: 28,
 		requiredUpgrade: "faceScience2",
@@ -234,7 +246,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_tiki2.png"),
 		xp: 60,
 		requiredItems: {
-			faceTiki: 2
+			faceTiki: 1,
+			burnJunk: 50,
+			oil: 250,
+			gold: 10
 		},
 		requiredLevel: 29,
 		requiredUpgrade: "faceTiki2",
@@ -245,7 +260,9 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_wrestle2.png"),
 		xp: 60,
 		requiredItems: {
-			faceWrestle: 2
+			faceWrestle: 1,
+			limbBoxing: 1,
+			plasma: 5
 		},
 		requiredLevel: 30,
 		requiredUpgrade: "faceWrestle2",
@@ -256,7 +273,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_gas2.png"),
 		xp: 60,
 		requiredItems: {
-			faceGas: 2
+			faceGas: 1,
+			meleeBlunt8: 1,
+			wire: 500,
+			diamond: 50
 		},
 		requiredLevel: 31,
 		requiredUpgrade: "faceGas2",
@@ -267,7 +287,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_fox2.png"),
 		xp: 60,
 		requiredItems: {
-			faceFox: 2
+			faceFox: 1,
+			companionBee: 1,
+			companionFox: 1,
+			bluespace: 10
 		},
 		requiredLevel: 32,
 		requiredUpgrade: "faceFox2",
@@ -278,7 +301,10 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_sec2.png"),
 		xp: 60,
 		requiredItems: {
-			faceSec: 2
+			faceSec: 1,
+			revParts: 10,
+			boss1Parts: 10,
+			titanium: 150
 		},
 		requiredLevel: 33,
 		requiredUpgrade: "faceSec2",
@@ -289,7 +315,9 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_syndicate2.png"),
 		xp: 60,
 		requiredItems: {
-			faceSyndicate: 2
+			faceSyndicate: 1,
+			telecrystal: 3,
+			bluespace: 250
 		},
 		requiredLevel: 34,
 		requiredUpgrade: "faceSyndicate2",
@@ -300,7 +328,9 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_mimesexy.png"),
 		xp: 60,
 		requiredItems: {
-			faceMime: 2
+			faceMime: 1,
+			bananaMime: 500,
+			bananium: 10
 		},
 		requiredLevel: 35,
 		requiredUpgrade: "faceMime2",
@@ -311,7 +341,9 @@ export const FACEWEAR = {
 		icon: require("@/assets/art/combat/items/face/face_clownsexy.png"),
 		xp: 60,
 		requiredItems: {
-			faceClown: 2
+			faceClown: 1,
+			q_foodEvasion1: 200,
+			bananium: 50
 		},
 		requiredLevel: 36,
 		requiredUpgrade: "faceClown2",
