@@ -68,8 +68,8 @@ const POTIONS = {
 	potionResearch: {
 		name: "Ballmer Fluid",
 		sellPrice: 55,
-		icon: require("@/assets/art/chemistry/volatile.png"),//todo: art
-		description: "Does nothing yet",//todo: functionality
+		icon: require("@/assets/art/chemistry/ballmer.png"),
+		description: "R&D TOOL development has a 20% chance to output twice.", 
 		potionJob: "research",
 		potionCharges: 5
 	},

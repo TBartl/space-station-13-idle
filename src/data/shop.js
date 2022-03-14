@@ -29,7 +29,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-Matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeBartending", "capeXenobiology", "capeChemistry","capeValid", "capeShitposting"]
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeResearch", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeBartending", "capeXenobiology", "capeChemistry","capeValid", "capeShitposting"]
 	}
 ]
 
@@ -356,6 +356,16 @@ const CAPES = {
 		description: "Requires max Chemistry to wear.",
 		requiredLevels: {
 			chemistry: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeResearch: {
+		item: "capeResearch",
+		description: "Requires max R&D to wear.",
+		requiredLevels: {
+			research: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000

@@ -64,17 +64,21 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				// Apply potion
 				if (potionItemId == "potionResearch") {
 					let originalItem = action.item;
-					delete action.item;
-					action.itemTables = [
-						{
-							chance: 1,
-							item: originalItem
-						},
-						{
-							chance: 1,
-							item: originalItem
-						}
-					]
+					if(originalItem.includes("tool")){
+						delete action.item;
+						action.itemTables = [
+							{
+								chance: 1,
+								item: originalItem
+							},
+							{
+								chance: 0.2,
+								item: originalItem
+							}
+						]
+					} else {
+						action.preservePotion = true;
+					}
 				}
 			}
 			return actions;

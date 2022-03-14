@@ -102,7 +102,7 @@ const POTIONS = {
 		time: 2,
 		requiredItems: {
 			drinkVodka: 2,
-			water: 1,
+			water: 4,
 		}
 	},
 	synthPotionBotany: {

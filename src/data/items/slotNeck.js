@@ -192,6 +192,25 @@ export default {
 		description: "+1 Chemistry Upgrade",
 		providesUpgrade: "chemDispenser"
 	},
+	capeResearch: {
+		name: "R&D Mastery Pocket Protector",
+		sellPrice: 500000,
+		icon: require("@/assets/art/combat/items/cloak/researchcloak.png"),
+		overlay: require("@/assets/art/combat/items/cloak/researchcloak_overlay.png"),
+		equipmentSlot: "neck",
+		stats: {
+			maxHealth: 20,
+			evasion: 2,
+			luck: 8,
+			protection: 1,
+			precision: 0,
+			power: 0,
+			moveTime: 1,
+		},
+		requires: {
+			research: MAX_LEVEL
+		},
+	},
 	capeValid: {
 		name: "Validhunter Mastery Cloak",
 		sellPrice: 500000,
