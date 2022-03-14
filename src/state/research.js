@@ -111,16 +111,13 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			dispatch("addToPoints", state.pointsReward);
 			dispatch("changeLevel", 2);
 			EventBus.$emit("toast", { text: `Analysis successful!`, duration: 3000 });
-			console.log("tried to loot bounty");
 			dispatch("rollNewBounty");
 		},
 		cheatPoints({ state, getters, dispatch, commit }){ // used for a cheat button for debugging
 			dispatch("addToPoints", 100);
 		},
 		startupRoll({ state, dispatch }){
-			console.log("Startup roll called. state.researchBountyItems: "+state.researchBountyItems);
 			if(state.pointsReward != 0){
-				console.log("Returning");
 				return;
 
 			} 
@@ -135,11 +132,9 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			if(manual) EventBus.$emit("toast", { text: `Rerolled research bounty!`, duration: 3000 });
 			let bountyTier = Math.min(5, Math.floor(currentLevel/10 % 10)+1);//get our bounty tier (10s place digit + 1)
 			let thisTierOfBounties = Object.values(RESEARCH_BOUNTIES).filter(everyBounty => everyBounty.tier == bountyTier);//get only bounties in our tier
-			console.log(bountyTier + " is our tier.");
 			thisTierOfBounties = thisTierOfBounties.filter(everyBounty => everyBounty.requiredItems != state.researchBountyItems);//don't get the same bounty twice
 			let chosenBounty = thisTierOfBounties[Math.floor(Math.random() * thisTierOfBounties.length)];//pick a bounty from the bounties remaining
 			commit("changeBounty", chosenBounty);
-			console.log("tried to roll up a new bounty of tier: "+chosenBounty.tier);
 		},
 		changeLevel({ state, getters, dispatch, commit, rootGetters }, levelAddition){
 			let currentLevel = rootGetters["research/level"];
