@@ -51,6 +51,11 @@
               <b class="mr-2">Nathan "Nabski" Bartlett:</b>
               <span>Content and Balance</span>
             </div>
+            <div class="my-3">
+              <img class="mx--0" :src="require('@/assets/art/misc/allFaces.gif')" alt />
+              <b class="mr-2">GitHub Contributors:</b>
+              <span>Various Content and Tweaks</span>
+            </div>
             <h5 class="mt-3">Other Great People</h5>
             <div class="my-3">
               <img class="mx--0" :src="require('@/assets/art/misc/melvor.svg')" alt />
