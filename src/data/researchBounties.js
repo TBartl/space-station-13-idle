@@ -259,7 +259,7 @@ const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, requires 10 mi
 	},
 	engineeringBounty4: {
 		requiredItems: {
-			power: 10000,
+			power: 5000,
 			ammoEnergy3: 120
 		},
 		pointsReward: 250
@@ -305,10 +305,10 @@ const TIER_4_BOUNTIES = { //bounties that appear at levels 31-40, requires 10 mi
 	},
 	xenobiologyBounty3: {
 		requiredItems: {
-			slimeRed: 5,
-			slimeGreen: 5,
-			slimePink: 5,
-			slimeGold: 5
+			slimeRed: 25,
+			slimeGreen: 25,
+			slimePink: 25,
+			slimeGold: 25
 		},
 		pointsReward: 250
 	},
@@ -351,7 +351,7 @@ const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires 10 min
 	},
 	engineeringBounty5: {
 		requiredItems: {
-			power: 25000,
+			power: 10000,
 			orange3d: 100
 		},
 		pointsReward: 350
@@ -406,7 +406,7 @@ const TIER_5_BOUNTIES = { //bounties that appear at levels 41-50 requires 10 min
 	},
 	xenobiologyBounty5: {
 		requiredItems: {
-			slimeRainbow: 10
+			slimeRainbow: 20
 		},
 		pointsReward: 300
 	},

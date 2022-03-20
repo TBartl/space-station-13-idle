@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://github.com/TBartl/space-station-13-idle.git master:gh-pages
+git push -f https://github.com/PKPenguin321/space-station-13-idle.git master:gh-pages
 
 cd -

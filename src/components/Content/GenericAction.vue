@@ -27,7 +27,7 @@
 
 			<p class="chrono" v-if="action.chronoProhibited">Chrono Prohibited</p>
 
-      <span v-if="locked" class="danger-bubble mt-1">LEVEL {{action.requiredLevel}}
+      <span v-if="locked" class="danger-bubble text-center mt-1">LEVEL {{action.requiredLevel}}
         {{action.requiredUpgrade && this.$store.getters['upgrades/get'](action.requiredUpgrade) == 0 ? " (NEEDS RESEARCH) " : ""}}
       </span>
 

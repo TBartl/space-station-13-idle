@@ -51,16 +51,16 @@ export default {
 	},
 	meleeEngineering: {
 		name: "Cattle Prod",
-		sellPrice: 300,
+		sellPrice: 650,
 		icon: require("@/assets/art/combat/items/meleeEngi.gif"),
 		overlay: require("@/assets/art/combat/items/meleeEngi_overlay.png"),
 		equipmentSlot: "hand",
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
-			command: 10,
-			precision: 10,
-			attackSpeed: 3.5,
+			command: 12,
+			precision: 12,
+			attackSpeed: 3,
 			power: -10,
 			damageType: "burn"
 		},

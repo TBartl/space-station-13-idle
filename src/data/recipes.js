@@ -326,7 +326,7 @@ export const RESEARCH_RECIPES_III = {
 		name: "RECIPE: Cattle Prod",
 		description: "Engineering can now make homebrewed stun batons.",
 		icon: require('@/assets/art/combat/items/meleeEngi.gif'),
-		requiredResearchPoints: 500,
+		requiredResearchPoints: 200,
 		upgrade: "recipeEngineeringProd",
 		requiredUpgrades: {
 			recipeEngineeringProd: 0

@@ -69,7 +69,7 @@ const POTIONS = {
 		name: "Ballmer Fluid",
 		sellPrice: 55,
 		icon: require("@/assets/art/chemistry/ballmer.png"),
-		description: "R&D TOOL development has a 20% chance to output twice.", 
+		description: "R&D TOOL development has a 25% chance to output twice.", 
 		potionJob: "research",
 		potionCharges: 5
 	},
@@ -87,7 +87,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/energy_drink.png"),
 		description: "Whenever you get energy from engineering, also get ten times that amount of money.",
 		potionJob: "engineering",
-		potionCharges: 50
+		potionCharges: 30
 	},
 	potionTinkering: {
 		name: "Super Glue",

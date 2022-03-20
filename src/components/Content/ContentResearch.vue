@@ -197,6 +197,11 @@ export default {
 </script>
 
 <style scoped>
+.type-text {
+  font-size: 20;
+  font-weight: bold;
+  color: rgba(245, 245, 245, 0.555);
+}
 img {
   width: 32px;
 }

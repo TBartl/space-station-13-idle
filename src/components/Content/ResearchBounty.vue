@@ -68,12 +68,10 @@ export default {
   methods: {
     ...mapActions("research", ["destructiveAnalysis"]),
     ...mapActions("research", ["rollNewBounty"]),
-    ...mapActions("research", ["changeLevel"]),
     analyze() {
       this.destructiveAnalysis();
     },
     reroll() {
-      this.changeLevel(-1);
       this.rollNewBounty(true);
     }
   }
