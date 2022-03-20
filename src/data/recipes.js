@@ -394,4 +394,17 @@ export const RESEARCH_RECIPES_III = {
 			research: 20
 		}
 	},
+	traitorUpgrades: {
+		name: "RECIPE: Adaptive Customizations",
+		description: "Discover how a Traitor is able to customize weapons and armor to be easier to wield and wear.",
+		icon: require('@/assets/art/combat/items/arm_syndi.png'),
+		requiredResearchPoints: 700,
+		upgrade: "traitorUpgrades",
+		requiredUpgrades: {
+			traitorUpgrades: 0
+		},
+		requiredLevels: {
+			research: 30
+		}
+	},
 }
