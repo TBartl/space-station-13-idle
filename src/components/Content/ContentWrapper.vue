@@ -46,7 +46,7 @@ export default {
     ContentShitposting,
     ContentBartending,
     ContentFabrication,
-	ContentResearch,
+    ContentResearch,
     ContentXenobiology,
     ContentBotany,
     ContentCooking,

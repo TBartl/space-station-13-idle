@@ -29,10 +29,14 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 						action.requiredItems[itemId] = Math.max(1, Math.round(action.requiredItems[itemId] * upgradeOreReduction));
 					}
 				}
-				if(potionItemId == "toolFabrication" && action.items){
-					if(action.items.count > 1){
-						let oldCount = action.items.count;
-						action.items.count = [0, oldCount*3];
+				if(potionItemId == "toolFabrication"){
+					if(action.items){
+						if(action.items.count > 1){
+							let oldCount = action.items.count;
+							action.items.count = [0, oldCount*3];
+						}
+					} else {
+						action.preservePotion = true;
 					}
 				}
 			}

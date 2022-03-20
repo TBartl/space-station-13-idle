@@ -26,7 +26,7 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					Object.keys(action.requiredItems).forEach(key => {
 						if (key.toLowerCase().includes('meat')) {
 							action.requiredItems[key] -= 1;
-							if (action.requiredItems[key] == 0) delete action.requiredItems[key]; // todo ask about this for xenobio tool
+							if (action.requiredItems[key] == 0) delete action.requiredItems[key];
 						}
 					});
 					if (Object.values(action.requiredItems).length == 0) {

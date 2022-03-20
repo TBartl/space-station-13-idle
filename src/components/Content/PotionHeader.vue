@@ -24,7 +24,7 @@
           :itemId="itemId"
         />
         <button v-if="currentPotionItemId" class="btn btn-outline-danger" @click="remove">REMOVE</button>
-        <span v-if="!currentPotionItemId && validItems.length == 0">No chems available for this job.</span>
+        <span v-if="!currentPotionItemId && validItems.length == 0">No boosts available for this job.</span>
       </div>
     </b-popover>
     <div v-if="currentPotion" class="d-flex flex-column align-items-center">

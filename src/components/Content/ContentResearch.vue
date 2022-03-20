@@ -37,7 +37,7 @@
             <img
               :src="require('@/assets/art/mining/SheetDiamond.png')"
             />
-            <b>precious ores,</b> I'll let you use our Research and Development facilities.
+            <b>Precious Ores,</b> I'll let you use our Research and Development facilities.
           </span>
         </template>
         <template slot="Research?">
@@ -109,8 +109,6 @@
 
         <div class="enemies w-100 mt-2">
           <research-bounty
-            :enemyId="targetEnemyId"
-            :showValidhunting="true"
           />
         </div>
 
@@ -178,9 +176,6 @@ export default {
     },
     sections() {//Enables shop sections to load properly
       return SECTIONS;
-    },
-    targetEnemyId() {
-      return this.$store.getters["validhunting/targetEnemyId"];
     },
     rndPoints() {
       return this.$store.getters["research/rndPoints"];

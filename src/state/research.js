@@ -53,14 +53,10 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		baseActions(state, getters, rootState, rootGetters) {
 			let actions = cloneDeep(ACTIONS);
 
-			let upgradeCount = rootGetters["upgrades/get"]("researchUpgrade");
 			let potion = rootGetters["potions/get"]("research");
 			let potionItemId = potion ? potion.itemId : null;
 
 			for (let action of Object.values(actions)) {
-				// Apply upgrades
-				action.time *= 1 / (1 + RESEARCH_UPGRADE_PERCENT * upgradeCount);
-
 				// Apply potion
 				if (potionItemId == "potionResearch") {
 					let originalItem = action.item;
