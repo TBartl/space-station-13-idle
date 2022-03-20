@@ -445,7 +445,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 
 });
 
-// goes unused, see resourceXenobiology.js
+// Prevents companion pets from having a slime core generated for them, see resourceXenobiology.js
 Object.values(COMPANIONS).forEach((companion) => {
 	companion.noCore = true;
 });
