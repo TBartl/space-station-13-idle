@@ -445,9 +445,10 @@ Object.values(SLIMES).forEach((slime, index) => {
 
 });
 
-// Prevents companion pets from having a slime core generated for them, see resourceXenobiology.js
 Object.values(COMPANIONS).forEach((companion) => {
-	companion.noCore = true;
+	companion.noCore = true; // Prevents companion pets from having a slime core generated for them, see resourceXenobiology.js
+	companion.equipmentSlot = "companion";
+	companion.fleeChance = 10 + companion.tier * 10;
 });
 
 export default {
