@@ -145,7 +145,7 @@ const TIER_2_BOUNTIES = { //bounties that appear at levels 11-20 requires 10ish 
 	},
 	mysteriousBounty2: {
 		requiredItems: {
-			meleeToolbox: 1
+			meleeToolbox2: 1
 		},
 		pointsReward: 200
 	}
