@@ -5,15 +5,15 @@ const TOOLS = {
 		name: "Mining Scanner",
 		sellPrice: 9,
 		icon: require("@/assets/art/research/tools/toolMining.png"),
-		description: "All mining actions give double XP.",
+		description: "All mining tasks give double XP.",
 		potionJob: "mining",
-		potionCharges: 10
+		potionCharges: 12
     },
     toolEngineering: {
 		name: "Geiger Counter",
 		sellPrice: 79,
 		icon: require("@/assets/art/research/tools/toolEngineering.png"),
-		description: "All engineering jobs are exactly 1 second faster.",
+		description: "All engineering tasks are 1.5 seconds faster.",
 		potionJob: "engineering",
 		potionCharges: 25
     },
@@ -45,7 +45,7 @@ const TOOLS = {
 		name: "Botanical Scanner",
 		sellPrice: 67,
 		icon: require("@/assets/art/research/tools/toolBotany.png"),
-		description: "Botany jobs now also grow additional chemicals and meats.",
+		description: "Botany tasks now also grow additional chemicals and meats.",
 		potionJob: "botany",
 		potionCharges: 8
 	},
@@ -63,7 +63,7 @@ const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolBartending.png"),
 		description: "Mixing drinks also yields 2x the sell value of that drink.",
 		potionJob: "bartending",
-		potionCharges: 50
+		potionCharges: 25
 	},
 	toolXenobiology: {
 		name: "Slime Scanner",
@@ -85,7 +85,7 @@ const TOOLS = {
 		name: "Tube Plunger",
 		sellPrice: -37,
 		icon: require("@/assets/art/research/tools/toolShitposting.png"),
-		description: "Further increases XP gain from ??? actions. Strongly inadvised.",
+		description: "Further increases XP gain from ??? tasks. Strongly inadvised.",
 		potionJob: "shitposting",
 		potionCharges: 10
 	},

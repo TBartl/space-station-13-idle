@@ -326,7 +326,7 @@ export const RESEARCH_RECIPES_III = {
 		name: "RECIPE: Cattle Prod",
 		description: "Engineering can now make homebrewed stun batons.",
 		icon: require('@/assets/art/combat/items/meleeEngi.gif'),
-		requiredResearchPoints: 500,
+		requiredResearchPoints: 200,
 		upgrade: "recipeEngineeringProd",
 		requiredUpgrades: {
 			recipeEngineeringProd: 0
@@ -392,6 +392,19 @@ export const RESEARCH_RECIPES_III = {
 		},
 		requiredLevels: {
 			research: 20
+		}
+	},
+	traitorUpgrades: {
+		name: "RECIPE: Adaptive Customizations",
+		description: "Discover how a Traitor is able to customize weapons and armor to be easier to wield and wear.",
+		icon: require('@/assets/art/combat/items/arm_syndi.png'),
+		requiredResearchPoints: 700,
+		upgrade: "traitorUpgrades",
+		requiredUpgrades: {
+			traitorUpgrades: 0
+		},
+		requiredLevels: {
+			research: 30
 		}
 	},
 }

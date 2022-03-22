@@ -79,12 +79,11 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							item: originalItem
 						},
 						{
-							chance: 0.8,
+							chance: 0.75,
 							itemTable: [
 								{
 									id: "wire",
-									count: [10, 20],
-									weight: 100,
+									count: [5, 10]
 								},
 							]
 						}

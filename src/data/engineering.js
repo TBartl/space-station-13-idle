@@ -235,9 +235,9 @@ const ILL_ADVISED_ACTIONS = {
 		},
 		icon: require("@/assets/art/combat/items/meleeEngi.gif"),
 		xp: 35,
-		requiredLevel: 10,
+		requiredLevel: 8,
 		requiredItems: {
-			power: 300,
+			power: 250,
 			iron: 50
 		},
 		requiredUpgrade: "recipeEngineeringProd"

@@ -5,7 +5,7 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolMining.png"),
 		xp: 5,
 		requiredItems: {
-			silver: 5,
+			silver: 4,
 			lithium: 4
 		},
 		requiredLevel: 1,
@@ -48,10 +48,10 @@ export const TOOLS = {
 		requiredUpgrade: "toolGraytiding",
 	},
 	makeToolTinkering: {
-		time: 2.5,
+		time: 5,
 		item: "toolTinkering",
 		icon: require("@/assets/art/research/tools/toolTinkering.png"),
-		xp: 2.5,
+		xp: 5,
 		requiredItems: {
 			gold: 1,
 			power: 4
@@ -84,10 +84,10 @@ export const TOOLS = {
 		requiredUpgrade: "toolCooking",
 	},
 	makeToolBartending: {
-		time: 7.5,
+		time: 5,
 		item: "toolBartending",
 		icon: require("@/assets/art/research/tools/toolBartending.png"),
-		xp: 7.5,
+		xp: 5,
 		requiredItems: {
 			titanium: 1,
 			slimeMetal: 8,
@@ -164,9 +164,9 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolLing.png"),
 		xp: 45,
 		requiredItems: {
-			bluespace: 20,
-			tomatoBluespace: 20,
-			foodMeatZ: 20
+			bluespace: 50,
+			tomatoBluespace: 50,
+			foodMeatZ: 50
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolLing",
