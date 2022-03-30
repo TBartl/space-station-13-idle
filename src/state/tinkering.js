@@ -44,7 +44,6 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 
 				if (potionItemId == "potionTinkering") {
-					// TODO:
 					let originalItem = action.item;
 					delete action.item;
 					action.itemTables = [
@@ -65,6 +64,30 @@ const tinkering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							weight: 1
 						});
 					}
+				}
+
+				if(potionItemId == "toolTinkering") {
+					action.xp *= 1.5;
+					for (let itemId of Object.keys(action.requiredItems)) {
+						action.requiredItems[itemId] = action.requiredItems[itemId]*2
+					}
+					let originalItem = action.item;
+					delete action.item;
+					action.itemTables = [
+						{
+							chance: 1,
+							item: originalItem
+						},
+						{
+							chance: 0.75,
+							itemTable: [
+								{
+									id: "wire",
+									count: [5, 10]
+								},
+							]
+						}
+					]
 				}
 
 			}

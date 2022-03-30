@@ -211,6 +211,11 @@
                 class="btn btn-primary my-1 d-block"
                 @click="completeCurrentValidhuntingTask"
               >Complete Current Validhunting Task</button>
+              <button
+                type="button"
+                class="btn btn-primary my-1 d-block"
+                @click="giveResearchPoints"
+              >Give 100 Research Bounty Points</button>
             </div>
           </div>
         </div>
@@ -437,6 +442,10 @@ export default {
       // console.table(table);
       // console.log("Total damage:", totalDamage);
       // console.log("Final kill count:", totalKills);
+    },
+    giveResearchPoints() {
+      this.$store.dispatch("research/cheatPoints", { root: true });
+      EventBus.$emit("toast", { text: "Points added!", duration: 3000 });
     }
   }
 };

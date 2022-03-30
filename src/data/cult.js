@@ -150,6 +150,14 @@ const ACTIONS_CULTPANION = {
 		requiredLevel: 23,
 		requiredItems: { unholyfavor: 36 , companionCat: 1 }
 	},
+	cultblade: {
+		time: 300,
+		item: "cultBlade",
+		xp: 1035,
+		requiredLevel: 28,
+		requiredItems: { unholyfavor: 42 , meleeBlunt3: 1 },
+		requiredUpgrade: "cultblade"
+	},
 	sac4: {
 		time: 200,
 		item: "companionFoxcult",

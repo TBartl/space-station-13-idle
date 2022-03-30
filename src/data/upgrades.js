@@ -319,6 +319,24 @@ for (let i = 0; i < 5; i++) {
 	FABRICATION_UPGRADES[`upgradeFabrication${i + 1}`] = upgrade;
 }
 
+export const RESEARCH_UPGRADE_PERCENT = .1;
+const RESEARCH_UPGRADES = {}
+for (let i = 0; i < 5; i++) {
+	let upgrade = {
+		name: "Expand Points Bank",
+		description: "Each level of this upgrade raises your maximum research points banked by 100.",
+		icon: require('@/assets/art/research/upgrade.png'),
+		requiredItems: {}, // Filled out below
+		requiredLevels: { research: (i + 1) * 10 },
+		upgrade: "researchUpgrade",
+		requiredUpgrades: { researchUpgrade: i }
+
+	}
+	upgrade.requiredItems.money = calcCost(i, 5);
+
+	RESEARCH_UPGRADES[`researchUpgrade${i + 1}`] = upgrade;
+}
+
 const BOTANY_UPGRADES = {
 	upgradeBotany1: {
 		name: "Add Second Botany Tray",
@@ -490,6 +508,7 @@ const JOB_UPGRADES = {
 	...MINING_UPGRADES,
 	...ENGINEERING_UPGRADES,
 	...FABRICATION_UPGRADES,
+	...RESEARCH_UPGRADES,
 	...GRAYTIDING_UPGRADES,
 	...TINKERING_UPGRADES,
 	...BOTANY_UPGRADES,

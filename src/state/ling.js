@@ -32,6 +32,18 @@ const ling = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					if (Object.values(action.requiredItems).length == 0) {
 						delete action.requiredItems;
 					}
+				} else if(potionItemId == "toolLing"){
+					if(action.itemTables){
+						if(action.itemTables[0].itemTable[2]){
+							let newOutput = action.itemTables[0].itemTable[2].id;
+							delete action.itemTables;
+							action.item = newOutput;
+						} else {
+							action.preservePotion;
+						}
+					} else{
+						action.preservePotion;
+					}
 				}
 			}
 			return actions;

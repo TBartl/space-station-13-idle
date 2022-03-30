@@ -56,7 +56,6 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 						continue;
 					};
 					delete action.items;
-					// action.name = ITEMS[originalItem].name
 
 					action.itemTables = [
 						{
@@ -69,6 +68,67 @@ const cargonia = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 								id: "power",
 								count: originalItems.count
 							}
+						}
+					]
+				} else if (potionItemId == "toolCargonia") {
+					let originalItems = action.items;
+					if (!originalItems) {
+						action.preservePotion = true;
+						continue;
+					}
+					if (originalItems.id != "money") {
+						action.preservePotion = true;
+						continue;
+					};
+					delete action.items;
+
+					action.itemTables = [
+						{
+							chance: 1,
+							items: originalItems
+						},
+						{
+							chance: 0.25,
+							itemTable: [{
+								id: "supplyCrate",
+								count: 1,
+								weight: 100
+							},
+							{
+								id: "knifeCrate",
+								count: 1,
+								weight: 100
+							},
+							{
+								id: "hatCrate",
+								count: 1,
+								weight: 80
+							},
+							{
+								id: "hatCrate2",
+								count: 1,
+								weight: 80
+							},
+							{
+								id: "revCrate",
+								count: 1,
+								weight: 45
+							},
+							{
+								id: "secCrate",
+								count: 1,
+								weight: 30
+							},
+							{
+								id: "lavaCrate",
+								count: 1,
+								weight: 15
+							},
+							{
+								id: "contrabandCrate",
+								count: 1,
+								weight: 1
+							}]
 						}
 					]
 				}

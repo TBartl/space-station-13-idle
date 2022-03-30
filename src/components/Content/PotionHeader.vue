@@ -2,7 +2,7 @@
   <div
     class="potion-header content-block d-flex flex-row align-items-center justify-content-center"
   >
-    <span class="chem-title mr-2">CHEM:</span>
+    <span class="chem-title mr-2">BOOST:</span>
     <div class="overlay-div position-relative potion-slot mr-2" :id="target" tabindex="0">
       <img :src="require('@/assets/art/chemistry/potion.png')" />
       <img v-if="currentPotionItem" :src="currentPotionItem.icon" />
@@ -24,7 +24,7 @@
           :itemId="itemId"
         />
         <button v-if="currentPotionItemId" class="btn btn-outline-danger" @click="remove">REMOVE</button>
-        <span v-if="!currentPotionItemId && validItems.length == 0">No chems available for this job.</span>
+        <span v-if="!currentPotionItemId && validItems.length == 0">No boosts available for this job.</span>
       </div>
     </b-popover>
     <div v-if="currentPotion" class="d-flex flex-column align-items-center">

@@ -38,5 +38,6 @@ new Vue({
 }).$mount('#app')
 
 store.dispatch('chrono/updateOfflineTime');
+store.dispatch('research/startupRoll');
 store.dispatch("cleanup");
 store.dispatch("_resume");

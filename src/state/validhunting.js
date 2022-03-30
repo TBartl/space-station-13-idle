@@ -51,7 +51,6 @@ const validhunting = merge(cloneDeep(jobBase), {
 			} else if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitChameleon') {
 				xpFactor = 1.3;
 			}
-			console.log(xpFactor);
 			commit("addXP", state.xpReward * xpFactor);
 			// Get a new task
 			let minCount = 10;

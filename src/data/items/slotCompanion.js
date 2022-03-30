@@ -1,3 +1,5 @@
+import { _ } from "core-js";
+
 const SLIMES = {
 	slimeGray: {
 		name: "Gray Slime",
@@ -142,6 +144,9 @@ const SLIMES = {
 			luck: 20
 		}
 	},
+}
+
+const COMPANIONS = {
 	companionMouse: {
 		name: "Pet Mouse",
 		sellPrice: 1000,
@@ -439,4 +444,14 @@ Object.values(SLIMES).forEach((slime, index) => {
 	}
 
 });
-export default SLIMES;
+
+Object.values(COMPANIONS).forEach((companion) => {
+	companion.noCore = true; // Prevents companion pets from having a slime core generated for them, see resourceXenobiology.js
+	companion.equipmentSlot = "companion";
+	companion.fleeChance = 10 + companion.tier * 10;
+});
+
+export default {
+	...SLIMES,
+	...COMPANIONS,
+}

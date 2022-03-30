@@ -13,7 +13,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Job Unlocks",
-		purchases: ["unlockFabrication", "unlockTinkering", "unlockChemistry", "unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor", "unlockCult", "unlockLing"]
+		purchases: ["unlockFabrication", "unlockTinkering", "unlockChemistry", "unlockResearch", "unlockCooking", "unlockBartending", "unlockXenobiology", "unlockShitposting", "unlockCargonia","unlockTraitor", "unlockCult", "unlockLing"]
 	},
 	{
 		name: "Job Upgrades",
@@ -29,7 +29,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Clothes Vendo-Matic",
-		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeBartending", "capeXenobiology", "capeChemistry","capeValid", "capeShitposting"]
+		purchases: ["capeMining", "capeEngineering", "capeFabrication", "capeResearch", "capeGraytiding", "capeTinkering", "capeBotany", "capeCooking", "capeBartending", "capeXenobiology", "capeChemistry","capeValid", "capeShitposting"]
 	}
 ]
 
@@ -162,6 +162,19 @@ const JOB_UNLOCKS = {
 			chemistryUnlocked: 0
 		},
 		hideIfXP: "chemistry"
+	},
+	unlockResearch: {
+		name: "Unlock R&D",
+		description: "Allows you to Research tasks for other jobs and Develop facewear and job-boosting TOOLs",
+		icon: require('@/assets/art/research/researchJobIcon.png'),
+		requiredLevels: {
+			mining: 5
+		},
+		upgrade: "researchUnlocked",
+		requiredUpgrades: {
+			researchUnlocked: 0
+		},
+		hideIfXP: "research"
 	},
 	unlockXenobiology: {
 		name: "Unlock Xenobiology",
@@ -343,6 +356,16 @@ const CAPES = {
 		description: "Requires max Chemistry to wear.",
 		requiredLevels: {
 			chemistry: MAX_LEVEL
+		},
+		requiredItems: {
+			money: 1000000
+		}
+	},
+	capeResearch: {
+		item: "capeResearch",
+		description: "Requires max R&D to wear.",
+		requiredLevels: {
+			research: MAX_LEVEL
 		},
 		requiredItems: {
 			money: 1000000

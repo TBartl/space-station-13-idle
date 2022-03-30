@@ -5,6 +5,63 @@ import jobSingleAction from '@/state/jobSingleAction';
 import { ACTIONS } from "@/data/botany"
 import { BOTANY_POTION_PERCENT } from '@/data/items/resourceChemistry';
 
+const toolDropTable = 
+	{
+		chance: 0.75,
+		itemTable: [
+			{
+				id: "foodMeatA",
+				count: [5, 10],
+				weight: 1
+			},
+			{
+				id: "foodMeatH",
+				count: [5, 10],
+				weight: 1
+			},
+			{
+				id: "foodMeatZ",
+				count: [5, 10],
+				weight: 1
+			},
+			{
+				id: "pillHappy",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "pillSpacelube",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "pillRegen",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "water",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "oxygen",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "sacid",
+				count: [10, 20],
+				weight: 1
+			},
+			{
+				id: "mercury",
+				count: [10, 20],
+				weight: 1
+			},
+		]
+	}
+
 function mergeAction(action, into) {
 	into.xp += action.xp;
 	into.requiredItems.plantSeed += action.requiredItems.plantSeed;
@@ -72,7 +129,15 @@ const botany = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 						}
 					});
 				}
+
+				if(potionItemId == "toolBotany") {
+					for (let action of Object.values(actions)) {
+						let newDropTable = cloneDeep(toolDropTable);
+						action.itemTables.push(newDropTable);
+					}
+				}
 			}
+			
 
 			return actions;
 		},

@@ -40,10 +40,12 @@ const engineering = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							chance: 1,
 							items: {
 								id: "money",
-								count: originalItems.count * 4
+								count: originalItems.count * 10
 							}
 						}
 					]
+				} else if (potionItemId == "toolEngineering") {
+					action.time -= 1.5;
 				}
 			}
 			return actions;

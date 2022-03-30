@@ -241,6 +241,23 @@ const ENERGY_AMMO = {
 			plasma: 1
 		}
 	},
+	fabricateEammo4: {
+		time: 6,
+		name: "Disintegration Cell",
+		icon: require("@/assets/art/combat/items/ammo_e4.png"),
+		xp: 20,
+		requiredLevel: 40,
+		requiredUpgrade: "tierFourAmmo",
+		items:
+		{
+			id: "ammoEnergy4",
+			count: 16,
+		},
+		requiredItems: {
+			alienalloy: 1,
+			plasma: 2
+		}
+	},
 }
 
 const BALLISTIC_AMMO = {
@@ -287,6 +304,23 @@ const BALLISTIC_AMMO = {
 		},
 		requiredItems: {
 			diamond: 1
+		}
+	},
+	fabricateBammo4: {
+		time: 6,
+		name: "Breaching Shell",
+		icon: require("@/assets/art/combat/items/ammo_b4_anim.gif"),
+		xp: 24,
+		requiredLevel: 41,
+		requiredUpgrade: "tierFourAmmo",
+		items:
+		{
+			id: "ammoBallistic4",
+			count: 16,
+		},
+		requiredItems: {
+			alienalloy: 1,
+			diamond: 2
 		}
 	},
 }

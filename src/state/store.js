@@ -10,6 +10,7 @@ import engineering from "./engineering";
 import chemistry from "./chemistry";
 import mining from "./mining";
 import fabrication from "./fabrication";
+import research from "./research";
 import xenobiology from "./xenobiology";
 import botany from "./botany";
 import cooking from "./cooking";
@@ -45,6 +46,7 @@ const modules = {
 	chemistry,
 	mining,
 	fabrication,
+	research,
 	xenobiology,
 	botany,
 	cooking,
@@ -136,7 +138,8 @@ const vuexLocal = new VuexPersistence({
 
 const state = {
 	visibleSidebarItem: "mining",
-	update3Seen: false
+	update3Seen: false,
+	update4Seen: false
 }
 
 let initialState = cloneDeep(state);
@@ -218,6 +221,7 @@ const store = new Vuex.Store({
 		resetData({ commit, dispatch }, softReset) {
 			dispatch("cancelAllActions");
 			commit("_resetState", softReset);
+			dispatch('research/startupRoll');
 		},
 		setData({ commit, dispatch }, newData) {
 			dispatch("cancelAllActions");

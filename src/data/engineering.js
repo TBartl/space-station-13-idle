@@ -225,6 +225,23 @@ const RESOURCE_CONSUMING_ACTIONS = {
 }
 
 const ILL_ADVISED_ACTIONS = {
+	engWeapon: {
+		time: 30,
+		actionName: "JURY-RIG",
+		name: "Improvised Weapon",
+		items: {
+			id: "meleeEngineering",
+			count: 1
+		},
+		icon: require("@/assets/art/combat/items/meleeEngi.gif"),
+		xp: 35,
+		requiredLevel: 8,
+		requiredItems: {
+			power: 250,
+			iron: 50
+		},
+		requiredUpgrade: "recipeEngineeringProd"
+	},
 	engBlackmarket: {
 		time: 5,
 		actionName: "FENCE",

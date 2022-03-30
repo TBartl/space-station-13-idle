@@ -20,10 +20,20 @@ const cult = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 
 			for (let action of Object.values(actions)) {
 				let speedIncrease = 1 + ANTAG_UPGRADE_PERCENT * upgradeCount;
-				if (potionItemId == "potionCult" && action.healthCost) {
-					speedIncrease *= 2;
-				} else {
-					action.preservePotion = true;
+				if (potionItemId == "potionCult") {
+					if(action.healthCost){
+						speedIncrease *= 2;
+					} else {
+						action.preservePotion = true;
+					}
+				} 
+				if(potionItemId == "toolCult"){
+					if(!action.healthCost){
+						action.xp *= 2;
+						action.healthCost = action.requiredLevel*1.5;
+					} else {
+						action.preservePotion = true;
+					}
 				}
 				action.time *= 1 / speedIncrease;;
 

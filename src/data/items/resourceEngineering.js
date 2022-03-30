@@ -49,4 +49,24 @@ export default {
 		sellPrice: 4000,
 		icon: require("@/assets/art/fabrication/Plating4.png")
 	},
+	meleeEngineering: {
+		name: "Cattle Prod",
+		sellPrice: 650,
+		icon: require("@/assets/art/combat/items/meleeEngi.gif"),
+		overlay: require("@/assets/art/combat/items/meleeEngi_overlay.png"),
+		equipmentSlot: "hand",
+		stats: {
+			maxHealth: 0,
+			evasion: 0,
+			command: 12,
+			precision: 12,
+			attackSpeed: 3,
+			power: -10,
+			damageType: "burn"
+		},
+		requires: {
+			precision: 5,
+			meleePower: 10
+		}
+	},
 }

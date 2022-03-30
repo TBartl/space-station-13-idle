@@ -68,6 +68,8 @@ const mining = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 					let newDropTable = cloneDeep(potionDropTable);
 					newDropTable.unshift({ chance: 1, item: originalItem })
 					action.itemTables = newDropTable;
+				} else if (potionItemId == "toolMining") {
+					action.xp *= 2;
 				}
 			}
 			return actions;

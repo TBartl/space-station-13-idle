@@ -5,6 +5,7 @@ import jobSingleAction from '@/state/jobSingleAction';
 import { ACTIONS } from "@/data/graytiding"
 import { GRAYTIDING_UPGRADE_PERCENT } from "@/data/upgrades";
 import { GRAYTIDING_POTION_PERCENT } from '@/data/items/resourceChemistry';
+import { GRAYTIDING_TOOL_PERCENT } from '@/data/items/resourceResearch';
 
 const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 	getters: {
@@ -22,6 +23,11 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				action.failure.chance -= GRAYTIDING_UPGRADE_PERCENT * upgradeCount;
 				if (potionItemId == "potionGraytiding") {
 					action.failure.chance -= GRAYTIDING_POTION_PERCENT;
+				}
+				if(potionItemId == "toolGraytiding") {
+					action.preservePotionOnFail = true;
+					action.failure.chance -= GRAYTIDING_TOOL_PERCENT;
+					action.failure.damage -= 3;
 				}
 			}
 			return actions;

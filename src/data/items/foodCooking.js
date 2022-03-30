@@ -380,11 +380,11 @@ let premiumFoodEntries = Object.entries(FOOD).map(entry => {
 	newFood.name = "Quality " + newFood.name;
 	newFood.healAmount = Math.round(newFood.healAmount * 1.3);
 	newFood.sellPrice *= 2;
+	newFood.nocomplete = true; // don't count quality foods towards completion percentage
 	for (let statId of Object.keys(newFood.stats)) {
 		if (newFood.stats[statId] > 0)
-			newFood.stats[statId] = Math.round(newFood.stats[statId])
+			newFood.stats[statId] = Math.round(newFood.stats[statId]);
 			newFood.stats.luck = 5;
-			newFood.stats.nocomplete = true;
 	}
 	return ["q_" + originalId, newFood];
 });

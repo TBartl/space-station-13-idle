@@ -55,6 +55,14 @@ export const ACTIONS = {
 		xp: 18,
 		requiredLevel: 35
 	},
+	mineAlien: {
+		time: 9,
+		item: "alienalloy",
+		icon: require("@/assets/art/mining/OreAlien.gif"),
+		xp: 25,
+		requiredLevel: 35,
+		requiredUpgrade: "alienMining"
+	},
 	mineBluespace: {
 		time: 5.5,
 		item: "bluespace",

@@ -184,16 +184,65 @@ const FOURTC = {
 	},
 }
 
+const TUPGRADE = {
+	UpDagger: {
+		time: 360,
+		xp: 0,
+		requiredLevel: 1,
+		item: "meleeBurn3T",
+		actionName: "UPGRADE",
+		requiredItems: {
+			meleeBurn3: 1
+		},
+		requiredUpgrade: "traitorUpgrades"
+	},
+	UpSword: {
+		time: 540,
+		xp: 0,
+		requiredLevel: 1,
+		item: "meleeBurn4T",
+		actionName: "UPGRADE",
+		requiredItems: {
+			meleeBurn4: 1
+		},
+		requiredUpgrade: "traitorUpgrades"
+	},
+	UpDesword: {
+		time: 720,
+		xp: 0,
+		requiredLevel: 1,
+		item: "meleeBurn5T",
+		actionName: "UPGRADE",
+		requiredItems: {
+			meleeBurn5: 1
+		},
+		requiredUpgrade: "traitorUpgrades"
+	},
+	UpSuit: {
+		time: 540,
+		xp: 0,
+		requiredLevel: 1,
+		item: "totsuit2",
+		actionName: "UPGRADE",
+		requiredItems: {
+			armorBurn6: 1
+		},
+		requiredUpgrade: "traitorUpgrades"
+	}
+}
+
 Object.values(ONETC).forEach(action => action.type = "1 TeleCrystal");
 Object.values(TWOTC).forEach(action => action.type = "2 TeleCrystals");
 Object.values(THREETC).forEach(action => action.type = "3 TeleCrystals");
 Object.values(FOURTC).forEach(action => action.type = "4 TeleCrystals");
+Object.values(TUPGRADE).forEach(action => action.type = "Adaptive Customization");
 
 const ACTIONS = {
 	...ONETC,
 	...TWOTC,
 	...THREETC,
 	...FOURTC,
+	...TUPGRADE
 }
 
 export { ACTIONS };

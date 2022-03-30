@@ -17,6 +17,7 @@ const inventory = {
 		},
 		equipment: {
 			// Order here matters, later items will be displayed on top
+			// The last item on this list takes top priority for binary values like damage type/attack speed
 			food: {
 				itemId: null,
 				count: 0
@@ -45,11 +46,11 @@ const inventory = {
 				itemId: null,
 				count: 0
 			},
-			pocket: {
+			hand: {
 				itemId: null,
 				count: 0
 			},
-			hand: {
+			pocket: {
 				itemId: null,
 				count: 0
 			},
@@ -167,6 +168,9 @@ const inventory = {
 					for (let [upgradeId, count] of Object.entries(purchase.requiredUpgrades)) {
 						if (rootGetters["upgrades/getNoEquipment"](upgradeId) != count) return false;
 					}
+				}
+				if(purchase.requiredResearchPoints) {
+					if(rootGetters["research/rndPoints"] < purchase.requiredResearchPoints) return false;
 				}
 				return true;
 			}
@@ -303,8 +307,13 @@ const inventory = {
 			}
 		},
 		purchase({ commit, dispatch, rootGetters }, purchase) {
-			for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
-				commit("changeItemCount", { itemId, count: -count });
+			if(purchase.requiredItems){
+				for (let [itemId, count] of Object.entries(purchase.requiredItems)) {
+					commit("changeItemCount", { itemId, count: -count });
+				}
+			}
+			if(purchase.requiredResearchPoints){
+				dispatch("research/addToPoints", purchase.requiredResearchPoints*-1, { root: true });
 			}
 
 			if (purchase.upgrade) {
