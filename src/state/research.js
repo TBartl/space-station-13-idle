@@ -133,7 +133,7 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				EventBus.$emit("toast", { text: `Your R&D level is too low to reroll!`, duration: 3000 });
 				return;
 			}
-			dispatch("changeLevel", -1);
+			if(manual) dispatch("changeLevel", -1);
 			if(manual) EventBus.$emit("toast", { text: `Rerolled research bounty!`, duration: 3000 });
 			let bountyTier = Math.min(5, Math.floor(currentLevel/10 % 10)+1);//get our bounty tier (10s place digit + 1)
 			let thisTierOfBounties = Object.values(RESEARCH_BOUNTIES).filter(everyBounty => everyBounty.tier == bountyTier);//get only bounties in our tier
