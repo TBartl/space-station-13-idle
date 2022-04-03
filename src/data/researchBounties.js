@@ -236,7 +236,9 @@ const TIER_3_BOUNTIES = { //bounties that appear at levels 21-30, requires 10 mi
 	},
 	lootcrateBounty3: {
 		requiredItems: { 
-			S2headCommon1: 5
+			S2headCommon1: 1,
+			S2headCommon2: 1,
+			S2headCommon3: 1
 		},
 		pointsReward: 225
 	},

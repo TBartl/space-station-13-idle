@@ -58,15 +58,14 @@ export default {
 		stats: {
 			maxHealth: 0,
 			evasion: 0,
-			command: 12,
-			precision: 12,
+			command: 15,
+			precision: 22,
 			attackSpeed: 3,
-			power: -10,
+			power: -12,
 			damageType: "burn"
 		},
 		requires: {
-			precision: 5,
-			meleePower: 10
+			meleePower: 15
 		}
 	},
 }
