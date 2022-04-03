@@ -19,7 +19,8 @@
 					{name: 'Back'},
 					{name: '&quot;Graytiding&quot;?', icon: require('@/assets/art/graytiding/icon.png'), iconClass:'mx--0'},
 					{name: 'Loot?', icon: require('@/assets/art/graytiding/junk.png'), iconClass:'mx--0'},
-					{name: 'Risk?', icon: require('@/assets/art/jobinfo/shitcurity.png'), iconClass:'mx--1'}
+					{name: 'Risk?', icon: require('@/assets/art/jobinfo/shitcurity.png'), iconClass:'mx--1'},
+          {name: '&quot;Cleaning&quot;?', icon: require('@/assets/art/jobinfo/janitor.png'), iconClass:'mx--1'},
 				]"
       >
         <template slot="Back">
@@ -117,8 +118,17 @@
             <b>Cargo</b>.
           </span>
         </template>
+        <template slot="&quot;Cleaning&quot;?">
+          <span>Some <img class="mx--0" :src="require('@/assets/art/graytiding/icon.png')" /> <b>Graytiders</b> have been able to disguise themselves as janitorial staff.</span>
+          <span>While people are very alert to Graytiders, they are completely blind to the humble <img class="mx--0" :src="require('@/assets/art/jobinfo/janitor.png')" /> <b>Janitor</b>.</span>
+          <span>It's such a good disguise that you can <img class="mx--0" :src="require('@/assets/art/chemistry/lube.png')" /><b>Slip</b> into active combat situations while "cleaning" and take what you need. This is super dangerous though, so be extra cautious.</span>
+          <span>I could lend you my disguise, but you'll absolutely need some <img class="mx--0" :src="require('@/assets/art/research/galoshes.png')" /><b>Galoshes</b> if you even want to attempt it.
+             Try asking <img class="mx--0" :src="require('@/assets/art/research/researchJobIcon.png')" /><b>Research</b> for some.</span>
+        </template>
       </job-info>
 
+
+      <!-- Health/food box -->
       <div class="row food my-2">
         <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
           <div class="content-block">
@@ -132,10 +142,19 @@
           </div>
         </div>
       </div>
-      <div class="row">
+
+      <!-- Actions -->
+      <div
+        class="tier row"
+        v-for="(typedEntry, tier) in Object.entries(viewableTypedActionEntries)"
+        :key="tier"
+      >
+        <div class="col-12">
+          <span class="type-text text-uppercase">{{typedEntry[0]}}</span>
+        </div>
         <div
           class="col-12 col-sm-6 col-lg-4 col-xl-3 col-xxl-2"
-          v-for="[actionId, action] in viewableActions"
+          v-for="[actionId, action] in typedEntry[1]"
           :key="actionId"
         >
           <generic-action
@@ -146,6 +165,7 @@
           />
         </div>
       </div>
+
     </div>
   </div>
 </template>
@@ -176,8 +196,16 @@ export default {
     job() {
       return JOB;
     },
-    viewableActions() {
-      return this.$store.getters[this.jobId + "/filteredActionEntries"];
+    viewableTypedActionEntries() {
+      let entries = this.$store.getters[this.jobId + "/filteredActionEntries"];
+
+      let toReturn = {}; // type: [entries]
+      for (let entry of entries) {
+        let type = entry[1].type;
+        if (!toReturn[type]) toReturn[type] = [entry];
+        else toReturn[type].push(entry);
+      }
+      return toReturn;
     },
     health() {
       return this.$store.getters["playerMob/health"];

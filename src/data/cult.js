@@ -136,6 +136,15 @@ const ACTIONS_CULTPANION = {
 		requiredLevel: 13,
 		requiredItems: { unholyfavor: 12 , companionMouse: 1 }
 	},
+	cultblade1: {
+		time: 200,
+		item: "cultWeapon1",
+		xp: 540,
+		requiredLevel: 18,
+		requiredItems: { unholyfavor: 18, foodMeatH: 10 },
+		requiredUpgrade: "cultblade",
+		requiredUpgradeTier: 1
+	},
 	sac2: {
 		time: 200,
 		item: "companionDogcult",
@@ -150,13 +159,14 @@ const ACTIONS_CULTPANION = {
 		requiredLevel: 23,
 		requiredItems: { unholyfavor: 36 , companionCat: 1 }
 	},
-	cultblade: {
-		time: 300,
-		item: "cultBlade",
-		xp: 1035,
+	cultblade2: {
+		time: 200,
+		item: "cultWeapon2",
+		xp: 840,
 		requiredLevel: 28,
-		requiredItems: { unholyfavor: 42 , meleeBlunt3: 1 },
-		requiredUpgrade: "cultblade"
+		requiredItems: { unholyfavor: 42 , foodMeatH: 50 },
+		requiredUpgrade: "cultblade",
+		requiredUpgradeTier: 2
 	},
 	sac4: {
 		time: 200,
@@ -171,6 +181,15 @@ const ACTIONS_CULTPANION = {
 		xp: 1290,
 		requiredLevel: 43,
 		requiredItems: { unholyfavor: 56, companionGoat: 1  }
+	},
+	cultblade3: {
+		time: 200,
+		item: "cultBlade",
+		xp: 1395,
+		requiredLevel: 46,
+		requiredItems: { unholyfavor: 60 , meleeBlunt3: 1, foodMeatH: 100 },
+		requiredUpgrade: "cultblade",
+		requiredUpgradeTier: 3
 	},
 	sac6: {
 		time: 200,

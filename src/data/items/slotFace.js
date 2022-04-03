@@ -413,11 +413,12 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/face_clownsexy_overlay.png"),
 		stats: {
-			maxHealth: 240,
+			maxHealth: 170,
 			evasion: 0,
 			protection: 0,
 			precision: 0,
 			power: 0,
+			regen: 0.4
 		},
 		requires: {
 			evasion: 35,

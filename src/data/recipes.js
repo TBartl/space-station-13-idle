@@ -339,7 +339,7 @@ export const RESEARCH_RECIPES_III = {
 		name: "RECIPE: Alien Alloy Mining",
 		description: "Mining can now detect and mine for alien alloys.",
 		icon: require('@/assets/art/mining/OreAlien.gif'),
-		requiredResearchPoints: 600,
+		requiredResearchPoints: 400,
 		requiredItems: {
 			bluespace: 1
 		},
@@ -355,10 +355,10 @@ export const RESEARCH_RECIPES_III = {
 		name: "RECIPE: Tier IV Ammo",
 		description: "Fabrication can now produce tier four ammo.",
 		icon: require('@/assets/art/combat/items/ammo_b4_anim.gif'),
-		requiredResearchPoints: 850,
+		requiredResearchPoints: 650,
 		requiredItems: {
-			ammoBallistic3: 800,
-			ammoEnergy3: 800
+			ammoBallistic3: 250,
+			ammoEnergy3: 250
 		},
 		upgrade: "tierFourAmmo",
 		requiredUpgrades: {
@@ -366,6 +366,39 @@ export const RESEARCH_RECIPES_III = {
 		},
 		requiredLevels: {
 			research: 30
+		}
+	},
+	recipeCleaning1: {
+		name: "RECIPE: Galoshes",
+		description: "Gain a pair of galoshes, enabling you to clean things without slipping. Some of time, that is.",
+		icon: require('@/assets/art/research/galoshes.png'),
+		requiredResearchPoints: 200,
+		upgrade: "recipeCleaning",
+		requiredUpgrades: {
+			recipeCleaning: 0
+		},
+		requiredLevels: {
+			research: 35
+		}
+	},
+	recipeCleaning2: {
+		name: "RECIPE: Paradox Galoshes",
+		description: "Upgrades your galoshes, enabling you to safely wander through a time paradox.",
+		icon: require('@/assets/art/research/galoshes2.png'),
+		requiredResearchPoints: 1000,
+		requiredItems: {
+			power: 10000,
+			ammoEnergy4: 1000,
+			orange3d: 1000,
+			slimeRainbow: 100,
+			potionShitposting: 10
+		},
+		upgrade: "recipeCleaning",
+		requiredUpgrades: {
+			recipeCleaning: 1
+		},
+		requiredLevels: {
+			research: 50
 		}
 	},
 	toolShitposting: {
@@ -381,14 +414,43 @@ export const RESEARCH_RECIPES_III = {
 			shitposting: 10
 		}
 	},
-	cultblade: {
-		name: "RECIPE: Unholy Blade",
-		description: "Discover how a cultist can corrupt a null rod. The Cult can now make Unholy Blades.",
-		icon: require('@/assets/art/combat/items/cultblade.gif'),
-		requiredResearchPoints: 700,
+	cultblade1: {
+		name: "RECIPE: Destructive Touch",
+		description: "Discover how a cultist can invoke the Destructive Touch spell.",
+		icon: require('@/assets/art/combat/items/hand/cultWeapon1.png'),
+		requiredResearchPoints: 300,
+		requiredItems: {
+			unholyfavor: 1
+		},
 		upgrade: "cultblade",
 		requiredUpgrades: {
 			cultblade: 0
+		},
+		requiredLevels: {
+			research: 10
+		}
+	},
+	cultblade2: {
+		name: "RECIPE: Cultist Dagger",
+		description: "Discover how a cultist can manifest a reality-shearing dagger.",
+		icon: require('@/assets/art/combat/items/hand/cultWeapon2.png'),
+		requiredResearchPoints: 450,
+		upgrade: "cultblade",
+		requiredUpgrades: {
+			cultblade: 1
+		},
+		requiredLevels: {
+			research: 15
+		}
+	},
+	cultblade3: {
+		name: "RECIPE: Unholy Blade",
+		description: "Discover how a cultist can corrupt a null rod to make something truly unholy.",
+		icon: require('@/assets/art/combat/items/hand/cultWeapon3.gif'),
+		requiredResearchPoints: 600,
+		upgrade: "cultblade",
+		requiredUpgrades: {
+			cultblade: 2
 		},
 		requiredLevels: {
 			research: 20

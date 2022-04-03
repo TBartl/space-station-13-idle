@@ -41,7 +41,7 @@ export default {
 	},
 	alienalloy: {
 		name: "Alien Alloy",
-		sellPrice: 500,
+		sellPrice: 200,
 		icon: require("@/assets/art/mining/SheetAlien.png")
 	},
 	bluespace: {
