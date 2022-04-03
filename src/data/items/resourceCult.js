@@ -11,14 +11,15 @@ export default {
 		overlay: require("@/assets/art/combat/items/cultblade_overlay.gif"),
 		equipmentSlot: "hand",
 		stats: {
-			maxHealth: -100,
+			maxHealth: -150,
 			precision: -15,
-			command: 15,
-			power: 25,
+			command: 20,
+			power: 20,
 			evasion: -20,
-			attackspeed: 2,
+			attackSpeed: 2,
 			protection: 3,
-			regen: 3
+			regen: 3,
+			damageType: "brute"
 		},
 		requires: {
 			command: 25,

@@ -38,7 +38,7 @@ export default {
       for (let [equipmentId, equipment] of Object.entries(this.equipment)) {
           let equipmentItemId = equipment.itemId;
           if (!equipmentItemId || equipmentItemId != this.itemId) continue;
-          count += equipment.count;
+          count += equipment.count - 1; // -1 prevents negative item bugs
           // No item can be in more than one slot, so we're done.
           break;
       }

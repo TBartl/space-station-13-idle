@@ -41,11 +41,11 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let [itemId, requiredCount] of Object.entries(state.researchBountyItems)) {
 				let count = rootGetters["inventory/bank"][itemId];
 				count = count ? count : 0;
-				// let's reject worn items
+				//also count worn items
 				for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
 					let equipmentItemId = equipment.itemId;
 					if (!equipmentItemId || equipmentItemId != itemId) continue;
-					return "unequip";
+					count += equipment.count - 1; // -1 to prevent negative item bugs
 				}
 				if (count < requiredCount) return false;
 			}
@@ -105,10 +105,7 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			if (hasBounty == false){
 				EventBus.$emit("toast", { text: `You don't have the required items!`, duration: 3000 });
 				return false;
-			} else if(hasBounty == "unequip"){
-				EventBus.$emit("toast", { text: `Unequip the items you want to analyze first!`, duration: 4500 });
-				return false;
-			} 
+			}
 			for (let [itemId, amountToRemove] of Object.entries(state.researchBountyItems)) {
 				commit("inventory/changeItemCount", { itemId, count: -amountToRemove }, { root: true });
 			}

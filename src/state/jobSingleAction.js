@@ -28,7 +28,7 @@ export default {
 					for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
 						let equipmentItemId = equipment.itemId;
 						if (!equipmentItemId || equipmentItemId != itemId) continue;
-						count += equipment.count;
+						count += equipment.count - 1; // minus one prevents negative item bugs
 					}
 					if (count < requiredCount) return false;
 				}
