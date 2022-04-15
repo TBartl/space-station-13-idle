@@ -56,10 +56,10 @@ export const ACTIONS = {
 		requiredLevel: 35
 	},
 	mineAlien: {
-		time: 9,
+		time: 5.25,
 		item: "alienalloy",
 		icon: require("@/assets/art/mining/OreAlien.gif"),
-		xp: 25,
+		xp: 24, // gives a bit more XP than the following/preceding tasks to reward you for researching it early
 		requiredLevel: 35,
 		requiredUpgrade: "alienMining"
 	},

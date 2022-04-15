@@ -28,7 +28,7 @@
 			<p class="chrono" v-if="action.chronoProhibited">Chrono Prohibited</p>
 
       <span v-if="locked" class="danger-bubble text-center mt-1">LEVEL {{action.requiredLevel}}
-        {{action.requiredUpgrade && this.$store.getters['upgrades/get'](action.requiredUpgrade) == 0 ? " (NEEDS RESEARCH) " : ""}}
+        {{needsAbsentUpgrade ? " (NEEDS RESEARCH) " : ""}}
       </span>
 
       <div class="d-flex flex-row align-items-center mt-2">
@@ -107,8 +107,11 @@ export default {
       if(this.level < this.action.requiredLevel || this.needsAbsentUpgrade) return true;
       return false;
     },
-    needsAbsentUpgrade() {
-      return (this.action.requiredUpgrade && !this.$store.getters['upgrades/get'](this.action.requiredUpgrade));
+    needsAbsentUpgrade() { // return true if the upgrade requirement is NOT met
+      if(!this.action.requiredUpgrade) return false;
+      if(this.action.requiredUpgradeTier && this.action.requiredUpgradeTier > this.$store.getters['upgrades/get'](this.action.requiredUpgrade)) return true;
+      if(this.action.requiredUpgrade && !this.$store.getters['upgrades/get'](this.action.requiredUpgrade)) return true;
+      return false;
     },
     hasItems() {
       return this.hasActionRequiredItems(this.actionId);

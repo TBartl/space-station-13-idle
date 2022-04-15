@@ -254,8 +254,7 @@ const ENERGY_AMMO = {
 			count: 16,
 		},
 		requiredItems: {
-			alienalloy: 1,
-			plasma: 2
+			alienalloy: 1
 		}
 	},
 }
@@ -319,8 +318,7 @@ const BALLISTIC_AMMO = {
 			count: 16,
 		},
 		requiredItems: {
-			alienalloy: 1,
-			diamond: 2
+			alienalloy: 1
 		}
 	},
 }

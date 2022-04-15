@@ -103,7 +103,12 @@ export default {
 		tryStartAction({ commit, state, getters, rootState, rootGetters, dispatch }, actionId) {
 			let action = getters.completeActions[actionId];
 			if (getters["level"] < action.requiredLevel) return;
-			if (action.requiredUpgrade && !rootGetters["upgrades/get"](action.requiredUpgrade)) return;
+			if (action.requiredUpgrade){
+				if(!rootGetters["upgrades/get"](action.requiredUpgrade)) return;
+				if(action.requiredUpgradeTier){
+					if(rootGetters["upgrades/get"](action.requiredUpgrade) < action.requiredUpgradeTier) return;
+				}
+			}
 
 			let previousActionId = state.currentActionId;
 			dispatch("cancelAllActions", {}, { root: true });

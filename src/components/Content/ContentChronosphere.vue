@@ -87,7 +87,7 @@
               class="mx--0"
               :src="require('@/assets/art/chrono/bluetime-empty.png')"
             />
-            <b>Equipment</b>.
+            <b>Equipment</b>. Any other methods of getting it would be extremely improbable.
           </span>
           <span>
             If you can manage to take him down and bring me the

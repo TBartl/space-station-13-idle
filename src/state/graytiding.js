@@ -22,11 +22,11 @@ const graytiding = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				action.failure.chance -= GRAYTIDING_UPGRADE_PERCENT * upgradeCount;
 				if (potionItemId == "potionGraytiding") {
-					action.failure.chance -= GRAYTIDING_POTION_PERCENT;
+					action.failure.chance = Math.max(action.failure.chance - GRAYTIDING_POTION_PERCENT, 0);
 				}
 				if(potionItemId == "toolGraytiding") {
 					action.preservePotionOnFail = true;
-					action.failure.chance -= GRAYTIDING_TOOL_PERCENT;
+					action.failure.chance = Math.max(action.failure.chance - GRAYTIDING_TOOL_PERCENT, 0);
 					action.failure.damage -= 3;
 				}
 			}

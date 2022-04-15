@@ -668,5 +668,33 @@ export default {
 				weight: 25
 			},
 		]
+	},
+	susTile: {
+		name: "Loose Floor Tile",
+		description: "What could be underneath it?\nCan be opened",
+		icon: require("@/assets/art/shop/items/susTile.png"),
+		nocomplete: true,
+		itemTables: [
+			{
+				chance: 1,
+				items: {
+					id: 'bluetimeEmpty',
+				}
+			},
+			{
+				chance: 1,
+				items: {
+					id: 'timeNote',
+				}
+			},
+		]
+	},
+	timeNote: {
+		name: "Time Traveller's Note",
+		description: "It reads, \"I'm you from the future. Good job finding my time cache under that floor tile.\
+		 If you're reading this, it means you successfully averted the time paradox, but there's still more work to do next loop! Good luck out there!\"",
+		icon: require("@/assets/art/shop/items/timeNote.png"),
+		nocomplete: true,
+		sellPrice: 10000000
 	}
 }

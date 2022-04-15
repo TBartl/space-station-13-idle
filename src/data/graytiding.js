@@ -13,7 +13,7 @@ const randomJunkTable = [
 	},
 ];
 
-const ACTIONS = {
+const TIDING = {
 	//at 25 xp per action gives approximately 4000 total junk to hit 50.
 	graytideMoney: {
 		name: "Cargo Bay",
@@ -517,17 +517,498 @@ const ACTIONS = {
 	// },
 }
 
-Object.values(ACTIONS).forEach((action, index) => {
-	action.requiredLevel = 1 + index * 2
+const CLEANING = {
+	//at 25 xp per action gives approximately 4000 total junk to hit 50.
+	clean1: {
+		name: "Worker Strike",
+		icon: require("@/assets/art/graytiding/Clean1.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "jumpsuitTinkering",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "jumpsuitScience",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceScience",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "startCult",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox1",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "revParts",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean2: {
+		name: "Brutal Security",
+		icon: require("@/assets/art/graytiding/Clean2.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "jumpsuitFabrication",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "jumpsuitGraytide",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceMedHud",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "neckFanny1",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox2",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "boss1Parts",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	cleanDorms: {
+		name: "Dorm Room 3",
+		icon: require("@/assets/art/graytiding/dorms.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.75,
+				itemTable: [
+					{
+						id: "pillSpacelube",
+						count: [4, 10],
+						weight: 20
+					},
+					{
+						id: "jumpsuitMedical",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "foodMeatH",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "drinkCream",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "oil",
+						count: [2, 6],
+						weight: 20
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "q_foodEvasion1",
+						count: [100, 300],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean3: {
+		name: "Syndicate Nuke Team",
+		icon: require("@/assets/art/graytiding/Clean3.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "jumpsuitChemistry",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceSyndicate",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceSec",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "companionMouse",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox3",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "telecrystal",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean4: {
+		name: "Bloodsworn Cultists",
+		icon: require("@/assets/art/graytiding/Clean4.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "jumpsuitEngineering",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceTiki",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceMeson",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "companionBee",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox4",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "cultParts",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	cleanHall: {
+		name: "Central Primary Hallway",
+		icon: require("@/assets/art/graytiding/Hall.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "jumpsuitBartending",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "jumpsuitCooking",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "jumpsuitBotany",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "companionGoat",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox5",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.05,
+				itemTable: [
+					{
+						id: "bananium",
+						count: [50, 100],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean5: {
+		name: "Rogue Nanotrasen Team",
+		icon: require("@/assets/art/graytiding/Clean5.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "faceMime",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceClown",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceSecGlassess",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "neckFanny2",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "meleeToolbox6",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "ertParts",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean6: {
+		name: "Wizard Fed. \'Diplomats\'",
+		icon: require("@/assets/art/graytiding/Clean6.png"),
+		time: 6,
+		xp: 30,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 0.25,
+				itemTable: [
+					{
+						id: "faceFox",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "faceWrestle",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "companionFox",
+						count: 1,
+						weight: 20
+					},
+					{
+						id: "companionCat",
+						count: 1,
+						weight: 24
+					},
+					{
+						id: "companionDog",
+						count: 1,
+						weight: 36
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "wizParts",
+						count: [1, 3],
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+	clean7: {
+		name: "Bluespace Time Paradox",
+		icon: require("@/assets/art/graytiding/Clean7.png"),
+		time: 6,
+		xp: 30,
+		requiredUpgradeTier: 2,
+		itemTables: [
+			{
+				chance: 1,
+				itemTable: randomJunkTable
+			},
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "tomatoBluespace",
+						count: 10,
+						weight: 20
+					},
+					{
+						id: "bluespace",
+						count: 10,
+						weight: 20
+					},
+					{
+						id: "slimeBluespace",
+						count: 10,
+						weight: 20
+					},
+				]
+			},
+			{
+				chance: 0.01,
+				itemTable: [
+					{
+						id: "susTile",
+						count: 1,
+						weight: 20
+					},
+				]
+			},
+		]
+	},
+}
+
+Object.values(TIDING).forEach((action, index) => {
+	action.actionName = "GRAYTIDE";
+	action.requiredLevel = 1 + index * 2;
 	action.failure = {
 		message: "Apprehended!",
 		chance: .75,
 		damage: Math.floor(5 + index * 1.5)
-	}
+	};
 });
 
-export { ACTIONS }
+Object.values(CLEANING).forEach((action, index) => {
+	action.requiredItems = { pillSpacelube: 4 + index * 2 };
+	if(!action.requiredUpgrade) action.requiredUpgrade = "recipeCleaning";
+	action.actionName = "CLEAN UP AFTER";
+	action.requiredLevel = 26 + index * 3;
+	action.failure = {
+		message: "Slipped!",
+		chance: 1 + index / 10,
+		damage: Math.floor(15 + index * 10)
+	};
+});
 
+Object.values(TIDING).forEach(action => { action.type = "GRAYTIDING" });
+Object.values(CLEANING).forEach(action => { action.type = "\"CLEANING\"" });
+
+export const ACTIONS = {
+	...TIDING,
+	...CLEANING
+}
 export const JOB = {
 	id: "graytiding",
 	name: "Graytiding",
