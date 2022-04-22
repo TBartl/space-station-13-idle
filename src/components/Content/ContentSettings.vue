@@ -110,6 +110,22 @@
               </div>
             </div>
 
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/sidebar/trophy.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="showCompletionLines"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="showCompletionLines"
+                />
+                <label
+                  class="custom-control-label"
+                  for="showCompletionLines"
+                >Underline actions you haven't fully completed yet (may affect performance)</label>
+              </div>
+            </div>
+
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -291,6 +307,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowFullValues", value);
+      }
+    },
+    showCompletionLines: {
+      get() {
+        return this.$store.getters["settings/showCompletionLines"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowCompletionLines", value);
       }
     },
     inventoryFullStop: {
