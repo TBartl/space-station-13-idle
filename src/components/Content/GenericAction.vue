@@ -5,7 +5,8 @@
     @click="tryStartAction(actionId)"
   >
     <div v-if="!visualLocked" class="d-flex flex-column align-items-center">
-      <p class="action-title">{{_actionName}}</p>
+      <div v-if="uncompleted"><u><p class="action-title">{{_actionName}}</p></u></div>
+      <div v-else><p class="action-title">{{_actionName}}</p></div>
       <p class="text-uppercase text-center">{{actionTitle}}</p>
       <p
         class="action-time mt-1 text-center"
@@ -111,6 +112,55 @@ export default {
       if(!this.action.requiredUpgrade) return false;
       if(this.action.requiredUpgradeTier && this.action.requiredUpgradeTier > this.$store.getters['upgrades/get'](this.action.requiredUpgrade)) return true;
       if(this.action.requiredUpgrade && !this.$store.getters['upgrades/get'](this.action.requiredUpgrade)) return true;
+      return false;
+    },
+    uncompleted() { // find items in output and return true if any of them are absent from our completion page
+      if(!this.$store.getters['settings/showCompletionLines']) return false;
+      if(this.action.item){
+        var itemCount = this.$store.getters["completion/getItem"](this.action.item) || 0;
+        if(!itemCount){
+          //console.log("Not enough of "+this.action.item+"! Returning true (1)...");
+          return true; 
+        }
+      } else if(this.action.items){
+        var itemCount = this.$store.getters["completion/getItem"](this.action.items.id) || 0;
+        if(!itemCount){
+          //console.log("Not enough of "+this.action.items.id+"! Returning true (2)...");
+          return true; 
+        }
+      } else if(this.action.itemTable){
+        for (let i = 0; i < this.action.itemTable.length; i++){
+          var itemCount = this.$store.getters["completion/getItem"](this.action.itemTable[i].id) || 0;
+          if(!itemCount){
+            //console.log("Not enough of "+this.action.itemTable[i].id+"! Returning true (3)...");
+            return true; 
+          }
+        }
+      } else if(this.action.itemTables){
+        for (let tables of this.action.itemTables){
+          if(tables.itemTable){
+            for (let subData of tables.itemTable) {
+              var itemCount = this.$store.getters["completion/getItem"](subData.id) || 0;
+              if(!itemCount){
+                //console.log("Not enough of "+subData.id+"! Returning true (4)...");
+                return true; 
+              }
+            }
+          } else if(tables.items){
+            var itemCount = this.$store.getters["completion/getItem"](tables.items.id) || 0;
+            if(!itemCount){
+              //console.log("Not enough of "+tables.items.id+"! Returning true (5)...");
+              return true; 
+            }
+          } else if(tables.item){
+            var itemCount = this.$store.getters["completion/getItem"](tables.item) || 0;
+            if(!itemCount){
+              //console.log("Not enough of "+tables.items+"! Returning true (6)...");
+              return true; 
+            }
+          }
+        }
+      }
       return false;
     },
     hasItems() {

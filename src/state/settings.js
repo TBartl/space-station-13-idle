@@ -5,6 +5,7 @@ const settings = {
 	state: {
 		showVirtualLevels: false,
 		showFullValues: false,
+		showCompletionLines: false,
 		inventoryFullStop: true,
 		pocketsEmptyStop: false,
 		autoEatEnabled: true,
@@ -17,6 +18,9 @@ const settings = {
 		},
 		showFullValues(state) {
 			return state.showFullValues;
+		},
+		showCompletionLines(state) {
+			return state.showCompletionLines;
 		},
 		inventoryFullStop(state) {
 			return state.inventoryFullStop;
@@ -43,6 +47,9 @@ const settings = {
 		},
 		setShowFullValues(state, val) {
 			state.showFullValues = val;
+		},
+		setShowCompletionLines(state, val) {
+			state.showCompletionLines = val;
 		},
 		setInventoryFullStop(state, val) {
 			state.inventoryFullStop = val;
