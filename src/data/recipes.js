@@ -144,7 +144,7 @@ export const RESEARCH_RECIPES_I = {
 		requiredResearchPoints: 750,
 		upgrade: "toolLing",
 		requiredUpgrades: {
-			toolCult: 0
+			toolLing: 0
 		}
 	},
 }
