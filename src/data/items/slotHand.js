@@ -925,7 +925,8 @@ const LINGBRUTE = {
 			evasion: -15,
 			command: -5,
 			precision: 15,
-			power: 20
+			power: 20,
+			regen: 0.3
 		},
 		requires: {
 			meleePower: 25,
