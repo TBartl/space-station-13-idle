@@ -106,7 +106,7 @@
                 <label
                   class="custom-control-label"
                   for="showXPNeeded"
-                >Show XP needed to next level in job headers</label>
+                >Show how much XP is needed to level up in XP bars</label>
               </div>
             </div>
 
