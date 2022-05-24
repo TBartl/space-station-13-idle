@@ -2,7 +2,7 @@
   <div>
     <content-header :text="job.name" :icon="job.icon" :color="job.color" />
     <div class="content-container">
-      <div class="row mb-4">
+      <div class="row mb-4 sticky">
         <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>

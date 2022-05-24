@@ -4,6 +4,7 @@ const settings = {
 	namespaced: true,
 	state: {
 		showVirtualLevels: false,
+		showXPNeeded: false,
 		showFullValues: false,
 		showCompletionLines: false,
 		inventoryFullStop: true,
@@ -15,6 +16,9 @@ const settings = {
 	getters: {
 		showVirtualLevels(state) {
 			return state.showVirtualLevels;
+		},
+		showXPNeeded(state) {
+			return state.showXPNeeded;
 		},
 		showFullValues(state) {
 			return state.showFullValues;
@@ -44,6 +48,9 @@ const settings = {
 	mutations: {
 		setShowVirtualLevels(state, val) {
 			state.showVirtualLevels = val;
+		},
+		setShowXPNeeded(state, val) {
+			state.showXPNeeded = val;
 		},
 		setShowFullValues(state, val) {
 			state.showFullValues = val;

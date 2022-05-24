@@ -95,6 +95,22 @@
             </div>
 
             <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/combat/items/cloak/cloakmining.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="showXPNeeded"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="showXPNeeded"
+                />
+                <label
+                  class="custom-control-label"
+                  for="showXPNeeded"
+                >Show XP needed to next level in job headers</label>
+              </div>
+            </div>
+
+            <div class="d-flex my-1">
               <img class="mx--2 mr-1" :src="require('@/assets/art/botany/seed.png')" />
               <div class="custom-control custom-switch">
                 <input
@@ -299,6 +315,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowVirtualLevels", value);
+      }
+    },
+    showXPNeeded: {
+      get() {
+        return this.$store.getters["settings/showXPNeeded"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowXPNeeded", value);
       }
     },
     showFullValues: {

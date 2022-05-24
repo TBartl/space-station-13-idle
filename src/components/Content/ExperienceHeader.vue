@@ -10,7 +10,8 @@
       </div>
       <div class="d-flex align-items-center">
         <span class="mr-1">XP</span>
-        <span class="p-1 xp rounded">{{Math.round(xp) | cleanNum}}/{{nextLevelXP | cleanNum}}</span>
+        <div v-if="ifShowXPNeeded"><span class="p-1 xp rounded">{{nextLevelXP - Math.round(xp) | cleanNum}} to next level</span></div>
+        <div v-else><span class="p-1 xp rounded">{{Math.round(xp) | cleanNum}}/{{nextLevelXP | cleanNum}}</span></div>
       </div>
     </div>
     <progress-bar style="border-radius: 0 !important" :progress="progress" />
@@ -43,6 +44,9 @@ export default {
         if (!this.$store.getters["settings/showVirtualLevels"])
           level = Math.min(level, MAX_LEVEL);
         return xpFromLevel(level);
+      },
+      ifShowXPNeeded() {
+        return this.$store.getters["settings/showXPNeeded"];
       },
       progress() {
         if (
