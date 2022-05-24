@@ -142,6 +142,22 @@
               </div>
             </div>
 
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/shitposting/ghost.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="hideLockedJobs"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="hideLockedJobs"
+                />
+                <label
+                  class="custom-control-label"
+                  for="hideLockedJobs"
+                >Hide locked jobs from the sidebar</label>
+              </div>
+            </div>
+
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -339,6 +355,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowCompletionLines", value);
+      }
+    },
+    hideLockedJobs: {
+      get() {
+        return this.$store.getters["settings/hideLockedJobs"];
+      },
+      set(value) {
+        this.$store.commit("settings/setHideLockedJobs", value);
       }
     },
     inventoryFullStop: {

@@ -11,7 +11,8 @@ const settings = {
 		pocketsEmptyStop: false,
 		autoEatEnabled: true,
 		chronoPanelEnabled: false,
-		darkMode: false
+		darkMode: false,
+		hideLockedJobs: false
 	},
 	getters: {
 		showVirtualLevels(state) {
@@ -43,6 +44,9 @@ const settings = {
 		},
 		darkModeClass(state) {
 			return state.darkMode ? 'dark-mode' : ''
+		},
+		hideLockedJobs(state) {
+			return state.hideLockedJobs;
 		}
 	},
 	mutations: {
@@ -72,6 +76,9 @@ const settings = {
 		},
 		setDarkMode(state, val) {
 			state.darkMode = val;
+		},
+		setHideLockedJobs(state, val) {
+			state.hideLockedJobs = val;
 		}
 	}
 }
