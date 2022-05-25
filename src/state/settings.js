@@ -11,7 +11,7 @@ const settings = {
 		pocketsEmptyStop: false,
 		autoEatEnabled: true,
 		chronoPanelEnabled: false,
-		darkMode: false,
+		darkMode: true,
 		hideLockedJobs: false
 	},
 	getters: {

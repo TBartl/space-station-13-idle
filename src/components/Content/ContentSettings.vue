@@ -58,7 +58,7 @@
                   class="custom-control-input"
                   id="darkMode"
                 />
-                <label class="custom-control-label" for="darkMode">Dark Mode [EXPERIMENTAL!]</label>
+                <label class="custom-control-label" for="darkMode">Dark Mode</label>
               </div>
             </div>
 
