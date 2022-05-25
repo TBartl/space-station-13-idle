@@ -8,7 +8,7 @@
     <div class="content-container">
 
       <!-- XP bar and chem slot -->
-      <div class="row mb-2">
+      <div class="row mb-4 sticky">
         <div class="col-md-8 col-lg-9 col-xl-10">
           <experience-header :color="job.color" :jobId="jobId" />
         </div>

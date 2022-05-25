@@ -58,7 +58,7 @@
                   class="custom-control-input"
                   id="darkMode"
                 />
-                <label class="custom-control-label" for="darkMode">Dark Mode [EXPERIMENTAL!]</label>
+                <label class="custom-control-label" for="darkMode">Dark Mode</label>
               </div>
             </div>
 
@@ -95,6 +95,22 @@
             </div>
 
             <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/combat/items/cloak/cloakmining.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="showXPNeeded"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="showXPNeeded"
+                />
+                <label
+                  class="custom-control-label"
+                  for="showXPNeeded"
+                >Show how much XP is needed to level up in XP bars</label>
+              </div>
+            </div>
+
+            <div class="d-flex my-1">
               <img class="mx--2 mr-1" :src="require('@/assets/art/botany/seed.png')" />
               <div class="custom-control custom-switch">
                 <input
@@ -123,6 +139,22 @@
                   class="custom-control-label"
                   for="showCompletionLines"
                 >Underline actions you haven't fully completed yet (may affect performance)</label>
+              </div>
+            </div>
+
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/shitposting/ghost.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="hideLockedJobs"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="hideLockedJobs"
+                />
+                <label
+                  class="custom-control-label"
+                  for="hideLockedJobs"
+                >Hide locked jobs from the sidebar</label>
               </div>
             </div>
 
@@ -301,6 +333,14 @@ export default {
         this.$store.commit("settings/setShowVirtualLevels", value);
       }
     },
+    showXPNeeded: {
+      get() {
+        return this.$store.getters["settings/showXPNeeded"];
+      },
+      set(value) {
+        this.$store.commit("settings/setShowXPNeeded", value);
+      }
+    },
     showFullValues: {
       get() {
         return this.$store.getters["settings/showFullValues"];
@@ -315,6 +355,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setShowCompletionLines", value);
+      }
+    },
+    hideLockedJobs: {
+      get() {
+        return this.$store.getters["settings/hideLockedJobs"];
+      },
+      set(value) {
+        this.$store.commit("settings/setHideLockedJobs", value);
       }
     },
     inventoryFullStop: {

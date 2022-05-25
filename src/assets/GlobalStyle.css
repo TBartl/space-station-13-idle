@@ -291,6 +291,14 @@ img {
   background-color: rgb(61, 61, 61) !important;
 }
 
+/* Sticks elements to the top of the page as you scroll down and renders them over other elements */
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 9;
+}
+
 /* I've lost control of my life */
 .shitposting {
 	font-family: "Comic Sans MS", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;

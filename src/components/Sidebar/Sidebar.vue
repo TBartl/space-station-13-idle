@@ -110,10 +110,18 @@ export default {
       return `v${process.env.PACKAGE_VERSION}`;
     },
     nonCombatJobs() {
-      return ALL_JOBS.filter(job => !job.isCombat);
+      if(!this.$store.getters["settings/hideLockedJobs"]){
+        return ALL_JOBS.filter(job => !job.isCombat);
+      } else {
+        return ALL_JOBS.filter(job => !job.isCombat).filter(job => !this.checkJobLocked(job));
+      }
     },
     combatJobs() {
-      return ALL_JOBS.filter(job => job.isCombat);
+      if(!this.$store.getters["settings/hideLockedJobs"]){
+        return ALL_JOBS.filter(job => job.isCombat);
+      } else {
+        return ALL_JOBS.filter(job => job.isCombat).filter(job => !this.checkJobLocked(job));
+      }
     },
     playerHealth() {
       return Math.round(this.$store.getters["playerMob/health"]);

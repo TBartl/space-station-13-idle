@@ -4,17 +4,22 @@ const settings = {
 	namespaced: true,
 	state: {
 		showVirtualLevels: false,
+		showXPNeeded: false,
 		showFullValues: false,
 		showCompletionLines: false,
 		inventoryFullStop: true,
 		pocketsEmptyStop: false,
 		autoEatEnabled: true,
 		chronoPanelEnabled: false,
-		darkMode: false
+		darkMode: true,
+		hideLockedJobs: false
 	},
 	getters: {
 		showVirtualLevels(state) {
 			return state.showVirtualLevels;
+		},
+		showXPNeeded(state) {
+			return state.showXPNeeded;
 		},
 		showFullValues(state) {
 			return state.showFullValues;
@@ -39,11 +44,17 @@ const settings = {
 		},
 		darkModeClass(state) {
 			return state.darkMode ? 'dark-mode' : ''
+		},
+		hideLockedJobs(state) {
+			return state.hideLockedJobs;
 		}
 	},
 	mutations: {
 		setShowVirtualLevels(state, val) {
 			state.showVirtualLevels = val;
+		},
+		setShowXPNeeded(state, val) {
+			state.showXPNeeded = val;
 		},
 		setShowFullValues(state, val) {
 			state.showFullValues = val;
@@ -65,6 +76,9 @@ const settings = {
 		},
 		setDarkMode(state, val) {
 			state.darkMode = val;
+		},
+		setHideLockedJobs(state, val) {
+			state.hideLockedJobs = val;
 		}
 	}
 }
