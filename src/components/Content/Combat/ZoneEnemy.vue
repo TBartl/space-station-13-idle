@@ -14,7 +14,8 @@
         </div>
       </b-popover>
       <div class="d-flex flex-column">
-        <span class="name">{{enemy.name}}</span>
+        <span v-if="uncompleted" class="name"><u>{{enemy.name}}</u></span>
+        <span v-else class="name">{{enemy.name}}</span>
         <div class="robustness">
           <robustness-badge
             class="mt-1"
@@ -91,6 +92,12 @@ export default {
     },
     validhuntingXP() {
       return this.$store.getters["validhunting/xpReward"];
+    },
+    uncompleted() {
+      if(!this.$store.getters['settings/showCompletionLines']) return false;
+      let killTally = this.$store.getters["completion/getEnemy"](this.enemyId) || 0;
+      if(!killTally) return true;
+      return false;
     }
   },
   methods: {

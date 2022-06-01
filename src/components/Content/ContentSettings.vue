@@ -138,7 +138,7 @@
                 <label
                   class="custom-control-label"
                   for="showCompletionLines"
-                >Underline actions you haven't fully completed yet (may affect performance)</label>
+                >Underline actions/fights you haven't fully completed yet (may affect performance)</label>
               </div>
             </div>
 
