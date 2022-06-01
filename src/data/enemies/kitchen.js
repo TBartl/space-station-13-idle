@@ -38,6 +38,7 @@ export default {
 	},
 	bartender: {
 		name: "Skrell Bartender",
+		desc: "Into the rage cage, pal.",
 		icon: require("@/assets/art/combat/enemies/shrellbartender.png"),
 		stats: {
 			maxHealth: 210,
@@ -100,6 +101,8 @@ export default {
 	},
 	cannibal: {
 		name: "Soylent Green Chef",
+		desc: "You will make-a for molto bene prosciutto!",
+		verb: "exclaims",
 		icon: require("@/assets/art/combat/enemies/badchef.png"),
 		stats: {
 			maxHealth: 200,
@@ -141,6 +144,8 @@ export default {
 	},
 	botanist: {
 		name: "Botanist",
+		desc: "Space weed is fine, but I'm really into botany for the death nettle.",
+		verb: "flutters",
 		icon: require("@/assets/art/combat/enemies/botanist.png"),
 		stats: {
 			maxHealth: 210,

@@ -176,7 +176,7 @@ const combat = {
 			dispatch("enemyMob/startCombat", {}, { root: true });
 		},
 		_startMove({ dispatch, rootGetters }) {
-			let duration = rootGetters["playerMob/stats"].moveTime;
+			let duration = Math.max(rootGetters["playerMob/stats"].moveTime, 0.1);
 			dispatch("moveCoroutine/start",
 				{
 					duration: duration,

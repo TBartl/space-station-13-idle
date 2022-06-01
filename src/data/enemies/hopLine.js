@@ -29,7 +29,8 @@ export default {
 		]
 	},
 	paperworkhop: {
-		name: "Head Of Personnel",
+		name: "Head of Personnel",
+		desc: "Papers, please.",
 		icon: require("@/assets/art/combat/enemies/goodhop.png"),
 		stats: {
 			maxHealth: 70,
@@ -75,6 +76,7 @@ export default {
 	},
 	hopcurity: {
 		name: "Self Declared Head of GUNS",
+		desc: "Cargonia was right about these things after all.",
 		icon: require("@/assets/art/combat/enemies/hoGUN.png"),
 		stats: {
 			maxHealth: 80,
@@ -124,6 +126,8 @@ export default {
 	},
 	plasmarobo: {
 		name: "Plasmaperson Roboticist",
+		desc: "You've tipped over your last medibot.",
+		verb: "rattles",
 		icon: require("@/assets/art/combat/enemies/plasmarobo.png"),
 		stats: {
 			maxHealth: 100,

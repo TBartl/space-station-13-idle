@@ -912,7 +912,7 @@ const GBULLET = {
 		}
 	},
 }
-const LINGBRUTE = {
+const SPECIALBRUTE = {
 	lingBrute1: {
 		name: "Armblade",
 		sellPrice: 2500,
@@ -934,7 +934,33 @@ const LINGBRUTE = {
 			evasion: 25
 		}
 	},
+
+	//stats identical to Jackhammer but attacks slower and requires different skills/a mech. gives mining XP bonus
+	mechMining: {
+		name: "Mech Mounted Mining Drill",
+		description: "+20% Mining XP",
+		restrictions: ["mech"],
+		sellPrice: 300,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/combat/items/hand/mech_drill.png"),
+		stats: {
+			attackSpeed: 5,
+			maxHealth: 40,
+			evasion: -10,
+			precision: 14,
+			power: 24
+		},
+		requires: {
+			fabrication: 25,
+			mining: 25,
+			meleePower: 25
+		},
+		xpBonuses: {
+			mining: 20
+		}
+	}
 }
+
 // 	mechGunEnergyRifle: {
 // 		name: "Mech Energy Rifle",
 // 		sellPrice: 0,
@@ -1071,7 +1097,7 @@ const WEAPONS = {
 	...MSHIELD,
 	...GENERGY,
 	...GBULLET,
-	...LINGBRUTE
+	...SPECIALBRUTE
 }
 
 Object.values(WEAPONS).forEach(weapon => {

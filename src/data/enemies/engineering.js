@@ -39,6 +39,7 @@ export default {
 	},
 	flamingatmostech: {
 		name: "Wannabe Pyromancer Atmospheric Technician",
+		desc: "I may have slightly miscalculated the potency of my burn mix.",
 		icon: require("@/assets/art/combat/enemies/atmos.gif"),
 		stats: {
 			maxHealth: 120,
@@ -90,6 +91,7 @@ export default {
 	},
 	goodengineer: {
 		name: "Responsible Engineer",
+		desc: "Out of the way, I'm heading to solars.",
 		icon: require("@/assets/art/combat/enemies/badengie.png"),
 		stats: {
 			maxHealth: 130,
@@ -145,6 +147,8 @@ export default {
 	},
 	badengineer: {
 		name: "Fusion Engineer",
+		desc: "I'VE GONE MAD WITH POWER!!",
+		verb: "yells",
 		icon: require("@/assets/art/combat/enemies/fusion.png"),
 		stats: {
 			maxHealth: 140,

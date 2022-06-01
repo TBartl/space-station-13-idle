@@ -1,6 +1,8 @@
 export default {
 	bee: {
 		name: "Bee",
+		desc: "Bzzzz...",
+		verb: "buzzes",
 		icon: require("@/assets/art/combat/enemies/bee_anim.gif"),
 		stats: {
 			maxHealth: 50,
@@ -34,6 +36,8 @@ export default {
 	},
 	mime: {
 		name: ".....",
+		desc: "...",
+		verb: "points a finger gun at you and says",
 		icon: require("@/assets/art/combat/enemies/mime.png"),
 		stats: {
 			maxHealth: 160,
@@ -79,6 +83,7 @@ export default {
 	},
 	badclown: {
 		name: "Shoeless Clown",
+		desc: "Banana peels primed. Let's hunt some valids.",
 		icon: require("@/assets/art/combat/enemies/badclown.png"),
 		stats: {
 			maxHealth: 170,
@@ -111,6 +116,8 @@ export default {
 	},
 	goodclown: {
 		name: "Actually Funny Clown",
+		desc: "A man walks into a bar. CLANG!",//immovable rod joke
+		verb: "exclaims",
 		icon: require("@/assets/art/combat/enemies/goodclown.png"),
 		stats: {
 			maxHealth: 180,

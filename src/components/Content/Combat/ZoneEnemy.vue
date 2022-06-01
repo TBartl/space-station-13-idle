@@ -3,7 +3,16 @@
     class="content-block enemy p-1 d-flex flex-column flex-md-row align-items-center justify-content-between"
   >
     <div class="d-flex flex-column flex-md-row align-items-center">
-      <img :src="enemy.icon" class="mr-2" alt />
+      <img
+        :src="enemy.icon"
+        :id="enemy.name+'TalkTag'"
+        class="mr-2" alt
+      />
+      <b-popover :target="enemy.name+'TalkTag'" triggers="hover" placement="top" delay="0" :customClass="$store.getters['settings/darkModeClass']">
+        <div v-if="enemy.desc" class="focus-text d-flex flex-column align-items-center">
+          <p class="text-center"><b>{{enemy.name}}</b> {{enemy.verb ? enemy.verb : "says"}}, "{{enemy.desc}}"</p>
+        </div>
+      </b-popover>
       <div class="d-flex flex-column">
         <span class="name">{{enemy.name}}</span>
         <div class="robustness">

@@ -1,6 +1,8 @@
 export default {
 	monkey: {
 		name: "Infected Monkey",
+		desc: "Ook.",
+		verb: "chimpers",
 		icon: require("@/assets/art/combat/enemies/monkey.png"),
 		stats: {
 			maxHealth: 310,
@@ -128,6 +130,8 @@ export default {
 	},
 	gorilla: {
 		name: "Gorilla",
+		desc: "OO AA OO!!",
+		verb: "yells",
 		icon: require("@/assets/art/combat/enemies/gorilla.png"),
 		stats: {
 			maxHealth: 330,

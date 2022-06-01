@@ -313,6 +313,23 @@ const COMPANIONS = {
 			evasion: 25,
 		}
 	},
+	companionBoH: {
+		name: "Bag of Holding",
+		description: "WARNING: DO NOT PLACE INTO ANOTHER BAG OF HOLDING.",
+		sellPrice: 150,
+		icon: require("@/assets/art/combat/items/boh.gif"),
+		tier: 0,
+		forceFleeChance: true,
+		fleeChance: 0,
+		stats: {
+			regen: -0.2,
+			luck: -5,
+			precision: 1,
+			evasion: 1,
+			power: 1,
+			moveTime: -3
+		}
+	},
 	companionMousecult: {
 		name: "Proteon",
 		sellPrice: 1000,
@@ -448,7 +465,7 @@ Object.values(SLIMES).forEach((slime, index) => {
 Object.values(COMPANIONS).forEach((companion) => {
 	companion.noCore = true; // Prevents companion pets from having a slime core generated for them, see resourceXenobiology.js
 	companion.equipmentSlot = "companion";
-	companion.fleeChance = 10 + companion.tier * 10;
+	if(!companion.forceFleeChance) companion.fleeChance = 10 + companion.tier * 10;
 });
 
 export default {

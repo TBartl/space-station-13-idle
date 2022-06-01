@@ -3,6 +3,7 @@ import jobBase from '@/state/jobBase';
 import ENEMIES from "@/data/enemies";
 import { calcRobustness } from "@/utils/combatUtils";
 import ModalValidhuntingComplete from '@/components/Modals/ModalValidhuntingComplete';
+import ITEMS from "@/data/items";
 
 const validhunting = merge(cloneDeep(jobBase), {
 	state: {
@@ -17,8 +18,21 @@ const validhunting = merge(cloneDeep(jobBase), {
 		targetCount(state) {
 			return state.count;
 		},
-		xpReward(state) {
-			return state.xpReward;
+		jobId() {
+			return "validhunting";
+		},
+		xpReward(state, getters, rootState, rootGetters) {
+			let xpBonus = 1;
+			for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+				let itemId = equipment.itemId;
+				if (!itemId || rootGetters["inventory/checkRestricted"](itemId)) continue;
+				let item = ITEMS[itemId];
+				if (item.xpBonuses) {
+					let bonus = item.xpBonuses[getters["jobId"]];
+					if (bonus) xpBonus += (bonus/100);
+				}
+			}
+			return (state.xpReward * xpBonus);
 		}
 	},
 	mutations: {
@@ -45,13 +59,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 		},
 		completeTask({ state, commit, getters, rootGetters }, cheat) {
 			if (!cheat && state.count > 0) return;
-			let xpFactor = 1;
-			if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitSecurity') {
-				xpFactor = 1.2;
-			} else if (rootGetters["inventory/equipment"].jumpsuit.itemId == 'jumpsuitChameleon') {
-				xpFactor = 1.3;
-			}
-			commit("addXP", state.xpReward * xpFactor);
+			commit("addXP", getters["xpReward"]);
 			// Get a new task
 			let minCount = 10;
 			let maxAddedCount = minCount + getters.level * 2;

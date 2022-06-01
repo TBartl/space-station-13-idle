@@ -31,7 +31,7 @@
       class="mt-1 black-background"
       :progress="moveProgress"
       :customClass="'bg-success'"
-      :text="`Move Speed: ${moveTime.toFixed(1)}s`"
+      :text="`Move Speed: ${Math.max(0.1, moveTime).toFixed(1)}s`"
     />
 
     <div v-if="moveProgress && mobType == 'enemy'" class="fake-bar mt-2"></div>

@@ -46,6 +46,7 @@ export default {
 	},
 	techpriest: {
 		name: "Techpriest Roboticist",
+		desc: "There is no strength in flesh, only weakness.",
 		icon: require("@/assets/art/combat/enemies/techpriest.png"),
 		stats: {
 			maxHealth: 360,
@@ -100,6 +101,7 @@ export default {
 	},
 	mech: {
 		name: "Mech Building Roboticist",
+		desc: "All systems: Nominal.",
 		icon: require("@/assets/art/combat/enemies/mechbuild.png"),
 		stats: {
 			maxHealth: 350,

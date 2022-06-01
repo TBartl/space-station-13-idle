@@ -85,6 +85,19 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 		},
 		locked(state, getters, rootState, rootGetters) {
 			return !rootGetters["upgrades/get"]("researchUnlocked");
+		},
+		levelsReward(state, getters, rootState, rootGetters){
+			let xpBonus = 1;
+			for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
+				let itemId = equipment.itemId;
+				if (!itemId || rootGetters["inventory/checkRestricted"](itemId)) continue;
+				let item = ITEMS[itemId];
+				if (item.xpBonuses) {
+					let bonus = item.xpBonuses[getters["jobId"]];
+					if (bonus) xpBonus += (bonus/100);
+				}
+			}
+			return (2 * xpBonus);
 		}
 	},
 	mutations: {
@@ -110,7 +123,7 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 				commit("inventory/changeItemCount", { itemId, count: -amountToRemove }, { root: true });
 			}
 			dispatch("addToPoints", state.pointsReward);
-			dispatch("changeLevel", 2);
+			dispatch("changeLevel", getters["levelsReward"]);
 			EventBus.$emit("toast", { text: `Analysis successful!`, duration: 3000 });
 			dispatch("rollNewBounty");
 		},

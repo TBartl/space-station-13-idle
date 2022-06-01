@@ -41,6 +41,11 @@ export default [
 		enemies: ["surgeon", "runtime", "cluelessdoctor", "hulk"]
 	},
 	{
+		name: "Research",
+		icon: require("@/assets/art/combat/zones/research.png"),
+		enemies: ["toxinsScientist", "drunkScientist", "bohBomber", "newMiner"]
+	},
+	{
 		name: "Bridge",
 		icon: require("@/assets/art/combat/zones/bridge.png"),
 		enemies: ["renault", "axeassistant", "captain", "locker"]
