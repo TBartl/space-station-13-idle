@@ -14,7 +14,8 @@ const chrono = {
 		remainingTime: 0,
 		currentTimeout: 0,
 		lastLogoutTime: 0,
-		lastGain: 0
+		lastGain: 0,
+		lastExport: 0
 	},
 	getters: {
 		defaultSpeeds() {
@@ -91,6 +92,12 @@ const chrono = {
 				if (x <= rootGetters["completion/jobPercent"]) sum += 1;
 			});
 			return sum;
+		},
+		//returns true if it has been >=23 hours since you last exported your save
+		oldExport(state, getters, rootState, rootGetters){
+			let hours = parseInt((state.lastExport / (1000 * 60 * 60)));
+			if(hours >= 23) return true;
+			return false;
 		}
 	},
 	mutations: {
@@ -101,7 +108,6 @@ const chrono = {
 			state.remainingTime += val;
 			state.remainingTime = Math.max(state.remainingTime, 0);
 			state.remainingTime = Math.min(state.remainingTime, this.getters["chrono/maxDuration"]);
-
 		}
 	},
 	actions: {
@@ -135,7 +141,12 @@ const chrono = {
 			if (!state.lastLogoutTime) return;
 			let elapsedTime = new Date().getTime() - state.lastLogoutTime;
 			state.lastGain = elapsedTime;
+			state.lastExport = Math.min(elapsedTime + state.lastExport, Number.MAX_VALUE);
 			commit("addTime", elapsedTime);
+		},
+		resetLastExport({ state, getters, commit }){
+			state.lastExport = 0;
+			commit("addTime", 1800000); // 30 minutes
 		},
 		resetSimulation({ getters, commit, dispatch }) {
 			let resetPotential = getters["resetPotential"];

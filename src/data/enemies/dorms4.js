@@ -1,7 +1,7 @@
 export default {
 	catgirl: {
 		name: "Catboy",
-		desc: "I hope that's not be a gun in your pocket... OwO",//banned! banned!!!!!
+		desc: "I hope that's not a gun in your pocket... OwO",//banned! banned!!!!!
 		icon: require("@/assets/art/combat/enemies/catgirl.png"),
 		stats: {
 			maxHealth: 90,
@@ -137,7 +137,7 @@ export default {
 	},
 chemist: {
 		name: "Wandering Chemist",
-		desc: "Hey, you! Wanna try my unlabelled pills?",
+		desc: "Hey, you! Wanna try my unlabeled pills?",
 		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/chemist.png"),
 		stats: {
