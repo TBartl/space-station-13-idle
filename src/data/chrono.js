@@ -186,6 +186,21 @@ const BASE_PURCHASES = {
 		requiredUpgrades: {
 			timeBankAutoPause: 0
 		}
+	},
+	chronoCombatRoll: {
+		name: "+1 Validhunting Reroll",
+		description: "Allows you to reroll your validhunting bounty +1 time per successful bounty.",
+		icon: require('@/assets/art/chrono/4dd6.png'),
+		requiredItems: {
+			bluetime: 3
+		},
+		upgrade: "chronoCombatRoll",
+		requiredUpgrades: {
+			chronoCombatRoll: 0
+		},
+		onPurchase(store) {
+			store.dispatch(`validhunting/refreshRerolls`, 1, { root: true });
+		}
 	}
 }
 
@@ -230,8 +245,8 @@ export const SECTIONS = [
 		purchases: ["chronoToCash", "chronoToTime", "timeToCash1", "timeToCash2", "antagRoll1", "antagRoll2", "antagRoll3", "antagRoll4"]
 	},
 	{
-		name: "Time Bank Upgrades",
-		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2", "timeBankAutoPause"]
+		name: "Upgrades",
+		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2", "timeBankAutoPause", "chronoCombatRoll"]
 	},
 	{
 		name: "Job Blitz",

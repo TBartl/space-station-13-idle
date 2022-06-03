@@ -225,6 +225,24 @@ export const COMBAT_UPGRADES = {
 		requiredLevels: {
 			validhunting: 35
 		}
+	},
+	cargoCombatRoll: {
+		name: "+1 Validhunting Reroll",
+		description: "Allows you to reroll your validhunting bounty +1 time per successful bounty.",
+		icon: require('@/assets/art/combat/upgrades/d20.png'),
+		requiredItems: {
+			money: 200000 // compare this + level requirement to chrono shops version that costs 3 bluespace time
+		},
+		upgrade: "cargoCombatRoll",
+		requiredUpgrades: {
+			cargoCombatRoll: 0
+		},
+		requiredLevels: {
+			validhunting: 25
+		},
+		onPurchase(store) {
+			store.dispatch(`validhunting/refreshRerolls`, 1, { root: true });
+		}
 	}
 }
 
