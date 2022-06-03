@@ -40,7 +40,31 @@ const BASE_PURCHASES = {
 		},
 		onPurchase(store) {
 			store.commit(`chrono/addTime`, 25 * 60 * 1000, { root: true });
-			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time Gained!`, duration: 2500 });
+			EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time gained!`, duration: 2500 });
+		}
+	},
+	timeToCash1: {
+		name: "Unlock Time Selling",
+		description: "Unlock the ability to sell banked time",
+		icon: require('@/assets/art/chrono/timemoneyLock.png'),
+		requiredItems: {
+			bluetime: 3
+		},
+		upgrade: "timeToCash",
+		requiredUpgrades: {
+			timeToCash: 0
+		}
+	},
+	timeToCash2: {
+		name: "Sell Time",
+		description: "Lose 1 hour of banked Chrono time. Gain $25,000",
+		icon: require('@/assets/art/chrono/timemoney.png'),
+		requiredUpgrades: {
+			timeToCash: 1
+		},
+		otherText: "Hour x1",
+		onPurchase(store) {
+			store.dispatch(`chrono/sellTime`, {}, { root: true });
 		}
 	},
 	antagRoll1: {
@@ -203,7 +227,7 @@ ALL_JOBS.forEach(job => {
 export const SECTIONS = [
 	{
 		name: "Chrono Exchange",
-		purchases: ["chronoToCash", "chronoToTime", "antagRoll1", "antagRoll2", "antagRoll3", "antagRoll4"]
+		purchases: ["chronoToCash", "chronoToTime", "timeToCash1", "timeToCash2", "antagRoll1", "antagRoll2", "antagRoll3", "antagRoll4"]
 	},
 	{
 		name: "Time Bank Upgrades",

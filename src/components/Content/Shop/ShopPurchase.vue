@@ -52,6 +52,11 @@
         class="d-flex flex-row align-items-center mr-1">
           <span><img :src="require('@/assets/art/research/researchIcon.png')" />x{{purchase.requiredResearchPoints}}</span>
         </div>
+        <div 
+        v-if=purchase.otherText
+        class="d-flex flex-row align-items-center mr-1">
+          <span>{{purchase.otherText}}</span>
+        </div>
       </div>
     </div>
   </div>
