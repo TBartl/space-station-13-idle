@@ -542,9 +542,9 @@ const TICKETS = {
 		fightZone: "Wizard Federation 'Diplomats'"
 	},
 	bossTicketReset: {
-		name: "Place bags of holdings inside each other",
+		name: "Create a reality disruption",
 		description: "On purchase, starts a fight with this boss.",
-		icon: require("@/assets/art/shop/items/tickettear.gif"),
+		icon: require("@/assets/art/combat/items/boh.gif"),
 		requiredItems: {
 			bluespace: 8,
 			tomatoBluespace: 8,

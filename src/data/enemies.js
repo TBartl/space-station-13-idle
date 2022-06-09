@@ -2,7 +2,7 @@ import { calcRobustness } from "@/utils/combatUtils";
 
 import aiCore from "./enemies/aiCore.js";
 import arrivalLounge from "./enemies/arrivalLounge.js";
-import research from "./enemies/research.js";
+import robotics from "./enemies/robotics.js";
 import bridge from "./enemies/bridge.js";
 import dorms4 from "./enemies/dorms4.js";
 import engineering from "./enemies/engineering.js";
@@ -50,7 +50,7 @@ const ENEMIES = {
 	...kitchen,
 	...medical,
 	...bridge,
-	...research,
+	...robotics,
 	...virology,
 	...science,
 	...aiCore,

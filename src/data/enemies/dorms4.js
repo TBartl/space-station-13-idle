@@ -1,7 +1,7 @@
 export default {
 	catgirl: {
 		name: "Catboy",
-		desc: "I hope that's not a gun in your pocket... OwO",//banned! banned!!!!!
+		desc: "I hope that's not a gun in your pocket...",//banned!
 		icon: require("@/assets/art/combat/enemies/catgirl.png"),
 		stats: {
 			maxHealth: 90,
