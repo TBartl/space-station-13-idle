@@ -41,6 +41,11 @@ export default [
 		enemies: ["surgeon", "runtime", "cluelessdoctor", "hulk"]
 	},
 	{
+		name: "Science",
+		icon: require("@/assets/art/combat/zones/research.png"),
+		enemies: ["toxinsScientist", "drunkScientist", "bohBomber", "newMiner"]
+	},
+	{
 		name: "Bridge",
 		icon: require("@/assets/art/combat/zones/bridge.png"),
 		enemies: ["renault", "axeassistant", "captain", "locker"]
@@ -51,7 +56,7 @@ export default [
 		enemies: ["monkey", "afkviro", "gorilla", "movingviro"]
 	},
 	{
-		name: "Science",
+		name: "Robotics",
 		icon: require("@/assets/art/combat/zones/robotics.png"),
 		enemies: ["mech", "techpriest", "minibot", "ayyyyy"]
 	},

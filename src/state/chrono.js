@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { EventBus } from "@/utils/eventBus.js";
 
 import {
 	BASE_BONUS,
@@ -14,7 +15,8 @@ const chrono = {
 		remainingTime: 0,
 		currentTimeout: 0,
 		lastLogoutTime: 0,
-		lastGain: 0
+		lastGain: 0,
+		lastExport: 0
 	},
 	getters: {
 		defaultSpeeds() {
@@ -91,6 +93,12 @@ const chrono = {
 				if (x <= rootGetters["completion/jobPercent"]) sum += 1;
 			});
 			return sum;
+		},
+		//returns true if it has been >=23 hours since you last exported your save
+		oldExport(state, getters, rootState, rootGetters){
+			let hours = parseInt((state.lastExport / (1000 * 60 * 60)));
+			if(hours >= 23) return true;
+			return false;
 		}
 	},
 	mutations: {
@@ -101,7 +109,6 @@ const chrono = {
 			state.remainingTime += val;
 			state.remainingTime = Math.max(state.remainingTime, 0);
 			state.remainingTime = Math.min(state.remainingTime, this.getters["chrono/maxDuration"]);
-
 		}
 	},
 	actions: {
@@ -135,7 +142,21 @@ const chrono = {
 			if (!state.lastLogoutTime) return;
 			let elapsedTime = new Date().getTime() - state.lastLogoutTime;
 			state.lastGain = elapsedTime;
+			state.lastExport = Math.min(elapsedTime + state.lastExport, Number.MAX_VALUE);
 			commit("addTime", elapsedTime);
+		},
+		resetLastExport({ state, getters, commit }){
+			state.lastExport = 0;
+			commit("addTime", 1800000); // 30 minutes
+		},
+		sellTime({ state, getters, dispatch, rootGetters, commit }) {
+			if(getters["remainingTime"] > 1 * 60 * 60 * 1000){
+				commit(`chrono/addTime`, -1 * 60 * 60 * 1000, { root: true });
+				commit("inventory/changeItemCount", { itemId: "money", count: 25000 }, { root: true });
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time sold!`, duration: 2500 });
+			} else {
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Not enough time...`, duration: 2500 });
+			}
 		},
 		resetSimulation({ getters, commit, dispatch }) {
 			let resetPotential = getters["resetPotential"];

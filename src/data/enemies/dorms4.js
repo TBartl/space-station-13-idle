@@ -1,6 +1,7 @@
 export default {
 	catgirl: {
 		name: "Catboy",
+		desc: "I hope that's not a gun in your pocket...",//banned!
 		icon: require("@/assets/art/combat/enemies/catgirl.png"),
 		stats: {
 			maxHealth: 90,
@@ -49,6 +50,7 @@ export default {
 	},
 	traitor: {
 		name: "Unprepared Traitor",
+		desc: "Hypothetically, how would one unlock an uplink? Asking for a friend.",
 		icon: require("@/assets/art/combat/enemies/tot.png"),
 		stats: {
 			maxHealth: 100,
@@ -135,6 +137,8 @@ export default {
 	},
 chemist: {
 		name: "Wandering Chemist",
+		desc: "Hey, you! Wanna try my unlabeled pills?",
+		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/chemist.png"),
 		stats: {
 			maxHealth: 110,

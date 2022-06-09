@@ -193,11 +193,30 @@ export default {
 		stats: {
 			maxHealth: 50,
 			evasion: 3,
-			precision:5
+			precision: 5
 		},
 		description: "+20% Bartending XP",
 		xpBonuses: {
 			bartending: 20
+		},
+		requires: {
+			evasion: 5
+		}
+	},
+	jumpsuitResearch: {
+		name: "R&D Jumpsuit",
+		sellPrice: 300,
+		equipmentSlot: "jumpsuit",
+		icon: require("@/assets/art/combat/items/jumpsuit_research.png"),
+		overlay: require("@/assets/art/combat/items/jumpsuit_research_overlay.png"),
+		stats: {
+			maxHealth: 50,
+			evasion: 3,
+			precision: 5
+		},
+		description: "+20% R&D XP",
+		xpBonuses: {
+			research: 20
 		},
 		requires: {
 			evasion: 5
@@ -260,6 +279,7 @@ export default {
 			mining: 30,
 			engineering: 30,
 			fabrication: 30,
+			research: 30,
 			graytiding: 30,
 			tinkering: 30,
 			botany: 30,

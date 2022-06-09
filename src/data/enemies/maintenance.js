@@ -40,6 +40,8 @@ export default {
 	},
 	lostscientist: {
 		name: "Lost Scientist",
+		desc: "Hello? Could you get me out of maint?",
+		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/science.png"),
 		stats: {
 			maxHealth: 45,
@@ -104,6 +106,8 @@ export default {
 	},
 	cargoTech: {
 		name: "Cargo Technician",
+		desc: "Hey, hey! I call dibs on that crate!",
+		verb: "exclaims",
 		icon: require("@/assets/art/combat/enemies/cargo_tech.png"),
 		stats: {
 			maxHealth: 60,
@@ -157,6 +161,7 @@ export default {
 	},
 	fugitive: {
 		name: "Fugitive",
+		desc: "Gimmie your ID, I need a new one.",
 		icon: require("@/assets/art/combat/enemies/troublemaker.png"),
 		stats: {
 			maxHealth: 70,

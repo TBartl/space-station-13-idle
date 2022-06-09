@@ -1,6 +1,7 @@
 export default {
 	securitybot: {
 		name: "Security Bot",
+		desc: "Criminal detected.",
 		icon: require("@/assets/art/combat/enemies/secbot.png"),
 		stats: {
 			maxHealth: 380,
@@ -71,6 +72,8 @@ export default {
 	},
 	drone: {
 		name: "Unsynced Maintenance Drone",
+		desc: "Free drone!",
+		verb: "exclaims",
 		icon: require("@/assets/art/combat/enemies/drone.png"),
 		stats: {
 			maxHealth: 370,
@@ -191,6 +194,8 @@ export default {
 	},
 	AI: {
 		name: "AI",
+		desc: "Everybody get up, it's time to slam now...",
+		verb: "sings",
 		icon: require("@/assets/art/combat/enemies/ai_anim.gif"),
 		stats: {
 			maxHealth: 1337,

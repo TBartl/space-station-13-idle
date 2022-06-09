@@ -1,6 +1,8 @@
 export default {
 	axeassistant: {
 		name: "Window Breaking Assistant",
+		desc: "GRAYTIDE STATION WIDE!!",
+		verb: "yells",
 		icon: require("@/assets/art/combat/enemies/badassistant.png"),
 		stats: {
 			maxHealth: 290,
@@ -47,6 +49,8 @@ export default {
 	},
 	captain: {
 		name: "Captain",
+		desc: "I am NOT a COMDOM!!",//[sic]
+		verb: "yells",
 		icon: require("@/assets/art/combat/enemies/captain.png"),
 		stats: {
 			maxHealth: 300,
@@ -126,6 +130,8 @@ export default {
 	},
 	locker: {
 		name: "Captain's Locker",
+		desc: "...Hello? Can someone let me out of this thing?",
+		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/locker.png"),
 		stats: {
 			maxHealth: 500,

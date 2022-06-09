@@ -13,7 +13,7 @@
         />
     </div>
     <div>
-      <span class="mr-1 bounty-desc">Reward: 2 levels of</span>
+      <span class="mr-1 bounty-desc">Reward: {{levelsReward | cleanNum}} levels of</span>
       <img :src="researchIcon" class="importantimg"/>
       <span>XP + </span>
       <span>{{researchPointsReward | cleanNum}}</span>
@@ -58,8 +58,8 @@ export default {
     bountyItemsList() {
       return this.$store.getters["research/researchBountyItems"];
     },
-    researchXPReward() {
-      return this.$store.getters["research/xpReward"];
+    levelsReward() {
+      return this.$store.getters["research/levelsReward"];
     },
     researchPointsReward() {
       return this.$store.getters["research/pointsReward"];

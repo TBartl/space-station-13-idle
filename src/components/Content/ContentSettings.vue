@@ -138,7 +138,7 @@
                 <label
                   class="custom-control-label"
                   for="showCompletionLines"
-                >Underline actions you haven't fully completed yet (may affect performance)</label>
+                >Underline actions/fights you haven't fully completed yet (may affect performance)</label>
               </div>
             </div>
 
@@ -433,6 +433,10 @@ export default {
       }, 0);
 
       EventBus.$emit("toast", { text: "Data exported!", duration: 3000 });
+      if(this.$store.getters["chrono/oldExport"]){
+        this.$store.dispatch("chrono/resetLastExport");
+        EventBus.$emit("toast", { text: "30 minute Export Bonus gained!", duration: 4500 });
+      }
     },
     importDataChanged(event) {
       this.fileData = null;

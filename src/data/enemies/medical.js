@@ -1,6 +1,8 @@
 export default {
 	surgeon: {
 		name: "Chirurgeon",
+		desc: "Mind if I dissect you for points real quick?",
+		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/gooddoctor.png"),
 		stats: {
 			maxHealth: 220,
@@ -81,6 +83,7 @@ export default {
 	},
 	cluelessdoctor: {
 		name: "Useless Doctor",
+		desc: "You look awful. We'll have to kill and clone.",
 		icon: require("@/assets/art/combat/enemies/baddoctor.png"),
 		stats: {
 			maxHealth: 230,
@@ -128,6 +131,8 @@ export default {
 	},
 	hulk: {
 		name: "The Next Step In Human Evolution",
+		desc: "GWAAAAAAAARRRHHH!!!",
+		verb: "yells",
 		icon: require("@/assets/art/combat/enemies/hulk.png"),
 		stats: {
 			maxHealth: 240,

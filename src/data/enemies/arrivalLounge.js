@@ -1,6 +1,7 @@
 export default {
 	janitor: {
 		name: "Janitor",
+		desc: "Be careful not to slip.",
 		icon: require("@/assets/art/combat/enemies/janitor.png"),
 		stats: {
 			maxHealth: 18,
@@ -50,6 +51,8 @@ export default {
 	},
 	chaplain: {
 		name: "Chaplain",
+		desc: "You dare blaspheme against Space Jesus?",
+		verb: "asks",
 		icon: require("@/assets/art/combat/enemies/chaplain.png"),
 		stats: {
 			maxHealth: 20,
@@ -103,6 +106,8 @@ export default {
 	},
 	miner: {
 		name: "Prelaunch Miner",
+		desc: "Pickaxe, check. Knife, check...",
+		verb: "hisses",
 		icon: require("@/assets/art/combat/enemies/miner.png"),
 		stats: {
 			maxHealth: 24,
@@ -149,6 +154,8 @@ export default {
 	},
 	playershop: {
 		name: "Black Market Shopkeeper",
+		desc: "I've got wares, freshly graytided!",
+		verb: "exclaims",
 		icon: require("@/assets/art/combat/enemies/shop.png"),
 		stats: {
 			maxHealth: 36,

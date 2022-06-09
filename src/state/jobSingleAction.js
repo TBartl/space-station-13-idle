@@ -39,7 +39,7 @@ export default {
 			let xpBonus = 0;
 			for (let [equipmentId, equipment] of Object.entries(rootGetters["inventory/equipment"])) {
 				let itemId = equipment.itemId;
-				if (!itemId) continue;
+				if (!itemId || rootGetters["inventory/checkRestricted"](itemId)) continue;
 				let item = ITEMS[itemId];
 				if (item.xpBonuses) {
 					let bonus = item.xpBonuses[getters["jobId"]];

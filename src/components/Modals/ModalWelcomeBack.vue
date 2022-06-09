@@ -11,6 +11,8 @@
     </span>
     <span class="mt-2 description">TOTAL TIME AVAILABLE:</span>
     <span>{{remainingTimeText}}</span>
+    <span v-if="oldExport"><br><b class="chrono">You've earned an Export Bonus!</b><br>
+       Export your save to keep your data backed up and earn 30 extra minutes in your Time Bank.</span>
     <button class="btn btn-primary mt-3" @click="confirmationClicked">OK</button>
   </div>
 </template>
@@ -20,6 +22,9 @@ export default {
   computed: {
     remainingTimeText() {
       return this.$store.getters["chrono/remainingTimeText"];
+    },
+    oldExport() {
+      return this.$store.getters["chrono/oldExport"];
     }
   },
   methods: {
@@ -29,3 +34,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.chrono {
+  color: rgb(28, 160, 221);
+  max-width: 130px;
+  font-size: 14px;
+}
+</style>
