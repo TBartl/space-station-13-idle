@@ -106,7 +106,7 @@ const validhunting = merge(cloneDeep(jobBase), {
 			commit("setNewXpReward", xpReward);
 		},
 		refreshRerolls({state, getters}, rerolls) {
-			state.rerolls += Math.min(getters["maxRerolls"], rerolls);
+			state.rerolls = Math.min(getters["maxRerolls"], getters["getRerolls"] + rerolls);
 		}
 	}
 });
