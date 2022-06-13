@@ -45,7 +45,7 @@ const BASE_PURCHASES = {
 	},
 	timeToCash1: {
 		name: "Unlock Time Selling",
-		description: "Unlock the ability to sell banked time",
+		description: "Unlock the ability to sell banked time (1 hour for $25,000)",
 		icon: require('@/assets/art/chrono/timemoneyLock.png'),
 		requiredItems: {
 			bluetime: 3
@@ -64,7 +64,13 @@ const BASE_PURCHASES = {
 		},
 		otherText: "Hour x1",
 		onPurchase(store) {
-			store.dispatch(`chrono/sellTime`, {}, { root: true });
+			if(store.rootGetters['chrono/remainingTime'] >= 1 * 60 * 60 * 1000){
+				store.commit(`chrono/addTime`, -1 * 60 * 60 * 1000, { root: true });
+				store.commit("inventory/changeItemCount", { itemId: "money", count: 25000 }, { root: true });
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time sold!`, duration: 2500 });
+			} else {
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Not enough time...`, duration: 2500 });
+			}
 		}
 	},
 	antagRoll1: {

@@ -149,15 +149,6 @@ const chrono = {
 			state.lastExport = 0;
 			commit("addTime", 1800000); // 30 minutes
 		},
-		sellTime({ state, getters, dispatch, rootGetters, commit }) {
-			if(getters["remainingTime"] > 1 * 60 * 60 * 1000){
-				commit(`chrono/addTime`, -1 * 60 * 60 * 1000, { root: true });
-				commit("inventory/changeItemCount", { itemId: "money", count: 25000 }, { root: true });
-				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time sold!`, duration: 2500 });
-			} else {
-				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Not enough time...`, duration: 2500 });
-			}
-		},
 		resetSimulation({ getters, commit, dispatch }) {
 			let resetPotential = getters["resetPotential"];
 			this.commit("completion/trackReset");
