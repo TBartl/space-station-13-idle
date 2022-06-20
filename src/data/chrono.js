@@ -45,7 +45,7 @@ const BASE_PURCHASES = {
 	},
 	timeToCash1: {
 		name: "Unlock Time Selling",
-		description: "Unlock the ability to sell banked time",
+		description: "Unlock the ability to sell banked time (1 hour for $25,000)",
 		icon: require('@/assets/art/chrono/timemoneyLock.png'),
 		requiredItems: {
 			bluetime: 3
@@ -64,7 +64,13 @@ const BASE_PURCHASES = {
 		},
 		otherText: "Hour x1",
 		onPurchase(store) {
-			store.dispatch(`chrono/sellTime`, {}, { root: true });
+			if(store.rootGetters['chrono/remainingTime'] >= 1 * 60 * 60 * 1000){
+				store.commit(`chrono/addTime`, -1 * 60 * 60 * 1000, { root: true });
+				store.commit("inventory/changeItemCount", { itemId: "money", count: 25000 }, { root: true });
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Time sold!`, duration: 2500 });
+			} else {
+				EventBus.$emit("toast", { icon: require('@/assets/art/chrono/bluetime.png'), text: `Not enough time...`, duration: 2500 });
+			}
 		}
 	},
 	antagRoll1: {
@@ -189,7 +195,7 @@ const BASE_PURCHASES = {
 	},
 	chronoCombatRoll: {
 		name: "+1 Validhunting Reroll",
-		description: "Allows you to reroll your validhunting bounty +1 time per successful bounty.",
+		description: "Allows you to reroll your validhunting bounty +1 time per successful bounty",
 		icon: require('@/assets/art/chrono/4dd6.png'),
 		requiredItems: {
 			bluetime: 3
@@ -200,6 +206,18 @@ const BASE_PURCHASES = {
 		},
 		onPurchase(store) {
 			store.dispatch(`validhunting/refreshRerolls`, 1, { root: true });
+		}
+	},
+	chronoScrying: {
+		name: "Scrying",
+		description: "Allows you to see all actions before you unlock them. Good for planning ahead",
+		icon: require('@/assets/art/chrono/scry.gif'),
+		requiredItems: {
+			bluetime: 1
+		},
+		upgrade: "chronoScrying",
+		requiredUpgrades: {
+			chronoScrying: 0
 		}
 	}
 }
@@ -246,7 +264,7 @@ export const SECTIONS = [
 	},
 	{
 		name: "Upgrades",
-		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2", "timeBankAutoPause", "chronoCombatRoll"]
+		purchases: ["timeBankSize1", "timeBankSize2", "timeBankOptions1", "timeBankOptions2", "timeBankAutoPause", "chronoCombatRoll", "chronoScrying"]
 	},
 	{
 		name: "Job Blitz",

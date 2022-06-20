@@ -100,7 +100,7 @@ export default {
       return ITEMS[this.action.item];
     },
     visualLocked() {
-      if (this.$store.getters["cheats/showAllActions"]) return false;
+      if (this.$store.getters["cheats/showAllActions"] || this.$store.getters['upgrades/get']('chronoScrying')) return false;
       if(this.level >= this.action.requiredLevel && this.needsAbsentUpgrade) return false;
       return this.locked;
     },

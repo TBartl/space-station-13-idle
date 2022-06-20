@@ -325,7 +325,7 @@ const inventory = {
 			}
 
 			if (purchase.onPurchase) {
-				purchase.onPurchase({ commit, dispatch });
+				purchase.onPurchase({ commit, dispatch, rootGetters });
 			}
 
 			if (purchase.fightZone) {

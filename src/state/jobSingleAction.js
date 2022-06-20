@@ -62,7 +62,7 @@ export default {
 			let actions = getters["completeActions"];
 			let entries = Object.entries(actions);
 
-			if (rootGetters["cheats/showAllActions"]) return entries;
+			if (rootGetters["cheats/showAllActions"] || rootGetters["upgrades/get"]('chronoScrying')) return entries;
 
 			let highestLevels = {} // type: highestLevel
 
