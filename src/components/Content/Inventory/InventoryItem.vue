@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="inventory-item" tabindex="1" :id="id">
+    <div class="inventory-item" tabindex="1" :id="id" 
+    @click.shift="sellItem({'itemId': itemId, 'count': count})">
       <img class="no-pointer-events" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </div>
@@ -47,6 +48,7 @@
 <script>
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
+import { mapActions } from "vuex";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
 import ItemPopover from "@/components/ItemPopover";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
@@ -121,7 +123,8 @@ export default {
         { itemId: this.itemId },
         { height: "auto", width: "420px" }
       );
-    }
+    },
+    ...mapActions(["sellItem"])
   }
 };
 </script>
