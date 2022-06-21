@@ -158,6 +158,22 @@
               </div>
             </div>
 
+            <div class="d-flex my-1">
+              <img class="mx--2 mr-1" :src="require('@/assets/art/research/tools/toolGraytiding.png')" />
+              <div class="custom-control custom-switch">
+                <input
+                  v-model="allButOne"
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="allButOne"
+                />
+                <label
+                  class="custom-control-label"
+                  for="allButOne"
+                >Show an option to sell all but one of an item in your inventory</label>
+              </div>
+            </div>
+
             <button
               type="button"
               class="btn btn-primary my-1 d-block"
@@ -379,6 +395,14 @@ export default {
       },
       set(value) {
         this.$store.commit("settings/setPocketsEmptyStop", value);
+      }
+    },
+    allButOne: {
+      get() {
+        return this.$store.getters["settings/allButOne"];
+      },
+      set(value) {
+        this.$store.commit("settings/setAllButOne", value);
       }
     },
     chronoPanelEnabled: {

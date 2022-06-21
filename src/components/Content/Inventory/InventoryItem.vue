@@ -34,6 +34,12 @@
           <inventory-sell :itemId="itemId" :count="1000" :totalCount="count" />
           <inventory-sell
             :itemId="itemId"
+            :count="count-1"
+            :totalCount="count"
+            v-if="allButOne && count-1 >  1"
+          />
+          <inventory-sell
+            :itemId="itemId"
             :count="count"
             :totalCount="count"
             v-if="count != 1 && count != 10 && count != 100 && count != 1000"
@@ -75,6 +81,9 @@ export default {
     },
     isEquipped() {
       return this.$store.getters["inventory/isEquipped"](this.itemId);
+    },
+    allButOne() {
+      return this.$store.getters["settings/allButOne"];
     },
     canEquipChem() {
       let potionData = this.$store.getters["potions/get"](this.item.potionJob);
