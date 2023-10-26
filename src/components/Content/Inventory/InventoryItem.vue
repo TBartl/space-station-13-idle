@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="inventory-item" tabindex="1" :id="id">
+    <div class="inventory-item" tabindex="1" :id="id" 
+    @click.shift="sellItem({'itemId': itemId, 'count': count})">
       <img class="no-pointer-events" :src="item.icon" />
       <span>{{count | cleanNum}}</span>
     </div>
@@ -33,6 +34,12 @@
           <inventory-sell :itemId="itemId" :count="1000" :totalCount="count" />
           <inventory-sell
             :itemId="itemId"
+            :count="count-1"
+            :totalCount="count"
+            v-if="allButOne && count-1 >  1"
+          />
+          <inventory-sell
+            :itemId="itemId"
             :count="count"
             :totalCount="count"
             v-if="count != 1 && count != 10 && count != 100 && count != 1000"
@@ -47,6 +54,7 @@
 <script>
 import ITEMS from "@/data/items";
 import { mapGetters } from "vuex";
+import { mapActions } from "vuex";
 import InventorySell from "@/components/Content/Inventory/InventorySell";
 import ItemPopover from "@/components/ItemPopover";
 import ModalItemChance from "@/components/Modals/ModalItemChance";
@@ -73,6 +81,9 @@ export default {
     },
     isEquipped() {
       return this.$store.getters["inventory/isEquipped"](this.itemId);
+    },
+    allButOne() {
+      return this.$store.getters["settings/allButOne"];
     },
     canEquipChem() {
       let potionData = this.$store.getters["potions/get"](this.item.potionJob);
@@ -121,7 +132,8 @@ export default {
         { itemId: this.itemId },
         { height: "auto", width: "420px" }
       );
-    }
+    },
+    ...mapActions(["sellItem"])
   }
 };
 </script>

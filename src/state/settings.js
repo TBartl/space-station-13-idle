@@ -12,7 +12,8 @@ const settings = {
 		autoEatEnabled: true,
 		chronoPanelEnabled: false,
 		darkMode: true,
-		hideLockedJobs: false
+		hideLockedJobs: false,
+		allButOne: false,
 	},
 	getters: {
 		showVirtualLevels(state) {
@@ -47,7 +48,10 @@ const settings = {
 		},
 		hideLockedJobs(state) {
 			return state.hideLockedJobs;
-		}
+		},
+		allButOne(state) {
+			return state.allButOne;
+		},
 	},
 	mutations: {
 		setShowVirtualLevels(state, val) {
@@ -79,6 +83,9 @@ const settings = {
 		},
 		setHideLockedJobs(state, val) {
 			state.hideLockedJobs = val;
+		},
+		setAllButOne(state, val) {
+			state.allButOne = val;
 		}
 	}
 }

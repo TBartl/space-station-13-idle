@@ -39,6 +39,7 @@
             />
             <b>Sell</b> off some of the items you no longer care about.
           </span>
+          <span>(Shift-clicking an item will quickly sell all of it!)</span>
         </template>
       </job-info>
       <div class="row">
