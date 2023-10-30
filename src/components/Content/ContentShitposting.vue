@@ -14,7 +14,7 @@
       <job-info
         infoId="shitposting"
         :icon="require('@/assets/art/jobinfo/shitposting.png')"
-        title="Player420 the Shit Poster says..."
+        title="I A AM EAT GRAPE the Shit Poster says..."
         :options="[
 					{name: 'Back'},
 					{name: 'Shitposting?', icon: require('@/assets/art/shitposting/icon.png'), iconClass:'mx--1'},
