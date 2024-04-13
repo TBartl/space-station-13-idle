@@ -137,12 +137,8 @@ const POTIONS = {
 		item: "potionTinkering",
 		time: 2,
 		requiredItems: {
-			oxygen: 1,
-			oil: 2,
 			water: 1,
-			sacid: 1,
 			mercury: 1,
-			lithium: 1,
 			glass: 1
 		}
 	},

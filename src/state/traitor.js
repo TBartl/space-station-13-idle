@@ -23,6 +23,10 @@ const traitor = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 			for (let action of Object.values(actions)) {
 				// Apply upgrades
 				action.time *= 1 / (1 + ANTAG_UPGRADE_PERCENT * upgradeCount);
+
+				if (potionItemId == "toolTraitor") {
+					action.time /= 10;
+				}
 			}
 			return actions;
 		},

@@ -67,11 +67,11 @@ const POTIONS = {
 	},
 	potionResearch: {
 		name: "Ballmer Fluid",
-		sellPrice: 55,
+		sellPrice: 60,
 		icon: require("@/assets/art/chemistry/ballmer.png"),
 		description: "R&D TOOL development has a 25% chance to output twice.", 
 		potionJob: "research",
-		potionCharges: 5
+		potionCharges: 7
 	},
 	potionBotany: {
 		name: "Unstable Mutagen",
@@ -95,7 +95,7 @@ const POTIONS = {
 		icon: require("@/assets/art/chemistry/superglue.png"),
 		description: `${TINKERING_POTION_PERCENT * 100}% chance to obtain one of the kinds of junk not used in a tinkering action.`,
 		potionJob: "tinkering",
-		potionCharges: 5
+		potionCharges: 7
 	},
 	potionXenobiology: {
 		name: "Splitting Agent",

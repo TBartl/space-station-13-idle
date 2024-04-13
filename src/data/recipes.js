@@ -109,7 +109,7 @@ export const RESEARCH_RECIPES_I = {
 	},
 	toolChemistry: {
 		name: "RECIPE: Microdoser",
-		description: "Enables the development of a tool doubles pill production in Chemistry.",
+		description: "Enables the development of a tool that doubles pill production in Chemistry.",
 		icon: require('@/assets/art/research/tools/toolChemistry.png'),
 		requiredResearchPoints: 350,
 		upgrade: "toolChemistry",
@@ -370,7 +370,7 @@ export const RESEARCH_RECIPES_III = {
 	},
 	recipeCleaning1: {
 		name: "RECIPE: Galoshes",
-		description: "Gain a pair of galoshes, enabling you to clean things without slipping. Some of time, that is.",
+		description: "Gain a pair of galoshes, enabling you to graytide by cleaning things. Try not to slip.",
 		icon: require('@/assets/art/research/galoshes.png'),
 		requiredResearchPoints: 200,
 		upgrade: "recipeCleaning",
@@ -383,7 +383,7 @@ export const RESEARCH_RECIPES_III = {
 	},
 	recipeCleaning2: {
 		name: "RECIPE: Paradox Galoshes",
-		description: "Upgrades your galoshes, enabling you to safely wander through a time paradox.",
+		description: "Upgrades your galoshes, enabling you to \"safely\" graytide in a time paradox.",
 		icon: require('@/assets/art/research/galoshes2.png'),
 		requiredResearchPoints: 1000,
 		requiredItems: {
@@ -456,12 +456,28 @@ export const RESEARCH_RECIPES_III = {
 			research: 20
 		}
 	},
+	makeflashes: {
+		name: "RECIPE: Flash",
+		description: "Puts Cargonia in contact with a handheld flash dealer.",
+		icon: require('@/assets/art/shop/items/startcargonia.png'),
+		requiredResearchPoints: 600,
+		upgrade: "makeflashes",
+		requiredItems: {
+			startCargonia: 1
+		},
+		requiredLevels: {
+			cargonia: 5
+		},
+	},
 	traitorUpgrades: {
 		name: "RECIPE: Adaptive Customizations",
 		description: "Discover how a Traitor is able to customize weapons and armor to be easier to wield and wear.",
 		icon: require('@/assets/art/combat/items/arm_syndi.png'),
 		requiredResearchPoints: 700,
 		upgrade: "traitorUpgrades",
+		requiredItems: {
+			spendTC: 1
+		},
 		requiredUpgrades: {
 			traitorUpgrades: 0
 		},

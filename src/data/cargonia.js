@@ -326,6 +326,18 @@ const RIFLE_AMMO = {
 }
 
 const RIFLE_GUNS = {
+	buyFlash: {
+		time: 2,
+		name: "Handheld Flash",
+		item: "startCargonia",
+		icon: require("@/assets/art/shop/items/startcargonia.png"),
+		xp: 4,
+		requiredLevel: 5,
+		requiredItems: {
+			money: 105
+		},
+		requiredUpgrade: "makeflashes"
+	},
 	buyRgun1: {
 		time: 6,
 		icon: require("@/assets/art/combat/items/hand/gunR_naggant.png"),

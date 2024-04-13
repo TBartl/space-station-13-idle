@@ -78,9 +78,9 @@ export default {
 						weight: 7,
 					},
 					{
-						id: 'power',
+						id: 'toolBotany',
 						weight: 6,
-						count: [1, 5]
+						count: [1, 3]
 					},
 					{
 						id: 'potionFabrication',
@@ -136,6 +136,11 @@ export default {
 						id: 'drinkWhiskeyCola',
 						weight: 30,
 						count: [1, 5]
+					},
+					{
+						id: 'toolTinkering',
+						weight: 30,
+						count: 1
 					},
 					{
 						id: 'innocent',

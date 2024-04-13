@@ -67,17 +67,17 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						count: [2,5],
+						count: [2, 5],
 						weight: 18
 					},
 					{
-						id: 'money',
-						count: [220,660],
+						id: 'toolBartending',
+						count: [1, 2],
 						weight: 14
 					},
 					{
 						id: 'drinkGargleBlaster',
-						count: [1,3],
+						count: [1, 3],
 						weight: 6
 					},
 					{

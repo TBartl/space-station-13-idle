@@ -117,11 +117,11 @@ export default {
 						weight: 24
 					},
 					{
-						id: 'meleeToolbox4',
+						id: 'toolEngineering',
 						weight: 23
 					},
 					{
-						id: 'drinkChangelingSting',
+						id: 'meleeToolbox4',
 						weight: 22
 					},
 					{
@@ -174,9 +174,14 @@ export default {
 						weight: 8
 					},
 					{
+						id: 'toolEngineering',
+						weight: 6
+					},
+					{
 						id: 'q_foodPasta1',
 						weight: 4
 					},
+					
 					{
 						id: 'faceMeson',
 						weight: 1

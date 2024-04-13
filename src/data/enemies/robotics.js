@@ -118,7 +118,12 @@ export default {
 				itemTable: [
 					{
 						id: 'wire',
-						weight: 40
+						weight: 20
+					},
+					{
+						id: 'toolFabrication',
+						count: [2, 3],
+						weight: 20
 					},
 					{
 						id: 'meleeToolbox6',

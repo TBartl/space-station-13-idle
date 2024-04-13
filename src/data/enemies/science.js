@@ -183,7 +183,7 @@ export default {
 					},
 					{
 						id: 'toolMining',
-						count: [1,2],
+						count: [3,5],
 						weight: 20
 					},
 					{

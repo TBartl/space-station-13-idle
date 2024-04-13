@@ -82,18 +82,18 @@ const RESOURCE_CONSUMING_ACTIONS = {
 			burnJunk: 1
 		}
 	},
-	engSlime: {
+	engSolars: {
 		time: 5,
-		name: "Charged Slime",
+		name: "Solars",
 		items: {
 			id: "power",
-			count: 13
+			count: 11
 		},
-		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
+		icon: require("@/assets/art/engineering/solars.png"),
 		xp: 8.5,
 		requiredLevel: 17,
 		requiredItems: {
-			slimeYellow: 1
+			wire: 1
 		}
 	},
 	engPotato: {
@@ -110,18 +110,18 @@ const RESOURCE_CONSUMING_ACTIONS = {
 			potatoBattery: 8
 		}
 	},
-	engSolars: {
+	engSlime: {
 		time: 5,
-		name: "Solars",
+		name: "Charged Slime",
 		items: {
 			id: "power",
-			count: 11
+			count: 13
 		},
-		icon: require("@/assets/art/engineering/solars.png"),
+		icon: require("@/assets/art/xenobio/SlimeYellow.gif"),
 		xp: 11.5,
 		requiredLevel: 23,
 		requiredItems: {
-			wire: 1
+			slimeYellow: 1
 		}
 	},
 	engBee: {

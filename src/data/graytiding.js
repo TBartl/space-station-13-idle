@@ -638,7 +638,7 @@ const CLEANING = {
 				itemTable: [
 					{
 						id: "pillSpacelube",
-						count: [4, 10],
+						count: [100, 200],
 						weight: 20
 					},
 					{
@@ -648,23 +648,23 @@ const CLEANING = {
 					},
 					{
 						id: "foodMeatH",
-						count: 1,
+						count: [50, 100],
 						weight: 20
 					},
 					{
 						id: "drinkCream",
-						count: 1,
+						count: [50, 100],
 						weight: 20
 					},
 					{
 						id: "oil",
-						count: [2, 6],
+						count: [50, 100],
 						weight: 20
 					},
 				]
 			},
 			{
-				chance: 0.01,
+				chance: 0.1,
 				itemTable: [
 					{
 						id: "q_foodEvasion1",
@@ -820,7 +820,7 @@ const CLEANING = {
 				]
 			},
 			{
-				chance: 0.05,
+				chance: 0.1,
 				itemTable: [
 					{
 						id: "bananium",
@@ -991,7 +991,6 @@ Object.values(TIDING).forEach((action, index) => {
 });
 
 Object.values(CLEANING).forEach((action, index) => {
-	action.requiredItems = { pillSpacelube: 4 + index * 2 };
 	if(!action.requiredUpgrade) action.requiredUpgrade = "recipeCleaning";
 	action.actionName = "CLEAN UP AFTER";
 	action.requiredLevel = 26 + index * 3;

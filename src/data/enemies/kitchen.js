@@ -130,6 +130,11 @@ export default {
 						id: 'foodMeatZ',
 						weight: 4
 					},
+					{
+						id: 'toolCooking',
+						count: [1, 2],
+						weight: 2
+					}
 				]
 			},
 			{

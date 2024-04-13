@@ -41,7 +41,7 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolGraytiding.png"),
 		xp: 5,
 		requiredItems: {
-			silver: 2,
+			iron: 2,
 			junk: 2,
 		},
 		requiredLevel: 1,
@@ -91,7 +91,7 @@ export const TOOLS = {
 		requiredItems: {
 			titanium: 1,
 			slimeMetal: 8,
-			wire: 10,
+			wire: 5,
 		},
 		requiredLevel: 1,
 		requiredUpgrade: "toolBartending",
@@ -152,7 +152,7 @@ export const TOOLS = {
 		icon: require("@/assets/art/research/tools/toolCult.png"),
 		xp: 5,
 		requiredItems: {
-			iron: 10,
+			titanium: 10,
 			foodMeatH: 5,
 		},
 		requiredLevel: 1,

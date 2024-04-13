@@ -90,7 +90,8 @@ export default {
 		name: "Custom Syndicate Hardsuit",
 		equipmentSlot: "chest",
 		sellPrice: 1240,
-		icon: require("@/assets/art/combat/items/arm_syndi.png"), overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
+		icon: require("@/assets/art/combat/items/arm_syndi.png"),
+		overlay: require("@/assets/art/combat/items/arm_syndi_overlay.png"),
 		stats: {
 			regen: 2,
 			maxHealth: 210,
@@ -118,6 +119,58 @@ export default {
 		},
 		requires: {
 			evasion: 50,
+		}
+	},
+	syndicakes: {
+		name: "Syndi-Cakes",
+		description: 'Tastes just as good after being nuked.',
+		sellPrice: 61,
+		icon: require("@/assets/art/traitor/syndicakes.png"),
+		healAmount: 30,
+		stats: {
+			regen: 0.3,
+			evasion: 3,
+			precision: 3,
+			power: 3
+		},
+	},
+	syndibloon: {
+		name: "Syndicate Balloon",
+		description: 'A tag on it reads, \"FUK NT!11!\"',
+		sellPrice: 1,
+		icon: require("@/assets/art/traitor/syndibloon.png"),
+		equipmentSlot: "companion",
+		fleeChance: 0,
+		stats: {
+			luck: 33
+		},
+	},
+	syndisoap: {
+		name: "Syndicate Soap",
+		sellPrice: 1,
+		icon: require("@/assets/art/traitor/syndisoap.png"),
+		equipmentSlot: "pocket",
+		fleeChance: 0,
+		stats: {
+			precision: 7,
+			luck: 10
+		},
+	},
+	gunTraitor: {
+		name: ".357 Revolver",
+		sellPrice: 5000,
+		equipmentSlot: "hand",
+		icon: require("@/assets/art/traitor/357.png"),
+		overlay: require("@/assets/art/traitor/357inhand.png"),
+		ammoType: "ballistic",
+		stats: {
+			attackSpeed: 7,
+			evasion: 2,
+			power: 4,
+			precision: 7
+		},
+		requires: {
+			rangedPower: 8
 		}
 	},
 }
