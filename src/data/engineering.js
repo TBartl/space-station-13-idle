@@ -31,7 +31,7 @@ const RENEWABLE_ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim.gif"),
-		xp: 13.5,
+		xp: 7,
 		requiredLevel: 14,
 		requiredItems: {
 			power: 8
@@ -45,7 +45,7 @@ const RENEWABLE_ACTIONS = {
 			count: 10
 		},
 		icon: require("@/assets/art/engineering/generator_anim2.gif"),
-		xp: 7,
+		xp: 13.5,
 		requiredLevel: 25,
 		requiredItems: {
 			power: 4
