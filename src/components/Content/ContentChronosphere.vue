@@ -1,7 +1,7 @@
 <template>
   <div class="content-settings">
     <content-header
-      text="Settings"
+      text="Chronosphere"
       :icon="require('@/assets/art/chrono/icon.png')"
       color="#3ac5ff"
     />

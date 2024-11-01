@@ -459,13 +459,13 @@ export default {
 		itemTable: [
 			{
 				id: 'ammoBallistic4',
-				count: [0,100],
-				weight: 18
+				count: [50,150],
+				weight: 17
 			},
 			{
-				id: 'ammoEnergy4',
-				count: [0,100],
-				weight: 18
+				id: 'syndisoap',
+				count: [50,150],
+				weight: 17
 			},
 			{
 				id: 'faceSyndicate',
@@ -474,6 +474,10 @@ export default {
 			{
 				id: 'darkGygax',
 				weight: 6
+			},
+			{
+				id: 'syndibloon',
+				weight: 2
 			},
 			{
 				id: 'meleeBurn4',
@@ -617,56 +621,29 @@ export default {
 		icon: require("@/assets/art/shop/items/contrabandcrate.png"),
 		itemTable: [
 			{
-				id: 'ticket10',
-				count: [20,40],
-				weight: 100
-			},
-			{
-				id: 'ticket1',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'ticket2',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'ticket40',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'ticket3',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'ticket55',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'ticket60',
-				count: [5,10],
-				weight: 100
-			},
-			{
-				id: 'limbAdvancedMagboots',
-				weight: 50
-			},
-			{
-				id: 'limbBlack',
-				weight: 50
-			},
-			{
-				id: 'limbJackboots',
-				weight: 50
+				id: 'gunTraitor',
+				weight: 25
 			},
 			{
 				id: 'meleeBurn3T',
 				weight: 25
 			},
+			{
+				id: 'runeN2',
+				weight: 25
+			},
+			{
+				id: 'runeB2',
+				weight: 25
+			},
+			{
+				id: 'faceLing3',
+				weight: 25
+			},
+			{
+				id: 'faceLing5',
+				weight: 25
+			}
 		]
 	},
 	susTile: {

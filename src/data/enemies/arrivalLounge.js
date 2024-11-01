@@ -142,6 +142,11 @@ export default {
 						count: [1, 3]
 					},
 					{
+						id: "toolMining",
+						weight: 3,
+						count: 1
+					},
+					{
 						id: 'gunEnergy1',
 						weight: 1
 					},
@@ -184,7 +189,7 @@ export default {
 						weight: 14
 					},
 					{
-						id: 'mushroom',
+						id: 'toolGraytiding',
 						weight: 14
 					},
 					{

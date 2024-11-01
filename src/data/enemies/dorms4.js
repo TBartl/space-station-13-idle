@@ -79,6 +79,10 @@ export default {
 						weight: 1.1
 					},
 					{
+						id: 'toolTraitor',
+						weight: 1
+					},
+					{
 						id: 'telecrystal',
 						weight: 1
 					}
@@ -155,40 +159,48 @@ chemist: {
 				itemTable: [
 					{
 						id: 'potionMining',
-						weight: 50
+						weight: 1
 					},
 					{
 						id: 'potionGraytiding',
-						weight: 49
+						weight: 1
 					},
 					{
 						id: 'potionChemistry',
-						weight: 48
+						weight: 1
+					},
+					{
+						id: 'potionResearch',
+						weight: 1
 					},
 					{
 						id: 'potionBotany',
-						weight: 47
+						weight: 1
 					},
 					{
 						id: 'potionEngineering',
-						weight: 46
+						weight: 1
 					},
 					{
 						id: 'potionTinkering',
-						weight: 45
+						weight: 1
 					},
 					{
 						id: 'potionXenobiology',
-						weight: 44
+						weight: 1
 					},
 					{
 						id: 'potionCooking',
-						weight: 43
+						weight: 1
 					},
 					{
 						id: 'potionFabrication',
-						weight: 42
+						weight: 1
 					},
+					{
+						id: 'toolChemistry',
+						weight: 1
+					}
 				]
 			},
 			{

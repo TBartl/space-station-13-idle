@@ -433,10 +433,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling1_overlay.png"),
 		stats: {
-			maxHealth: 30,
-			evasion: 2,
+			maxHealth: 45,
+			evasion: 3,
 			precision: 0,
-			power: 2,
+			power: 3,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,
@@ -449,10 +450,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling2_overlay.png"),
 		stats: {
-			maxHealth: 30,
-			evasion: 2,
-			precision: 2,
+			maxHealth: 45,
+			evasion: 3,
+			precision: 3,
 			power: 0,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,
@@ -465,10 +467,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling3_overlay.png"),
 		stats: {
-			maxHealth: 30,
+			maxHealth: 45,
 			evasion: 0,
-			precision: 2,
-			power: 2,
+			precision: 3,
+			power: 3,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,
@@ -481,10 +484,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling4_overlay.png"),
 		stats: {
-			maxHealth: 30,
+			maxHealth: 60,
 			evasion: 0,
-			precision: 4,
+			precision: 6,
 			power: 0,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,
@@ -497,10 +501,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling5_overlay.png"),
 		stats: {
-			maxHealth: 30,
+			maxHealth: 60,
 			evasion: 0,
 			precision: 0,
-			power: 4,
+			power: 6,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,
@@ -513,10 +518,11 @@ export default {
 		equipmentSlot: "face",
 		overlay: require("@/assets/art/combat/items/face/ling6_overlay.png"),
 		stats: {
-			maxHealth: 30,
-			evasion: 4,
+			maxHealth: 60,
+			evasion: 6,
 			precision: 0,
 			power: 0,
+			luck: 10
 		},
 		requires: {
 			evasion: 1,

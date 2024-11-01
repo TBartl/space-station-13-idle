@@ -68,12 +68,12 @@ const research = merge(cloneDeep(jobBase), cloneDeep(jobSingleAction), {
 							{
 								id: originalItem,
 								count: 1,
-								weight: 75
+								weight: 66
 							},
 							{
 								id: originalItem,
 								count: 2,
-								weight: 25
+								weight: 34
 							}
 						]
 					} else {

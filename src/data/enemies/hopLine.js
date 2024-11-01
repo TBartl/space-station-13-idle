@@ -102,6 +102,11 @@ export default {
 						weight: 25
 					},
 					{
+						id: 'toolFabrication',
+						count: 1,
+						weight: 15
+					},
+					{
 						id: 'gunBallistic1',
 						weight: 5
 					},

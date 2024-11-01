@@ -112,6 +112,14 @@ const TOOLS = {
 		description: "Guarantees Changeling armor of the next tier up.",
 		potionJob: "ling",
 		potionCharges: 1
+	},
+	toolTraitor: {
+		name: "Uplink Implant",
+		sellPrice: 200,
+		icon: require("@/assets/art/research/tools/toolTraitor.png"),
+		description: "Traitor actions are 10x faster. Careful not to overspend.",
+		potionJob: "traitor",
+		potionCharges: 1
 	}
 }
 

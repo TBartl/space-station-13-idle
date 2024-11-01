@@ -1,22 +1,22 @@
 const ONETC = {
-	OneSword: {
+	BLOON: {
 		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
-		item: "jumpsuitClown",
+		item: "syndibloon",
 		requiredItems: {
 			spendTC: 1
 		}
 	},
-	METH: {
+	REVOLVER: {
 		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
-		icon: require("@/assets/art/combat/items/pill1.png"),
+		icon: require("@/assets/art/traitor/357.png"),
 		items:
 		{
-			id: "pillMeth",
-			count: 888,
+			id: "gunTraitor",
+			count: 1,
 		},
 		requiredItems: {
 			spendTC: 1
@@ -36,15 +36,15 @@ const ONETC = {
 			spendTC: 1
 		}
 	},
-	CELL: {
+	SOAP: {
 		time: 180,
 		xp: 5025,
 		requiredLevel: 1,
-		icon: require("@/assets/art/combat/items/ammo_e2.png"),
+		icon: require("@/assets/art/traitor/syndisoap.png"),
 		items:
 		{
-			id: "ammoEnergy2",
-			count: 888,
+			id: "syndisoap",
+			count: 1000,
 		},
 		requiredItems: {
 			spendTC: 1
@@ -84,11 +84,11 @@ const TWOTC = {
 		time: 360,
 		xp: 10050,
 		requiredLevel: 1,
-		icon: require("@/assets/art/cooking/pasta1.png"),
+		icon: require("@/assets/art/traitor/syndicakes.png"),
 		items:
 		{
-			id: "foodPasta1",
-			count: 888,
+			id: "syndicakes",
+			count: 500,
 		},
 		requiredItems: {
 			spendTC: 2

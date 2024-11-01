@@ -21,7 +21,8 @@
             v-if="canEquipChem"
             class="mt-1 btn btn-primary btn-sm"
             @click="$store.dispatch('potions/set', itemId); $refs.popover.$emit('close');"
-          >Equip CHEM</button>
+          >Equip BOOST</button>
+          <span v-else-if="jobLocked" class="description">Job Locked</span>
           <span v-else class="description">Already Equipped</span>
         </div>
         <button v-if="canOpen" class="mt-1 btn btn-primary btn-sm" @click="open">Open!</button>
@@ -87,8 +88,12 @@ export default {
     },
     canEquipChem() {
       let potionData = this.$store.getters["potions/get"](this.item.potionJob);
+      if(this.checkJobLocked(this.item.potionJob)) return false
       if (!potionData) return true;
       return potionData.itemId != this.itemId;
+    },
+    jobLocked() {
+      return this.checkJobLocked(this.item.potionJob);
     },
     canOpen() {
       return (
@@ -120,6 +125,11 @@ export default {
         this.$store.commit("inventory/changeItemCount", { itemId, count });
       }
 		},
+    checkJobLocked(job) {
+	    if (this.$store.getters["cheats/unlockAllJobs"]) return false;
+			if (this.$store.getters[job + "/xp"]) return false;
+      return this.$store.getters[job + "/locked"];
+    },
     openAll() {
 			if (!this.canOpen) return;
 			while (this.itemCount > 0 && !this.bankFull) {
