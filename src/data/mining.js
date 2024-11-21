@@ -77,6 +77,18 @@ export const ACTIONS = {
 		xp: 30,
 		requiredLevel: 50
 	},
+	mineTrendril: {
+		time: 6,
+		actionName: "Collapse",
+		name: "Trendril",
+		items: {
+			id: "money",
+			count: [50, 200]
+		},
+		icon: require("@/assets/art/mining/trendril.png"),
+		xp: -75,
+		requiredLevel: 50
+	},
 }
 
 export const JOB = {
