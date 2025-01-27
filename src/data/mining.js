@@ -77,6 +77,45 @@ export const ACTIONS = {
 		xp: 30,
 		requiredLevel: 50
 	},
+	mineTrendril: {
+		time: 3,
+		actionName: "Surveying",
+		item: "cactus",
+		name: "Tendril",
+		failure: {
+			chance : 0.1,
+			damage: 1,
+		},
+		itemTables: [
+			{
+				chance: 0.5,
+				itemTable: [
+					{
+						id: "foodMeatA",
+						weight: 15
+					},
+					{
+						id: "oil",
+						count: [1,50],
+						weight: 5
+					},
+					{
+						id: "companionMining",
+						count: 1,
+						weight: 15
+					},
+					{
+						id: "exoticParts",
+						count: 1,
+						weight: 1
+					},
+				]
+			},
+		],
+		icon: require("@/assets/art/mining/tendril.png"),
+		xp: -45,
+		requiredLevel: 50
+	},
 }
 
 export const JOB = {
