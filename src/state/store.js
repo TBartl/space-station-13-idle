@@ -199,8 +199,9 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		sellItem({ commit }, { itemId, count }) {
-			commit("inventory/changeItemCount", { itemId, count: -count });
 			let soldItem = ITEMS[itemId];
+			if (!soldItem.sellPrice) return;
+			commit("inventory/changeItemCount", { itemId, count: -count });
 			let profit = soldItem.sellPrice * count;
 			commit("inventory/changeItemCount", { itemId: "money", count: profit });
 		},
