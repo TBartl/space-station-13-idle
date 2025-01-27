@@ -465,6 +465,9 @@ export const RESEARCH_RECIPES_III = {
 		requiredItems: {
 			startCargonia: 1
 		},
+		requiredUpgrades: {
+			makeflashes: 0
+		},
 		requiredLevels: {
 			cargonia: 5
 		},
