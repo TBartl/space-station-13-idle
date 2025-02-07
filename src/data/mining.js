@@ -80,13 +80,21 @@ export const ACTIONS = {
 	mineTrendril: {
 		time: 3,
 		actionName: "Surveying",
-		item: "cactus",
 		name: "Tendril",
 		failure: {
 			chance : 0.1,
 			damage: 1,
 		},
 		itemTables: [
+			{
+				chance: 1,
+				itemTable: [
+					{
+						id: "cactus",
+						weight: 100
+					}
+				]
+			},
 			{
 				chance: 0.5,
 				itemTable: [
